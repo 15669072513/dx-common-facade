@@ -62,5 +62,9 @@ public class MemberListParamDTO {
 
     @ApiModelProperty(value = "注册IP")
     private String ip;
+    
+    /** 俱乐部id */
+    @ApiModelProperty(value = "俱乐部Id")
+    private String clubId;
 
 }

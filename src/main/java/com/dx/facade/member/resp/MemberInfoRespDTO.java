@@ -1,5 +1,7 @@
 package com.dx.facade.member.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -203,6 +205,15 @@ public class MemberInfoRespDTO {
 
     @ApiModelProperty("备注")
     private String remark;
+    
+    @ApiModelProperty("俱乐部Id")
+    private Long clubId;
+
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @ApiModelProperty("注册时间")
     private LocalDateTime createdAt;

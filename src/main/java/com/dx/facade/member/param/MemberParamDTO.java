@@ -25,6 +25,12 @@ public class MemberParamDTO implements BaseParmDTO{
 
     @ApiModelProperty(value="用户名")
     private String userName;
+    
+    @ApiModelProperty(value="昵称")
+    private String nickName;
+    
+    @ApiModelProperty(value="头像url")
+    private String topImagesUrl;
 
     @ApiModelProperty(value="手机号码")
     private String mobile;
@@ -44,6 +50,12 @@ public class MemberParamDTO implements BaseParmDTO{
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
         Assert.notNull(userName, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userName"));
     }
+    
+    public void checkNickName() {
+        Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
+        Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
+        Assert.notNull(nickName, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("nickName"));
+    }
 
     public void checkMobile() {
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
@@ -53,5 +65,11 @@ public class MemberParamDTO implements BaseParmDTO{
     public void checkEmail() {
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
         Assert.notNull(email, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("email"));
+    }
+    
+    public void checkTopImagesUrl() {
+        Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
+        Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
+        Assert.notNull(topImagesUrl, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("topImagesUrl"));
     }
 }
