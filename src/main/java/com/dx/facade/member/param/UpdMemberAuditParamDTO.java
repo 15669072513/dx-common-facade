@@ -6,24 +6,35 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.util.Assert;
 
+/**
+ * 会员审核请求DTO
+ * 
+ * @author bicycle
+ *
+ */
 @Data
 public class UpdMemberAuditParamDTO implements BaseParmDTO{
-
+	/** 账号类型 （0-会员 1-代理） */
     @ApiModelProperty(value = "账号类型 （0-会员 1-代理）", hidden = true)
     private Integer userType;
 
+    /** 审核单ID */
     @ApiModelProperty(value = "审核单ID(18)", required = true,example = "1454654635464")
     private Long id;
 
+    /** 审核结果(1=通过 2=拒绝) */
     @ApiModelProperty(value = "审核结果(1=通过 2=拒绝)")
     private Integer auditStatus;
 
+    /** 锁单人id */
     @ApiModelProperty(value ="锁单人id", hidden = true)
     private Long lockAccountId;
 
+    /** 审核人 */
     @ApiModelProperty(value = "审核人")
     private String operator;
 
+    /** 备注 */
     @ApiModelProperty(value = "备注")
     private String remark;
 

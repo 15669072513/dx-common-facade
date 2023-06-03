@@ -1,5 +1,7 @@
 package com.dx.facade.member.service;
 
+import java.util.List;
+
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
@@ -11,12 +13,18 @@ import com.dx.facade.member.member.param.MemberListByWindControlInfoReqDto;
 import com.dx.facade.member.member.param.MerchantUnderMemberInfoReqDTO;
 import com.dx.facade.member.member.resp.MemberListByWindControlInfoRespDto;
 import com.dx.facade.member.member.resp.MerchantUnderMemberRespDTO;
-import com.dx.facade.member.param.*;
+import com.dx.facade.member.param.AddLowerMemberReqDto;
+import com.dx.facade.member.param.MemberAndProxyDto;
+import com.dx.facade.member.param.MemberAndProxyUpdateParamDTO;
+import com.dx.facade.member.param.MemberInfoRpcEditParam;
+import com.dx.facade.member.param.MemberListParamDTO;
+import com.dx.facade.member.param.MemberParamDTO;
+import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
+import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
+import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-
-import java.util.List;
 
 public interface MemberRPCService {
 
@@ -93,4 +101,30 @@ public interface MemberRPCService {
      */
     @ApiModelProperty("app代理-优惠记录")
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> memberDiscountRecords(PageReq<WalletDetailParamDTO> pageReq) throws BizException;
+    
+    /**
+     * 根据俱乐部Id查询该俱乐部下面的会员信息
+     * 
+     * @param clubId
+     * @return
+     */
+    CommonResp<List<MemberBaseInfoRespDTO>> selectByMemberBaseInfoByClubId(Long clubId);
+    
+    /**
+     * 踢出俱乐部
+     * 
+     * @param clubId
+     * @return
+     */
+    CommonResp<Boolean> kickOutClub(Long clubId,Long memberId);
+    
+    /**
+     * 加入俱乐部
+     * 
+     * @param memberId
+     * @param clubId
+     * @param clubName
+     * @return
+     */
+	CommonResp<Boolean> joinClub(Long memberId, Long clubId, String clubName);
 }
