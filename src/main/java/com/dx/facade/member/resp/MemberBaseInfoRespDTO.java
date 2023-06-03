@@ -25,6 +25,9 @@ public class MemberBaseInfoRespDTO {
     
     @ApiModelProperty("会员账号")
     private String userName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @ApiModelProperty("头像")
     private String topImagesUrl;

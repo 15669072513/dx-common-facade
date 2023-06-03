@@ -211,6 +211,9 @@ public class MemberInfoRespDTO {
 
     @ApiModelProperty("俱乐部名称")
     private String clubName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @ApiModelProperty("注册时间")
     private LocalDateTime createdAt;

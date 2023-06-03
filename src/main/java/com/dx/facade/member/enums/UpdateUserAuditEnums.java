@@ -18,6 +18,7 @@ public class UpdateUserAuditEnums {
         邮箱(5, "邮箱", "email", "email", "อีเมล"),
         会员标签(6, "会员标签", "会员标签", "会员标签", "会员标签"),
         登录密码(7, "登录密码", "login password", "mật khẩu đăng nhập", "รหัสผ่านเข้าสู่ระบบ"),
+        昵称(8, "昵称", "nickname", "tên", "ชื่อ"),
         ;
         public Integer code;
         public String desc;
