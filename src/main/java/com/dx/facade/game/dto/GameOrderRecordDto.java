@@ -1,15 +1,17 @@
 package com.dx.facade.game.dto;
 
+import lombok.Data;
+
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 游戏注单记录DTO
+ * @author heart
  */
-public class GameOrderRecordDto {
-    /**
-     * id
-     */
-    private Long id;
+@Data
+public class GameOrderRecordDto implements Serializable {
     /**
      * 牌局id
      */
@@ -131,7 +133,7 @@ public class GameOrderRecordDto {
      */
     private Long topProxyName;
     /**
-     * 状态 (0有效 1失效)
+     * 手牌记录
      */
-    private Integer status;
+    private List<GameReviewDto> gameReviewDtoList;
 }
