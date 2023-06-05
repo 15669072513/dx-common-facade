@@ -13,21 +13,21 @@ import java.util.List;
 @Data
 public class GameOrderRecordDto implements Serializable {
     /**
-     * 牌局id
+     * 手牌id
      */
     private Long roundId;
     /**
-     * 牌局名称
+     * 手牌名称
      */
     private String roundName;
     /**
      * 牌局类型 0 德州 1短牌
      */
-    private String roundType;
+    private Integer roundType;
     /**
      * 牌桌id
      */
-    private String tableId;
+    private Long tableId;
     /**
      * 牌桌名称
      */
@@ -35,11 +35,11 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 游戏名称
      */
-    private String gameTypeName;
+    private String gameName;
     /**
      * 俱乐部id
      */
-    private String clubId;
+    private Long clubId;
     /**
      * 俱乐部名称
      */
@@ -47,7 +47,7 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 玩家id
      */
-    private String userId;
+    private Long userId;
     /**
      * 会员账号
      */
@@ -71,39 +71,51 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 局次（牌桌第多少局）
      */
-    private String roundNo;
+    private Integer roundNo;
     /**
      * 公共牌
      */
     private String globalPokerCode;
     /**
-     * 期初金额
+     * 开始筹码
      */
-    private BigDecimal beforeAmount;
+    private BigDecimal beforeChip;
     /**
-     * 中途带入金额
+     * 中途带入筹码
      */
-    private BigDecimal bringMidwayAmount;
+    private BigDecimal bringMidwayChip;
     /**
-     * 期末金额
+     * 结束筹码
      */
-    private BigDecimal afterAmount;
+    private BigDecimal afterChip;
+    /**
+     * 带入筹码次数
+     */
+    private Integer bringCount;
     /**
      * 有效低池
      */
     private BigDecimal effectivePool;
     /**
-     * 抽水金额
+     * 有效投注（抽水金额）
      */
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpingChip;
     /**
-     *  盈亏金额
+     * 抽水占比
      */
-    private BigDecimal netAmount;
+    private Double rakeProportion;
     /**
-     * 流水金额（投注金额）
+     *  赢的筹码
      */
-    private BigDecimal betAmount;
+    private BigDecimal winChip;
+    /**
+     *  盈亏的筹码
+     */
+    private BigDecimal netChip;
+    /**
+     * 投注金额
+     */
+    private BigDecimal betChip;
     /**
      * 座位号
      */
@@ -112,6 +124,10 @@ public class GameOrderRecordDto implements Serializable {
      * 座位类型 (0普通 1 庄家 2 大盲，3小盲)
      */
     private Integer seatType;
+    /**
+     * 盲注
+     */
+    private String blinds;
     /**
      * 上级代理id
      */
@@ -132,6 +148,10 @@ public class GameOrderRecordDto implements Serializable {
      * 总代账号
      */
     private Long topProxyName;
+    /**
+     * 链路id
+     */
+    private String linkId;
     /**
      * 手牌记录
      */
