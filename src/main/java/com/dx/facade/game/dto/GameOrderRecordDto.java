@@ -4,6 +4,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -63,11 +64,11 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 牌局开始时间
      */
-    private Long roundBeginDate;
+    private Date roundBeginDate;
     /**
      * 牌局结束时间
      */
-    private Long roundEndDate;
+    private Date roundEndDate;
     /**
      * 局次（牌桌第多少局）
      */
