@@ -148,7 +148,7 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 总代账号
      */
-    private Long topProxyName;
+    private String topProxyName;
     /**
      * 链路id
      */
