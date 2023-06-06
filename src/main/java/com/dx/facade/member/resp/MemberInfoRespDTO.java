@@ -214,6 +214,9 @@ public class MemberInfoRespDTO {
     
     @ApiModelProperty("昵称")
     private String nickName;
+    
+    @ApiModelProperty("是否首次登录：0非首次，1首次登录")
+    private Integer firstLogin;
 
     @ApiModelProperty("注册时间")
     private LocalDateTime createdAt;
