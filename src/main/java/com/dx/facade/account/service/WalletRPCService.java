@@ -7,6 +7,7 @@ import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AccountSimpleParam;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
 import com.dx.facade.account.param.QueryWalletParam;
+import com.dx.facade.account.req.WalletBalanceDTO;
 import com.dx.facade.account.resp.MerchantCenterWalletSumRespDTO;
 import com.dx.facade.account.resp.StillBillAmountRespDTO;
 import com.dx.facade.account.resp.WalletRespDTO;
@@ -55,4 +56,11 @@ public interface WalletRPCService {
     void adjustWithdrawWater(AdjustWithdrawWaterParamDTO paramDTO);
 
     BigDecimal getTodayNetAmount(WalletSimpleParam param);
+
+    /**
+     * 用户钱包余额操作
+     * @param dto 操作参数
+     * @throws BizException
+     */
+    void walletBalance(WalletBalanceDTO dto) throws BizException;
 }
