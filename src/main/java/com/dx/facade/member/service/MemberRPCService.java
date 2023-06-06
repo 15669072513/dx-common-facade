@@ -126,10 +126,9 @@ public interface MemberRPCService {
      * 
      * @param memberId
      * @param clubId
-     * @param clubName
      * @return
      */
-	CommonResp<Boolean> joinClub(Long memberId, Long clubId, String clubName);
+	CommonResp<Boolean> joinClub(Long memberId, Long clubId);
 	
 	/**
 	 * 检查用户昵称是否已占用

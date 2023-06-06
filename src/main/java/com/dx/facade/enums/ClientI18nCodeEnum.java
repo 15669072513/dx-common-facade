@@ -130,6 +130,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     BIND_PHONE_BANKCARD(300043), // 请先绑定手机号和银行卡再领取红利
     INVITATION_CODE_NOT_EXIST(300044), // 合营码无效，请确认后重新提交
     PHONE_NUMBER_NOT_FOUND(300045), // 当前手机号未绑定任何账号
+    NICK_NAME_EXIST(300101), // 昵称已存在，请重新输入！
     QUERY_BALANCE_SUCCESS(400000), // 余额查询成功
     QUERY_BALANCE_FAIL(400001), // 余额查询失败
     QUERY_GAME_BALANCE_FAIL(400002), // 查询场馆余额失败

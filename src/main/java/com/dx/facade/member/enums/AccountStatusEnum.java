@@ -104,4 +104,22 @@ public class AccountStatusEnum {
             this.desc = desc;
         }
     }
+    /**
+     * 是否首次登录
+     * 
+     * @author bicycle
+     *
+     */
+    public static enum IsFirstLoginEnum {
+        NOT_FIRST_LOGIN(0, "非首次登录"),
+        FIRST_LOGIN(1, "首次登录");
+
+        public int code;
+        public String desc;
+
+        IsFirstLoginEnum(int code, String desc) {
+            this.code = code;
+            this.desc = desc;
+        }
+    }
 }
