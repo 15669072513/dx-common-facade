@@ -5,7 +5,6 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
-import java.util.List;
 
 /**
  * 游戏注单记录DTO
@@ -154,8 +153,5 @@ public class GameOrderRecordDto implements Serializable {
      * 链路id
      */
     private String linkId;
-    /**
-     * 手牌记录
-     */
-    private List<GameReviewDto> gameReviewDtoList;
+
 }

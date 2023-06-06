@@ -11,5 +11,12 @@ import java.util.List;
 public class GameOrderMqDto {
     private String linkId;
 
+    /**
+     *  订单记录
+     */
     private List<GameOrderRecordDto> gameOrderRecordDto;
+    /**
+     * 牌局回顾
+     */
+    private List<GameReviewDto> gameReviewDtoList;
 }
