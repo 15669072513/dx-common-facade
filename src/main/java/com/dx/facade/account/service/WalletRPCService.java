@@ -1,5 +1,6 @@
 package com.dx.facade.account.service;
 
+import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.change.param.IBWWalletChangeParm;
 import com.dx.facade.account.change.param.MultipleWalletChangeParmDTO;
@@ -62,5 +63,5 @@ public interface WalletRPCService {
      * @param dto 操作参数
      * @throws BizException
      */
-    void walletBalance(WalletBalanceDTO dto) throws BizException;
+    CommonResp<Void> walletBalance(WalletBalanceDTO dto);
 }
