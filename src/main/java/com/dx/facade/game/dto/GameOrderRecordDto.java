@@ -13,6 +13,7 @@ import java.util.List;
  */
 @Data
 public class GameOrderRecordDto implements Serializable {
+    private Long id;
     /**
      * 手牌id
      */
