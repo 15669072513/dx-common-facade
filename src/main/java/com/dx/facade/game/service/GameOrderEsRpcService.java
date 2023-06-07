@@ -1,7 +1,6 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.facade.game.dto.GameOrderRecordDto;
 import com.dx.facade.game.req.GameOrderRecordReq;
 import com.dx.facade.game.req.GameOrderRecordUserReq;
 import com.dx.facade.game.resp.GameOrderRecordResp;
@@ -13,21 +12,17 @@ import java.util.List;
 /**
  * @author heart
  */
-public interface GameOrderRpcService {
-
+public interface GameOrderEsRpcService {
     /**
-     * 修改订单es下发状态
-     * @param idList 主键id
-     * @return
+     * 手牌记录
      */
-    CommonResp<Integer> updateGameOrderRecord(List<Long> idList);
-
+    CommonResp<List<GameOrderRecordResp>> queryRoundList(GameOrderRecordReq req);
     /**
-     * 修改手牌记录es下发状态
-     * @param idList 主键id
-     * @return
+     * 战绩列表
      */
-    CommonResp<Integer> updateGameReview(List<Long> idList);
-
-
+    CommonResp<List<GameOrderRecordUserResp>> queryUserRoundList(GameOrderRecordUserReq req);
+    /**
+     * 盈亏总额
+     */
+    CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserReq req);
 }
