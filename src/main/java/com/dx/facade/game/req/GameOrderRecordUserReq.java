@@ -10,7 +10,5 @@ import java.util.Date;
 @ApiModel("时间分页查询对象")
 public class GameOrderRecordUserReq extends LocalDatePageRequest {
     private Long userId;
-    private Date beginTime;
-    private Date endTime;
 
 }
