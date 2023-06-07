@@ -8,13 +8,22 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
-public class WalletBalanceDTO<T> implements Serializable {
+public class WalletBalanceDetailDTO implements Serializable {
+
+    @ApiModelProperty("唯一ID")
+    private Long id;
 
     @ApiModelProperty("三方唯一请求流水号")
     private Long serialNo;
 
+    @ApiModelProperty("前金额")
+    private BigDecimal beforeAmount;
+
     @ApiModelProperty("发生金额")
-    private BigDecimal amount;
+    private BigDecimal changeAmount;
+
+    @ApiModelProperty("后金额")
+    private BigDecimal afterAmount;
 
     /**
      * @see com.dx.facade.account.enums.Subject
@@ -31,11 +40,6 @@ public class WalletBalanceDTO<T> implements Serializable {
     @ApiModelProperty("用户类型")
     private Integer userType;
 
-    /**
-     * 按业务划分，需要记录不同的业务查询字段
-     * 类似：hand - 手牌
-     *             牌桌
-     *             俱乐部
-     */
-    private T content;
+    @ApiModelProperty("发生时间")
+    private Long createTime;
 }

@@ -5,10 +5,10 @@ package com.dx.facade.enums;
  */
 public enum GameBetStatusEnum {
     CALL(0, "跟注"),
-    CHECK(1, "看牌"),
-    RAISE(2, "加注"),
-    ALLIN(3, "ALLIN"),
-    FOLD(4, "弃牌");
+    RAISE(1, "加注"),
+    ALLIN(2, "ALLIN"),
+    FOLD(3, "弃牌"),
+    BIPAI(4, "比牌");
     GameBetStatusEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;

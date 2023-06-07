@@ -11,6 +11,10 @@ import java.util.Date;
 @Data
 public class GameReviewDto implements Serializable {
     /**
+     * 主键id
+     */
+    private Long id;
+    /**
      * 玩家id
      */
     private Long userId;
