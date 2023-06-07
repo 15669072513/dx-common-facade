@@ -1,5 +1,6 @@
 package com.dx.facade.venue.service;
 
+import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.venue.po.DxTableInfoPO;
@@ -15,7 +16,7 @@ public interface IDxTableInfoService {
      */
     PageResp<DxTableInfoListResp, Void> listPage(DxTableInfoListReq req);
 
-    DxTableInfoPO getTableConfigByTableId(String tableId);
+    CommonResp<DxTableInfoPO> getTableConfigByTableId(String tableId);
 
     /**
      * 新增牌桌
@@ -36,6 +37,6 @@ public interface IDxTableInfoService {
      * @param clubId
      * @return
      */
-    TableCountResp getTableCountByClubId(Long clubId);
+    CommonResp<TableCountResp> getTableCountByClubId(Long clubId);
 
 }
