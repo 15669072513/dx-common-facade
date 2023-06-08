@@ -5,6 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -46,6 +47,9 @@ public class DxGameConfigListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("游戏总开关(0已禁用,1开启中)")
     private Integer gameSwitch;
+
+    @ApiModelProperty("抽水比例")
+    private BigDecimal rake;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;

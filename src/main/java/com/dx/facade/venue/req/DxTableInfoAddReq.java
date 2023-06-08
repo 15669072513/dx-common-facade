@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -19,8 +19,11 @@ public class DxTableInfoAddReq implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("牌桌创建牌桌后按业务规则生成ID")
+    @ApiModelProperty("游戏类型id")
     private String tableId;
+
+    @ApiModelProperty("房主ID")
+    private Long holderId;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;
@@ -31,24 +34,48 @@ public class DxTableInfoAddReq implements Serializable {
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
 
-    @ApiModelProperty("关联游戏名称")
-    private String gameName;
-
     @ApiModelProperty("关联俱乐部id")
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
     private Long clubName;
 
-    @ApiModelProperty("创建时间")
-    private LocalDateTime createdAt;
+    @ApiModelProperty("牌桌最大人数")
+    private Integer maxSeats;
+
+    @ApiModelProperty("自动开局人数")
+    private Integer autoStartUserCounts;
+
+    @ApiModelProperty("牌桌局数")
+    private Integer tableHandNumber;
+
+    @ApiModelProperty("时长（min）")
+    private Integer timeCount;
+
+    @ApiModelProperty("玩家总带入")
+    private Integer bringChipScore;
+
+    @ApiModelProperty("玩家总带出")
+    private String bringOutChipScore;
+
+    @ApiModelProperty("小盲注")
+    private String sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private String bbBlindScore;
+
+    @ApiModelProperty("抽水比例")
+    private BigDecimal rake;
+
+    @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
+    private Integer status;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
-    @ApiModelProperty("修改时间")
-    private LocalDateTime updatedAt;
-
     @ApiModelProperty("修改人")
     private String updatedBy;
+
+    @ApiModelProperty("是否删除（0 未删除 1已删除）")
+    private Integer deleteFlag;
 }
