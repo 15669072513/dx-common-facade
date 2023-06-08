@@ -109,4 +109,10 @@ public class AddLowerMemberReqDto {
 	@ApiModelProperty(value="入口权限（0-关闭 1-开启）")
 	private Integer entryAuthority;
 	
+    @ApiModelProperty(value = "俱乐部id")
+    private Long clubId;
+
+	@ApiModelProperty(value = "俱乐部名称")
+	private String clubName;
+	
 }

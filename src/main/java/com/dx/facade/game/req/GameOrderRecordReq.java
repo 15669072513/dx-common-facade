@@ -5,5 +5,8 @@ import lombok.Data;
 
 @Data
 public class GameOrderRecordReq extends LocalDatePageRequest {
-    private Long roundId;
+    /**
+     * 手牌id
+     */
+    private Long handId;
 }

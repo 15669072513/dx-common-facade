@@ -223,4 +223,8 @@ public class MemberInfoRespDTO {
 
     @ApiModelProperty("更新时间")
     private LocalDateTime updatedAt;
+    
+    /** 代理入口权限开关 0：关闭 1：开启 */
+    @ApiModelProperty("代理入口权限开关")
+    private Integer proxyEntryAuthority;
 }

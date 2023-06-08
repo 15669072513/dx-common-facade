@@ -3,6 +3,8 @@ package com.dx.facade.member.service;
 import java.util.List;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageReq;
+import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddProxyClubParamDTO;
 import com.dx.facade.member.param.QueryProxyClubParamDTO;
@@ -60,6 +62,14 @@ public interface ProxyClubRPCService {
      * @param clubId
      */
     CommonResp<Boolean> dissolutionProxyClub(Long proxyId, Long clubId) throws BizException;
+
+    /**
+     * 俱乐部分页查询
+     * 
+     * @param pageReq
+     * @return
+     */
+	PageResp<ProxyClubRespDTO, ?> selectProxyClubListPage(PageReq<QueryProxyClubParamDTO> pageReq);
     
     
 }
