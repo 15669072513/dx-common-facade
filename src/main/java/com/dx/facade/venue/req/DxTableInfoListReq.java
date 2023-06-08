@@ -47,4 +47,6 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("结束时间")
     private LocalDateTime endTime;
 
+    @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
+    private Integer status;
 }

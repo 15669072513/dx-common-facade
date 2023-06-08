@@ -46,7 +46,7 @@ public class DxTableInfoDto implements Serializable {
     private Integer autoStartUserCounts;
 
     @ApiModelProperty("牌桌局数")
-    private Integer tableRoundNumber;
+    private Integer tableHandNumber;
 
     @ApiModelProperty("时长（min）")
     private Integer timeCount;
