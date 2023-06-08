@@ -1,5 +1,6 @@
 package com.dx.facade.game.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -16,15 +17,15 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 手牌id
      */
-    private Long roundId;
+    private Long handId;
     /**
      * 手牌名称
      */
-    private String roundName;
+    private String handName;
     /**
      * 牌局类型 0 德州 1短牌
      */
-    private Integer roundType;
+    private Integer handType;
     /**
      * 牌桌id
      */
@@ -50,7 +51,7 @@ public class GameOrderRecordDto implements Serializable {
      */
     private Long userId;
     /**
-     * 会员账号
+     * 会员账号u
      */
     private String userName;
     /**
@@ -58,17 +59,23 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String nickName;
     /**
+     * 会员头像
+     */
+    private String userHeadUrl;
+    /**
      * 订单流水号
      */
     private String orderNo;
     /**
      * 牌局开始时间
      */
-    private Date roundBeginDate;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private Date handBeginDate;
     /**
      * 牌局结束时间
      */
-    private Date roundEndDate;
+    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private Date handEndDate;
     /**
      * 局次（牌桌第多少局）
      */
@@ -129,6 +136,18 @@ public class GameOrderRecordDto implements Serializable {
      * 盲注
      */
     private String blinds;
+    /**
+     * 手牌信息
+     */
+    private String handInfo;
+    /**
+     * 牌结果（对子,顺子)
+     */
+    private String resultInfo;
+    /**
+     *  投注状态(最后一次）
+     */
+    private Integer betStatus;
     /**
      * 上级代理id
      */

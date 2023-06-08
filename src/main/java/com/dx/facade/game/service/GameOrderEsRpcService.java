@@ -16,11 +16,11 @@ public interface GameOrderEsRpcService {
     /**
      * 手牌记录
      */
-    CommonResp<List<GameOrderRecordResp>> queryRoundList(GameOrderRecordReq req);
+    CommonResp<List<GameOrderRecordResp>> queryHandList(GameOrderRecordReq req);
     /**
      * 战绩列表
      */
-    CommonResp<List<GameOrderRecordUserResp>> queryUserRoundList(GameOrderRecordUserReq req);
+    CommonResp<List<GameOrderRecordUserResp>> queryUserHandList(GameOrderRecordUserReq req);
     /**
      * 盈亏总额
      */

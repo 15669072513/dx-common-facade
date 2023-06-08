@@ -2,13 +2,14 @@ package com.dx.facade.game.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @author heart
  */
 @Data
-public class GameOrderMqDto {
+public class GameOrderMqDto implements Serializable {
     /**
      * 链路id
      */
