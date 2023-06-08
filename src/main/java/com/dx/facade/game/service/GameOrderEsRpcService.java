@@ -1,10 +1,13 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.facade.game.req.GameOrderRecordReq;
+import com.dx.entity.PageResp;
+import com.dx.facade.game.req.GameOrderRecordDetailReq;
 import com.dx.facade.game.req.GameOrderRecordUserReq;
-import com.dx.facade.game.resp.GameOrderRecordResp;
+import com.dx.facade.game.req.GameReviewReq;
+import com.dx.facade.game.resp.GameOrderRecordDetailResp;
 import com.dx.facade.game.resp.GameOrderRecordUserResp;
+import com.dx.facade.game.resp.GameReviewResp;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,13 +17,18 @@ import java.util.List;
  */
 public interface GameOrderEsRpcService {
     /**
-     * 手牌记录
+     * 牌局回顾
      */
-    CommonResp<List<GameOrderRecordResp>> queryHandList(GameOrderRecordReq req);
+    CommonResp<PageResp<GameReviewResp, ?>> queryGameReviewList(GameReviewReq req);
+
+    /**
+     *  牌局详情
+     */
+    CommonResp<PageResp<GameOrderRecordDetailResp, ?>> queryGameOrderDetailList(GameOrderRecordDetailReq req);
     /**
      * 战绩列表
      */
-    CommonResp<List<GameOrderRecordUserResp>> queryUserHandList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderRecordUserResp, ?>> queryUserHandList(GameOrderRecordUserReq req);
     /**
      * 盈亏总额
      */

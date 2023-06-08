@@ -16,9 +16,13 @@ public class GameOrderRecordUserResp {
      */
     private Long handId;
     /**
-     * 游戏时间
+     * 牌局结束时间
      */
-    private Date gameDate;
+    private Date handEndDate;
+    /**
+     * 牌局开始时间
+     */
+    private Date handBeginDate;
     /**
      * 游戏名称
      */
@@ -28,11 +32,11 @@ public class GameOrderRecordUserResp {
      */
     private Integer gameType;
     /**
-     * 耗时
-     */
-    private Integer ms;
-    /**
      * 盈亏筹码
      */
     private BigDecimal netChip;
+    /**
+     * 盲注(大盲/小盲)
+     */
+    private String blinds;
 }
