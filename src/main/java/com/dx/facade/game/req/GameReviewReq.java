@@ -10,7 +10,7 @@ public class GameReviewReq extends LocalDatePageRequest {
      */
     private Long tableId;
     /**
-     * 轮次 （0 上一轮 1 上上轮 ）
+     * 局次（牌桌第多少局）
      */
-    private Integer num;
+    private Integer roundNo;
 }

@@ -1,6 +1,7 @@
 package com.dx.facade.game.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.Builder;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -11,6 +12,7 @@ import java.util.Date;
  * 游戏注单记录DTO
  * @author heart
  */
+@Builder
 @Data
 public class GameOrderRecordDto implements Serializable {
     private Long id;

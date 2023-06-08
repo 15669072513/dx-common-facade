@@ -5,7 +5,6 @@ import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
 @Data
-@ApiModel("时间分页查询对象")
 public class GameOrderRecordUserReq extends LocalDatePageRequest {
     /**
      * 玩家id
