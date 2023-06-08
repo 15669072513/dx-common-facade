@@ -44,7 +44,7 @@ public class GameReviewResp implements Serializable  {
      */
     private String globalPokerCode;
     /**
-     * 开牌结果（PokerResultInfoEnum）
+     * 开牌结果（#PokerResultInfoEnum）
      */
     private String resultInfo;
     /**
@@ -59,5 +59,10 @@ public class GameReviewResp implements Serializable  {
      * 盲注(大盲/小盲)
      */
     private String blinds;
+
+    /**
+     * 座位类型 (GameSeatTypeEnum)
+     */
+    private Integer seatType;
 
 }
