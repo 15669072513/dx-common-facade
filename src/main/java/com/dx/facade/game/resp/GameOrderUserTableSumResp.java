@@ -12,21 +12,21 @@ import java.util.Date;
 @Data
 public class GameOrderUserTableSumResp implements Serializable {
     /**
-     *  手牌id
+     *  牌桌id
      */
-    private Long handId;
-    /**
-     * 牌局结束时间
-     */
-    private Date handEndDate;
+    private Long tableId;
     /**
      * 牌局开始时间
      */
-    private Date handBeginDate;
+    private Date minDate;
     /**
-     * 游戏名称
+     * 结束时间
      */
-    private String gameName;
+    private Date maxDate;
+    /**
+     * 牌桌名称
+     */
+    private String tableName;
     /**
      * 头像
      */
