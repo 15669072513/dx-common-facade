@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -19,7 +20,7 @@ public class DxTableInfoListResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("游戏类型id")
+    @ApiModelProperty("牌桌id")
     private String tableId;
 
     @ApiModelProperty("房主ID")
@@ -44,7 +45,7 @@ public class DxTableInfoListResp implements Serializable {
     private Integer autoStartUserCounts;
 
     @ApiModelProperty("牌桌局数")
-    private Integer tableRoundNumber;
+    private Integer tableHandNumber;
 
     @ApiModelProperty("时长（min）")
     private Integer timeCount;
@@ -60,6 +61,12 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("大盲注")
     private String bbBlindScore;
+
+    @ApiModelProperty("抽水比例")
+    private BigDecimal rake;
+
+    @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
+    private Integer status;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;

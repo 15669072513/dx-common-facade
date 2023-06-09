@@ -38,6 +38,10 @@ public class DxTableInfoDto implements Serializable {
     @TableField("club_id")
     private Long clubId;
 
+    @ApiModelProperty("关联俱乐部名称")
+    @TableField("club_name")
+    private String clubName;
+
     @ApiModelProperty("牌桌最大人数")
     private Integer maxSeats;
 
@@ -46,7 +50,7 @@ public class DxTableInfoDto implements Serializable {
     private Integer autoStartUserCounts;
 
     @ApiModelProperty("牌桌局数")
-    private Integer tableRoundNumber;
+    private Integer tableHandNumber;
 
     @ApiModelProperty("时长（min）")
     private Integer timeCount;

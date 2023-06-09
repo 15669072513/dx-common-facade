@@ -7,7 +7,7 @@ import lombok.Data;
  * 牌局详情请求对象
  */
 @Data
-public class GameOrderRecordReq extends LocalDatePageRequest {
+public class GameOrderRecordDetailReq extends LocalDatePageRequest {
     /**
      * 手牌id
      */

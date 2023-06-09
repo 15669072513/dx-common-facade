@@ -1,10 +1,9 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.facade.game.req.GameOrderRecordReq;
-import com.dx.facade.game.req.GameOrderRecordUserReq;
-import com.dx.facade.game.resp.GameOrderRecordResp;
-import com.dx.facade.game.resp.GameOrderRecordUserResp;
+import com.dx.entity.PageResp;
+import com.dx.facade.game.req.*;
+import com.dx.facade.game.resp.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,15 +13,29 @@ import java.util.List;
  */
 public interface GameOrderEsRpcService {
     /**
-     * 手牌记录
+     * 牌局回顾
      */
-    CommonResp<List<GameOrderRecordResp>> queryRoundList(GameOrderRecordReq req);
+    CommonResp<GameReviewResp> queryGameReviewList(GameReviewReq req);
     /**
-     * 战绩列表
+     * 玩家战绩列表
      */
-    CommonResp<List<GameOrderRecordUserResp>> queryUserRoundList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderUserTableSumResp, ?>> queryGameOrderUserTableSumList(GameOrderUserTableSumReq req);
+    /**
+     * 牌桌战绩列表
+     */
+    CommonResp<List<GameOrderTableDetailSumResp>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
+
     /**
      * 盈亏总额
      */
     CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserReq req);
+
+    /**
+     *  牌局详情
+     */
+    CommonResp<PageResp<GameOrderRecordDetailResp, ?>> queryGameOrderDetailList(GameOrderRecordDetailReq req);
+    /**
+     * 玩家手牌列表
+     */
+    CommonResp<PageResp<GameOrderRecordUserResp, ?>> queryUserHandList(GameOrderRecordUserReq req);
 }

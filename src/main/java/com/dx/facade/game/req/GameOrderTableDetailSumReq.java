@@ -7,9 +7,10 @@ import lombok.Data;
  * 牌局详情请求对象
  */
 @Data
-public class GameOrderRecordReq extends LocalDatePageRequest {
+public class GameOrderTableDetailSumReq extends LocalDatePageRequest {
     /**
-     * 手牌id
+     * 牌桌id
      */
-    private Long handId;
+    private Long tableId;
+
 }

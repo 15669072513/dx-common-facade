@@ -1,6 +1,10 @@
 package com.dx.facade.game.dto;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -10,21 +14,25 @@ import java.util.Date;
  * 游戏注单记录DTO
  * @author heart
  */
+@Builder
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class GameOrderRecordDto implements Serializable {
+
     private Long id;
     /**
      * 手牌id
      */
-    private Long roundId;
+    private Long handId;
     /**
      * 手牌名称
      */
-    private String roundName;
+    private String handName;
     /**
-     * 牌局类型 0 德州 1短牌
+     * 牌桌类型 2001L:德州局 2002L:短牌局
      */
-    private Integer roundType;
+    private Long handType;
     /**
      * 牌桌id
      */
@@ -50,7 +58,7 @@ public class GameOrderRecordDto implements Serializable {
      */
     private Long userId;
     /**
-     * 会员账号
+     * 会员账号u
      */
     private String userName;
     /**
@@ -58,17 +66,21 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String nickName;
     /**
+     * 会员头像
+     */
+    private String userHeadUrl;
+    /**
      * 订单流水号
      */
     private String orderNo;
     /**
      * 牌局开始时间
      */
-    private Date roundBeginDate;
+    private Long handBeginDate;
     /**
      * 牌局结束时间
      */
-    private Date roundEndDate;
+    private Long handEndDate;
     /**
      * 局次（牌桌第多少局）
      */
@@ -125,10 +137,27 @@ public class GameOrderRecordDto implements Serializable {
      * 座位类型 (0普通 1 庄家 2 大盲，3小盲)
      */
     private Integer seatType;
-    /**
-     * 盲注
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private Long sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private Long bbBlindScore;
+    /**
+     * 手牌信息
+     */
+    private String handInfo;
+    /**
+     * 牌结果（对子,顺子)
+     */
+    private String resultInfo;
+    /**
+     *  投注状态(最后一次）
+     */
+    private Integer betStatus;
     /**
      * 上级代理id
      */
@@ -154,4 +183,32 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String linkId;
 
+
+    /**
+     * 总抽水金额
+     */
+    private BigDecimal rakeAmountAll;
+
+    /**
+     * 总有效底池金额
+     */
+    private BigDecimal prosperPoolAll;
+
+    /**
+     * 批次id
+     */
+    private String batchId;
+
+    /***
+     * 小盲座位号
+     */
+    private Integer sbChairId;
+    /***
+     * 大盲座位号
+     */
+    private Integer bbChairId;
+    /***
+     * 庄家座位号
+     */
+    private Integer button;
 }

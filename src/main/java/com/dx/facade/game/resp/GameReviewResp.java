@@ -10,7 +10,7 @@ import java.util.Date;
  * 牌局信息表
  */
 @Data
-public class GameOrderRecordResp implements Serializable {
+public class GameReviewResp implements Serializable  {
     /**
      *  手牌id
      */
@@ -19,10 +19,6 @@ public class GameOrderRecordResp implements Serializable {
      * 牌局结束时间
      */
     private Date handEndDate;
-    /**
-     * 牌局开始时间
-     */
-    private Date handBeginDate;
     /**
      * 游戏名称
      */
@@ -44,7 +40,7 @@ public class GameOrderRecordResp implements Serializable {
      */
     private String globalPokerCode;
     /**
-     * 开牌结果（PokerResultInfoEnum）
+     * 开牌结果（#PokerResultInfoEnum）
      */
     private String resultInfo;
     /**
@@ -59,5 +55,10 @@ public class GameOrderRecordResp implements Serializable {
      * 盲注(大盲/小盲)
      */
     private String blinds;
+
+    /**
+     * 座位类型 (GameSeatTypeEnum)
+     */
+    private Integer seatType;
 
 }

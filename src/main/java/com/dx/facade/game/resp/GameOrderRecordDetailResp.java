@@ -10,7 +10,7 @@ import java.util.Date;
  * 牌局信息表
  */
 @Data
-public class GameOrderRecordResp implements Serializable {
+public class GameOrderRecordDetailResp implements Serializable {
     /**
      *  手牌id
      */

@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
 /**
  * <p>
@@ -77,6 +78,9 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("自动开始人数")
     private String autoStartNumbers;
+
+    @ApiModelProperty("抽水比例")
+    private BigDecimal rake;
 
     @ApiModelProperty(
             value = "创建人",
