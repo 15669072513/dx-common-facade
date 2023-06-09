@@ -8,7 +8,8 @@ public enum GameBetStatusEnum {
     RAISE(1, "加注"),
     ALLIN(2, "ALLIN"),
     FOLD(3, "弃牌"),
-    BIPAI(4, "比牌");
+    SEE(4, "看牌"),
+    BIPAI(5, "比牌");
     GameBetStatusEnum(int code, String desc) {
         this.code = code;
         this.desc = desc;
