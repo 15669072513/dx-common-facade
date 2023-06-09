@@ -20,10 +20,6 @@ public class GameReviewResp implements Serializable  {
      */
     private Date handEndDate;
     /**
-     * 牌局开始时间
-     */
-    private Date handBeginDate;
-    /**
      * 游戏名称
      */
     private String gameName;
