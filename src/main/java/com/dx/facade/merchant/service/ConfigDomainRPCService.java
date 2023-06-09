@@ -7,6 +7,8 @@ import com.dx.facade.merchant.req.ConfigDomainQueryReqDTO;
 import com.dx.facade.merchant.resp.ConfigDomainQueryRespDTO;
 
 /**
+ * 域名配置RPC服务
+ * 
  @title
  @desc
  @path
@@ -18,6 +20,7 @@ public interface ConfigDomainRPCService {
 
     /**
      * 分页查询域名
+     * 
      * @param reqDTO
      * @return
      */

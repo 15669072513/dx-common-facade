@@ -109,6 +109,10 @@ public class MemberSaveReqDTO {
     @ApiModelProperty(value = "注册IP", hidden = true)
     private String ip;
     
+    /** 昵称 */
+    @ApiModelProperty(value="昵称")
+    private String nickName;
+    
     /** 俱乐部Id */
     @ApiModelProperty("俱乐部Id")
     private Long clubId;

@@ -10,7 +10,12 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-
+/**
+ * 契约查询请求DTO
+ * 
+ * @author bicycle
+ *
+ */
 @Data
 @Builder
 @AllArgsConstructor
@@ -19,7 +24,9 @@ import java.io.Serializable;
 public class MyContractReqDTO implements Serializable {
 
 
-    @ApiModelProperty(value = "商户id")
+	private static final long serialVersionUID = 1L;
+
+	@ApiModelProperty(value = "商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     public Long merchantId;
     

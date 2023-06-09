@@ -7,7 +7,7 @@ import java.util.List;
 
 
 /**
- * 会员vip权益配置表 RPC接口
+ * 会员vip权益配置RPC服务
  *
  * @program: member-server-parent
  * @description:

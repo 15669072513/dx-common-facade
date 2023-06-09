@@ -1,12 +1,7 @@
 package com.dx.facade.merchant.service;
 
-import com.dx.entity.CommonResp;
-import com.dx.entity.PageResp;
-import com.dx.facade.merchant.dto.MerchantVenueRpcDTO;
 import com.dx.facade.merchant.req.ConfigAppVersionQueryReqDTO;
 import com.dx.facade.merchant.resp.ConfigAppVersionQueryRespDTO;
-
-import java.util.Map;
 
 /**
  @title app版本更新检查 RPC接口
@@ -17,6 +12,11 @@ import java.util.Map;
  @since 2022-10-12 20:15:33
 */
 public interface ConfigAppVersionRPCService {
-
+	/**
+	 * 根据版本号、终端类型、状态查询App版本信息
+	 * 
+	 * @param reqDTO
+	 * @return
+	 */
     public ConfigAppVersionQueryRespDTO loadAppVersion(ConfigAppVersionQueryReqDTO reqDTO);
 }

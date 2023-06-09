@@ -151,6 +151,7 @@ public interface MemberRPCService {
 	 * 
 	 * @param paramDTO
 	 * @return
+	 * @throws BizException 
 	 */
-	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO);
+	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO) throws BizException;
 }
