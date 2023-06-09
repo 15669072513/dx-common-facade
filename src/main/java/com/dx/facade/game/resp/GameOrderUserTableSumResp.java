@@ -16,13 +16,13 @@ public class GameOrderUserTableSumResp implements Serializable {
      */
     private Long tableId;
     /**
-     * 牌局开始时间
+     * 牌桌创建时间
      */
-    private Date minDate;
+    private Date tableDate;
     /**
-     * 结束时间
+     * 时长
      */
-    private Date maxDate;
+    private Long ms;
     /**
      * 牌桌名称
      */

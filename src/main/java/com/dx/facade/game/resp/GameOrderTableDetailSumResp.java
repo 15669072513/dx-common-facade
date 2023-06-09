@@ -29,13 +29,13 @@ public class GameOrderTableDetailSumResp implements Serializable {
      */
     private String nickName;
     /**
-     * 开始时间
+     * 牌桌时间
      */
-    private Date minBeginDate;
+    private Date tableTime;
     /**
-     * 结束时间
+     * 时长
      */
-    private Date maxEndDate;
+    private Long ms;
 
     /**
      * 牌桌名称
@@ -43,15 +43,15 @@ public class GameOrderTableDetailSumResp implements Serializable {
     private String tableName;
 
     /**
-     * 全部手数
+     * 牌桌手数
      */
     private int handCount;
     /**
-     * 全部流水
+     * 牌桌流水
      */
     private BigDecimal betChipSum;
     /**
-     *  全部带入
+     *  牌桌带入
      */
     private BigDecimal bringChipSum;
     /**
@@ -59,7 +59,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
      */
     private BigDecimal maxEffectivePool;
     /**
-     *  最大底池
+     *  盈亏筹码
      */
     private BigDecimal netChipSum;
     /**

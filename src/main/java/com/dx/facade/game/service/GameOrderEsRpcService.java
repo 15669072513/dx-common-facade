@@ -17,11 +17,11 @@ public interface GameOrderEsRpcService {
      */
     CommonResp<GameReviewResp> queryGameReviewList(GameReviewReq req);
     /**
-     * 牌桌战绩列表
+     * 玩家战绩列表
      */
     CommonResp<PageResp<GameOrderUserTableSumResp, ?>> queryGameOrderUserTableSumList(GameOrderUserTableSumReq req);
     /**
-     * 玩家战绩列表
+     * 牌桌战绩列表
      */
     CommonResp<List<GameOrderTableDetailSumResp>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
 
