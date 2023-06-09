@@ -22,4 +22,10 @@ public interface IDxHandInfoService {
      */
     CommonResp addHand(DxHandInfoAddReq req) throws BizException;
 
+    /**
+     * 根据手牌id获取手牌信息
+     * @param handId
+     * @return
+     */
+    CommonResp<DxHandInfoListResp> getHandInfoById(String handId);
 }
