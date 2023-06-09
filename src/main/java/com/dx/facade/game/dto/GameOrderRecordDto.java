@@ -180,4 +180,15 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String linkId;
 
+
+    /**
+     * 总抽水金额
+     */
+    private BigDecimal rakeAmountALL;
+
+    /**
+     * 总有效底池金额
+     */
+    private BigDecimal prosperPoolAll;
+
 }
