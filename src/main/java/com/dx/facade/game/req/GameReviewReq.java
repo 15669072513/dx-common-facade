@@ -1,10 +1,13 @@
 package com.dx.facade.game.req;
 
-import com.dx.facade.report.param.base.LocalDatePageRequest;
+import com.dx.facade.report.param.base.BaseRequest;
 import lombok.Data;
 
+/**
+ * 有效回顾请求参数
+ */
 @Data
-public class GameReviewReq extends LocalDatePageRequest {
+public class GameReviewReq extends BaseRequest{
     /**
      * 牌桌id
      */

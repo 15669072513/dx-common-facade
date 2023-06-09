@@ -163,7 +163,7 @@
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.10.2" level="project" />
     <orderEntry type="library" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.2" level="project" />
     <orderEntry type="library" name="Maven: eu.bitwalker:UserAgentUtils:1.20" level="project" />
-    <orderEntry type="library" name="Maven: com.dx:dx-common-tools:1.0.0-SNAPSHOT" level="project" />
+    <orderEntry type="module" module-name="dx-common-tools" />
     <orderEntry type="library" name="Maven: com.alibaba:easyexcel:2.2.10" level="project" />
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.17" level="project" />
     <orderEntry type="library" name="Maven: org.apache.commons:commons-collections4:4.4" level="project" />

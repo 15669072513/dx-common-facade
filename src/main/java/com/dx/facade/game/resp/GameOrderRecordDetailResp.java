@@ -14,15 +14,15 @@ public class GameOrderRecordDetailResp implements Serializable {
     /**
      *  手牌id
      */
-    private Long handId;
+    private String handId;
     /**
      * 牌局结束时间
      */
-    private Date handEndDate;
+    private Long handEndDate;
     /**
      * 牌局开始时间
      */
-    private Date handBeginDate;
+    private Long handBeginDate;
     /**
      * 游戏名称
      */

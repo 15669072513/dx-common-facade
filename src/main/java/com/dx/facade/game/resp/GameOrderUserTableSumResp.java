@@ -18,7 +18,7 @@ public class GameOrderUserTableSumResp implements Serializable {
     /**
      * 牌桌创建时间
      */
-    private Date tableDate;
+    private Long tableCreateDate;
     /**
      * 时长
      */
