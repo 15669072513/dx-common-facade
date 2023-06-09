@@ -30,9 +30,9 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String handName;
     /**
-     * 牌局类型 0 德州 1短牌
+     * 牌桌类型 2001L:德州局 2002L:短牌局
      */
-    private Integer handType;
+    private Long handType;
     /**
      * 牌桌id
      */
@@ -76,13 +76,11 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 牌局开始时间
      */
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date handBeginDate;
+    private Long handBeginDate;
     /**
      * 牌局结束时间
      */
-    @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private Date handEndDate;
+    private Long handEndDate;
     /**
      * 局次（牌桌第多少局）
      */
@@ -184,7 +182,7 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 总抽水金额
      */
-    private BigDecimal rakeAmountALL;
+    private BigDecimal rakeAmountAll;
 
     /**
      * 总有效底池金额
@@ -195,4 +193,17 @@ public class GameOrderRecordDto implements Serializable {
      * 批次id
      */
     private String batchId;
+
+    /***
+     * 小盲座位号
+     */
+    private Integer sbChairId;
+    /***
+     * 大盲座位号
+     */
+    private Integer bbChairId;
+    /***
+     * 庄家座位号
+     */
+    private Integer button;
 }
