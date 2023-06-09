@@ -15,6 +15,9 @@ import java.util.Date;
 @Builder
 @Data
 public class GameOrderRecordDto implements Serializable {
+    public GameOrderRecordDto() {
+
+    }
     private Long id;
     /**
      * 手牌id
