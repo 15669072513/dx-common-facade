@@ -1,11 +1,13 @@
 package com.dx.facade.game.req;
 
 import com.dx.facade.report.param.base.LocalDatePageRequest;
-import io.swagger.annotations.ApiModel;
 import lombok.Data;
 
+/**
+ * 牌局详情请求对象
+ */
 @Data
-public class GameOrderRecordUserReq extends LocalDatePageRequest {
+public class GameOrderUserTableSumReq extends LocalDatePageRequest {
     /**
      * 玩家id
      */
