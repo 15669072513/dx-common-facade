@@ -20,7 +20,7 @@ public interface IDxHandInfoService {
      * @param req
      * @throws BizException
      */
-    CommonResp addHand(DxHandInfoAddReq req) throws BizException;
+    CommonResp<?> addHand(DxHandInfoAddReq req) throws BizException;
 
     /**
      * 根据手牌id获取手牌信息
