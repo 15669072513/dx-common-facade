@@ -3,6 +3,7 @@ package com.dx.facade.venue.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.venue.dto.DxTableInfoDto;
 import com.dx.facade.venue.req.DxTableInfoAddReq;
 import com.dx.facade.venue.req.DxTableInfoListReq;
 import com.dx.facade.venue.resp.DxTableInfoListResp;
@@ -23,7 +24,7 @@ public interface IDxTableInfoService {
      * @param req
      * @throws BizException
      */
-    CommonResp<?> addTable(DxTableInfoAddReq req) throws BizException;
+    CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req) throws BizException;
 
     /**
      * 更新牌桌

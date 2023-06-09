@@ -38,6 +38,10 @@ public class DxTableInfoDto implements Serializable {
     @TableField("club_id")
     private Long clubId;
 
+    @ApiModelProperty("关联俱乐部名称")
+    @TableField("club_name")
+    private Long clubName;
+
     @ApiModelProperty("牌桌最大人数")
     private Integer maxSeats;
 
