@@ -137,10 +137,15 @@ public class GameOrderRecordDto implements Serializable {
      * 座位类型 (0普通 1 庄家 2 大盲，3小盲)
      */
     private Integer seatType;
-    /**
-     * 盲注
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private Long sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private Long bbBlindScore;
     /**
      * 手牌信息
      */
