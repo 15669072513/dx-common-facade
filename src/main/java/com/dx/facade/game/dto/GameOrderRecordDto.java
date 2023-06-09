@@ -191,4 +191,8 @@ public class GameOrderRecordDto implements Serializable {
      */
     private BigDecimal prosperPoolAll;
 
+    /**
+     * 批次id
+     */
+    private String batchId;
 }
