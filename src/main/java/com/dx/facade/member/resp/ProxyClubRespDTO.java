@@ -32,6 +32,10 @@ public class ProxyClubRespDTO implements Serializable {
     @ApiModelProperty("ID")
     private Long id;
     
+    /** 商户Id */
+    @ApiModelProperty("商户Id")
+    private Long merchantId;
+    
     /** 代理Id */
     @ApiModelProperty("代理Id")
     private Long proxyId;
