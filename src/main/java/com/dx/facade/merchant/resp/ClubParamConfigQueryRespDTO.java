@@ -45,7 +45,7 @@ public class ClubParamConfigQueryRespDTO implements Serializable {
 
     /** 单牌桌旁观人数上限 */
     @ApiModelProperty("单牌桌旁观人数上限")
-    private String lookOnLimit;
+    private Integer lookOnLimit;
 
     /** 创建人 */
     @ApiModelProperty("创建人")
