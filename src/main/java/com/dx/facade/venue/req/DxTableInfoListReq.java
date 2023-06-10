@@ -39,7 +39,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
-    private String clubName;
+    private Long clubName;
 
     @ApiModelProperty("开始时间")
     private LocalDateTime startTime;
