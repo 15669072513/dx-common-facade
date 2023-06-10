@@ -32,6 +32,6 @@ public class ClubParamConfigQueryReqDTO implements Serializable {
 
     /** 商户id */
     @ApiModelProperty("商户id")
-    private String merchantId;
+    private Long merchantId;
 
 }
