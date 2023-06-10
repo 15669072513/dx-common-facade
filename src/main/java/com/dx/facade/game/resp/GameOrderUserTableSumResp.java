@@ -12,6 +12,10 @@ import java.util.Date;
 @Data
 public class GameOrderUserTableSumResp implements Serializable {
     /**
+     * 用户id
+     */
+    private Long userId;
+    /**
      *  牌桌id
      */
     private Long tableId;
@@ -39,9 +43,14 @@ public class GameOrderUserTableSumResp implements Serializable {
      * 盈亏筹码
      */
     private BigDecimal netChip;
-    /**
-     * 盲注(大盲/小盲)
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private Long sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private Long bbBlindScore;
 
 }

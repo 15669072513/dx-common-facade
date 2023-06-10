@@ -45,7 +45,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      * 牌桌手数
      */
-    private int handCount;
+    private Long handCount;
     /**
      * 牌桌流水
      */
