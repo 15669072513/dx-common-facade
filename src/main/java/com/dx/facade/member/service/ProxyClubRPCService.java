@@ -7,6 +7,7 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddProxyClubParamDTO;
+import com.dx.facade.member.param.CheckClubNameParamDTO;
 import com.dx.facade.member.param.QueryProxyClubParamDTO;
 import com.dx.facade.member.param.UpdateProxyClubParamDTO;
 import com.dx.facade.member.resp.ProxyClubRespDTO;
@@ -70,6 +71,14 @@ public interface ProxyClubRPCService {
      * @return
      */
 	PageResp<ProxyClubRespDTO, ?> selectProxyClubListPage(PageReq<QueryProxyClubParamDTO> pageReq);
+	
+	/**
+	 * 验证俱乐部名称是否已存在
+	 * 
+	 * @param checkClubNameParamDTO
+	 * @return
+	 */
+	CommonResp<Boolean> checkClubName(CheckClubNameParamDTO checkClubNameParamDTO);
     
     
 }

@@ -70,6 +70,7 @@ public class OrderNoUtils {
 		BW_MEMBER_EDIT_AUDIT("s", "用户资料修改审核订单号"),
 		BW_MEMBER_BILL_ADJUST("EDMB", "用户提款流水扔调整订单号"),
 		BW_MEMBER_AUDIT("s", "用户新增审核"),
+		BW_CLUB_AUDIT("s", "俱乐部新增审核"),
 		;
 		
 		

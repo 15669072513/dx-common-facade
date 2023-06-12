@@ -10,8 +10,6 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class BaseRequest {
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
     @NotNull(message = "分页参数不能为空")

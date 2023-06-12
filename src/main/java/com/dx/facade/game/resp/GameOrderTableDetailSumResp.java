@@ -29,9 +29,9 @@ public class GameOrderTableDetailSumResp implements Serializable {
      */
     private String nickName;
     /**
-     * 牌桌创建时间
+     * 牌桌时间
      */
-    private Long tableCreateTime;
+    private Date tableTime;
     /**
      * 时长
      */
@@ -45,7 +45,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      * 牌桌手数
      */
-    private int handCount;
+    private Long handCount;
     /**
      * 牌桌流水
      */

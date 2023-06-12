@@ -29,6 +29,9 @@ public class AddProxyClubParamDTO implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = -5276753294444979337L;
 
+    /** 商户Id */
+    @ApiModelProperty("商户Id")
+    private Long merchantId;
     
     /** 代理Id */
     @ApiModelProperty("代理Id")

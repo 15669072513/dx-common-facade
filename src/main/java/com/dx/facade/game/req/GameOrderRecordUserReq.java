@@ -1,10 +1,11 @@
 package com.dx.facade.game.req;
 
 import com.dx.facade.report.param.base.BaseRequest;
+import com.dx.facade.report.param.base.LocalDatePageRequest;
 import lombok.Data;
 
 @Data
-public class GameOrderRecordUserReq extends BaseRequest {
+public class GameOrderRecordUserReq extends LocalDatePageRequest {
     /**
      * 玩家id
      */

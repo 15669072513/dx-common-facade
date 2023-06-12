@@ -23,13 +23,6 @@ public interface IDxHandInfoService {
     CommonResp<?> addHand(DxHandInfoAddReq req) throws BizException;
 
     /**
-     * 根据tableId和局次更新手牌数据
-     * @param req
-     * @throws BizException
-     */
-    CommonResp<?> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
-
-    /**
      * 根据手牌id获取手牌信息
      * @param handId
      * @return
