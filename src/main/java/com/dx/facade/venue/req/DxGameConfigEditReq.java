@@ -52,8 +52,8 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("游戏描述")
     private String description;
 
-    @ApiModelProperty("游戏总开关(0已禁用,1开启中)")
-    private Integer gameSwitch;
+    @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
+    private Integer status;
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;

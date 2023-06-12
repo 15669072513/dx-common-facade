@@ -39,7 +39,7 @@ public interface IDxVenueConfigService {
      * 注1:电游场馆使用这个rpc,所有其它场馆使用上面的rpc
      * 注2:yannick给前端时别忘了将禁用的游戏(即status为0的)过滤掉
      */
-    List<ConfigGamePO> getDyGameList();
+    //List<ConfigGamePO> getDyGameList();
 
     //上面的这些方法,都是为app端提供的,下面的方法是为rpc提供的
 

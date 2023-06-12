@@ -45,8 +45,8 @@ public class DxGameConfigListReq extends PageRequest implements Serializable {
     @ApiModelProperty("游戏越南名")
     private Long gameVnName;
 
-    @ApiModelProperty("游戏总开关(0已禁用,1开启中)")
-    private Integer gameSwitch;
+    @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
+    private Integer status;
 
     @ApiModelProperty("抽水比例")
     private BigDecimal rake;
