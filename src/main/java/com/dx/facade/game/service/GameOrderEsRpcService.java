@@ -28,7 +28,7 @@ public interface GameOrderEsRpcService {
     /**
      * 盈亏总额
      */
-    CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserReq req);
+    CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
 
     /**
      *  牌局详情
