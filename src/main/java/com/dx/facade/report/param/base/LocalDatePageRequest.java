@@ -11,7 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
@@ -31,9 +31,9 @@ public class LocalDatePageRequest implements Serializable {
 
     @ApiModelProperty(value = "开始时间", required = true, example = "2021-06-17")
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate startTime;
+    private LocalDateTime startTime;
 
     @ApiModelProperty(value = "结束时间", required = true, example = "2021-06-17")
     @DateTimeFormat(pattern="yyyy-MM-dd")
-    private LocalDate endTime;
+    private LocalDateTime endTime;
 }
