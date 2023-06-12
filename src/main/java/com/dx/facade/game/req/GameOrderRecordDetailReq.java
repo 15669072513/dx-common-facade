@@ -1,5 +1,6 @@
 package com.dx.facade.game.req;
 
+import com.dx.facade.report.param.base.BaseRequest;
 import com.dx.facade.report.param.base.LocalDatePageRequest;
 import lombok.Data;
 

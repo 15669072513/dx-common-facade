@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -36,9 +35,11 @@ public class DxTableInfoDto implements Serializable {
     private Long gameTypeId;
 
     @ApiModelProperty("关联俱乐部id")
+    @TableField("club_id")
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
+    @TableField("club_name")
     private String clubName;
 
     @ApiModelProperty("牌桌最大人数")
@@ -65,15 +66,6 @@ public class DxTableInfoDto implements Serializable {
 
     @ApiModelProperty("大盲注")
     private String bbBlindScore;
-
-    @ApiModelProperty("抽水比例")
-    private BigDecimal rake;
-
-    @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
-    private Integer status;
-
-    @ApiModelProperty("累计参与者")
-    private Integer participantTotal;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;

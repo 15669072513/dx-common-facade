@@ -68,9 +68,6 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
 
-    @ApiModelProperty("累计参与者")
-    private Integer participantTotal;
-
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
