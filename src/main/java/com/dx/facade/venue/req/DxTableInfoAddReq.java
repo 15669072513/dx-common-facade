@@ -19,8 +19,11 @@ public class DxTableInfoAddReq implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("游戏类型id")
-    private String tableId;
+//    @ApiModelProperty("游戏类型id")
+//    private String tableId;
+//
+//    @ApiModelProperty("牌桌code")
+//    private String tableCode;
 
     @ApiModelProperty("房主ID")
     private Long holderId;

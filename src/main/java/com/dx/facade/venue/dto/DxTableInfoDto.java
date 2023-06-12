@@ -23,8 +23,11 @@ public class DxTableInfoDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "table_id", type = IdType.INPUT)
-    private String tableId;
+    @ApiModelProperty("牌桌id")
+    private Long tableId;
+
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;

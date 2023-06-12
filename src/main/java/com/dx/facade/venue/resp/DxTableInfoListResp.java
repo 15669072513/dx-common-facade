@@ -21,7 +21,10 @@ public class DxTableInfoListResp implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("牌桌id")
-    private String tableId;
+    private Long tableId;
+
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
 
     @ApiModelProperty("房主ID")
     private Long holderId;

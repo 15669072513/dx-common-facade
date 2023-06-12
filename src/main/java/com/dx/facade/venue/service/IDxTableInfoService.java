@@ -7,6 +7,7 @@ import com.dx.facade.venue.dto.DxTableInfoDto;
 import com.dx.facade.venue.req.DxTableInfoAddReq;
 import com.dx.facade.venue.req.DxTableInfoListReq;
 import com.dx.facade.venue.resp.DxTableInfoListResp;
+import com.dx.facade.venue.resp.TableConfigRuleResp;
 import com.dx.facade.venue.resp.TableCountResp;
 
 public interface IDxTableInfoService {
@@ -17,7 +18,7 @@ public interface IDxTableInfoService {
      */
     CommonResp<PageResp<DxTableInfoListResp, Void>> listPage(DxTableInfoListReq req);
 
-    CommonResp<DxTableInfoListResp> getTableConfigByTableId(String tableId);
+    CommonResp<TableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
     /**
      * 新增牌桌
@@ -44,11 +45,11 @@ public interface IDxTableInfoService {
      * 游戏牌桌解散（综合后台强制解散）
      * @param tableId 牌桌id
      */
-    CommonResp<?> gameDissolve(String tableId);
+    CommonResp<?> gameDissolve(Long tableId);
 
     /**
      * 游戏牌桌解散（游戏房间内房主解散）
      * @param tableId 牌桌id
      */
-    CommonResp<?> houseOwnerGameDissolve(String tableId);
+    CommonResp<?> houseOwnerGameDissolve(Long tableId);
 }

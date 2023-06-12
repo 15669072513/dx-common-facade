@@ -10,6 +10,11 @@ public class TableConfigRuleResp {
      */
     private Long holderId;
 
+    /**
+     * 牌桌code
+     */
+    private String tableCode;
+
     /***
      * 牌桌id
      */
