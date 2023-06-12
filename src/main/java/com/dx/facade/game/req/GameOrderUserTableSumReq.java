@@ -15,6 +15,6 @@ public class GameOrderUserTableSumReq extends BaseRequest {
     /**
      * 游戏类型 （GameTypeEnum）
      */
-    private Integer handType;
+    private Integer gameType;
 
 }
