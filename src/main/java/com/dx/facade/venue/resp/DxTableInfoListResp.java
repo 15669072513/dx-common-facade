@@ -53,7 +53,13 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("时长（min）")
     private Integer timeCount;
 
-    @ApiModelProperty("玩家总带入")
+    @ApiModelProperty("最小带入的筹码")
+    private Integer minBringChipScore;
+
+    @ApiModelProperty("最大带入的筹码")
+    private Integer maxBringChipScore;
+
+    @ApiModelProperty("默认带入筹码")
     private Integer bringChipScore;
 
     @ApiModelProperty("玩家总带出")
