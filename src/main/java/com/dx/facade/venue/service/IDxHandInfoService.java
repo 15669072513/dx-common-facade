@@ -28,4 +28,11 @@ public interface IDxHandInfoService {
      * @return
      */
     CommonResp<DxHandInfoListResp> getHandInfoById(String handId);
+
+    /**
+     * 根据tableId和局次更新手牌数据
+     * @param req
+     * @throws BizException
+     */
+    CommonResp<?> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
 }
