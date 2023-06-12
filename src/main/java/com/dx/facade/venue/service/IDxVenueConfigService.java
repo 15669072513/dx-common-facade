@@ -3,7 +3,7 @@ package com.dx.facade.venue.service;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.venue.dto.ConfigGamePO;
-import com.dx.facade.venue.dto.ConfigVenuePO;
+import com.dx.facade.venue.dto.DxConfigVenuePO;
 import com.dx.facade.venue.req.*;
 import com.dx.facade.venue.resp.VenueConnectResp;
 import com.dx.facade.venue.resp.VenueListResp;
@@ -46,16 +46,16 @@ public interface IDxVenueConfigService {
     /**
      * 根据场馆code,得到场馆对象
      */
-    ConfigVenuePO getVenueByVenueCode(String venueCode);
+    DxConfigVenuePO getVenueByVenueCode(String venueCode);
 
     /**
      * 获取所有场馆
      */
-    List<ConfigVenuePO> getVenues();
+    List<DxConfigVenuePO> getVenues();
 
     /**
      * 根据场馆类型code,得到场馆列表
      */
-    List<ConfigVenuePO> getVenueByVenueTypeCode(String venueTypeCode);
+    List<DxConfigVenuePO> getVenueByVenueTypeCode(String venueTypeCode);
 
 }

@@ -7,11 +7,11 @@ import lombok.ToString;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.dx.facade.venue.dto.ConfigVenuePO;
+import com.dx.facade.venue.dto.DxConfigVenuePO;
 
 @Data
 @ToString(callSuper = true)
-public class VenueConnectResp extends ConfigVenuePO {
+public class VenueConnectResp extends DxConfigVenuePO {
     //额外的属性
     @ApiModelProperty("使用过这个场馆的商户的数量")
     private Integer usedMerchantCount;
