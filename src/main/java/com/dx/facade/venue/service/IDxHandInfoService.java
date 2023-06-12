@@ -27,7 +27,7 @@ public interface IDxHandInfoService {
      * @param handId
      * @return
      */
-    CommonResp<DxHandInfoListResp> getHandInfoById(String handId);
+    CommonResp<DxHandInfoListResp> getHandInfoById(Long handId);
 
     /**
      * 根据tableId和局次更新手牌数据
