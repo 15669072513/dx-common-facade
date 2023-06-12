@@ -64,10 +64,10 @@ public class DxTableInfoDto implements Serializable {
     private String bringOutChipScore;
 
     @ApiModelProperty("小盲注")
-    private String sbBlindScore;
+    private Long sbBlindScore;
 
     @ApiModelProperty("大盲注")
-    private String bbBlindScore;
+    private Long bbBlindScore;
 
     @ApiModelProperty("抽水比例")
     private BigDecimal rake;
