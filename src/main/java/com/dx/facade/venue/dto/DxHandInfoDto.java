@@ -25,7 +25,10 @@ public class DxHandInfoDto implements Serializable {
     private String handId;
 
     @ApiModelProperty("牌桌主键")
-    private String tableId;
+    private Long tableId;
+
+    @ApiModelProperty("牌桌Code")
+    private String tableCode;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;

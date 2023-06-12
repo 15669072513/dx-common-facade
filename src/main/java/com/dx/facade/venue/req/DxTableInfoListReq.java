@@ -20,8 +20,11 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("牌桌创建牌桌后按业务规则生成ID")
-    private String tableId;
+    @ApiModelProperty("牌桌id")
+    private Long tableId;
+
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;
@@ -39,7 +42,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
-    private String clubName;
+    private Long clubName;
 
     @ApiModelProperty("开始时间")
     private LocalDateTime startTime;

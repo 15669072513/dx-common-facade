@@ -1,7 +1,6 @@
 package com.dx.facade.venue.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -19,6 +18,6 @@ public class GameDissolveDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @TableId(value = "table_id", type = IdType.INPUT)
-    private String tableId;
+    @ApiModelProperty("牌桌id")
+    private Long tableId;
 }
