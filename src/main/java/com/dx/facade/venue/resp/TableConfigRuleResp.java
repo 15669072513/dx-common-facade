@@ -2,6 +2,8 @@ package com.dx.facade.venue.resp;
 
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class TableConfigRuleResp {
 
@@ -10,20 +12,20 @@ public class TableConfigRuleResp {
      */
     private Long holderId;
 
-    /**
-     * 牌桌code
-     */
-    private String tableCode;
-
     /***
      * 牌桌id
      */
     private Long tableId;
 
     /***
-     * 牌桌类型 1:德州局 2:短牌局
+     * 牌桌code
      */
-    private Integer tableType;
+    private String tableCode;
+
+    /***
+     * 牌桌类型 2001L:德州局 2002L:短牌局
+     */
+    private Long tableType;
 
     /***
      * 牌桌名称
@@ -41,7 +43,7 @@ public class TableConfigRuleResp {
     private int autoStartUserCounts;
 
     /**
-     * 带入的筹码
+     * 默认带入的筹码
      */
     private Long bringChipScore;
 
@@ -56,7 +58,22 @@ public class TableConfigRuleResp {
     private Long bbBlindScore;
 
     /**
-     * 时长 单位 小时
+     * 时长 单位 分钟
      */
-    private Integer timeCount;
+    private Long timeCount;
+
+    /**
+     * 最小带入的筹码
+     */
+    private Long minBringChipScore;
+
+    /**
+     * 最大带入的筹码
+     */
+    private Long maxBringChipScore;
+
+    /**
+     * 抽水比例配置
+     */
+    private BigDecimal rake;
 }
