@@ -1,6 +1,6 @@
 package com.dx.facade.game.req;
 
-import com.dx.facade.report.param.base.LocalDatePageRequest;
+import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @ApiModel("玩家牌桌查询对象")
 @Data
-public class GameOrderUserTableSumReq extends LocalDatePageRequest {
+public class GameOrderUserTableSumReq extends BaseRequest {
     /**
      * 玩家id
      */

@@ -5,9 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.validator.constraints.Range;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @Data
 public class BaseRequest {
@@ -22,8 +24,10 @@ public class BaseRequest {
     private Long pageSize = 20L;
 
     @ApiModelProperty(value = "开始时间", required = true, example = "2021-06-17")
-    private Long startTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime startTime;
 
     @ApiModelProperty(value = "结束时间", required = true, example = "2021-06-17")
-    private Long endTime;
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime endTime;
 }

@@ -1,13 +1,13 @@
 package com.dx.facade.game.req;
 
-import com.dx.facade.report.param.base.LocalDatePageRequest;
+import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @ApiModel("游戏回顾查询对象")
 @Data
-public class GameReviewReq extends LocalDatePageRequest {
+public class GameReviewReq extends BaseRequest {
     /**
      * 牌桌id
      */
