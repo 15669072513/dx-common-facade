@@ -6,7 +6,7 @@ import com.dx.facade.merchant.resp.ProxyLevelConfRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * 代理契约 业务RPC接口
+ * 代理等级RPC服务
  *
  * @author fitz
  * @version 1.0.0

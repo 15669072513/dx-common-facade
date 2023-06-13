@@ -3,7 +3,12 @@ package com.dx.facade.merchant.service;
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.merchant.req.MemberDomainLinkParam;
-
+/**
+ * 会员域名管理RPC服务
+ * 
+ * @author bicycle
+ *
+ */
 public interface MemberDomainManagementRPCService {
 
     /**

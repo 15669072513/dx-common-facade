@@ -12,9 +12,9 @@
     <packaging>jar</packaging>
 
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
+        <java.version>11</java.version>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <httpcomponent.version>4.5.12</httpcomponent.version>
     </properties>
 
@@ -231,7 +231,13 @@
             <artifactId>easyexcel</artifactId>
             <version>2.2.10</version>
         </dependency>
-		<!--
+        <dependency>
+            <groupId>com.dx</groupId>
+            <artifactId>dx-common-tools</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <!--
         <dependency>
             <groupId>com.dx</groupId>
             <artifactId>dx-common-domain</artifactId>

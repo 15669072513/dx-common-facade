@@ -13,7 +13,7 @@ import com.dx.exception.BizException;
 public interface ConfigMemberDomainRPCService {
 
     /**
-     * 获取一个域名
+     * 根据会员id获取一个带有邀请码的域名
      * @param userId
      * @return
      */

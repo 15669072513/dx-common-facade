@@ -5,6 +5,8 @@ public enum Subject {
     /**
      *
      */
+    ADD("add","上分"),
+    SUB("sub","下分"),
     EXCHANGE("exchange","兑换筹码"),
     REVERT("revert","归还筹码"),
     ;

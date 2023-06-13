@@ -14,7 +14,7 @@ import io.swagger.annotations.ApiOperation;
 import java.util.List;
 
 /**
- * 代理契约 业务RPC接口
+ * 代理契约RPC服务
  *
  * @author yinter
  * @version 1.0.0
@@ -84,7 +84,7 @@ public interface ProxyContractRpcService {
 	Integer acceptContract(ContractReqDTO reqDto) throws BizException;
 	
 	/**
-	 * 更新契约
+	 * 新增代理契约
 	 *
 	 * @param reqDto
 	 * @return

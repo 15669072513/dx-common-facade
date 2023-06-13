@@ -4,8 +4,18 @@ import com.dx.entity.CommonResp;
 import com.dx.facade.merchant.resp.MerchantConfigRecordRespDTO;
 
 /**
- * 包网商户初代配置表 服务实现类
+ * 商户初始代理配置RPC服务
+ * 
+ * @author bicycle
+ *
  */
 public interface MerchantConfigRpcService {
+	
+	/**
+	 * 根据商户id查询商户初始代理配置
+	 * 
+	 * @param merchantId
+	 * @return
+	 */
     CommonResp<MerchantConfigRecordRespDTO> getMerchantConfig(Long merchantId);
 }

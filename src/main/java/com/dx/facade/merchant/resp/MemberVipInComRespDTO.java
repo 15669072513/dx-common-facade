@@ -1,16 +1,14 @@
 package com.dx.facade.merchant.resp;
 
-import com.baomidou.mybatisplus.annotation.TableName;
+import java.math.BigDecimal;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 /**
  * @author Nichols
  */
 @Data
-@TableName("ob_player.ob_member_vip_income")
 public class MemberVipInComRespDTO {
 
     @ApiModelProperty(value = "id")

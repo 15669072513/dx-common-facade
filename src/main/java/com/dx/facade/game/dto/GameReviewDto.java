@@ -3,6 +3,7 @@ package com.dx.facade.game.dto;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.Date;
 
 /**
@@ -11,17 +12,25 @@ import java.util.Date;
 @Data
 public class GameReviewDto implements Serializable {
     /**
+     * 主键id
+     */
+    private Long id;
+    /**
      * 玩家id
      */
     private Long userId;
     /**
      * 牌局id
      */
-    private Long roundId;
+    private Long handId;
     /**
-     * 扑克牌编码
+     * 投注金额
      */
-    private String pokerCode;
+    private BigDecimal betChip;
+    /**
+     * 带入金额
+     */
+    private BigDecimal bringChip;
     /**
      * 发牌时间
      */

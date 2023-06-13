@@ -8,6 +8,8 @@ import com.dx.facade.merchant.req.QueryMerchantParam;
 import com.dx.facade.merchant.resp.MerchantBaseInfoRespDTO;
 
 /**
+ * 商户RPC服务
+ * 
  * @author fitz
  * @version 1.0.0
  */
@@ -21,11 +23,19 @@ public interface MerchantRpcService {
 	 */
 	@ApiModelProperty("根据商户ID获取商户基础信息")
 	MerchantBaseInfoRespDTO getMerchantBaseInfoById(Long id);
-
+	
+	/**
+	 * 根据商户名称获取商户基础信息
+	 * 
+	 * @param merchantName
+	 * @return
+	 */
 	@ApiModelProperty("根据商户名称获取商户基础信息")
 	MerchantBaseInfoRespDTO getMerchantBaseInfoByName(String merchantName);
+	
 	/**
-	 * 获取商户
+	 * 根据商户id、商户编码、商户名称查询商户基础信息
+	 * 
 	 * @param queryMerchantParam
 	 * @return
 	 */

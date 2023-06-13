@@ -12,7 +12,6 @@ import lombok.Data;
 @Data
 public class QueryMerchantParam {
 
-
     /**
      * 站点ID
      */

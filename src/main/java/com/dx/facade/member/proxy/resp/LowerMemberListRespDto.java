@@ -69,4 +69,10 @@ public class LowerMemberListRespDto {
 	@ApiModelProperty(value = "代理层级路径(代理账号)")
 	private String proxyPathName;
 	
+    @ApiModelProperty(value = "俱乐部id")
+    private Long clubId;
+
+	@ApiModelProperty(value = "俱乐部名称")
+	private String clubName;
+	
 }
