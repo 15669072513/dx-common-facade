@@ -64,4 +64,11 @@ public interface WalletRPCService {
      * @throws BizException
      */
     CommonResp<Void> walletBalance(WalletBalanceDTO dto);
+
+    /**
+     * 用户钱包余额操作批量兑换
+     * @param balanceDTOS
+     * @return
+     */
+    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS);
 }
