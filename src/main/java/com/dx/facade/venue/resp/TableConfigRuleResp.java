@@ -35,12 +35,12 @@ public class TableConfigRuleResp {
     /***
      * 牌桌最大人数
      */
-    private int maxSeats;
+    private Integer maxSeats;
 
     /***
      * 自动开局人数
      */
-    private int autoStartUserCounts;
+    private Integer autoStartUserCounts;
 
     /**
      * 默认带入的筹码
@@ -76,4 +76,5 @@ public class TableConfigRuleResp {
      * 抽水比例配置
      */
     private BigDecimal rake;
+
 }

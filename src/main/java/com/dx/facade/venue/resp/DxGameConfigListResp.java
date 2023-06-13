@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
@@ -78,6 +79,9 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("自动开始人数")
     private String autoStartNumbers;
+
+    @ApiModelProperty("抽水比例")
+    private BigDecimal rake;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createAt;
