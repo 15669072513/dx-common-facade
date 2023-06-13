@@ -74,4 +74,11 @@ public interface WalletRPCService {
      */
     CommonResp<PageResp<WalletBalanceDetailDTO,String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
+
+    /**
+     * 用户钱包余额操作批量兑换
+     * @param balanceDTOS
+     * @return
+     */
+    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS);
 }

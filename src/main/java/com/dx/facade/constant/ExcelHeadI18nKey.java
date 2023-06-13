@@ -427,8 +427,21 @@ public interface ExcelHeadI18nKey {
     String LENGTH_域名状态 = "EXCEL_HEAD_I18N_KEY.LENGTH_域名状态";
     String LENGTH_域名类型 = "EXCEL_HEAD_I18N_KEY.LENGTH_域名类型";
     String LENGTH_描述说明 = "EXCEL_HEAD_I18N_KEY.LENGTH_描述说明";
+    
+    String CLUB_ID = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部ID";
+    String CLUB_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部名称";
+    String CLUB_ICON = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部头像";
+    String CLUB_INTRODUCTION = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部介绍";
+    String CLUB_MEMBER_COUNT = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部会员数量";
+    String CLUB_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理账号";
+    String CLUB_PROXY_REALNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理名称";
+    String CLUB_TOP_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_所属总代账号";
+    String CLUB_CREATE_AT = "EXCEL_HEAD_I18N_KEY.CLUB_创建时间";
+    
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
+    /** 俱乐部列表文件名 */
+    String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员列表";
 }
