@@ -6,13 +6,9 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.base.LocalDatePageRequest;
-import com.dx.facade.report.param.rebate.ProxyRebateDReqDTO;
 import com.dx.facade.report.param.report.business.BusinessBasicReportReqDTO;
-import com.dx.facade.report.param.report.business.MemberReportReqDTO;
+import com.dx.facade.report.param.report.business.UserReportReqDTO;
 import com.dx.facade.report.param.report.business.ProxyBrokerageReportReqDTO;
-import com.dx.facade.report.resp.proxycommission.SumActivityMemberRespDTO;
-import com.dx.facade.report.resp.rebate.ProxyRebateDRespDTO;
-import com.dx.facade.report.resp.rebate.ProxyRebateDSummaryRespDTO;
 
 /**
  * @author kygo
@@ -30,7 +26,7 @@ public interface BusinessReportService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<?, ?>> pageMemberReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<?, ?>> pageMemberReport(PageReq<UserReportReqDTO> reqDTO) throws BizException;
 
 
     /**
