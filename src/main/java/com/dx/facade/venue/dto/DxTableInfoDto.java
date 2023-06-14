@@ -58,10 +58,10 @@ public class DxTableInfoDto implements Serializable {
     private Integer timeCount;
 
     @ApiModelProperty("玩家总带入")
-    private Integer bringChipScore;
+    private BigDecimal bringChipScore;
 
     @ApiModelProperty("玩家总带出")
-    private String bringOutChipScore;
+    private BigDecimal bringOutChipScore;
 
     @ApiModelProperty("小盲注")
     private Long sbBlindScore;

@@ -59,16 +59,16 @@ public class DxTableInfoAddReq implements Serializable {
     private Integer timeCount;
 
     @ApiModelProperty("最小带入的筹码")
-    private Integer minBringChipScore;
+    private BigDecimal minBringChipScore;
 
     @ApiModelProperty("最大带入的筹码")
-    private Integer maxBringChipScore;
+    private BigDecimal maxBringChipScore;
 
     @ApiModelProperty("默认带入筹码")
-    private Integer bringChipScore;
+    private BigDecimal bringChipScore;
 
-    @ApiModelProperty("默认带入筹码")
-    private String bringOutChipScore;
+    @ApiModelProperty("玩家总带出")
+    private BigDecimal bringOutChipScore;
 
     @ApiModelProperty("小盲注")
     private Long sbBlindScore;
