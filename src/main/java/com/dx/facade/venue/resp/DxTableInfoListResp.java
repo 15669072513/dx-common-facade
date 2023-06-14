@@ -66,10 +66,10 @@ public class DxTableInfoListResp implements Serializable {
     private BigDecimal bringOutChipScore;
 
     @ApiModelProperty("小盲注")
-    private Long sbBlindScore;
+    private BigDecimal sbBlindScore;
 
     @ApiModelProperty("大盲注")
-    private Long bbBlindScore;
+    private BigDecimal bbBlindScore;
 
     @ApiModelProperty("抽水比例")
     private BigDecimal rake;
