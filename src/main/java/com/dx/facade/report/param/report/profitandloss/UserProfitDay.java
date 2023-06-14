@@ -13,9 +13,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "MemberProfitDay", description = "会员盈亏统计天表")
 public class UserProfitDay extends UserBasicVo {

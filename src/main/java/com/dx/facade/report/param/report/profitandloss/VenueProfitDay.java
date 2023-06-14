@@ -14,9 +14,6 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
-@SuperBuilder
-@NoArgsConstructor
-@AllArgsConstructor
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "VenueProfitDay", description = "场馆盈亏统计天表")
 public class VenueProfitDay implements Serializable {

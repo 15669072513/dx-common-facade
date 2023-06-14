@@ -14,8 +14,6 @@ import java.time.LocalDateTime;
 
 @Data
 
-@NoArgsConstructor
-@AllArgsConstructor
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "MemberGameProfitDay", description = "会员盈亏统计天表")
 public class UserGameProfitDay extends UserBasicVo {
