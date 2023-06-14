@@ -31,35 +31,25 @@ public interface GameOrderEsRpcService {
      */
     CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
 
-
-    /**
-     * 手牌列表
-     */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> queryUserHandList(GameOrderRecordUserReq req);
-    /**
-     * 手牌详情
-     */
-    CommonResp<PageResp<GameOrderRecordDetailResp, ?>> queryUserHandDetilList(GameOrderRecordDetailReq req);
-
     /**
      * 注单列表
      */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> queryGameOrderList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderRecordResp, ?>> queryGameOrderList(GameOrderRecordReq req);
     /**
      * 注单详情
      */
-    CommonResp<PageResp<GameOrderRecordDetailResp, ?>> queryGameOrderDetailList(GameOrderRecordDetailReq req);
+    CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 
     /**
      * 场馆游戏注单
      * @param req
      * @return
      */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> queryGameOrderVenueList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderRecordVenueResp, ?>> queryGameOrderVenueList(GameOrderRecordVenueReq req);
     /**
      * 场馆游戏注单详情
      */
-    CommonResp<PageResp<GameOrderRecordDetailResp, ?>> queryGameOrderVenueDetailList(GameOrderRecordDetailReq req);
+    CommonResp<PageResp<GameOrderRecordDetailVenueResp, ?>> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
 
 
     /**
@@ -70,15 +60,15 @@ public interface GameOrderEsRpcService {
     /**
      * 会员结算详情
      */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> userSettlementDetail(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderUserSettlementResp, ?>> userSettlementDetail(Long tableId);
 
 
     /**
      * 会员流水
      */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> userFlowingWaterList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderUserFlowWaterResp, ?>> userFlowingWaterList(GameOrderUserFlowWaterReq req);
     /**
      * 游戏记录
      */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> userGameRecordList(GameOrderRecordUserReq req);
+    CommonResp<PageResp<GameOrderRecordResp, ?>> userGameRecordList(GameOrderRecordReq req);
 }

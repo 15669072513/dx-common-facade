@@ -1,63 +1,33 @@
 package com.dx.facade.game.resp;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
+import java.time.LocalDateTime;
 
 /**
- * 牌局信息表
+ * 游戏记录结果对象
  */
 @Data
 public class GameOrderRecordResp implements Serializable {
-    /**
-     *  手牌id
-     */
-    private Long handId;
-    /**
-     * 牌局结束时间
-     */
-    private Date handEndDate;
-    /**
-     * 牌局开始时间
-     */
-    private Date handBeginDate;
-    /**
-     * 游戏名称
-     */
-    private String gameName;
-    /**
-     * 头像
-     */
-    private String userHearUrl;
-    /**
-     * 玩家昵称
-     */
-    private String nickName;
-    /**
-     * 手牌信息
-     */
-    private String handInfo;
-    /**
-     * 公共牌信息
-     */
-    private String globalPokerCode;
-    /**
-     * 开牌结果（PokerResultInfoEnum）
-     */
-    private String resultInfo;
-    /**
-     * 投注状态（GameBetStatusEnum)
-     */
-    private String betStatus;
-    /**
-     * 盈亏筹码
-     */
-    private BigDecimal netChip;
-    /**
-     * 盲注(大盲/小盲)
-     */
-    private String blinds;
+
+   @ApiModelProperty("注单号")
+   private Long id;
+   @ApiModelProperty("游戏账号")
+   private String ganmeAccount;
+   @ApiModelProperty("俱乐部id")
+   private String clueId;
+   @ApiModelProperty("牌桌id")
+   private String tableId;
+   @ApiModelProperty("场馆名称")
+   private String venueName;
+   @ApiModelProperty("手牌id")
+   private String handId;
+   @ApiModelProperty("投注金额")
+   private String betChip;
+   @ApiModelProperty("有效投注")
+   private BigDecimal effectivePool;
 
 }

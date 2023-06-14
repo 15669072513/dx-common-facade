@@ -5,15 +5,19 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 /**
- * 牌局记录列表查询对象
+ * 游戏记录查询对象
  */
-@ApiModel("牌局记录列表查询对象")
+@ApiModel("游戏记录查询对象")
 @Data
 public class GameOrderRecordReq extends BaseRequest {
-    /**
-     * 手牌id
-     */
-    @ApiModelProperty("手牌id")
-    private Long handId;
+    @ApiModelProperty("会员账号")
+    private String userName;
+    @ApiModelProperty("游戏名称")
+    private Integer ganmeName;
+    @ApiModelProperty("状态")
+    private Long status;
 }
