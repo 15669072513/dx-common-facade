@@ -37,6 +37,9 @@ public class DxTableInfoAddReq implements Serializable {
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
 
+    @ApiModelProperty("游戏名称")
+    private String gameName;
+
     @ApiModelProperty("关联俱乐部id")
     private Long clubId;
 
