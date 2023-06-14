@@ -13,6 +13,9 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "GameProfitDay", description = "游戏盈亏统计天表")
 public class GameProfitDay extends VenueProfitDay {
