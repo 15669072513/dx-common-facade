@@ -7,7 +7,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.base.LocalDatePageRequest;
 import com.dx.facade.report.param.report.business.BusinessBasicReportReqDTO;
-import com.dx.facade.report.param.report.business.UserReportReqDTO;
+import com.dx.facade.report.param.report.business.MemberReportReqDTO;
 import com.dx.facade.report.param.report.business.ProxyBrokerageReportReqDTO;
 
 /**
@@ -26,7 +26,7 @@ public interface BusinessReportService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<?, ?>> pageMemberReport(PageReq<UserReportReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<?, ?>> pageMemberReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
 
 
     /**

@@ -1,16 +1,19 @@
 package com.dx.facade.report.param.report.basic;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModelProperty;
 
-public class UserBasicVo {
-
-    @ApiModelProperty("会员账号")
-    private String userName;
-
+public class MemberBasicVo extends LocalDatePageRequest {
     @ApiModelProperty("会员ID")
     @TableField(value = "user_id")
-    private Long userId;
+    private Long memberId;
+
+
+    @ApiModelProperty("会员账号")
+    private String memberName;
+    @ApiModelProperty("会员名称")
+    private String nickName;
 
 
     @ApiModelProperty("上级代理id")

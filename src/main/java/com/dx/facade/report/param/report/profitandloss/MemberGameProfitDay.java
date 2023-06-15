@@ -1,13 +1,10 @@
 package com.dx.facade.report.param.report.profitandloss;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.dx.facade.report.param.report.basic.UserBasicVo;
+import com.dx.facade.report.param.report.basic.MemberBasicVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -16,7 +13,7 @@ import java.time.LocalDateTime;
 
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "MemberGameProfitDay", description = "会员盈亏统计天表")
-public class UserGameProfitDay extends UserBasicVo {
+public class MemberGameProfitDay extends MemberBasicVo {
 
     private static final long serialVersionUID = 1L;
 
@@ -31,17 +28,20 @@ public class UserGameProfitDay extends UserBasicVo {
     @TableField("bet_count")
     private Long betCount;
 
-    @ApiModelProperty("有效投注")
-    @TableField("pumping_chip")
-    private BigDecimal pumpingChip;
+    @ApiModelProperty("投注金额")
+    @TableField("bet_amount")
+    private BigDecimal betAmount;
 
-    // 会员输赢
+    @ApiModelProperty("有效投注")
+    @TableField("valid_bet_amount")
+    private BigDecimal validBetAmount;
+
     @ApiModelProperty("盈亏金额")
-    @TableField("net_chip")
-    private BigDecimal netChip;
+    @TableField("net_amount")
+    private BigDecimal netAmount;
 
     @ApiModelProperty("净盈亏")
-    private BigDecimal readProfit;
+    private BigDecimal readAmount;
 
     @ApiModelProperty("资料创建时间")
     @TableField("created_at")

@@ -6,7 +6,8 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.base.LocalDatePageRequest;
 import com.dx.facade.report.param.report.business.BusinessBasicReportReqDTO;
-import com.dx.facade.report.param.report.business.UserReportReqDTO;
+import com.dx.facade.report.param.report.business.MemberReportReqDTO;
+import com.dx.facade.report.param.report.business.ProxyReportReqDTO;
 import com.dx.facade.report.param.report.profitandloss.*;
 
 public interface ProfitAndLossReportDService {
@@ -17,7 +18,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<UserProfitDay, ?>> pageMemberReport(PageReq<UserReportReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<MemberProfitDay, ?>> pageMemberReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
 
 
     /**
@@ -26,15 +27,15 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<UserGameProfitDay, ?>> pageMemberGameReport(PageReq<UserReportReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<MemberGameProfitDay, ?>> pageMemberGameReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
 
-//    /**
-//     * 代理盈亏
-//     *
-//     * @param reqDTO
-//     * @return
-//     */
-//    CommonResp<PageResp<?, ?>> pageProxyReport(PageReq<LocalDatePageRequest> reqDTO) throws BizException;
+    /**
+     * 代理盈亏
+     *
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<DwmProxyNetAmountMonthPO, ?>> pageProxyReport(PageReq<ProxyReportReqDTO> reqDTO) throws BizException;
 
     /**
      * 场馆盈亏

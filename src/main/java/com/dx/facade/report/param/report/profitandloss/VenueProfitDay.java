@@ -35,23 +35,19 @@ public class VenueProfitDay implements Serializable {
 
     @ApiModelProperty("投注人数")
     @TableField(value = "member_count")
-    private Long userCount;
+    private Long memberCount;
 
     @ApiModelProperty("投注金额")
-    @TableField("bet_chip")
-    private BigDecimal betChip;
+    @TableField("bet_amount")
+    private BigDecimal betAmount;
 
     @ApiModelProperty("有效投注")
-    @TableField("pumping_chip")
-    private BigDecimal pumpingChip;
+    @TableField("valid_bet_amount")
+    private BigDecimal validBetAmount;
 
     @ApiModelProperty("盈亏金额")
-    @TableField("net_chip")
-    private BigDecimal netChip;
-
-    @ApiModelProperty("会员盈利率")
-    private BigDecimal memberProfitRate;
-
+    @TableField("net_amount")
+    private BigDecimal netAmount;
 
     @ApiModelProperty("资料创建时间")
     @TableField("created_at")
