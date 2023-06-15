@@ -1,6 +1,7 @@
 package com.dx.facade.report.param.report.profitandloss;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -12,43 +13,57 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ * <p>
+ * 每日盈亏统计天表
+ * </p>
+ *
+ * @author Candice
+ * @since 2022-09-21
+ */
 @Data
-//@TableName("dwm_member_net_amount_day")
-@ApiModel(value = "ProfitDay", description = "场馆盈亏统计天表")
-public class ProfitDay implements Serializable {
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@TableName("dwm_net_amount_day")
+@ApiModel(value = "DwmNetAmountDayPO对象", description = "每日盈亏统计天表")
+public class DwmNetAmountDayPO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("主键")
+    @TableField(value = "id")
+    private Long id;
 
     @ApiModelProperty("日期,比如20210531")
-    @TableField(value = "statics_date")
+    @TableField("statics_date")
     private Integer staticsDate;
 
+    @ApiModelProperty("商户id")
+    @TableField("merchant_id")
+    private Long merchantId;
+
     @ApiModelProperty("投注人数")
-    @TableField(value = "member_count")
+    @TableField("member_count")
     private Long memberCount;
 
     @ApiModelProperty("注单数")
     @TableField("bet_count")
     private Long betCount;
 
-    @ApiModelProperty("投注金额")
+    @ApiModelProperty("投注额")
     @TableField("bet_amount")
     private BigDecimal betAmount;
 
-    @ApiModelProperty("有效投注")
+    @ApiModelProperty("有效投注额")
     @TableField("valid_bet_amount")
     private BigDecimal validBetAmount;
 
-    @ApiModelProperty("投注盈亏")
+    @ApiModelProperty("输赢金额")
     @TableField("net_amount")
     private BigDecimal netAmount;
 
-    @ApiModelProperty("净盈亏")
-    private BigDecimal netProfit;
-
-
-    @ApiModelProperty("资料创建时间")
+    @ApiModelProperty("创建时间")
     @TableField("created_at")
     private LocalDateTime createdAt;
 
