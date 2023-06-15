@@ -68,7 +68,7 @@ public class DwdMemberStaticInfoResp {
     @ApiModelProperty("取款次数")
     private Integer withdrawTimes;
     @ApiModelProperty("存取差")
-    private BigDecimal depositWithdrawDifferAmountmount;
+    private BigDecimal depositWithdrawDifferAmount;
     @ApiModelProperty("注单量")
     private Long betCount;
     @ApiModelProperty("投注金额")
@@ -77,10 +77,10 @@ public class DwdMemberStaticInfoResp {
     private BigDecimal validBetAmount;
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount;
-//    @ApiModelProperty("返水金额")
-//    private BigDecimal returnWaterAmount;
-//    @ApiModelProperty("优惠总额")
-//    private BigDecimal discountAmount;
+    @ApiModelProperty("返水金额")
+    private BigDecimal returnWaterAmount;
+    @ApiModelProperty("优惠总额")
+    private BigDecimal discountAmount;
     @ApiModelProperty("其他调整")
     private BigDecimal otherAdjustAmount;
     @ApiModelProperty("净盈亏")
@@ -102,8 +102,7 @@ public class DwdMemberStaticInfoResp {
      * @return
      */
     public BigDecimal getNetProfit() {
-//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
-        return netAmount.add(otherAdjustAmount);
+        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
     }
 
 
