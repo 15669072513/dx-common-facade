@@ -1,4 +1,4 @@
-package com.dx.facade.report.param.report.business;
+package com.dx.facade.report.param.report.profitandloss;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.report.param.report.basic.MemberBasicVo;
