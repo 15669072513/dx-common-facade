@@ -77,6 +77,9 @@ public class RegisterParamDTO implements BaseParmDTO{
     
     @ApiModelProperty("俱乐部名称")
     private String clubName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @Override
     public void check() {
