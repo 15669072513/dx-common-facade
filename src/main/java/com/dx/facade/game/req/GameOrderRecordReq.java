@@ -14,10 +14,18 @@ import java.time.LocalDateTime;
 @ApiModel("游戏记录查询对象")
 @Data
 public class GameOrderRecordReq extends BaseRequest {
+    @ApiModelProperty("注单id")
+    private Long id;
     @ApiModelProperty("会员账号")
     private String userName;
     @ApiModelProperty("游戏名称")
-    private Integer ganmeName;
-    @ApiModelProperty("状态")
-    private Long status;
+    private String ganmeName;
+    @ApiModelProperty("手牌id")
+    private Long handId;
+    @ApiModelProperty("俱乐部id")
+    private Long clueId;
+    @ApiModelProperty("投注结束时间")
+    private LocalDateTime betStartTime;
+    @ApiModelProperty("投注结束时间")
+    private LocalDateTime betEndTime;
 }

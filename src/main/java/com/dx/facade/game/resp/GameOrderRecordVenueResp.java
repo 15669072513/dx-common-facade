@@ -12,55 +12,30 @@ import java.time.LocalDateTime;
  */
 @Data
 public class GameOrderRecordVenueResp implements Serializable {
+     /**
+      * 主键id
+      */
+     @ApiModelProperty("主键id")
+     private Long id;
+      /**
+       * 用户类型 0 正式账号 1测试账号
+       */
+      @ApiModelProperty("会员账号类型 0 正式账号 1测试账号")
+      private Integer accountType;
+      /**
+       * 会员账号
+       */
+      @ApiModelProperty("会员账号")
+      private String userName;
+      /**
+       * 上级代理账号
+       */
+      @ApiModelProperty("上级代理账号")
+      private String proxyName;
+      /**
+       * 总代账号
+       */
+      @ApiModelProperty("总代账号")
+      private String topProxyName;
 
-   @ApiModelProperty("场馆类型")
-    private Integer venueType;
-
-    @ApiModelProperty("场馆名称")
-    private String venueName;
-
-    @ApiModelProperty("游戏名称")
-    private String gameName;
-
-    @ApiModelProperty("会员账号")
-    private String userName;
-
-    @ApiModelProperty("游戏账号")
-    private String ganmeAccount;
-
-    @ApiModelProperty("账号类型")
-    private Integer accountType;
-
-    @ApiModelProperty("所属商户")
-    private Long merchantId;
-
-    @ApiModelProperty("上级代理")
-    private String proxyName;
-
-    @ApiModelProperty("总代账号")
-    private String topProxyName;
-
-    @ApiModelProperty("投注金额")
-    private BigDecimal betChip;
-
-    @ApiModelProperty("有效金额")
-    private BigDecimal netChip;
-
-    @ApiModelProperty("注单状态")
-    private Integer status;
-
-    @ApiModelProperty("投注时间")
-    private LocalDateTime handBeginDate;
-
-    @ApiModelProperty("结算时间")
-    private LocalDateTime handEndDate;
-
-    @ApiModelProperty("投注详情")
-    private String betDetail;
-
-    @ApiModelProperty("投注ip")
-    private String ipAddr;
-
-    @ApiModelProperty("终端类型")
-    private Integer deviceType;
 }

@@ -49,7 +49,7 @@ public interface GameOrderEsRpcService {
     /**
      * 场馆游戏注单详情
      */
-    CommonResp<PageResp<GameOrderRecordDetailVenueResp, ?>> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
+    CommonResp<GameOrderRecordDetailVenueResp> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
 
 
     /**
@@ -60,8 +60,7 @@ public interface GameOrderEsRpcService {
     /**
      * 会员结算详情
      */
-    CommonResp<PageResp<GameOrderUserSettlementResp, ?>> userSettlementDetail(Long tableId);
-
+    CommonResp<GameOrderUserSettlementResp> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
 
     /**
      * 会员流水

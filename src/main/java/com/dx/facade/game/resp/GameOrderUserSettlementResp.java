@@ -21,5 +21,5 @@ public class GameOrderUserSettlementResp {
     @ApiModelProperty("总带入")
     private BigDecimal bringMidwayChip;
     @ApiModelProperty("总带入次数")
-    private BigDecimal bringCount;
+    private Long bringCount;
 }
