@@ -517,6 +517,15 @@ public class MemberAndProxyDto {
 	@ApiModelProperty("三方平台唯一标识")
 	private String thirdPlatformId;
 	
+    @ApiModelProperty("俱乐部Id")
+    private Long clubId;
+
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
+	
 	
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {

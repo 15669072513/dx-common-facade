@@ -71,6 +71,15 @@ public class RegisterParamDTO implements BaseParmDTO{
 
     @ApiModelProperty("三方平台唯一标识")
     private String thirdPlatformId;
+    
+    @ApiModelProperty("俱乐部Id")
+    private Long clubId;
+    
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @Override
     public void check() {

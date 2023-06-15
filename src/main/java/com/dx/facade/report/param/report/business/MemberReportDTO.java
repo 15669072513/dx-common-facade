@@ -1,14 +1,12 @@
 package com.dx.facade.report.param.report.business;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -19,7 +17,7 @@ import java.util.Date;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 //@ApiModel(value = "com-ob-resp-report-ProxyDayReportDTO", description = "代理报表对象")
-public class ProxyReportDTO implements Serializable {
+public class MemberReportDTO extends MemberReportReqDTO {
 
     // username ,member
     // proxy_name parent_proxy_name
@@ -62,17 +60,6 @@ public class ProxyReportDTO implements Serializable {
 //  `debt_status` tinyint(4) NOT NULL DEFAULT '0' COMMENT '欠款标志 0-无欠款 1-有欠款',
     private Integer debt_status;
 
-    // 佣金转回次数
-    // 转账下级 次数
-    // 上级转账次数
-    // 代理调整
-    //代理调整
-    // `commission_balance` decimal(16,4) NOT NULL DEFAULT '0.0000' COMMENT '佣金钱包余额',
-    //  `quota_balance` decimal(16,4) NOT NULL DEFAULT '0.0000' COMMENT '额度钱包余额',
-    //    `under_member_num` int(11) NOT NULL DEFAULT '0' COMMENT '下级会员人数',
-    //            `directly_under_member_num` int(11) NOT NULL DEFAULT '0' COMMENT '直属下级会员人数',
-    // `transfer_out_num` int(11) NOT NULL DEFAULT '0' COMMENT '转出会员人数',
-    //  `transfer_in_num` int(11) NOT NULL DEFAULT '0' COMMENT '转入会员人数',
 
 
 }

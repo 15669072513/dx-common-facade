@@ -1,13 +1,10 @@
 package com.dx.facade.report.param.report.profitandloss;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.dx.facade.report.param.report.basic.UserBasicVo;
+import com.dx.facade.report.param.report.basic.MemberBasicVo;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,7 +12,7 @@ import java.time.LocalDateTime;
 @Data
 //@TableName("dwm_member_net_amount_day")
 @ApiModel(value = "MemberProfitDay", description = "会员盈亏统计天表")
-public class UserProfitDay extends UserBasicVo {
+public class MemberProfitDay extends MemberBasicVo {
 
     private static final long serialVersionUID = 1L;
 
@@ -34,31 +31,34 @@ public class UserProfitDay extends UserBasicVo {
     @ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
     private Integer gameLockStatus;
 
+    @ApiModelProperty("风控层级")
+    private String windControlLevelName;
+
 
     @ApiModelProperty("注单数")
     @TableField("bet_count")
     private Long betCount;
 
     @ApiModelProperty("投注金额")
-    @TableField("bet_chip")
-    private BigDecimal betChip;
+    @TableField("bet_amount")
+    private BigDecimal betAmount;
 
     @ApiModelProperty("有效投注")
-    @TableField("pumping_chip")
-    private BigDecimal pumpingChip;
+    @TableField("valid_bet_amount")
+    private BigDecimal validBetAmount;
 
     @ApiModelProperty("盈亏金额")
-    @TableField("net_chip")
-    private BigDecimal netChip;
+    @TableField("net_amount")
+    private BigDecimal netAmount;
 
     @ApiModelProperty("会员盈利率")
     private BigDecimal memberProfitRate;
-
-    @ApiModelProperty("其他调整")
-    private BigDecimal otherChip;
+//
+//    @ApiModelProperty("其他调整")
+//    private BigDecimal otherChip;
 
     @ApiModelProperty("净盈亏")
-    private BigDecimal readProfit;
+    private BigDecimal readAmount;
 
     @ApiModelProperty("资料创建时间")
     @TableField("created_at")

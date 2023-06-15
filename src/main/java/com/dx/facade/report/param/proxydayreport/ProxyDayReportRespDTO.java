@@ -37,6 +37,9 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "直属上级")
     private String parentProxyAccount;
 
+    @ApiModelProperty(value = "总代账号")
+    private String topProxyAccount;
+
     @ApiModelProperty(value = "登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer loginLockStatus;
 
@@ -52,23 +55,6 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "注册时间")
     private String registerAt;
 
-    @ApiModelProperty(value = "存款总额")
-    private BigDecimal depositAmount;
-
-    @ApiModelProperty(value = "存款次数")
-    private Integer depositTimes;
-
-    @ApiModelProperty(value = "取款总额")
-    private BigDecimal withdrawAmount;
-
-    @ApiModelProperty(value = "取款次数")
-    private Integer withdrawTimes;
-
-    @ApiModelProperty(value = "大额取款次数")
-    private Integer bigWithdrawTimes;
-
-    @ApiModelProperty(value = "存取差")
-    private BigDecimal depositWithdrawDifferAmount;
 
     @ApiModelProperty(value = "累计实际已得个人佣金")
     private BigDecimal totalReceivePersonBrokerage;
@@ -76,17 +62,9 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "累计个人已收返点金额")
     private BigDecimal totalReceiveRebate;
 
-    @ApiModelProperty(value = "代存会员总额")
-    private BigDecimal insteadPlayerDepositAmount;
-
-    @ApiModelProperty(value = "代存会员人数")
-    private Integer insteadPlayerDepositNum;
-
-    @ApiModelProperty(value = "代存会员次数")
-    private Integer insteadPlayerDepositTimes;
-
-    @ApiModelProperty(value = "代理转账总额")
-    private BigDecimal proxyTransferAmount;
+    @ApiModelProperty("欠款标志 0-无欠款 1-有欠款")
+    // ?
+    private Integer debtStatus;
 
     @ApiModelProperty(value = "代理转账人数")
     private Integer proxyTransferNum;
@@ -100,41 +78,12 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "转入中心钱包次数")
     private Integer transferCenterWalletTimes;
 
-    @ApiModelProperty(value = "优惠总额")
-    private BigDecimal discountAmount;
-
-    @ApiModelProperty(value = "佣金调整")
-    private BigDecimal rebateAdjustAmount;
-
-    @ApiModelProperty(value = "其他调整")
-    private BigDecimal otherAdjustAmount;
-
-    @ApiModelProperty(value = "返点调整")
-    private BigDecimal repairRebatePoint;
-
-    @ApiModelProperty(value = "会员首存总额")
-    private BigDecimal memberFirstDepositAmount;
-
-    @ApiModelProperty(value = "会员首存人数")
-    private Integer memberFirstDepositNum;
-
-    @ApiModelProperty(value = "会员存款总额")
-    private BigDecimal memberDepositAmount;
-
-    @ApiModelProperty(value = "会员取款总额")
-    private BigDecimal memberWithdrawAmount;
-
-    @ApiModelProperty(value = "会员存取款差")
-    private BigDecimal memberDepositWithdrawDifferAmount;
 
     @ApiModelProperty(value = "转入会员数")
     private Integer transferInNum;
 
     @ApiModelProperty(value = "转出会员数")
     private Integer transferOutNum;
-
-    @ApiModelProperty(value = "全部下级代理人数")
-    private Integer underProxyNum;
 
     @ApiModelProperty(value = "直属下级代理人数")
     private Integer directlyUnderProxyNum;
@@ -150,5 +99,69 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty(value = "额度钱包余额")
     private BigDecimal availableBalance;
+
+    @ApiModelProperty(value = "代理调整")
+    private BigDecimal repairRebatePoint;
+
+    //    @ApiModelProperty(value = "存款总额")
+//    private BigDecimal depositAmount;
+
+//    @ApiModelProperty(value = "存款次数")
+//    private Integer depositTimes;
+//
+//    @ApiModelProperty(value = "取款总额")
+//    private BigDecimal withdrawAmount;
+//
+//    @ApiModelProperty(value = "取款次数")
+//    private Integer withdrawTimes;
+
+//    @ApiModelProperty(value = "大额取款次数")
+//    private Integer bigWithdrawTimes;
+//
+//    @ApiModelProperty(value = "存取差")
+//    private BigDecimal depositWithdrawDifferAmount;
+
+
+//
+//    @ApiModelProperty(value = "全部下级代理人数")
+//    private Integer underProxyNum;
+//
+//    @ApiModelProperty(value = "优惠总额")
+//    private BigDecimal discountAmount;
+//
+//    @ApiModelProperty(value = "佣金调整")
+//    private BigDecimal rebateAdjustAmount;
+//
+//    @ApiModelProperty(value = "其他调整")
+//    private BigDecimal otherAdjustAmount;
+//
+//    @ApiModelProperty(value = "返点调整")
+//    private BigDecimal repairRebatePoint;
+//
+//    @ApiModelProperty(value = "会员首存总额")
+//    private BigDecimal memberFirstDepositAmount;
+//
+//    @ApiModelProperty(value = "会员首存人数")
+//    private Integer memberFirstDepositNum;
+//
+//    @ApiModelProperty(value = "会员存款总额")
+//    private BigDecimal memberDepositAmount;
+//
+//    @ApiModelProperty(value = "会员取款总额")
+//    private BigDecimal memberWithdrawAmount;
+//
+//    @ApiModelProperty(value = "会员存取款差")
+//    private BigDecimal memberDepositWithdrawDifferAmount;
+//    @ApiModelProperty(value = "代存会员总额")
+//    private BigDecimal insteadPlayerDepositAmount;
+//
+//    @ApiModelProperty(value = "代存会员人数")
+//    private Integer insteadPlayerDepositNum;
+
+//    @ApiModelProperty(value = "代存会员次数")
+//    private Integer insteadPlayerDepositTimes;
+
+//    @ApiModelProperty(value = "代理转账总额")
+//    private BigDecimal proxyTransferAmount;
 
 }

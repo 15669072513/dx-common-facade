@@ -4,6 +4,9 @@ import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 
 /**
  * 注单查询对象
@@ -34,4 +37,6 @@ public class GameOrderRecordVenueReq extends BaseRequest {
     private String minNetChip;
     @ApiModelProperty("会员输赢")
     private String maxNetChip;
+
+
 }
