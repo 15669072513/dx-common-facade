@@ -1,17 +1,20 @@
 package com.dx.facade.account.req;
 
-import com.dx.facade.enums.ConstantEnums;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
+
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
 
 @Data
 public class WalletBalanceDTO<T> implements Serializable {
 
-    @ApiModelProperty("三方唯一请求流水号")
-    private Long serialNo;
+	private static final long serialVersionUID = -2464195843194814131L;
+
+
+	@ApiModelProperty("三方唯一请求流水号")
+    private String serialNo;
 
     @ApiModelProperty("发生金额")
     private BigDecimal amount;

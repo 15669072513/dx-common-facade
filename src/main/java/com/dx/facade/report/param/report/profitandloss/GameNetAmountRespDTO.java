@@ -6,8 +6,8 @@ import lombok.Data;
 
 @Data
 //@TableName("dwm_member_net_amount_day")
-@ApiModel(value = "ProxyProfitDay", description = "代理盈亏报表")
-public class ProxyProfitDay   {
+@ApiModel(value = "GameNetAmountRespDTO", description = "游戏盈亏统计天表")
+public class GameNetAmountRespDTO extends VenueNetAmountDayRespDTO {
 
     @ApiModelProperty("游戏名称")
     private String gameName;

@@ -1,4 +1,4 @@
-package com.dx.facade.report.param.report.business;
+package com.dx.facade.report.param.report.profitandloss;
 
 import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModel;
@@ -16,7 +16,12 @@ public class BusinessBasicReportReqDTO extends LocalDatePageRequest {
      * 商户
      */
     @ApiModelProperty(value = "商户")
-    private Long merchantName;
+    private String merchantName;
+    /**
+     * 商户
+     */
+    @ApiModelProperty(value = "商户Id")
+    private Long merchantId;
 
     /**
      * 代理账号
