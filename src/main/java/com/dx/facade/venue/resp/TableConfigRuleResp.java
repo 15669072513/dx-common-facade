@@ -35,27 +35,27 @@ public class TableConfigRuleResp {
     /***
      * 牌桌最大人数
      */
-    private int maxSeats;
+    private Integer maxSeats;
 
     /***
      * 自动开局人数
      */
-    private int autoStartUserCounts;
+    private Integer autoStartUserCounts;
 
     /**
      * 默认带入的筹码
      */
-    private Long bringChipScore;
+    private BigDecimal bringChipScore;
 
     /***
      * 小盲注
      */
-    private Long sbBlindScore;
+    private BigDecimal sbBlindScore;
 
     /***
      * 大盲注
      */
-    private Long bbBlindScore;
+    private BigDecimal bbBlindScore;
 
     /**
      * 时长 单位 分钟
@@ -65,15 +65,16 @@ public class TableConfigRuleResp {
     /**
      * 最小带入的筹码
      */
-    private Long minBringChipScore;
+    private BigDecimal minBringChipScore;
 
     /**
      * 最大带入的筹码
      */
-    private Long maxBringChipScore;
+    private BigDecimal maxBringChipScore;
 
     /**
      * 抽水比例配置
      */
     private BigDecimal rake;
+
 }
