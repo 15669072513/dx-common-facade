@@ -9,6 +9,7 @@ import com.dx.facade.report.param.report.business.BusinessBasicReportReqDTO;
 import com.dx.facade.report.param.report.business.MemberReportReqDTO;
 import com.dx.facade.report.param.report.business.ProxyReportReqDTO;
 import com.dx.facade.report.param.report.profitandloss.*;
+import io.swagger.annotations.ApiModelProperty;
 
 public interface ProfitAndLossReportDService {
 
@@ -18,6 +19,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
+    @ApiModelProperty(value="盈亏报表-会员盈亏")
     CommonResp<PageResp<MemberProfitDay, ?>> pageMemberReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
 
 
@@ -27,6 +29,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
+    @ApiModelProperty(value="盈亏报表-会员游戏盈亏")
     CommonResp<PageResp<MemberGameProfitDay, ?>> pageMemberGameReport(PageReq<MemberReportReqDTO> reqDTO) throws BizException;
 
     /**
@@ -35,6 +38,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
+    @ApiModelProperty(value="盈亏报表-代理盈亏")
     CommonResp<PageResp<DwmProxyNetAmountMonthPO, ?>> pageProxyReport(PageReq<ProxyReportReqDTO> reqDTO) throws BizException;
 
     /**
@@ -43,6 +47,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
+    @ApiModelProperty(value="盈亏报表-场馆盈亏")
     CommonResp<PageResp<GameProfitDay, ?>> pageVenueReport(PageReq<LocalDatePageRequest> reqDTO) throws BizException;
 
     /**
@@ -51,6 +56,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
+    @ApiModelProperty(value="盈亏报表-游戏盈亏")
     CommonResp<PageResp<VenueProfitDay, ?>> pageGameReport(PageReq<LocalDatePageRequest> reqDTO) throws BizException;
 
     /**
@@ -60,5 +66,7 @@ public interface ProfitAndLossReportDService {
      * @return
      * @throws BizException
      */
+
+    @ApiModelProperty(value="盈亏报表-每日盈亏")
     CommonResp<PageResp<ProfitDay, ?>> dayReport(PageReq<BusinessBasicReportReqDTO> reqDTO) throws BizException;
 }
