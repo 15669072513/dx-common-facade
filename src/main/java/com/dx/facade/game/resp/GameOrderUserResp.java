@@ -7,7 +7,7 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Data
-public class GameOrderUserFlowWaterResp {
+public class GameOrderUserResp {
     @ApiModelProperty("会员账号")
     private String userName;
     @ApiModelProperty("总投注")

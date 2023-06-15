@@ -51,7 +51,6 @@ public interface GameOrderEsRpcService {
      */
     CommonResp<GameOrderRecordDetailVenueResp> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
 
-
     /**
      * 会员盈亏汇总
      */
@@ -63,11 +62,11 @@ public interface GameOrderEsRpcService {
     CommonResp<GameOrderUserSettlementResp> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
 
     /**
-     * 会员流水
+     * 代理-会员流水
      */
-    CommonResp<PageResp<GameOrderUserFlowWaterResp, ?>> userFlowingWaterList(GameOrderUserFlowWaterReq req);
+    CommonResp<PageResp<GameOrderUserResp, ?>> gameOrderUserList(GameOrderUserReq req);
     /**
-     * 游戏记录
+     * 代理-游戏记录
      */
-    CommonResp<PageResp<GameOrderRecordResp, ?>> userGameRecordList(GameOrderRecordReq req);
+    CommonResp<PageResp<GameOrderRecordUserVenueResp, ?>> gameOrderUserVenueList(GameOrderRecordUserVenueReq req);
 }

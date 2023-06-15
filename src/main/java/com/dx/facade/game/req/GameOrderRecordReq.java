@@ -24,8 +24,4 @@ public class GameOrderRecordReq extends BaseRequest {
     private Long handId;
     @ApiModelProperty("俱乐部id")
     private Long clueId;
-    @ApiModelProperty("投注结束时间")
-    private LocalDateTime betStartTime;
-    @ApiModelProperty("投注结束时间")
-    private LocalDateTime betEndTime;
 }
