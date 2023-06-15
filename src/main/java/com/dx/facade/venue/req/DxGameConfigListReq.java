@@ -30,6 +30,9 @@ public class DxGameConfigListReq extends PageRequest implements Serializable {
     @ApiModelProperty("所属场馆(即bw_venue表的venue_code)")
     private String venueCode;
 
+    @ApiModelProperty("场馆名称")
+    private String venueName;
+
     @ApiModelProperty("游戏名称")
     private String gameName;
 
@@ -44,6 +47,12 @@ public class DxGameConfigListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("游戏越南名")
     private Long gameVnName;
+
+    @ApiModelProperty("支持终端")
+    private String supportTerminals;
+
+    @ApiModelProperty("图标状态")
+    private Integer iconStatus;
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
     private Integer status;
