@@ -5,6 +5,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.venue.req.DxHandInfoAddReq;
 import com.dx.facade.venue.req.DxHandInfoListReq;
+import com.dx.facade.venue.resp.DxGameRecordResp;
 import com.dx.facade.venue.resp.DxHandInfoListResp;
 
 public interface IDxHandInfoService {
@@ -35,4 +36,11 @@ public interface IDxHandInfoService {
      * @throws BizException
      */
     CommonResp<?> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
+
+    /**
+     * 根据手牌id获取游戏注单信息
+     * @param handId
+     * @return
+     */
+    public CommonResp<DxGameRecordResp> getGameRecordInfoByHandId(Long handId);
 }
