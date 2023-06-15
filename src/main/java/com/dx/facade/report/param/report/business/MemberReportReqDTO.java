@@ -35,9 +35,9 @@ public class MemberReportReqDTO extends MemberBasicVo {
     private BigDecimal maxNetAmount;
 
     @ApiModelProperty("最小净盈亏")
-    private BigDecimal minReadAmount;
+    private BigDecimal minNetProfit;
 
     @ApiModelProperty("最大净盈亏")
-    private BigDecimal maxReadAmount;
+    private BigDecimal maxNetProfit;
 
 }

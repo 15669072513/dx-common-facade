@@ -41,7 +41,7 @@ public class MemberGameProfitDay extends MemberBasicVo {
     private BigDecimal netAmount;
 
     @ApiModelProperty("净盈亏")
-    private BigDecimal readAmount;
+    private BigDecimal netProfit;
 
     @ApiModelProperty("资料创建时间")
     @TableField("created_at")
