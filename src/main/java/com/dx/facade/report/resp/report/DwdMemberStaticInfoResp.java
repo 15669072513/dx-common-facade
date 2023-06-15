@@ -53,22 +53,22 @@ public class DwdMemberStaticInfoResp {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime registerAt;
-    @ApiModelProperty("币种")
-    private String currency;
-    @ApiModelProperty("首存金额")
-    private BigDecimal firstDepositAmount;
-    @ApiModelProperty("首存时间")
-    private String firstDepositTime;
-    @ApiModelProperty("总存款")
-    private BigDecimal depositAmount;
-    @ApiModelProperty("存款次数")
-    private Integer depositTimes;
-    @ApiModelProperty("总取款")
-    private BigDecimal withdrawAmount;
-    @ApiModelProperty("取款次数")
-    private Integer withdrawTimes;
-    @ApiModelProperty("存取差")
-    private BigDecimal depositWithdrawDifferAmount;
+//    @ApiModelProperty("币种")
+//    private String currency;
+//    @ApiModelProperty("首存金额")
+//    private BigDecimal firstDepositAmount;
+//    @ApiModelProperty("首存时间")
+//    private String firstDepositTime;
+//    @ApiModelProperty("总存款")
+//    private BigDecimal depositAmount;
+//    @ApiModelProperty("存款次数")
+//    private Integer depositTimes;
+//    @ApiModelProperty("总取款")
+//    private BigDecimal withdrawAmount;
+//    @ApiModelProperty("取款次数")
+//    private Integer withdrawTimes;
+//    @ApiModelProperty("存取差")
+//    private BigDecimal depositWithdrawDifferAmount;
     @ApiModelProperty("注单量")
     private Long betCount;
     @ApiModelProperty("投注金额")
@@ -77,10 +77,10 @@ public class DwdMemberStaticInfoResp {
     private BigDecimal validBetAmount;
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount;
-    @ApiModelProperty("返水金额")
-    private BigDecimal returnWaterAmount;
-    @ApiModelProperty("优惠总额")
-    private BigDecimal discountAmount;
+//    @ApiModelProperty("返水金额")
+//    private BigDecimal returnWaterAmount;
+//    @ApiModelProperty("优惠总额")
+//    private BigDecimal discountAmount;
     @ApiModelProperty("其他调整")
     private BigDecimal otherAdjustAmount;
     @ApiModelProperty("净盈亏")
@@ -102,7 +102,8 @@ public class DwdMemberStaticInfoResp {
      * @return
      */
     public BigDecimal getNetProfit() {
-        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+        return netAmount.add(otherAdjustAmount);
     }
 
 
