@@ -91,6 +91,6 @@ public class UpdateProxyClubParamDTO implements BaseParmDTO, Serializable {
     private LocalDateTime updatedAt;
     @Override
     public void check() {
-        Assert.notNull(clubId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("clubId"));
+        Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("clubId"));
     }
 }

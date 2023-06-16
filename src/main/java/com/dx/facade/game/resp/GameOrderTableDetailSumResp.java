@@ -81,7 +81,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
 
     public String getTableCreateDateStr() {
         if (tableCreateDate != null) {
-            return DateTimeFormatter.ofPattern("HH:mm").format(DateUtils.longToLocalDateTime(tableCreateDate));
+            return DateUtils.getHHmm(tableCreateDate);
         }
         return null;
     }
