@@ -23,6 +23,15 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("游戏类型id")
     private Long gameTypeId;
 
+    @ApiModelProperty("场馆类型(如by,ty,zr,qkl)")
+    private String venueTypeCode;
+
+    @ApiModelProperty("所属场馆(即bw_venue表的venue_code)")
+    private String venueCode;
+
+    @ApiModelProperty("场馆名称")
+    private String venueName;
+
     @ApiModelProperty("游戏名称")
     private String gameName;
 

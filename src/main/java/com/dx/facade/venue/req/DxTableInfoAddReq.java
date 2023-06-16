@@ -31,7 +31,7 @@ public class DxTableInfoAddReq implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
-    @ApiModelProperty("牌桌类型 1：德州局 2：短牌局")
+    @ApiModelProperty("牌桌类型 2001：德州局 2002：短牌局")
     private Integer tableType;
 
     @ApiModelProperty("关联游戏id")
