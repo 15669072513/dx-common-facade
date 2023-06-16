@@ -1,5 +1,6 @@
 package com.dx.facade.game.resp;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -16,9 +17,9 @@ public class GameReviewResp implements Serializable  {
      */
     private Long handId;
     /**
-     * 牌局结束时间
+     * 手牌结束时间
      */
-    private Date handEndDate;
+    private Long handEndDate;
     /**
      * 游戏名称
      */
@@ -50,11 +51,16 @@ public class GameReviewResp implements Serializable  {
     /**
      * 盈亏筹码
      */
-    private BigDecimal netChip;
-    /**
-     * 盲注(大盲/小盲)
+    private BigDecimal netAmount;
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private BigDecimal sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private BigDecimal bbBlindScore;
 
     /**
      * 座位类型 (GameSeatTypeEnum)

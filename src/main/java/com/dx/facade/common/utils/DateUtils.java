@@ -232,6 +232,12 @@ public class DateUtils {
         return after&&before;
     }
 
+    public static String getHHmm(Long time) {
+        return DateTimeFormatter.ofPattern("HH:mm").format(DateUtils.longToLocalDateTime(time));
+    }
+    public static String getYYYYmmddHHmmss(Long time) {
+        return DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss").format(DateUtils.longToLocalDateTime(time));
+    }
     public static String formatInyyyyMMddHHmmss(LocalDateTime localDateTime) {
         return localDateTime.format(PATTERN);
     }
