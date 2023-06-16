@@ -40,13 +40,13 @@ public class DxGameConfigListReq extends PageRequest implements Serializable {
     private String gameZhName;
 
     @ApiModelProperty("游戏英文名")
-    private Long gameEnName;
+    private String gameEnName;
 
     @ApiModelProperty("游戏泰语名")
     private String gameThName;
 
     @ApiModelProperty("游戏越南名")
-    private Long gameVnName;
+    private String gameVnName;
 
     @ApiModelProperty("支持终端")
     private String supportTerminals;
