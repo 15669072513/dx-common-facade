@@ -21,7 +21,7 @@ public class GameOrderRecordResp implements Serializable {
     * 游戏账号
     */
    @ApiModelProperty("游戏账号")
-   private String gameAccount;
+   private String playerName;
    /**
     * 俱乐部id
     */
@@ -46,45 +46,45 @@ public class GameOrderRecordResp implements Serializable {
     * 手牌id
     */
    @ApiModelProperty("手牌id")
-   private String handId;
+   private Long handId;
    /**
     * 投注金额
     */
    @ApiModelProperty("投注金额")
-   private BigDecimal betChip;
+   private BigDecimal betAmount;
    /**
     * 有效投注（抽水金额）
     */
    @ApiModelProperty("有效投注")
-   private BigDecimal pumpingChip;
+   private BigDecimal validBetAmount;
    /**
     *  盈亏的筹码
     */
-   @ApiModelProperty("盈亏的筹码")
-   private BigDecimal netChip;
+   @ApiModelProperty("输赢金额")
+   private BigDecimal netAmount;
    /**
     * 玩家ip
     */
    @ApiModelProperty("玩家ip")
-   private String ipAddr;
+   private String loginIp;
    /**
     * 牌局开始时间
     */
    @ApiModelProperty("投注时间")
-   private LocalDateTime handBeginDate;
+   private Long handBeginDate;
    /**
     *  终端类型
     */
    @ApiModelProperty("终端类型")
-   private Integer deviceType;
+   private Integer obDeviceType;
    /**
     * 结算状态 (0已结算 1未结算 2取消)
     */
-   private Integer status;
+   private Integer obBetStatus;
    /**
     * 牌局结束时间
     */
    @ApiModelProperty("结算时间")
-   private LocalDateTime handEndDate;
+   private Long handEndDate;
 
 }

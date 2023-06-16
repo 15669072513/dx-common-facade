@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 /**
  * 游戏记录查询对象
  */
-@ApiModel("游戏记录查询对象")
+@ApiModel("德信-游戏记录查询对象")
 @Data
 public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("注单id")

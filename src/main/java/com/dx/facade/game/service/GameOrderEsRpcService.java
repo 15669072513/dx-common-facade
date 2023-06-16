@@ -24,7 +24,7 @@ public interface GameOrderEsRpcService {
     /**
      * 牌桌战绩列表
      */
-    CommonResp<List<GameOrderTableDetailSumResp>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
+    CommonResp<PageResp<GameOrderTableDetailSumResp, GameOrderTableDetailSumResp>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
 
     /**
      * 盈亏总额
@@ -32,22 +32,22 @@ public interface GameOrderEsRpcService {
     CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
 
     /**
-     * 注单列表
+     * 德信-注单列表
      */
     CommonResp<PageResp<GameOrderRecordResp, ?>> queryGameOrderList(GameOrderRecordReq req);
     /**
-     * 注单详情
+     * 德信-注单详情
      */
     CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 
     /**
-     * 场馆游戏注单
+     * 游戏-注单列表
      * @param req
      * @return
      */
     CommonResp<PageResp<GameOrderRecordVenueResp, ?>> queryGameOrderVenueList(GameOrderRecordVenueReq req);
     /**
-     * 场馆游戏注单详情
+     * 游戏-注单详情
      */
     CommonResp<GameOrderRecordDetailVenueResp> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
 
