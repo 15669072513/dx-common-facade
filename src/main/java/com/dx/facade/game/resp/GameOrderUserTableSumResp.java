@@ -38,10 +38,15 @@ public class GameOrderUserTableSumResp implements Serializable {
     /**
      * 盈亏筹码
      */
-    private BigDecimal netChip;
-    /**
-     * 盲注(大盲/小盲)
+    private BigDecimal netAmount;
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private BigDecimal sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private BigDecimal bbBlindScore;
 
 }
