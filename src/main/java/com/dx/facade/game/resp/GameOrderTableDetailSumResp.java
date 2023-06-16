@@ -49,7 +49,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      * 牌桌流水
      */
-    private BigDecimal betChipSum;
+    private BigDecimal betAmountSum;
     /**
      *  牌桌带入
      */
@@ -61,10 +61,15 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      *  盈亏筹码
      */
-    private BigDecimal netChipSum;
-    /**
-     * 盲注(大盲/小盲)
+    private BigDecimal netAmountSum;
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private BigDecimal sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private BigDecimal bbBlindScore;
 
 }
