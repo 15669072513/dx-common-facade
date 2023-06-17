@@ -61,4 +61,9 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
+    @ApiModelProperty("关联俱乐部id")
+    private Long clubId;
+
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
 }
