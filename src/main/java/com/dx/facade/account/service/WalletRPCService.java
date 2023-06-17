@@ -65,7 +65,7 @@ public interface WalletRPCService {
      * @param dto 操作参数
      * @throws BizException
      */
-    CommonResp<BigDecimal> walletBalance(WalletBalanceDTO dto)throws BizException;
+    CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto)throws BizException;
 
     /**
      * 查询余额明细
