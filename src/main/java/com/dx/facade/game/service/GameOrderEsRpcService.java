@@ -65,7 +65,7 @@ public interface GameOrderEsRpcService {
     /**
      * 代理-会员流水
      */
-    CommonResp<PageResp<GameOrderUserResp, ?>> gameOrderUserList(GameOrderUserReq req);
+    CommonResp<PageResp<GameOrderUserResp, GameOrderUserSumResp>> gameOrderUserList(GameOrderUserReq req);
     /**
      * 代理-游戏记录
      */
