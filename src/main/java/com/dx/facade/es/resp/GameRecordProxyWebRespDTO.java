@@ -21,7 +21,7 @@ public class GameRecordProxyWebRespDTO {
 	@ApiModelProperty("场馆名称(如ob真人,ag捕鱼)")
 	private String venueName;
 
-    @ApiModelProperty("ob注单状态(0未结算,1已结算,2已取消) ")
+    @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算 ")
     private Integer obBetStatus;
 	
 	@ApiModelProperty("游戏名称")

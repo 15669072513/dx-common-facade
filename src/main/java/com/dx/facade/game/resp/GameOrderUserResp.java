@@ -10,12 +10,12 @@ import java.time.LocalDateTime;
 public class GameOrderUserResp {
     @ApiModelProperty("会员账号")
     private String userName;
-    @ApiModelProperty("总投注")
-    private String netChip;
-    @ApiModelProperty("总盈利")
-    private LocalDateTime beginDate;
-    @ApiModelProperty("结抽水比例")
-    private LocalDateTime endDate;
+    @ApiModelProperty("投注金额")
+    private String netAmountSum;
     @ApiModelProperty("有效投注")
-    private BigDecimal netChipSum;
+    private LocalDateTime validBetAmountSum;
+    @ApiModelProperty("抽水比例")
+    private LocalDateTime rakeProportion;
+    @ApiModelProperty("牌桌抽水")
+    private BigDecimal test;
 }

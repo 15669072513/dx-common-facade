@@ -93,7 +93,22 @@ public class GameEnums {
         }
     }
 
-
+    public enum EsFlagEnum {
+        NO(0, "未下发"),
+        YES(1, "已下发");
+        private EsFlagEnum(int code, String desc) {
+            this.code = code;
+            this.desc = desc;
+        }
+        private int code;
+        private String desc;
+        public int code() {
+            return this.code;
+        }
+        public String desc() {
+            return this.desc;
+        }
+    }
 
 
 }

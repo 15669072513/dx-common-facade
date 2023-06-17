@@ -11,7 +11,7 @@ public class GameRecordDetailParam {
     @ApiModelProperty("结束时间")
     private Long endTime;
 
-    @ApiModelProperty("注单状态(0未结算,1已结算)")
+    @ApiModelProperty("注单状态(0未结算,1已结算 2 取消)")
     private Integer obBetStatus;
 
     @ApiModelProperty("会员id")

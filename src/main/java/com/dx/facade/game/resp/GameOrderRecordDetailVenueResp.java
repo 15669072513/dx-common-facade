@@ -110,7 +110,7 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
     /**
      * 结算状态 (0已结算 1未结算 2取消)
      */
-    @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
+    @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算")
     private Integer obBetStatus;
     /**
      *  终端类型

@@ -15,7 +15,6 @@ import lombok.Data;
  @Data
  public class GameRecordDetailDto {
 
-     // 投注人信息
      @ApiModelProperty("会员id")
      private Long memberId;
 
@@ -49,7 +48,6 @@ import lombok.Data;
      @ApiModelProperty("该类游戏总输赢")
      private BigDecimal netAmountSum;
 
-     // 注单信息
      @ApiModelProperty("注单状态 0-未结算 1-已结算")
      private String obBetStatus;
 

@@ -16,7 +16,7 @@ public class GameRecordDtoPC {
     @ApiModelProperty("场馆code(如agzr,imsb,cp,dj,cq9)")
     private String venueCode;
 
-    @ApiModelProperty("ob注单状态")
+    @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算")
     private Integer obBetStatus;
 
     @ApiModelProperty("投注内容(由现有字段生成的字段,为app和管理后台展示用)")

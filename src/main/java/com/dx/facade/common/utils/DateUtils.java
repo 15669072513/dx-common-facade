@@ -182,6 +182,9 @@ public class DateUtils {
 
 
     public static long localDateTimeToLong(LocalDateTime localDateTime) {
+        if (localDateTime == null) {
+            return 0;
+        }
         ZoneId zone = ZoneId.systemDefault();
         Instant instant = localDateTime.atZone(zone).toInstant();
         return instant.toEpochMilli();

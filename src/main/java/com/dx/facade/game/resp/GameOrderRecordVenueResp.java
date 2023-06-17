@@ -80,7 +80,7 @@ public class GameOrderRecordVenueResp implements Serializable {
         /**
         * 注单状态
         */
-        @ApiModelProperty("注单状态")
+        @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算")
         private Integer obBetStatus;
         /**
         * 牌局开始时间
