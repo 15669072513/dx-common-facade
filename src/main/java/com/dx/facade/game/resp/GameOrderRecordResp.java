@@ -75,11 +75,12 @@ public class GameOrderRecordResp implements Serializable {
    /**
     *  终端类型
     */
-   @ApiModelProperty("终端类型")
+   @ApiModelProperty("终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP）")
    private Integer obDeviceType;
    /**
     * 结算状态 (0已结算 1未结算 2取消)
     */
+   @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
    private Integer obBetStatus;
    /**
     * 牌局结束时间
