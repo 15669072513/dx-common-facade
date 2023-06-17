@@ -67,10 +67,18 @@ public class QueryProxyClubParamDTO implements BaseParmDTO, Serializable {
     /** 创建人 */
     @ApiModelProperty("创建人")
     private String createdBy;
-
+    
     /** 创建时间 */
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
+
+    /** 创建开始时间 */
+    @ApiModelProperty("创建开始时间")
+    private String createdAtBegin;
+    
+    /** 创建结束时间 */
+    @ApiModelProperty("创建结束时间")
+    private String createdAtEnd;
 
     /** 最后操作人 */
     @ApiModelProperty("最后操作人")
