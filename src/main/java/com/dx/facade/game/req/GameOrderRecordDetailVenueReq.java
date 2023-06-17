@@ -10,7 +10,7 @@ import lombok.Data;
  */
 @ApiModel("注单详情请求对象")
 @Data
-public class GameOrderRecordDetailVenueReq extends BaseRequest {
+public class GameOrderRecordDetailVenueReq {
     /**
      * 注单
      */

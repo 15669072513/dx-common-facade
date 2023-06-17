@@ -41,6 +41,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("关联俱乐部id")
     private Long clubId;
 
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
+
     @ApiModelProperty("牌桌最大人数")
     private Integer maxSeats;
 
@@ -79,6 +82,12 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
+
+    @ApiModelProperty("游戏倒计时（秒）")
+    private Integer countDown;
+
+    @ApiModelProperty("最小补码额度")
+    private BigDecimal minAmount;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;

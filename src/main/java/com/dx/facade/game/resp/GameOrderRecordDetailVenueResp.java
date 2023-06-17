@@ -111,7 +111,7 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
      * 结算状态 (0已结算 1未结算 2取消)
      */
     @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
-    private Integer status;
+    private Integer obBetStatus;
     /**
      *  终端类型
      */
@@ -121,7 +121,7 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
      * 创建时间
      */
     @ApiModelProperty("同步时间")
-    private LocalDateTime createAt;
+    private Long createAt;
 
 
 }

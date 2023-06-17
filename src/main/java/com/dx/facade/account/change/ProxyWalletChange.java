@@ -59,6 +59,21 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_other_add(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_add, ProxyAppType.other, TransType.income),
     commission_other_sub(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.outlay),
 
+
+    officer_proxy_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.income),
+    proxy_be_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_be_up_score, ProxyAppType.proxy_be_up_score, TransType.income),
+    proxy_to_child_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_child_up_score, ProxyAppType.proxy_to_child_up_score, TransType.outlay),
+    proxy_to_mem_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_mem_up_score, ProxyAppType.proxy_to_mem_up_score, TransType.outlay),
+
+    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.outlay),
+    proxy_be_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_be_down_score, ProxyAppType.proxy_be_down_score, TransType.outlay),
+    proxy_to_child_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_child_down_score, ProxyAppType.proxy_to_child_down_score, TransType.income),
+    proxy_to_mem_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_mem_down_score, ProxyAppType.proxy_to_mem_down_score, TransType.income),
+
+    commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.outlay),
+
+
+
 //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 //    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
     ;

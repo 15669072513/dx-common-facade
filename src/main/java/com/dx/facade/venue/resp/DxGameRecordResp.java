@@ -22,6 +22,12 @@ public class DxGameRecordResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("游戏主键，自增")
+    private Long gameTypeId;
+
+    @ApiModelProperty("游戏名称")
+    private String gameName;
+
     @ApiModelProperty("牌局主键，自增")
     private Long handId;
 
@@ -52,6 +58,9 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("场馆类型")
     private String venueType;
 
+    @ApiModelProperty("场馆类型名称")
+    private String venueTypeName;
+
     @ApiModelProperty("手牌开始时间")
     private LocalDateTime handBeginTime;
 
@@ -61,4 +70,9 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
+    @ApiModelProperty("关联俱乐部id")
+    private Long clubId;
+
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
 }

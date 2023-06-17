@@ -60,7 +60,7 @@ public class TableConfigRuleResp {
     /**
      * 时长 单位 分钟
      */
-    private Long timeCount;
+    private Integer timeCount;
 
     /**
      * 最小带入的筹码
