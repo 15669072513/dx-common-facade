@@ -85,9 +85,6 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("游戏倒计时（秒）")
     private Integer countDown;
 
-    @ApiModelProperty("最小补码额度")
-    private BigDecimal minAmount;
-
     @ApiModelProperty(
             value = "创建人",
             hidden = true
