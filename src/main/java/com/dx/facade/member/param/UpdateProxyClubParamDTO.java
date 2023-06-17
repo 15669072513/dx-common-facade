@@ -34,7 +34,7 @@ public class UpdateProxyClubParamDTO implements BaseParmDTO, Serializable {
     
     /** 俱乐部id */
     @ApiModelProperty("俱乐部idID")
-    private Long clubId;
+    private Long id;
     
     /** 代理Id */
     @ApiModelProperty("代理Id")
@@ -91,6 +91,6 @@ public class UpdateProxyClubParamDTO implements BaseParmDTO, Serializable {
     private LocalDateTime updatedAt;
     @Override
     public void check() {
-        Assert.notNull(clubId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
+        Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("clubId"));
     }
 }

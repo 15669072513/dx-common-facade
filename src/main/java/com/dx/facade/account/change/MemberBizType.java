@@ -12,6 +12,10 @@ public enum MemberBizType implements IBizType {
     other(9, "其他调整", "1"),
     to_center(10, "佣金转中心钱包", "1"),
     deposit_discount(11, "存款优惠", "1"),
+
+    up_score(12, "上分", "1"),
+    down_score(13, "下分", "1"),
+    game(14, "游戏", "1"),
     ;
 
     private Integer code;

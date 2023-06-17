@@ -11,6 +11,14 @@ public enum MemberAppType implements IAppType {
     reward(6, "会员福利"),
     other(7, "其他"),
     deposit_discount(8, "存款优惠"),
+
+    //新增
+    proxy_up_score(9, "代理上分" ),
+    proxy_down_score(10, "代理下分"),
+    bring_to_table(11, "带入牌桌"),
+    bring_out_table(12,"带出牌桌"),
+    to_center(13, "佣金转回"),
+
     ;
 
     private Integer code;

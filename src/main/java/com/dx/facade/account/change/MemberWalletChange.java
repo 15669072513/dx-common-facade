@@ -41,6 +41,13 @@ public enum MemberWalletChange implements IWalletChange {
     deposit_reward(WalletType.cash, MemberBizType.deposit_discount, MemberChangeType.deposit_discount, MemberAppType.deposit_discount, TransType.income, Constant.MEMBER),
     deposit_reward_add(WalletType.cash, MemberBizType.deposit_discount, MemberChangeType.deposit_discount_add, MemberAppType.deposit_discount, TransType.income, Constant.MEMBER),
     deposit_reward_sub(WalletType.cash, MemberBizType.deposit_discount, MemberChangeType.deposit_discount_sub, MemberAppType.deposit_discount, TransType.outlay, Constant.MEMBER),
+
+    proxy_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.proxy_up_score, MemberAppType.proxy_up_score, TransType.income, Constant.MEMBER),
+
+    proxy_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.proxy_down_score, MemberAppType.proxy_down_score, TransType.outlay, Constant.MEMBER),
+
+    bring_to_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_to_table, MemberAppType.bring_to_table, TransType.outlay, Constant.MEMBER),
+    bring_out_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_out_table, MemberAppType.bring_out_table, TransType.income, Constant.MEMBER),
     ;
 
     private IWalletType walletType;
