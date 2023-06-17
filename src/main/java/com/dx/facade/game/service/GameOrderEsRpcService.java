@@ -6,6 +6,7 @@ import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 玩家注单查询
@@ -68,4 +69,9 @@ public interface GameOrderEsRpcService {
      * 代理-游戏记录
      */
     CommonResp<PageResp<GameOrderRecordUserVenueResp, ?>> gameOrderUserVenueList(GameOrderRecordUserVenueReq req);
+
+    /**
+     * 会员游戏投注
+     */
+    CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
 }
