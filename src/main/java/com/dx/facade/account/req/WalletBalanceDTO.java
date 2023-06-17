@@ -4,11 +4,13 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 
+import com.dx.facade.member.exception.ErrorCode;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.util.Assert;
 
 @Data
-public class WalletBalanceDTO<T> implements Serializable {
+public class WalletBalanceDTO implements BaseParmDTO {
 
 	private static final long serialVersionUID = -2464195843194814131L;
 
@@ -29,16 +31,16 @@ public class WalletBalanceDTO<T> implements Serializable {
     private Long userId;
 
     /**
-     * @see ConstantEnums.UserType
+     * @see com.dx.enums.ConstantEnums.UserType
      */
     @ApiModelProperty("用户类型")
     private Integer userType;
 
-    /**
-     * 按业务划分，需要记录不同的业务查询字段
-     * 类似：hand - 手牌
-     *             牌桌
-     *             俱乐部
-     */
-    private T content;
+    @Override
+    public void check() {
+        Assert.notNull(this.serialNo, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("serialNo"));
+        Assert.notNull(this.amount, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("amount"));
+        Assert.notNull(this.userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));
+        Assert.notNull(this.userType, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userType"));
+    }
 }
