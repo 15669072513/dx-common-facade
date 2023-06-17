@@ -85,6 +85,12 @@ public class DxTableInfoAddReq implements Serializable {
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
 
+    @ApiModelProperty("游戏倒计时（秒）")
+    private Integer countDown;
+
+    @ApiModelProperty("最小补码额度")
+    private BigDecimal minAmount;
+
     @ApiModelProperty("创建人")
     private String createdBy;
 
