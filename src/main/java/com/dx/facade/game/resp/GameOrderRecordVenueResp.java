@@ -17,23 +17,22 @@ public class GameOrderRecordVenueResp implements Serializable {
       */
      @ApiModelProperty("主键id")
      private Long id;
-
-        /**
-         * 流水订单号
-         */
-        private String orderNo;
-        /**
-         * 场馆类型
-         */
-        private Long venueType;
-        /**
-         * 场馆类型code
-         */
-        private String venueTypeCode;
-        /**
-         * 场馆类型名称
-         */
-        private String venueTypeName;
+    /**
+     * 流水订单号
+     */
+    private String orderNo;
+    /**
+     * 场馆类型
+     */
+    private Long venueType;
+    /**
+     * 场馆类型code
+     */
+    private String venueTypeCode;
+    /**
+     * 场馆类型名称
+     */
+    private String venueTypeName;
       /**
        * 会员账号
        */

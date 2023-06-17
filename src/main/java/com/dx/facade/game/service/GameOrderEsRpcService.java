@@ -2,6 +2,7 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.facade.es.resp.GameRecordAggregation;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
@@ -45,7 +46,7 @@ public interface GameOrderEsRpcService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<GameOrderRecordVenueResp, ?>> queryGameOrderVenueList(GameOrderRecordVenueReq req);
+    CommonResp<PageResp<GameOrderRecordVenueResp, GameOrderRecordVenueAggregationResp>> queryGameOrderVenueList(GameOrderRecordVenueReq req);
     /**
      * 游戏-注单详情
      */
