@@ -18,4 +18,9 @@ public class GameReviewReq extends BaseRequest {
      */
     @ApiModelProperty("局次")
     private Integer roundNo;
+    /**
+     * 登录会员id
+     */
+    @ApiModelProperty("登录会员id")
+    private Long userId;
 }
