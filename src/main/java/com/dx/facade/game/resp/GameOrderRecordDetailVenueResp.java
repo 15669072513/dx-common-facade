@@ -28,10 +28,15 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
     @ApiModelProperty("会员账号")
     private String userName;
     /**
+     * 游戏账号
+     */
+    @ApiModelProperty("游戏账号")
+    private String playerName;
+    /**
      * 上级代理账号
      */
     @ApiModelProperty("上级代理账号")
-    private String proxyName;
+    private String parentProxyName;
     /**
      * 总代账号
      */
@@ -40,12 +45,12 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
     /**
      * 主键id
      */
-    @ApiModelProperty("主键id")
+    @ApiModelProperty("注单号")
     private Long id;
     /**
      * 流水订单号
      */
-    @ApiModelProperty("流水订单号")
+    @ApiModelProperty("三方订单号")
     private String orderNo;
     /**
      * 场馆名称
@@ -60,53 +65,58 @@ public class GameOrderRecordDetailVenueResp implements Serializable {
     /**
      * 牌桌code
      */
-    @ApiModelProperty("牌桌编码")
+    @ApiModelProperty("牌桌号")
     private Long tableCode;
     /**
-     * 游戏名称
+     * 牌桌名称
      */
-    @ApiModelProperty("游戏名称")
-    private String gameName;
+    @ApiModelProperty("牌桌名称")
+    private String tableName;
     /**
      * 手牌code
      */
-    @ApiModelProperty("手牌编码")
+    @ApiModelProperty("手牌号")
     private String handCode;
     /**
      * 投注金额
      */
     @ApiModelProperty("投注金额")
-    private BigDecimal betChip;
+    private BigDecimal betAmount;
     /**
      * 有效投注（抽水金额）
      */
     @ApiModelProperty("有效投注")
-    private BigDecimal pumpingChip;
+    private BigDecimal validBetAmount;
     /**
      *  盈亏的筹码
      */
-    @ApiModelProperty("盈亏的筹码")
-    private BigDecimal netChip;
+    @ApiModelProperty("输赢金额")
+    private BigDecimal netAmount;
     /**
      * 玩家ip
      */
-    @ApiModelProperty("IP地址")
-    private String ipAddr;
+    @ApiModelProperty("投注IP")
+    private String loginIp;
     /**
      * 投注时间
      */
     @ApiModelProperty("投注时间")
-    private LocalDateTime handBeginDate;
+    private Long handBeginDate;
     /**
      * 结束时间
      */
     @ApiModelProperty("结算时间")
-    private LocalDateTime handEndDate;
+    private Long handEndDate;
     /**
      * 结算状态 (0已结算 1未结算 2取消)
      */
     @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
     private Integer status;
+    /**
+     *  终端类型
+     */
+    @ApiModelProperty("投注终端")
+    private Integer obDeviceType;
     /**
      * 创建时间
      */

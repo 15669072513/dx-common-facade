@@ -23,16 +23,10 @@ public class GameOrderRecordDetailResp implements Serializable {
     @ApiModelProperty("用户类型 0 正式账号 1测试账号")
     private Integer accountType;
     /**
-     * 会员账号
+     * 游戏账号
      */
-    @ApiModelProperty("会员账号")
-    private String userName;
-
-    /**
-     * 流水订单号
-     */
-    @ApiModelProperty("流水订单号")
-    private String orderNo;
+    @ApiModelProperty("游戏账号")
+    private String playerName;
     /**
      * 场馆名称
      */
@@ -62,41 +56,42 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 投注金额
      */
     @ApiModelProperty("投注金额")
-    private BigDecimal betChip;
+    private BigDecimal betAmount;
     /**
      * 有效投注（抽水金额）
      */
     @ApiModelProperty("有效投注")
-    private BigDecimal pumpingChip;
+    private BigDecimal validBetAmount;
     /**
      *  盈亏的筹码
      */
-    @ApiModelProperty("盈亏的筹码")
-    private BigDecimal netChip;
+    @ApiModelProperty("盈亏的金额")
+    private BigDecimal netAmount;
     /**
      * 玩家ip
      */
-    @ApiModelProperty("IP地址")
-    private String ipAddr;
+    @ApiModelProperty("投注IP")
+    private String loginIp;
     /**
      * 投注时间
      */
     @ApiModelProperty("投注时间")
-    private LocalDateTime handBeginDate;
+    private Long handBeginDate;
     /**
      * 结束时间
      */
     @ApiModelProperty("结算时间")
-    private LocalDateTime handEndDate;
+    private Long handEndDate;
+    /**
+     *  终端类型
+     */
+    @ApiModelProperty("终端类型")
+    private Integer obDeviceType;
     /**
      * 结算状态 (0已结算 1未结算 2取消)
      */
     @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
     private Integer status;
-    /**
-     * 创建时间
-     */
-    @ApiModelProperty("同步时间")
-    private LocalDateTime createAt;
+
 
 }

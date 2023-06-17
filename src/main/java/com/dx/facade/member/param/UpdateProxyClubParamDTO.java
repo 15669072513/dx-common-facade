@@ -28,10 +28,13 @@ import lombok.NoArgsConstructor;
 public class UpdateProxyClubParamDTO implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = -5276753294444979337L;
-
+    
+    @ApiModelProperty("商户ID")
+    private Long merchantId;
+    
     /** 俱乐部id */
     @ApiModelProperty("俱乐部idID")
-    private Long clubId;
+    private Long id;
     
     /** 代理Id */
     @ApiModelProperty("代理Id")
@@ -88,6 +91,6 @@ public class UpdateProxyClubParamDTO implements BaseParmDTO, Serializable {
     private LocalDateTime updatedAt;
     @Override
     public void check() {
-        Assert.notNull(clubId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
+        Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("clubId"));
     }
 }

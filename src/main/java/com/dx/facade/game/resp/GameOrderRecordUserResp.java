@@ -30,7 +30,7 @@ public class GameOrderRecordUserResp {
     /**
      * 游戏类型
      */
-    private Integer gameType;
+    private Long gameType;
     /**
      * 盈亏筹码
      */

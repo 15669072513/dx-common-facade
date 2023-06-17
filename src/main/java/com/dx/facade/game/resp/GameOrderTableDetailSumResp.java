@@ -1,13 +1,16 @@
 package com.dx.facade.game.resp;
 
+import com.dx.facade.common.utils.DateUtils;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
- * 牌局信息表
+ * 牌桌信息
  */
 @Data
 public class GameOrderTableDetailSumResp implements Serializable {
@@ -31,11 +34,15 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      * 牌桌时间
      */
-    private Date tableTime;
+    private Long tableCreateDate;
+    /**
+     * 牌桌开始时间
+     */
+    private String tableCreateDateStr;
     /**
      * 时长
      */
-    private Long ms;
+    private Integer timeCount;
 
     /**
      * 牌桌名称
@@ -49,7 +56,7 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      * 牌桌流水
      */
-    private BigDecimal betChipSum;
+    private BigDecimal betAmountSum;
     /**
      *  牌桌带入
      */
@@ -61,10 +68,22 @@ public class GameOrderTableDetailSumResp implements Serializable {
     /**
      *  盈亏筹码
      */
-    private BigDecimal netChipSum;
-    /**
-     * 盲注(大盲/小盲)
+    private BigDecimal netAmountSum;
+    /***
+     * 小盲注
      */
-    private String blinds;
+    private BigDecimal sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    private BigDecimal bbBlindScore;
+
+    public String getTableCreateDateStr() {
+        if (tableCreateDate != null) {
+            return DateUtils.getHHmm(tableCreateDate);
+        }
+        return null;
+    }
 
 }
