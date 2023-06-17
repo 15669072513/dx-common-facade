@@ -41,7 +41,7 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 牌桌code
      */
     @ApiModelProperty("牌桌编码")
-    private Long tableCode;
+    private String tableCode;
     /**
      * 游戏名称
      */
@@ -91,7 +91,7 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 结算状态 (0已结算 1未结算 2取消)
      */
     @ApiModelProperty("结算状态 (0已结算 1未结算 2取消)")
-    private Integer status;
+    private Integer obBetStatus;
 
 
 }
