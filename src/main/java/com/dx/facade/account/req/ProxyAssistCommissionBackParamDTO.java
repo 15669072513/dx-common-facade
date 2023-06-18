@@ -25,9 +25,9 @@ public class ProxyAssistCommissionBackParamDTO {
     @ApiModelProperty(value = "账户类型(1=中心钱包，6=佣金钱包,7=额度钱包)", required = true, example = "7")
     private Integer bizType;
 
-    @NotNull(message = "代存金额不能为空")
-    @ApiModelProperty(value = "代存金额", required = true, example = "10")
-    @Min(value = 0, message = "代存金额最小为0")
+    @NotNull(message = "金额不能为空")
+    @ApiModelProperty(value = "金额", required = true, example = "10")
+    @Min(value = 0, message = "金额最小为0")
     private BigDecimal amount;
 
     @NotBlank(message = "支付密码不能为空")
