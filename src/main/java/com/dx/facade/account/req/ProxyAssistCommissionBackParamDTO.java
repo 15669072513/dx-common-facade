@@ -21,8 +21,8 @@ public class ProxyAssistCommissionBackParamDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long proxyId;
 
-    @NotNull(message = "账户类型(6=佣金钱包,7=额度钱包)不能为空")
-    @ApiModelProperty(value = "账户类型(6=佣金钱包,7=额度钱包)", required = true, example = "7")
+    @NotNull(message = "账户类型(1=中心钱包，6=佣金钱包,7=额度钱包)不能为空")
+    @ApiModelProperty(value = "账户类型(1=中心钱包，6=佣金钱包,7=额度钱包)", required = true, example = "7")
     private Integer bizType;
 
     @NotNull(message = "代存金额不能为空")
