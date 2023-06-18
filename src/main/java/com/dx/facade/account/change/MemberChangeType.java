@@ -31,10 +31,10 @@ public enum MemberChangeType implements IChangeType {
     deposit_discount_sub(24, "存款优惠扣除调整", "11"),
 
     //新增
-    proxy_up_score(24, "代理上分", "12"),
-    proxy_down_score(25, "代理下分", "13"),
-    bring_to_table(26, "带入牌桌", "14"),
-    bring_out_table(27,"带出牌桌","14"),
+    proxy_up_score(25, "代理上分", "12"),
+    proxy_down_score(26, "代理下分", "13"),
+    bring_to_table(27, "带入牌桌", "14"),
+    bring_out_table(28,"带出牌桌","14"),
     ;
     private Integer code;
     private String desc;
