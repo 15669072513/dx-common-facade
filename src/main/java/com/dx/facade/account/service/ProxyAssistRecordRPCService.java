@@ -25,23 +25,31 @@ public interface ProxyAssistRecordRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitDepositOrder(ProxyAssistDepositDto proxyAssistDepositDto) throws Exception;
+    CommonResp saveProxyAssitDepositOrder(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
 
     /**
      *  代理给会员下分
      * @param proxyAssistDownScoreDto
      * @return
-     * @throws Exception
+     * @throws BizException
      */
-    CommonResp saveProxyAssitMemberDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws Exception;
+    CommonResp saveProxyAssitMemberDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws BizException;
 
     /**
      * 代理给代理下分
      * @param proxyAssistDownScoreDto
      * @return
-     * @throws Exception
+     * @throws BizException
      */
-    CommonResp saveProxyAssitProxyDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws Exception;
+    CommonResp saveProxyAssitProxyDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws BizException;
+
+    /**
+     * 代理佣金转回
+     * @param reqDTO
+     * @return
+     * @throws BizException
+     */
+    CommonResp saveProxyCommissionBack(ProxyTransferReqDTO reqDTO) throws BizException;
 
     /**
      * 代理Web 版本查询的转账记录查询,需要查询全部
