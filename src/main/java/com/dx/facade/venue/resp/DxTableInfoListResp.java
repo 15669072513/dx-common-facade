@@ -83,8 +83,11 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
 
-    @ApiModelProperty("游戏倒计时（秒）")
-    private Integer countDown;
+    @ApiModelProperty("牌桌开始时间")
+    private LocalDateTime tableBeginTime;
+
+    @ApiModelProperty("牌桌结束时间")
+    private LocalDateTime tableEndTime;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
