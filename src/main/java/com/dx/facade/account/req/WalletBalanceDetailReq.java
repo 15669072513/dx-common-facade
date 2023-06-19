@@ -19,17 +19,23 @@ public class WalletBalanceDetailReq implements Serializable {
     /**
      * @see com.dx.facade.account.enums.Subject
      */
-    @ApiModelProperty("发生科目")
+    @ApiModelProperty("发生科目/调整类型")
     private String subject;
 
     @ApiModelProperty("用户id")
     private Long userId;
+
+    @ApiModelProperty("会员代理用户名")
+    private String userName;
 
     @ApiModelProperty("俱乐部id")
     private Long clubId;
 
     @ApiModelProperty("账变ID")
     private String changeTypeCode;
+
+    @ApiModelProperty("上下分订单号")
+    private String upDownOrderNo;
 
     @ApiModelProperty("账变类型")
     private Integer changeType;
