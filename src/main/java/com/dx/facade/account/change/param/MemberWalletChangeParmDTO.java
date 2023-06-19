@@ -28,6 +28,12 @@ public class MemberWalletChangeParmDTO extends WalletChangeParm implements IBWWa
     @Builder.Default
     private String name = Constant.MEMBER;
 
+    @ApiModelProperty(value="操作人id")
+    private long operatorId;
+
+    @ApiModelProperty(value="操作用户姓名")
+    private String operatorUser;
+
     @Override
     public void check(){
         super.check();

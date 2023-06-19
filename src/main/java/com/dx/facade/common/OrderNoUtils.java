@@ -71,6 +71,9 @@ public class OrderNoUtils {
 		BW_MEMBER_BILL_ADJUST("EDMB", "用户提款流水扔调整订单号"),
 		BW_MEMBER_AUDIT("s", "用户新增审核"),
 		BW_CLUB_AUDIT("s", "俱乐部新增审核"),
+
+		//以下是账变的订单号
+		DX_CHANGE_TYPE("C","账变ID"),
 		;
 		
 		
