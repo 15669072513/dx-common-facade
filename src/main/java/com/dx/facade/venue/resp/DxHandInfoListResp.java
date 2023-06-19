@@ -85,6 +85,9 @@ public class DxHandInfoListResp implements Serializable {
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
