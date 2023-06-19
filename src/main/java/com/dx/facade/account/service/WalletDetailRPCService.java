@@ -18,6 +18,6 @@ public interface WalletDetailRPCService {
      */
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
-    CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+    CommonResp<PageResp<WalletBalanceDetailReq, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
 }
