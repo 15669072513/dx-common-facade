@@ -57,7 +57,7 @@ public interface ProxyAssistRecordRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitProxyDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws BizException;
+    CommonResp saveProxyAssitProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
 
     /**
      * 代理佣金转回
