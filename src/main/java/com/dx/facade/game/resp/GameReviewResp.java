@@ -15,6 +15,10 @@ public class GameReviewResp implements Serializable  {
      */
     private Long handId;
     /**
+     *  会员id
+     */
+    private Long userId;
+    /**
      *  手牌编码
      */
     private String handCode;

@@ -57,9 +57,9 @@ public interface GameOrderEsRpcService {
     CommonResp<PageResp<GameOrderRecordUserResp, ?>> userNetChipDetail(GameOrderRecordUserReq req);
 
     /**
-     * 会员结算详情
+     * 综合后台-结算详情
      */
-    CommonResp<GameOrderUserSettlementResp> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
+    CommonResp<List<GameOrderUserSettlementResp>> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
 
     /**
      * 代理-会员流水
@@ -71,7 +71,7 @@ public interface GameOrderEsRpcService {
     CommonResp<PageResp<GameOrderRecordUserVenueResp, ?>> gameOrderUserVenueList(GameOrderRecordUserVenueReq req);
 
     /**
-     * 会员游戏投注
+     * 会员有效投注
      */
     CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
 
@@ -79,4 +79,14 @@ public interface GameOrderEsRpcService {
      * 手牌列表
      */
     CommonResp<List<GameOrderRecordHandUserResp>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
+
+    /**
+     * 代理后台-结算详情
+     */
+    CommonResp<PageResp<GameOrderUserSettlementDetailByProxyResp, ?>> gameOrderUserSettlementByProxyList(GameOrderUserSettlementDetailByProxyReq req);
+
+    /**
+     * 俱乐部贡献
+     */
+    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubSumList(GameOrderClubSumReq req);
 }

@@ -54,6 +54,6 @@ public class GameOrderRecordUserVenueResp implements Serializable {
     * 结算时
     */
    @ApiModelProperty("结算时间")
-   private LocalDateTime ipAddr;
+   private Long handEndDate;
 
 }

@@ -10,6 +10,6 @@ import java.util.List;
 public class UserValiBetAmountResp {
     @ApiModelProperty("会员id")
     private Long userId;
-    @ApiModelProperty("游戏投注金额")
+    @ApiModelProperty("有效投注金额")
     private BigDecimal validBetAmountSum;
 }
