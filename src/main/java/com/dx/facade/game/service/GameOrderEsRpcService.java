@@ -74,4 +74,9 @@ public interface GameOrderEsRpcService {
      * 会员游戏投注
      */
     CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
+
+    /**
+     * 手牌列表
+     */
+    CommonResp<List<GameOrderRecordHandUserResp>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
 }
