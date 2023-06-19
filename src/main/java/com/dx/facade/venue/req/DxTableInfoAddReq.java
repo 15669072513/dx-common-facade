@@ -5,6 +5,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * <p>
@@ -81,6 +82,12 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
+
+    @ApiModelProperty("牌桌结束时间")
+    private LocalDateTime tableEndTime;
+
+    @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
+    private Integer overType;
 
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;

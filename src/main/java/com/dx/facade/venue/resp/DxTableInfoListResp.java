@@ -89,6 +89,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("牌桌结束时间")
     private LocalDateTime tableEndTime;
 
+    @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
+    private Integer overType;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 

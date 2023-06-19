@@ -1,8 +1,6 @@
 package com.dx.facade.venue.dto;
 
-import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -77,6 +75,15 @@ public class DxTableInfoDto implements Serializable {
 
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
+
+    @ApiModelProperty("牌桌开始时间")
+    private LocalDateTime tableBeginTime;
+
+    @ApiModelProperty("牌桌结束时间")
+    private LocalDateTime tableEndTime;
+
+    @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
+    private Integer overType;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
