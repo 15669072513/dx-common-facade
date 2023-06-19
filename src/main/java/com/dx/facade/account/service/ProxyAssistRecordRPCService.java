@@ -28,6 +28,22 @@ public interface ProxyAssistRecordRPCService {
     CommonResp saveProxyAssitDepositOrder(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
 
     /**
+     * 代理给会员上分
+     * @param proxyAssistDepositDto
+     * @return
+     * @throws BizException
+     */
+    CommonResp saveProxyAssitMemberUpScore(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
+
+    /**
+     * 代理给代理上分
+     * @param reqDTO
+     * @return
+     * @throws BizException
+     */
+    Boolean saveProxyAssitProxyUpScore(ProxyTransferReqDTO reqDTO) throws BizException;
+
+    /**
      *  代理给会员下分
      * @param proxyAssistDownScoreDto
      * @return
