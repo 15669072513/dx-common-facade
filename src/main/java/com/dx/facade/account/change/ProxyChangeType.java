@@ -155,4 +155,19 @@ public enum ProxyChangeType implements IChangeType {
                 ProxyChangeType.rebate_add, ProxyChangeType.rebate_sub);
 
     }
+
+
+    /**
+     * 代理账变记录-账变类型下拉列表
+     * @return
+     */
+    public static List<ProxyChangeType> getProxyChangeTypeList(){
+        return Arrays.asList(ProxyChangeType.officer_proxy_up_score, ProxyChangeType.proxy_be_up_score, ProxyChangeType.proxy_to_child_up_score,
+                ProxyChangeType.proxy_to_mem_up_score, ProxyChangeType.officer_proxy_down_score,
+                ProxyChangeType.proxy_be_down_score, ProxyChangeType.proxy_to_child_down_score, ProxyChangeType.proxy_to_mem_down_score,
+                ProxyChangeType.to_center, ProxyChangeType.commission_to_quota,ProxyChangeType.rebate,
+                ProxyChangeType.rebate_add,ProxyChangeType.rebate_sub);
+    }
+
+
 }
