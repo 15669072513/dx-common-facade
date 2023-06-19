@@ -92,9 +92,6 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("抽水比例")
     private BigDecimal rake;
 
-    @ApiModelProperty("游戏倒计时（秒）")
-    private Integer countDown;
-
     @ApiModelProperty("创建时间")
     private LocalDateTime createAt;
 
