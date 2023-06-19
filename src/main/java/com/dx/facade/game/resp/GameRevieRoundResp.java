@@ -6,7 +6,9 @@ import lombok.Data;
 @Data
 public class GameRevieRoundResp {
     @ApiModelProperty("手牌编码")
-    private String id;
+    private String id="";
     @ApiModelProperty("手牌时间")
     private String handEndDateStr;
+    @ApiModelProperty("玩家牌局数量")
+    private Long userHandCount=0L;
 }
