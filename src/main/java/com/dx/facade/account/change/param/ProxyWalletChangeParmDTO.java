@@ -41,6 +41,12 @@ public class ProxyWalletChangeParmDTO extends WalletChangeParm implements IBWWal
     @ApiModelProperty(value="锁定金额时间（非业务时间，锁定、解锁业务使用，协助锁定及解锁找到同一张分表时间）")
     private LocalDateTime lockEventTime ;
 
+    @ApiModelProperty(value="操作人id")
+    private long operatorId;
+
+    @ApiModelProperty(value="操作用户姓名")
+    private String operatorUser;
+
     @Override
     public void check(){
         super.check();
