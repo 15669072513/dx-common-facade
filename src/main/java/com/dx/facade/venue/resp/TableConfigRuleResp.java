@@ -1,5 +1,6 @@
 package com.dx.facade.venue.resp;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -77,4 +78,13 @@ public class TableConfigRuleResp {
      */
     private BigDecimal rake;
 
+    /** 人员上线 */
+    @ApiModelProperty("人员上线")
+    private Integer upperLimit;
+
+    @ApiModelProperty("同时开牌桌上限")
+    private Integer cardTableLimit;
+
+    @ApiModelProperty("单牌桌旁观人数上限")
+    private Integer lookOnLimit;
 }
