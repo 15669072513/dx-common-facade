@@ -4,6 +4,8 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.facade.account.param.WalletDetailParamDTO;
+import com.dx.facade.account.req.WalletBalanceDetailDTO;
+import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
 
@@ -15,5 +17,7 @@ public interface WalletDetailRPCService {
      * @return
      */
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
+
+    CommonResp<PageResp<WalletBalanceDetailDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
 }
