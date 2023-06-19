@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 public class WalletBalanceDetailReq implements Serializable {
@@ -37,8 +38,11 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("上下分订单号")
     private String upDownOrderNo;
 
-    @ApiModelProperty("账变类型")
+    @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private Integer changeType;
+
+    @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
+    private List<Integer> changeTypeList;
 
 
 
