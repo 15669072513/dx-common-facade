@@ -1,6 +1,5 @@
 package com.dx.facade.game.resp;
 
-import com.dx.facade.es.resp.CurrencyAndSum;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 

@@ -18,11 +18,11 @@ public class GameOrderRecordUserResp {
     /**
      * 牌局结束时间
      */
-    private Date handEndDate;
+    private Long handEndDate;
     /**
      * 牌局开始时间
      */
-    private Date handBeginDate;
+    private Long handBeginDate;
     /**
      * 游戏名称
      */
