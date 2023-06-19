@@ -46,4 +46,9 @@ public class ProxyTransferReqDTO {
 	 */
 	private String remark;
 
+	/**
+	 * 操作人proxyID
+	 */
+	private Long operatorProxyId;
+
 }
