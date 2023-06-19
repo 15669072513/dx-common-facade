@@ -2,6 +2,9 @@ package com.dx.facade.account.change;
 
 import com.dx.exception.BizException;
 
+import java.util.Arrays;
+import java.util.List;
+
 public enum ProxyBizType implements IBizType {
 
     //代理钱包
@@ -75,4 +78,15 @@ public enum ProxyBizType implements IBizType {
         }
         throw new BizException("没有这个ProxyBizType");
     }
+
+    /**
+     * 代理账变记录-业务类型 下拉列表
+     * @return
+     */
+    public static List<ProxyBizType> getProxyChangeRecordTypeList(){
+        return Arrays.asList(ProxyBizType.up_score, ProxyBizType.down_score, ProxyBizType.to_center,
+                ProxyBizType.commission_to_quota, ProxyBizType.rebate
+               );
+    }
+
 }
