@@ -3,6 +3,8 @@ package com.dx.facade.game.resp;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class GameRevieRoundResp {
     @ApiModelProperty("手牌编码")
@@ -11,4 +13,8 @@ public class GameRevieRoundResp {
     private String handEndDateStr;
     @ApiModelProperty("玩家牌局数量")
     private Long userHandCount=0L;
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
 }
