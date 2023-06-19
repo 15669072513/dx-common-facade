@@ -10,6 +10,8 @@ import java.time.LocalDateTime;
 @ApiModel("代理后台-结算详情查询对象")
 @Data
 public class GameOrderUserSettlementDetailByProxyReq extends BaseRequest {
+    @ApiModelProperty("游戏类型")
+    private Long gameType;
     @ApiModelProperty("牌桌id")
     private Long tableId;
     @ApiModelProperty("会员账号")
@@ -18,4 +20,5 @@ public class GameOrderUserSettlementDetailByProxyReq extends BaseRequest {
     private LocalDateTime hStartTime;
     @ApiModelProperty("手牌开始-结束时间")
     private LocalDateTime hEndTime;
+
 }
