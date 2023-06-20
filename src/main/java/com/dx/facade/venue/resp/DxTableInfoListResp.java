@@ -92,6 +92,15 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
     private Integer overType;
 
+    @ApiModelProperty("手牌数")
+    private Long handCount;
+
+    @ApiModelProperty("盈亏金额")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("有效金额")
+    private BigDecimal validBetAmount;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
