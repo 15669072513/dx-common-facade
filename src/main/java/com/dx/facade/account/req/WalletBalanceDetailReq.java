@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 public class WalletBalanceDetailReq implements Serializable {
@@ -19,11 +20,14 @@ public class WalletBalanceDetailReq implements Serializable {
     /**
      * @see com.dx.facade.account.enums.Subject
      */
-    @ApiModelProperty("发生科目")
+    @ApiModelProperty("发生科目/调整类型")
     private String subject;
 
     @ApiModelProperty("用户id")
     private Long userId;
+
+    @ApiModelProperty("会员代理用户名")
+    private String userName;
 
     @ApiModelProperty("俱乐部id")
     private Long clubId;
@@ -31,8 +35,14 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("账变ID")
     private String changeTypeCode;
 
-    @ApiModelProperty("账变类型")
+    @ApiModelProperty("上下分订单号")
+    private String upDownOrderNo;
+
+    @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private Integer changeType;
+
+    @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
+    private List<Integer> changeTypeList;
 
 
 

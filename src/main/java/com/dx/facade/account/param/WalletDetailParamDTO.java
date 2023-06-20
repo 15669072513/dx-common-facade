@@ -110,4 +110,10 @@ public class WalletDetailParamDTO {
     @ApiModelProperty("用户名列表")
     private List<String> userNameList;
 
+    @ApiModelProperty("账变ID")
+    private String changeTypeID;
+
+    @ApiModelProperty("俱乐部ID")
+    private long clubId;
+
 }

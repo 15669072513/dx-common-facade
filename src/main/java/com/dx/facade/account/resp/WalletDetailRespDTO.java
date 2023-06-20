@@ -140,4 +140,20 @@ public class WalletDetailRespDTO {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime createdAt;
 
+    @ApiModelProperty("账变ID")
+    @TableField("change_type_id")
+    private String changeTypeID;
+
+    @ApiModelProperty("操作人ID")
+    @TableField("operator_id")
+    private Long operatorId;
+
+    @ApiModelProperty("操作人姓名")
+    @TableField("operator_user")
+    private String operatorUser;
+
+    @ApiModelProperty("俱乐部ID")
+    @TableField("club_id")
+    private long clubId;
+
 }
