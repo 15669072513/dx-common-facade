@@ -47,7 +47,7 @@ public class GameReviewResp implements Serializable  {
      * 头像
      */
     @ApiModelProperty("头像")
-    private String userHearUrl;
+    private String userHeadUrl;
     /**
      * 玩家昵称
      */
