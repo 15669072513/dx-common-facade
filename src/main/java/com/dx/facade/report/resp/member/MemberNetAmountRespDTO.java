@@ -11,6 +11,9 @@ import lombok.NoArgsConstructor;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+/**
+ *  盈亏报表-会员盈亏 DTO
+ */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
