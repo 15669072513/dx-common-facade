@@ -76,7 +76,7 @@ public interface GameOrderEsRpcService {
     CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
 
     /**
-     * 手牌列表
+     * 手牌玩家列表
      */
     CommonResp<List<GameOrderRecordHandUserResp>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
 
@@ -85,8 +85,5 @@ public interface GameOrderEsRpcService {
      */
     CommonResp<PageResp<GameOrderUserSettlementDetailByProxyResp, ?>> gameOrderUserSettlementByProxyList(GameOrderUserSettlementDetailByProxyReq req);
 
-    /**
-     * 俱乐部贡献
-     */
-    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubSumList(GameOrderClubSumReq req);
+
 }

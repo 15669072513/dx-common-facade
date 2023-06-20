@@ -96,7 +96,7 @@ public class GameOrderRecordVenueResp implements Serializable {
         * 牌桌编码
         */
         @ApiModelProperty("牌桌编码")
-        private Long tableCode;
+        private String tableCode;
         /**
         * 玩家ip
         */
