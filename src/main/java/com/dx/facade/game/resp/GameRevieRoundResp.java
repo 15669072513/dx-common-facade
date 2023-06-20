@@ -17,4 +17,6 @@ public class GameRevieRoundResp {
     private BigDecimal sbBlindScore;
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
+    @ApiModelProperty("手牌号")
+    private Integer roundNo;
 }
