@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -41,11 +42,22 @@ public class ClubAuditRecordResp {
 
     @ApiModelProperty("审核操作（0-结单查看 1-审核）")
     private Integer stepCode;
+    
+    @ApiModelProperty("代理名称")
+    private String proxyName;
+    
+    @ApiModelProperty("代理姓名")
+    private String proxyRealName;
+    
+    @ApiModelProperty("总代名称")
+    private String topProxyName;
 
-//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-//    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-//    @ApiModelProperty(value="一审审批时间")
-//    private LocalDateTime auditTime;
+    @ApiModelProperty("icon地址")
+    private String iconUrl;
+    
+    @ApiModelProperty("简介")
+    @TableField("introduction")
+    private String introduction;
 
     @ApiModelProperty(value="商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)

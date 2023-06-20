@@ -44,11 +44,11 @@ public class PasswordUtil {
     }
 
     public static void main(String[] args) {
-        String salt = geneSalt(861575567138054197L,"dxtest");
+        String salt = geneSalt(789469140550905867L,"shxmb001");
         System.out.println("salt:"+salt);
-        String newpassword = genePassword(salt, "123456");
+        String newpassword = genePassword(salt, "abc123456");
         System.out.println("password:"+newpassword);
-        String storedPwd = "989797D3E9D7ACA30E8561B5F18D8AA9";
+        String storedPwd = "E21EAAD820A98638FFCCC1C81AB4A5A0";
         System.out.println(newpassword.equals(storedPwd));
 
     }

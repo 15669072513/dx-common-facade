@@ -68,15 +68,15 @@ public class ProxyClubRespDTO implements Serializable {
     @ApiModelProperty("人员上线")
     private Integer upperLimit;
     
-    /** 会员人数 */
-    @ApiModelProperty("会员人数")
-    private Integer membership;
-    
     @ApiModelProperty("同时开牌桌上限")
     private Integer cardTableLimit;
     
     @ApiModelProperty("单牌桌旁观人数上限")
     private Integer lookOnLimit;
+    
+    /** 会员人数 */
+    @ApiModelProperty("会员人数")
+    private Integer membership;
     
     /** icon地址 */
     @ApiModelProperty("icon地址")
