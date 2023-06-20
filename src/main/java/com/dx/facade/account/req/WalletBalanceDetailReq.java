@@ -23,6 +23,12 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("发生科目/调整类型")
     private String subject;
 
+    /**
+     * @see com.dx.facade.account.change.WalletType
+     */
+    @ApiModelProperty("钱包类型")
+    private Integer walletType;
+
     @ApiModelProperty("用户id")
     private Long userId;
 
