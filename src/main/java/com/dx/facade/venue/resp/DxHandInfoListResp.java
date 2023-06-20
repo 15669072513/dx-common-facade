@@ -96,6 +96,15 @@ public class DxHandInfoListResp implements Serializable {
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
 
+    @ApiModelProperty("庄家位置")
+    private Integer villageSeat;
+
+    @ApiModelProperty("小盲位置")
+    private Integer sbSeat;
+
+    @ApiModelProperty("大盲位置")
+    private Integer bbSeat;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
