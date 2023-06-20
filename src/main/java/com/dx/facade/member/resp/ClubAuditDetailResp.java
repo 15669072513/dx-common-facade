@@ -45,6 +45,12 @@ public class ClubAuditDetailResp implements Serializable {
     @ApiModelProperty("代理名称")
     private String proxyName;
     
+    @ApiModelProperty("代理姓名")
+    private String proxyRealName;
+    
+    @ApiModelProperty("总代名称")
+    private String topProxyName;
+    
     /** 俱乐部名称 */
     @ApiModelProperty("俱乐部名称")
     private String clubName;

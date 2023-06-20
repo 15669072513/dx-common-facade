@@ -6,6 +6,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.venue.dto.DxTableInfoDto;
 import com.dx.facade.venue.req.DxTableInfoAddReq;
 import com.dx.facade.venue.req.DxTableInfoListReq;
+import com.dx.facade.venue.resp.DxTableBaseInfoResp;
 import com.dx.facade.venue.resp.DxTableInfoListResp;
 import com.dx.facade.venue.resp.TableConfigRuleResp;
 import com.dx.facade.venue.resp.TableCountResp;
@@ -32,7 +33,7 @@ public interface IDxTableInfoService {
      * @param req
      * @throws BizException
      */
-    CommonResp<?> updateTable(DxTableInfoAddReq req) throws BizException;
+    CommonResp<Void> updateTable(DxTableInfoAddReq req) throws BizException;
 
     /**
      * 根据俱乐部id 获取牌桌个数
@@ -45,11 +46,21 @@ public interface IDxTableInfoService {
      * 游戏牌桌解散（综合后台强制解散）
      * @param tableId 牌桌id
      */
-    CommonResp<?> gameDissolve(Long tableId);
+    CommonResp<Void> gameDissolve(Long tableId);
 
     /**
      * 游戏牌桌解散（游戏房间内房主解散）
      * @param tableId 牌桌id
      */
-    CommonResp<?> houseOwnerGameDissolve(Long tableId);
+    CommonResp<Void> houseOwnerGameDissolve(Long tableId);
+
+    /**
+     * 根据牌桌ID获取牌桌基础信息
+     */
+    CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(Long tableId);
+
+    /**
+     * 根据牌桌ID获取牌桌收入
+     */
+    CommonResp<DxTableBaseInfoResp> getTableIncomeById(Long tableId);
 }
