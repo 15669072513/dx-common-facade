@@ -1,11 +1,11 @@
 package com.dx.facade.merchant.service;
 
+import com.dx.facade.merchant.dto.MerchantDTO;
+import com.dx.facade.merchant.req.QueryMerchantParam;
+import com.dx.facade.merchant.resp.MerchantBaseInfoRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
-
-import com.dx.facade.merchant.req.QueryMerchantParam;
-import com.dx.facade.merchant.resp.MerchantBaseInfoRespDTO;
 
 /**
  * 商户RPC服务
@@ -40,5 +40,12 @@ public interface MerchantRpcService {
 	 * @return
 	 */
 	List<MerchantBaseInfoRespDTO> getMerchant(QueryMerchantParam queryMerchantParam);
-	
+
+	/**
+	 *  根据ID查询商户信息
+	 * @param id
+	 * @return
+	 */
+	MerchantDTO getByMerchantId(Long id);
+	List<MerchantDTO> getByMerchantIds(List<Long> merchantIds);
 }
