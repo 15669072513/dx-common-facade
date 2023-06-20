@@ -66,15 +66,17 @@ public class DxHandInfoListResp implements Serializable {
     @ApiModelProperty("局次")
     private Integer handNum;
 
-    @ApiModelProperty("初期金额")
-    private BigDecimal beginMount;
+    @ApiModelProperty("期初金额汇总")
+    private BigDecimal beforeChip;
 
-    @ApiModelProperty("中途带入金额")
-    private BigDecimal bringMidwayAmount;
+    @ApiModelProperty("中途带入金额汇总")
+    private BigDecimal bringMidwayChip;
 
-    @ApiModelProperty("期末金额")
-    @TableField("end_amount")
-    private BigDecimal endAmount;
+    @ApiModelProperty("期末余额汇总")
+    private BigDecimal afterChip;
+
+    @ApiModelProperty("有效底池")
+    private BigDecimal effectivePool;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
@@ -87,6 +89,12 @@ public class DxHandInfoListResp implements Serializable {
 
     @ApiModelProperty("抽水金额")
     private BigDecimal pumpingAmount;
+
+    @ApiModelProperty("会员输赢汇总")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("有效金额")
+    private BigDecimal validBetAmount;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
