@@ -82,7 +82,7 @@ public class DxHandInfoListResp implements Serializable {
     private String publicCards;
 
     @ApiModelProperty("有效底池")
-    private String validPot;
+    private BigDecimal validPot;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
