@@ -1,6 +1,5 @@
 package com.dx.facade.venue.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -17,7 +16,7 @@ import java.time.LocalDateTime;
  * @since 2023-06-06
  */
 @Data
-public class DxHandInfoListResp implements Serializable {
+public class DxHandDetailResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -93,14 +92,11 @@ public class DxHandInfoListResp implements Serializable {
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
 
-    @ApiModelProperty("庄家位置")
-    private Integer villageSeat;
+    @ApiModelProperty("手牌信息")
+    private String handInfos;  //手牌信息
 
-    @ApiModelProperty("小盲位置")
-    private Integer sbSeat;
-
-    @ApiModelProperty("大盲位置")
-    private Integer bbSeat;
+    @ApiModelProperty("结算信息")
+    private String settleInfo;  //结算信息
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
