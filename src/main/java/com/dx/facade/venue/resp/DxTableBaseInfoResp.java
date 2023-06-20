@@ -65,6 +65,12 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
 
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
