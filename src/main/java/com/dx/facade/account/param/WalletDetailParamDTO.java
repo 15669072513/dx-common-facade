@@ -1,5 +1,6 @@
 package com.dx.facade.account.param;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -115,5 +116,8 @@ public class WalletDetailParamDTO {
 
     @ApiModelProperty("俱乐部ID")
     private long clubId;
+
+    @ApiModelProperty("代理层级路径")
+    private String proxyPath;
 
 }
