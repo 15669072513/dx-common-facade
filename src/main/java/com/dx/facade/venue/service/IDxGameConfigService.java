@@ -17,11 +17,11 @@ public interface IDxGameConfigService {
 
     CommonResp<DxGameConfigListResp> getGameById(Long gameTypeId);
 
-    CommonResp<?> addGame(DxGameConfigAddReq req) throws BizException;
+    CommonResp<Void> addGame(DxGameConfigAddReq req) throws BizException;
 
-    CommonResp<?> updateGame(DxGameConfigEditReq req) throws BizException;
+    CommonResp<Void> updateGame(DxGameConfigEditReq req) throws BizException;
 
     CommonResp<List<DxGameConfigListResp>> getGameListByVenueCode(String venueCode);
 
-    CommonResp<?> updateGameSwitch(DxGameConfigEditReq req) throws BizException;
+    CommonResp<Void> updateGameSwitch(DxGameConfigEditReq req) throws BizException;
 }

@@ -10,7 +10,7 @@ import com.dx.util.GsonUtil;
  * @version 1.0.0
  * @date 2020/10/12 16:05
  */
-public enum BWManagerCodeMsgEnum {
+public enum DXManagerCodeMsgEnum {
 
 
     /**
@@ -482,7 +482,7 @@ public enum BWManagerCodeMsgEnum {
 
     private final String msg;
 
-    BWManagerCodeMsgEnum(int code, String msg) {
+    DXManagerCodeMsgEnum(int code, String msg) {
         this.code = code;
         this.msg = msg;
     }
@@ -495,8 +495,8 @@ public enum BWManagerCodeMsgEnum {
         return msg;
     }
 
-    public static BWManagerCodeMsgEnum getCode(int code) {
-        for (BWManagerCodeMsgEnum codeMsg : BWManagerCodeMsgEnum.values()) {
+    public static DXManagerCodeMsgEnum getCode(int code) {
+        for (DXManagerCodeMsgEnum codeMsg : DXManagerCodeMsgEnum.values()) {
             if (codeMsg.getCode() == code) {
                 return codeMsg;
             }

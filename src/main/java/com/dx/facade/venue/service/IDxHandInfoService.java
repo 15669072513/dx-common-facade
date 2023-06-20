@@ -21,7 +21,7 @@ public interface IDxHandInfoService {
      * @param req
      * @throws BizException
      */
-    CommonResp<?> addHand(DxHandInfoAddReq req) throws BizException;
+    CommonResp<Void> addHand(DxHandInfoAddReq req) throws BizException;
 
     /**
      * 根据手牌id获取手牌信息
@@ -35,7 +35,7 @@ public interface IDxHandInfoService {
      * @param req
      * @throws BizException
      */
-    CommonResp<?> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
+    CommonResp<Void> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
 
     /**
      * 根据手牌id获取游戏注单信息
