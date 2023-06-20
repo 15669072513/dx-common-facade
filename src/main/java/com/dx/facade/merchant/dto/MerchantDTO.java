@@ -2,8 +2,8 @@ package com.dx.facade.merchant.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import java.util.Date;
  * 包网商户表
  */
 @Data
-@Builder
+@NoArgsConstructor
 public class MerchantDTO {
 	/**
 	 * 商户ID
