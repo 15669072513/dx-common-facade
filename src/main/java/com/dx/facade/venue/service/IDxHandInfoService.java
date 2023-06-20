@@ -6,6 +6,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.venue.req.DxHandInfoAddReq;
 import com.dx.facade.venue.req.DxHandInfoListReq;
 import com.dx.facade.venue.resp.DxGameRecordResp;
+import com.dx.facade.venue.resp.DxHandDetailResp;
 import com.dx.facade.venue.resp.DxHandInfoListResp;
 
 public interface IDxHandInfoService {
@@ -28,7 +29,7 @@ public interface IDxHandInfoService {
      * @param handId
      * @return
      */
-    CommonResp<DxHandInfoListResp> getHandInfoById(Long handId);
+    CommonResp<DxHandDetailResp> getHandInfoById(Long handId);
 
     /**
      * 根据tableId和局次更新手牌数据
