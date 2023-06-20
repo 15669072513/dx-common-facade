@@ -3,6 +3,8 @@ package com.dx.facade.report.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.facade.report.resp.MemberReportDTO;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
