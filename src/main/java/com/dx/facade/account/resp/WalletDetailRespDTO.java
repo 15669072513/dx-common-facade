@@ -156,4 +156,7 @@ public class WalletDetailRespDTO {
     @TableField("club_id")
     private long clubId;
 
+    @ApiModelProperty("代理层级路径")
+    @TableField("proxy_path")
+    private String proxyPath;
 }
