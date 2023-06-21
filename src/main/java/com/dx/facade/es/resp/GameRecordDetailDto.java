@@ -17,6 +17,8 @@ import lombok.Data;
 
      @ApiModelProperty("会员id")
      private Long memberId;
+     @ApiModelProperty("会员id")
+     private Long userId;
 
      @ApiModelProperty("账号类型, 使用AccountTypeEnum枚举")
      private Integer accountType;
@@ -86,6 +88,8 @@ import lombok.Data;
 
      @ApiModelProperty("结算时间")
      private Long netAt;
+     @ApiModelProperty("结算时间")
+     private Long handEndDate;
 
      @ApiModelProperty("结算时间(yyyy-MM-dd HH:mm:ss")
      private String netAtString;

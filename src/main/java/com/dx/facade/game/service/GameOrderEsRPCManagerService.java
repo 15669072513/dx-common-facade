@@ -2,6 +2,8 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.exception.BizException;
+import com.dx.facade.es.resp.GameRecordDetailDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
