@@ -5,7 +5,7 @@ import com.dx.facade.security.dto.SecurityKeyInfoDTO;
 import com.dx.facade.security.req.KeyIdReq;
 import com.dx.facade.security.req.SecurityKeyReq;
 
-public interface SecurityKeyService {
+public interface SecurityKeyRPCService {
 
   /**
    * 根据platformId、applicationId、version获取key
