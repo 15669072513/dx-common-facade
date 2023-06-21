@@ -88,4 +88,7 @@ public class GameOrderRecordResp implements Serializable {
    @ApiModelProperty("结算时间")
    private Long handEndDate;
 
+   @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
+   private String venueTypeCode;
+
 }

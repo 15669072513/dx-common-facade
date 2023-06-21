@@ -78,6 +78,14 @@ public class GameOrderRecordDetailResp implements Serializable {
     @ApiModelProperty("投注时间")
     private Long handBeginDate;
     /**
+     * 游戏类型 （GameTypeEnum）
+     */
+    @ApiModelProperty("游戏类型 2001 德州游戏 2002 德州短牌局")
+    private Integer gameType;
+
+    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
+    private String venueTypeCode;
+    /**
      * 结束时间
      */
     @ApiModelProperty("结算时间")
@@ -92,6 +100,9 @@ public class GameOrderRecordDetailResp implements Serializable {
      */
     @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算")
     private Integer obBetStatus;
+
+    @ApiModelProperty("该类游戏总输赢")
+    private BigDecimal netAmountSum;
 
 
 }
