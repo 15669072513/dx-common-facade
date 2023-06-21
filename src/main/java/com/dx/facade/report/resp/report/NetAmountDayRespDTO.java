@@ -62,6 +62,16 @@ public class NetAmountDayRespDTO {
     @ApiModelProperty("注单数")
     private Long betCount;
 
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal netAmount;
+
+
     @ApiModelProperty("投注额CNY")
     private BigDecimal betAmountCNY;
 

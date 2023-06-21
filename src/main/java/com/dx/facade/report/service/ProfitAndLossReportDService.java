@@ -11,6 +11,8 @@ import com.dx.facade.report.param.report.gameprofit.GameNetAmountReqDTO;
 import com.dx.facade.report.param.report.profitandloss.*;
 import io.swagger.annotations.ApiModelProperty;
 
+
+@Deprecated
 public interface ProfitAndLossReportDService {
 
     /**
@@ -19,9 +21,8 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    @ApiModelProperty(value="盈亏报表-会员盈亏")
+    @ApiModelProperty(value = "盈亏报表-会员盈亏")
     CommonResp<PageResp<DwmMemberNetAmountDayPO, ?>> pageMemberReport(PageReq<GameNetAmountReqDTO> reqDTO) throws BizException;
-
 
 
     /**
@@ -30,7 +31,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    @ApiModelProperty(value="盈亏报表-代理盈亏")
+    @ApiModelProperty(value = "盈亏报表-代理盈亏")
     CommonResp<PageResp<DwmProxyNetAmountMonthPO, ?>> pageProxyReport(PageReq<ProxyReportReqDTO> reqDTO) throws BizException;
 
     /**
@@ -39,7 +40,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    @ApiModelProperty(value="盈亏报表-场馆盈亏")
+    @ApiModelProperty(value = "盈亏报表-场馆盈亏")
     CommonResp<PageResp<VenueNetAmountDayRespDTO, ?>> pageVenueReport(PageReq<LocalDatePageRequest> reqDTO) throws BizException;
 
     /**
@@ -48,7 +49,7 @@ public interface ProfitAndLossReportDService {
      * @param reqDTO
      * @return
      */
-    @ApiModelProperty(value="盈亏报表-游戏盈亏")
+    @ApiModelProperty(value = "盈亏报表-游戏盈亏")
     CommonResp<PageResp<VenueNetAmountDayRespDTO, ?>> pageGameReport(PageReq<LocalDatePageRequest> reqDTO) throws BizException;
 
     /**
@@ -59,7 +60,7 @@ public interface ProfitAndLossReportDService {
      * @throws BizException
      */
 
-    @ApiModelProperty(value="盈亏报表-每日盈亏")
+    @ApiModelProperty(value = "盈亏报表-每日盈亏")
     CommonResp<PageResp<DwmNetAmountDayPO, ?>> dayReport(PageReq<BusinessBasicReportReqDTO> reqDTO) throws BizException;
 
 //    /**
