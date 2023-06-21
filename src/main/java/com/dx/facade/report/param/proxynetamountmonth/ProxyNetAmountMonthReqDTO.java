@@ -67,4 +67,34 @@ public class ProxyNetAmountMonthReqDTO {
     private Long pageSize = 20L;
 
 
+    @ApiModelProperty("最小注单量")
+    private Long minBetCount;
+
+    @ApiModelProperty("最大注单量")
+    private Long maxBetCount;
+
+    @ApiModelProperty("有效投注")
+    private BigDecimal minValidBetAmount;
+    @ApiModelProperty("有效投注")
+    private BigDecimal maxValidBetAmount;
+
+//    @ApiModelProperty("最小净盈亏")
+//    private BigDecimal minBetAmount;
+//
+//    @ApiModelProperty("最大投注金额")
+//    private BigDecimal maxBetAmount;
+
+//    @ApiModelProperty("最小投注盈亏")
+//    private BigDecimal minNetAmount;
+//
+//    @ApiModelProperty("最大投注盈亏")
+//    private BigDecimal maxNetAmount;
+
+//    @ApiModelProperty("最小净盈亏")
+//    private BigDecimal minNetProfit;
+//
+//    @ApiModelProperty("最大净盈亏")
+//    private BigDecimal maxNetProfit;
+
+
 }
