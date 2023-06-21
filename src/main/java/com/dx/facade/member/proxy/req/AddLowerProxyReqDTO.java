@@ -299,5 +299,11 @@ public class AddLowerProxyReqDTO {
 	
 	@ApiModelProperty(value = "上级代理层级")
 	private Integer parentProxyLevel;
+	
+	@ApiModelProperty("俱乐部id")
+	private Long clubId;
+	
+	@ApiModelProperty("俱乐部名称")
+	private String clubName;
     
 }
