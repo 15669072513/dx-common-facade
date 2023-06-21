@@ -22,6 +22,15 @@ public class NetAmountDaySummaryRespDTO {
     @ApiModelProperty("投注人数")
     private Long memberCount = 0L;
 
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal netAmount;
+
     @ApiModelProperty("投注额CNY")
     private BigDecimal betAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("投注额VND")

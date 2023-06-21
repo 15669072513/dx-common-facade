@@ -9,10 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDateTime;
 
 /**
- *  盈亏报表-会员盈亏 DTO
+ * 盈亏报表-会员盈亏 DTO
  */
 @Data
 @NoArgsConstructor
@@ -27,7 +28,7 @@ public class MemberNetAmountRespDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
 
-    @ApiModelProperty("用户名")
+    @ApiModelProperty("会员姓名")
     private String userName;
 
     @ApiModelProperty("账号类型（1-试玩，2-商务，3-正式，4-测试，5-置换）")
@@ -67,6 +68,17 @@ public class MemberNetAmountRespDTO {
     @ApiModelProperty(value = "游戏锁定状态 0-未锁定 1-游戏锁定")
     private Integer gameLockStatus;
 
+    /**
+     * 会员标签
+     */
+    @ApiModelProperty(value = "会员标签")
+    private String labelName;
+    /**
+     * windControlName
+     */
+    @ApiModelProperty(value = "风控层级名称", example = "1级")
+    private String windControlName;
+
     @ApiModelProperty("注单量")
     private Long betCount;
 
@@ -99,4 +111,10 @@ public class MemberNetAmountRespDTO {
 
     @ApiModelProperty(value = "首存金额时间")
     private LocalDateTime firstDepositDatetime;
+
+    // 会员盈利率=投注盈亏/投注金额
+    public String getNetRate() {
+        String netRate = netAmount.divide(validBetAmount).setScale(2, RoundingMode.HALF_DOWN).toString();
+        return netRate;
+    }
 }

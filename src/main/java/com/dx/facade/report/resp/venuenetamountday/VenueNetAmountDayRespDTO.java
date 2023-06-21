@@ -37,6 +37,16 @@ public class VenueNetAmountDayRespDTO {
     @ApiModelProperty("注单量")
     private Long betCount;
 
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal netAmount;
+
     @ApiModelProperty("投注金额CNY")
     private BigDecimal betAmountCNY;
     @ApiModelProperty("投注金额VND")

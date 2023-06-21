@@ -5,6 +5,10 @@ import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
+
+import java.math.BigDecimal;
+import java.time.LocalDate;
 
 /**
  * @author
@@ -27,5 +31,41 @@ public class PlayerDayReportReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty("总代账号")
     private String topProxyName;
+
+
+    @ApiModelProperty(value = "注册开始时间", required = true, example = "2021-06-17")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    protected LocalDate registerStartTime;
+
+    @ApiModelProperty(value = "注册结束时间", required = true, example = "2021-06-17")
+    @DateTimeFormat(pattern="yyyy-MM-dd")
+    protected LocalDate registerEndTime;
+
+    @ApiModelProperty("账号类型(1-试玩，2-商务，3-正式，4-测试，5-置换)")
+    private Integer accountType;
+
+    @ApiModelProperty("最小注单量")
+    private Long minBetCount;
+
+    @ApiModelProperty("最大注单量")
+    private Long maxBetCount;
+
+    @ApiModelProperty("最小净盈亏")
+    private BigDecimal minBetAmount;
+
+    @ApiModelProperty("最大投注金额")
+    private BigDecimal maxBetAmount;
+
+    @ApiModelProperty("最小投注盈亏")
+    private BigDecimal minNetAmount;
+
+    @ApiModelProperty("最大投注盈亏")
+    private BigDecimal maxNetAmount;
+
+    @ApiModelProperty("最小净盈亏")
+    private BigDecimal minNetProfit;
+
+    @ApiModelProperty("最大净盈亏")
+    private BigDecimal maxNetProfit;
 
 }

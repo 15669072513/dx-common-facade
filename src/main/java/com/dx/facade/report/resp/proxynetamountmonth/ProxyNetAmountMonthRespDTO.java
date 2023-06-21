@@ -1,5 +1,7 @@
 package com.dx.facade.report.resp.proxynetamountmonth;
 
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.dx.util.StringUtil;
 import io.swagger.annotations.ApiModelProperty;
@@ -24,16 +26,22 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "币种", example = "CNY")
     private String currency;
 
-    /** staticsDate */
+    /**
+     * staticsDate
+     */
     @ApiModelProperty(value = "月份", example = "2021-09")
     private String staticsDate;
 
-    /** proxyId */
+    /**
+     * proxyId
+     */
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @ApiModelProperty(value = "代理id", example = "10001")
     private Long proxyId;
 
-    /** proxyName */
+    /**
+     * proxyName
+     */
     @ApiModelProperty(value = "代理账号", example = "zw9z_string0001")
     private String proxyName;
 
@@ -43,22 +51,30 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "主商户")
     private String topMerchantName;
 
-    /** accountType */
+    /**
+     * accountType
+     */
     @ApiModelProperty(value = "代理类型（1-正式，2-商务，3-置换）", example = "3")
     private Integer accountType;
 
-    /** parentProxyName */
+    /**
+     * parentProxyName
+     */
     @ApiModelProperty(value = "上级代理账号", example = "string000")
     private String parentProxyName;
 
     @ApiModelProperty(value = "总代账号", example = "string000")
     private String topProxyName;
 
-    /** proxyLevel */
+    /**
+     * proxyLevel
+     */
     @ApiModelProperty(value = "代理层级", example = "1")
     private Integer proxyLevel;
 
-    /** proxyLevelName */
+    /**
+     * proxyLevelName
+     */
     @ApiModelProperty(value = "代理层级", example = "1")
     private String proxyLevelName;
 
@@ -68,91 +84,138 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "充提锁定状态 0-未锁定 1-充提锁定")
     private Integer paymentLockStatus;
 
-    /** status */
+    /**
+     * status
+     */
     @ApiModelProperty(value = "状态", example = "string000")
     private Integer status;
 
-    /** windControlName */
+    /**
+     * windControlName
+     */
     @ApiModelProperty(value = "风控层级名称", example = "1级")
     private String windControlName;
 
-    /** labelName */
+    /**
+     * labelName
+     */
     @ApiModelProperty(value = "代理标签", example = "标签1")
     private String labelName;
 
-    /** betAmount */
+    /**
+     * betAmount
+     */
     @ApiModelProperty(value = "总投注", example = "1500.00")
     private BigDecimal betAmount;
 
-    /** validBetAmount */
+    /**
+     * validBetAmount
+     */
     @ApiModelProperty(value = "总有效投注", example = "1500.00")
     private BigDecimal validBetAmount;
 
-    /** flowCorrection */
+    /**
+     * flowCorrection
+     */
     @ApiModelProperty(value = "流水纠正", example = "1500.00")
     private BigDecimal flowCorrection;
 
-    /** memberCount */
+    /**
+     * memberCount
+     */
     @ApiModelProperty(value = "投注人数", example = "100")
     private Long memberCount;
 
-    /** betCount */
+    /**
+     * betCount
+     */
     @ApiModelProperty(value = "注单量", example = "200")
     private Long betCount;
 
-    /** netAmount */
+    /**
+     * netAmount
+     */
     @ApiModelProperty(value = "会员总输赢", example = "1500.00")
     private BigDecimal netAmount;
 
-    /** venueFee */
+    /**
+     * venueFee
+     */
     @ApiModelProperty(value = "场馆费", example = "1500.00")
     private BigDecimal venueFee;
 
-    /** rebateAmount */
+    /**
+     * rebateAmount
+     */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal rebateAmount;
 
-    /** discountAmount */
+    /**
+     * discountAmount
+     */
     @ApiModelProperty(value = "会员优惠", example = "1500.00")
     private BigDecimal discountAmount;
 
-    /** proxyRebatePoint */
+    /**
+     * proxyRebatePoint
+     */
     @ApiModelProperty(value = "代理返点", example = "1500.00")
     private BigDecimal proxyRebatePoint;
 
-    /** artificialPatchAmount */
+    /**
+     * artificialPatchAmount
+     */
     @ApiModelProperty(value = "会员账户调整", example = "1500.00")
     private BigDecimal artificialPatchAmount;
 
-    /** repairBetAmount */
+    /**
+     * repairBetAmount
+     */
     @ApiModelProperty(value = "补单输赢", example = "1500.00")
     private BigDecimal repairBetAmount;
 
-    /** proxyNet */
+    /**
+     * proxyNet
+     */
     @ApiModelProperty(value = "代理商净输赢", example = "1500.00")
     private BigDecimal proxyNet;
 
-    /** lastMonthBalance */
+    /**
+     * lastMonthBalance
+     */
     @ApiModelProperty(value = "上月结余", example = "1500.00")
     private BigDecimal lastMonthBalance;
 
-    /** rushNet */
+    /**
+     * rushNet
+     */
     @ApiModelProperty(value = "冲正后输赢", example = "1500.00")
     private BigDecimal rushNet;
 
-    /** directBetAmount */
+    /**
+     * directBetAmount
+     */
     @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
     private BigDecimal directBetAmount;
 
-    /** directValidBetAmount */
+    /**
+     * directValidBetAmount
+     */
     @ApiModelProperty(value = "直属会员有效投注", example = "1500.00")
     private BigDecimal directValidBetAmount;
 
-    /** directNetAmount */
+    /**
+     * directNetAmount
+     */
     @ApiModelProperty(value = "直属会员总输赢", example = "1500.00")
     private BigDecimal directNetAmount;
 
-    /** directPayAmount */
+    /**
+     * directPayAmount
+     */
     @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
     private BigDecimal directProfitAmount;
+
+
+
 }

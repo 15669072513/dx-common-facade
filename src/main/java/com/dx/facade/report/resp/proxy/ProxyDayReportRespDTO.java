@@ -1,5 +1,6 @@
 package com.dx.facade.report.resp.proxy;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -171,5 +172,48 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty(value = "当前币种")
     private String currency;
+
+    //  上下分
+
+    @ApiModelProperty("给会员上下分差值")
+    @TableField("proxy_to_mem_differ_amount")
+    private Long proxyToMemDifferAmount;
+
+    @ApiModelProperty("给会员上下分次数")
+    @TableField("proxy_to_mem_times")
+    private Long proxyToMemTimes;
+
+    @ApiModelProperty("给会员上下分人数")
+    @TableField("proxy_to_mem_num")
+    private Long proxyToMemNum;
+
+    @ApiModelProperty("给代理上下分差值")
+    @TableField("proxy_to_child_differ_amount")
+    private Long proxyToChildDifferAmount;
+
+    @ApiModelProperty("给代理上下分次数")
+    @TableField("proxy_be_down_times")
+    private Long proxyToChildTimes;
+
+    @ApiModelProperty("给代理上下分人数")
+    @TableField("proxy_to_child_num")
+    private Long proxyToChildNum;
+
+    @ApiModelProperty("被代理上下分差值")
+    @TableField("proxy_be_differ_amount")
+    private Long proxyBeDifferAmount;
+
+    @ApiModelProperty("被代理上下分差次数")
+    @TableField("proxy_be_differ_times")
+    private Long proxyBeDifferTimes;
+
+
+    @ApiModelProperty(value = "佣金转额度钱包总额")
+    private BigDecimal transferAvailableWalletAmount ;
+
+    @ApiModelProperty(value = "返点调整")
+    private BigDecimal repairRebatePoint;
+
+
 
 }
