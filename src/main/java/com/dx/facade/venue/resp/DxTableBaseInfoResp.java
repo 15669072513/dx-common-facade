@@ -71,6 +71,15 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
 
+    @ApiModelProperty("玩家总带入")
+    private BigDecimal bringChipTotal;
+
+    @ApiModelProperty("玩家总带出")
+    private BigDecimal afterChipTotal;
+
+    @ApiModelProperty("牌桌总费用")
+    private BigDecimal costTotal;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
