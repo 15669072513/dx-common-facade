@@ -609,6 +609,8 @@ public class MemberAndProxyDto {
 		result.setCommissionContractList(item.commissionContractList);
 		result.setRebateContractList(item.rebateContractList);
 		result.setIpAttribution(item.getIpAttribution());
+		result.setClubId(item.getClubId());
+		result.setClubName(item.getClubName());
 		return result;
 	}
 	
