@@ -12,12 +12,12 @@ public interface SecurityKeyRPCService {
    * @param req
    * @return
    */
-  CommonResp<SecurityKeyInfoDTO> getKeyByParams(SecurityKeyReq req);
+  CommonResp<SecurityKeyInfoDTO> getKeyByParams(SecurityKeyReq req) throws Exception;
 
   /**
    * 根据keyId获取key
    * @param req
    * @return
    */
-  CommonResp<SecurityKeyInfoDTO> getKeyByKeyId(KeyIdReq req);
+  CommonResp<SecurityKeyInfoDTO> getKeyByKeyId(KeyIdReq req) throws Exception;
 }
