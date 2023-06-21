@@ -17,7 +17,7 @@ public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("注单id")
     private Long id;
     @ApiModelProperty("会员账号")
-    private String userName;
+    private String playerName;
     @ApiModelProperty("游戏名称")
     private String ganmeName;
     @ApiModelProperty("手牌id")

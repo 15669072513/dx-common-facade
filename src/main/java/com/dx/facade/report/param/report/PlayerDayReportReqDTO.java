@@ -4,6 +4,7 @@ import com.dx.facade.report.param.base.LocalDatePageRequest;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -15,6 +16,7 @@ import java.time.LocalDate;
  */
 @Data
 @ApiModel("会员报表列表页-请求对象")
+@Builder
 public class PlayerDayReportReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty(value = "查询范围 1:查询全部（包含子孙） 0:只查询自身", hidden = true)

@@ -28,6 +28,12 @@ public class MemberNetAmountRespDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
 
+    /**
+     * TODO 添加姓名
+     */
+    @ApiModelProperty("用户姓名")
+    private String realName;
+
     @ApiModelProperty("会员姓名")
     private String userName;
 
@@ -113,6 +119,7 @@ public class MemberNetAmountRespDTO {
     private LocalDateTime firstDepositDatetime;
 
     // 会员盈利率=投注盈亏/投注金额
+    @ApiModelProperty(value = "会员盈利率")
     public String getNetRate() {
         String netRate = netAmount.divide(validBetAmount).setScale(2, RoundingMode.HALF_DOWN).toString();
         return netRate;
