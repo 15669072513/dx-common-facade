@@ -120,6 +120,8 @@ public class MemberNetAmountRespDTO {
 
     // 会员盈利率=投注盈亏/投注金额
     @ApiModelProperty(value = "会员盈利率")
+    String netRate;
+
     public String getNetRate() {
         String netRate = netAmount.divide(validBetAmount).setScale(2, RoundingMode.HALF_DOWN).toString();
         return netRate;
