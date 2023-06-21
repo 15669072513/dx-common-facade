@@ -59,8 +59,4 @@ public interface IDxTableInfoService {
      */
     CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(Long tableId);
 
-    /**
-     * 根据牌桌ID获取牌桌收入
-     */
-    CommonResp<DxTableBaseInfoResp> getTableIncomeById(Long tableId);
 }
