@@ -36,7 +36,7 @@ public interface IDxTableInfoService {
     CommonResp<Void> updateTable(DxTableInfoAddReq req) throws BizException;
 
     /**
-     * 根据俱乐部id 获取牌桌个数
+     * 根据俱乐部id获取牌桌个数
      * @param clubId
      * @return
      */
