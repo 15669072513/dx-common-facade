@@ -1,4 +1,4 @@
-package com.dx.facade.venue.req;
+package com.dx.facade.venue.resp;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -16,11 +16,11 @@ import java.time.LocalDateTime;
  * @since 2023-06-06
  */
 @Data
-public class DxHandInfoAddReq implements Serializable {
+public class DxHandDetailResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty(value = "牌局主键，自增", hidden = true)
+    @ApiModelProperty("牌局主键，自增")
     private Long handId;
 
     @ApiModelProperty("牌局code，业务生成")
@@ -65,20 +65,20 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("局次")
     private Integer handNum;
 
-    @ApiModelProperty("初期金额")
-    private BigDecimal beginMount;
+    @ApiModelProperty("期初金额汇总")
+    private BigDecimal beforeChip;
 
-    @ApiModelProperty("中途带入金额")
-    private BigDecimal bringMidwayAmount;
+    @ApiModelProperty("中途带入金额汇总")
+    private BigDecimal bringMidwayChip;
 
-    @ApiModelProperty("期末金额")
-    private BigDecimal endAmount;
+    @ApiModelProperty("期末余额汇总")
+    private BigDecimal afterChip;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
 
     @ApiModelProperty("有效底池")
-    private String validPot;
+    private BigDecimal validPot;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
@@ -86,18 +86,30 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("抽水金额")
     private BigDecimal pumpingAmount;
 
-    @ApiModelProperty(value = "创建时间", hidden = true)
+    @ApiModelProperty("会员输赢汇总")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("有效金额")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("手牌信息")
+    private String handInfos;  //手牌信息
+
+    @ApiModelProperty("结算信息")
+    private String settleInfo;  //结算信息
+
+    @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
-    @ApiModelProperty(value = "修改时间", hidden = true)
+    @ApiModelProperty("修改时间")
     private LocalDateTime updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;
 
-    @ApiModelProperty(value = "是否删除（0 未删除 1已删除）", hidden = true)
+    @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
 }

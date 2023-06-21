@@ -75,9 +75,6 @@ public class DxHandInfoListResp implements Serializable {
     @ApiModelProperty("期末余额汇总")
     private BigDecimal afterChip;
 
-    @ApiModelProperty("有效底池")
-    private BigDecimal effectivePool;
-
     @ApiModelProperty("公牌信息")
     private String publicCards;
 

@@ -2,12 +2,8 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
-import com.dx.facade.game.req.GameOrderClubSumReq;
-import com.dx.facade.game.req.GameOrderHandSumReq;
-import com.dx.facade.game.req.GameOrderTableSumReq;
-import com.dx.facade.game.resp.GameOrderClubSumResp;
-import com.dx.facade.game.resp.GameOrderHandSumResp;
-import com.dx.facade.game.resp.GameOrderTableSumResp;
+import com.dx.facade.game.req.*;
+import com.dx.facade.game.resp.*;
 
 import java.util.List;
 
@@ -22,7 +18,19 @@ public interface GameOrderEsRPCManagerService {
     CommonResp<List<GameOrderTableSumResp>> gameOrderTableSumList(GameOrderTableSumReq req);
 
     /**
-     * 俱乐部贡献
+     * 手牌下面的玩家列表
      */
-    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubSumList(GameOrderClubSumReq req);
+    CommonResp<List<GameOrderRecordUserHandResp>> gameOrderRecordUserHandList(GameOrderRecordUserHandReq req);
+
+
+    /**
+     * 综合后天-俱乐部 金额相关汇总
+     */
+    CommonResp<List<GameOrderClubSumResp>> gameOrderClubSumList(GameOrderClubSumReq req);
+
+    /**
+     *  会员金额相关汇总
+     */
+    CommonResp<List<GameOrderUserSumByUserIdResp>> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
+
 }

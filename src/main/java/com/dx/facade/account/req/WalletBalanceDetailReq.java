@@ -1,5 +1,6 @@
 package com.dx.facade.account.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.enums.ConstantEnums;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -59,6 +60,7 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private List<Integer> changeTypeList;
 
-
+    @ApiModelProperty("代理层级路径")
+    private String proxyPath;
 
 }

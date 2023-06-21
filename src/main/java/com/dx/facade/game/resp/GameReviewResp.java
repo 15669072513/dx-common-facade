@@ -72,7 +72,7 @@ public class GameReviewResp implements Serializable  {
      * 投注状态（GameBetStatusEnum)
      */
     @ApiModelProperty("投注状态")
-    private String betStatus;
+    private Integer betStatus;
     /**
      * 盈亏筹码
      */
