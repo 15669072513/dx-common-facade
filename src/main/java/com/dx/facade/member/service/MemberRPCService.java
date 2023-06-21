@@ -22,6 +22,7 @@ import com.dx.facade.member.param.MemberListParamDTO;
 import com.dx.facade.member.param.MemberParamDTO;
 import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
 import com.dx.facade.member.param.UpdateMemberNickNameParamDTO;
+import com.dx.facade.member.param.UpdateMemberPasswordParamDTO;
 import com.dx.facade.member.param.UpdateMemberTopImagesUrlParamDTO;
 import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
 import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
