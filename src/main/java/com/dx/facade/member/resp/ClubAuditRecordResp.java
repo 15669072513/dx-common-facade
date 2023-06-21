@@ -63,10 +63,6 @@ public class ClubAuditRecordResp {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
 
-    @ApiModelProperty(value="俱乐部id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long clubId;
-
     @ApiModelProperty(value="俱乐部名称")
     private String clubName;
 
