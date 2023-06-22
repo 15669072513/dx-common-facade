@@ -15,5 +15,9 @@ public class GameOrderRecordDetailReq {
      * 注单
      */
     @ApiModelProperty("注单id")
-    private Long id;
+    private String id;
+    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
+    private String venueTypeCode;
+    @ApiModelProperty("会员id")
+    private String userId;
 }

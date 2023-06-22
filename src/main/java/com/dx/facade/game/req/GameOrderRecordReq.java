@@ -4,6 +4,7 @@ import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -15,13 +16,29 @@ import java.time.LocalDateTime;
 @Data
 public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("注单id")
-    private Long id;
-    @ApiModelProperty("会员账号")
-    private String userName;
+    private String id;
+    @ApiModelProperty("游戏账号")
+    private String playerName;
     @ApiModelProperty("游戏名称")
-    private String ganmeName;
+    private String gameName;
+    @ApiModelProperty("游戏类型id")
+    private String gameTypeId;
     @ApiModelProperty("手牌id")
-    private Long handId;
+    private String handId;
     @ApiModelProperty("俱乐部id")
-    private Long clueId;
+    private String clubId;
+    @ApiModelProperty("牌桌id")
+    private String tableId;
+    @ApiModelProperty(value = "投注开始时间 yyyy-MM-dd HH:mm:ss")
+    private String betStartTime;
+
+    @ApiModelProperty(value = "投注结束时间 yyyy-MM-dd HH:mm:ss")
+    private String betEndTime;
+
+    @ApiModelProperty(value = "结算开始时间 yyyy-MM-dd HH:mm:ss")
+    private String settlementStartTime;
+
+    @ApiModelProperty(value = "结算结束时间 yyyy-MM-dd HH:mm:ss")
+    private String settlementEndTime;
+
 }

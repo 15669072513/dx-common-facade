@@ -2,6 +2,11 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.entity.Resp;
+import com.dx.facade.game.dto.game.GameOrderRecordHandUserRespDto;
+import com.dx.facade.game.dto.game.GameOrderRecordUserNetChipSumReqDto;
+import com.dx.facade.game.dto.game.GameOrderUserSettlementRespDto;
+import com.dx.facade.game.dto.game.UserValiBetAmountRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
@@ -29,7 +34,7 @@ public interface GameOrderEsRpcService {
     /**
      * 盈亏总额
      */
-    CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
+    CommonResp<GameOrderRecordUserNetChipSumReqDto> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
 
     /**
      * 德信-注单列表
@@ -59,7 +64,7 @@ public interface GameOrderEsRpcService {
     /**
      * 综合后台-结算详情
      */
-    CommonResp<List<GameOrderUserSettlementResp>> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
+    CommonResp<GameOrderUserSettlementRespDto> gameOrderUserSettlementDetail(GameOrderUserSettlementDetailReq req);
 
     /**
      * 代理-会员流水
@@ -73,12 +78,12 @@ public interface GameOrderEsRpcService {
     /**
      * 会员有效投注
      */
-    CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
+    CommonResp<UserValiBetAmountRespDto> userVlidBetAmountSum(UserValiBetAmountReq req);
 
     /**
      * 手牌玩家列表
      */
-    CommonResp<List<GameOrderRecordHandUserResp>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
+    CommonResp<GameOrderRecordHandUserRespDto> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
 
     /**
      * 代理后台-结算详情

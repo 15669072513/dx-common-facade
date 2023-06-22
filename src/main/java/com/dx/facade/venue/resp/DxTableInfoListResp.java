@@ -104,6 +104,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("牌桌总抽水")
     private BigDecimal pumpingAmountTotal;
 
+    @ApiModelProperty("牌桌总费用")
+    private BigDecimal costTotal;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 

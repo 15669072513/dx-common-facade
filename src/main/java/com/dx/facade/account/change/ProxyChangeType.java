@@ -5,6 +5,9 @@ import java.util.List;
 
 import com.dx.exception.BizException;
 
+/**
+ * 代理账变类型
+ */
 public enum ProxyChangeType implements IChangeType {
 
     //代理钱包
@@ -14,7 +17,7 @@ public enum ProxyChangeType implements IChangeType {
     activity(4, "活动优惠彩金", "3"),
     activity_add(5, "活动增加调整", "3"),
     activity_sub(6, "活动扣除调整", "3"),
-//    quota_add(7, "额度增加调整", "4"),
+    //    quota_add(7, "额度增加调整", "4"),
 //    quota_sub(8, "额度扣除调整", "4"),
     transfer_out(9, "转给下级", "5"),
     transfer_in(10, "上级转入", "5"),
@@ -123,19 +126,19 @@ public enum ProxyChangeType implements IChangeType {
         this.bizCodes = bizCodes;
     }
 
-    public Integer code(){
+    public Integer code() {
         return code;
     }
 
-    public String desc(){
+    public String desc() {
         return desc;
     }
 
-    public String getDesc(){
+    public String getDesc() {
         return desc;
     }
 
-    public String bizCodes(){
+    public String bizCodes() {
         return bizCodes;
     }
 
@@ -148,7 +151,7 @@ public enum ProxyChangeType implements IChangeType {
         throw new BizException("没有这个ProxyChangeType");
     }
 
-    public static List<ProxyChangeType> getArtificialProxyChangeTypeList(){
+    public static List<ProxyChangeType> getArtificialProxyChangeTypeList() {
         return Arrays.asList(ProxyChangeType.deposit_back, ProxyChangeType.activity_add, ProxyChangeType.activity_sub,
                 ProxyChangeType.other_add, ProxyChangeType.other_sub,
                 ProxyChangeType.withdraw_back, ProxyChangeType.commission_add, ProxyChangeType.commission_sub,
@@ -159,14 +162,15 @@ public enum ProxyChangeType implements IChangeType {
 
     /**
      * 代理账变记录-账变类型下拉列表
+     *
      * @return
      */
-    public static List<ProxyChangeType> getProxyChangeTypeList(){
+    public static List<ProxyChangeType> getProxyChangeTypeList() {
         return Arrays.asList(ProxyChangeType.officer_proxy_up_score, ProxyChangeType.proxy_be_up_score, ProxyChangeType.proxy_to_child_up_score,
                 ProxyChangeType.proxy_to_mem_up_score, ProxyChangeType.officer_proxy_down_score,
                 ProxyChangeType.proxy_be_down_score, ProxyChangeType.proxy_to_child_down_score, ProxyChangeType.proxy_to_mem_down_score,
-                ProxyChangeType.to_center, ProxyChangeType.commission_to_quota,ProxyChangeType.rebate,
-                ProxyChangeType.rebate_add,ProxyChangeType.rebate_sub);
+                ProxyChangeType.to_center, ProxyChangeType.commission_to_quota, ProxyChangeType.rebate,
+                ProxyChangeType.rebate_add, ProxyChangeType.rebate_sub);
     }
 
 

@@ -16,7 +16,7 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 主键id
      */
     @ApiModelProperty("主键id")
-    private Long id;
+    private String id;
     /**
      * 用户类型 0 正式账号 1测试账号
      */
@@ -36,7 +36,7 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 俱乐部id
      */
     @ApiModelProperty("俱乐部id")
-    private Long clubId;
+    private String clubId;
     /**
      * 牌桌code
      */
@@ -76,12 +76,20 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 投注时间
      */
     @ApiModelProperty("投注时间")
-    private Long handBeginDate;
+    private String handBeginDate;
+    /**
+     * 游戏类型 （GameTypeEnum）
+     */
+    @ApiModelProperty("游戏类型 2001 德州游戏 2002 德州短牌局")
+    private Integer gameType;
+
+    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
+    private String venueTypeCode;
     /**
      * 结束时间
      */
     @ApiModelProperty("结算时间")
-    private Long handEndDate;
+    private String handEndDate;
     /**
      *  终端类型
      */
@@ -92,6 +100,9 @@ public class GameOrderRecordDetailResp implements Serializable {
      */
     @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算")
     private Integer obBetStatus;
+
+    @ApiModelProperty("该类游戏总输赢")
+    private BigDecimal netAmountSum;
 
 
 }

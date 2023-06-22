@@ -115,6 +115,7 @@ public class PlayerDayReportResp implements Serializable {
      *
      * @return
      */
+    @ApiModelProperty("净盈亏")
     public BigDecimal getNetProfit() {
         return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
     }

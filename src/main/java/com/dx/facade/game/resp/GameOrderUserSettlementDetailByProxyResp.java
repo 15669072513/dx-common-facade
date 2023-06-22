@@ -16,11 +16,11 @@ public class GameOrderUserSettlementDetailByProxyResp {
     @ApiModelProperty("会员昵称")
     private String nickName;
     @ApiModelProperty("开始时间")
-    private Long beginDate;
+    private Long handBeginDate;
     @ApiModelProperty("结束时间")
-    private Long endDate;
+    private Long handEndDate;
     @ApiModelProperty("游戏输赢")
-    private BigDecimal netAmountSum;
+    private BigDecimal netAmount;
     @ApiModelProperty("总带入")
     private BigDecimal bringMidwayChip;
     @ApiModelProperty("总带入次数")
