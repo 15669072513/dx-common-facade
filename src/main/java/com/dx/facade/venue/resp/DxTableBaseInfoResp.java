@@ -80,7 +80,7 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("牌桌抽水")
     private BigDecimal pumpingAmountTotal;
 
     @ApiModelProperty("创建时间")

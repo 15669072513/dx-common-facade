@@ -1,11 +1,13 @@
 package com.dx.facade.account.change;
 
+import com.dx.facade.account.change.param.Constant;
+
 import java.util.Arrays;
 import java.util.List;
 
-import com.dx.facade.account.change.param.Constant;
-
-//代理账变业务
+/**
+ * 代理账变业务 定义
+ */
 public enum ProxyWalletChange implements IWalletChange {
     //额度钱包(没有取款业务，人工扣除也没有)
     quota_deposit(WalletType.quota, ProxyBizType.deposit, ProxyChangeType.deposit, ProxyAppType.deposit, TransType.income),
@@ -61,11 +63,12 @@ public enum ProxyWalletChange implements IWalletChange {
 
 
     officer_proxy_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.income),
+    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.outlay),
+
     proxy_be_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_be_up_score, ProxyAppType.proxy_be_up_score, TransType.income),
     proxy_to_child_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_child_up_score, ProxyAppType.proxy_to_child_up_score, TransType.outlay),
     proxy_to_mem_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_mem_up_score, ProxyAppType.proxy_to_mem_up_score, TransType.outlay),
 
-    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.outlay),
     proxy_be_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_be_down_score, ProxyAppType.proxy_be_down_score, TransType.outlay),
     proxy_to_child_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_child_down_score, ProxyAppType.proxy_to_child_down_score, TransType.income),
     proxy_to_mem_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_mem_down_score, ProxyAppType.proxy_to_mem_down_score, TransType.income),
@@ -86,6 +89,14 @@ public enum ProxyWalletChange implements IWalletChange {
     private TransType transType;
     private String name;
 
+    /**
+     *
+     * @param walletType 钱包类型
+     * @param bizType 代理业务类型
+     * @param changeType 代理账变类型
+     * @param appType 代理客户端账变类型
+     * @param transType 收支类型
+     */
     ProxyWalletChange(WalletType walletType, ProxyBizType bizType, ProxyChangeType changeType, ProxyAppType appType, TransType transType){
         this.walletType = walletType;
         this.bizType = bizType;

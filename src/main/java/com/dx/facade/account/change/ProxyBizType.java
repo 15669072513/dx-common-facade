@@ -5,13 +5,16 @@ import com.dx.exception.BizException;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 代理业务类型
+ */
 public enum ProxyBizType implements IBizType {
 
     //代理钱包
     deposit(1, "代理存款", "6,7"),
     deposit_for_member(2, "代会员存款", "6,7"),
     activity(3, "代理活动", "7"),
-//    quota(4, "代理额度", "7"),
+    //    quota(4, "代理额度", "7"),
     transfer(5, "代理转账", "6,7"),
     other(6, "其他调整", "6,7"),
     withdraw(7, "代理取款", "6"),
@@ -52,19 +55,19 @@ public enum ProxyBizType implements IBizType {
         this.accountCodes = accountCodes;
     }
 
-    public Integer code(){
+    public Integer code() {
         return code;
     }
 
-    public String desc(){
+    public String desc() {
         return desc;
     }
 
-    public String getDesc(){
+    public String getDesc() {
         return desc;
     }
 
-    public String accountCodes(){
+    public String accountCodes() {
         return accountCodes;
     }
 
@@ -79,12 +82,13 @@ public enum ProxyBizType implements IBizType {
 
     /**
      * 代理账变记录-业务类型 下拉列表
+     *
      * @return
      */
-    public static List<ProxyBizType> getProxyChangeRecordTypeList(){
+    public static List<ProxyBizType> getProxyChangeRecordTypeList() {
         return Arrays.asList(ProxyBizType.up_score, ProxyBizType.down_score, ProxyBizType.to_center,
                 ProxyBizType.commission_to_quota, ProxyBizType.rebate
-               );
+        );
     }
 
 }

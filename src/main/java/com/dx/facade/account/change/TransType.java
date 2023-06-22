@@ -1,5 +1,8 @@
 package com.dx.facade.account.change;
 
+/**
+ * 收支类型
+ */
 public enum TransType {
     income(1, "收入"),
     outlay(2, "支出");
