@@ -10,7 +10,9 @@ import java.util.Objects;
 public enum BwCurrencyEnum {
     CNY("CNY", "人民币", "¥"),
     VND("VND", "越南盾", "₫"),
-	THB("THB", "泰铢", "฿");
+	THB("THB", "泰铢", "฿"),
+	USD("USD","美元","$"),
+	;
 
 
     private String code;
@@ -78,6 +80,9 @@ public enum BwCurrencyEnum {
 				break;
 			case "฿":
 				res = format("฿ ###,###.##",decimal);
+				break;
+			case "$":
+				res = format("$ ###,###.##",decimal);
 				break;
 			default:
 				res = "";
