@@ -11,7 +11,7 @@ public enum BwCurrencyEnum {
     CNY("CNY", "人民币", "¥"),
     VND("VND", "越南盾", "₫"),
 	THB("THB", "泰铢", "฿"),
-	USD("USD","美元","$"),
+	//USD("USD", "美元", "$"),
 	;
 
 
