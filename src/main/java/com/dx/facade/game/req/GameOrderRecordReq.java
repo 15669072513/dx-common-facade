@@ -21,6 +21,8 @@ public class GameOrderRecordReq extends BaseRequest {
     private String playerName;
     @ApiModelProperty("游戏名称")
     private String gameName;
+    @ApiModelProperty("游戏类型id")
+    private String gameTypeId;
     @ApiModelProperty("手牌id")
     private String handId;
     @ApiModelProperty("俱乐部id")
