@@ -5,7 +5,6 @@ import com.dx.entity.PageResp;
 import com.dx.entity.Resp;
 import com.dx.exception.BizException;
 import com.dx.facade.es.resp.GameRecordDetailDto;
-import com.dx.facade.game.dto.game.*;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
@@ -15,26 +14,26 @@ public interface GameOrderEsRPCManagerService {
     /**
      *  综合后台--手牌 金额相关汇总
      */
-    CommonResp<GameOrderHandSumRespDto> gameOrderHandSumList(GameOrderHandSumReq req);
+    CommonResp<Resp<List<GameOrderHandSumResp>>> gameOrderHandSumList(GameOrderHandSumReq req);
     /**
      *  综合后台--牌桌 金额相关汇总
      */
-    CommonResp<GameOrderTableSumRespDto> gameOrderTableSumList(GameOrderTableSumReq req);
+    CommonResp<Resp<List<GameOrderTableSumResp>>> gameOrderTableSumList(GameOrderTableSumReq req);
 
     /**
      * 手牌下面的玩家列表
      */
-    CommonResp<GameOrderRecordUserHandRespDto> gameOrderRecordUserHandList(GameOrderRecordUserHandReq req);
+    CommonResp<Resp<List<GameOrderRecordUserHandResp>>> gameOrderRecordUserHandList(GameOrderRecordUserHandReq req);
 
 
     /**
      * 综合后天-俱乐部 金额相关汇总
      */
-    CommonResp<GameOrderClubSumRespDto> gameOrderClubSumList(GameOrderClubSumReq req);
+    CommonResp<Resp<List<GameOrderClubSumResp>>> gameOrderClubSumList(GameOrderClubSumReq req);
 
     /**
      *  会员金额相关汇总
      */
-    CommonResp<GameOrderUserSumByUserIdRespDto> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
+    CommonResp<Resp<List<GameOrderUserSumByUserIdResp>>> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
 
 }
