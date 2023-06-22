@@ -2,6 +2,7 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.entity.Resp;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
@@ -29,7 +30,7 @@ public interface GameOrderEsRpcService {
     /**
      * 盈亏总额
      */
-    CommonResp<BigDecimal> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
+    CommonResp<Resp<BigDecimal>> userNetAmountSummary(GameOrderRecordUserNetChipSumReq req);
 
     /**
      * 德信-注单列表
@@ -73,12 +74,12 @@ public interface GameOrderEsRpcService {
     /**
      * 会员有效投注
      */
-    CommonResp<List<UserValiBetAmountResp>> userVlidBetAmountSum(UserValiBetAmountReq req);
+    CommonResp<Resp<List<UserValiBetAmountResp>>> userVlidBetAmountSum(UserValiBetAmountReq req);
 
     /**
      * 手牌玩家列表
      */
-    CommonResp<List<GameOrderRecordHandUserResp>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
+    CommonResp<Resp<List<GameOrderRecordHandUserResp>>> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
 
     /**
      * 代理后台-结算详情

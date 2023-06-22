@@ -143,5 +143,6 @@ public class GameOrderRecordUserHandResp {
     /**
      * 座位号
      */
+    @ApiModelProperty("座位号")
     private Integer seatNum;
 }
