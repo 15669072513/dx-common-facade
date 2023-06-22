@@ -192,7 +192,7 @@ public class ProxyDayReportRespDTO implements Serializable {
     private Long proxyToChildDifferAmount;
 
     @ApiModelProperty("给代理上下分次数")
-    @TableField("proxy_be_down_times")
+    @TableField("proxy_to_child_times")
     private Long proxyToChildTimes;
 
     @ApiModelProperty("给代理上下分人数")
@@ -211,8 +211,9 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "佣金转额度钱包总额")
     private BigDecimal transferAvailableWalletAmount ;
 
+    // TODO dwm_proxy_report_d
     @ApiModelProperty(value = "返点调整")
-    private BigDecimal repairRebatePoint;
+    private BigDecimal rebateAdjustAmount;
 
 
 
