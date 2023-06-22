@@ -1,10 +1,7 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.entity.PageResp;
 import com.dx.entity.Resp;
-import com.dx.exception.BizException;
-import com.dx.facade.es.resp.GameRecordDetailDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 
@@ -18,7 +15,7 @@ public interface GameOrderEsRPCManagerService {
     /**
      *  综合后台--牌桌 金额相关汇总
      */
-    CommonResp<Resp<List<GameOrderTableSumResp>>> gameOrderTableSumList(GameOrderTableSumReq req);
+    CommonResp<GameOrderTableResp> gameOrderTableSumList(GameOrderTableSumReq req);
 
     /**
      * 手牌下面的玩家列表
