@@ -120,6 +120,7 @@ public enum CodeMsgEnum {
     CONTRACT_ALREADY_EXISTS(310062, "已存在待签约或已签约的契约,不能新增"),
     ACCOUNT_NUMBER_NOT(800006, "无法跨级新增契约"),
     AGENT_GET_ALL_CONTRACTS(800004, "该代理已获得全部契约"),
+    ADD_REMARK_FAIL(100021,"备注添加失败"),
     ;
 
 

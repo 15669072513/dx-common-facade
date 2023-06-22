@@ -1,6 +1,9 @@
 package com.dx.facade.venue.req;
 
 import com.dx.facade.common.PageRequest;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -50,11 +53,25 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("游戏名称")
     private String gameName;
 
-    @ApiModelProperty("牌局开始时间")
-    private LocalDateTime handBeginTime;
+    @ApiModelProperty("牌局开始时间-开始")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime handBeginTimeFrom;
 
-    @ApiModelProperty("牌局结束时间")
-    private LocalDateTime handEndTime;
+    @ApiModelProperty("牌局开始时间-结束")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime handBeginTimeTo;
+
+    @ApiModelProperty("牌局结束时间-开始")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime handEndTimeFrom;
+
+    @ApiModelProperty("牌局结束时间-结束")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime handEndTimeTo;
 
     @ApiModelProperty("局次")
     private Integer handNum;

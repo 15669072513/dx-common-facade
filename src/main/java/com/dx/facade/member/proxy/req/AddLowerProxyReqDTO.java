@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
@@ -299,5 +300,19 @@ public class AddLowerProxyReqDTO {
 	
 	@ApiModelProperty(value = "上级代理层级")
 	private Integer parentProxyLevel;
+	
+	@ApiModelProperty("俱乐部id")
+	private Long clubId;
+	
+	@ApiModelProperty("俱乐部名称")
+	private String clubName;
+	
+    @ApiModelProperty("开局权限（0-关闭 1-开启）")
+    @TableField("open_lock_status")
+    private Integer openLockStatus;
+    
+    @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
+    @TableField("manage_club_lock_status")
+    private Integer manageClubLockStatus;
     
 }

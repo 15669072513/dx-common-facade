@@ -8,6 +8,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddProxyClubParamDTO;
 import com.dx.facade.member.param.CheckClubNameParamDTO;
+import com.dx.facade.member.param.CheckClubOwnerParamDTO;
 import com.dx.facade.member.param.QueryProxyClubParamDTO;
 import com.dx.facade.member.param.UpdateProxyClubParamDTO;
 import com.dx.facade.member.resp.ProxyClubRespDTO;
@@ -79,6 +80,13 @@ public interface ProxyClubRPCService {
 	 * @return
 	 */
 	CommonResp<Boolean> checkClubName(CheckClubNameParamDTO checkClubNameParamDTO);
+	/**
+	 * 验证代理是否已经创建过俱乐部
+	 * 
+	 * @param paramDTO
+	 * @return
+	 */
+	CommonResp<Boolean> checkClubOwner(CheckClubOwnerParamDTO paramDTO);
     
     
 }

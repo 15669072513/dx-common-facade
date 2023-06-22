@@ -76,6 +76,13 @@ public class DateUtils {
     }
 
     /**
+     * String 时间戳转为 yyyy-MM-dd HH:mm:ss
+     */
+    public static LocalDateTime stringToYMHHMMSS(String time) {
+        return LocalDateTime.parse(time, df);
+    }
+
+    /**
      * 获取月份
      * 入参 yyyyMM
      * 反参 月份

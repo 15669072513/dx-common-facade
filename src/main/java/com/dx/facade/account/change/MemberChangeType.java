@@ -4,10 +4,13 @@ package com.dx.facade.account.change;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * 会员账变类型
+ */
 public enum MemberChangeType implements IChangeType {
     deposit(1, "会员存款", "1"),
     deposit_back(2, "会员存款后台", "1"),
-//    staff_deposit_for_member(3, "代客充值", "2"),
+    //    staff_deposit_for_member(3, "代客充值", "2"),
     agent_deposit_for_member(4, "上级转入", "3"),
     center_to_B(5, "转到B端钱包", "4"),
     B_to_center(6, "转回中心钱包", "4"),
@@ -34,7 +37,7 @@ public enum MemberChangeType implements IChangeType {
     proxy_up_score(25, "代理上分", "12"),
     proxy_down_score(26, "代理下分", "13"),
     bring_to_table(27, "带入牌桌", "14"),
-    bring_out_table(28,"带出牌桌","14"),
+    bring_out_table(28, "带出牌桌", "14"),
     ;
     private Integer code;
     private String desc;
@@ -71,7 +74,7 @@ public enum MemberChangeType implements IChangeType {
         return null;
     }
 
-    public static List<MemberChangeType> getArtificialMemberChangeTypeList(){
+    public static List<MemberChangeType> getArtificialMemberChangeTypeList() {
         return Arrays.asList(MemberChangeType.deposit_back, MemberChangeType.withdraw_back, MemberChangeType.rebate_add,
                 MemberChangeType.rebate_sub, MemberChangeType.activity_add, MemberChangeType.activity_sub,
                 MemberChangeType.other_add, MemberChangeType.other_sub, MemberChangeType.reward_add,

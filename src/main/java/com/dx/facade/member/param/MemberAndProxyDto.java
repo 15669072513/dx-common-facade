@@ -525,6 +525,12 @@ public class MemberAndProxyDto {
     
     @ApiModelProperty("昵称")
     private String nickName;
+    
+    @ApiModelProperty("开局权限（0-关闭 1-开启）")
+    private Integer openLockStatus;
+    
+    @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
+    private Integer manageClubLockStatus;
 	
 	
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
@@ -609,6 +615,10 @@ public class MemberAndProxyDto {
 		result.setCommissionContractList(item.commissionContractList);
 		result.setRebateContractList(item.rebateContractList);
 		result.setIpAttribution(item.getIpAttribution());
+		result.setClubId(item.getClubId());
+		result.setClubName(item.getClubName());
+		result.setOpenLockStatus(item.getOpenLockStatus());
+		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		return result;
 	}
 	

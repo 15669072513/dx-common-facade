@@ -54,6 +54,7 @@ public enum MemberI18nCodeEnum implements I18nEnum {
     LOGIN_PWD_SET_ERROR(300092), // LOGIN_PWD_SET_ERROR(300092, "请输入8-12位，字母+数字组合的密码"),
     OLD_NEW_PASSWORD_ERROR(300012), // OLD_NEW_PASSWORD_ERROR(300012, "新旧密码不能一致，请重新输入"),
     UPDATE_PASSWORD_FAIL(300005), // UPDATE_PASSWORD_FAIL(300005, "修改密码失败！"),
+    UPDATE_LOCK_STATUS_FAIL(300018), //UPDATE_LOCK_STATUS_FAIL(300018, "修改登录、开局、俱乐部管理权限失败！"),
     ACCOUNT_LOCRED(0), // ACCOUNT_LOCRED(0,"该功能已停用，请联系客服"),
 	PROXY_PATH_ERROR(310079), // 层级路径信息缺失
     // 包网

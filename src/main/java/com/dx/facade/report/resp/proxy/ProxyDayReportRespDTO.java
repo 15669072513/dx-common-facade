@@ -152,16 +152,16 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "会员投注盈亏")
     private BigDecimal memberNetAmount;
 
-    @ApiModelProperty(value = "全部下级代理人数")
+    @ApiModelProperty(value = "全部代理人数")
     private Integer underProxyNum;
 
-    @ApiModelProperty(value = "直属下级代理人数")
+    @ApiModelProperty(value = "直属代理人数")
     private Integer directlyUnderProxyNum;
 
-    @ApiModelProperty(value = "全部下级会员人数")
+    @ApiModelProperty(value = "全部会员人数")
     private Integer underMemberNum;
 
-    @ApiModelProperty(value = "直属下级会员人数")
+    @ApiModelProperty(value = "直属会员人数")
     private Integer directlyUnderMemberNum;
 
     @ApiModelProperty(value = "转入会员数")
@@ -192,7 +192,7 @@ public class ProxyDayReportRespDTO implements Serializable {
     private Long proxyToChildDifferAmount;
 
     @ApiModelProperty("给代理上下分次数")
-    @TableField("proxy_be_down_times")
+    @TableField("proxy_to_child_times")
     private Long proxyToChildTimes;
 
     @ApiModelProperty("给代理上下分人数")
@@ -209,10 +209,11 @@ public class ProxyDayReportRespDTO implements Serializable {
 
 
     @ApiModelProperty(value = "佣金转额度钱包总额")
-    private BigDecimal transferAvailableWalletAmount ;
+    private BigDecimal transferQuotaWalletAmount ;
 
+    // TODO dwm_proxy_report_d
     @ApiModelProperty(value = "返点调整")
-    private BigDecimal repairRebatePoint;
+    private BigDecimal rebateAdjustAmount;
 
 
 

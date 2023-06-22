@@ -100,6 +100,9 @@ public interface ExcelHeadI18nKey {
     String FUNDS_被邀请人账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_被邀请人账号"; //
     String FUNDS_注册时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_注册时间"; //
     String FUNDS_注册IP = "EXCEL_HEAD_I18N_KEY.FUNDS_注册IP"; //
+
+    String BET_IP = "EXCEL_HEAD_I18N_KEY.FUNDS_投注IP";
+
     String FUNDS_注册设备号 = "EXCEL_HEAD_I18N_KEY.FUNDS_注册设备号"; //
     String FUNDS_首存时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_首存时间"; //
     String FUNDS_首存金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_首存金额"; //
@@ -429,8 +432,15 @@ public interface ExcelHeadI18nKey {
     String LENGTH_描述说明 = "EXCEL_HEAD_I18N_KEY.LENGTH_描述说明";
     
     String CLUB_ID = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部ID";
+    String TABLE_ID = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌ID";
+
+    String TABLE_NAME = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌名称";
     String CLUB_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部名称";
     String CLUB_ICON = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部头像";
+
+    String HAND_ID = "EXCEL_HEAD_I18N_KEY.HAND_手牌ID";
+
+    String HAND_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_手牌名称";
     String CLUB_INTRODUCTION = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部介绍";
     String CLUB_MEMBER_COUNT = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部会员数量";
     String CLUB_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理账号";
@@ -443,5 +453,5 @@ public interface ExcelHeadI18nKey {
 
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
     /** 俱乐部列表文件名 */
-    String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员列表";
+    String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
 }
