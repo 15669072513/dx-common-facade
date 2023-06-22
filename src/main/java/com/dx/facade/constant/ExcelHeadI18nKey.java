@@ -453,5 +453,5 @@ public interface ExcelHeadI18nKey {
 
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
     /** 俱乐部列表文件名 */
-    String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员列表";
+    String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
 }
