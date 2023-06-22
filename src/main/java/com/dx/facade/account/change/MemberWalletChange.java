@@ -5,7 +5,9 @@ import java.util.List;
 
 import com.dx.facade.account.change.param.Constant;
 
-//会员账变业务
+/**
+ * 会员账变业务 定义
+ */
 public enum MemberWalletChange implements IWalletChange {
     deposit(WalletType.cash, MemberBizType.deposit, MemberChangeType.deposit, MemberAppType.deposit, TransType.income, Constant.MEMBER),
     deposit_add(WalletType.cash, MemberBizType.deposit, MemberChangeType.deposit_back, MemberAppType.deposit, TransType.income, Constant.MEMBER),
@@ -57,6 +59,15 @@ public enum MemberWalletChange implements IWalletChange {
     private TransType transType;
     private String name;
 
+    /**
+     *
+     * @param walletType 钱包类型
+     * @param bizType 会员业务类型
+     * @param changeType 会员账变类型
+     * @param appType 会员客户端账变类型
+     * @param transType 收支类型
+     * @param name 会员name
+     */
     MemberWalletChange(WalletType walletType, MemberBizType bizType, MemberChangeType changeType, MemberAppType appType, TransType transType, String name){
         this.walletType = walletType;
         this.bizType = bizType;
