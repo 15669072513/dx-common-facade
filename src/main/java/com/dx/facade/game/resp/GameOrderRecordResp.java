@@ -16,7 +16,7 @@ public class GameOrderRecordResp implements Serializable {
     * 主键id
     */
    @ApiModelProperty("德信注单id")
-   private Long id;
+   private String id;
    /**
     * 游戏账号
     */
@@ -26,12 +26,12 @@ public class GameOrderRecordResp implements Serializable {
     * 俱乐部id
     */
    @ApiModelProperty("俱乐部id")
-   private Long clubId;
+   private String clubId;
    /**
     * 牌桌id
     */
    @ApiModelProperty("牌桌id")
-   private Long tableId;
+   private String tableId;
    /**
     * 牌桌名称
     */
@@ -46,7 +46,7 @@ public class GameOrderRecordResp implements Serializable {
     * 手牌id
     */
    @ApiModelProperty("手牌id")
-   private Long handId;
+   private String handId;
    /**
     * 投注金额
     */
@@ -71,7 +71,7 @@ public class GameOrderRecordResp implements Serializable {
     * 牌局开始时间
     */
    @ApiModelProperty("投注时间")
-   private Long handBeginDate;
+   private String handBeginDate;
    /**
     *  终端类型
     */
@@ -86,7 +86,7 @@ public class GameOrderRecordResp implements Serializable {
     * 牌局结束时间
     */
    @ApiModelProperty("结算时间")
-   private Long handEndDate;
+   private String handEndDate;
 
    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
    private String venueTypeCode;
