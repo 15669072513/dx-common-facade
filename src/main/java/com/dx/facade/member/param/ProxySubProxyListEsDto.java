@@ -65,4 +65,15 @@ public class ProxySubProxyListEsDto {
 	
 	@ApiModelProperty(value = "代理层级路径(代理账号)")
 	private List<String> proxyPathUsername;
+	
+	@ApiModelProperty(value = "登录权限：0-关闭 1-开启")
+	private Integer loginLockStatus;
+	
+	@ApiModelProperty(value = "开局权限：0-关闭 1-开启")
+	private Integer openLockStatus;
+	
+	@ApiModelProperty(value = "管理俱乐部权限：0-关闭 1-开启")
+	private Integer manageClubLockStatus;
+	
+	
 }

@@ -117,4 +117,12 @@ public interface ProxyRPCService {
      * @throws BizException 全局异常
      */
     CommonResp<Boolean> updateProxyPassWord(UpdatePassWordParamDTO paramDTO) throws BizException;
+    /**
+     *  更新代理登录、开局、俱乐部管理权限
+     * 
+     * @param updateProxyLockStatusParma
+     * @return
+     * @throws Exception 
+     */
+	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
 }

@@ -30,9 +30,12 @@ public class MyContractReqDTO implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     public Long merchantId;
     
-    @ApiModelProperty(value = "签约代理ID",hidden = true)
+    @ApiModelProperty(value = "签约代理ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     public Long signProxyId;
+    
+    @ApiModelProperty(value = "签约代理账号")
+    private String signProxyName;
 
     @ApiModelProperty(value = "生效状态： 1-已生效 2-已失效")
     private Integer effectStatus;
