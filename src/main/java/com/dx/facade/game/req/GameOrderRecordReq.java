@@ -24,15 +24,19 @@ public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("手牌id")
     private String handId;
     @ApiModelProperty("俱乐部id")
-    private String clueId;
+    private String clubId;
     @ApiModelProperty("牌桌id")
     private String tableId;
-    @ApiModelProperty(value = "开始时间", required = true, example = "2021-06-17")
-    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime betStartTime;
+    @ApiModelProperty(value = "投注开始时间 yyyy-MM-dd HH:mm:ss")
+    private String betStartTime;
 
-    @ApiModelProperty(value = "结束时间", required = true, example = "2021-06-17")
-    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
-    private LocalDateTime betEndTime;
+    @ApiModelProperty(value = "投注结束时间 yyyy-MM-dd HH:mm:ss")
+    private String betEndTime;
+
+    @ApiModelProperty(value = "结算开始时间 yyyy-MM-dd HH:mm:ss")
+    private String settlementStartTime;
+
+    @ApiModelProperty(value = "结算结束时间 yyyy-MM-dd HH:mm:ss")
+    private String settlementEndTime;
 
 }
