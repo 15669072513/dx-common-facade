@@ -120,10 +120,11 @@ public class MemberNetAmountRespDTO {
 
     // 会员盈利率=投注盈亏/投注金额
     @ApiModelProperty(value = "会员盈利率")
-    String netRate;
+    private BigDecimal netRate;
 
-    public String getNetRate() {
-        String netRate = netAmount.divide(validBetAmount).setScale(2, RoundingMode.HALF_DOWN).toString();
+    public BigDecimal getNetRate() {
+        BigDecimal netRate = betAmount.multiply(BigDecimal.valueOf(100)).divide(netAmount, 2, RoundingMode.HALF_UP);
         return netRate;
+//        return netRate.toString();
     }
 }
