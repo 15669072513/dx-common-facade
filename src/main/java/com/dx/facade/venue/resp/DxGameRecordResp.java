@@ -75,4 +75,13 @@ public class DxGameRecordResp implements Serializable {
 
     @ApiModelProperty("俱乐部名称")
     private String clubName;
+
+    @ApiModelProperty("最小带入的筹码")
+    private BigDecimal minBringChipScore;
+
+    @ApiModelProperty("最大带入的筹码")
+    private BigDecimal maxBringChipScore;
+
+    @ApiModelProperty("默认带入筹码")
+    private BigDecimal bringChipScore;
 }
