@@ -47,6 +47,16 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("关联俱乐部名称")
     private Long clubName;
 
+    @ApiModelProperty("创建开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime createdStartAt;
+
+    @ApiModelProperty("创建结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime createdEndAt;
+
     @ApiModelProperty("牌桌开始时间-开始")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
