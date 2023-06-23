@@ -33,7 +33,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private String tableName;
 
     @ApiModelProperty("牌桌类型 2001：德州局 2002：短牌局")
-    private Integer tableType;
+    private Long tableType;
 
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
@@ -46,6 +46,16 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("关联俱乐部名称")
     private Long clubName;
+
+    @ApiModelProperty("创建开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime createdStartAt;
+
+    @ApiModelProperty("创建结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime createdEndAt;
 
     @ApiModelProperty("牌桌开始时间-开始")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
