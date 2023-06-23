@@ -8,7 +8,8 @@ import java.util.Objects;
  * 包网货币枚举
  */
 public enum BwCurrencyEnum {
-    CNY("CNY", "人民币", "¥"),
+    //CNY("CNY", "人民币", "¥"),
+    CNY("CNY", "美元", "$"),
     VND("VND", "越南盾", "₫"),
 	THB("THB", "泰铢", "฿"),
 	//USD("USD", "美元", "$"),

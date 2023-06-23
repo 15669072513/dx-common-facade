@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -30,14 +31,17 @@ public class ProxyClubRespDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     /** id */
     @ApiModelProperty("ID")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
     
     /** 商户Id */
     @ApiModelProperty("商户Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
     
     /** 代理Id */
     @ApiModelProperty("代理Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long proxyId;
 
     /** 代理名称 */
