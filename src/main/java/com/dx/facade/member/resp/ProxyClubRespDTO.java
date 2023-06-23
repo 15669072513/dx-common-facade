@@ -3,7 +3,10 @@ package com.dx.facade.member.resp;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -30,14 +33,17 @@ public class ProxyClubRespDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     /** id */
     @ApiModelProperty("ID")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
     
     /** 商户Id */
     @ApiModelProperty("商户Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
     
     /** 代理Id */
     @ApiModelProperty("代理Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long proxyId;
 
     /** 代理名称 */
@@ -96,6 +102,8 @@ public class ProxyClubRespDTO implements Serializable {
 
     /** 创建时间 */
     @ApiModelProperty("创建时间")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime createdAt;
 
     /** 最后操作人 */
@@ -104,6 +112,8 @@ public class ProxyClubRespDTO implements Serializable {
 
     /** 最后操作时间 */
     @ApiModelProperty("最后操作时间")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime updatedAt;
 
 

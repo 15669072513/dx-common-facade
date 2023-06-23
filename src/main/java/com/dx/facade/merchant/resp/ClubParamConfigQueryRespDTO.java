@@ -33,7 +33,7 @@ public class ClubParamConfigQueryRespDTO implements Serializable {
 
     /** 商户id */
     @ApiModelProperty("商户id")
-    private String merchantId;
+    private Long merchantId;
 
     /** 人员上限 */
     @ApiModelProperty(value = "人员上限")

@@ -43,6 +43,9 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
+    @ApiModelProperty("牌桌类型")
+    private Long tableType;
+
     @ApiModelProperty("牌局时长")
     private Integer timeCount;
 
@@ -75,4 +78,19 @@ public class DxGameRecordResp implements Serializable {
 
     @ApiModelProperty("俱乐部名称")
     private String clubName;
+
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
+
+    @ApiModelProperty("最小带入的筹码")
+    private BigDecimal minBringChipScore;
+
+    @ApiModelProperty("最大带入的筹码")
+    private BigDecimal maxBringChipScore;
+
+    @ApiModelProperty("默认带入筹码")
+    private BigDecimal bringChipScore;
 }
