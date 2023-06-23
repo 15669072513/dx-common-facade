@@ -32,7 +32,9 @@ public class LowerMemberListRespDto {
 	
 	@ApiModelProperty("账号")
 	private String userName;
-	
+	@ApiModelProperty("上级代理id")
+	private Long parentProxyId;
+
 	@ApiModelProperty("上级代理账号")
 	private String parentProxyName;
 	
@@ -50,7 +52,7 @@ public class LowerMemberListRespDto {
 	@JsonProperty("withdraw")
 	private BigDecimal totalWithdraw;
 	
-	@ApiModelProperty("余额")
+	@ApiModelProperty("中心钱包余额")
 	private BigDecimal balance;
 	
 	@ApiModelProperty(value="输赢&游戏盈亏")
@@ -74,5 +76,11 @@ public class LowerMemberListRespDto {
 
 	@ApiModelProperty(value = "俱乐部名称")
 	private String clubName;
-	
+	@ApiModelProperty("备注")
+	private String remark;
+	@ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
+	private Integer gameLockStatus;
+	//参与手牌,累计有效投注，创建人
+	@ApiModelProperty("创建人")
+	private String createBy;
 }
