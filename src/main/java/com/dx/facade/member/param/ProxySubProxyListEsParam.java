@@ -30,9 +30,6 @@ public class ProxySubProxyListEsParam {
     @ApiModelProperty(value = "当前登录代理账号 (20)", example = "test000")
     private String curUserName;
 
-    @ApiModelProperty(value = "输入代理账号 (20)", example = "test000")
-    private String userName;
-	
 	@ApiModelProperty(value = "商户id")
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long merchantId;
@@ -46,4 +43,37 @@ public class ProxySubProxyListEsParam {
 	@ApiModelProperty(value = "排序 升序-asc 降序-desc")
 	private String sortType;
 	
+    /** 注册开始时间 */
+    @ApiModelProperty("创建开始时间")
+    private String createdAtStart;
+    
+    /** 注册结束时间 */
+    @ApiModelProperty("创建结束时间")
+    private String createdAtEnd;
+    
+    @ApiModelProperty(value = "输入代理账号 (20)", example = "test000")
+    private String userName;
+    
+	@ApiModelProperty(value = "上级代理账号")
+	private String parentProxyName;
+	
+	@ApiModelProperty(value = "所属等级")
+	private Integer proxyLevel;
+	
+	@ApiModelProperty(value = "登录权限：0-关闭 1-开启")
+	private Integer loginLockStatus;
+	
+	@ApiModelProperty(value = "开局权限：0-关闭 1-开启")
+	private Integer openLockStatus;
+	
+	@ApiModelProperty(value = "管理俱乐部权限：0-关闭 1-开启")
+	private Integer manageClubLockStatus;
+	
+    /** 最近登录开始时间 */
+    @ApiModelProperty("最近登录开始时间")
+    private String lastLoginStart;
+    
+    /** 最近登录结束时间 */
+    @ApiModelProperty("最近登录结束时间")
+    private String lastLoginEnd;
 }
