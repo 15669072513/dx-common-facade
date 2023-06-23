@@ -76,6 +76,12 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
 
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
+
     @ApiModelProperty("最小带入的筹码")
     private BigDecimal minBringChipScore;
 
