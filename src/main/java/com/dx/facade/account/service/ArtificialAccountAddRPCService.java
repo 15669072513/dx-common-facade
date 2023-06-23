@@ -20,44 +20,44 @@ import java.util.List;
 public interface ArtificialAccountAddRPCService {
 
 
-	/**
-	 * 会员人工加额调用方法
-	 * @param dto
-	 * @return
-	 * @throws BizException
-	 * @throws Exception
-	 */
-	@ApiModelProperty("会员人工加额调用方法")
-	CommonResp<Long> createArtificialAccountAdd(CreateArtificialAccountAddParmDTO dto) throws BizException;
+    /**
+     * 会员人工加额调用方法
+     *
+     * @param dto
+     * @return
+     * @throws BizException
+     * @throws Exception
+     */
+    @ApiModelProperty("会员人工加额调用方法")
+    CommonResp<Long> createArtificialAccountAdd(CreateArtificialAccountAddParmDTO dto) throws BizException;
+
+    /**
+     * 会员加额申请记录 分页查询
+     *
+     * @param pageReq 会员(代理)人工加额申请录 查询请求
+     * @param isAuth  是否审核 【兼容审核页面】
+     * @return 会员人工价额申请记录
+     * @throws Exception 异常
+     */
+    @ApiModelProperty("会员(代理)加额申请记录 分页查询")
+    CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddApplyPage(PageReq<ArtificialAccountAddApplyPageParmDTO> pageReq, Boolean isAuth) throws BizException;
 
 
-	/**
-	 * 会员加额申请记录 分页查询
-	 *
-	 * @param pageReq 会员(代理)人工加额申请录 查询请求
-	 * @param isAuth  是否审核 【兼容审核页面】
-	 * @return 会员人工价额申请记录
-	 * @throws Exception 异常
-	 */
-	@ApiModelProperty("会员(代理)加额申请记录 分页查询")
-	CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddApplyPage(PageReq<ArtificialAccountAddApplyPageParmDTO> pageReq, Boolean isAuth) throws BizException;
+    @ApiModelProperty("会员人工加额 锁单-解单操作")
+    CommonResp<Boolean> updateAuditLock(ArtificialAccountAddLockOrderParmDTO req) throws BizException;
 
+    @ApiModelProperty("JAV会员人工加额 查询会员审核详情")
+    CommonResp<ArtificialPatchAccountAddDetailRespDTO> getAccountAddAuditDetail(ArtificialAccountAddDetailParmDTO rpcReqDto) throws BizException;
 
-	@ApiModelProperty("会员人工加额 锁单-解单操作")
-	CommonResp<Boolean> updateAuditLock(ArtificialAccountAddLockOrderParmDTO req) throws BizException;
+    @ApiModelProperty("会员人工加额审核（通过、拒绝）")
+    CommonResp<Integer> artificialAccountAddAudit(ArtificialAccountAddParmDTO rpcReqDto) throws BizException;
 
-	@ApiModelProperty("JAV会员人工加额 查询会员审核详情")
-	CommonResp<ArtificialPatchAccountAddDetailRespDTO> getAccountAddAuditDetail(ArtificialAccountAddDetailParmDTO rpcReqDto) throws BizException;
+    @ApiModelProperty("会员人工加额记录 查询请求")
+    CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddRecordPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq, Boolean isFinish) throws BizException;
 
-	@ApiModelProperty("会员人工加额审核（通过、拒绝）")
-	CommonResp<Integer> artificialAccountAddAudit(ArtificialAccountAddParmDTO rpcReqDto) throws BizException;
+    @ApiModelProperty("会员人工加额记录总计")
+    CommonResp<AdjustAmountTotalRespDTO> selectArtificialAccountAddTotal(ArtificialAccountAddRecordPageParmDTO req, Boolean isFinish) throws BizException;
 
-	@ApiModelProperty("会员人工加额记录 查询请求")
-	CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddRecordPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq, Boolean isFinish) throws BizException;
-
-	@ApiModelProperty("会员人工加额记录总计")
-	CommonResp<AdjustAmountTotalRespDTO> selectArtificialAccountAddTotal(ArtificialAccountAddRecordPageParmDTO req, Boolean isFinish) throws BizException;
-
-	@ApiModelProperty(value="待处理数量")
-	Integer getPendingCount(List<Long> merchantIdLs, Integer userType);
+    @ApiModelProperty(value = "待处理数量")
+    Integer getPendingCount(List<Long> merchantIdLs, Integer userType);
 }

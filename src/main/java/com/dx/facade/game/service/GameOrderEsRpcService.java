@@ -2,16 +2,12 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
-import com.dx.entity.Resp;
 import com.dx.facade.game.dto.game.GameOrderRecordHandUserRespDto;
 import com.dx.facade.game.dto.game.GameOrderRecordUserNetChipSumReqDto;
 import com.dx.facade.game.dto.game.GameOrderUserSettlementRespDto;
 import com.dx.facade.game.dto.game.UserValiBetAmountRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * 玩家注单查询
@@ -55,11 +51,6 @@ public interface GameOrderEsRpcService {
      * 游戏-注单详情
      */
     CommonResp<GameOrderRecordDetailVenueResp> queryGameOrderVenueDetailList(GameOrderRecordDetailVenueReq req);
-
-    /**
-     * 会员盈亏汇总
-     */
-    CommonResp<PageResp<GameOrderRecordUserResp, ?>> userNetChipDetail(GameOrderRecordUserReq req);
 
     /**
      * 综合后台-结算详情
