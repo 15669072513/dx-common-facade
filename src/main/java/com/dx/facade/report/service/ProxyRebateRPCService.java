@@ -13,6 +13,9 @@ import com.dx.facade.report.resp.ReportRebateTotalRespDTO;
 /**
  * @title 返点报表RPC业务接口
  * @description OB旗舰中控后台->报表->业务报表->返点报表
+ * /report/previous-rebate/queryRebateList	ProxyRebateRPCService().queryRebateList(pageReq);
+ * /report/previous-rebate/queryRebateReportTotal	ProxyRebateRPCService().queryRebateReportTotal(reportRebateReqDTO);
+ *
  * @author gollum
  * @version 1.0.0
  * @since 2021年9月18日 上午00:02:38

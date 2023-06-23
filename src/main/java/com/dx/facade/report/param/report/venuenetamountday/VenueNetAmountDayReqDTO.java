@@ -8,6 +8,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -25,4 +27,7 @@ public class VenueNetAmountDayReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty(value = "场馆名称")
     private String gameCode;
+
+    @ApiModelProperty(value = "场馆名称")
+    private List<String> gameCodes;
 }

@@ -15,6 +15,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class WalletRespDTO {
 
+    @ApiModelProperty(value = "会员ID")
+    private Long userId;
+
     @ApiModelProperty(value = "账户类型")
     private Integer walletType;
 

@@ -9,6 +9,10 @@ import com.dx.facade.report.resp.GameNetAmountDetailRespDTO;
 import com.dx.facade.report.resp.GameNetAmountRespDTO;
 import com.dx.facade.report.resp.GameNetAmountSummaryRespDTO;
 
+/**
+ * 游戏盈亏
+ *
+ */
 public interface GameNetAmountRPCService {
 
     /**
