@@ -43,6 +43,9 @@ public class DxGameRecordResp implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
+    @ApiModelProperty("牌桌类型")
+    private Long tableType;
+
     @ApiModelProperty("牌局时长")
     private Integer timeCount;
 
