@@ -159,4 +159,12 @@ public class WalletDetailRespDTO {
     @ApiModelProperty("代理层级路径")
     @TableField("proxy_path")
     private String proxyPath;
+
+    @ApiModelProperty("牌桌ID")
+    @TableField("table_id")
+    private Long tableId;
+
+    @ApiModelProperty("牌桌名称")
+    @TableField("table_name")
+    private String tableName;
 }
