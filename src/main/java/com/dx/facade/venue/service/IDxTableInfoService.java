@@ -4,6 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.venue.dto.DxTableInfoDto;
+import com.dx.facade.venue.dto.DxTableInfoListDto;
 import com.dx.facade.venue.req.DxTableInfoAddReq;
 import com.dx.facade.venue.req.DxTableInfoListReq;
 import com.dx.facade.venue.resp.DxTableBaseInfoResp;
@@ -17,7 +18,7 @@ public interface IDxTableInfoService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<DxTableInfoListResp, Void>> listPage(DxTableInfoListReq req);
+    CommonResp<PageResp<DxTableInfoListDto, Void>> listPage(DxTableInfoListReq req);
 
     CommonResp<TableConfigRuleResp> getTableConfigByTableId(Long tableId);
 

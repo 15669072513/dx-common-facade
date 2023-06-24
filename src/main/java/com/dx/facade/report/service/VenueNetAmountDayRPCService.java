@@ -10,6 +10,10 @@ import com.dx.facade.report.resp.venuenetamountday.*;
 
 import java.util.List;
 
+/**
+ * 场馆盈亏
+ *
+ */
 public interface VenueNetAmountDayRPCService {
 
     /**
