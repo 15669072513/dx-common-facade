@@ -14,4 +14,10 @@ public class GameOrderClubSumReq extends BaseRequest {
     private List<Long> clubIdList;
     @ApiModelProperty("会员id")
     private Long userId;
+    @ApiModelProperty("俱乐部id")
+    private Long clubId;
+    @ApiModelProperty("代理id")
+    private Long proxyId;
+    @ApiModelProperty("手牌id")
+    private List<Long> handIdList;
 }

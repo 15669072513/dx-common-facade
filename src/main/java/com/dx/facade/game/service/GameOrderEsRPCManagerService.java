@@ -6,8 +6,6 @@ import com.dx.facade.game.dto.game.*;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
 
-import java.util.List;
-
 public interface GameOrderEsRPCManagerService {
     /**
      *  综合后台--手牌 金额相关汇总
@@ -33,6 +31,11 @@ public interface GameOrderEsRPCManagerService {
      *  俱乐部贡献
      */
     CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
+
+    /**
+     *  查询手牌id
+     */
+    CommonResp<GameOrderClubContributeDto> gameOrderClubContributeHandIdList(GameOrderClubSumReq req);
 
     /**
      *  会员金额相关汇总
