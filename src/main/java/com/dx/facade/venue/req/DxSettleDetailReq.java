@@ -7,6 +7,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -27,8 +28,14 @@ public class DxSettleDetailReq implements Serializable {
     @ApiModelProperty("手牌ID")
     private Long handId;
 
+    @ApiModelProperty("手牌code")
+    private String handCode;
+
     @ApiModelProperty("会员账号")
     private Long userId;
+
+    @ApiModelProperty("会员账号集合")
+    private List<Long> userIds;
 
     @ApiModelProperty("会员名称")
     private String userName;

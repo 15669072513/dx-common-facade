@@ -1,5 +1,6 @@
 package com.dx.facade.report.resp.report;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,8 +27,12 @@ public class DwdMemberStaticInfoResp {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @ApiModelProperty(value = "会员ID")
     private Long playerId;
+
     @ApiModelProperty("会员账号")
     private String playerName;
+    @ApiModelProperty("会员姓名")
+    private String realName;
+
     @ApiModelProperty("账号类型（1-正式，2-商务，3-置换）")
     private Integer accountType;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -96,6 +101,21 @@ public class DwdMemberStaticInfoResp {
     @ApiModelProperty("转代次数")
     private Long switchProxyCount;
 
+    @ApiModelProperty("代理上分金额")
+    @TableField("proxy_up_amount")
+    private BigDecimal proxyUpAmount;
+
+    @ApiModelProperty("代理上分次数")
+    @TableField("proxy_up_times")
+    private Long proxyUpTimes;
+
+    @ApiModelProperty("代理下分金额")
+    @TableField("proxy_down_amount")
+    private BigDecimal proxyDownAmount;
+
+    @ApiModelProperty("代理下分次数")
+    @TableField("proxy_down_times")
+    private Long proxyDownTimes;
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额
      *
