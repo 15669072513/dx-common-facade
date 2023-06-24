@@ -75,7 +75,7 @@ public class ReportRebateRespDTO  {
     private String cycleEndDate;
 
     /**
-     * 实际返点
+     * 返点人数
      * person_rebate_amount
      */
     @ApiModelProperty(value = "返点人数", example = "1100.00")
