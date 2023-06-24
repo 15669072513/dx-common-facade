@@ -18,7 +18,7 @@ import java.util.List;
  * @since 2023-06-05
  */
 @Data
-public class DxGameConfigSummaryResp implements Serializable {
+public class DxTableSummaryResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
