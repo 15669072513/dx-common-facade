@@ -12,4 +12,6 @@ import java.util.List;
 public class GameOrderClubSumReq extends BaseRequest {
     @ApiModelProperty("俱乐部id")
     private List<Long> clubIdList;
+    @ApiModelProperty("会员id")
+    private Long userId;
 }

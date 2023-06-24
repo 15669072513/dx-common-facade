@@ -3,11 +3,14 @@ package com.dx.facade.venue.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.venue.dto.DxHandPumpInfoDto;
 import com.dx.facade.venue.req.DxHandInfoAddReq;
 import com.dx.facade.venue.req.DxHandInfoListReq;
 import com.dx.facade.venue.resp.DxGameRecordResp;
 import com.dx.facade.venue.resp.DxHandDetailResp;
 import com.dx.facade.venue.resp.DxHandInfoListResp;
+
+import java.util.List;
 
 public interface IDxHandInfoService {
     /**
@@ -44,4 +47,11 @@ public interface IDxHandInfoService {
      * @return
      */
     public CommonResp<DxGameRecordResp> getGameRecordInfoByHandId(Long handId);
+
+    /**
+     * 根据多个handId查询手牌信息
+     * @param handIds
+     * @return
+     */
+    public CommonResp<DxHandPumpInfoDto> getHandInfoByHandIds(List<Long> handIds);
 }

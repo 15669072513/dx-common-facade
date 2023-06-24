@@ -17,7 +17,6 @@ public interface DwdMemberStaticInfoRPCService {
      * @return
      * @throws BizException
      */
-
     CommonResp<PageResp<DwdMemberStaticInfoResp, DwdMemberStaticInfoSummaryResp>> listPage(PlayerDayReportReqDTO reqDTO) throws BizException;
 
     /**

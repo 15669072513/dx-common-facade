@@ -7,10 +7,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.change.param.IBWWalletChangeParm;
 import com.dx.facade.account.change.param.MultipleWalletChangeParmDTO;
 import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
-import com.dx.facade.account.param.AccountSimpleParam;
-import com.dx.facade.account.param.ActivityApplyRecordPageParamDTO;
-import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
-import com.dx.facade.account.param.QueryWalletParam;
+import com.dx.facade.account.param.*;
 import com.dx.facade.account.req.WalletBalanceDTO;
 import com.dx.facade.account.req.WalletBalanceDetailDTO;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
@@ -25,6 +22,14 @@ public interface WalletRPCService {
      * 查询用户的钱包
      */
     List<WalletRespDTO> getWallet(QueryWalletParam param);
+
+    /**
+     * 批量用户查询中心钱包余额
+     *
+     * @param paramList
+     * @return
+     */
+    CommonResp<List<WalletRespDTO>> getCashWalletList(List<QueryCashWalletParam> paramList);
 
     /**
      * 单一钱包账变
@@ -54,6 +59,7 @@ public interface WalletRPCService {
 
     /**
      * 人工调整用户提款流水
+     *
      * @param paramDTO
      */
     void adjustWithdrawWater(AdjustWithdrawWaterParamDTO paramDTO);
@@ -62,21 +68,24 @@ public interface WalletRPCService {
 
     /**
      * 用户钱包余额操作
+     *
      * @param dto 操作参数
      * @throws BizException
      */
-    CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto)throws BizException;
+    CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto) throws BizException;
 
     /**
      * 查询余额明细
+     *
      * @param pageReq
      * @return
      */
-    CommonResp<PageResp<WalletBalanceDetailDTO,String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+    CommonResp<PageResp<WalletBalanceDetailDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
 
     /**
      * 用户钱包余额操作批量兑换
+     *
      * @param balanceDTOS
      * @return
      */

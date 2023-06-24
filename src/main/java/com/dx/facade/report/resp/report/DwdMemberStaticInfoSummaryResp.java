@@ -1,5 +1,6 @@
 package com.dx.facade.report.resp.report;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -111,6 +112,48 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("佣金转回THB")
     private BigDecimal proxyTransferInnerAmountTHB = BigDecimal.ZERO;
 
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount;
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal netAmount;
+    @ApiModelProperty("返水金额")
+    private BigDecimal returnWaterAmount;
+    @ApiModelProperty("优惠总额")
+    private BigDecimal discountAmount;
+    @ApiModelProperty("其他调整")
+    private BigDecimal otherAdjustAmount;
+    @ApiModelProperty("净盈亏")
+    private BigDecimal netProfit;
+
+    @ApiModelProperty("转代次数")
+    private Long switchProxyCount;
+    @ApiModelProperty("代理上分金额")
+    @TableField("proxy_up_amount")
+    private BigDecimal proxyUpAmount;
+
+    @ApiModelProperty("代理上分次数")
+    @TableField("proxy_up_times")
+    private Long proxyUpTimes;
+
+    @ApiModelProperty("代理下分金额")
+    @TableField("proxy_down_amount")
+    private BigDecimal proxyDownAmount;
+
+    @ApiModelProperty("代理下分次数")
+    @TableField("proxy_down_times")
+    private Long proxyDownTimes;
+
+    /**
+     * 净盈亏 = 投注盈亏+返水盈亏+优惠金额+其他金额
+     *
+     * @return
+     */
+    @ApiModelProperty("净盈亏")
+    public BigDecimal getNetProfit() {
+        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+    }
 
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY

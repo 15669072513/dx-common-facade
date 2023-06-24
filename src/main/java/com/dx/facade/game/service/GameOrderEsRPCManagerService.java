@@ -1,8 +1,12 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.facade.game.dto.game.*;
 import com.dx.facade.game.req.*;
+import com.dx.facade.game.resp.GameOrderClubSumResp;
+
+import java.util.List;
 
 public interface GameOrderEsRPCManagerService {
     /**
@@ -24,6 +28,11 @@ public interface GameOrderEsRPCManagerService {
      * 综合后天-俱乐部 金额相关汇总
      */
     CommonResp<GameOrderClubSumRespDto> gameOrderClubSumList(GameOrderClubSumReq req);
+
+    /**
+     *  俱乐部贡献
+     */
+    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
 
     /**
      *  会员金额相关汇总

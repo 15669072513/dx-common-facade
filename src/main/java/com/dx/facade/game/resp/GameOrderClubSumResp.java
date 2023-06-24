@@ -19,4 +19,6 @@ public class GameOrderClubSumResp {
     private BigDecimal netAmount;
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
+    @ApiModelProperty("累计抽水总额")
+    private BigDecimal pumpingAmount;
 }

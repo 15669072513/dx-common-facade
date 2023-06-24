@@ -29,6 +29,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("房主ID")
     private Long holderId;
 
+    @ApiModelProperty("房主名称")
+    private String holderName;
+
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
