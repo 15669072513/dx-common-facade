@@ -1,5 +1,7 @@
 package com.dx.facade.member.service;
 
+import java.util.List;
+
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
@@ -22,4 +24,12 @@ public interface UserRemarkRPCService {
      * @return
      */
     CommonResp addUserRemark(AddUserRemarkParamDTO paramDTO);
+    
+    /**
+     * 根据userId和操作人查询用户最新的备注
+     * 
+     * @param pageReq
+     * @return
+     */
+    CommonResp<UserRemarkRespDTO> queryUserLastRemark(UserRemarkListParamDTO paramDTO);
 }
