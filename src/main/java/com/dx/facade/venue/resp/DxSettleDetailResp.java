@@ -37,6 +37,9 @@ public class DxSettleDetailResp implements Serializable {
     @ApiModelProperty("手牌ID")
     private Long handId;
 
+    @ApiModelProperty("手牌code")
+    private String handCode;
+
     @ApiModelProperty("会员账号")
     private Long userId;
 
