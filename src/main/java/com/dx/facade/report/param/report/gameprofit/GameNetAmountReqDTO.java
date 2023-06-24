@@ -35,15 +35,15 @@ public class GameNetAmountReqDTO extends LocalDatePageRequest {
     private Integer dataAreaType;
 
     // TODO 修改查询条件
-    @ApiModelProperty(value = "场馆code", example = "zr")
-    private List<String> gameCodes;
+    @ApiModelProperty(value = "游戏 ID", example = "zr")
+    private List<String> gameTypeIds;
 
     @ApiModelProperty(
             value = "排序列名，merchantId",
             example = "merchantId"
     )
-
     private String orderKey;
+    
     @ApiModelProperty(
             value = "排序方式(1)：desc-降序 asc-升序",
             example = "asc"
