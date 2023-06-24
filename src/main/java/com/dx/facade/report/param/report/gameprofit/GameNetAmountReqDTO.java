@@ -23,13 +23,34 @@ public class GameNetAmountReqDTO extends LocalDatePageRequest {
     @ApiModelProperty("商户Id")
     private String merchantId;
 
+    @Deprecated
     @ApiModelProperty(value = "场馆code", example = "zr")
     private String gameCode;
 
+    @Deprecated
     @ApiModelProperty(value = "游戏名称", example = "炸金花")
     private String gameTypeName;
 
     @ApiModelProperty(value = "查询范围 1:查询全部（包含子孙） 0:只查询自身", hidden = true)
     private Integer dataAreaType;
 
+    // TODO 修改查询条件
+    @ApiModelProperty(value = "场馆code", example = "zr")
+    private List<String> gameCodes;
+
+    @ApiModelProperty(value = "游戏名称", example = "炸金花")
+    private List<String> gameTypeNames;
+
+
+    @ApiModelProperty(
+            value = "排序列名，merchantId",
+            example = "merchantId"
+    )
+
+    private String orderKey;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
 }

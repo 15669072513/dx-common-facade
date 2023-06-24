@@ -21,13 +21,37 @@ public class VenueNetAmountDayReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty("商户Id")
     private String merchantId;
-
+    @Deprecated
     @ApiModelProperty("场馆类型")
     private String venueType;
 
+
+    @Deprecated
     @ApiModelProperty(value = "场馆名称")
     private String gameCode;
 
+    // TODO 修改查询条件
+    @ApiModelProperty(value = "场馆类型")
+    private List<String> venueTypes;
+
+    /**
+     * gameCode 既 venue_code
+     */
     @ApiModelProperty(value = "场馆名称")
-    private List<String> gameCodes;
+    private List<String> venueCodes;
+
+
+    @ApiModelProperty(
+            value = "排序列名，merchantId",
+            example = "merchantId"
+    )
+
+    private String orderKey;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
+
+
 }
