@@ -3,7 +3,7 @@ package com.dx.facade.venue.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.venue.dto.DxGameConfigListDto;
+import com.dx.facade.venue.resp.DxGameConfigSummaryResp;
 import com.dx.facade.venue.req.DxGameConfigAddReq;
 import com.dx.facade.venue.req.DxGameConfigEditReq;
 import com.dx.facade.venue.req.DxGameConfigListReq;
@@ -14,7 +14,7 @@ import java.util.List;
 public interface IDxGameConfigService {
     CommonResp<PageResp<DxGameConfigListResp, Void>> listPage(DxGameConfigListReq dxGameConfigReq);
 
-    CommonResp<DxGameConfigListDto> getAllGames();
+    CommonResp<DxGameConfigSummaryResp> getAllGames();
 
     CommonResp<DxGameConfigListResp> getGameById(Long gameTypeId);
 

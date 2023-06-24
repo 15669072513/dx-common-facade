@@ -1,11 +1,12 @@
-package com.dx.facade.venue.dto;
+package com.dx.facade.venue.resp;
 
-import com.dx.facade.venue.resp.DxTableInfoListResp;
+import com.dx.facade.venue.resp.DxGameConfigListResp;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -13,22 +14,17 @@ import java.util.List;
  *
  * </p>
  *
- * @author dereck
- * @since 2022-10-13
+ * @author broadway
+ * @since 2023-06-05
  */
 @Data
-public class DxTableInfoListDto implements Serializable {
+public class DxGameConfigSummaryResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
 
     @ApiModelProperty("总牌桌抽水")
     private BigDecimal pumpAmountSum;
 
     @ApiModelProperty("总牌桌费用")
     private BigDecimal costSum;
-
-    @ApiModelProperty("牌桌集合")
-    private List<DxTableInfoListResp> tableInfoListRespList;
-
 }
