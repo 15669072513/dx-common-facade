@@ -37,7 +37,7 @@ public class WalletBalanceDTO implements BaseParmDTO {
     private Integer userType;
 
     @ApiModelProperty("牌桌ID")
-    private Integer tableId;
+    private Long tableId;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;
