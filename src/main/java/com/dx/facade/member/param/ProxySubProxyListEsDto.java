@@ -80,6 +80,9 @@ public class ProxySubProxyListEsDto {
 	@ApiModelProperty(value = "俱乐部数量")
 	private Integer clubCount;
 	
+	@ApiModelProperty(value = "俱乐部人数")
+	private Integer clubMemberCount;
+	
     @ApiModelProperty("佣金钱包余额")
     private BigDecimal commissionBalance;
 
