@@ -1,7 +1,7 @@
 package com.dx.facade.security.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.facade.security.dto.SecurityKeyInfoDTO;
+import com.dx.facade.security.dto.KeyInfoDTO;
 import com.dx.facade.security.req.SecurityKeyReq;
 
 public interface SecurityKeyRPCService {
@@ -12,5 +12,5 @@ public interface SecurityKeyRPCService {
    * @param req
    * @return
    */
-  CommonResp<SecurityKeyInfoDTO> getKeyByParams(SecurityKeyReq req) throws Exception;
+  CommonResp<KeyInfoDTO> getKeyByParams(SecurityKeyReq req) throws Exception;
 }
