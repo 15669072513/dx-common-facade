@@ -78,6 +78,12 @@ public class ReportRebateRespDTO  {
      * 实际返点
      * person_rebate_amount
      */
+    @ApiModelProperty(value = "返点人数", example = "1100.00")
+    private Integer rebateNumber;
+    /**
+     * 实际返点
+     * person_rebate_amount
+     */
     @ApiModelProperty(value = "返点金额", example = "1100.00")
     private BigDecimal personRebateAmount;
 
