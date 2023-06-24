@@ -34,12 +34,6 @@ public class VenueNetAmountDayReqDTO extends LocalDatePageRequest {
     @ApiModelProperty(value = "场馆类型")
     private List<String> venueTypes;
 
-    /**
-     * gameCode 既 venue_code
-     */
-    @ApiModelProperty(value = "场馆名称")
-    private List<String> venueCodes;
-
 
     @ApiModelProperty(
             value = "排序列名，merchantId",

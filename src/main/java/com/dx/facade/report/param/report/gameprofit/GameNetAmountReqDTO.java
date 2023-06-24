@@ -38,10 +38,6 @@ public class GameNetAmountReqDTO extends LocalDatePageRequest {
     @ApiModelProperty(value = "场馆code", example = "zr")
     private List<String> gameCodes;
 
-    @ApiModelProperty(value = "游戏名称", example = "炸金花")
-    private List<String> gameTypeNames;
-
-
     @ApiModelProperty(
             value = "排序列名，merchantId",
             example = "merchantId"
