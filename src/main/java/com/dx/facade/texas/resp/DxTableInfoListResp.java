@@ -110,6 +110,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
 
+    @ApiModelProperty("会员带入次数")
+    private Integer userBringCount;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
 
