@@ -74,6 +74,7 @@ public enum ProxyWalletChange implements IWalletChange {
     proxy_to_mem_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_mem_down_score, ProxyAppType.proxy_to_mem_down_score, TransType.income),
 
     commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.outlay),
+    commission_be_transfer_to_quota(WalletType.quota, ProxyBizType.commission_to_quota, ProxyChangeType.commission_be_transfer_to_quota, ProxyAppType.commission_be_transfer_to_quota, TransType.income),
 
     commission_rebate_adjustment_add(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.income),
     commission_rebate_adjustment_sub(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.outlay),
