@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * 会员列表》会员统计》全量统计
@@ -115,6 +116,12 @@ public class DwdMemberStaticInfoResp {
      * @return
      */
     public BigDecimal getNetProfit() {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(returnWaterAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(otherAdjustAmount)) {
+            return null;
+        }
         return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
     }
 
