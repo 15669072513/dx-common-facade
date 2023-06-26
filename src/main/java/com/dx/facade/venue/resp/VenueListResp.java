@@ -1,14 +1,13 @@
 package com.dx.facade.venue.resp;
 
-import com.dx.facade.venue.dto.DxConfigVenuePO;
-
+import com.dx.facade.venue.dto.ConfigVenuePO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString(callSuper = true)
-public class VenueListResp extends DxConfigVenuePO {
+public class VenueListResp extends ConfigVenuePO {
 
     //额外的属性
     @ApiModelProperty("含游戏（总）")
