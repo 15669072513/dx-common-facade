@@ -5,6 +5,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.facade.account.req.ProxyTransferInnerRecordRpcPageReqDto;
+import com.dx.facade.account.req.ProxyTransferReqDTO;
 import com.dx.facade.account.resp.CountDto;
 import com.dx.facade.account.resp.ProxyTransferInnerRecordRpcPageRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
@@ -50,4 +51,5 @@ public interface ProxyTransferInnerRecordRPCService {
 
 	CommonResp<PageResp<ProxyTransferInnerRecordRpcPageRespDTO, CountDto>> getProxyTransferInnerRecordPage(PageReq<ProxyTransferInnerRecordRpcPageReqDto> params) throws Exception;
 
+	void saveProxyTransferInnerOrdersByProxyTransfer(ProxyTransferReqDTO proxyTransferInnerDto, ProxyInfoRespDTO proxyPo, ProxyTransferInnerRecord record);
 }
