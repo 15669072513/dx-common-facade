@@ -1,17 +1,18 @@
 package com.dx.facade.account.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.entity.PageReq;
-import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.change.param.IBWWalletChangeParm;
 import com.dx.facade.account.change.param.MultipleWalletChangeParmDTO;
 import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
-import com.dx.facade.account.param.*;
+import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
+import com.dx.facade.account.param.QueryCashWalletParam;
+import com.dx.facade.account.param.QueryWalletParam;
 import com.dx.facade.account.req.WalletBalanceDTO;
-import com.dx.facade.account.req.WalletBalanceDetailDTO;
-import com.dx.facade.account.req.WalletBalanceDetailReq;
-import com.dx.facade.account.resp.*;
+import com.dx.facade.account.resp.MerchantCenterWalletSumRespDTO;
+import com.dx.facade.account.resp.StillBillAmountRespDTO;
+import com.dx.facade.account.resp.WalletRespDTO;
+import com.dx.facade.account.resp.WalletSimpleParam;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -67,7 +68,7 @@ public interface WalletRPCService {
     BigDecimal getTodayNetAmount(WalletSimpleParam param);
 
     /**
-     * 用户钱包余额操作
+     * 用户钱包余额操作-筹码兑换
      *
      * @param dto 操作参数
      * @throws BizException
@@ -75,19 +76,10 @@ public interface WalletRPCService {
     CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto) throws BizException;
 
     /**
-     * 查询余额明细
-     *
-     * @param pageReq
-     * @return
-     */
-    CommonResp<PageResp<WalletBalanceDetailDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
-
-
-    /**
      * 用户钱包余额操作批量兑换
      *
      * @param balanceDTOS
      * @return
      */
-    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS);
+    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
 }
