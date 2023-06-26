@@ -39,6 +39,7 @@ public class OrderNoUtils {
 		PROXY_TRANSFER("PZ", "代理转账订单号"),
 		PROXY_VALET_DEPOSIT("PD", "代理代存订单号"),
 		BACK_CENTER("PT", "转回中心钱包订单号"),
+		BACK_QUOTA("PT", "转回余额钱包订单号"),
 		PROXY_COMMISSION("PY", "佣金收付订单号"),
 		PROXY_TOP_COMMISSION("PY", "总代佣金订单号"),
 		PROXY_UN_TOP_COMMISSION("PY", "非总代佣金订单号"),
