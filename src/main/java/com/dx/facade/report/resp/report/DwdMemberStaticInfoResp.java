@@ -115,6 +115,10 @@ public class DwdMemberStaticInfoResp {
      * @return
      */
     public BigDecimal getNetProfit() {
+        netAmount=netAmount==null?BigDecimal.ZERO:netAmount;
+        returnWaterAmount=returnWaterAmount==null?BigDecimal.ZERO:returnWaterAmount;
+        discountAmount=discountAmount==null?BigDecimal.ZERO:discountAmount;
+        otherAdjustAmount=otherAdjustAmount==null?BigDecimal.ZERO:otherAdjustAmount;
         return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
     }
 
