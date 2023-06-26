@@ -20,7 +20,9 @@ import java.util.List;
 @NoArgsConstructor
 public class ProxyContractRespDTO implements Serializable {
 
-    @ApiModelProperty(value = "契约id")
+	private static final long serialVersionUID = -4045584080487816420L;
+
+	@ApiModelProperty(value = "契约id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id ;
 
@@ -42,6 +44,10 @@ public class ProxyContractRespDTO implements Serializable {
     @ApiModelProperty(value = "签约时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime signDt;
+    
+    @ApiModelProperty(value = "失效时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime lostEffectDt;
 
     @ApiModelProperty(value = "契约制定时间")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
