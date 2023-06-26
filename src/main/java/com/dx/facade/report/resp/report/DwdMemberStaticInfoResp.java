@@ -115,15 +115,15 @@ public class DwdMemberStaticInfoResp {
      *
      * @return
      */
-    public BigDecimal getNetProfit() {
-        if (Objects.isNull(netAmount)
-                || Objects.isNull(returnWaterAmount)
-                || Objects.isNull(discountAmount)
-                || Objects.isNull(otherAdjustAmount)) {
-            return null;
-        }
-        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
-    }
+//    public BigDecimal getNetProfit() {
+//        if (Objects.isNull(netAmount)
+//                || Objects.isNull(returnWaterAmount)
+//                || Objects.isNull(discountAmount)
+//                || Objects.isNull(otherAdjustAmount)) {
+//            return null;
+//        }
+//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+//    }
 
 
 
