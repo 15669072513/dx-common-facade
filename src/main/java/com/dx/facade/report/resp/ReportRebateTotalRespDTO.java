@@ -11,14 +11,14 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
+ * @author gollum
+ * @version 1.0.0
  * @title 返点报表查询接口响应数据传输对象
  * @desc
  * @dbType mysql
  * @dbTable ob_player.ob_proxy_rebate_d
- * @author gollum
- * @version 1.0.0
  * @since 2021年09月25日 09:29:39
-*/
+ */
 @Data
 @Builder
 @NoArgsConstructor
@@ -34,5 +34,31 @@ public class ReportRebateTotalRespDTO implements Serializable {
 
     @ApiModelProperty(value = "返点金额(THB)", required = true, example = "2343")
     private BigDecimal personRebateAmountInTHB;
+
+    /**
+     * 返点人数
+     * person_rebate_amount
+     */
+    @ApiModelProperty(value = "返点人数", example = "1100.00")
+    private Integer rebateNumber = 0;
+
+    /**
+     * 实际返点
+     * person_rebate_amount
+     */
+    @ApiModelProperty(value = "返点金额", example = "1100.00")
+    private BigDecimal personRebateAmount = BigDecimal.ZERO;
+
+    /**
+     * 返点发放，表中无对应字段，需计算，依据payout_status
+     */
+    @ApiModelProperty(value = "返点发放", example = "100.00")
+    private BigDecimal distributeOfRebate = BigDecimal.ZERO;
+
+    /**
+     * 返点调整，表中无对应字段，需计算
+     */
+    @ApiModelProperty(value = "返点调整", example = "500")
+    private BigDecimal adjustOfRebate = BigDecimal.ZERO;
 
 }

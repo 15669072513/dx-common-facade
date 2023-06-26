@@ -24,7 +24,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel("返点报表查询接口响应数据传输对象")
-public class ReportRebateRespDTO  {
+public class ReportRebateRespDTO {
     @ApiModelProperty(value = "代理id")
     private String proxyId;
 
@@ -79,24 +79,24 @@ public class ReportRebateRespDTO  {
      * person_rebate_amount
      */
     @ApiModelProperty(value = "返点人数", example = "1100.00")
-    private Integer rebateNumber;
+    private Integer rebateNumber = 0;
 
     /**
      * 实际返点
      * person_rebate_amount
      */
     @ApiModelProperty(value = "返点金额", example = "1100.00")
-    private BigDecimal personRebateAmount;
+    private BigDecimal personRebateAmount = BigDecimal.ZERO;
 
     /**
      * 返点发放，表中无对应字段，需计算，依据payout_status
      */
     @ApiModelProperty(value = "返点发放", example = "100.00")
-    private BigDecimal distributeOfRebate;
+    private BigDecimal distributeOfRebate = BigDecimal.ZERO;
 
     /**
      * 返点调整，表中无对应字段，需计算
      */
     @ApiModelProperty(value = "返点调整", example = "500")
-    private BigDecimal adjustOfRebate;
+    private BigDecimal adjustOfRebate = BigDecimal.ZERO;
 }
