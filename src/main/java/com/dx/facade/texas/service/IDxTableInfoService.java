@@ -13,6 +13,7 @@ import com.dx.facade.venue.resp.TableConfigRuleResp;
 import com.dx.facade.venue.resp.TableCountResp;
 
 public interface IDxTableInfoService {
+
     /**
      * 根据条件查询牌桌列表信息
      * @param req
