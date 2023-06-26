@@ -9,8 +9,8 @@ import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.DxTableBaseInfoResp;
 import com.dx.facade.texas.resp.DxTableInfoListResp;
 import com.dx.facade.texas.resp.DxTableSummaryResp;
-import com.dx.facade.venue.resp.TableConfigRuleResp;
-import com.dx.facade.venue.resp.TableCountResp;
+import com.dx.facade.texas.resp.DxTableConfigRuleResp;
+import com.dx.facade.texas.resp.DxTableCountResp;
 
 public interface IDxTableInfoService {
 
@@ -21,7 +21,7 @@ public interface IDxTableInfoService {
      */
     CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPage(DxTableInfoListReq req);
 
-    CommonResp<TableConfigRuleResp> getTableConfigByTableId(Long tableId);
+    CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
     /**
      * 新增牌桌
@@ -42,7 +42,7 @@ public interface IDxTableInfoService {
      * @param clubId
      * @return
      */
-    CommonResp<TableCountResp> getTableCountByClubId(Long clubId);
+    CommonResp<DxTableCountResp> getTableCountByClubId(Long clubId);
 
     /**
      * 游戏牌桌解散（综合后台强制解散）
