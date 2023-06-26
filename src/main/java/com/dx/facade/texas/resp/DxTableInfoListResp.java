@@ -1,5 +1,7 @@
 package com.dx.facade.texas.resp;
 
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -87,9 +89,11 @@ public class DxTableInfoListResp implements Serializable {
     private Integer participantTotal;
 
     @ApiModelProperty("牌桌开始时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime tableEndTime;
 
     @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
@@ -114,12 +118,14 @@ public class DxTableInfoListResp implements Serializable {
     private Integer userBringCount;
 
     @ApiModelProperty("创建时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime updatedAt;
 
     @ApiModelProperty("修改人")

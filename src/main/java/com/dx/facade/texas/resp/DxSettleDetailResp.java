@@ -1,6 +1,8 @@
 package com.dx.facade.texas.resp;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -53,12 +55,14 @@ public class DxSettleDetailResp implements Serializable {
     private Long totalBring;
 
     @ApiModelProperty("创建时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime updatedAt;
 
     @ApiModelProperty("修改人")

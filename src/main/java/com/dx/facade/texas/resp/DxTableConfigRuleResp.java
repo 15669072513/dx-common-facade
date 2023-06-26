@@ -1,5 +1,7 @@
 package com.dx.facade.texas.resp;
 
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -107,16 +109,20 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
+
     @ApiModelProperty("创建时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("牌桌开始时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime tableEndTime;
 
     @ApiModelProperty("手牌数")
