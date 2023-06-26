@@ -73,7 +73,7 @@ public class DwdMemberStaticInfoResp {
     @ApiModelProperty("取款次数")
     private Integer withdrawTimes;
     @ApiModelProperty("存取差")
-    private BigDecimal depositWithdrawDifferAmount;
+    private BigDecimal depositWithdrawDifferAmount= BigDecimal.ZERO;
     @ApiModelProperty("注单量")
     private Long betCount = 0L;
     @ApiModelProperty("投注金额")
