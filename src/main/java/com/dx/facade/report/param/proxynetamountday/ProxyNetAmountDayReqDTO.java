@@ -19,19 +19,33 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ProxyNetAmountDayReqDTO {
 
-    /** proxyId */
+    /**
+     * proxyId
+     */
     @ApiModelProperty(value = "代理ID", example = "100001", required = true)
     private Long proxyId;
 
-    /** String */
+    /**
+     * proxyId
+     */
+    @ApiModelProperty(value = "上级代理ID", example = "100001", required = true)
+    private Long parentProxyId;
+
+    /**
+     * String
+     */
     @ApiModelProperty(value = "代理名称", example = "test", required = true)
     private String proxyName;
 
-    /** startDate */
+    /**
+     * startDate
+     */
     @ApiModelProperty(value = "开始日期", required = true, example = "20210601")
     private Integer startDate;
 
-    /** endDate */
+    /**
+     * endDate
+     */
     @ApiModelProperty(value = "结束日期", required = true, example = "20210631")
     private Integer endDate;
 
