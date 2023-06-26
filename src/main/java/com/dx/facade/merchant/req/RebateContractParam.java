@@ -17,11 +17,11 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class RebateContractParam {
 
-    @ApiModelProperty(value = "id ",hidden = true)
+    @ApiModelProperty(value = "id ")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     public Long id;
 
-    @ApiModelProperty(value = "契约或模板ID",hidden = true)
+    @ApiModelProperty(value = "契约或模板ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     public Long contractId;
 
