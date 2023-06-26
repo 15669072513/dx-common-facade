@@ -30,7 +30,7 @@ public class VenueEditReq {
     private String venueIconUrlApp;
 
     @ApiModelProperty("场馆图标(pc)")
-    @NotBlank
+//    @NotBlank
     private String venueIconUrlPc;
 
     @ApiModelProperty("场馆切换图标(app,h5)")
