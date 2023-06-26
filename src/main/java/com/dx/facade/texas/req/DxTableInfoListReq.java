@@ -9,6 +9,7 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * <p>
@@ -78,5 +79,5 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private LocalDateTime tableEndTimeTo;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
-    private Integer status;
+    private List<Integer> status;
 }
