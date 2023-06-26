@@ -22,9 +22,12 @@ import java.util.List;
  * @version 1.0.0
  * @since 2021年9月17日 下午4:39:44
  *
- *   报表
+ *   日报表
  *  queryProxyNetAmountDayBackList(proxyDayNetAmountReqDTO);
  *  queryProxyNetAmountDayBackTotal(reqDTO);
+ *   月
+ *  queryProxyNetAmountMonthList
+ *  queryProxyNetAmountMonthTotal
  */
 public interface ProxyNetAmountRPCService {
 

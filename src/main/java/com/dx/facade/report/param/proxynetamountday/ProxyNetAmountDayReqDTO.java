@@ -34,4 +34,6 @@ public class ProxyNetAmountDayReqDTO {
     /** endDate */
     @ApiModelProperty(value = "结束日期", required = true, example = "20210631")
     private Integer endDate;
+
+
 }
