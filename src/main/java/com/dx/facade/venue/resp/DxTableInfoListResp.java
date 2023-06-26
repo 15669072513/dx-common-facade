@@ -124,4 +124,10 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("游戏名称")
+    private String gameTypeName;
+
+
+
 }
