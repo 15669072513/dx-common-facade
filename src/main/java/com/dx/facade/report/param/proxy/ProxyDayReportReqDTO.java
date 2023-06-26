@@ -73,11 +73,8 @@ public class ProxyDayReportReqDTO implements MultiplyMerchantAble, Serializable 
     @Range(min = 0, max = 9999999999L, message = "累计返佣必须 ≥ 0 并且 ≤ 9999999999")
     private Long giveBackMax;
 
-    @ApiModelProperty(value = "排序列: 1-注册时间,2-总存款,3-存款次数,4-总取款,5-取款次数,6-大额取款次数,7-存取差,8-累计返佣,9-累计返点,10-代存会员总额,11-代存会员人数,12-代存会员次数," +
-            "13-代理转账总额,14-代理转账人数,15-代理转账次数,16-转入中心钱包总额,17-转入中心钱包次数,18-总优惠,19-佣金调整,20-返点调整," +
-            "21-其他调整,22-佣金钱包余额,23-额度钱包余额,24-全部代理人数,25-直属代理人数,26-全部会员人数,27-直属会员人数,28-会员首存人数,29-会员首存总额,30-会员总存款," +
-            "31-会员总取款,32-会员存取差,33-转入会员人数,34-转出会员人数")
-    private Integer orderKey;
+    @ApiModelProperty()
+    private String orderKey;
 
     @ApiModelProperty(value = "排序方式：升序：asc/降序：desc", example = "desc")
     private String orderType = "DESC";

@@ -11,6 +11,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Objects;
 
 /**
  * 会员列表》会员统计》全量统计
@@ -61,66 +62,68 @@ public class DwdMemberStaticInfoResp {
     @ApiModelProperty("币种")
     private String currency;
     @ApiModelProperty("首存金额")
-    private BigDecimal firstDepositAmount;
+    private BigDecimal firstDepositAmount= BigDecimal.ZERO;
     @ApiModelProperty("首存时间")
     private String firstDepositTime;
     @ApiModelProperty("总存款")
-    private BigDecimal depositAmount;
+    private BigDecimal depositAmount= BigDecimal.ZERO;
     @ApiModelProperty("存款次数")
     private Integer depositTimes;
     @ApiModelProperty("总取款")
-    private BigDecimal withdrawAmount;
+    private BigDecimal withdrawAmount= BigDecimal.ZERO;
     @ApiModelProperty("取款次数")
     private Integer withdrawTimes;
     @ApiModelProperty("存取差")
-    private BigDecimal depositWithdrawDifferAmount;
+    private BigDecimal depositWithdrawDifferAmount= BigDecimal.ZERO;
     @ApiModelProperty("注单量")
-    private Long betCount;
+    private Long betCount = 0L;
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount= BigDecimal.ZERO;
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount= BigDecimal.ZERO;
     @ApiModelProperty("投注盈亏")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount= BigDecimal.ZERO;
     @ApiModelProperty("返水金额")
-    private BigDecimal returnWaterAmount;
+    private BigDecimal returnWaterAmount= BigDecimal.ZERO;
     @ApiModelProperty("优惠总额")
-    private BigDecimal discountAmount;
+    private BigDecimal discountAmount= BigDecimal.ZERO;
     @ApiModelProperty("其他调整")
-    private BigDecimal otherAdjustAmount;
+    private BigDecimal otherAdjustAmount= BigDecimal.ZERO;
     @ApiModelProperty("净盈亏")
-    private BigDecimal netProfit;
+    private BigDecimal netProfit= BigDecimal.ZERO;
     @ApiModelProperty("上级转入")
-    private BigDecimal proxyAssistDepositAmount;
+    private BigDecimal proxyAssistDepositAmount= BigDecimal.ZERO;
     @ApiModelProperty("转入次数")
-    private Long proxyAssistDepositTimes;
+    private Long proxyAssistDepositTimes= 0L;
     @ApiModelProperty("佣金转回")
-    private BigDecimal proxyTransferInnerAmount;
+    private BigDecimal proxyTransferInnerAmount= BigDecimal.ZERO;
     @ApiModelProperty("转回次数")
-    private Long proxyTransferInnerTimes;
+    private Long proxyTransferInnerTimes= 0L;
     @ApiModelProperty("转代次数")
-    private Long switchProxyCount;
+    private Long switchProxyCount= 0L;
 
     @ApiModelProperty("代理上分金额")
-    private BigDecimal proxyUpAmount;
+    private BigDecimal proxyUpAmount= BigDecimal.ZERO;
     @ApiModelProperty("代理上分次数")
-    private Long proxyUpTimes;
+    private Long proxyUpTimes= 0L;
     @ApiModelProperty("代理下分金额")
-    private BigDecimal proxyDownAmount;
+    private BigDecimal proxyDownAmount= BigDecimal.ZERO;
     @ApiModelProperty("代理下分次数")
-    private Long proxyDownTimes;
+    private Long proxyDownTimes= 0L;
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额
      *
      * @return
      */
-    public BigDecimal getNetProfit() {
-        netAmount=netAmount==null?BigDecimal.ZERO:netAmount;
-        returnWaterAmount=returnWaterAmount==null?BigDecimal.ZERO:returnWaterAmount;
-        discountAmount=discountAmount==null?BigDecimal.ZERO:discountAmount;
-        otherAdjustAmount=otherAdjustAmount==null?BigDecimal.ZERO:otherAdjustAmount;
-        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
-    }
+//    public BigDecimal getNetProfit() {
+//        if (Objects.isNull(netAmount)
+//                || Objects.isNull(returnWaterAmount)
+//                || Objects.isNull(discountAmount)
+//                || Objects.isNull(otherAdjustAmount)) {
+//            return null;
+//        }
+//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+//    }
 
 
 

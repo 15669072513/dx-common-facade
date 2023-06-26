@@ -431,16 +431,16 @@ public interface ExcelHeadI18nKey {
     String LENGTH_域名类型 = "EXCEL_HEAD_I18N_KEY.LENGTH_域名类型";
     String LENGTH_描述说明 = "EXCEL_HEAD_I18N_KEY.LENGTH_描述说明";
     
-    String CLUB_ID = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部ID";
-    String TABLE_ID = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌ID";
-
-    String TABLE_NAME = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌名称";
-    String CLUB_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部名称";
-    String CLUB_ICON = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部头像";
 
     String HAND_ID = "EXCEL_HEAD_I18N_KEY.HAND_手牌ID";
-
     String HAND_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_手牌名称";
+    
+    String TABLE_ID = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌ID";
+    String TABLE_NAME = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌名称";
+    
+    String CLUB_ID = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部ID";
+    String CLUB_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部名称";
+    String CLUB_ICON = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部头像";
     String CLUB_INTRODUCTION = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部介绍";
     String CLUB_MEMBER_COUNT = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部会员数量";
     String CLUB_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理账号";
