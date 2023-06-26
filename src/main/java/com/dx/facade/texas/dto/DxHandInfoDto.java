@@ -1,6 +1,8 @@
 package com.dx.facade.texas.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -52,9 +54,11 @@ public class DxHandInfoDto implements Serializable {
     private String gameName;
 
     @ApiModelProperty("牌局开始时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime handBeginTime;
 
     @ApiModelProperty("牌局结束时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime handEndTime;
 
     @ApiModelProperty("'参与用户ID集合'")
@@ -89,12 +93,14 @@ public class DxHandInfoDto implements Serializable {
     private BigDecimal pumpingAmount;
 
     @ApiModelProperty("创建时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
+    @JsonSerialize(using = DateToLongSerializer.class)
     private LocalDateTime updatedAt;
 
     @ApiModelProperty("修改人")
