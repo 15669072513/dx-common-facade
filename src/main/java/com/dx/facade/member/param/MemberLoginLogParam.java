@@ -7,11 +7,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
-import org.hibernate.validator.constraints.Range;
 
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 import java.util.List;
 
 @Data
@@ -19,6 +15,9 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberLoginLogParam extends PageRequest {
+    @ApiModelProperty(value = "日志ID")
+    //@NotNull(message = "商户ID不能为空")
+    private Long logId;
 
     @ApiModelProperty(value = "商户ID")
     //@NotNull(message = "商户ID不能为空")

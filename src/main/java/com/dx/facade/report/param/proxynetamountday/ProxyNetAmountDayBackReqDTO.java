@@ -9,6 +9,7 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -44,6 +45,24 @@ public class ProxyNetAmountDayBackReqDTO {
     @ApiModelProperty("总代理账号")
     private String topProxyName;
 
+
+    /** accountType */
+    @ApiModelProperty(value = "代理类型（1-正式，2-商务，3-置换）", example = "3")
+    private Integer accountType;
+
+    @ApiModelProperty("最小总投注")
+    private BigDecimal minNetAmount;
+
+    @ApiModelProperty("最大总投注")
+    private BigDecimal maxNetAmount;
+
+    @ApiModelProperty("最小有效投注金额")
+    private BigDecimal minValidBetAmount;
+
+    @ApiModelProperty("最大有效投注金额")
+    private BigDecimal maxValidBetAmount;
+
+
     /** accountLevelList */
     @ApiModelProperty("代理层级")
     private List<String> accountLevelList;
@@ -65,6 +84,17 @@ public class ProxyNetAmountDayBackReqDTO {
     @NotNull(message = "分页参数不能为空")
     @Range(min = 1, max = 500, message = "每页条数必须 ≥ 1 并且 ≤ 500")
     private Long pageSize = 20L;
+
+    @ApiModelProperty(
+            value = "排序列名，netAmount",
+            example = "netAmount"
+    )
+    private String orderKey;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
 
 
 }

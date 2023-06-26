@@ -73,4 +73,5 @@ public class PlayerDayReportReqDTO extends LocalDatePageRequest {
     @ApiModelProperty("最大净盈亏")
     private BigDecimal maxNetProfit;
 
+
 }

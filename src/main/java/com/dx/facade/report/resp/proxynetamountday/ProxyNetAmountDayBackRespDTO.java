@@ -151,7 +151,7 @@ public class ProxyNetAmountDayBackRespDTO {
     private BigDecimal directValidBetAmount;
 
     /** directNetAmount */
-    @ApiModelProperty(value = "直属会员总输赢", example = "1500.00")
+    @ApiModelProperty(value = "直属会员总输赢/投注盈亏", example = "1500.00")
     private BigDecimal directNetAmount;
 
     /** directPayAmount */

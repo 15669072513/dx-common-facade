@@ -1,5 +1,6 @@
 package com.dx.facade.member.param;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -9,6 +10,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -75,5 +77,20 @@ public class ProxySubProxyListEsDto {
 	@ApiModelProperty(value = "管理俱乐部权限：0-关闭 1-开启")
 	private Integer manageClubLockStatus;
 	
+	@ApiModelProperty(value = "俱乐部数量")
+	private Integer clubCount;
+	
+	@ApiModelProperty(value = "俱乐部人数")
+	private Integer clubMemberCount;
+	
+    @ApiModelProperty("佣金钱包余额")
+    private BigDecimal commissionBalance;
+
+    @ApiModelProperty("额度钱包余额")
+    private BigDecimal quotaBalance;	
+    
+    @ApiModelProperty("备注")
+    private String remark;
+    
 	
 }

@@ -60,7 +60,28 @@ public class ContractManageWebReqDTO extends PageRequest implements Serializable
 
     @ApiModelProperty(value="排序(4)[升序：asc ,降序: desc]")
     private String orderType;
+    
+    /** 发送开始时间 */
+    @ApiModelProperty("发送开始时间")
+    private String createDtStart;
+    
+    /** 最近登录结束时间 */
+    @ApiModelProperty("最近登录结束时间")
+    private String createDtEnd;
 
-
-
+    /** 签约开始时间 */
+    @ApiModelProperty("签约开始时间")
+    private String signDtStart;
+    
+    /** 签约结束时间 */
+    @ApiModelProperty("签约结束时间")
+    private String signDtEnd;
+    
+    /** 失效开始时间 */
+    @ApiModelProperty("失效开始时间")
+    private String lostEffectDtStart;
+    
+    /** 失效结束时间 */
+    @ApiModelProperty("失效结束时间")
+    private String lostEffectDtEnd;
 }

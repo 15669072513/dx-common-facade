@@ -14,6 +14,9 @@ public class UserRemarkListParamDTO implements BaseParmDTO{
 
     @ApiModelProperty("用户类型 （0-会员 1-代理）")
     private Integer userType;
+    
+    @ApiModelProperty("操作人")
+    private String operator;
 
     @Override
     public void check() {

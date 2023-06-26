@@ -46,7 +46,8 @@ public enum ProxyChangeType implements IChangeType {
     proxy_be_down_score(30, "代理被上级下分", "12"),
     proxy_to_child_down_score(31, "代理给下级下分", "12"),
     proxy_to_mem_down_score(32, "代理给会员下分", "12"),
-    commission_to_quota(33, "佣金转额度钱包", "13"),
+    commission_to_quota(33, "佣金转额度钱包-支出", "13"),
+    commission_be_transfer_to_quota(34,"佣金转额度钱包-收入","13")
 
 
 //    quota_transfer_to_banker(25, "额度出金私庄", "11"),
