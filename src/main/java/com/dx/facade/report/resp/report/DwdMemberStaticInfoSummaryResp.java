@@ -113,37 +113,34 @@ public class DwdMemberStaticInfoSummaryResp {
     private BigDecimal proxyTransferInnerAmountTHB = BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount = BigDecimal.ZERO;
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount= BigDecimal.ZERO;
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount;
     @ApiModelProperty("返水金额")
-    private BigDecimal returnWaterAmount;
+    private BigDecimal returnWaterAmount= BigDecimal.ZERO;
     @ApiModelProperty("优惠总额")
-    private BigDecimal discountAmount;
+    private BigDecimal discountAmount = BigDecimal.ZERO;
     @ApiModelProperty("其他调整")
-    private BigDecimal otherAdjustAmount;
+    private BigDecimal otherAdjustAmount= BigDecimal.ZERO;
     @ApiModelProperty("净盈亏")
-    private BigDecimal netProfit;
+    private BigDecimal netProfit= BigDecimal.ZERO;
 
     @ApiModelProperty("转代次数")
     private Long switchProxyCount;
     @ApiModelProperty("代理上分金额")
     @TableField("proxy_up_amount")
-    private BigDecimal proxyUpAmount;
+    private BigDecimal proxyUpAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("代理上分次数")
-    @TableField("proxy_up_times")
-    private Long proxyUpTimes;
+    private Long proxyUpTimes=0L;
 
     @ApiModelProperty("代理下分金额")
-    @TableField("proxy_down_amount")
-    private BigDecimal proxyDownAmount;
+    private BigDecimal proxyDownAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("代理下分次数")
-    @TableField("proxy_down_times")
-    private Long proxyDownTimes;
+    private Long proxyDownTimes=0L;
 
     /**
      * 净盈亏 = 投注盈亏+返水盈亏+优惠金额+其他金额
