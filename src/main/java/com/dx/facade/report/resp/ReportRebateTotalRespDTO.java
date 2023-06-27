@@ -27,38 +27,38 @@ import java.math.BigDecimal;
 public class ReportRebateTotalRespDTO implements Serializable {
 
     @ApiModelProperty(value = "返点金额(CNY)", required = true, example = "2343")
-    private BigDecimal personRebateAmountInCNY;
+    protected BigDecimal personRebateAmountInCNY;
 
     @ApiModelProperty(value = "返点金额(VND)", required = true, example = "2343")
-    private BigDecimal personRebateAmountInVND;
+    protected BigDecimal personRebateAmountInVND;
 
     @ApiModelProperty(value = "返点金额(THB)", required = true, example = "2343")
-    private BigDecimal personRebateAmountInTHB;
+    protected BigDecimal personRebateAmountInTHB;
 
     /**
      * 返点人数
      * person_rebate_amount
      */
     @ApiModelProperty(value = "返点人数", example = "1100.00")
-    private Integer rebateNumber = 0;
+    protected Integer rebateNumber = 0;
 
     /**
      * 实际返点
      * person_rebate_amount
      */
     @ApiModelProperty(value = "返点金额", example = "1100.00")
-    private BigDecimal personRebateAmount = BigDecimal.ZERO;
+    protected BigDecimal personRebateAmount = BigDecimal.ZERO;
 
     /**
      * 返点发放，表中无对应字段，需计算，依据payout_status
      */
     @ApiModelProperty(value = "返点发放", example = "100.00")
-    private BigDecimal distributeOfRebate = BigDecimal.ZERO;
+    protected BigDecimal distributeOfRebate = BigDecimal.ZERO;
 
     /**
      * 返点调整，表中无对应字段，需计算
      */
     @ApiModelProperty(value = "返点调整", example = "500")
-    private BigDecimal adjustOfRebate = BigDecimal.ZERO;
+    protected BigDecimal adjustOfRebate = BigDecimal.ZERO;
 
 }
