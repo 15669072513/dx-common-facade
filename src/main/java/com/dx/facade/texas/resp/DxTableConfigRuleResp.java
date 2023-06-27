@@ -21,6 +21,12 @@ public class DxTableConfigRuleResp {
     private Long holderId;
 
     /***
+     * 房主id
+     */
+    @ApiModelProperty("房主名称")
+    private String holderName;
+
+    /***
      * 牌桌id
      */
     @ApiModelProperty("牌桌id")
@@ -31,6 +37,12 @@ public class DxTableConfigRuleResp {
      */
     @ApiModelProperty("牌桌code")
     private String tableCode;
+
+    /***
+     * 俱乐部id
+     */
+    @ApiModelProperty("俱乐部id")
+    private Long clubId;
 
     /***
      * 牌桌类型 2001L:德州局 2002L:短牌局
