@@ -14,11 +14,18 @@ import java.util.List;
 
 public interface IDxHandInfoService {
     /**
-     * 根据条件查询牌局列表信息
+     * 根据条件查询牌局列表信息-翻页
      * @param req
      * @return
      */
     CommonResp<PageResp<DxHandInfoListResp, Void>> listPage(DxHandInfoListReq req);
+
+    /**
+     * 根据条件查询牌局列表信息-导出
+     * @param req
+     * @return
+     */
+    CommonResp<DxHandPumpInfoDto> listAll(DxHandInfoListReq req);
 
     /**
      * 新增牌局
