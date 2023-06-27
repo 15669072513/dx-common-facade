@@ -1,7 +1,5 @@
 package com.dx.facade.constant;
 
-import com.dx.facade.enums.ReceiveStatusEnum;
-
 /**
  * 导出excel表头国际化资源key常量
  * @author neko
@@ -454,4 +452,6 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
     /** 俱乐部列表文件名 */
     String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
+
+    String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 }
