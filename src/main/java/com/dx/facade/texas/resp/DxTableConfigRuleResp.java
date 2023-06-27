@@ -8,6 +8,7 @@ import lombok.Data;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Data
 @ApiOperation("牌桌详情")
@@ -112,18 +113,18 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("创建时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("牌桌开始时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime tableBeginTime;
+    private Date tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime tableEndTime;
+    private Date tableEndTime;
 
     @ApiModelProperty("手牌数")
     private Long handCount;

@@ -8,6 +8,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -54,11 +55,11 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("牌局开始时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime handBeginTime;
+    private Date handBeginTime;
 
     @ApiModelProperty("牌局结束时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime handEndTime;
+    private Date handEndTime;
 
     @ApiModelProperty("'参与用户ID集合'")
     private String userIds;
@@ -104,14 +105,14 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("创建时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;

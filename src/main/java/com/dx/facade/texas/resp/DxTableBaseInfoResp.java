@@ -8,6 +8,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -60,11 +61,11 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("牌桌开始时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime tableBeginTime;
+    private Date tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime tableEndTime;
+    private Date tableEndTime;
 
     @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
     private Integer overType;
@@ -98,14 +99,14 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("创建时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime createdAt;
+    private Date createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
     @JsonSerialize(using = DateToLongSerializer.class)
-    private LocalDateTime updatedAt;
+    private Date updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;
