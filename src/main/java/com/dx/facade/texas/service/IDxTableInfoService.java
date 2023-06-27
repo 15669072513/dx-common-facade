@@ -4,6 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.texas.dto.DxTableInfoDto;
+import com.dx.facade.texas.dto.DxTableListDto;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.DxTableBaseInfoResp;
@@ -15,11 +16,18 @@ import com.dx.facade.texas.resp.DxTableCountResp;
 public interface IDxTableInfoService {
 
     /**
-     * 根据条件查询牌桌列表信息
+     * 根据条件查询牌桌列表信息-翻页
      * @param req
      * @return
      */
     CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPage(DxTableInfoListReq req);
+
+    /**
+     * 根据条件查询牌桌列表信息-导出
+     * @param req
+     * @return
+     */
+    CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
     CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 

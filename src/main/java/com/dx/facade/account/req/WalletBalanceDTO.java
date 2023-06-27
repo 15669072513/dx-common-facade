@@ -1,13 +1,11 @@
 package com.dx.facade.account.req;
 
-import java.io.Serializable;
-import java.math.BigDecimal;
-
-
 import com.dx.facade.member.exception.ErrorCode;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.util.Assert;
+
+import java.math.BigDecimal;
 
 @Data
 public class WalletBalanceDTO implements BaseParmDTO {

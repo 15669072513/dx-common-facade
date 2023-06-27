@@ -1,12 +1,15 @@
 package com.dx.facade.texas.dto;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -77,22 +80,22 @@ public class DxTableInfoDto implements Serializable {
     private Integer participantTotal;
 
     @ApiModelProperty("牌桌开始时间")
-    private LocalDateTime tableBeginTime;
+    private Long tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
-    private LocalDateTime tableEndTime;
+    private Long tableEndTime;
 
     @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
     private Integer overType;
 
     @ApiModelProperty("创建时间")
-    private LocalDateTime createdAt;
+    private Long createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
-    private LocalDateTime updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;
