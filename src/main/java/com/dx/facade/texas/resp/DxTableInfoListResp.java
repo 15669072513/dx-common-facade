@@ -44,6 +44,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
 
+    @ApiModelProperty("关联游戏名称")
+    private String gameName;
+
     @ApiModelProperty("关联俱乐部id")
     private Long clubId;
 
@@ -73,6 +76,9 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("玩家总带出")
     private BigDecimal bringOutChipScore;
+
+    @ApiModelProperty("玩家总带入")
+    private BigDecimal bringInChipScore;
 
     @ApiModelProperty("小盲注")
     private BigDecimal sbBlindScore;
