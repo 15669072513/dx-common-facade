@@ -87,15 +87,13 @@ public class DxGameConfigDto implements Serializable {
     private BigDecimal rake;
 
     @ApiModelProperty("创建时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date createAt;
+    private Long createAt;
 
     @ApiModelProperty("创建人")
     private String createBy;
 
     @ApiModelProperty("修改时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;

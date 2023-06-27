@@ -57,12 +57,10 @@ public class DxHandInfoListResp implements Serializable {
     private String gameName;
 
     @ApiModelProperty("牌局开始时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date handBeginTime;
+    private Long handBeginTime;
 
     @ApiModelProperty("牌局结束时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date handEndTime;
+    private Long handEndTime;
 
     @ApiModelProperty("'参与用户ID集合'")
     private String userIds;
@@ -110,15 +108,13 @@ public class DxHandInfoListResp implements Serializable {
     private Integer bbSeat;
 
     @ApiModelProperty("创建时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date createdAt;
+    private Long createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;

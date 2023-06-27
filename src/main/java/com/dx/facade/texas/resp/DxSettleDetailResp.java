@@ -56,15 +56,13 @@ public class DxSettleDetailResp implements Serializable {
     private Long totalBring;
 
     @ApiModelProperty("创建时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date createdAt;
+    private Long createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;

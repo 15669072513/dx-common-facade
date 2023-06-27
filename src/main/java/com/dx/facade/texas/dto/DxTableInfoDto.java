@@ -80,26 +80,22 @@ public class DxTableInfoDto implements Serializable {
     private Integer participantTotal;
 
     @ApiModelProperty("牌桌开始时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date tableBeginTime;
+    private Long tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date tableEndTime;
+    private Long tableEndTime;
 
     @ApiModelProperty("牌桌结束类型：0强制解散 1房间内解散 2正常结束")
     private Integer overType;
 
     @ApiModelProperty("创建时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date createdAt;
+    private Long createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("修改时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;

@@ -112,19 +112,16 @@ public class DxTableConfigRuleResp {
     private Integer status;
 
     @ApiModelProperty("创建时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date createdAt;
+    private Long createdAt;
 
     @ApiModelProperty("创建人")
     private String createdBy;
 
     @ApiModelProperty("牌桌开始时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date tableBeginTime;
+    private Long tableBeginTime;
 
     @ApiModelProperty("牌桌结束时间")
-    @JsonSerialize(using = DateToLongSerializer.class)
-    private Date tableEndTime;
+    private Long tableEndTime;
 
     @ApiModelProperty("手牌数")
     private Long handCount;
