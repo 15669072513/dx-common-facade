@@ -1,6 +1,7 @@
 package com.dx.facade.member.param;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -114,5 +115,10 @@ public class AddLowerMemberReqDto {
 
 	@ApiModelProperty(value = "俱乐部名称")
 	private String clubName;
-	
+	@JsonIgnore
+	@ApiModelProperty(value = "创建人ID")
+	private String createdBy;
+	@JsonIgnore
+	@ApiModelProperty(value = "创建人姓名")
+	private String createdByName;
 }

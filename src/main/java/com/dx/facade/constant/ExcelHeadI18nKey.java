@@ -1,7 +1,5 @@
 package com.dx.facade.constant;
 
-import com.dx.facade.enums.ReceiveStatusEnum;
-
 /**
  * 导出excel表头国际化资源key常量
  * @author neko
@@ -452,8 +450,19 @@ public interface ExcelHeadI18nKey {
     String CLUB_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理账号";
     String CLUB_PROXY_REALNAME = "EXCEL_HEAD_I18N_KEY.CLUB_代理名称";
     String CLUB_TOP_PROXY_USERNAME = "EXCEL_HEAD_I18N_KEY.CLUB_所属总代账号";
-    String CLUB_CREATE_AT = "EXCEL_HEAD_I18N_KEY.CLUB_创建时间";
-    
+    String CLUB_CREATE_AT = "`EXCEL_HEAD_I18N_KEY.CLUB_创建时间`";
+
+    String FUNDS_开始时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_开始时间";
+    String FUNDS_结束时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_结束时间";
+    String FUNDS_盲注 = "EXCEL_HEAD_I18N_KEY.FUNDS_盲注";
+    String FUNDS_牌桌手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌手牌数";
+    String FUNDS_玩家总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带入";
+    String FUNDS_玩家总带出 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带出";
+    String FUNDS_总打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总打牌抽水";
+    String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
+    String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
+    String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
+
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
@@ -462,4 +471,6 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
     /** 代理列表文件名 */
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
+
+    String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 }

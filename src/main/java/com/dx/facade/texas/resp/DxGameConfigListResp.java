@@ -1,11 +1,14 @@
 package com.dx.facade.texas.resp;
 
+import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -93,13 +96,13 @@ public class DxGameConfigListResp implements Serializable {
     private BigDecimal rake;
 
     @ApiModelProperty("创建时间")
-    private LocalDateTime createAt;
+    private Long createAt;
 
     @ApiModelProperty("创建人")
     private String createBy;
 
     @ApiModelProperty("修改时间")
-    private LocalDateTime updatedAt;
+    private Long updatedAt;
 
     @ApiModelProperty("修改人")
     private String updatedBy;
