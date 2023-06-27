@@ -48,6 +48,10 @@ public class ProxyDayDirectNetAmountRespDTO {
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal rebateAmount;
 
+    /** rebateAmount */
+    @ApiModelProperty(value = "代理返水", example = "1500.00")
+    private BigDecimal proxyRebateAmount;
+
     /** discountAmount */
     @ApiModelProperty(value = "会员优惠", example = "1500.00")
     private BigDecimal discountAmount;
