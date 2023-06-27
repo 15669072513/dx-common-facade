@@ -63,25 +63,25 @@ public class DxTableInfoAddReq implements Serializable {
     private Integer timeCount;
 
     @ApiModelProperty("最小带入的筹码")
-    private BigDecimal minBringChipScore = BigDecimal.ZERO;
+    private BigDecimal minBringChipScore;
 
     @ApiModelProperty("最大带入的筹码")
-    private BigDecimal maxBringChipScore = BigDecimal.ZERO;
+    private BigDecimal maxBringChipScore;
 
     @ApiModelProperty("默认带入筹码")
-    private BigDecimal bringChipScore = BigDecimal.ZERO;
+    private BigDecimal bringChipScore;
 
     @ApiModelProperty("玩家总带出")
     private BigDecimal bringOutChipScore;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore = BigDecimal.ZERO;
+    private BigDecimal sbBlindScore;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore = BigDecimal.ZERO;
+    private BigDecimal bbBlindScore;
 
     @ApiModelProperty("抽水比例")
-    private BigDecimal rake = BigDecimal.ZERO;
+    private BigDecimal rake;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
