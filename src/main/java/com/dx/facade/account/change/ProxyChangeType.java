@@ -37,17 +37,17 @@ public enum ProxyChangeType implements IChangeType {
     rebate_sub(24, "返点扣除调整", "10"),
 
 
-    officer_proxy_up_score(25, "官方给代理上分", "11"),
-    proxy_be_up_score(26, "代理被上级上分", "11"),
-    proxy_to_child_up_score(27, "代理给下级上分", "11"),
-    proxy_to_mem_up_score(28, "代理给会员上分", "11"),
+    officer_proxy_up_score(25, "官方给代理上分", "12"),
+    proxy_be_up_score(26, "代理被上级上分", "12"),
+    proxy_to_child_up_score(27, "代理给下级上分", "12"),
+    proxy_to_mem_up_score(28, "代理给会员上分", "12"),
 
-    officer_proxy_down_score(29, "官方给代理下分", "12"),
-    proxy_be_down_score(30, "代理被上级下分", "12"),
-    proxy_to_child_down_score(31, "代理给下级下分", "12"),
-    proxy_to_mem_down_score(32, "代理给会员下分", "12"),
-    commission_to_quota(33, "佣金转额度钱包-支出", "13"),
-    commission_be_transfer_to_quota(34,"佣金转额度钱包-收入","13")
+    officer_proxy_down_score(29, "官方给代理下分", "13"),
+    proxy_be_down_score(30, "代理被上级下分", "13"),
+    proxy_to_child_down_score(31, "代理给下级下分", "13"),
+    proxy_to_mem_down_score(32, "代理给会员下分", "13"),
+    commission_to_quota(33, "佣金转额度钱包-支出", "11"),
+    commission_be_transfer_to_quota(34,"佣金转额度钱包-收入","11")
 
 
 //    quota_transfer_to_banker(25, "额度出金私庄", "11"),
