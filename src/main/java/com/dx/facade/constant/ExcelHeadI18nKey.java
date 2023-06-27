@@ -341,6 +341,12 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_总存款次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_总存款次数";
     String	FUNDS_总提款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_总提款金额";
     String	FUNDS_总提款次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_总提款次数";
+    
+    String	FUNDS_俱乐部数量 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部数量";
+    String	FUNDS_俱乐部人数 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部人数";
+    String	FUNDS_登录权限 = "EXCEL_HEAD_I18N_KEY.FUNDS_登录权限";
+    String	FUNDS_开局权限 = "EXCEL_HEAD_I18N_KEY.FUNDS_开局权限";
+    String	FUNDS_管理俱乐部权限 = "EXCEL_HEAD_I18N_KEY.FUNDS_管理俱乐部权限";
 
     String	FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型";
     String	FUNDS_调整金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整金额";
@@ -454,4 +460,6 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
     /** 俱乐部列表文件名 */
     String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
+    /** 代理列表文件名 */
+    String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
 }

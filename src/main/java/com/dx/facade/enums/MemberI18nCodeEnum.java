@@ -79,6 +79,7 @@ public enum MemberI18nCodeEnum implements I18nEnum {
     MEMBER_LABEL_NAME_SIMPLE(310080),//, "同商户标签名称不能重复"
     VERIFICATION_FAILED(100011),//, "验证码错误，请检查后输入！"
     APP_UPDATE_PWD_ERROR(100061),//,"当前密码不对"
+    PASSWORD_CONSISTENCY_ERROR(100013),//两次密码不一致
     INPUT_PHONE_ERROR(100062),//,"手机号码填写有误"
     INPUT_EMAIL_ERROR(100063),//,"邮箱填写有误"
     THIS_EMAIL_BIND(100064),//,"邮箱已被其他账号绑定"
