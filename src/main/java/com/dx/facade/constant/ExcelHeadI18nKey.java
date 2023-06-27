@@ -462,13 +462,26 @@ public interface ExcelHeadI18nKey {
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
     String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
-
-
+    
+    String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
+    String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
+    String REBATE_RATE = "EXCEL_HEAD_I18N_KEY.CONTRACT_返点比例";
+    String CONTRACT_STATUS = "EXCEL_HEAD_I18N_KEY.CONTRACT_状态";
+    String CONTRACT_CREATE_AT = "EXCEL_HEAD_I18N_KEY.CONTRACT_发送时间";
+    String CONTRACT_SIGN_DT = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约时间";
+    String CONTRACT_LOST_EFFECT_DT = "EXCEL_HEAD_I18N_KEY.CONTRACT_失效时间";
+    
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
     /** 俱乐部列表文件名 */
     String FILE_NAME_CLUB_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部列表";
+    /** 待签约列表文件名 */
+    String FILE_NAME_WAIT_SIGN_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_待签约列表";
+    /** 已签约列表文件名 */
+    String FILE_NAME_SIGNED_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_已签约列表";
+    /** 无签约列表文件名 */
+    String FILE_NAME_NO_SIGN_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_无签约列表";
     /** 代理列表文件名 */
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
 
