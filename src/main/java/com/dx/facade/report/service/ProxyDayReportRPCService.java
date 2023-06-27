@@ -30,7 +30,7 @@ public interface ProxyDayReportRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp<PageResp<ProxyDayReportRespDTO, ?>> listPage(PageReq<ProxyDayReportReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<ProxyDayReportRespDTO, ProxyDayReportSummaryDTO>> listPage(PageReq<ProxyDayReportReqDTO> reqDTO) throws BizException;
 
     /**
      * 代理报表-合计接口
