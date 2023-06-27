@@ -16,11 +16,11 @@ import java.util.Objects;
 @AllArgsConstructor
 public class NetAmountDaySummaryRespDTO {
 
-    @ApiModelProperty("注单数")
-    private Long betCount = 0L;
-
     @ApiModelProperty("投注人数")
-    private Long memberCount = 0L;
+    private Long memberCount;
+
+    @ApiModelProperty("注单数")
+    private Long betCount;
 
     @ApiModelProperty("投注金额")
     private BigDecimal betAmount;
@@ -30,6 +30,16 @@ public class NetAmountDaySummaryRespDTO {
 
     @ApiModelProperty("投注金额")
     private BigDecimal netAmount;
+
+    @ApiModelProperty("返水金额=会员返水+返水人工加减额CNY")
+    private BigDecimal rebateAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("优惠金额=会员优惠+会员活动人工加减额+会员VIP福利")
+    private BigDecimal discountAmount = BigDecimal.ZERO;
+
+
+    @ApiModelProperty("其他调整=人工加减额中的其他调整额CNY")
+    private BigDecimal artificialPatchAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("投注额CNY")
     private BigDecimal betAmountCNY = BigDecimal.ZERO;
@@ -79,6 +89,21 @@ public class NetAmountDaySummaryRespDTO {
     private BigDecimal netProfitVND = BigDecimal.ZERO;
     @ApiModelProperty("净盈亏THB")
     private BigDecimal netProfitTHB = BigDecimal.ZERO;
+
+    /**
+     * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
+     *
+     * @return
+     */
+    public BigDecimal getNetProfit() {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(rebateAmount)
+                || Objects.isNull(artificialPatchAmount)) {
+            return null;
+        }
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+    }
 
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
