@@ -20,7 +20,6 @@ import java.math.BigDecimal;
  * @since 2021年09月25日 09:29:39
  */
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel("返点报表查询合计接口响应数据传输对象")
