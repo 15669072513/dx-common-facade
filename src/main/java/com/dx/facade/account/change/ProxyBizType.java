@@ -22,9 +22,10 @@ public enum ProxyBizType implements IBizType {
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
 
-    up_score(11, "上分", "7"),
-    down_score(12, "下分", "7"),
-    commission_to_quota(13, "佣金转额度钱包", "6"),
+    commission_to_quota(11, "佣金转额度钱包", "6"),
+    up_score(12, "上分", "7"),
+    down_score(13, "下分", "7"),
+
 
 //    transfer_with_banker(11, "代理划拨", "6,7"),
 
