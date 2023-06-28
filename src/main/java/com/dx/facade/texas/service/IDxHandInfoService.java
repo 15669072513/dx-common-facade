@@ -53,7 +53,7 @@ public interface IDxHandInfoService {
      * @param handCode
      * @return
      */
-    public CommonResp<DxGameRecordResp> getGameRecordInfoByHandCode(Long handCode);
+    public CommonResp<DxGameRecordResp> getGameRecordInfoByHandCode(String handCode);
 
     /**
      * 根据多个handId查询手牌信息
