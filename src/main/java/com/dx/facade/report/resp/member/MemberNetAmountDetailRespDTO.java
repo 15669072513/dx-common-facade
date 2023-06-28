@@ -65,7 +65,8 @@ public class MemberNetAmountDetailRespDTO {
      */
     @ApiModelProperty("会员盈利率")
     public BigDecimal getNetRate() {
-        return netAmount.divide(betAmount).setScale(2, BigDecimal.ROUND_DOWN);
+        MathContext mc = new MathContext(3, RoundingMode.HALF_DOWN);
+        return  netAmount.divide(betAmount, mc);
     }
 
 
