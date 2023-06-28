@@ -49,11 +49,11 @@ public interface IDxHandInfoService {
     CommonResp<Void> updateHandByTableIdAndHandNum(DxHandInfoAddReq req) throws BizException;
 
     /**
-     * 根据手牌id获取游戏注单信息
-     * @param handId
+     * 根据手牌Code获取游戏注单信息
+     * @param handCode
      * @return
      */
-    public CommonResp<DxGameRecordResp> getGameRecordInfoByHandId(Long handId);
+    public CommonResp<DxGameRecordResp> getGameRecordInfoByHandCode(Long handCode);
 
     /**
      * 根据多个handId查询手牌信息
