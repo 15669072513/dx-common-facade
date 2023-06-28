@@ -471,6 +471,20 @@ public interface ExcelHeadI18nKey {
     String CONTRACT_SIGN_DT = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约时间";
     String CONTRACT_LOST_EFFECT_DT = "EXCEL_HEAD_I18N_KEY.CONTRACT_失效时间";
     
+
+    String FUNDS_手牌ID = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌ID";
+    String FUNDS_手牌开始时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌开始时间";
+    String FUNDS_手牌结束时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌结束时间";
+    String FUNDS_手牌号 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌号";
+    String FUNDS_期初金额汇总 = "EXCEL_HEAD_I18N_KEY.FUNDS_期初金额汇总";
+    String FUNDS_中途带入金额汇总 = "EXCEL_HEAD_I18N_KEY.FUNDS_中途带入金额汇总";
+    String FUNDS_期末余额汇总 = "EXCEL_HEAD_I18N_KEY.FUNDS_期末余额汇总";
+    String FUNDS_有效底池 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效底池";
+    String FUNDS_打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_打牌抽水";
+    String FUNDS_手牌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌盈亏";
+    String FUNDS_公牌信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_公牌信息";
+
+
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
     String FILE_NAME_会员取款 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款";
@@ -486,4 +500,7 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
 
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
+
+    String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
+
 }
