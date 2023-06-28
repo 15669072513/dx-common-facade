@@ -145,5 +145,5 @@ public interface MemberRPCService {
 	 */
 	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO) throws BizException;
 
-	Boolean  IncomingSwitch(MemberIncomingSwitchParam memberIncomingSwitchParam);
+	Boolean incomingSwitch(MemberIncomingSwitchParam memberIncomingSwitchParam);
 }
