@@ -45,4 +45,6 @@ public class LowerMemberListReqDto {
 
 	@ApiModelProperty(value = "是否是代理web")
 	private Boolean isWeb = false;
+	@ApiModelProperty("身份1代理 0会员")
+	private Integer identityCode;
 }
