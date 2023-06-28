@@ -40,11 +40,12 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏详情接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
      */
-    CommonResp<MemberNetAmountDetailInfoResp> queryMemberNetAmountDetail(MemberNetAmountDetailReqDTO reqDTO) throws BizException;
+    CommonResp<PageResp<MemberNetAmountDetailRespDTO, MemberNetAmountDetailSummaryRespDTO>> queryMemberNetAmountDetail(MemberNetAmountDetailReqDTO reqDTO) throws BizException;
 
     /**
      * 代理web 会员盈亏

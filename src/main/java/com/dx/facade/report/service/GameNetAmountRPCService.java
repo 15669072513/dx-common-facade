@@ -5,7 +5,6 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.report.gameprofit.GameNetAmountDetailReqDTO;
 import com.dx.facade.report.param.report.gameprofit.GameNetAmountReqDTO;
-import com.dx.facade.report.resp.GameNetAmountDetailRespDTO;
 import com.dx.facade.report.resp.GameNetAmountRespDTO;
 import com.dx.facade.report.resp.GameNetAmountSummaryRespDTO;
 
@@ -40,6 +39,6 @@ public interface GameNetAmountRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp<GameNetAmountDetailRespDTO> detailListPage(GameNetAmountDetailReqDTO requestDto) throws BizException;
+    CommonResp<PageResp<GameNetAmountRespDTO, ?>> detailListPage(GameNetAmountDetailReqDTO requestDto) throws BizException;
 
 }
