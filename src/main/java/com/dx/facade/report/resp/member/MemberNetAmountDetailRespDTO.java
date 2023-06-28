@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 @Data
 @NoArgsConstructor
@@ -26,31 +28,45 @@ public class MemberNetAmountDetailRespDTO {
     private String parentProxyName;
 
     @ApiModelProperty("注单量")
-    private Long betCount;
+    private Long betCount= 0L;
 
     @ApiModelProperty("币种")
     private String currency;
 
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("投注盈亏")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("返水金额")
-    private BigDecimal rebateAmount;
+    private BigDecimal rebateAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("优惠金额")
-    private BigDecimal discountAmount;
+    private BigDecimal discountAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("调整金额")
-    private BigDecimal artificialPatchAmount;
+    private BigDecimal artificialPatchAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("净盈亏")
-    private BigDecimal netProfit;
+    private BigDecimal netProfit=BigDecimal.ZERO;
+
+    // 会员盈利率=投注盈亏/投注金额
+    @ApiModelProperty(value = "会员盈利率")
+    private BigDecimal netRate=BigDecimal.ZERO;
+
+    /**
+     * 会员盈利率=投注盈亏/投注金额
+     *
+     * @return
+     */
+    @ApiModelProperty("会员盈利率")
+    public BigDecimal getNetRate() {
+        return netAmount.divide(betAmount).setScale(2, BigDecimal.ROUND_DOWN);
+    }
 
 
 }

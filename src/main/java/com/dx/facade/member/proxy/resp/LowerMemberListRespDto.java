@@ -87,4 +87,6 @@ public class LowerMemberListRespDto {
 	private Long handCount;
 	@ApiModelProperty("有效投注金额")
 	private BigDecimal validBetAmount;
+	@ApiModelProperty
+	private String identity;
 }

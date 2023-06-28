@@ -14,23 +14,23 @@ import java.math.BigDecimal;
 public class ProxyMemberNetSummaryRespDTO {
 
     @ApiModelProperty("总投")
-    protected BigDecimal betAmount;
+    private BigDecimal betAmount;
 
     @ApiModelProperty("有效投注")
-    protected BigDecimal validBetAmount;
+    private BigDecimal validBetAmount;
 
     @ApiModelProperty("游戏盈亏")
-    protected BigDecimal netAmount;
+    private BigDecimal netAmount;
 
     @ApiModelProperty("返水金额")
-    protected BigDecimal rebateAmount;
+    private BigDecimal rebateAmount;
 
     @ApiModelProperty("会员优惠")
-    protected BigDecimal discountAmount;
+    private BigDecimal discountAmount;
 
     @ApiModelProperty("账户调整")
-    protected BigDecimal artificialPatchAmount;
+    private BigDecimal artificialPatchAmount;
 
     @ApiModelProperty("总盈亏")
-    protected BigDecimal totalNetAmount;
+    private BigDecimal totalNetAmount;
 }

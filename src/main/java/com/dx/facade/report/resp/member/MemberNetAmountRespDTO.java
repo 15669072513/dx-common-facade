@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberNetAmountRespDTO extends MemberNetAmountSummaryRespDTO {
+public class MemberNetAmountRespDTO {
 
     @ApiModelProperty(value = "会员Id", dataType = "java.lang.String")
     @JsonSerialize(using = ToStringSerializer.class)
@@ -84,6 +84,43 @@ public class MemberNetAmountRespDTO extends MemberNetAmountSummaryRespDTO {
      */
     @ApiModelProperty(value = "风控层级名称", example = "1级")
     private String windControlName;
+
+    @ApiModelProperty("注单量")
+    private Long betCount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("返水金额")
+    private BigDecimal rebateAmount;
+
+    @ApiModelProperty("优惠金额")
+    private BigDecimal discountAmount;
+
+    @ApiModelProperty("调整金额")
+    private BigDecimal artificialPatchAmount;
+
+    @ApiModelProperty("净盈亏")
+    private BigDecimal netProfit;
+
+    @ApiModelProperty("币种")
+    private String currency;
+
+    @ApiModelProperty("首存金额")
+    private BigDecimal firstDeposit;
+
+    @ApiModelProperty(value = "首存金额时间")
+    private LocalDateTime firstDepositDatetime;
+
+    // 会员盈利率=投注盈亏/投注金额
+    @ApiModelProperty(value = "会员盈利率")
+    private BigDecimal netRate;
 
 
 }
