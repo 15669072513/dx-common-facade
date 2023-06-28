@@ -66,13 +66,13 @@ public class DxHandInfoAddReq implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("初期金额")
-    private BigDecimal beginMount = BigDecimal.ZERO;
+    private BigDecimal beginMount;
 
     @ApiModelProperty("中途带入金额")
-    private BigDecimal bringMidwayAmount = BigDecimal.ZERO;
+    private BigDecimal bringMidwayAmount;
 
     @ApiModelProperty("期末金额")
-    private BigDecimal endAmount = BigDecimal.ZERO;
+    private BigDecimal endAmount;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
@@ -84,7 +84,7 @@ public class DxHandInfoAddReq implements Serializable {
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount = BigDecimal.ZERO;
+    private BigDecimal pumpingAmount;
 
     @ApiModelProperty(value = "创建时间", hidden = true)
     private LocalDateTime createdAt;
