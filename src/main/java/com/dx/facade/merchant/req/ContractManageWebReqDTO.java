@@ -84,4 +84,8 @@ public class ContractManageWebReqDTO extends PageRequest implements Serializable
     /** 失效结束时间 */
     @ApiModelProperty("失效结束时间")
     private String lostEffectDtEnd;
+    
+    /** 最近修改开始时间 */
+    @ApiModelProperty("最近修改开始时间")
+    private String lastModDtStart;
 }

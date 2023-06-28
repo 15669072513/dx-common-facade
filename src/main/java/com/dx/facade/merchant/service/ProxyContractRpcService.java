@@ -33,6 +33,15 @@ public interface ProxyContractRpcService {
 	@ApiModelProperty("代理个人契约-查询")
 	CommonResp<List<ProxyContractRespDTO>> myContract(MyContractReqDTO reqDto) throws BizException;
 	
+	/**
+	 * 根据契约id查询
+	 *
+	 * @param id
+	 * @return 受影响行数
+	 * @throws BizException 异常
+	 */
+	@ApiModelProperty("代理个人契约-查询")
+	CommonResp<ProxyContractRespDTO> getProxyContractById(Long id) throws BizException;
 	
 	/**
 	 * 契约管理-查询
