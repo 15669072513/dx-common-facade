@@ -62,5 +62,18 @@ public class DwdMemberStaticInfoResp extends DwdMemberStaticInfoSummaryResp{
     @ApiModelProperty("币种")
     private String currency;
 
+    @ApiModelProperty(value = "标签id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long labelId;
+
+    @ApiModelProperty(value = "标签名称")
+    private String labelName;
+
+    @ApiModelProperty(value = "风控层级id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long windControlId;
+
+    @ApiModelProperty(value = "风控层级名称")
+    private String windControlName;
 
 }

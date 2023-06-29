@@ -53,6 +53,6 @@ public interface VenueNetAmountDayRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp<VenueNetAmountDayDetailInfoRespDTO> queryVenueNetAmountDayDetail(VenueNetAmountDayDetailReqDTO requestDto) throws BizException;
+    CommonResp<PageResp<VenueNetAmountDayDetailRespDTO, ?>> queryVenueNetAmountDayDetail(VenueNetAmountDayDetailReqDTO requestDto) throws BizException;
 
 }

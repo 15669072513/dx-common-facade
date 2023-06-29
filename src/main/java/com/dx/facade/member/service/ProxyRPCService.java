@@ -126,5 +126,4 @@ public interface ProxyRPCService {
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
 
-    List<ProxyInfoRespDTO> getProxyByIDS(List<Long> proxyIds);
 }

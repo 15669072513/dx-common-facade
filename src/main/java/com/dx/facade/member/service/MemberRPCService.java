@@ -1,7 +1,5 @@
 package com.dx.facade.member.service;
 
-import java.util.List;
-
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
@@ -9,26 +7,17 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.param.WalletDetailParamDTO;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
+import com.dx.facade.member.member.param.MemberIncomingSwitchParam;
 import com.dx.facade.member.member.param.MemberListByWindControlInfoReqDto;
 import com.dx.facade.member.member.param.MerchantUnderMemberInfoReqDTO;
 import com.dx.facade.member.member.resp.MemberListByWindControlInfoRespDto;
 import com.dx.facade.member.member.resp.MerchantUnderMemberRespDTO;
-import com.dx.facade.member.param.AddLowerMemberReqDto;
-import com.dx.facade.member.param.CheckMemberNickNameParamDTO;
-import com.dx.facade.member.param.MemberAndProxyDto;
-import com.dx.facade.member.param.MemberAndProxyUpdateParamDTO;
-import com.dx.facade.member.param.MemberInfoRpcEditParam;
-import com.dx.facade.member.param.MemberListParamDTO;
-import com.dx.facade.member.param.MemberParamDTO;
-import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
-import com.dx.facade.member.param.UpdateMemberNickNameParamDTO;
-import com.dx.facade.member.param.UpdateMemberPasswordParamDTO;
-import com.dx.facade.member.param.UpdateMemberTopImagesUrlParamDTO;
-import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
+import com.dx.facade.member.param.*;
 import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
-
 import io.swagger.annotations.ApiModelProperty;
+
+import java.util.List;
 
 public interface MemberRPCService {
 
@@ -155,4 +144,6 @@ public interface MemberRPCService {
 	 * @throws BizException 
 	 */
 	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO) throws BizException;
+
+	Boolean incomingSwitch(MemberIncomingSwitchParam memberIncomingSwitchParam);
 }

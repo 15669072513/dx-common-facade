@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 @ApiModel(description = "会员盈亏汇总/小计")
 @Data
@@ -23,8 +25,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("投注金额")
     private BigDecimal firstDeposit;
 
-    @ApiModelProperty("投注金额CNY")
-    private BigDecimal betAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额VND")
     private BigDecimal betAmountVND = BigDecimal.ZERO;
@@ -32,8 +34,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("投注金额THB")
     private BigDecimal betAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("有效投注CNY")
-    private BigDecimal validBetAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("有效投注VND")
     private BigDecimal validBetAmountVND = BigDecimal.ZERO;
@@ -41,8 +43,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("有效投注THB")
     private BigDecimal validBetAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("投注盈亏CNY")
-    private BigDecimal netAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal netAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("投注盈亏VND")
     private BigDecimal netAmountVND = BigDecimal.ZERO;
@@ -50,8 +52,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("投注盈亏THB")
     private BigDecimal netAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("返水金额CNY")
-    private BigDecimal rebateAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("返水金额")
+    private BigDecimal rebateAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("返水金额VND")
     private BigDecimal rebateAmountVND = BigDecimal.ZERO;
@@ -59,8 +61,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("返水金额THB")
     private BigDecimal rebateAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("优惠金额CNY")
-    private BigDecimal discountAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("优惠金额")
+    private BigDecimal discountAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("优惠金额VND")
     private BigDecimal discountAmountVND = BigDecimal.ZERO;
@@ -68,8 +70,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("优惠金额THB")
     private BigDecimal discountAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("其他调整CNY")
-    private BigDecimal artificialPatchAmountCNY = BigDecimal.ZERO;
+    @ApiModelProperty("其他调整")
+    private BigDecimal artificialPatchAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("其他调整VND")
     private BigDecimal artificialPatchAmountVND = BigDecimal.ZERO;
@@ -77,8 +79,8 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("其他调整THB")
     private BigDecimal artificialPatchAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("净盈亏CNY")
-    private BigDecimal netProfitCNY = BigDecimal.ZERO;
+    @ApiModelProperty("净盈亏")
+    private BigDecimal netProfit = BigDecimal.ZERO;
 
     @ApiModelProperty("净盈亏VND")
     private BigDecimal netProfitVND = BigDecimal.ZERO;
@@ -86,13 +88,28 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("净盈亏THB")
     private BigDecimal netProfitTHB = BigDecimal.ZERO;
 
+    // 会员盈利率=投注盈亏/投注金额
+    @ApiModelProperty(value = "会员盈利率")
+    private BigDecimal netRate = BigDecimal.ZERO;
+
+    /**
+     * 会员盈利率=投注盈亏/投注金额
+     *
+     * @return
+     */
+    @ApiModelProperty("会员盈利率")
+    public BigDecimal getNetRate() {
+        MathContext mc = new MathContext(2, RoundingMode.HALF_DOWN);
+        return  netAmount.divide(betAmount, mc);
+    }
+
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
      *
      * @return
      */
-    public BigDecimal getNetProfitCNY() {
-        return netAmountCNY.add(rebateAmountCNY).add(discountAmountCNY).add(artificialPatchAmountCNY);
+    public BigDecimal getNetProfit() {
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
     }
 
     /**

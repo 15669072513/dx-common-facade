@@ -95,20 +95,30 @@ public class PlayerDayReportResp implements Serializable {
     @ApiModelProperty("转代次数")
     private Long switchProxyCount;
     @ApiModelProperty("代理上分金额")
-    @TableField("proxy_up_amount")
     private BigDecimal proxyUpAmount;
 
     @ApiModelProperty("代理上分次数")
-    @TableField("proxy_up_times")
     private Long proxyUpTimes;
 
     @ApiModelProperty("代理下分金额")
-    @TableField("proxy_down_amount")
     private BigDecimal proxyDownAmount;
 
     @ApiModelProperty("代理下分次数")
-    @TableField("proxy_down_times")
     private Long proxyDownTimes;
+
+    @ApiModelProperty(value = "标签id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long labelId;
+
+    @ApiModelProperty(value = "标签名称")
+    private String labelName;
+
+    @ApiModelProperty(value = "风控层级id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long windControlId;
+
+    @ApiModelProperty(value = "风控层级名称")
+    private String windControlName;
 
     /**
      * 净盈亏 = 投注盈亏+返水盈亏+优惠金额+其他金额

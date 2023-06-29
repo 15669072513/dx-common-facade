@@ -2,6 +2,9 @@ package com.dx.facade.merchant.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -108,4 +111,10 @@ public class ProxyContractRespDTO implements Serializable {
 
     @ApiModelProperty(value="政策类型配置id")
     public Long policyTypeConfigId;
+    
+    /**
+     * 契约最后修改时间
+     */
+    @ApiModelProperty(value = "契约最后修改时间")
+    private LocalDateTime lastModDt;
 }
