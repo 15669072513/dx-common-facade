@@ -158,5 +158,5 @@ public interface MemberRPCService {
 	 * @return
 	 * @throws BizException
 	 */
-	CommonResp updateMemberAndProxyPassword() throws BizException;
+	CommonResp updateMemberAndProxyPassword(MemberPasswordEditParam param,MemberInfoRespDTO memberInfoRespDTO) throws BizException;
 }
