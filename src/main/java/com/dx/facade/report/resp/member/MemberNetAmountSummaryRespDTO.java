@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 @ApiModel(description = "会员盈亏汇总/小计")
 @Data
@@ -85,6 +87,21 @@ public class MemberNetAmountSummaryRespDTO {
 
     @ApiModelProperty("净盈亏THB")
     private BigDecimal netProfitTHB = BigDecimal.ZERO;
+
+    // 会员盈利率=投注盈亏/投注金额
+    @ApiModelProperty(value = "会员盈利率")
+    private BigDecimal netRate = BigDecimal.ZERO;
+
+    /**
+     * 会员盈利率=投注盈亏/投注金额
+     *
+     * @return
+     */
+    @ApiModelProperty("会员盈利率")
+    public BigDecimal getNetRate() {
+        MathContext mc = new MathContext(2, RoundingMode.HALF_DOWN);
+        return  netAmount.divide(betAmount, mc);
+    }
 
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
