@@ -7,11 +7,7 @@ import com.dx.facade.texas.dto.DxTableInfoDto;
 import com.dx.facade.texas.dto.DxTableListDto;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
-import com.dx.facade.texas.resp.DxTableBaseInfoResp;
-import com.dx.facade.texas.resp.DxTableInfoListResp;
-import com.dx.facade.texas.resp.DxTableSummaryResp;
-import com.dx.facade.texas.resp.DxTableConfigRuleResp;
-import com.dx.facade.texas.resp.DxTableCountResp;
+import com.dx.facade.texas.resp.*;
 
 public interface IDxTableInfoService {
 
@@ -69,4 +65,8 @@ public interface IDxTableInfoService {
      */
     CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(Long tableId);
 
+    /**
+     * 根据牌桌ID获取俱乐部信息
+     */
+    CommonResp<DxTableClubInfoResp> getTableClubInfoById(Long tableId);
 }
