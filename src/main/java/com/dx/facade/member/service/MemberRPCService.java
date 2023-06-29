@@ -145,5 +145,18 @@ public interface MemberRPCService {
 	 */
 	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO) throws BizException;
 
+	/**
+	 *  游戏开关
+	 * @param memberIncomingSwitchParam
+	 * @return
+	 */
 	Boolean incomingSwitch(MemberIncomingSwitchParam memberIncomingSwitchParam);
+
+	/**
+	 *  修改密码
+	 * @param param
+	 * @return
+	 * @throws BizException
+	 */
+	CommonResp updateMemberAndProxyPassword() throws BizException;
 }
