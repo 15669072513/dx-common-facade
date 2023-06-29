@@ -373,6 +373,22 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_平台出入款报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_平台出入款报表";
     String FILE_NAME_会员游戏盈亏 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员游戏盈亏";
 
+    String FUNDS_会员投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员投注金额";
+    String FUNDS_会员有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员有效投注";
+    String FUNDS_会员流水纠正 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员流水纠正";
+    String FUNDS_代理总返点 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理总返点";
+
+    String FUNDS_日志ID = "EXCEL_HEAD_I18N_KEY.FUNDS_日志ID";
+    String FUNDS_用户账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_用户账号";
+    String FUNDS_登录时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_登录时间";
+    String FUNDS_登出时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_登出时间";
+    String FUNDS_登录IP = "EXCEL_HEAD_I18N_KEY.FUNDS_登录IP";
+    String FUNDS_IP地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_IP地址";
+    String FUNDS_GPS = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS";
+    String FUNDS_GPS地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS地址";
+    String FUNDS_设备名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_设备名称";
+    String FUNDS_操作系统 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作系统";
+
     String FILE_NAME_代理返点记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理返点记录";
     String FILE_NAME_总代佣金记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_总代佣金记录";
     String FILE_NAME_非总代佣金记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_非总代佣金记录";
