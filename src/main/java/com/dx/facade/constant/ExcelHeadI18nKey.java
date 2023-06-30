@@ -258,12 +258,21 @@ public interface ExcelHeadI18nKey {
 
 
     String REPORT_返点周期 = "EXCEL_HEAD_I18N_KEY.REPORT_返点周期"; //
+    String REPORT_返点状态 = "EXCEL_HEAD_I18N_KEY.REPORT_返点状态"; //
+    String REPORT_计算周期 = "EXCEL_HEAD_I18N_KEY.REPORT_计算周期"; //
+    String REPORT_团队总流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总流水"; //
+    String REPORT_流水纠正 = "EXCEL_HEAD_I18N_KEY.REPORT_流水纠正"; //
+    String REPORT_实际流水 = "EXCEL_HEAD_I18N_KEY.REPORT_实际流水"; //
     String REPORT_风控层级 = "EXCEL_HEAD_I18N_KEY.REPORT_风控层级"; //
     String REPORT_个人返点 = "EXCEL_HEAD_I18N_KEY.REPORT_个人返点"; //
+    String REPORT_活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_活跃人数"; //
+    String REPORT_有效活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_有效活跃人数"; //
     String REPORT_下级返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级返点"; //
     String REPORT_团队返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队返点"; //
     String REPORT_团队流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队流水"; //
     String REPORT_返点比例 = "EXCEL_HEAD_I18N_KEY.REPORT_返点比例"; //
+    String REPORT_团队总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总返点"; //
+    String REPORT_下级总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级总返点"; //
     String REPORT_发放时间 = "EXCEL_HEAD_I18N_KEY.REPORT_发放时间"; //
 
     String REPORT_审核订单号 = "EXCEL_HEAD_I18N_KEY.REPORT_审核订单号"; //
