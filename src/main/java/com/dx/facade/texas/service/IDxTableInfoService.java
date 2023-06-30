@@ -5,6 +5,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.texas.dto.DxTableInfoDto;
 import com.dx.facade.texas.dto.DxTableListDto;
+import com.dx.facade.texas.req.DxTableCountReq;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.DxTableBaseInfoResp;
@@ -54,10 +55,10 @@ public interface IDxTableInfoService {
   /**
    * 根据俱乐部id 获取牌桌个数
    *
-   * @param clubId
+   * @param req
    * @return
    */
-  CommonResp<DxTableCountResp> getTableCountByClubId(Long clubId);
+  CommonResp<DxTableCountResp> getTableCountByClubId(DxTableCountReq req);
 
   /**
    * 游戏牌桌解散（综合后台强制解散）
