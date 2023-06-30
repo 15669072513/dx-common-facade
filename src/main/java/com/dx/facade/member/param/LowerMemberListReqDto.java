@@ -47,4 +47,19 @@ public class LowerMemberListReqDto {
 	private Boolean isWeb = false;
 	@ApiModelProperty("身份1代理 0会员")
 	private Integer identityCode;
+
+	@ApiModelProperty("所属代理账号")
+	private String parentProxyName;
+
+	@ApiModelProperty("注册时间开始")
+	private String occurDtStart;
+
+	@ApiModelProperty("注册时间结束")
+	private String occurDtEnd;
+
+	@ApiModelProperty("最后登录时间-开始")
+	private String startDate;
+
+	@ApiModelProperty("最后登录时间-结束")
+	private String endDate;
 }
