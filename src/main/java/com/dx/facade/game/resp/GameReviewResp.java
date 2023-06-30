@@ -15,7 +15,7 @@ public class GameReviewResp implements Serializable  {
      *  手牌id
      */
     @ApiModelProperty("手牌id")
-    private Long handId;
+    private String handId;
 
     /**
      *  手牌id
