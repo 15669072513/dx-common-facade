@@ -47,5 +47,13 @@ public interface MerchantRpcService {
 	 * @return
 	 */
 	MerchantDTO getByMerchantId(Long id);
+
+	/**
+	 *  批量擦好像商户ID
+	 * @param merchantIds
+	 * @return
+	 */
 	List<MerchantDTO> getByMerchantIds(List<Long> merchantIds);
+
+	List<MerchantDTO> getByParentMerchantId(Long merchantIds);
 }
