@@ -6,6 +6,7 @@ import lombok.Data;
 
 @Data
 public class GameOrderRecordUserHandReq extends BaseRequest {
-    @ApiModelProperty("手牌id")
-    private Long handId;
+
+    @ApiModelProperty("手牌编码")
+    private String handCode;
 }

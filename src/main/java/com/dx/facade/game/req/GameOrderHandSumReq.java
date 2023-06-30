@@ -9,6 +9,6 @@ import java.util.List;
 @ApiModel("手牌列表汇总查询对象")
 @Data
 public class GameOrderHandSumReq {
-    @ApiModelProperty("手牌id")
-    private List<String> handIds;
+    @ApiModelProperty("手牌编码")
+    private List<String> handCodes;
 }
