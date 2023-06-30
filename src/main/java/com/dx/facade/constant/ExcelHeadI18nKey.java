@@ -258,12 +258,21 @@ public interface ExcelHeadI18nKey {
 
 
     String REPORT_返点周期 = "EXCEL_HEAD_I18N_KEY.REPORT_返点周期"; //
+    String REPORT_返点状态 = "EXCEL_HEAD_I18N_KEY.REPORT_返点状态"; //
+    String REPORT_计算周期 = "EXCEL_HEAD_I18N_KEY.REPORT_计算周期"; //
+    String REPORT_团队总流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总流水"; //
+    String REPORT_流水纠正 = "EXCEL_HEAD_I18N_KEY.REPORT_流水纠正"; //
+    String REPORT_实际流水 = "EXCEL_HEAD_I18N_KEY.REPORT_实际流水"; //
     String REPORT_风控层级 = "EXCEL_HEAD_I18N_KEY.REPORT_风控层级"; //
     String REPORT_个人返点 = "EXCEL_HEAD_I18N_KEY.REPORT_个人返点"; //
+    String REPORT_活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_活跃人数"; //
+    String REPORT_有效活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_有效活跃人数"; //
     String REPORT_下级返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级返点"; //
     String REPORT_团队返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队返点"; //
     String REPORT_团队流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队流水"; //
     String REPORT_返点比例 = "EXCEL_HEAD_I18N_KEY.REPORT_返点比例"; //
+    String REPORT_团队总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总返点"; //
+    String REPORT_下级总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级总返点"; //
     String REPORT_发放时间 = "EXCEL_HEAD_I18N_KEY.REPORT_发放时间"; //
 
     String REPORT_审核订单号 = "EXCEL_HEAD_I18N_KEY.REPORT_审核订单号"; //
@@ -280,9 +289,15 @@ public interface ExcelHeadI18nKey {
 
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
     String	FUNDS_上级代理_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_上级代理_代理层级";
+    String	FUNDS_俱乐部id = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部id";
+    String	FUNDS_身份 = "EXCEL_HEAD_I18N_KEY.FUNDS_身份";
+    String	FUNDS_创建人 = "EXCEL_HEAD_I18N_KEY.FUNDS_创建人";
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
     String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
+    String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
+    String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
+    String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
     String	FUNDS_注册终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_注册终端";
     String	FUNDS_最后登录时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录时间";
     String	FUNDS_最后登录IP = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录IP";
