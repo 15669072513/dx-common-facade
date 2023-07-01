@@ -54,6 +54,9 @@ public class MemberNetAmountDetailSummaryRespDTO {
      */
     @ApiModelProperty("会员盈利率")
     public BigDecimal getNetRate() {
+        if(betAmount==null||betAmount.compareTo(BigDecimal.ZERO)==0){
+            return BigDecimal.ZERO;
+        }
         return netAmount.divide(betAmount, 4, RoundingMode.DOWN);
     }
 }
