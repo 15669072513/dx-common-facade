@@ -494,7 +494,9 @@ public interface ExcelHeadI18nKey {
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
     String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
-    
+    String FUNDS_俱乐部名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部名称";
+    String FUNDS_房主 = "EXCEL_HEAD_I18N_KEY.FUNDS_房主";
+
     String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
     String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
     String REBATE_RATE = "EXCEL_HEAD_I18N_KEY.CONTRACT_返点比例";
