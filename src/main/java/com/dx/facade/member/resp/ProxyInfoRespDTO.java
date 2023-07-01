@@ -257,4 +257,11 @@ public class ProxyInfoRespDTO {
     
     @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
     private Integer manageClubLockStatus;
+    
+    @ApiModelProperty("是否存在待签约的返点契约标志 0-不存在 1-存在")
+    private Integer rebateSignStatus;
+    
+    @ApiModelProperty("是否存在待签约的佣金契约标志 0-不存在 1-存在")
+    private Integer commissionSignStatus;
+    
 }
