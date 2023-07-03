@@ -4,9 +4,11 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.texas.dto.DxTableInfoDto;
+import com.dx.facade.texas.dto.DxTableLimitDto;
 import com.dx.facade.texas.dto.DxTableListDto;
 import com.dx.facade.texas.req.DxTableCountReq;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
+import com.dx.facade.texas.req.DxTableInfoLimitReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.DxTableBaseInfoResp;
 import com.dx.facade.texas.resp.DxTableClubInfoResp;
@@ -99,4 +101,6 @@ public interface IDxTableInfoService {
      * @return
      */
   CommonResp<DxTableRobotResp> getTableRobotInfo(Long tableId) throws Exception;
+
+  CommonResp<DxTableLimitDto> getTableInfoByClubLimit(DxTableInfoLimitReq req);
 }
