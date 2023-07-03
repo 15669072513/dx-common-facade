@@ -12,10 +12,10 @@ public class UpdateClubAuditEnum {
      * 0-待处理 1-处理中，2-审核通过，3-审核拒绝
      */
     public enum AuditStatus {
-        待处理(0, "待处理", 1),
-        处理中(1, "处理中", 1),
-        审核拒绝(2, "审核拒绝", 0),
-        审核通过(3, "审核通过", 0)
+        WAIT_PROCESS(0, "待处理", 1),
+        PROCESSING(1, "处理中", 1),
+        REFUSE(2, "审核拒绝", 0),
+        PASS(3, "审核通过", 0)
         ;
         private Integer code;
         private String desc;
