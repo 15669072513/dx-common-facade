@@ -1,5 +1,8 @@
 package com.dx.facade.constant;
 
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.dx.annotation.I18nField;
+
 /**
  * 导出excel表头国际化资源key常量
  * @author neko
@@ -255,6 +258,13 @@ public interface ExcelHeadI18nKey {
     String REPORT_三方入款THB = "EXCEL_HEAD_I18N_KEY.REPORT_三方入款THB"; //
     String REPORT_会员 = "EXCEL_HEAD_I18N_KEY.REPORT_会员"; //
     String REPORT_代理 = "EXCEL_HEAD_I18N_KEY.REPORT_代理"; //
+
+    String REPORT_代理上分 = "EXCEL_HEAD_I18N_KEY.REPORT_代理上分"; //
+    String REPORT_代理上分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_代理上分次数"; //
+    String REPORT_代理下分 = "EXCEL_HEAD_I18N_KEY.REPORT_代理下分"; //
+    String REPORT_代理下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_代理下分次数"; //
+
+
 
 
     String REPORT_返点周期 = "EXCEL_HEAD_I18N_KEY.REPORT_返点周期"; //
