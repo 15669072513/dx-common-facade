@@ -184,6 +184,30 @@ public interface ExcelHeadI18nKey {
     String REPORT_总存款 = "EXCEL_HEAD_I18N_KEY.REPORT_总存款"; //
     String REPORT_总取款 = "EXCEL_HEAD_I18N_KEY.REPORT_总取款"; //
 
+    String REPORT_给会员上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分差值"; //
+    String REPORT_给会员上下分人数 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分人数"; //
+    String REPORT_给会员上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分次数"; //
+    String REPORT_给代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分差值"; //
+    String REPORT_给代理上下分人数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分人数"; //
+    String REPORT_给代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分次数"; //
+    String REPORT_被代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分差值"; //
+    String REPORT_被代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分次数"; //
+    String REPORT_佣金转中心钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转中心钱包总额"; //
+    String REPORT_佣金转额度钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转额度钱包总额"; //
+    String REPORT_返点调整 = "EXCEL_HEAD_I18N_KEY.REPORT_返点调整"; //
+    String REPORT_佣金钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金钱包余额"; //
+    String REPORT_额度钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_额度钱包余额"; //
+    String REPORT_全部代理人数 = "EXCEL_HEAD_I18N_KEY.REPORT_全部代理人数"; //
+    String REPORT_直属代理人数 = "EXCEL_HEAD_I18N_KEY.REPORT_直属代理人数"; //
+    String REPORT_全部会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_全部会员人数"; //
+    String REPORT_直属会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_直属会员人数"; //
+    String REPORT_转入会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_转入会员人数"; //
+    String REPORT_转出会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_转出会员人数"; //
+    String REPORT_结算周期 = "EXCEL_HEAD_I18N_KEY.REPORT_结算周期"; //
+    String REPORT_返点人数 = "EXCEL_HEAD_I18N_KEY.REPORT_返点人数"; //
+    String REPORT_实际返点 = "EXCEL_HEAD_I18N_KEY.REPORT_实际返点"; //
+    String REPORT_返点发放 = "EXCEL_HEAD_I18N_KEY.REPORT_返点发放"; //
+
     String REPORT_取款次数 = "EXCEL_HEAD_I18N_KEY.REPORT_取款次数"; //
     String REPORT_存取差 = "EXCEL_HEAD_I18N_KEY.REPORT_存取差"; //
     String REPORT_存款次数 = "EXCEL_HEAD_I18N_KEY.REPORT_存款次数"; //
