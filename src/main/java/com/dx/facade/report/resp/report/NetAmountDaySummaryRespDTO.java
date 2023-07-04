@@ -41,43 +41,43 @@ public class NetAmountDaySummaryRespDTO {
     @ApiModelProperty("其他调整=人工加减额中的其他调整额CNY")
     private BigDecimal artificialPatchAmount = BigDecimal.ZERO;
 
-    //@ApiModelProperty("投注额CNY")
-    //private BigDecimal betAmount = BigDecimal.ZERO;
+    @ApiModelProperty("投注额CNY")
+    private BigDecimal betAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("投注额VND")
     private BigDecimal betAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("投注额THB")
     private BigDecimal betAmountTHB = BigDecimal.ZERO;
 
-    //@ApiModelProperty("有效投注额CNY")
-    //private BigDecimal validBetAmount = BigDecimal.ZERO;
+    @ApiModelProperty("有效投注额CNY")
+    private BigDecimal validBetAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("有效投注额VND")
     private BigDecimal validBetAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("有效投注额THB")
     private BigDecimal validBetAmountTHB = BigDecimal.ZERO;
 
-    //@ApiModelProperty("输赢金额CNY")
-    //private BigDecimal netAmount = BigDecimal.ZERO;
+    @ApiModelProperty("输赢金额CNY")
+    private BigDecimal netAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("输赢金额VND")
     private BigDecimal netAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("输赢金额THB")
     private BigDecimal netAmountTHB = BigDecimal.ZERO;
 
-    //@ApiModelProperty("返水金额=会员返水+返水人工加减额CNY")
-    //private BigDecimal rebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty("返水金额=会员返水+返水人工加减额CNY")
+    private BigDecimal rebateAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("返水金额=会员返水+返水人工加减额VND")
     private BigDecimal rebateAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("返水金额=会员返水+返水人工加减额THB")
     private BigDecimal rebateAmountTHB = BigDecimal.ZERO;
 
-    //@ApiModelProperty("优惠金额=会员优惠+会员活动人工加减额+会员VIP福利CNY")
-    //private BigDecimal discountAmount = BigDecimal.ZERO;
+    @ApiModelProperty("优惠金额=会员优惠+会员活动人工加减额+会员VIP福利CNY")
+    private BigDecimal discountAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("优惠金额=会员优惠+会员活动人工加减额+会员VIP福利VND")
     private BigDecimal discountAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("优惠金额=会员优惠+会员活动人工加减额+会员VIP福利THB")
     private BigDecimal discountAmountTHB = BigDecimal.ZERO;
 
-    //@ApiModelProperty("其他调整=人工加减额中的其他调整额CNY")
-    //private BigDecimal artificialPatchAmount = BigDecimal.ZERO;
+    @ApiModelProperty("其他调整=人工加减额中的其他调整额CNY")
+    private BigDecimal artificialPatchAmountCNY = BigDecimal.ZERO;
     @ApiModelProperty("其他调整=人工加减额中的其他调整额VND")
     private BigDecimal artificialPatchAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("其他调整=人工加减额中的其他调整额THB")
