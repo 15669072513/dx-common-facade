@@ -83,8 +83,10 @@ public class NetAmountDaySummaryRespDTO {
     @ApiModelProperty("其他调整=人工加减额中的其他调整额THB")
     private BigDecimal artificialPatchAmountTHB = BigDecimal.ZERO;
 
-    @ApiModelProperty("净盈亏CNY")
+    @ApiModelProperty("净盈亏")
     private BigDecimal netProfit = BigDecimal.ZERO;
+    @ApiModelProperty("净盈亏CNY")
+    private BigDecimal netProfitCNY = BigDecimal.ZERO;
     @ApiModelProperty("净盈亏VND")
     private BigDecimal netProfitVND = BigDecimal.ZERO;
     @ApiModelProperty("净盈亏THB")
@@ -96,6 +98,16 @@ public class NetAmountDaySummaryRespDTO {
      * @return
      */
     public BigDecimal getNetProfit() {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(rebateAmount)
+                || Objects.isNull(artificialPatchAmount)) {
+            return null;
+        }
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+    }
+
+    public BigDecimal getNetProfiCNY() {
         if (Objects.isNull(netAmount)
                 || Objects.isNull(discountAmount)
                 || Objects.isNull(rebateAmount)
