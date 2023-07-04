@@ -83,6 +83,8 @@ public class NetAmountDaySummaryRespDTO {
     @ApiModelProperty("其他调整=人工加减额中的其他调整额THB")
     private BigDecimal artificialPatchAmountTHB = BigDecimal.ZERO;
 
+    @ApiModelProperty("净盈亏")
+    private BigDecimal netProfit = BigDecimal.ZERO;
     @ApiModelProperty("净盈亏CNY")
     private BigDecimal netProfitCNY = BigDecimal.ZERO;
     @ApiModelProperty("净盈亏VND")
@@ -105,19 +107,29 @@ public class NetAmountDaySummaryRespDTO {
         return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
     }
 
+    public BigDecimal getNetProfiCNY() {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(rebateAmount)
+                || Objects.isNull(artificialPatchAmount)) {
+            return null;
+        }
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+    }
+
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
      *
      * @return
      */
     public BigDecimal getNetProfitCNY() {
-        if (Objects.isNull(netAmountCNY)
-                || Objects.isNull(discountAmountCNY)
-                || Objects.isNull(rebateAmountCNY)
-                || Objects.isNull(artificialPatchAmountCNY)) {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(rebateAmount)
+                || Objects.isNull(artificialPatchAmount)) {
             return null;
         }
-        return netAmountCNY.add(rebateAmountCNY).add(discountAmountCNY).add(artificialPatchAmountCNY);
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
     }
 
     /**
