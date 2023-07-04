@@ -105,6 +105,16 @@ public class NetAmountDaySummaryRespDTO {
         return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
     }
 
+    public BigDecimal getNetProfiCNY() {
+        if (Objects.isNull(netAmount)
+                || Objects.isNull(discountAmount)
+                || Objects.isNull(rebateAmount)
+                || Objects.isNull(artificialPatchAmount)) {
+            return null;
+        }
+        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+    }
+
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
      *
