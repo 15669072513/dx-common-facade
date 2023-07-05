@@ -33,12 +33,6 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
-    @ApiModelProperty("房主ID")
-    private Long holderId;
-
-    @ApiModelProperty("房主名称")
-    private String holderName;
-
     @ApiModelProperty("牌桌类型 2001：德州局 2002：短牌局")
     private Long tableType;
 
@@ -86,4 +80,10 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private List<Integer> status;
+
+    @ApiModelProperty("房主ID")
+    private Long holderId;
+
+    @ApiModelProperty("房主名称")
+    private String holderName;
 }
