@@ -20,13 +20,13 @@ public class GameNetAmountSummaryRespDTO {
     protected Long betCount = 0L;
 
     @ApiModelProperty("投注金额")
-    protected BigDecimal betAmount;
+    protected BigDecimal betAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额")
-    protected BigDecimal validBetAmount;
+    protected BigDecimal validBetAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额")
-    protected BigDecimal netAmount;
+    protected BigDecimal netAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额CNY")
     protected BigDecimal betAmountCNY = BigDecimal.ZERO;
