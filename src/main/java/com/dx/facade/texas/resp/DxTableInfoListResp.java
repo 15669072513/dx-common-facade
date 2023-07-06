@@ -122,6 +122,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("会员带入次数")
     private Integer userBringCount;
 
+    @ApiModelProperty("进行时间（min）")
+    private Integer onlineTime;
+
     @ApiModelProperty("创建时间")
     private Long createdAt;
 

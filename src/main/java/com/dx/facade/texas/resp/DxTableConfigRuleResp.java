@@ -147,4 +147,7 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;
+
+    @ApiModelProperty("进行时间（min）")
+    private Integer onlineTime;
 }
