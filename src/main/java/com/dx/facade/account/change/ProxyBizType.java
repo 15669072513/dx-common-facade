@@ -11,6 +11,8 @@ import java.util.List;
  */
 public enum ProxyBizType implements IBizType {
 
+    //佣金钱包钱包额度钱包 佣金钱包可以转中心钱包
+
     //代理钱包
     deposit(1, "代理存款", "6,7"),
     deposit_for_member(2, "代会员存款", "6,7"),
@@ -23,7 +25,7 @@ public enum ProxyBizType implements IBizType {
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
 
-    commission_to_quota(11, "佣金转额度钱包", "6"),
+    //commission_to_quota(11, "佣金转额度钱包", "6"),
     up_score(12, "上分", "7"),
     down_score(13, "下分", "7"),
 
@@ -48,8 +50,10 @@ public enum ProxyBizType implements IBizType {
 
     //6-佣金钱包
     undertake_rebate(36, "流水返点", "6"),
-    //commission_to_quota(38, "佣金转额度钱包-支出", "6"),
-    //commission_be_transfer_to_quota(41, "佣金转额度钱包-收入", "6"),
+    //支出
+    commission_to_quota(38, "佣金转额度钱包", "6"),
+    //收入
+    commission_be_transfer_to_quota(41, "佣金转额度钱包", "7"),
     commission_rebate_add(39, "返点增加调整", "6"),
     commission_rebate_sub(40, "返点扣除调整", "6"),
     //7-额度钱包
