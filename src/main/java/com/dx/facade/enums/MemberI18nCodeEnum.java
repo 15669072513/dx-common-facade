@@ -24,6 +24,7 @@ public enum MemberI18nCodeEnum implements I18nEnum {
     更新代理QQ和flygram失败(300078), // 更新代理QQ和flygram失败(300078, "更新代理QQ和flygram失败"),
     ACCOUNT_DOES_NOT_EXIST(310058), // ACCOUNT_DOES_NOT_EXIST(310058, "账号不存在"),
     PROXY_NOT_EXISTS(10018), // PROXY_NOT_EXISTS(10018, "代理不存在"),
+    MERCHANT_NOT_EXISTS(180012),
     NO_MEMBER_INFO(0), // NO_MEMBER_INFO(0, "没有相关会员信息"),
     GET_MERCHANT_GAME_RATE_ERROR(310025), // GET_MERCHANT_GAME_RATE_ERROR(310025, "获取场馆费率信息异常"),
     CONTRACT_REFRESH_PAGE(310072), // CONTRACT_REFRESH_PAGE(310072, "不是最新的契约，请重新刷新页面"),
