@@ -46,7 +46,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
-    private Long clubName;
+    private String clubName;
 
     @ApiModelProperty("创建开始时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
