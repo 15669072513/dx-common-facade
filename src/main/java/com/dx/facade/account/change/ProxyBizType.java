@@ -24,8 +24,8 @@ public enum ProxyBizType implements IBizType {
     to_center(8, "佣金转中心钱包", "6"),
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
-
-    //commission_to_quota(11, "佣金转额度钱包", "6"),
+    //此账变后期废弃
+    commission_to_quota(11, "佣金转额度钱包", "6"),
     up_score(12, "上分", "7"),
     down_score(13, "下分", "7"),
 
@@ -51,9 +51,9 @@ public enum ProxyBizType implements IBizType {
     //6-佣金钱包
     undertake_rebate(36, "流水返点", "6"),
     //支出
-    commission_to_quota(38, "佣金转额度钱包", "6"),
+    commission_to_quota_out(38, "佣金转额度钱包", "6"),
     //收入
-    commission_be_transfer_to_quota(41, "佣金转额度钱包", "7"),
+    commission_to_quota_in(41, "佣金转额度钱包", "7"),
     commission_rebate_add(39, "返点增加调整", "6"),
     commission_rebate_sub(40, "返点扣除调整", "6"),
     //7-额度钱包
