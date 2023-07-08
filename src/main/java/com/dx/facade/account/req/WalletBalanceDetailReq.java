@@ -46,6 +46,9 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("俱乐部id")
     private Long clubId;
 
+    @ApiModelProperty(value = "订单号")
+    private String eventId;
+
     @ApiModelProperty("账变ID")
     private String changeTypeCode;
 
