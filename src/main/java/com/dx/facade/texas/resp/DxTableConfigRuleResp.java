@@ -133,8 +133,9 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("手牌数")
     private Long handCount;
+
     @ApiModelProperty("牌桌总抽水")
-    private BigDecimal pumpingAmountTotal;
+    private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
