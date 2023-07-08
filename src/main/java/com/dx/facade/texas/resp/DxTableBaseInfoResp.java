@@ -112,4 +112,7 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("超时（min）自动解散房间")
+    private Integer gameOvertime;
 }

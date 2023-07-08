@@ -17,6 +17,11 @@ public class GameOrderRecordUserVenueResp implements Serializable {
     * 会员账号
     */
    @ApiModelProperty("会员账号")
+   private String playerName;
+   /**
+    * 会员账号
+    */
+   @ApiModelProperty("会员账号")
    private String userName;
    /**
     * 场馆名称
@@ -33,18 +38,39 @@ public class GameOrderRecordUserVenueResp implements Serializable {
     */
    @ApiModelProperty("状态")
    private Integer status;
-
+   /**
+    * 状态
+    */
+   @ApiModelProperty("状态")
+   private Integer betStatus;
    /**
     * 投注金额
     */
    @ApiModelProperty("投注金额")
    private Long betChip;
+
+
+   /**
+    * 投注金额
+    */
+   @ApiModelProperty("投注金额")
+   private Long betAmount;
    /**
     * 有效投注
     */
    @ApiModelProperty("有效投注")
    private String pumpingChip;
+   /**
+    * 有效投注
+    */
+   @ApiModelProperty("有效投注")
+   private String validBetAmount;
 
+   /**
+    *  游戏盈亏
+    */
+   @ApiModelProperty("游戏盈亏")
+   private BigDecimal netAmount;
    /**
     *  游戏盈亏
     */

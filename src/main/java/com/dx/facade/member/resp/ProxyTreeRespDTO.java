@@ -48,6 +48,11 @@ public class ProxyTreeRespDTO {
 	@ApiModelProperty(value = "代理层级路径")
 	private String proxyPath;
 	
+	@ApiModelProperty(value = "代理等级")
+	private Integer proxyLevel;
+	
+    @ApiModelProperty("代理层级名称")
+    private String proxyLevelName;
 	
 	
 	public List<ProxyTreeRespDTO> childList;

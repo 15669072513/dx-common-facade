@@ -13,6 +13,8 @@ public class GameOrderUserSettlementDetailByProxyResp {
     private String userId;
     @ApiModelProperty("会员账号")
     private String userName;
+
+    private String playerName;
     @ApiModelProperty("会员昵称")
     private String nickName;
     @ApiModelProperty("开始时间")

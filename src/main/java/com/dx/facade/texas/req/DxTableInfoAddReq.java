@@ -106,4 +106,7 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("牌桌开始时间")
     private LocalDateTime tableBeginTime;
+
+    @ApiModelProperty("进行时间（min）")
+    private Integer onlineTime;
 }
