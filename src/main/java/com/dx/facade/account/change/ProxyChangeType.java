@@ -26,22 +26,20 @@ public enum ProxyChangeType implements IChangeType {
     withdraw(13, "代理取款", "7"),
     withdraw_fail(14, "取款失败", "7"),
     withdraw_back(15, "代理取款(后台)", "7"),
-    to_center(16, "佣金转回", "8"),
     platform_transfer_in(17, "平台转入佣金", "9"),
     transfer_in_by_cycle(18, "上级转入佣金", "9"),
     transfer_out_by_cycle(19, "转给下级佣金", "9"),
     commission_add(20, "佣金增加调整", "9"),
     commission_sub(21, "佣金扣除调整", "9"),
+
+    to_center(16, "佣金转回", "8"),
     rebate(22, "流水返点", "10"),
     rebate_add(23, "返点增加调整", "10"),
     rebate_sub(24, "返点扣除调整", "10"),
-
-
     officer_proxy_up_score(25, "官方给代理上分", "12"),
     proxy_be_up_score(26, "代理被上级上分", "12"),
     proxy_to_child_up_score(27, "代理给下级上分", "12"),
     proxy_to_mem_up_score(28, "代理给会员上分", "12"),
-
     officer_proxy_down_score(29, "官方给代理下分", "13"),
     proxy_be_down_score(30, "代理被上级下分", "13"),
     proxy_to_child_down_score(31, "代理给下级下分", "13"),
@@ -166,12 +164,20 @@ public enum ProxyChangeType implements IChangeType {
      *
      * @return
      */
-    public static List<ProxyChangeType> getProxyChangeTypeList() {
-        return Arrays.asList(ProxyChangeType.officer_proxy_up_score, ProxyChangeType.proxy_be_up_score, ProxyChangeType.proxy_to_child_up_score,
-                ProxyChangeType.proxy_to_mem_up_score, ProxyChangeType.officer_proxy_down_score,
-                ProxyChangeType.proxy_be_down_score, ProxyChangeType.proxy_to_child_down_score, ProxyChangeType.proxy_to_mem_down_score,
-                ProxyChangeType.to_center, ProxyChangeType.commission_to_quota, ProxyChangeType.rebate,
-                ProxyChangeType.rebate_add, ProxyChangeType.rebate_sub);
+    public static ProxyChangeType[] getProxyChangeTypeList() {
+        return new ProxyChangeType[]{to_center,
+                rebate,
+                rebate_add,
+                rebate_sub,
+                officer_proxy_up_score,
+                proxy_be_up_score,
+                proxy_to_child_up_score,
+                proxy_to_mem_up_score,
+                officer_proxy_down_score,
+                proxy_be_down_score,
+                proxy_to_child_down_score,
+                proxy_to_mem_down_score,
+                commission_to_quota};
     }
 
 
