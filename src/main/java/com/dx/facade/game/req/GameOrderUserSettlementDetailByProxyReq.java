@@ -18,14 +18,10 @@ public class GameOrderUserSettlementDetailByProxyReq extends BaseRequest {
     private String userName;
     @ApiModelProperty("代理id")
     private Long proxyId;
-    @ApiModelProperty("手牌开始-起始时间")
-    private String hStartTime;
-    @ApiModelProperty("手牌开始-结束时间")
-    private String hEndTime;
+    @ApiModelProperty("牌桌-起始时间")
+    private String tableStartDate;
+    @ApiModelProperty("牌桌-结束时间")
+    private String tableEndDate;
 
-    @ApiModelProperty("手牌结束-起始时间")
-    private String h2StartTime;
-    @ApiModelProperty("手牌结束-结束时间")
-    private String h2EndTime;
 
 }
