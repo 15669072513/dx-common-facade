@@ -14,6 +14,8 @@ public class RedisKey {
 
     private static final String PROXY_LOGIN_LOCK_KEY = "AUTH:CLIENT:PROXY:LOGIN:LOCK";
 
+    public static String GAME_ORDER_GAME_OVER_INFO = "GAME:ORDER:GAME:OVER:INFO";
+
     public static String getProxyLoginLockKey(Long proxyId) {
         return PROXY_LOGIN_LOCK_KEY + ":" + proxyId;
     }

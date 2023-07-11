@@ -17,6 +17,8 @@ import java.time.LocalDateTime;
 public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("注单id")
     private String id;
+
+    private Long proxyId;
     @ApiModelProperty("游戏账号")
     private String playerName;
     @ApiModelProperty("游戏名称")
@@ -40,5 +42,12 @@ public class GameOrderRecordReq extends BaseRequest {
 
     @ApiModelProperty(value = "结算结束时间 yyyy-MM-dd HH:mm:ss")
     private String settlementEndTime;
+
+
+    @ApiModelProperty(value = "牌桌开始时间 yyyy-MM-dd HH:mm:ss")
+    private String tableStartTime;
+
+    @ApiModelProperty(value = "牌桌结束时间 yyyy-MM-dd HH:mm:ss")
+    private String tableEndTime;
 
 }

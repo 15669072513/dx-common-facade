@@ -529,6 +529,9 @@ public interface ExcelHeadI18nKey {
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
     String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
     String FUNDS_房主 = "EXCEL_HEAD_I18N_KEY.FUNDS_房主";
+    
+    String FUNDS_总有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_总有效投注";
+    String FUNDS_总牌桌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌抽水";
 
     String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
     String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
@@ -569,5 +572,7 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
+    
+    String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
 
 }

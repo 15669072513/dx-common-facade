@@ -1,16 +1,18 @@
 package com.dx.facade.account.req;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.dx.facade.enums.ConstantEnums;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Data
+@ApiModel(value = "代理 帐变记录入参", description = "代理 帐变记录入参")
 public class WalletBalanceDetailReq implements Serializable {
+
+    @ApiModelProperty("所属商户，支持多个")
+    private List<Long> merchantIds;
 
     @ApiModelProperty("起始时间")
     private Long startTime;
@@ -24,16 +26,9 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("发生科目/调整类型")
     private String subject;
 
-    /**
-     * @see com.dx.facade.account.change.WalletType
-     */
-    @ApiModelProperty("钱包类型")
+    @ApiModelProperty("钱包类型, 详细见WalletType枚举类型")
     private Integer walletType;
-
-    /**
-     * @see com.dx.facade.account.change.WalletType
-     */
-    @ApiModelProperty("钱包类型列表。WalletType")
+    @ApiModelProperty("钱包类型, 详细见WalletType枚举类型")
     private List<Integer> walletTypeList;
 
     @ApiModelProperty("用户类型，1=会员，2=代理")
@@ -51,17 +46,27 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("俱乐部id")
     private Long clubId;
 
+    @ApiModelProperty(value = "订单号")
+    private String eventId;
+
     @ApiModelProperty("账变ID")
     private String changeTypeCode;
 
     @ApiModelProperty("上下分订单号")
     private String upDownOrderNo;
 
-    @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
+    @ApiModelProperty("业务类型。会员枚举MemberBizType ，代理枚举ProxyBizType")
+    private Integer bizType;
+    @ApiModelProperty("业务类型。会员枚举MemberBizType ，代理枚举ProxyBizType")
+    private List<Integer> bizTypeList;
+    @ApiModelProperty("账变类型。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private Integer changeType;
-
     @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private List<Integer> changeTypeList;
+    @ApiModelProperty("收支类型，TransType")
+    private Integer transType;
+    @ApiModelProperty("app类型")
+    private Integer appType;
 
     @ApiModelProperty("代理层级路径")
     private String proxyPath;

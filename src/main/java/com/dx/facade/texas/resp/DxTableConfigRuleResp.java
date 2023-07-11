@@ -1,14 +1,10 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 @Data
 @ApiOperation("牌桌详情")
@@ -137,13 +133,22 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("手牌数")
     private Long handCount;
+
     @ApiModelProperty("牌桌总抽水")
-    private BigDecimal pumpingAmountTotal;
+    private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
+
     @ApiModelProperty("游戏名称")
     private String gameTypeName;
+
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
+
+    @ApiModelProperty("超时（min）自动解散房间")
+    private Integer gameOvertime;
+
+    @ApiModelProperty("进行时间（min）")
+    private Integer onlineTime;
 }

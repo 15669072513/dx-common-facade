@@ -211,4 +211,25 @@ public class GameOrderRecordDto implements Serializable {
      * 庄家座位号
      */
     private Integer button;
+    /**
+     * 牌桌创建时间
+     */
+    private Long tableCreateDate;
+    /**
+     * 牌桌第一局开始时间
+     */
+    private Long tableBeginDate;
+    /**
+     * 牌桌结束时间
+     */
+    private Long tableGameOverDate;
+    /**
+     * 牌桌解散类型
+     * 0强制解散 1房间内解散 2正常结束
+     */
+    private Integer tableGameOverType;
+    /**
+     * 最大底池
+     */
+    private BigDecimal maxPot;
 }

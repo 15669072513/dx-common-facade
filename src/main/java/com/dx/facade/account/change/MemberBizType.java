@@ -1,5 +1,9 @@
 package com.dx.facade.account.change;
 
+/**
+ * 会员业务账变类型
+ * @author Administrator
+ */
 public enum MemberBizType implements IBizType {
     deposit(1, "会员存款", "1"),
 //    staff_deposit_for_member(2, "代客充值", "1"),
@@ -28,10 +32,12 @@ public enum MemberBizType implements IBizType {
         this.accountCodes = accountCodes;
     }
 
+    @Override
     public Integer code(){
         return code;
     }
 
+    @Override
     public String desc(){
         return desc;
     }
