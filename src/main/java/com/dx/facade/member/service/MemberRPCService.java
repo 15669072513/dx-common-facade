@@ -28,6 +28,13 @@ public interface MemberRPCService {
     CommonResp<List<MemberInfoRespDTO>> selectListByUserName(Long merchantId, List<String> userName);
 
     CommonResp<MemberInfoRespDTO> selectMemberById(Long memberId);
+    /**
+     * 根据userId列表批量查询用户信息
+     * 
+     * @param memberIds
+     * @return
+     */
+    CommonResp<List<MemberInfoRespDTO>> selectMemberByIds(List<Long> memberIds);
 
     CommonResp<MemberInfoRespDTO>  selectMemberByOne(MemberParamDTO paramDTO);
 
