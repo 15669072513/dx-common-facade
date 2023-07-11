@@ -8,6 +8,7 @@ import com.dx.facade.game.dto.game.GameOrderUserSettlementRespDto;
 import com.dx.facade.game.dto.game.UserValiBetAmountRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
+import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 /**
  * 玩家注单查询
@@ -25,7 +26,7 @@ public interface GameOrderEsRpcService {
     /**
      * 战绩列表详情
      */
-    CommonResp<PageResp<GameOrderTableDetailSumResp, GameOrderTableDetailSumResp>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
+    CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord, GameOrderRecordDetail.GameOrderRecordSummary>> queryGameOrderTableDetailSumList(GameOrderTableDetailSumReq req);
 
     /**
      * 盈亏总额
