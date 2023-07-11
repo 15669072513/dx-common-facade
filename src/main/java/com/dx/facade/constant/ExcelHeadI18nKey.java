@@ -553,6 +553,10 @@ public interface ExcelHeadI18nKey {
     String FUNDS_打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_打牌抽水";
     String FUNDS_手牌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌盈亏";
     String FUNDS_公牌信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_公牌信息";
+    String FUNDS_荷官位 = "EXCEL_HEAD_I18N_KEY.FUNDS_荷官位";
+    String FUNDS_小盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_小盲位";
+    String FUNDS_大盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_大盲位";
+
 
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
