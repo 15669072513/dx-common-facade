@@ -21,6 +21,8 @@ public class GameOrderRecordDetail implements Serializable {
 
     @Data
     public static class GameOrderRecordSummary {
+        @ApiModelProperty("第一名用户id")
+        private Long userId;
         @ApiModelProperty("牌桌id")
         private Long tableId;
 
