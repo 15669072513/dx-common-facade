@@ -69,4 +69,18 @@ public class ProxyNetAmountMonthSummaryRespDTO {
     @ApiModelProperty("会员总盈亏")
     private BigDecimal totalNetAmount;
 
+
+
+    @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
+    private BigDecimal directBetAmount;
+
+    @ApiModelProperty(value = "直属会员有效投注", example = "1500.00")
+    private BigDecimal directValidBetAmount;
+
+    @ApiModelProperty(value = "直属会员总输赢/投注盈亏", example = "1500.00")
+    private BigDecimal directNetAmount;
+
+    @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
+    private BigDecimal directProfitAmount;
+
 }

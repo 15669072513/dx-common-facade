@@ -4,6 +4,7 @@ import com.dx.util.Md5Util;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
+import java.math.BigDecimal;
 import java.util.Objects;
 
 @Slf4j
@@ -44,14 +45,17 @@ public class PasswordUtil {
     }
 
     public static void main(String[] args) {
-        String salt = geneSalt(878597836592201781L,"action1");
-        System.out.println("salt:"+salt);
-        System.out.println("password:"+Md5Util.getMD5("abc123456"));
-        //String newpassword = genePassword(salt, Md5Util.getMD5("abc1234567"));
-        String newpassword = genePassword(salt, Md5Util.getMD5("123456"));
-        System.out.println("password:"+newpassword);
-        String storedPwd = "E4133EB9E49798C06B3F9F49E3C75F7E";
-        System.out.println(newpassword.equals(storedPwd));
+//        String salt = geneSalt(878597836592201781L,"dev02");
+//        System.out.println("salt:"+salt);
+//        System.out.println("password:"+Md5Util.getMD5("abc123456"));
+//        //String newpassword = genePassword(salt, Md5Util.getMD5("abc1234567"));
+//        String newpassword = genePassword(salt, Md5Util.getMD5("dev02123"));
+//        System.out.println("password:"+newpassword);
+//        String storedPwd = "0C45305D9019BF429163F7CB59EA8557";
+//        System.out.println(newpassword.equals(storedPwd));
+        BigDecimal b1 = new BigDecimal("0.001");
+        BigDecimal b2 = new BigDecimal("0.001");
+        System.out.println(b1.compareTo(b2)!=Integer.valueOf(0));
         
     }
 }
