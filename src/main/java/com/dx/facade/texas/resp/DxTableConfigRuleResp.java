@@ -106,8 +106,8 @@ public class DxTableConfigRuleResp {
     @ApiModelProperty("抽水比例配置")
     private BigDecimal rake;
 
-    /** 人员上线 */
-    @ApiModelProperty("人员上线")
+    /** 人员上限 */
+    @ApiModelProperty("人员上限")
     private Integer upperLimit;
 
     @ApiModelProperty("同时开牌桌上限")
