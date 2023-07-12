@@ -52,7 +52,7 @@ public class MemberLoginParamDTO implements BaseParmDTO, Serializable {
 
     /** 客户端类型 */
     @ApiModelProperty(value = "客户端类型")
-    @NotNull(message = "客户端类型不能为空")
+    //@NotNull(message = "客户端类型不能为空")
     private Integer clientType;
 
     /** 注册IP */
@@ -63,6 +63,10 @@ public class MemberLoginParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty(value = "终端设备号（6-100）")
     @Length(min=6,max = 100,message = "终端设备号长度范围6-100")
     private String deviceNo;
+    
+    /** MAC地址 */
+    @ApiModelProperty(value = "MAC地址")
+    private String mac;
 
     /** 登录网址 */
     @ApiModelProperty(value = "登录网址 (128)")
@@ -80,6 +84,10 @@ public class MemberLoginParamDTO implements BaseParmDTO, Serializable {
     /** 设备版本 */
     @ApiModelProperty(value = "设备版本")
     private String deviceVersion;
+    
+    /** 是否允许多端登录 1：允许 0：不允许 */
+    @ApiModelProperty(value = "是否允许多端登录 1：允许 0：不允许")
+    private Integer isMultiple;
 
     @Override
     public void check() {
