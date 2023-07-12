@@ -56,6 +56,14 @@ public class VerificationCodeAndLoginParamDTO implements BaseParmDTO{
 
     @ApiModelProperty(value = "设备版本")
     private String deviceVersion;
+    
+    /** 是否允许多端登录 1：允许 0：不允许 */
+    @ApiModelProperty(value = "是否允许多端登录 1：允许 0：不允许")
+    private Integer isMultiple;
+    
+    /** MAC地址 */
+    @ApiModelProperty(value = "MAC地址")
+    private String mac;
 
     @Override
     public void check() {
