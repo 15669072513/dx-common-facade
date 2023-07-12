@@ -39,6 +39,7 @@ public interface GameOrderEsRPCManagerService {
 
     /**
      *  会员金额相关汇总
+     *  代理后台会员列表
      */
     CommonResp<GameOrderUserSumByUserIdRespDto> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
 

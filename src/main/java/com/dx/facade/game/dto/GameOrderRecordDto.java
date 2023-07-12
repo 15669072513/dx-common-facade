@@ -224,6 +224,11 @@ public class GameOrderRecordDto implements Serializable {
      */
     private Long tableGameOverDate;
     /**
+     * 牌桌解散类型
+     * 0强制解散 1房间内解散 2正常结束
+     */
+    private Integer tableGameOverType;
+    /**
      * 最大底池
      */
     private BigDecimal maxPot;

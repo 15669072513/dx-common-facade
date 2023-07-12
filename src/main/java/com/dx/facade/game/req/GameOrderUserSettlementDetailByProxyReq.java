@@ -28,4 +28,5 @@ public class GameOrderUserSettlementDetailByProxyReq extends BaseRequest {
     @ApiModelProperty("手牌结束-结束时间")
     private String h2EndTime;
 
+
 }

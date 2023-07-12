@@ -88,5 +88,9 @@ public class QueryByNameParam {
     private Integer appId;
     @ApiModelProperty(value = "登录站点, 1:OB旗舰,2:美播真人")
     private Integer loginAppId;
+    
+    /** MAC地址 */
+    @ApiModelProperty(value = "MAC地址")
+    private String mac;
 
 }
