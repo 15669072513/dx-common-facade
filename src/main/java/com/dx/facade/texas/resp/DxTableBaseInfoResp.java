@@ -120,4 +120,10 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;
+
+    @ApiModelProperty("牌桌最大人数")
+    private Integer maxSeats;
+
+    @ApiModelProperty("自动开局人数")
+    private Integer autoStartUserCounts;
 }
