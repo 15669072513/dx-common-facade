@@ -4,12 +4,14 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @ApiOperation("牌桌详情")
-public class DxTableConfigRuleResp {
+public class DxTableConfigRuleResp implements Serializable {
 
+    private static final long serialVersionUID = -2030176995976248512L;
     /***
      * 房主id
      */
@@ -151,4 +153,10 @@ public class DxTableConfigRuleResp {
 
     @ApiModelProperty("进行时间（min）")
     private Integer onlineTime;
+
+    @ApiModelProperty("实际最小带入的筹码")
+    private BigDecimal realMinBringChipScore;
+
+    @ApiModelProperty("实际最大带入的筹码")
+    private BigDecimal realMaxBringChipScore;
 }
