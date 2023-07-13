@@ -152,15 +152,9 @@ public class DxTableConfigRuleResp {
     @ApiModelProperty("进行时间（min）")
     private Integer onlineTime;
 
-    /**
-     * 实际最小带入的筹码 = 最小带入筹码 * 大盲
-     */
     @ApiModelProperty("实际最小带入的筹码")
     private BigDecimal realMinBringChipScore;
 
-    /**
-     * 实际最大带入的筹码 = 最大带入筹码 * 大盲
-     */
     @ApiModelProperty("实际最大带入的筹码")
     private BigDecimal realMaxBringChipScore;
 }
