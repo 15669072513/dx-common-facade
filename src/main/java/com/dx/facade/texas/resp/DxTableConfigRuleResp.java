@@ -155,12 +155,12 @@ public class DxTableConfigRuleResp {
     /**
      * 实际最小带入的筹码 = 最小带入筹码 * 大盲
      */
-    @ApiModelProperty("最小带入的筹码")
+    @ApiModelProperty("实际最小带入的筹码")
     private BigDecimal realMinBringChipScore;
 
     /**
      * 实际最大带入的筹码 = 最大带入筹码 * 大盲
      */
-    @ApiModelProperty("最大带入的筹码")
+    @ApiModelProperty("实际最大带入的筹码")
     private BigDecimal realMaxBringChipScore;
 }
