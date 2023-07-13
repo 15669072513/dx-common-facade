@@ -53,13 +53,13 @@ public class AddProxyClubParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("管理员名称")
     private String administratorName;
     
-    /** 人员上线 */
-    @ApiModelProperty("人员上线")
-    private Integer upperLimit;
-    
     /** 会员人数 */
     @ApiModelProperty("会员人数")
     private Integer membership;
+    
+    /** 人员上线 */
+    @ApiModelProperty("人员上线")
+    private Integer upperLimit;
     
     @ApiModelProperty("同时开牌桌上限")
     private Integer cardTableLimit;

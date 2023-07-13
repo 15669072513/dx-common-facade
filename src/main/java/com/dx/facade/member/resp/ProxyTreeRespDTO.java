@@ -2,7 +2,6 @@ package com.dx.facade.member.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.google.common.collect.Lists;
-import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -53,7 +52,6 @@ public class ProxyTreeRespDTO {
 	
     @ApiModelProperty("代理层级名称")
     private String proxyLevelName;
-	
 	
 	public List<ProxyTreeRespDTO> childList;
 	private boolean hasParent;
