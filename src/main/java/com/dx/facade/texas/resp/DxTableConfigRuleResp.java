@@ -4,12 +4,14 @@ import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 @Data
 @ApiOperation("牌桌详情")
-public class DxTableConfigRuleResp {
+public class DxTableConfigRuleResp implements Serializable {
 
+    private static final long serialVersionUID = -2030176995976248512L;
     /***
      * 房主id
      */
