@@ -24,7 +24,7 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("牌局主键，自增")
-    private Long handId;
+    private String handId;
 
     @ApiModelProperty("牌局code，业务生成")
     private String handCode;
