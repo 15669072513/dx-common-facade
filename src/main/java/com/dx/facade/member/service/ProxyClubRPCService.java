@@ -72,7 +72,7 @@ public interface ProxyClubRPCService {
      * @param pageReq
      * @return
      */
-	PageResp<ProxyClubRespDTO, ?> selectProxyClubListPage(PageReq<QueryProxyClubParamDTO> pageReq);
+    CommonResp<PageResp<ProxyClubRespDTO, ?>> selectProxyClubListPage(PageReq<QueryProxyClubParamDTO> pageReq);
 	
 	/**
 	 * 验证俱乐部名称是否已存在
