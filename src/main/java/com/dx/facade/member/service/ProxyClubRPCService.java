@@ -9,6 +9,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddProxyClubParamDTO;
 import com.dx.facade.member.param.CheckClubNameParamDTO;
 import com.dx.facade.member.param.CheckClubOwnerParamDTO;
+import com.dx.facade.member.param.ProxyClubConfigParamDTO;
 import com.dx.facade.member.param.QueryProxyClubParamDTO;
 import com.dx.facade.member.param.UpdateProxyClubParamDTO;
 import com.dx.facade.member.resp.ProxyClubRespDTO;
@@ -88,5 +89,10 @@ public interface ProxyClubRPCService {
 	 */
 	CommonResp<Boolean> checkClubOwner(CheckClubOwnerParamDTO paramDTO);
     
-    
+    /**
+     * 更新代理俱乐部通用配置
+     * 
+     * @param request
+     */
+    CommonResp<Boolean> updateProxyClubConfigParam(ProxyClubConfigParamDTO request) throws BizException;
 }
