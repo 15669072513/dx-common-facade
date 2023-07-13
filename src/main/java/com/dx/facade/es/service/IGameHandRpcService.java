@@ -8,7 +8,7 @@ import com.dx.facade.texas.resp.DxHandInfoListResp;
 /**
  * 手牌RPC接口定义
  */
-public interface GameHandRpcService {
+public interface IGameHandRpcService {
 
 
     /**
