@@ -3,6 +3,7 @@ package com.dx.facade.es.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.texas.req.DxHandInfoListReq;
+import com.dx.facade.texas.resp.DxHandInfoListEsResp;
 import com.dx.facade.texas.resp.DxHandInfoListResp;
 
 /**
@@ -16,5 +17,5 @@ public interface IGameHandRpcService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<DxHandInfoListResp, Void>> listPage(DxHandInfoListReq req);
+    CommonResp<PageResp<DxHandInfoListEsResp, Void>> listPage(DxHandInfoListReq req);
 }
