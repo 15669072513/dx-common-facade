@@ -64,7 +64,7 @@ public class DxHandInfoListEsResp implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal beforeChip;
+    private BigDecimal firstBringChip;
 
     @ApiModelProperty("中途带入金额汇总")
     private BigDecimal bringMidwayChip;
