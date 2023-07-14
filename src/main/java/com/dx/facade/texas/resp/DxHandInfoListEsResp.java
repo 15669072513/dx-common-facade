@@ -49,10 +49,10 @@ public class DxHandInfoListEsResp implements Serializable {
     private String gameName;
 
     @ApiModelProperty("牌局开始时间")
-    private Long handBeginTime;
+    private Long handBeginDate;
 
     @ApiModelProperty("牌局结束时间")
-    private Long handEndTime;
+    private Long handEndDate;
 
     @ApiModelProperty("'参与用户ID集合'")
     private String userIds;
@@ -73,16 +73,16 @@ public class DxHandInfoListEsResp implements Serializable {
     private BigDecimal afterChip;
 
     @ApiModelProperty("公牌信息")
-    private String publicCards;
+    private String globalPokerCode;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal validPot;
+    private BigDecimal effectivePool;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpAmount;
 
     @ApiModelProperty("会员输赢汇总")
     private BigDecimal netAmount;
