@@ -91,13 +91,13 @@ public class DxHandInfoListEsResp implements Serializable {
     private BigDecimal validBetAmount;
 
     @ApiModelProperty("庄家位置")
-    private Integer villageSeat;
+    private Integer button;
 
     @ApiModelProperty("小盲位置")
-    private Integer sbSeat;
+    private Integer sbChairId;
 
     @ApiModelProperty("大盲位置")
-    private Integer bbSeat;
+    private Integer bbChairId;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;
