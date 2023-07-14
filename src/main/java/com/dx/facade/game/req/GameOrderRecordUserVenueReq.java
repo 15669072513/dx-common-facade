@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Data
 public class GameOrderRecordUserVenueReq extends BaseRequest {
     @ApiModelProperty("会员账号")
-    private String playName;
+    private String playerName;
     @ApiModelProperty("游戏类型")
     private Integer gameType;
     @ApiModelProperty("代理id")
