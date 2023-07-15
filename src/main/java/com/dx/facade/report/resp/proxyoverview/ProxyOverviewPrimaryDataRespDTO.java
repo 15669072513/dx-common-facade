@@ -18,6 +18,9 @@ public class ProxyOverviewPrimaryDataRespDTO implements Serializable {
     @ApiModelProperty("总投注")
     private BigDecimal betAmount;
 
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount;
+
     @ApiModelProperty("总投注环比")
     private BigDecimal betAmountMonthRate;
 
@@ -44,4 +47,6 @@ public class ProxyOverviewPrimaryDataRespDTO implements Serializable {
 
     @ApiModelProperty("有效活跃新增")
     private Integer effectActiveNumNew;
+
+
 }
