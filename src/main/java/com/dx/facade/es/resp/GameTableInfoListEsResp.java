@@ -48,7 +48,7 @@ public class GameTableInfoListEsResp implements Serializable {
     @ApiModelProperty("游戏名称")
     private String gameName;
     @ApiModelProperty("玩家ID")
-    private Long memberId;
+    private Long userId;
 
     @ApiModelProperty("玩家名称")
     private String playerName;
