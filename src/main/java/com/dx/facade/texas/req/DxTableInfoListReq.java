@@ -39,6 +39,8 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
 
+    @ApiModelProperty("会员id")
+    private Long userId;
     @ApiModelProperty("关联游戏名称")
     private String gameName;
 
