@@ -27,5 +27,12 @@ public interface GameOrderRpcService {
      */
     CommonResp<Integer> updateGameReview(List<Long> idList);
 
+    /**
+     * 获取该牌桌最大手数
+     * @param tableId 牌桌id
+     * @return
+     */
+    CommonResp<Integer> getMaxRoundNoByTableId(Long tableId);
+
 
 }

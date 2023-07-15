@@ -38,6 +38,9 @@ public class GameReviewResp implements Serializable  {
      */
     @ApiModelProperty("手牌结束时间")
     private Long handEndDate;
+
+    @ApiModelProperty("手牌开始时间")
+    private Long handBeginDate;
     /**
      * 游戏名称
      */

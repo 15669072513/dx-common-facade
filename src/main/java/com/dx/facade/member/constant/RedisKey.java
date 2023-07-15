@@ -16,6 +16,12 @@ public class RedisKey {
 
     public static String GAME_ORDER_GAME_OVER_INFO = "GAME:ORDER:GAME:OVER:INFO";
 
+    public static String GAME_ORDER_RECORD = "GAME:ORDER:RECORD:";
+
+    public static String getMaxRoundNoKey(Long tableId) {
+        return GAME_ORDER_RECORD.concat(String.valueOf(tableId));
+    }
+
     public static String getProxyLoginLockKey(Long proxyId) {
         return PROXY_LOGIN_LOCK_KEY + ":" + proxyId;
     }
