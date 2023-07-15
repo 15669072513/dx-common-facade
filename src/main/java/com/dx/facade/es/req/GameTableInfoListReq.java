@@ -36,9 +36,6 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("会员id")
     private Long userId;
-    @ApiModelProperty("牌桌code")
-    private String tableCode;
-
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
@@ -82,10 +79,14 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
-
+    /**
+     * 牌桌创建-开始
+     */
     @ApiModelProperty("创建时间")
     private LocalDateTime startTime;
-
+    /**
+     * 牌桌创建时间-结束
+     */
     @ApiModelProperty("修改时间")
     private LocalDateTime endTime;
 
