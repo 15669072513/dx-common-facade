@@ -121,6 +121,7 @@ public enum CodeMsgEnum {
     ACCOUNT_NUMBER_NOT(800006, "无法跨级新增契约"),
     AGENT_GET_ALL_CONTRACTS(800004, "该代理已获得全部契约"),
     ADD_REMARK_FAIL(100021,"备注添加失败"),
+    EXPORT_DATA_EMPTY(100022,"导出数据为空")
     ;
 
 

@@ -67,7 +67,7 @@ public class ProxyMonthNetAmountRespDTO {
      * proxyRebatePoint
      */
     @ApiModelProperty(value = "代理返点", example = "1500.00")
-    private BigDecimal proxyRebatePoint;
+    private BigDecimal proxyRebateAmount;
 
     /** proxyNet */
     @ApiModelProperty(value = "代净输赢", example = "1500.00")

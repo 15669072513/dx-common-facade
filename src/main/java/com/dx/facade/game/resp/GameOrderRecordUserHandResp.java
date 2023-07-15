@@ -58,6 +58,11 @@ public class GameOrderRecordUserHandResp {
      * 会员账号
      */
     @ApiModelProperty("会员账号")
+    private String playerName;
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty("会员账号")
     private String userName;
     /**
      * 会员昵称
