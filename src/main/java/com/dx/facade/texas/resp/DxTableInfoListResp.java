@@ -1,6 +1,7 @@
 package com.dx.facade.texas.resp;
 
 import com.dx.facade.common.utils.DateToLongSerializer;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -48,6 +49,7 @@ public class DxTableInfoListResp implements Serializable {
     private String gameName;
 
     @ApiModelProperty("关联俱乐部id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long clubId;
 
     @ApiModelProperty("俱乐部名称")
