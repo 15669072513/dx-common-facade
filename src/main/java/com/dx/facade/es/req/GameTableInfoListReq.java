@@ -42,6 +42,8 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("会员id")
     private Long userId;
+    @ApiModelProperty("玩家名称")
+    private String userName;
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
