@@ -34,6 +34,9 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
 
 
 
+    @ApiModelProperty("会员账号")
+    private String userName;
+
     @ApiModelProperty("会员id")
     private Long userId;
     @ApiModelProperty("牌桌code")
