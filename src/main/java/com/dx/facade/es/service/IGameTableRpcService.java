@@ -14,7 +14,7 @@ public interface IGameTableRpcService {
 
 
     /**
-     * 根据条件查询牌桌列表信息-翻页
+     * 根据条件查询牌桌列表信息-翻页tijiao
      *
      * @param req
      * @return
