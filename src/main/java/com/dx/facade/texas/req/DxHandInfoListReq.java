@@ -86,6 +86,9 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
+    @ApiModelProperty("0 进行中 1已结束")
+    private Integer tableStatus;
+
     @ApiModelProperty("创建时间")
     private LocalDateTime startTime;
 
