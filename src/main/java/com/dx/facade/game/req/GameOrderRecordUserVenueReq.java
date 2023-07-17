@@ -17,6 +17,8 @@ public class GameOrderRecordUserVenueReq extends BaseRequest {
     private String playerName;
     @ApiModelProperty("游戏类型")
     private Integer gameType;
+    @ApiModelProperty("游戏名称")
+    private String gameName;
     @ApiModelProperty("代理id")
     private Long parentProxyId;
     @ApiModelProperty("状态")
