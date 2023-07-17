@@ -4,8 +4,6 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.es.req.GameTableInfoListReq;
 import com.dx.facade.es.resp.GameTableInfoListEsResp;
-import com.dx.facade.texas.req.DxHandInfoListReq;
-import com.dx.facade.texas.resp.DxHandInfoListEsResp;
 
 /**
  * 牌桌ESRPC接口定义
