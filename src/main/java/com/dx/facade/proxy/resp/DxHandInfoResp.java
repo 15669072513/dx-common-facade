@@ -46,4 +46,10 @@ public class DxHandInfoResp implements Serializable {
     @ApiModelProperty("桌牌")
     private String globalPokerCode;
 
+    @ApiModelProperty("有效底池")
+    private BigDecimal effectivePool;
+
+    @ApiModelProperty("有效投注")
+    private BigDecimal validBetAmount;
+
 }
