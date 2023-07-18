@@ -31,7 +31,7 @@ public class GameOrderRecordUserVenueResp implements Serializable {
     * 游戏类型
     */
    @ApiModelProperty("游戏类型")
-   private Integer gameType;
+   private Long gameType;
    /**
     * 状态
     */
