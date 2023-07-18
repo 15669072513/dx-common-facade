@@ -1,7 +1,9 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.facade.game.dto.GameOrderRecordDto;
+import com.dx.facade.texas.req.DxHandInfoListReq;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -34,5 +36,6 @@ public interface GameOrderRpcService {
      */
     CommonResp<Integer> getMaxRoundNoByTableId(Long tableId);
 
+    CommonResp<PageResp<GameOrderRecordDto, ?>>selectGameOrderRecordPage(DxHandInfoListReq req);
 
 }
