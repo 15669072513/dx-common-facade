@@ -24,6 +24,10 @@ public class GameOrderRecordDto implements Serializable {
      */
     private String handId;
     /**
+     * 抽水金额
+     */
+    private BigDecimal validBetAmount;
+    /**
      * 手牌code
      */
     private String handCode;
