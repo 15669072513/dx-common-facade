@@ -28,6 +28,11 @@ public class GameOrderRecordUserVenueResp implements Serializable {
    @ApiModelProperty("游戏名称")
    private String gameName;
    /**
+    * 游戏类型
+    */
+   @ApiModelProperty("游戏类型")
+   private Long gameType;
+   /**
     * 状态
     */
    @ApiModelProperty("状态")

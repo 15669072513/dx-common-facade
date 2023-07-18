@@ -26,7 +26,7 @@ public interface IDxTableInfoService {
    * @param req
    * @return
    */
-  CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPage(DxTableInfoListReq req);
+  CommonResp<PageResp<DxTableInfoListResp, Void>> listPage(DxTableInfoListReq req);
 
   /**
    * 查询牌桌总抽水
