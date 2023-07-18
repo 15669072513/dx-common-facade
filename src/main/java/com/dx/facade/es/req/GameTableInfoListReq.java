@@ -44,6 +44,8 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
     private Long userId;
     @ApiModelProperty("玩家名称")
     private String userName;
+
+    private String playerName;
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
@@ -61,7 +63,25 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("游戏名称")
     private String gameName;
+    @ApiModelProperty("牌局开始时间-开始")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime hstartTime;
 
+    @ApiModelProperty("牌局开始时间-结束")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime hendTime;
+
+    @ApiModelProperty("牌局结束时间-开始")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime h2StartTime;
+
+    @ApiModelProperty("牌局结束时间-结束")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime h2EndTime;
     @ApiModelProperty("牌局开始时间-开始")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
