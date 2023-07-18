@@ -16,6 +16,17 @@ public class RedisKey {
 
     public static String GAME_ORDER_RECORD = "GAME:ORDER:RECORD:";
 
+    public static String GAME_RECORD_DETAIL_LIST = "GAME:ORDER:RECORD:DETAIL:LIST:";
+    public static String GAME_RECORD_DETAIL_SUMMARY = "GAME:ORDER:RECORD:DETAIL:SUMMARY:";
+
+    public static String getGameRecordDetailSummaryKey(Long tableId) {
+        return GAME_RECORD_DETAIL_SUMMARY.concat(String.valueOf(tableId));
+    }
+
+    public static String getGameRecordDetailListKey(Long tableId) {
+        return GAME_RECORD_DETAIL_LIST.concat(String.valueOf(tableId));
+    }
+
     public static String getMaxRoundNoKey(Long tableId) {
         return GAME_ORDER_RECORD.concat(String.valueOf(tableId));
     }
