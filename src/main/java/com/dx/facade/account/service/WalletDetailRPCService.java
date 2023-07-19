@@ -11,6 +11,7 @@ import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 public interface WalletDetailRPCService {
 
@@ -29,5 +30,12 @@ public interface WalletDetailRPCService {
      * @return
      */
     CommonResp<GameAmountTotalRespDTO> getDxGameTableIdAmount(Long tableId);
+
+    /**
+     * 根据牌桌查询代入带出 list
+     * @param idsList
+     * @return
+     */
+    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
 
 }
