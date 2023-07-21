@@ -99,4 +99,10 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty("座位类型 0 普通 1庄 2 大盲 3小盲")
     private Integer seatType;
 
+
+    /**
+     * 底池竞争亮牌标识 1亮牌 2不亮牌。
+     */
+    private Integer showStatus;
+
 }
