@@ -159,4 +159,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("实际最大带入的筹码")
     private BigDecimal realMaxBringChipScore;
+
+    @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
+    private Integer seatsNumberLimit;
 }
