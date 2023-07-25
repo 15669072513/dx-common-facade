@@ -17,9 +17,14 @@ public enum MemberBizType implements IBizType {
     to_center(10, "佣金转中心钱包", "1"),
     deposit_discount(11, "存款优惠", "1"),
 
-    up_score(12, "上分", "1"),
-    down_score(13, "下分", "1"),
+    up_score(12, "充值上分", "1"),
+    down_score(13, "充值下分", "1"),
     game(14, "游戏", "1"),
+    //V2需求新增bizTye
+    credit_charge_up_score(15,"授信上分", "9,10"),
+    credit_withdraw_down_score(16,"授信下分", "9,10"),
+    loan(17,"借款", "1,9"),
+    repay(18, "还款", "1,9");
     ;
 
     private Integer code;

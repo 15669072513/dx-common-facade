@@ -12,6 +12,8 @@ public enum WalletType implements IWalletType {
     commission(6, "佣金钱包"),
     quota(7, "额度钱包"),
     agent_lock(8, "代理提款锁定钱包"),
+    credit_available(9, "信用余额"),
+    credit_total(10, "信用额度")
     ;
 
     private Integer code;
