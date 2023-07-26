@@ -101,13 +101,21 @@ public enum ProxyWalletChange implements IWalletChange {
 
     //信用余额钱包记录信用上下分 10种
     v2_credit_up_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.income),
+    v2_credit_total_up_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.income),
     v2_credit_up_score_by_parent_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.income),
+    v2_credit_total_up_score_by_parent_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.income),
     v2_credit_up_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.outlay),
+    v2_credit_total_up_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.outlay),
     v2_credit_up_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.outlay),
+    v2_credit_total_up_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.outlay),
     v2_credit_down_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.outlay),
+    v2_total_credit_down_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.outlay),
     v2_credit_down_score_by_parent_proxy(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.outlay),
+    v2_credit_total_down_score_by_parent_proxy(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.outlay),
     v2_credit_down_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.income),
+    v2_credit_total_down_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.income),
     v2_credit_down_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.income),
+    v2_credit_total_down_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.income),
     v2_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v2_credit_repay, ProxyAppType.v2_repay, TransType.income),
     v2_credit_loan(WalletType.credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.outlay);
 

@@ -137,11 +137,11 @@ public enum MemberWalletChange implements IWalletChange {
     }
 
 
-    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){
+    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){// TODO 需要更具业务逻辑更新
         return Arrays.asList(MemberWalletChange.deposit, MemberWalletChange.deposit_add, MemberWalletChange.agent_deposit_for_member);
     }
 
-    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){
+    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){ // TODO 需要更具业务逻辑更新
         return Arrays.asList(MemberWalletChange.withdraw_success, MemberWalletChange.withdraw_sub);
     }
 }
