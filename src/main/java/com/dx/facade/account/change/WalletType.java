@@ -1,5 +1,11 @@
 package com.dx.facade.account.change;
 
+import com.google.common.collect.Lists;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  * 钱包类型
  */
@@ -51,5 +57,20 @@ public enum WalletType implements IWalletType {
             }
         }
         return null;
+    }
+
+    /**
+     * 玩家注册后需要再db初始化的钱包类型
+     * orbit›
+     */
+    public static List<WalletType> initToDb() {
+        return Arrays.asList(
+          cash,
+          虚拟货币,
+          member_lock,
+          credit_available,
+          credit_total
+        );
+
     }
 }
