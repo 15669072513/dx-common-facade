@@ -1,8 +1,5 @@
 package com.dx.facade.account.change;
 
-import com.google.common.collect.Lists;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -68,9 +65,9 @@ public enum WalletType implements IWalletType {
           cash,
           虚拟货币,
           member_lock,
+          agent_lock,
           credit_available,
           credit_total
         );
-
     }
 }
