@@ -13,7 +13,13 @@ public enum WalletType implements IWalletType {
     quota(7, "额度钱包"),
     agent_lock(8, "代理提款锁定钱包"),
     credit_available(9, "信用余额"),
-    credit_total(10, "信用额度")
+    credit_total(10, "信用额度"),
+    texas(11, "德州场馆钱包"),
+    video(12, "真人场馆钱包"),
+    sports(13, "体育场馆钱包"),
+    lottery(14, "彩票场馆钱包"),
+    poker(15, "棋牌场馆钱包"),
+    e_sports(16, "电竞场馆钱包"),
     ;
 
     private Integer code;
