@@ -47,11 +47,9 @@ public interface IDxTableInfoService {
 
   /**
    * 新增牌桌
-   *
    * @param req
-   * @throws BizException
    */
-  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req) throws BizException;
+  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req);
 
   /**
    * 更新牌桌

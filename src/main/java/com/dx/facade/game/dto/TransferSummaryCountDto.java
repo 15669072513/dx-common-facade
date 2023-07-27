@@ -17,11 +17,15 @@ public class TransferSummaryCountDto {
     @ApiModelProperty("泰铢小计")
     private BigDecimal subTotalThb = BigDecimal.ZERO;
 
+    private BigDecimal subTotalUsdt = BigDecimal.ZERO;
+
     @ApiModelProperty("人民币总计")
     private BigDecimal totalCny = BigDecimal.ZERO;
     @ApiModelProperty("越南盾总计")
     private BigDecimal totalVnd = BigDecimal.ZERO;
     @ApiModelProperty("泰铢总计")
     private BigDecimal totalThb = BigDecimal.ZERO;
+
+    private BigDecimal totalUsdt = BigDecimal.ZERO;
 
 }
