@@ -33,6 +33,11 @@ public interface WithdrawOrderRPCService {
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
 
 
+    /**
+     * 当天提现次数与提现总额统计
+     * @param param
+     * @return
+     */
     WithdrawTodayTotalRespDTO memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);

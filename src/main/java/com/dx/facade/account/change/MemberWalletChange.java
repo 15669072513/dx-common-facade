@@ -56,6 +56,7 @@ public enum MemberWalletChange implements IWalletChange {
     //中心钱包 9个
     v2_cash_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.v2_cash_up_score, MemberAppType.v2_cash_up_score, TransType.income, Constant.MEMBER),
     v2_cash_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
+    v2_withdraw_lock_down_score(WalletType.member_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
     v2_cash_center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_center_to_B, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
     v2_B_to_center(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_B_to_center, MemberAppType.transfer, TransType.income, Constant.MEMBER),
     v2_rebate(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate, MemberAppType.v2_rebate, TransType.income, Constant.MEMBER),
