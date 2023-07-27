@@ -18,6 +18,13 @@ public interface GameRecordRpcService {
     Long getLastBetTime(Long memberId) throws IOException, BizException;
 
     /**
+     * 通过会员Id和场馆编码获取会员最后投注时间
+     *
+     * @return 最后投注时间(戳), 如果没有投注则返回null
+     */
+    Long getLastBetTime(Long memberId, String venueCode) throws IOException, BizException;
+
+    /**
      * 获取会员某个时间段内在某个场馆的有效投注的和
      *
      * @param memberId  必传参数,其它参数非必传
