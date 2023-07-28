@@ -10,6 +10,8 @@ import com.dx.facade.payment.dto.ProxyTransferInnerDto;
 import com.dx.facade.payment.dto.ThirdPayChannelDictResp;
 import com.dx.facade.payment.dto.WithDrawOrderDto;
 
+import com.dx.facade.payment.dto.WithDrawOrderDtoV2;
+import com.dx.facade.payment.resp.PaymentWithdrawOrderRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
@@ -27,6 +29,15 @@ public interface TyPayOrderRpcService {
      */
     @ApiModelProperty(value = "会员取款")
     CommonResp saveWithDrawOrder(WithDrawOrderDto var1) throws Exception;
+
+    /**
+     * 信用盘用户提现请求，请求到payment服务创建订单
+     * @param dto
+     * @return code为200成功，其它失败
+     * @throws Exception
+     */
+    @ApiModelProperty(value = "会员取款")
+    CommonResp<PaymentWithdrawOrderRespDTO> saveWithDrawOrderV2(WithDrawOrderDtoV2 dto) throws Exception;
 
     /**
      * 佣金提款到中心钱包
