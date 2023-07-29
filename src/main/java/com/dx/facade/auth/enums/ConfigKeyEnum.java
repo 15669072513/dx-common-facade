@@ -200,10 +200,10 @@ public enum ConfigKeyEnum {
 
 
     //*****************************资金模块配置,其它模块请注意自己的位置哈*************************************
-    //会员单日提现申请最大次数
+    //资资金>账单相关设置 会员单日提现申请最大次数，中控后台参数字典配置
     MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),
-    //会员单笔可提现最大额度
-    MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.dailyMxCount", "1"),
+    //资资金>账单相关设置 会员单笔可提现最大额度
+    MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
     //******************************资金模块配置,其它模块请注意自己的位置哈************************************
 	;
 
