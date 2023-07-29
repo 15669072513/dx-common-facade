@@ -3,6 +3,7 @@ package com.dx.facade.payment.dto;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
@@ -10,12 +11,14 @@ import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.math.BigDecimal;
 
 
 @Data
+@Builder
 @ApiModel(value = "会员或代理提款参数", description = "会员或代理提款参数")
-public class WithDrawOrderDtoV2 {
+public class WithDrawOrderDtoV2 implements Serializable {
 
 	@ApiModelProperty(value = "商户id", hidden = true)
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
