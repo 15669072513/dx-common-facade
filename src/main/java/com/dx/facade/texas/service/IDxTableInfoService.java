@@ -43,6 +43,11 @@ public interface IDxTableInfoService {
    */
   CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
+    /**
+     * 根据牌桌ID获取牌桌配置信息
+     * @param tableId
+     * @return
+     */
   CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
   /**
