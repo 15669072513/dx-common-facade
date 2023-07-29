@@ -204,6 +204,8 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
+    /** 币种 */
+    DX_CURRENCY("dx_currency","1"),
 	;
 
     //code转换
