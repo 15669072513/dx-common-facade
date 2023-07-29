@@ -16,7 +16,6 @@ import com.dx.facade.account.resp.WithdrawOrderSumDTO;
 import com.dx.facade.account.resp.WithdrawTodayTotalRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -38,7 +37,7 @@ public interface WithdrawOrderRPCService {
      * @param param
      * @return
      */
-    WithdrawTodayTotalRespDTO memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
+    CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 
