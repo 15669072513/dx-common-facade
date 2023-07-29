@@ -38,4 +38,15 @@ public interface GameOrderRpcService {
 
     CommonResp<PageResp<GameOrderRecordDto, ?>>selectGameOrderRecordPage(DxHandInfoListReq req);
 
+    /**
+     * 获取用户总盈亏
+     * @param userId 用户id
+     * @param gameType 牌局类型
+     * @param starTime 开始时间
+     * @param endTime 结束时间
+     * @return
+     */
+    CommonResp<BigDecimal> getUserNetAmountSummary(Long userId, Integer gameType,
+                                       Long starTime, Long endTime);
+
 }

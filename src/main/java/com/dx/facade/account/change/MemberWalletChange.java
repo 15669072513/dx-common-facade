@@ -50,6 +50,52 @@ public enum MemberWalletChange implements IWalletChange {
 
     bring_to_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_to_table, MemberAppType.bring_to_table, TransType.outlay, Constant.MEMBER),
     bring_out_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_out_table, MemberAppType.bring_out_table, TransType.income, Constant.MEMBER),
+
+
+    //*******************V2需求会员账变明细****************
+    //中心钱包 9个
+    v2_cash_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.v2_cash_up_score, MemberAppType.v2_cash_up_score, TransType.income, Constant.MEMBER),
+    //提现下分
+    v2_cash_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
+    //提现下分被拒绝后，中心钱包需加回额度
+    v2_cash_down_score_return(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
+    //提现冻结
+    v2_withdraw_lock_down_score(WalletType.member_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
+    //提现拒绝后，将冻结退回
+    V2_withdraw_lock_down_score_return(WalletType.member_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
+    v2_cash_center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_center_to_B, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    v2_B_to_center(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_B_to_center, MemberAppType.transfer, TransType.income, Constant.MEMBER),
+    v2_rebate(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate, MemberAppType.v2_rebate, TransType.income, Constant.MEMBER),
+    v2_rebate_add(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.income, Constant.MEMBER),
+    v2_rebate_sub(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.outlay, Constant.MEMBER),
+    v2_cash_loan(WalletType.cash, MemberBizType.v2_loan, MemberChangeType.v2_cash_loan, MemberAppType.v2_loan, TransType.income, Constant.MEMBER),
+    v2_cash_repay(WalletType.cash, MemberBizType.v2_repay, MemberChangeType.v2_cash_repay, MemberAppType.v2_repay, TransType.outlay, Constant.MEMBER),
+
+    //德州 2个
+    v2_bring_to_table_texas(WalletType.texas, MemberBizType.game, MemberChangeType.bring_to_table, MemberAppType.v2_bring_to_table, TransType.outlay, Constant.MEMBER),
+    v2_bring_out_table_texas(WalletType.texas, MemberBizType.game, MemberChangeType.bring_out_table, MemberAppType.v2_bring_out_table, TransType.income, Constant.MEMBER),
+    //其它5场馆 * 2种转账 = 10个
+    v2_center_to_video(WalletType.video, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.income, Constant.MEMBER),
+    v2_video_to_center(WalletType.video, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    v2_center_to_sports(WalletType.sports, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.income, Constant.MEMBER),
+    v2_sports_to_center(WalletType.sports, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    v2_center_to_lottery(WalletType.lottery, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.income, Constant.MEMBER),
+    v2_lottery_to_center(WalletType.lottery, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    v2_center_to_poker(WalletType.poker, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.income, Constant.MEMBER),
+    v2_poker_to_center(WalletType.poker, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    v2_center_to_e_sports(WalletType.e_sports, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.income, Constant.MEMBER),
+    v2_e_sports_to_center(WalletType.e_sports, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
+    //信用钱包 4个
+    //信用上下分，涉及信用余额和信用总额
+    v2_credit_up_score(WalletType.credit_available, MemberBizType.v2_credit_up_score, MemberChangeType.v2_credit_up_score, MemberAppType.v2_credit_up_score, TransType.income, Constant.MEMBER),
+    v2_credit_total_up_score(WalletType.credit_total, MemberBizType.v2_credit_up_score, MemberChangeType.v2_credit_up_score, MemberAppType.v2_credit_up_score, TransType.income, Constant.MEMBER),
+    v2_credit_down_score(WalletType.credit_available, MemberBizType.v2_credit_down_score, MemberChangeType.v2_credit_down_score, MemberAppType.v2_credit_down_score, TransType.outlay, Constant.MEMBER),
+    v2_credit_total_down_score(WalletType.credit_total, MemberBizType.v2_credit_down_score, MemberChangeType.v2_credit_down_score, MemberAppType.v2_credit_down_score, TransType.outlay, Constant.MEMBER),
+    //信用借款，只涉及信用余额
+    v2_credit_loan(WalletType.credit_available, MemberBizType.v2_loan, MemberChangeType.v2_credit_loan, MemberAppType.v2_loan, TransType.outlay, Constant.MEMBER),
+    v2_credit_repay(WalletType.credit_available, MemberBizType.v2_repay, MemberChangeType.v2_credit_repay, MemberAppType.v2_repay, TransType.income, Constant.MEMBER),
+
+
     ;
 
     private IWalletType walletType;
@@ -102,11 +148,11 @@ public enum MemberWalletChange implements IWalletChange {
     }
 
 
-    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){
+    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){// TODO 需要更具业务逻辑更新
         return Arrays.asList(MemberWalletChange.deposit, MemberWalletChange.deposit_add, MemberWalletChange.agent_deposit_for_member);
     }
 
-    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){
+    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){ // TODO 需要更具业务逻辑更新
         return Arrays.asList(MemberWalletChange.withdraw_success, MemberWalletChange.withdraw_sub);
     }
 }
