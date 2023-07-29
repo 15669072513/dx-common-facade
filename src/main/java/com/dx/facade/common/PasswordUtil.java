@@ -45,7 +45,7 @@ public class PasswordUtil {
     }
 
     public static void main(String[] args) {
-        String salt = geneSalt(878597836592201781L,"zfour001");
+        String salt = geneSalt(878597836592201781L,"line00");
         System.out.println("salt:"+salt);
         System.out.println("password:"+Md5Util.getMD5("abc123456"));
         //String newpassword = genePassword(salt, Md5Util.getMD5("abc1234567"));
