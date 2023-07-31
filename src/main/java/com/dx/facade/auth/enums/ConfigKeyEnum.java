@@ -206,6 +206,8 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
     /** 币种 */
     DX_CURRENCY("dx_currency","1"),
+    /** 会员默认头像 */
+    MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
 
 
     //*****************************资金模块配置,其它模块请注意自己的位置哈*************************************
