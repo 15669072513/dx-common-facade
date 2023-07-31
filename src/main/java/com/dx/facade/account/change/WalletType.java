@@ -7,16 +7,17 @@ import java.util.List;
  * 钱包类型
  */
 public enum WalletType implements IWalletType {
-    cash(1, "中心钱包"),
+    cash(1, "中心钱包可用余额"),
     彩金钱包(2, "彩金钱包"),
     虚拟货币(3, "虚拟货币"),
     会员积分(4, "会员积分"),
-    member_lock(5, "会员提款锁定钱包"),
+    cash_lock(5, "中心钱包冻结钱包"),
     commission(6, "佣金钱包"),
     quota(7, "额度钱包"),
     agent_lock(8, "代理提款锁定钱包"),
     credit_available(9, "信用余额"),
     credit_total(10, "信用额度"),
+    //场馆钱包 非真实钱包
     texas(11, "德州场馆钱包"),
     video(12, "真人场馆钱包"),
     sports(13, "体育场馆钱包"),
@@ -64,7 +65,7 @@ public enum WalletType implements IWalletType {
         return Arrays.asList(
           cash,
           虚拟货币,
-          member_lock,
+                cash_lock,
           agent_lock,
           credit_available,
           credit_total

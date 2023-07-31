@@ -15,10 +15,10 @@ public enum MemberWalletChange implements IWalletChange {
     commission_to_center(WalletType.cash, MemberBizType.to_center, MemberChangeType.to_center, MemberAppType.deposit, TransType.income, Constant.MEMBER),
 
     withdraw(WalletType.cash, MemberBizType.withdraw, MemberChangeType.withdraw, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
-    lock_withdraw(WalletType.member_lock, MemberBizType.withdraw, MemberChangeType.withdraw, MemberAppType.withdraw, TransType.income, Constant.MEMBER),
+    lock_withdraw(WalletType.cash_lock, MemberBizType.withdraw, MemberChangeType.withdraw, MemberAppType.withdraw, TransType.income, Constant.MEMBER),
     withdraw_fail(WalletType.cash, MemberBizType.withdraw, MemberChangeType.withdraw_fail, MemberAppType.withdraw, TransType.income, Constant.MEMBER),
-    lock_withdraw_fail(WalletType.member_lock, MemberBizType.withdraw, MemberChangeType.withdraw_fail, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
-    withdraw_success(WalletType.member_lock, MemberBizType.withdraw, MemberChangeType.withdraw, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
+    lock_withdraw_fail(WalletType.cash_lock, MemberBizType.withdraw, MemberChangeType.withdraw_fail, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
+    withdraw_success(WalletType.cash_lock, MemberBizType.withdraw, MemberChangeType.withdraw, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
     withdraw_sub(WalletType.cash, MemberBizType.withdraw, MemberChangeType.withdraw_back, MemberAppType.withdraw, TransType.outlay, Constant.MEMBER),
 
     center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.center_to_B, MemberAppType.transfer, TransType.outlay, Constant.MEMBER),
@@ -60,9 +60,9 @@ public enum MemberWalletChange implements IWalletChange {
     //提现下分被拒绝后，中心钱包需加回额度
     v2_cash_down_score_return(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
     //提现冻结
-    v2_withdraw_lock_down_score(WalletType.member_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
+    v2_withdraw_lock_down_score(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
     //提现拒绝后，将冻结退回
-    V2_withdraw_lock_down_score_return(WalletType.member_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
+    V2_withdraw_lock_down_score_return(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
     v2_cash_center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_center_to_B, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
     v2_B_to_center(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_B_to_center, MemberAppType.transfer, TransType.income, Constant.MEMBER),
     v2_rebate(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate, MemberAppType.v2_rebate, TransType.income, Constant.MEMBER),

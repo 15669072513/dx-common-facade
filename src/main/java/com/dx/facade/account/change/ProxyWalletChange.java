@@ -78,8 +78,8 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.outlay),
     commission_be_transfer_to_quota(WalletType.quota, ProxyBizType.commission_to_quota, ProxyChangeType.commission_be_transfer_to_quota, ProxyAppType.commission_be_transfer_to_quota, TransType.income),
 
-    commission_rebate_adjustment_add(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.income),
-    commission_rebate_adjustment_sub(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.outlay),
+    commission_rebate_adjustment_add(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.income),
+    commission_rebate_adjustment_sub(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.outlay),
 
 //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 //    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
