@@ -1,20 +1,21 @@
 package com.dx.facade.member.param;
 
-import io.swagger.annotations.ApiModel;
+import java.time.LocalDate;
+import java.util.Objects;
+
+import javax.validation.constraints.NotNull;
+
+import org.springframework.util.Assert;
+import org.springframework.util.StringUtils;
+
+import com.dx.facade.account.service.BaseParmDTO;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.Assert;
-import org.springframework.util.StringUtils;
-
-import com.dx.facade.account.service.BaseParmDTO;
-
-import javax.validation.constraints.NotNull;
-import java.time.LocalDate;
-import java.util.Objects;
 
 /**
  * 会员基本信息修改baseInfo
@@ -45,12 +46,13 @@ public class MemberBaseInfoUpdDTO implements BaseParmDTO {
 	@ApiModelProperty("性别 0-女，1-男")
 	private Integer gender;
 
-
+	@ApiModelProperty("昵称")
+	private String nickName;
 
 
 	@Override
 	public void check() {
-		Assert.isTrue(StringUtils.hasText(realName) || Objects.nonNull(birthday) || Objects.nonNull(gender)
+		Assert.isTrue(StringUtils.hasText(realName) || Objects.nonNull(birthday) || Objects.nonNull(gender) ||StringUtils.hasText(nickName)
 				, "必须修改一项");
 	}
 }

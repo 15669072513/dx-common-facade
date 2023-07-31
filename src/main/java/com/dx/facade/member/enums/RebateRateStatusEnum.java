@@ -6,16 +6,20 @@ package com.dx.facade.member.enums;
  */
 public enum RebateRateStatusEnum {
 	
-	/** 待生效 */
-	TO_BE_EFFECTIVE(0, "待生效"),
+	/** 未设置 */
+	UN_SET(0,"未设置"),
 	
 	/** 已生效 */
-	EFFECTIVE(1, "已生效"),
+	EFFECTIVE(1,"已生效"),
 	
 	/** 已失效 */
-	EXPIRED(-1,"已失效");
+	EXPIRED(2,"已失效"),
 	
-
+	/** 平台调整 */
+	PLATFORM_ADJUSTMENT(3,"平台调整"),
+	
+	;
+	
     private Integer code;
     
     private String desc;

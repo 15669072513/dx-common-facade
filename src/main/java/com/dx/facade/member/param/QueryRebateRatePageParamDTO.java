@@ -53,9 +53,6 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
-    @ApiModelProperty("代理姓名")
-    private String proxyRealName;
-    
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     
@@ -76,7 +73,7 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未生效 1-已生效 2-已失效")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
     
     /** 生效时间 */

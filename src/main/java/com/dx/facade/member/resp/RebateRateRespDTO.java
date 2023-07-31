@@ -53,8 +53,11 @@ public class RebateRateRespDTO implements Serializable {
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
-    @ApiModelProperty("代理姓名")
-    private String proxyRealName;
+    @ApiModelProperty("上级代理等级")
+    private Integer parentProxyLevel;
+    
+    @ApiModelProperty("总代ID")
+    private Long topProxyId;
     
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;

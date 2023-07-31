@@ -52,8 +52,8 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
-    @ApiModelProperty("代理姓名")
-    private String proxyRealName;
+    @ApiModelProperty("总Id")
+    private Long topProxyId;
     
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
