@@ -62,6 +62,9 @@ public class WithdrawOrderRespDTO {
     @TableField("event_id")
     private String eventId;
 
+    @ApiModelProperty("调整类型：1会员提现下分")
+    private Integer adjustType;
+
     @ApiModelProperty("第三方订单号")
     @TableField("third_order_no")
     private String thirdOrderNo;

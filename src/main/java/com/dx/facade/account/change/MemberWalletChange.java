@@ -55,14 +55,16 @@ public enum MemberWalletChange implements IWalletChange {
     //*******************V2需求会员账变明细****************
     //中心钱包 9个
     v2_cash_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.v2_cash_up_score, MemberAppType.v2_cash_up_score, TransType.income, Constant.MEMBER),
-    //提现下分
+    //提现下分，中心钱包支出，减额度，加给冻结额度
     v2_cash_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
-    //提现下分被拒绝后，中心钱包需加回额度
-    v2_cash_down_score_return(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
+    //提现下分被拒绝后，中心钱包余额需加回额度
+    v2_cash_down_score_withdraw_refused(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_refused, MemberAppType.v2_withdraw_refused, TransType.income, Constant.MEMBER),
+    //提现冻结，冻结额度是收入
+    v2_cash_down_score_withdraw_frozen(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.outlay, Constant.MEMBER),
     //提现冻结
-    v2_withdraw_lock_down_score(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.income, Constant.MEMBER),
+    v2_cash_lock_down_score_frozen(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.income, Constant.MEMBER),
     //提现拒绝后，将冻结退回
-    V2_withdraw_lock_down_score_return(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.outlay, Constant.MEMBER),
+    V2_cash_lock_down_score_refused(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_refused, MemberAppType.v2_withdraw_refused, TransType.outlay, Constant.MEMBER),
     v2_cash_center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_center_to_B, MemberAppType.v2_transfer, TransType.outlay, Constant.MEMBER),
     v2_B_to_center(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_B_to_center, MemberAppType.transfer, TransType.income, Constant.MEMBER),
     v2_rebate(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate, MemberAppType.v2_rebate, TransType.income, Constant.MEMBER),

@@ -29,7 +29,10 @@ public enum MemberAppType implements IAppType {
     v2_credit_up_score(18, "授信上分"),
     v2_credit_down_score(19, "授信下分"),
     v2_bring_to_table(11, "带入牌桌"),
-    v2_bring_out_table(12,"带出牌桌")
+    v2_bring_out_table(12,"带出牌桌"),
+    v2_withdraw_frozen(13,"提现冻结"),
+    v2_withdraw_refused(14,"提现拒绝"),
+
     ;
 
     private Integer code;
