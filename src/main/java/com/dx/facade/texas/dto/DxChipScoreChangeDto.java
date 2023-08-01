@@ -54,19 +54,9 @@ public class DxChipScoreChangeDto implements Serializable {
     private String currency;
 
     /**
-     * 账变前余额
-     */
-    private BigDecimal changeBefore;
-
-    /**
      * 变动的筹码
      */
     private BigDecimal amount;
-
-    /**
-     * 账变后余额
-     */
-    private BigDecimal changeAfter;
 
     /**
      * 事件ID
