@@ -2,7 +2,6 @@ package com.dx.facade.account.change;
 
 import com.dx.facade.account.change.param.Constant;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -12,112 +11,112 @@ import java.util.List;
 public enum ProxyWalletChange implements IWalletChange {
 
     //额度钱包(没有取款业务，人工扣除也没有)
-    quota_deposit(WalletType.quota, ProxyBizType.deposit, ProxyChangeType.deposit, ProxyAppType.deposit, TransType.income),
-    quota_deposit_add(WalletType.quota, ProxyBizType.deposit, ProxyChangeType.deposit_back, ProxyAppType.deposit, TransType.income),
+    quota_deposit(WalletType.quota, ProxyBizType.deposit, ProxyChangeType.deposit, ProxyAppType.deposit, TransType.in),
+    quota_deposit_add(WalletType.quota, ProxyBizType.deposit, ProxyChangeType.deposit_back, ProxyAppType.deposit, TransType.in),
 
-    quota_deposit_for_member(WalletType.quota, ProxyBizType.deposit_for_member, ProxyChangeType.deposit_for_member, ProxyAppType.deposit_for_member, TransType.outlay),
+    quota_deposit_for_member(WalletType.quota, ProxyBizType.deposit_for_member, ProxyChangeType.deposit_for_member, ProxyAppType.deposit_for_member, TransType.out),
 
-    quota_activity(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity, ProxyAppType.activity, TransType.income),
-    quota_activity_add(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_add, ProxyAppType.activity, TransType.income),
-    quota_activity_sub(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_sub, ProxyAppType.activity, TransType.outlay),
+    quota_activity(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity, ProxyAppType.activity, TransType.in),
+    quota_activity_add(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_add, ProxyAppType.activity, TransType.in),
+    quota_activity_sub(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_sub, ProxyAppType.activity, TransType.out),
 
 //    quota_add(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_add, ProxyAppType.quota, TransType.income),
 //    quota_sub(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_sub, ProxyAppType.quota, TransType.outlay),
 
-    quota_transfer_out(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_out, ProxyAppType.transfer, TransType.outlay),
-    quota_transfer_in(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_in, ProxyAppType.transfer, TransType.income),
+    quota_transfer_out(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_out, ProxyAppType.transfer, TransType.out),
+    quota_transfer_in(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_in, ProxyAppType.transfer, TransType.in),
 
-    quota_other_add(WalletType.quota, ProxyBizType.other, ProxyChangeType.other_add, ProxyAppType.other, TransType.income),
-    quota_other_sub(WalletType.quota, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.outlay),
+    quota_other_add(WalletType.quota, ProxyBizType.other, ProxyChangeType.other_add, ProxyAppType.other, TransType.in),
+    quota_other_sub(WalletType.quota, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.out),
 
     //quota_transfer_to_banker(WalletType.quota, ProxyBizType.transfer_with_banker, ProxyChangeType.quota_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 
     //佣金钱包
-    commission_deposit(WalletType.commission, ProxyBizType.deposit, ProxyChangeType.deposit, ProxyAppType.deposit, TransType.income),
-    commission_deposit_add(WalletType.commission, ProxyBizType.deposit, ProxyChangeType.deposit_back, ProxyAppType.deposit, TransType.income),
+    commission_deposit(WalletType.commission, ProxyBizType.deposit, ProxyChangeType.deposit, ProxyAppType.deposit, TransType.in),
+    commission_deposit_add(WalletType.commission, ProxyBizType.deposit, ProxyChangeType.deposit_back, ProxyAppType.deposit, TransType.in),
 
-    commission_withdraw(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.outlay),
-    commission_lock_withdraw(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.income),
-    commission_withdraw_fail(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw_fail, ProxyAppType.withdraw, TransType.income),
-    commission_lock_withdraw_fail(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw_fail, ProxyAppType.withdraw, TransType.outlay),
-    commission_withdraw_success(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.outlay),
-    commission_withdraw_sub(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw_back, ProxyAppType.withdraw, TransType.outlay),
+    commission_withdraw(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.out),
+    commission_lock_withdraw(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.in),
+    commission_withdraw_fail(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw_fail, ProxyAppType.withdraw, TransType.in),
+    commission_lock_withdraw_fail(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw_fail, ProxyAppType.withdraw, TransType.out),
+    commission_withdraw_success(WalletType.agent_lock, ProxyBizType.withdraw, ProxyChangeType.withdraw, ProxyAppType.withdraw, TransType.out),
+    commission_withdraw_sub(WalletType.commission, ProxyBizType.withdraw, ProxyChangeType.withdraw_back, ProxyAppType.withdraw, TransType.out),
 
-    commission_to_center(WalletType.commission, ProxyBizType.to_center, ProxyChangeType.to_center, ProxyAppType.to_center, TransType.outlay),
+    commission_to_center(WalletType.commission, ProxyBizType.to_center, ProxyChangeType.to_center, ProxyAppType.to_center, TransType.out),
 
-    commission_platform_transfer_in(WalletType.commission, ProxyBizType.commission, ProxyChangeType.platform_transfer_in, ProxyAppType.commission, TransType.income),
-    commission_transfer_in_by_cycle(WalletType.commission, ProxyBizType.commission, ProxyChangeType.transfer_in_by_cycle, ProxyAppType.commission, TransType.income),
-    commission_transfer_out_by_cycle(WalletType.commission, ProxyBizType.commission, ProxyChangeType.transfer_out_by_cycle, ProxyAppType.commission, TransType.outlay),
-    commission_add(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_add, ProxyAppType.commission, TransType.income),
-    commission_sub(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_sub, ProxyAppType.commission, TransType.outlay),
+    commission_platform_transfer_in(WalletType.commission, ProxyBizType.commission, ProxyChangeType.platform_transfer_in, ProxyAppType.commission, TransType.in),
+    commission_transfer_in_by_cycle(WalletType.commission, ProxyBizType.commission, ProxyChangeType.transfer_in_by_cycle, ProxyAppType.commission, TransType.in),
+    commission_transfer_out_by_cycle(WalletType.commission, ProxyBizType.commission, ProxyChangeType.transfer_out_by_cycle, ProxyAppType.commission, TransType.out),
+    commission_add(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_add, ProxyAppType.commission, TransType.in),
+    commission_sub(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_sub, ProxyAppType.commission, TransType.out),
 
-    commission_rebate(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate, ProxyAppType.rebate, TransType.income),
-    commission_rebate_add(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.rebate, TransType.income),
-    commission_rebate_sub(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.rebate, TransType.outlay),
+    commission_rebate(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate, ProxyAppType.rebate, TransType.in),
+    commission_rebate_add(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.rebate, TransType.in),
+    commission_rebate_sub(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.rebate, TransType.out),
 
-    commission_deposit_for_member(WalletType.commission, ProxyBizType.deposit_for_member, ProxyChangeType.deposit_for_member, ProxyAppType.deposit_for_member, TransType.outlay),
+    commission_deposit_for_member(WalletType.commission, ProxyBizType.deposit_for_member, ProxyChangeType.deposit_for_member, ProxyAppType.deposit_for_member, TransType.out),
 
-    commission_transfer_out(WalletType.commission, ProxyBizType.transfer, ProxyChangeType.transfer_out, ProxyAppType.transfer, TransType.outlay),
-    commission_transfer_in(WalletType.commission, ProxyBizType.transfer, ProxyChangeType.transfer_in, ProxyAppType.transfer, TransType.income),
+    commission_transfer_out(WalletType.commission, ProxyBizType.transfer, ProxyChangeType.transfer_out, ProxyAppType.transfer, TransType.out),
+    commission_transfer_in(WalletType.commission, ProxyBizType.transfer, ProxyChangeType.transfer_in, ProxyAppType.transfer, TransType.in),
 
-    commission_other_add(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_add, ProxyAppType.other, TransType.income),
-    commission_other_sub(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.outlay),
+    commission_other_add(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_add, ProxyAppType.other, TransType.in),
+    commission_other_sub(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.out),
 
 
-    officer_proxy_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.income),
-    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.outlay),
+    officer_proxy_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.in),
+    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.out),
 
-    proxy_be_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_be_up_score, ProxyAppType.proxy_be_up_score, TransType.income),
-    proxy_to_child_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_child_up_score, ProxyAppType.proxy_to_child_up_score, TransType.outlay),
-    proxy_to_mem_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_mem_up_score, ProxyAppType.proxy_to_mem_up_score, TransType.outlay),
+    proxy_be_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_be_up_score, ProxyAppType.proxy_be_up_score, TransType.in),
+    proxy_to_child_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_child_up_score, ProxyAppType.proxy_to_child_up_score, TransType.out),
+    proxy_to_mem_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_mem_up_score, ProxyAppType.proxy_to_mem_up_score, TransType.out),
 
-    proxy_be_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_be_down_score, ProxyAppType.proxy_be_down_score, TransType.outlay),
-    proxy_to_child_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_child_down_score, ProxyAppType.proxy_to_child_down_score, TransType.income),
-    proxy_to_mem_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_mem_down_score, ProxyAppType.proxy_to_mem_down_score, TransType.income),
+    proxy_be_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_be_down_score, ProxyAppType.proxy_be_down_score, TransType.out),
+    proxy_to_child_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_child_down_score, ProxyAppType.proxy_to_child_down_score, TransType.in),
+    proxy_to_mem_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.proxy_to_mem_down_score, ProxyAppType.proxy_to_mem_down_score, TransType.in),
 
-    commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.outlay),
-    commission_be_transfer_to_quota(WalletType.quota, ProxyBizType.commission_to_quota, ProxyChangeType.commission_be_transfer_to_quota, ProxyAppType.commission_be_transfer_to_quota, TransType.income),
+    commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.out),
+    commission_be_transfer_to_quota(WalletType.quota, ProxyBizType.commission_to_quota, ProxyChangeType.commission_be_transfer_to_quota, ProxyAppType.commission_be_transfer_to_quota, TransType.in),
 
-    commission_rebate_adjustment_add(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.income),
-    commission_rebate_adjustment_sub(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.outlay),
+    commission_rebate_adjustment_add(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.in),
+    commission_rebate_adjustment_sub(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.out),
 
 //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 //    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
      //--------------------v2需求代理全部账变类型------------
     //中心钱包 13种
-    v2_cash_deposit_by_official(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_by_official, ProxyAppType.v2_cash_deposit_by_official, TransType.income),
-    v2_cash_deposit_by_parent_proxy(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_by_parent_proxy, ProxyAppType.v2_cash_deposit_by_parent_proxy, TransType.income),
-    v2_cash_deposit_to_sub_proxy(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_sub_proxy, ProxyAppType.v2_cash_deposit_to_sub_proxy, TransType.outlay),
-    v2_cash_deposit_to_member(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_member,ProxyAppType.v2_cash_deposit_to_member, TransType.outlay),
-    v2_cash_withdraw_by_official(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_official, ProxyAppType.v2_cash_withdraw_by_official, TransType.outlay),
-    v2_cash_withdraw_by_parent_proxy(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_parent_proxy, ProxyAppType.v2_cash_withdraw_by_parent_proxy, TransType.outlay),
-    v2_cash_withdraw_to_sub_proxy(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_sub_proxy, ProxyAppType.v2_cash_withdraw_to_sub_proxy,TransType.income),
-    v2_cash_withdraw_to_member(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_member, ProxyAppType.v2_cash_withdraw_to_member, TransType.income),
-    v2_cash_rebate(WalletType.cash,  ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate, ProxyAppType.v2_cash_rebate, TransType.income),
-    v2_cash_rebate_add(WalletType.cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_add, ProxyAppType.v2_cash_rebate, TransType.income),
-    v2_cash_rebate_sub(WalletType.cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.outlay),
-    v2_cash_loan(WalletType.cash, ProxyBizType.v2_loan, ProxyChangeType.v2_cash_loan, ProxyAppType.v2_loan, TransType.income),
-    v2_cash_repay(WalletType.cash, ProxyBizType.v2_repay, ProxyChangeType.v2_cash_repay, ProxyAppType.v2_repay, TransType.outlay),
+    v2_cash_deposit_by_official(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_by_official, ProxyAppType.v2_cash_deposit_by_official, TransType.in),
+    v2_cash_deposit_by_parent_proxy(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_by_parent_proxy, ProxyAppType.v2_cash_deposit_by_parent_proxy, TransType.in),
+    v2_cash_deposit_to_sub_proxy(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_sub_proxy, ProxyAppType.v2_cash_deposit_to_sub_proxy, TransType.out),
+    v2_cash_deposit_to_member(WalletType.cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_member,ProxyAppType.v2_cash_deposit_to_member, TransType.out),
+    v2_cash_withdraw_by_official(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_official, ProxyAppType.v2_cash_withdraw_by_official, TransType.out),
+    v2_cash_withdraw_by_parent_proxy(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_parent_proxy, ProxyAppType.v2_cash_withdraw_by_parent_proxy, TransType.out),
+    v2_cash_withdraw_to_sub_proxy(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_sub_proxy, ProxyAppType.v2_cash_withdraw_to_sub_proxy,TransType.in),
+    v2_cash_withdraw_to_member(WalletType.cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_member, ProxyAppType.v2_cash_withdraw_to_member, TransType.in),
+    v2_cash_rebate(WalletType.cash,  ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_cash_rebate_add(WalletType.cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_cash_rebate_sub(WalletType.cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
+    v2_cash_loan(WalletType.cash, ProxyBizType.v2_loan, ProxyChangeType.v2_cash_loan, ProxyAppType.v2_loan, TransType.in),
+    v2_cash_repay(WalletType.cash, ProxyBizType.v2_repay, ProxyChangeType.v2_cash_repay, ProxyAppType.v2_repay, TransType.out),
 
     //信用余额钱包记录信用上下分 10种
-    v2_credit_up_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.income),
-    v2_credit_total_up_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.income),
-    v2_credit_up_score_by_parent_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.income),
-    v2_credit_total_up_score_by_parent_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.income),
-    v2_credit_up_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.outlay),
-    v2_credit_total_up_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.outlay),
-    v2_credit_up_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.outlay),
-    v2_credit_total_up_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.outlay),
-    v2_credit_down_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.outlay),
-    v2_total_credit_down_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.outlay),
-    v2_credit_down_score_by_parent_proxy(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.outlay),
-    v2_credit_total_down_score_by_parent_proxy(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.outlay),
-    v2_credit_down_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.income),
-    v2_credit_total_down_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.income),
-    v2_credit_down_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.income),
-    v2_credit_total_down_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.income),
-    v2_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v2_credit_repay, ProxyAppType.v2_repay, TransType.income),
-    v2_credit_loan(WalletType.credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.outlay);
+    v2_credit_up_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.in),
+    v2_credit_total_up_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.in),
+    v2_credit_up_score_by_parent_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
+    v2_credit_total_up_score_by_parent_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
+    v2_credit_up_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.out),
+    v2_credit_total_up_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.out),
+    v2_credit_up_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
+    v2_credit_total_up_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
+    v2_credit_down_score_by_official(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.out),
+    v2_total_credit_down_score_by_official(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_official, ProxyAppType.v2_credit_down_score_by_official, TransType.out),
+    v2_credit_down_score_by_parent_proxy(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.out),
+    v2_credit_total_down_score_by_parent_proxy(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.out),
+    v2_credit_down_score_to_sub_proxy(WalletType.credit_available,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
+    v2_credit_total_down_score_to_sub_proxy(WalletType.credit_total,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
+    v2_credit_down_score_to_member(WalletType.credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.in),
+    v2_credit_total_down_score_to_member(WalletType.credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.in),
+    v2_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v2_credit_repay, ProxyAppType.v2_repay, TransType.in),
+    v2_credit_loan(WalletType.credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.out);
 
     private IWalletType walletType;
     private IBizType bizType;
