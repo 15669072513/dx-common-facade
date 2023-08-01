@@ -65,7 +65,7 @@ public enum WalletType implements IWalletType {
         return Arrays.asList(
           cash,
           虚拟货币,
-                cash_lock,
+          cash_lock,
           agent_lock,
           credit_available,
           credit_total
