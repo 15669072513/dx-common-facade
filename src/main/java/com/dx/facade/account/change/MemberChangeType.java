@@ -36,8 +36,30 @@ public enum MemberChangeType implements IChangeType {
     //新增
     proxy_up_score(25, "代理上分", "12"),
     proxy_down_score(26, "代理下分", "13"),
+    //德州钱包
     bring_to_table(27, "带入牌桌", "14"),
     bring_out_table(28, "带出牌桌", "14"),
+
+    //------------------v2需求新增-------------
+    //中心钱包 9个
+    v2_cash_up_score(29, "充值上分", MemberBizType.up_score.code().toString()),
+    v2_cash_down_score(30, "提现下分", MemberBizType.down_score.code().toString()),
+    v2_cash_center_to_B(31, "中心钱包转入", MemberBizType.B_mutual_center.code().toString()),
+    v2_cash_B_to_center(32, "转出至中心钱包", MemberBizType.B_mutual_center.code().toString()),
+    v2_rebate(33, "会员返水", "6"),
+    v2_rebate_add(34, "会员返水增加调整", MemberBizType.rebate.code().toString()),
+    v2_rebate_sub(35, "会员返水扣除调整", MemberBizType.rebate.code().toString()),
+    v2_cash_loan(36,"信用借款", MemberBizType.v2_loan.code().toString()),
+    v2_cash_repay(37, "信用还款", MemberBizType.v2_repay.code().toString()),
+    //场馆钱包 2个
+    v2_center_to_B(38, "中心钱包转入",MemberBizType.B_mutual_center.code().toString()),//中心钱包转入
+    v2_B_to_center(39,"转出至中心钱包",MemberBizType.B_mutual_center.code().toString()),//转出至中心钱包
+    //信用钱包 4个
+    v2_credit_up_score(40, "授信上分", MemberBizType.v2_credit_up_score.code().toString()),
+    v2_credit_down_score(41, "授信下分", MemberBizType.v2_credit_down_score.code().toString()),
+    v2_credit_loan(42, "信用借款",MemberBizType.v2_loan.code().toString()),
+    v2_credit_repay(43, "信用还款",MemberBizType.v2_repay.code().toString()),
+
     ;
     private Integer code;
     private String desc;
