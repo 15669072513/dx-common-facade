@@ -37,9 +37,6 @@ public class UpdateProxyLockStatusParamDTO implements BaseParmDTO{
 	@ApiModelProperty(value = "开局权限：0-关闭 1-开启")
 	private Integer openLockStatus;
 	
-	@ApiModelProperty(value = "管理俱乐部权限：0-关闭 1-开启")
-	private Integer manageClubLockStatus;
-	
     @ApiModelProperty(value = "操作人")
     private String operateBy;
 
