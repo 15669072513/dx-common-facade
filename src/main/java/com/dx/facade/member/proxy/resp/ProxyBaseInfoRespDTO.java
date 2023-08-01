@@ -94,4 +94,9 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
     private Integer manageClubLockStatus;
 
+    @ApiModelProperty("币种")
+    private String currency;
+    
+    @ApiModelProperty("币种符号")
+    private String currencySymbol;
 }
