@@ -1,6 +1,5 @@
 package com.dx.facade.texas.dto;
 
-import com.dx.enums.ChipScoreEnum;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,7 +17,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class DxChipScoreChangeDto implements Serializable {
+public class DxTransferInChipScoreDto implements Serializable {
     private static final long serialVersionUID = -7232391198886541199L;
 
     /**
@@ -30,13 +29,6 @@ public class DxChipScoreChangeDto implements Serializable {
      * 钱包类型
      */
     private Integer walletType;
-
-    /**
-     * 筹码变动类型 1-从中心钱包转入 2-转入中心钱包 3-带入牌桌 4-带出牌桌 5-投注 6-结算
-     *
-     * @see ChipScoreEnum.ChangeTypeEnum
-     */
-    private Integer changeType;
 
     /**
      * 牌桌ID
@@ -67,11 +59,6 @@ public class DxChipScoreChangeDto implements Serializable {
      * 事件Time
      */
     private Long eventTime;
-
-    /**
-     * 事件类型 0-牌桌 1-手牌
-     */
-    private Integer eventType;
 
     /**
      * 第一手编号
