@@ -128,6 +128,13 @@ public enum ConfigKeyEnum {
     PROXY_DY_RATE("proxy.dy.rate", "1"),
     PROXY_CP_RATE("proxy.cp.rate", "1"),
     PROXY_BY_RATE("proxy.by.rate", "1"),
+    
+    TEXAS_REBATE_RATE_LIMIT("texas.rebate.rate.limit","1"),
+    ACTUAL_PERSON_REBATE_RATE_LIMIT("actual.person.rebate.rate.limit","1"),
+    SPORTS_REBATE_RATE_LIMIT("sports.rebate.rate.limit","1"),
+    LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit","1"),
+    CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit","1"),
+    ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit","1"),
 
     ////// OB旗舰精简优化
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBDJ("deposit.usdt.protocol.address.obdj", "1"),
@@ -197,6 +204,18 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
+    /** 币种 */
+    DX_CURRENCY("dx_currency","1"),
+    /** 会员默认头像 */
+    MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
+
+
+    //*****************************资金模块配置,其它模块请注意自己的位置哈*************************************
+    //资资金>账单相关设置 会员单日提现申请最大次数，中控后台参数字典配置
+    ACCOUNT_MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),
+    //资资金>账单相关设置 会员单笔可提现最大额度
+    ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
+    //******************************资金模块配置,其它模块请注意自己的位置哈************************************
 	;
 
     //code转换

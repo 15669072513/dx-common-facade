@@ -49,6 +49,9 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("币种")
     private String currency;
+    
+    @ApiModelProperty("币种符号")
+    private String currencySymbol;
 
     @ApiModelProperty("代理头像")
     private String topImagesUrl;
