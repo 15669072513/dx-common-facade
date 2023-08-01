@@ -1,7 +1,10 @@
 package com.dx.facade.texas.dto;
 
 import com.dx.enums.ChipScoreEnum;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -11,6 +14,9 @@ import java.math.BigDecimal;
  * @description 筹码变动
  * @date 2023/8/1 11:41:49
  */
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class DxChipScoreChangeDto implements Serializable {
     private static final long serialVersionUID = -7232391198886541199L;
@@ -76,7 +82,6 @@ public class DxChipScoreChangeDto implements Serializable {
      * 事件类型 0-牌桌 1-手牌
      */
     private Integer eventType;
-
 
     /**
      * 第一手编号
