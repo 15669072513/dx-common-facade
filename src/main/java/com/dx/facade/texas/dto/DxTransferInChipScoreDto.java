@@ -26,6 +26,11 @@ public class DxTransferInChipScoreDto implements Serializable {
     private Long userId;
 
     /**
+     * 账号名
+     */
+    private String userName;
+
+    /**
      * 俱乐部
      */
     private Long clubId;
