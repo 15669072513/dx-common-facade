@@ -19,15 +19,19 @@ public enum DissolveTypeEnum {
 
 
     /***
-     * 超时自动解散
+     * 服务端超时自动解散
      */
-    OVERTIME_DISSOLVE(2, "超时自动解散"),
+    OVERTIME_DISSOLVE(2, "服务端超时自动解散"),
 
     /***
      * 正常结束
      */
-    NORMAL_ENDED(3, "正常结束");
+    NORMAL_ENDED(3, "正常结束"),
 
+    /**
+     * 游戏端超时自动解散
+     */
+    GAME_OVERTIME_DISSOLVE(4, "游戏端超时自动解散");
 
     public int getCode() {
         return code;

@@ -40,4 +40,8 @@ public interface GameConfigService {
      * 获取所有游戏
      */
     List<ConfigGamePO> getAllGames();
+
+    List<ConfigGamePO> getGameByIds(List<Long> gameIds);
+
+    List<ConfigGamePO> getAllGamesByMerchantId(Long merchantId, String device);
 }

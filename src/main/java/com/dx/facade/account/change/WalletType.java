@@ -11,6 +11,8 @@ public enum WalletType implements IWalletType {
     彩金钱包(2, "彩金钱包"),
     虚拟货币(3, "虚拟货币"),
     会员积分(4, "会员积分"),
+
+    //member_lock( 5, "会员提款锁定钱包"),
     cash_lock(5, "中心钱包冻结钱包"),
     commission(6, "佣金钱包"),
     quota(7, "额度钱包"),
@@ -65,7 +67,7 @@ public enum WalletType implements IWalletType {
         return Arrays.asList(
           cash,
           虚拟货币,
-          cash_lock,
+                cash_lock,
           agent_lock,
           credit_available,
           credit_total

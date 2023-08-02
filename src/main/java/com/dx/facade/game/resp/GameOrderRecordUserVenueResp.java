@@ -58,5 +58,10 @@ public class GameOrderRecordUserVenueResp implements Serializable {
     */
    @ApiModelProperty("结算时间")
    private Long handEndDate;
+   /**
+    * 牌桌抽水
+    */
+   @ApiModelProperty("牌桌抽水")
+   private BigDecimal pumpAmount;
 
 }

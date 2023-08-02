@@ -43,15 +43,18 @@ public interface IDxTableInfoService {
    */
   CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
+    /**
+     * 根据牌桌ID获取牌桌配置信息
+     * @param tableId
+     * @return
+     */
   CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
   /**
    * 新增牌桌
-   *
    * @param req
-   * @throws BizException
    */
-  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req) throws BizException;
+  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req);
 
   /**
    * 更新牌桌
