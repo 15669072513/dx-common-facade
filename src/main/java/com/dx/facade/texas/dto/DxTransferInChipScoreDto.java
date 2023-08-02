@@ -26,6 +26,26 @@ public class DxTransferInChipScoreDto implements Serializable {
     private Long userId;
 
     /**
+     * 俱乐部
+     */
+    private Long clubId;
+
+    /**
+     * 商户ID
+     */
+    private Long merchantId;
+
+    /**
+     * 商户名称
+     */
+    private String merchantName;
+
+    /**
+     * 昵称
+     */
+    private String nickName;
+
+    /**
      * 钱包类型
      */
     private Integer walletType;
@@ -53,7 +73,7 @@ public class DxTransferInChipScoreDto implements Serializable {
     /**
      * 事件ID
      */
-    private Long eventId;
+    private String eventId;
 
     /**
      * 事件Time
