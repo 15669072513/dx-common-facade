@@ -78,14 +78,6 @@ public interface ProxyAssistRecordRPCService {
     CommonResp saveOfficialProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
 
     /**
-     * 代理佣金转回
-     * @param reqDTO
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveProxyCommissionBack(ProxyTransferReqDTO reqDTO) throws BizException;
-
-    /**
      * 代理Web 版本查询的转账记录查询,需要查询全部
      * @param pageReq
      * @return
