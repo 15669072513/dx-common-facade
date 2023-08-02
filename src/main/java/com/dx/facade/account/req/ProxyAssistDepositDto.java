@@ -56,4 +56,7 @@ public class ProxyAssistDepositDto {
 	@ApiModelProperty(value = "支付密码", required = true)
 	private String payPassword;
 
+	private Integer walletType;
+
+
 }

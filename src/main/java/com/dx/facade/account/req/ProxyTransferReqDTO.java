@@ -28,10 +28,7 @@ public class ProxyTransferReqDTO {
 	 * 代理id
 	 */
 	private Long outProxyId;
-	/**
-	 * 转账业务类型,1额度转账、2佣金转账
-	 */
-	private Integer accountType;
+
 	/**
 	 * 下级代理Id
 	 */
@@ -50,5 +47,10 @@ public class ProxyTransferReqDTO {
 	 * 操作人proxyID
 	 */
 	private Long operatorProxyId;
+
+	/**
+	 * 钱包类型 1中心钱包，2信用钱包
+	 */
+	private Integer walletType;
 
 }

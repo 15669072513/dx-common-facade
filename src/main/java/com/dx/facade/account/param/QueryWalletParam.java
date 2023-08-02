@@ -38,10 +38,14 @@ public class QueryWalletParam implements BaseParmDTO {
     public void check() {
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
         Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));
-        Assert.notNull(CollectionUtils.isEmpty(walletTypeList), ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("walletTypeList"));
+        CollectionUtils.isEmpty(walletTypeList);
+        ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("walletTypeList");
     }
 
     public void setWalletTypeList(IWalletType... walletTypes){
         this.walletTypeList = Arrays.asList(walletTypes);
+    }
+    public void setWalletTypeList(List<IWalletType> walletTypeList){
+        this.walletTypeList = walletTypeList;
     }
 }
