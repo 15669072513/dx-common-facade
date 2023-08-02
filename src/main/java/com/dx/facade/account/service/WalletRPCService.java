@@ -6,7 +6,6 @@ import com.dx.facade.account.change.param.IBWWalletChangeParm;
 import com.dx.facade.account.change.param.MultipleWalletChangeParmDTO;
 import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
-import com.dx.facade.account.param.QueryCashWalletParam;
 import com.dx.facade.account.param.QueryWalletParam;
 import com.dx.facade.account.param.WalletAmountParam;
 import com.dx.facade.account.req.WalletBalanceDTO;
@@ -23,12 +22,12 @@ public interface WalletRPCService {
     List<WalletRespDTO> getWallet(QueryWalletParam param);
 
     /**
-     * 批量用户查询中心钱包余额
+     * 批量查询用户的钱包
      *
      * @param paramList
      * @return
      */
-    CommonResp<List<WalletRespDTO>> getCashWalletList(List<QueryCashWalletParam> paramList);
+    CommonResp<List<WalletRespDTO>> getWalletList(List<QueryWalletParam> paramList);
 
     /**
      * 单一钱包账变
