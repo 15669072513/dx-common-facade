@@ -9,7 +9,7 @@ import java.util.List;
 public class ProxyRebateProxyMemberListResp {
 
 
-    @ApiModelProperty(value = "代理账号列表")
-    private List<ProxyRebateProxyMemberResp> proxyMemberList;
+    @ApiModelProperty(value = "代理列表")
+    private List<ProxyRebateProxyMemberResp> proxyList;
 
 }
