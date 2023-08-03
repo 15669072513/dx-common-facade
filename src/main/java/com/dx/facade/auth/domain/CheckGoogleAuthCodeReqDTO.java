@@ -25,6 +25,9 @@ public class CheckGoogleAuthCodeReqDTO implements Serializable {
     /** 用户名 */
     private String userName;
 
+    /** (类型:0B2B后台,1游戏后台,2信用贷后台) */
+    private String type;
+
 
     /** google验证码 */
     private String googleAuthCode;
