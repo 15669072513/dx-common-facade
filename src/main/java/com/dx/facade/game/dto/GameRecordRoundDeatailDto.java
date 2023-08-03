@@ -1,4 +1,4 @@
-package com.dx.facade.game.resp;
+package com.dx.facade.game.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @Builder
 @NoArgsConstructor
-public class GameRecordDeatailPackResp implements Serializable {
+public class GameRecordRoundDeatailDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
