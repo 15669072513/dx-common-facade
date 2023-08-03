@@ -63,8 +63,8 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_other_sub(WalletType.commission, ProxyBizType.other, ProxyChangeType.other_sub, ProxyAppType.other, TransType.out),
 
 
-    officer_proxy_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.in),
-    officer_proxy_down_score(WalletType.quota, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.out),
+    officer_proxy_up_score(WalletType.agent_cash, ProxyBizType.up_score, ProxyChangeType.officer_proxy_up_score, ProxyAppType.officer_proxy_up_score, TransType.in),
+    officer_proxy_down_score(WalletType.agent_cash, ProxyBizType.down_score, ProxyChangeType.officer_proxy_down_score, ProxyAppType.officer_proxy_down_score, TransType.out),
 
     proxy_be_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_be_up_score, ProxyAppType.proxy_be_up_score, TransType.in),
     proxy_to_child_up_score(WalletType.quota, ProxyBizType.up_score, ProxyChangeType.proxy_to_child_up_score, ProxyAppType.proxy_to_child_up_score, TransType.out),
@@ -77,8 +77,8 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_to_quota(WalletType.commission, ProxyBizType.commission_to_quota, ProxyChangeType.commission_to_quota, ProxyAppType.commission_to_quota, TransType.out),
     commission_be_transfer_to_quota(WalletType.quota, ProxyBizType.commission_to_quota, ProxyChangeType.commission_be_transfer_to_quota, ProxyAppType.commission_be_transfer_to_quota, TransType.in),
 
-    commission_rebate_adjustment_add(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.in),
-    commission_rebate_adjustment_sub(WalletType.cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.out),
+    commission_rebate_adjustment_add(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.in),
+    commission_rebate_adjustment_sub(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.out),
 
 //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 //    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
