@@ -49,7 +49,7 @@ public class ProxyTransferReqDTO {
 	private Long operatorProxyId;
 
 	/**
-	 * 钱包类型 1中心钱包，2信用钱包
+	 * 钱包类型
 	 */
 	private Integer walletType;
 

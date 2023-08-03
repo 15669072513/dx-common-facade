@@ -38,13 +38,9 @@ public class ProxyAssistDepositDto {
 	@ApiModelProperty(value = "下级会员账号", required = true)
 	private String userName;
 
-	@NotNull(message = "账户类型(6=佣金钱包,7=额度钱包)不能为空")
-	@ApiModelProperty(value = "账户类型(6=佣金钱包,7=额度钱包)", required = true, example = "7")
-	private Integer bizType;
-
-	@NotNull(message = "代存金额不能为空")
-	@ApiModelProperty(value = "代存金额", required = true, example = "10")
-	@Min(value = 0, message = "代存金额最小为0")
+	@NotNull(message = "操作金额不能为空")
+	@ApiModelProperty(value = "操作金额", required = true, example = "10")
+	@Min(value = 0, message = "操作金额最小为0")
 	private BigDecimal amount;
 
 	@ApiModelProperty(value = "备注")
