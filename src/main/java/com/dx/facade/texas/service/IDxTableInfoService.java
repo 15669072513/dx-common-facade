@@ -37,7 +37,7 @@ public interface IDxTableInfoService {
 
   /**
    * 根据条件查询牌桌列表信息-导出
-   *
+   * 最多只会返回1000条数据
    * @param req
    * @return
    */

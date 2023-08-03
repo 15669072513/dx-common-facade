@@ -15,4 +15,7 @@ public class CurrencyAndSum {
 
     @ApiModelProperty("越南盾总和")
     private BigDecimal vndSum = new BigDecimal(0);
+
+    @ApiModelProperty("USDT总和")
+    private BigDecimal usdtSum = new BigDecimal(0);
 }
