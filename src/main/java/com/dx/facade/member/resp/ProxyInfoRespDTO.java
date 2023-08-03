@@ -267,4 +267,16 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty("是否存在待签约的佣金契约标志 0-不存在 1-存在")
     private Integer commissionSignStatus;
     
+    @ApiModelProperty(value = "信用钱包余额")
+    private BigDecimal creditWalletBalance;
+
+    @ApiModelProperty(value = "信用额度")
+    private BigDecimal creditQuota;
+
+    @ApiModelProperty(value = "中心钱包余额")
+    private BigDecimal centerWalletBalance;
+    
+    @ApiModelProperty(value = "应收账款")
+    private BigDecimal accountsReceivable;
+    
 }
