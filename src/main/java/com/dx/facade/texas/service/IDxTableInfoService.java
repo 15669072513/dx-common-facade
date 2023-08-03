@@ -37,21 +37,24 @@ public interface IDxTableInfoService {
 
   /**
    * 根据条件查询牌桌列表信息-导出
-   *
+   * 最多只会返回1000条数据
    * @param req
    * @return
    */
   CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
+    /**
+     * 根据牌桌ID获取牌桌配置信息
+     * @param tableId
+     * @return
+     */
   CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
   /**
    * 新增牌桌
-   *
    * @param req
-   * @throws BizException
    */
-  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req) throws BizException;
+  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req);
 
   /**
    * 更新牌桌

@@ -53,6 +53,27 @@ public enum ProxyAppType implements IAppType {
     commission_be_transfer_to_quota(41, "佣金转额度钱包-收入"),
     commission_rebate_add(39, "返点增加调整"),
     commission_rebate_sub(40, "返点扣除调整"),
+    //---------------------v2需求客户端账变类型----------------
+    v2_cash_deposit_by_official(41, "官方给代理上分"),
+    v2_cash_deposit_by_parent_proxy(42, "代理被上级充值上分"),
+    v2_cash_deposit_to_sub_proxy(43, "代理给下级充值上分"),
+    v2_cash_deposit_to_member(44, "代理给会员充值上分"),
+    v2_cash_withdraw_by_official(45, "官方给代理提现下分"),
+    v2_cash_withdraw_by_parent_proxy(46, "代理被上级提现下分"),
+    v2_cash_withdraw_to_sub_proxy(47, "代理给下级提现下分"),
+    v2_cash_withdraw_to_member(48, "代理给会员提现下分"),
+    v2_cash_rebate(49, "流水返点"),
+    v2_loan(50, "信用借款"),
+    v2_repay(51, "信用还款"),
+    v2_credit_up_score_by_official(52, "官方给代理授信上分"),
+    v2_credit_up_score_by_parent_proxy(53, "代理被上级授信上分"),
+    v2_credit_up_score_to_sub_proxy(54, "代理给下级授信上分"),
+    v2_credit_up_score_to_member(55, "代理给会员授信上分"),
+    v2_credit_down_score_by_official(56, "官方给代理授信下分"),
+    v2_credit_down_score_by_parent_proxy(57, "代理被上级授信下分"),
+    v2_credit_down_score_to_sub_proxy(58, "代理给下级授信下分"),
+    v2_credit_down_score_to_member(59, "代理给会员授信下分"),
+
     ;
 
     private Integer code;

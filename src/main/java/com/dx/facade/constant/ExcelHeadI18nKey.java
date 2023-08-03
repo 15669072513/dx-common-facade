@@ -1,8 +1,5 @@
 package com.dx.facade.constant;
 
-import com.alibaba.excel.annotation.ExcelProperty;
-import com.dx.annotation.I18nField;
-
 /**
  * 导出excel表头国际化资源key常量
  * @author neko
@@ -557,7 +554,16 @@ public interface ExcelHeadI18nKey {
     String FUNDS_小盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_小盲位";
     String FUNDS_大盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_大盲位";
 
-
+    String PROXY_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_代理账号";
+    String TEXAS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队德州返点";
+    String ACTUAL_PERSON_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队真人返点";
+    String SPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队体育返点";
+    String LOTTERY_TICKET_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队彩票返点";
+    String CHESS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队棋牌返点";
+    String ESPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队电竞返点";
+    String STATUS = "EXCEL_HEAD_I18N_KEY.MEMBER_状态";
+    String UPDATE_BY = "EXCEL_HEAD_I18N_KEY.MEMBER_修改人";
+    String UPDATE_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_修改时间";
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
@@ -578,5 +584,8 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
     
     String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
+    
+    /** 返点比例列表文件名 */
+    String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
 
 }

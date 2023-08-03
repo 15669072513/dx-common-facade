@@ -47,6 +47,9 @@ public class MemberInfoRespDTO {
 
     @ApiModelProperty("会员币种")
     private String currency;
+    
+    @ApiModelProperty("会员币种符号")
+    private String currencySymbol;
 
     @ApiModelProperty("账号类型, 使用AccountTypeEnum枚举")
     private Integer accountType;
