@@ -23,9 +23,9 @@ public class UpDownScoreParam {
 	@ApiModelProperty(value = "用户类型0=会员，1=代理", required = true)
 	private Integer userType;
 
-	@ApiModelProperty(value = "用户名")
+	@NotNull(message = "用户名不能为空")
+	@ApiModelProperty(value = "用户名",required = true)
 	private String userName;
-
 
 	// 不同于walletType
 	@NotNull(message = "钱包类型(1=中心钱包,2=信用钱包)不能为空")

@@ -18,15 +18,6 @@ public interface ProxyAssistRecordRPCService {
      */
     Boolean saveProxyTransferProxyOrder(ProxyTransferReqDTO reqDTO) throws BizException;
 
-    /**
-     * 代理代存
-     *
-     * @param proxyAssistDepositDto
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveProxyAssitDepositOrder(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
-
 
     /**
      * 官方给代理上分
@@ -39,11 +30,11 @@ public interface ProxyAssistRecordRPCService {
 
     /**
      * 代理给会员上分
-     * @param proxyAssistDepositDto
+     * @param dto
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitMemberUpScore(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
+    CommonResp saveProxyAssitMemberUpScore(MemberUpDownScoreDto dto) throws BizException;
 
     /**
      * 代理给代理上分
@@ -55,11 +46,11 @@ public interface ProxyAssistRecordRPCService {
 
     /**
      *  代理给会员下分
-     * @param proxyAssistDownScoreDto
+     * @param dto
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitMemberDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws BizException;
+    CommonResp saveProxyAssitMemberDownScoreOrder(MemberUpDownScoreDto dto) throws BizException;
 
     /**
      * 代理给代理下分
