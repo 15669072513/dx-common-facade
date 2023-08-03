@@ -10,6 +10,7 @@ import com.dx.exception.BizException;
  */
 public enum ProxyChangeType implements IChangeType {
 
+
     //代理钱包
     deposit(1, "代理存款", "1"),
     deposit_back(2, "代理存款(后台)", "1"),
@@ -46,7 +47,7 @@ public enum ProxyChangeType implements IChangeType {
     proxy_to_mem_down_score(32, "代理给会员下分", "13"),
 
     commission_to_quota(33, "佣金转额度钱包", "38"),
-    commission_be_transfer_to_quota(34,"佣金转额度钱包","41")
+    commission_be_transfer_to_quota(34,"佣金转额度钱包","41"),
 
 
 //    quota_transfer_to_banker(25, "额度出金私庄", "11"),
@@ -114,6 +115,34 @@ public enum ProxyChangeType implements IChangeType {
 //    pre_settlement_unlock(73, "预结算解锁", "25"),
 //    pre_settlement_unlock_send(74, "预结算解锁-锁定出金", ""),
 //    platform_share(75, "平台分润", "14"),
+
+    //-------------v2---------------
+    //中心钱包 13种账变类型
+    v2_cash_deposit_by_official(76, "官方给代理充值上分", ProxyBizType.v2_deposit.code().toString()),
+    v2_cash_deposit_by_parent_proxy(77, "代理被上级充值上分", ProxyBizType.v2_deposit.code().toString()),
+    v2_cash_deposit_to_sub_proxy(78, "代理给下级充值上分", ProxyBizType.v2_deposit.code().toString()),
+    v2_cash_deposit_to_member(79, "代理给会员充值上分", ProxyBizType.v2_deposit.code().toString()),
+    v2_cash_withdraw_by_official(80, "官方给代理提现下分", ProxyBizType.v2_withdraw.code().toString()),
+    v2_cash_withdraw_by_parent_proxy(81, "代理被上级提现下分", ProxyBizType.v2_withdraw.code().toString()),
+    v2_cash_withdraw_to_sub_proxy(82, "代理给下级提现下分", ProxyBizType.v2_withdraw.code().toString()),
+    v2_cash_withdraw_to_member(83, "代理给会员提现下分", ProxyBizType.v2_withdraw.code().toString()),
+    v2_cash_rebate(84, "流水返点", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_add(85, "流水增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_sub(86, "流水扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_loan(87, "信用借款", ProxyBizType.v2_loan.code().toString()),
+    v2_cash_repay(88, "信用还款", ProxyBizType.v2_repay.code().toString()),
+
+    //信用钱包 10种账变类型
+    v2_credit_up_score_by_official(89, "官方给代理授信上分", ProxyBizType.v2_credit_up_score.code().toString()),
+    v2_credit_up_score_by_parent_proxy(90, "代理被上级授信上分", ProxyBizType.v2_credit_up_score.code().toString()),
+    v2_credit_up_score_to_sub_proxy(91, "代理给下级授信上分", ProxyBizType.v2_credit_up_score.code().toString()),
+    v2_credit_up_score_to_member(92, "代理给会员授信上分", ProxyBizType.v2_credit_up_score.code().toString()),
+    v2_credit_down_score_by_official(93, "官方给代理授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
+    v2_credit_down_score_by_parent_proxy(94, "代理被上级授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
+    v2_credit_down_score_to_sub_proxy(95, "代理给下级授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
+    v2_credit_down_score_to_member(96, "代理给会员授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
+    v2_credit_repay(97, "信用还款", ProxyBizType.v2_repay.code().toString()),
+    v2_credit_loan(98, "信用借款", ProxyBizType.v2_loan.code().toString())
     ;
 
     private Integer code;
@@ -153,13 +182,13 @@ public enum ProxyChangeType implements IChangeType {
         throw new BizException("没有这个ProxyChangeType");
     }
 
-    public static List<ProxyChangeType> getArtificialProxyChangeTypeList() {
+    /*public static List<ProxyChangeType> getArtificialProxyChangeTypeList() {
         return Arrays.asList(ProxyChangeType.deposit_back, ProxyChangeType.activity_add, ProxyChangeType.activity_sub,
                 ProxyChangeType.other_add, ProxyChangeType.other_sub,
                 ProxyChangeType.withdraw_back, ProxyChangeType.commission_add, ProxyChangeType.commission_sub,
                 ProxyChangeType.rebate_add, ProxyChangeType.rebate_sub);
 
-    }
+    }*/
 
 
     /**
@@ -168,10 +197,31 @@ public enum ProxyChangeType implements IChangeType {
      * @return
      */
     public static ProxyChangeType[] getProxyChangeTypeList() {
-        return new ProxyChangeType[]{to_center,
-                rebate,
-                rebate_add,
-                rebate_sub,
+        return new ProxyChangeType[]{
+                v2_cash_deposit_by_official,
+                v2_cash_deposit_by_parent_proxy,
+                v2_cash_deposit_to_sub_proxy,
+                v2_cash_deposit_to_member,
+                v2_cash_withdraw_by_official,
+                v2_cash_withdraw_by_parent_proxy,
+                v2_cash_withdraw_to_sub_proxy,
+                v2_cash_withdraw_to_member,
+                v2_cash_rebate,
+                v2_cash_rebate_add,
+                v2_cash_rebate_sub,
+                v2_cash_loan,
+                v2_cash_repay,
+                v2_credit_up_score_by_official,
+                v2_credit_up_score_by_parent_proxy,
+                v2_credit_up_score_to_sub_proxy,
+                v2_credit_up_score_to_member,
+                v2_credit_down_score_by_official,
+                v2_credit_down_score_by_parent_proxy,
+                v2_credit_down_score_to_sub_proxy,
+                v2_credit_down_score_to_member,
+                v2_credit_repay,
+                v2_credit_loan
+                /*
                 officer_proxy_up_score,
                 proxy_be_up_score,
                 proxy_to_child_up_score,
@@ -180,7 +230,8 @@ public enum ProxyChangeType implements IChangeType {
                 proxy_be_down_score,
                 proxy_to_child_down_score,
                 proxy_to_mem_down_score,
-                commission_to_quota};
+                commission_to_quota*/
+        };
     }
 
 

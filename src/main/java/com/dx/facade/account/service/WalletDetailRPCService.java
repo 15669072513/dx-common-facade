@@ -6,8 +6,12 @@ import com.dx.entity.PageResp;
 import com.dx.facade.account.param.WalletDetailParamDTO;
 import com.dx.facade.account.req.WalletBalanceDetailDTO;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
+import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
+
+import java.math.BigDecimal;
+import java.util.List;
 
 public interface WalletDetailRPCService {
 
@@ -19,5 +23,19 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+
+    /**
+     * 根据牌桌查询代入带出
+      * @param tableId
+     * @return
+     */
+    CommonResp<GameAmountTotalRespDTO> getDxGameTableIdAmount(Long tableId);
+
+    /**
+     * 根据牌桌查询代入带出 list
+     * @param idsList
+     * @return
+     */
+    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
 
 }

@@ -13,15 +13,14 @@ import java.time.LocalDateTime;
 @ApiModel("游戏记录查询对象")
 @Data
 public class GameOrderRecordUserVenueReq extends BaseRequest {
-
     @ApiModelProperty("会员账号")
-    private String userName;
+    private String playerName;
+    @ApiModelProperty("游戏类型")
+    private Integer gameType;
     @ApiModelProperty("游戏名称")
     private String gameName;
-    @ApiModelProperty("游戏类型")
-    private String gameType;
     @ApiModelProperty("代理id")
     private Long parentProxyId;
     @ApiModelProperty("状态")
-    private Integer status;
+    private Integer obBetStatus;
 }

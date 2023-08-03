@@ -104,10 +104,6 @@ public class MemberSaveReqDTO {
     /** 注册终端类型 */
     @ApiModelProperty(value = "注册终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP 6-后台）", hidden = true)
     private Integer registerDeviceType;
-
-    /** 注册IP */
-    @ApiModelProperty(value = "注册IP", hidden = true)
-    private String ip;
     
     /** 昵称 */
     @ApiModelProperty(value="昵称")
@@ -121,4 +117,9 @@ public class MemberSaveReqDTO {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
 
+	@ApiModelProperty(value = "注册IP", hidden = true)
+	private String registerIp;
+	
+	@ApiModelProperty(value = "注册设备号", hidden = true)
+	private String registerDeviceNo;
 }

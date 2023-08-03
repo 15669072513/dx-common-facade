@@ -12,17 +12,11 @@ import java.time.LocalDateTime;
  */
 @Data
 public class GameOrderRecordUserVenueResp implements Serializable {
-
    /**
     * 会员账号
     */
    @ApiModelProperty("会员账号")
    private String playerName;
-   /**
-    * 会员账号
-    */
-   @ApiModelProperty("会员账号")
-   private String userName;
    /**
     * 场馆名称
     */
@@ -34,37 +28,25 @@ public class GameOrderRecordUserVenueResp implements Serializable {
    @ApiModelProperty("游戏名称")
    private String gameName;
    /**
-    * 状态
+    * 游戏类型
     */
-   @ApiModelProperty("状态")
-   private Integer status;
+   @ApiModelProperty("游戏类型")
+   private Long gameType;
    /**
     * 状态
     */
    @ApiModelProperty("状态")
-   private Integer betStatus;
+   private Integer obBetStatus;
    /**
     * 投注金额
     */
    @ApiModelProperty("投注金额")
-   private Long betChip;
-
-
-   /**
-    * 投注金额
-    */
-   @ApiModelProperty("投注金额")
-   private Long betAmount;
+   private BigDecimal betAmount;
    /**
     * 有效投注
     */
    @ApiModelProperty("有效投注")
-   private String pumpingChip;
-   /**
-    * 有效投注
-    */
-   @ApiModelProperty("有效投注")
-   private String validBetAmount;
+   private BigDecimal validBetAmount;
 
    /**
     *  游戏盈亏
@@ -72,14 +54,14 @@ public class GameOrderRecordUserVenueResp implements Serializable {
    @ApiModelProperty("游戏盈亏")
    private BigDecimal netAmount;
    /**
-    *  游戏盈亏
-    */
-   @ApiModelProperty("游戏盈亏")
-   private BigDecimal netChip;
-   /**
-    * 结算时
+    * 结算时间
     */
    @ApiModelProperty("结算时间")
    private Long handEndDate;
+   /**
+    * 牌桌抽水
+    */
+   @ApiModelProperty("牌桌抽水")
+   private BigDecimal pumpAmount;
 
 }

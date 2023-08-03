@@ -19,6 +19,17 @@ public enum MemberAppType implements IAppType {
     bring_out_table(12,"带出牌桌"),
     to_center(13, "佣金转回"),
 
+    //---------------V2新增-------------
+    v2_cash_up_score(14, "充值上分"),
+    v2_cash_down_score(15, "提现上分"),
+    v2_transfer(3, "转账"),
+    v2_rebate(4, "返水"),
+    v2_loan(16, "信用借款"),
+    v2_repay(17, "信用还款"),
+    v2_credit_up_score(18, "授信上分"),
+    v2_credit_down_score(19, "授信下分"),
+    v2_bring_to_table(11, "带入牌桌"),
+    v2_bring_out_table(12,"带出牌桌")
     ;
 
     private Integer code;

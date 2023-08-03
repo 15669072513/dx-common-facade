@@ -6,5 +6,5 @@ import java.util.List;
 
 @Data
 public class GameOrderClubContributeDto {
-    private List<Long> handIdList;
+    private List<String> handIdList;
 }

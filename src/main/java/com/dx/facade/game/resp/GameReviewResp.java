@@ -38,6 +38,9 @@ public class GameReviewResp implements Serializable  {
      */
     @ApiModelProperty("手牌结束时间")
     private Long handEndDate;
+
+    @ApiModelProperty("手牌开始时间")
+    private Long handBeginDate;
     /**
      * 游戏名称
      */
@@ -95,5 +98,11 @@ public class GameReviewResp implements Serializable  {
      */
     @ApiModelProperty("座位类型 0 普通 1庄 2 大盲 3小盲")
     private Integer seatType;
+
+
+    /**
+     * 底池竞争亮牌标识 1亮牌 2不亮牌。
+     */
+    private Integer showStatus;
 
 }
