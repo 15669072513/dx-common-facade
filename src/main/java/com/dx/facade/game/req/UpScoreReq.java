@@ -61,4 +61,12 @@ public class UpScoreReq{
      * 事件Time
      */
     private Long eventTime;
+    /**
+     * 筹码变动类型 筹码变动动作 1-上分 2-中途带入
+     */
+    private Integer changeType;
+    /**
+     * 手牌code
+     */
+    private String handCode;
 }
