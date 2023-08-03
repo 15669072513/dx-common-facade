@@ -71,6 +71,4 @@ public interface GameOrderRpcService {
     CommonResp<PageResp<GameRecordDeatailPackResp, Void>> getGameReviewDeatailList(GameReviewReq req);
 
 
-    Integer getMaxRoundNoByRedisCache(Long tableId);
-
 }
