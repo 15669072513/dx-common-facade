@@ -385,6 +385,9 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_总存款次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_总存款次数";
     String	FUNDS_总提款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_总提款金额";
     String	FUNDS_总提款次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_总提款次数";
+    String	FUNDS_信用钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用钱包余额";
+    String	FUNDS_信用额度 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用额度";
+    String	FUNDS_应收账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应收账款";
     
     String	FUNDS_俱乐部数量 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部数量";
     String	FUNDS_俱乐部人数 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部人数";
