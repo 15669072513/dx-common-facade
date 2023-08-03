@@ -9,6 +9,7 @@ import com.dx.facade.account.param.PaymentLockStatusDTO;
 import com.dx.facade.account.param.WithdrawOrderParamDTO;
 import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
+import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
 import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
 import com.dx.facade.account.resp.OrderListByIpOrDeviceNoRespDTO;
 import com.dx.facade.account.resp.WithdrawOrderRespDTO;
@@ -27,6 +28,14 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
+
+    /**
+     * 提现订单更新（锁单，订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+     * @param dto           更新DTO
+     * @param operationDesc 操作说明
+     * @return
+     */
+    Boolean updateWithdrawOrderById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
