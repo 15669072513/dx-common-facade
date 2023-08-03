@@ -68,5 +68,12 @@ public interface AuthService {
      * 返回商户code列表
      */
     CommonResp<List<String>> getAgentCodes(PermissionAgentReqDTO permissionAgentReqDTO) throws BizException;
+    
+    /**
+     * 验证谷歌验证码
+     *
+     * @return
+     */
+    CommonResp<Boolean> checkGoogleAuthCode(CheckGoogleAuthCodeReqDTO req) throws BizException;
 
 }
