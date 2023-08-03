@@ -71,8 +71,8 @@ public enum ProxyBizType implements IBizType {
     //v2新增信用钱包业务类型 4 个
     v2_loan(36, "借款", "1,9"),
     v2_repay(37, "还款", "1,9"),
-    v2_credit_up_score(38, "信用上分", "9,10"),
-    v2_credit_down_score(39, "信用下分", "9,10"),
+    v2_credit_up_score(38, "授信上分", "9,10"),
+    v2_credit_down_score(39, "授信下分", "9,10"),
     ;
 
     private Integer code;

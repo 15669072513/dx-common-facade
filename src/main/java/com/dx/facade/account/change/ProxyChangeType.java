@@ -1,8 +1,5 @@
 package com.dx.facade.account.change;
 
-import java.util.Arrays;
-import java.util.List;
-
 import com.dx.exception.BizException;
 
 /**
@@ -127,8 +124,8 @@ public enum ProxyChangeType implements IChangeType {
     v2_cash_withdraw_to_sub_proxy(82, "代理给下级提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_withdraw_to_member(83, "代理给会员提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_rebate(84, "流水返点", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_add(85, "流水增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_sub(86, "流水扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_add(85, "返点增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_sub(86, "返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
     v2_cash_loan(87, "信用借款", ProxyBizType.v2_loan.code().toString()),
     v2_cash_repay(88, "信用还款", ProxyBizType.v2_repay.code().toString()),
 

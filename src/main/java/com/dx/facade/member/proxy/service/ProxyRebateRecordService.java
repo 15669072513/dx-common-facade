@@ -10,6 +10,8 @@ import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
 import com.dx.facade.report.param.agent.AgentRebateReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
 
 import java.util.List;
 
@@ -80,4 +82,20 @@ public interface ProxyRebateRecordService {
      * @throws BizException
      */
     CommonResp takeRebate(ProxyRebateTackReq reqDTO) throws BizException;
+
+    /**
+     * 代理PC-返回代理会员返点报表
+     * @param proxyId  reportDate
+     * @return
+     * @throws BizException
+     */
+    CommonResp<List<ProxyRebateTeamResp>> getProxyTeamRebate(Long proxyId, Integer reportDate) throws BizException;
+    /**
+     * 代理PC-返回代理列表
+     * @param proxyId
+     * @return
+     * @throws BizException
+     */
+    CommonResp<ProxyRebateProxyMemberListResp> getProxyMemberList(Long proxyId) throws BizException;
+
 }
