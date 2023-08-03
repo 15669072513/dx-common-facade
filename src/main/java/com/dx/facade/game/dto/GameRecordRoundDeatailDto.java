@@ -20,6 +20,9 @@ public class GameRecordRoundDeatailDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("圈层")
+    private String roundCode;
+
     @ApiModelProperty("公牌")
     private String publicCards;
 
