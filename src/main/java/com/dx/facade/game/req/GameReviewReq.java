@@ -13,6 +13,10 @@ public class GameReviewReq extends BaseRequest {
      */
     @ApiModelProperty("牌桌id")
     private Long tableId;
+
+    /** 手牌code */
+    @ApiModelProperty("手牌code")
+    private String handCode;
     /**
      * 局次（牌桌第多少局）
      */

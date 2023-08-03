@@ -20,17 +20,20 @@ public class GameRecordRoundDeatailDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("圈层")
-    private String roundCode;
+    @ApiModelProperty("公牌")
+    private String publicCards;
 
-    @ApiModelProperty("显示牌")
-    private String showCards;
+    @ApiModelProperty("手牌")
+    private String handCards;
 
-    @ApiModelProperty("底池金额")
-    private BigDecimal potAmount;
+    @ApiModelProperty("座位号")
+    private Integer chairId;
 
-    @ApiModelProperty("玩家位置")
+    @ApiModelProperty("座位类型大类 1:前位 2:中位 3:后位 4:盲位")
     private String seatType;
+
+    @ApiModelProperty("座位类型,参考枚举:TexasSeatTypeEnum")
+    private Integer seatCode;
 
     @ApiModelProperty("玩家昵称")
     private String nickName;
@@ -50,15 +53,13 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("弃牌玩家数")
     private Integer losePalyers;
 
-    @ApiModelProperty("玩家手牌")
-    private String handInfo;
+    /**
+     * 开牌结果（#PokerResultInfoEnum）
+     */
+    @ApiModelProperty("牌型")
+    private String resultInfo;
 
     @ApiModelProperty("输赢筹码")
     private BigDecimal netAmount;
 
-    @ApiModelProperty("当前局数")
-    private Long roundNum;
-
-    @ApiModelProperty("总局数")
-    private Long totalRound;
 }
