@@ -1,14 +1,19 @@
 package com.dx.facade.game.req;
 
-import com.dx.enums.ChipScoreEnum;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 
 /**
  * @author admin
  */
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class UpScoreReq{
     @ApiModelProperty("tableId")
