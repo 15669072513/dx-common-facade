@@ -53,6 +53,9 @@ public class UpdateRebateRateParamDTO extends BaseRebateRateParamDTO implements 
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lostEffectDt;
     
+    @ApiModelProperty("是否为平台调整")
+    private boolean isPlatformAdjustment;
+    
 	@Override
 	public void check() {
 		 Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
