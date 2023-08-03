@@ -66,4 +66,8 @@ public class UpScoreReq{
      * 事件Time
      */
     private Long eventTime;
+    /**
+     * 手牌code
+     */
+    private String handCode;
 }
