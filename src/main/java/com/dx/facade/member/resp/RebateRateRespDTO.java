@@ -103,5 +103,8 @@ public class RebateRateRespDTO implements Serializable {
 
     @ApiModelProperty("最后操作时间")
     private LocalDateTime updatedAt;
+    
+    @ApiModelProperty("是否有下级代理")
+    private boolean hasSub;
 
 }
