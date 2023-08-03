@@ -39,7 +39,7 @@ public class BaseRebateRateParamDTO implements Serializable {
     @NotNull(message = "商户Id不能为空")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 1：会员 2：代理")
+    @ApiModelProperty("用户类型 0：会员 1：代理")
     @NotNull(message = "用户类型不能为空")
     private Integer userType;
     
@@ -81,7 +81,7 @@ public class BaseRebateRateParamDTO implements Serializable {
     @NotNull(message = "电竞返点比例不能为空")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未生效 1-已生效 2-已失效")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
 
 }
