@@ -38,6 +38,12 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("座位类型,参考枚举:TexasSeatTypeEnum")
     private Integer seatCode;
 
+    @ApiModelProperty("用户id")
+    private Long userId;
+
+    @ApiModelProperty("玩家头像")
+    private String topImagesUrl;
+
     @ApiModelProperty("玩家昵称")
     private String nickName;
 
