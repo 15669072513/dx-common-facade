@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Slf4j
@@ -16,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class WalletAmountParam implements BaseParmDTO {
+public class WalletAmountParam implements BaseParmDTO, Serializable {
 
     @Getter
     @Setter

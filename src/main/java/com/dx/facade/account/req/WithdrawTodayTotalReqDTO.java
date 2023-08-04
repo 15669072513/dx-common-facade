@@ -1,9 +1,6 @@
 package com.dx.facade.account.req;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -11,6 +8,7 @@ import java.io.Serializable;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 public class WithdrawTodayTotalReqDTO implements Serializable {
 
     private Long userId;
