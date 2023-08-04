@@ -16,4 +16,6 @@ public interface WalletDetailRpcService {
    */
   CommonResp<PageResp<WalletDetailDto,Void>> getWalletDetailPage(PageReq<WalletDetailPageRequest> request) throws
       BizException;
+
+
 }
