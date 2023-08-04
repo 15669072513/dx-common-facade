@@ -209,7 +209,9 @@ public enum ConfigKeyEnum {
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
 
-
+    //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
+    PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
+    PROXY_LOAN_BILL_PERIOD_HOUR("proxy.loan.bill.period.hour", "1"),
     //*****************************资金模块配置,其它模块请注意自己的位置哈*************************************
     //资资金>账单相关设置 会员单日提现申请最大次数，中控后台参数字典配置
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),
