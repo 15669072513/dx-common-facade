@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 import org.springframework.util.Assert;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.dx.facade.member.exception.ErrorCode;
 
 import io.swagger.annotations.ApiModel;

@@ -7,23 +7,27 @@ import java.util.List;
 
 /**
  * 代理业务类型 6佣金钱包 7额度钱包
+ * V2需求，代理只有中心钱包和信用钱包
  * @author Administrator
  */
 public enum ProxyBizType implements IBizType {
 
     //佣金钱包钱包额度钱包 佣金钱包可以转中心钱包
 
-    //代理钱包
+    //代理中心钱包
     deposit(1, "代理存款", "6,7"),
+    v2_deposit(1, "充值上分", "1"),
     deposit_for_member(2, "代会员存款", "6,7"),
     activity(3, "代理活动", "7"),
-    //    quota(4, "代理额度", "7"),
+        quota(4, "代理额度", "7"),
     transfer(5, "代理转账", "6,7"),
     other(6, "其他调整", "6,7"),
     withdraw(7, "代理取款", "6"),
+    v2_withdraw(7, "提现下分", "1"),
     to_center(8, "佣金转中心钱包", "6"),
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
+    v2_rebate(10, "代理返点", "1"),
     //此账变后期废弃
     commission_to_quota(11, "佣金转额度钱包", "6"),
     up_score(12, "上分", "7"),
@@ -64,6 +68,11 @@ public enum ProxyBizType implements IBizType {
     proxy_to_child_down_score(34, "代理给下级下分", "7"),
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
+    //v2新增信用钱包业务类型 4 个
+    v2_loan(36, "借款", "1,9"),
+    v2_repay(37, "还款", "1,9"),
+    v2_credit_up_score(38, "信用上分", "9,10"),
+    v2_credit_down_score(39, "信用下分", "9,10"),
     ;
 
     private Integer code;
@@ -109,8 +118,8 @@ public enum ProxyBizType implements IBizType {
      * @return
      */
     public static List<ProxyBizType> getProxyChangeRecordTypeList() {
-        return Arrays.asList(ProxyBizType.up_score, ProxyBizType.down_score, ProxyBizType.to_center,
-                ProxyBizType.commission_to_quota, ProxyBizType.rebate
+        return Arrays.asList(ProxyBizType.v2_deposit, ProxyBizType.v2_withdraw, ProxyBizType.v2_rebate,
+                ProxyBizType.v2_loan, ProxyBizType.v2_repay, ProxyBizType.v2_credit_up_score, ProxyBizType.v2_credit_down_score
         );
     }
 

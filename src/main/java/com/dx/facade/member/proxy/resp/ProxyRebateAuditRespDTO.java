@@ -87,6 +87,9 @@ public class ProxyRebateAuditRespDTO {
     @ApiModelProperty(value = "返点金额")
     private BigDecimal rebateAmount;
 
+    @ApiModelProperty(value = "返点调整金额")
+    private BigDecimal rebateAdjustAmount;
+
     @ApiModelProperty(value = "报表日期")
     private Integer reportDate;
 

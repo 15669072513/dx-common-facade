@@ -60,4 +60,11 @@ public interface VenueConfigService {
      */
     List<ConfigVenuePO> getVenueByVenueTypeCode(String venueTypeCode);
 
+    /**
+     * 根据场馆类型code,得到非禁用场馆列表
+     * @param venueTypeCode
+     * @return
+     */
+    List<ConfigVenuePO> getVenueByVenueTypeCodeAndStatus(String venueTypeCode);
+
 }
