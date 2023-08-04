@@ -4,13 +4,20 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 
 @Data
 public class ProxyLoanBillAppRespDTO {
 
+    @ApiModelProperty(value = "账单类型，0-未出，1-已出账单")
+    private Integer billType;
+
     @ApiModelProperty(value = "账单结束日期")
-    private String periodEndDate;
+    private LocalDateTime periodEndDate;
+
+    @ApiModelProperty(value = "账单生成时间")
+    private LocalDateTime billCreateTime;
 
     @ApiModelProperty("净资产")
     private BigDecimal netAssets;
