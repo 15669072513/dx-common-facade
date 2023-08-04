@@ -21,7 +21,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("圈层")
-    private String roundCode;
+    private int roundCode;
 
     @ApiModelProperty("公牌")
     private String publicCards;
@@ -33,7 +33,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private Integer chairId;
 
     @ApiModelProperty("座位类型大类 1:前位 2:中位 3:后位 4:盲位")
-    private String seatType;
+    private Integer seatType;
 
     @ApiModelProperty("座位类型,参考枚举:TexasSeatTypeEnum")
     private Integer seatCode;
