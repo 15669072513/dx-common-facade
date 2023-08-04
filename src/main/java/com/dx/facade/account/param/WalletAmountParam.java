@@ -33,6 +33,11 @@ public class WalletAmountParam implements BaseParmDTO {
     @ApiModelProperty(value = "币种")
     private String currency;
 
+    @ApiModelProperty("用户类型：0会员，1代理")
+    @Getter
+    @Setter
+    private Integer userType;
+
     @Override
     public void check() {
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
