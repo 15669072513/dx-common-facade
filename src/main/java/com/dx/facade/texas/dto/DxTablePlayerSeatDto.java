@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @ApiModel("获取牌桌玩家座位信息")
 @Data
-public class DxTablePLayerSeatDto implements Serializable {
+public class DxTablePlayerSeatDto implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
