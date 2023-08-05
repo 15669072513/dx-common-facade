@@ -25,7 +25,7 @@ public interface LoanRepayRecordRPCService {
 
 
     /**
-     * 借/还款
+     * 会员/代理，借/还款接口
      * @param param
      * @return
      */
