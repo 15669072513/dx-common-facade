@@ -37,7 +37,7 @@ public interface TyPayOrderRpcService {
      * @throws Exception
      */
     @ApiModelProperty(value = "会员取款")
-    CommonResp<PaymentWithdrawOrderRespDTO> saveWithDrawOrderV2(WithDrawOrderDtoV2 dto) throws Exception;
+    CommonResp<PaymentWithdrawOrderRespDTO> saveWithDrawOrderV2(WithDrawOrderDtoV2 dto);
 
     /**
      * 佣金提款到中心钱包
