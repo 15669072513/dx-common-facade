@@ -104,4 +104,16 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty("币种符号")
     private String currencySymbol;
+    
+    @ApiModelProperty(value = "信用钱包余额")
+    private BigDecimal creditWalletBalance;
+
+    @ApiModelProperty(value = "信用额度")
+    private BigDecimal creditQuota;
+
+    @ApiModelProperty(value = "中心钱包余额")
+    private BigDecimal centerWalletBalance;
+    
+    @ApiModelProperty(value = "应收账款")
+    private BigDecimal accountsReceivable;
 }
