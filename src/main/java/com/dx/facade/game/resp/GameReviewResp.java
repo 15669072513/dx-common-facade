@@ -93,21 +93,14 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
 
-    @ApiModelProperty("座位类型,参考枚举:TexasSeatTypeEnum ")
-    private Integer seatCode;
+    @ApiModelProperty(value = "座位号")
+    private Integer chairId;
 
-    /**
-     * 座位号
-     */
-    @ApiModelProperty("座位号")
-    private Integer seatNum;
-
-    /**
-     * 座位类型 (GameSeatTypeEnum)
-     */
-    @ApiModelProperty("座位类型 0 普通 1庄 2 大盲 3小盲")
+    @ApiModelProperty(value = "座位类型大类 1:前位 2:中位 3:后位 4:盲位")
     private Integer seatType;
 
+    @ApiModelProperty(value = "座位类型,参考枚举:TexasSeatTypeEnum")
+    private Integer seatCode;
 
     /**
      * 底池竞争亮牌标识 1亮牌 2不亮牌。
