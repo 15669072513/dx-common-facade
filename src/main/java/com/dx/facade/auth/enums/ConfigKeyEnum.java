@@ -172,6 +172,10 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_REGISTER("message.member.register", "1"),
     MESSAGE_MEMBER_VIP_PROMOTION("message.member.vip.promotion", "1"),
     MESSAGE_MEMBER_DEPOSIT("message.member.deposit", "1"),
+
+    MESSAGE_MEMBER_DEPOSIT_V2("message.member.deposit.v2", "1"),
+    MESSAGE_MEMBER_WITHDRAW_SUCCESS_V2("message.member.withdraw.success.v2", "1"),
+    MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
     MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"),
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
