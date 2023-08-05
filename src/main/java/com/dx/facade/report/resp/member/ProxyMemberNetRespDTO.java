@@ -44,4 +44,8 @@ public class ProxyMemberNetRespDTO {
 
     @ApiModelProperty("总盈亏")
     private BigDecimal totalNetAmount;
+
+    //parent_proxy_name
+    @ApiModelProperty("代理账号")
+    private String parentProxyName;
 }

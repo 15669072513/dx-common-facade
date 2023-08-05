@@ -18,7 +18,9 @@ import java.math.BigDecimal;
 @ApiModel(value="com-ob-facade-member-proxy-resp-ProxyBaseInfoRespDTO",description = "代理基础信息对象")
 public class ProxyBaseInfoRespDTO implements Serializable {
 
-    @ApiModelProperty(value="代理ID")
+	private static final long serialVersionUID = -4255685900888636572L;
+
+	@ApiModelProperty(value="代理ID")
     private Long proxyId;
 
     @ApiModelProperty(value="代理用户名")
@@ -26,6 +28,9 @@ public class ProxyBaseInfoRespDTO implements Serializable {
 
     @ApiModelProperty(value="上级代理ID")
     private Long parentProxyId;
+    
+    @ApiModelProperty(value="总代ID")
+    private Long topProxyId;
 
     @ApiModelProperty(value="'代理层级ID'")
     private Long proxyLevelId;

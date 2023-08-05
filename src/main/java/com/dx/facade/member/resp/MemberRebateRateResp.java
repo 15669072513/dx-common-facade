@@ -32,7 +32,7 @@ public class MemberRebateRateResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("用户类型 1：会员 2：代理")
+    @ApiModelProperty("用户类型 0：会员 1：代理")
     private Integer userType;
 
     @ApiModelProperty("用户名称")

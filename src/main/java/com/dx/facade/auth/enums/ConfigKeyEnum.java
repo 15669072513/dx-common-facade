@@ -205,7 +205,7 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
     /** 币种 */
-    DX_CURRENCY("dx_currency","1"),
+    DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
 
