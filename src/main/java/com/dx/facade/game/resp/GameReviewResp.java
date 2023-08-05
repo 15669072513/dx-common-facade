@@ -102,6 +102,9 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty(value = "座位类型,参考枚举:TexasSeatTypeEnum")
     private Integer seatCode;
 
+    @ApiModelProperty("座位号")
+    private Integer seatNum;
+
     /**
      * 底池竞争亮牌标识 1亮牌 2不亮牌。
      */
