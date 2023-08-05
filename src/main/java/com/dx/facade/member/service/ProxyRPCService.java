@@ -107,7 +107,7 @@ public interface ProxyRPCService {
      * @return 校验成功返回true
      * @throws BizException 业务异常
      */
-    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword) throws BizException;
+    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword);
 
     /**
      * 修改代理密码
