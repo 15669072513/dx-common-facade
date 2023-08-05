@@ -37,6 +37,7 @@ public enum AuthI18nCodeEnum implements I18nEnum {
 	IP_ERROR(10013), // 您的ip访问受限制，请联系管理员
 	CHECK_DUPLICATE_FAILED(-10005),// {0}已存在，请勿重复操作！
 	IP_WHITE_LIST_OFF(2981681),// 请在 系统配置 中查看是否需要开启该功能
+    KAPTCHA_ERROR(10008),//验证码错误
     ;
 
     private int code;

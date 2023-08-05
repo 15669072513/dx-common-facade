@@ -3,6 +3,7 @@ package com.dx.facade.account.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
+import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
 import com.dx.facade.account.param.WalletDetailParamDTO;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
@@ -21,5 +22,13 @@ public interface LoanRepayRecordRPCService {
      * @return
      */
     CommonResp<PageResp<LoanRepayRecordRespDTO, String>> getLoanRepayRecordList(PageReq<LoanRepayRecordParam> param);
+
+
+    /**
+     * 借/还款
+     * @param param
+     * @return
+     */
+    CommonResp loanRepay(LoanRepayParam param);
 
 }
