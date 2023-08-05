@@ -75,4 +75,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("输赢筹码")
     private BigDecimal netAmount;
 
+    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
+    private Integer showStatus;
+
 }

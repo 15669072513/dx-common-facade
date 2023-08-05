@@ -19,7 +19,6 @@ public class GameReviewReq extends BaseRequest {
 
     /** 手牌code */
     @ApiModelProperty("手牌code")
-    @NotNull(message = "手牌code不能为空")
     private String handCode;
     /**
      * 局次（牌桌第多少局）

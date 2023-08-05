@@ -105,9 +105,7 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty("座位号")
     private Integer seatNum;
 
-    /**
-     * 底池竞争亮牌标识 1亮牌 2不亮牌。
-     */
+    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
     private Integer showStatus;
 
 }
