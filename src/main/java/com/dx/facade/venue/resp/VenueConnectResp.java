@@ -1,6 +1,6 @@
 package com.dx.facade.venue.resp;
 
-import com.dx.facade.venue.dto.ConfigVenuePO;
+import com.dx.facade.venue.dto.ConfigVenueDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import lombok.ToString;
@@ -10,7 +10,7 @@ import java.util.List;
 
 @Data
 @ToString(callSuper = true)
-public class VenueConnectResp extends ConfigVenuePO {
+public class VenueConnectResp extends ConfigVenueDTO {
     //额外的属性
     @ApiModelProperty("使用过这个场馆的商户的数量")
     private Integer usedMerchantCount;
