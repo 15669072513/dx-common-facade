@@ -55,20 +55,20 @@ public enum MemberAppType implements IAppType {
         return desc;
     }
 
-    public static MemberAppType getType(Integer code) throws BizException {
+    public static MemberAppType getType(Integer code) {
         for (MemberAppType appMemberChangeType : values()) {
             if (appMemberChangeType.code.equals(code)) {
                 return appMemberChangeType;
             }
         }
-        throw new BizException("没有这个MemberAppType");
+        throw new IllegalArgumentException("没有这个MemberAppType,code:" + code);
     }
 
     /**
-     * 根据钱包类型和客户端账变类型获取后端账变类型
-     * @param walletType
-     * @param appChangeType
-     * @return
+     * 根据钱包类型和客户端账变类型获取后端账变类型列表
+     * @param walletType            钱包类型
+     * @param appChangeType         客户端账变类型
+     * @return                      后端账变类型列表
      */
     public static List<Integer> getChangeTypeByAppChangeType(@NotNull Integer walletType, @NotNull Integer appChangeType) {
         if (walletType == WalletType.cash.code()) {
@@ -103,5 +103,47 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.v2_B_to_center.code(), MemberChangeType.v2_center_to_B.code());
         }
         return Arrays.asList();
+    }
+
+    /**
+     * 根据钱包类型和后端账变类型，返回客户端账变
+     * @param walletType            钱包类型，参见WalletType
+     * @param serverChangeType      后端账变类型，参见MemberWalletType
+     * @return  返回客户端张变类型，参见MemberAppType
+     */
+    public static Integer getAppChangeTypeByServerChangeType (Integer walletType, Integer serverChangeType) {
+        if(walletType == WalletType.cash.code()) {
+            if(serverChangeType == MemberChangeType.v2_cash_up_score.code()) return v2_cash_up_score.code();
+            if(serverChangeType == MemberChangeType.v2_cash_down_score.code()) return v2_cash_down_score.code();
+            if(serverChangeType == MemberChangeType.v2_cash_center_to_B.code()) return transfer.code();
+            if(serverChangeType == MemberChangeType.v2_cash_B_to_center.code()) return transfer.code();
+            if(serverChangeType == MemberChangeType.v2_rebate.code()) return v2_rebate.code();
+            if(serverChangeType == MemberChangeType.v2_rebate_add.code()) return v2_rebate.code();
+            if(serverChangeType == MemberChangeType.v2_rebate_sub.code()) return v2_rebate.code();
+            if(serverChangeType == MemberChangeType.v2_cash_loan.code()) return v2_loan.code();
+            if(serverChangeType == MemberChangeType.v2_cash_repay.code()) return v2_repay.code();
+            if(serverChangeType == MemberChangeType.v2_cash_withdraw_frozen.code()) return v2_withdraw_frozen.code();
+            if(serverChangeType == MemberChangeType.v2_cash_withdraw_refused.code()) return v2_withdraw_refused.code();
+            if(serverChangeType == MemberChangeType.bring_to_table.code()) return v2_bring_to_table.code();
+            if(serverChangeType == MemberChangeType.bring_out_table.code()) return v2_bring_out_table.code();
+        }
+        if(walletType == WalletType.credit_available.code()) {
+            if(serverChangeType == MemberChangeType.v2_credit_up_score.code()) return v2_credit_up_score.code();
+            if(serverChangeType == MemberChangeType.v2_credit_down_score.code()) return v2_credit_down_score.code();
+            if(serverChangeType == MemberChangeType.v2_credit_loan.code()) return v2_loan.code();
+            if(serverChangeType == MemberChangeType.v2_credit_repay.code()) return v2_repay.code();
+        }
+        List<Integer> gameWalletTypes = Arrays.asList(
+                WalletType.texas.code(),
+                WalletType.video.code(),
+                WalletType.sports.code(),
+                WalletType.poker.code(),
+                WalletType.lottery.code(),
+                WalletType.e_sports.code()
+        );
+        if(gameWalletTypes.contains(walletType)) {
+            return v2_transfer.code();
+        }
+        return null;
     }
 }
