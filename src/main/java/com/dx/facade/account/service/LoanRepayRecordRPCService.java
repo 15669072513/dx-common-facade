@@ -30,6 +30,6 @@ public interface LoanRepayRecordRPCService {
      * @param param
      * @return
      */
-    CommonResp loanRepay(LoanRepayParam param);
+    CommonResp<String> loanRepay(LoanRepayParam param);
 
 }
