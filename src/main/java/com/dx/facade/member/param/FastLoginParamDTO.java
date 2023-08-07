@@ -20,7 +20,7 @@ public class FastLoginParamDTO implements Serializable {
 	
     /** 商户id */
     @ApiModelProperty(value = "商户id (20)", required = true)
-    @NotNull(message = "商户id不能为空")
+    //@NotNull(message = "商户id不能为空")
     private Long merchantId;
 
     @ApiModelProperty(value = "jwt joken",required = true)
@@ -31,4 +31,8 @@ public class FastLoginParamDTO implements Serializable {
     @Length(max = 128,message = "登录网址最大长度128")
     private String loginReference;
 
+    /** 客户端类型 */
+    @ApiModelProperty(value = "客户端类型")
+    //@NotNull(message = "客户端类型不能为空")
+    private Integer clientType;
 }
