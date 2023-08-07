@@ -31,7 +31,7 @@ public interface WithdrawOrderRPCService {
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
 
     /**
-     * 提现订单更新（锁单，订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+     * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
      * @param dto           更新DTO
      * @param operationDesc 操作说明
      * @return
