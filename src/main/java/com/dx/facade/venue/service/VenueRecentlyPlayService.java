@@ -13,4 +13,6 @@ public interface VenueRecentlyPlayService {
 
     List<RecentlyPlayingResp> venueRecentlyPlayList(Long memberId);
 
+    void venueRecentlyPlay(Long memberId, String venueMemberId, String venueCode);
+
 }

@@ -67,4 +67,9 @@ public class MemberListParamDTO {
     @ApiModelProperty(value = "俱乐部Id")
     private String clubId;
 
+    @ApiModelProperty("排序列 1：注册时间 默认注册时间")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
+    private String orderType;
 }
