@@ -18,6 +18,7 @@ import com.dx.facade.account.resp.WithdrawTodayTotalRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public interface WithdrawOrderRPCService {
@@ -35,7 +36,17 @@ public interface WithdrawOrderRPCService {
      * @param operationDesc 操作说明
      * @return
      */
-    Boolean updateWithdrawOrderById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
+    Boolean updateWithdrawOrderStatusById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
+
+    /**
+     * 更新提现订单ID更新锁单状态
+     * @param id                提现订单ID
+     * @param newLockStatus     新的锁单状态
+     * @param lockAccountId     锁单人ID
+     * @param lockAccount       锁单人
+     * @return  true：锁单解锁成功；false：失败
+     */
+    Boolean updateLockStatusById(@NotNull Long id, @NotNull Integer newLockStatus, Long lockAccountId, String lockAccount);
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;

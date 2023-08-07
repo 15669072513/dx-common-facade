@@ -46,23 +46,6 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
     @TableField("remark")
     private String remark;
 
-    @ApiModelProperty("锁单状态(0=未锁单 1=锁单中)")
-    @TableField("lock_status")
-    private Integer lockStatus;
-
-    @ApiModelProperty("当前锁单时间")
-    @TableField("lock_time")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private LocalDateTime lockTime;
-
-    @ApiModelProperty("锁单人")
-    @TableField("lock_account")
-    private String lockAccount;
-
-    @ApiModelProperty("锁单人id")
-    @TableField("lock_account_id")
-    private Long lockAccountId;
-
     @ApiModelProperty("一审审核人")
     @TableField("audit1_operator")
     private String audit1Operator;
