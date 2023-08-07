@@ -5,14 +5,9 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
-import com.dx.facade.account.param.WalletDetailParamDTO;
-import com.dx.facade.account.req.WalletBalanceDetailReq;
-import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.account.resp.LoanRepayRecordRespDTO;
-import com.dx.facade.account.resp.WalletDetailRespDTO;
-import com.dx.facade.account.resp.WalletDetailSumDTO;
 
-import java.util.List;
+import java.math.BigDecimal;
 
 public interface LoanRepayRecordRPCService {
 
@@ -31,5 +26,14 @@ public interface LoanRepayRecordRPCService {
      * @return
      */
     CommonResp loanRepay(LoanRepayParam param);
+
+
+    /**
+     * 校验借还款金额是否合法
+     * @param recordType
+     * @param amount
+     * @return
+     */
+    CommonResp<Boolean> checkAmount(Integer recordType, BigDecimal amount);
 
 }

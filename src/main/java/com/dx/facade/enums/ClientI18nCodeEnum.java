@@ -169,6 +169,9 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     CARDHOLDERNAME_NOT_NULL(700011), // 持卡人姓名不能为空
     VIRTUALADDRESS_NOT_NULL(700012), // 虚拟币账户不能为空
     PAYTYPE_NOT_NULL(700013), // 支付类型不能为空!
+    LOAN_EXCEED_LIMIT(700014), // 借款金额超过限度
+    REPAY_EXCEED_LIMIT(700015), // 还款金额超过限度
+    WALLET_AMOUNT_VALID_FAIL(700017), // 校验失败
     DEPOSIT_AMOUNT_ERROR(800001), // 充值金额必须大于0
     DEPOSIT_MORE_COUNT(800002), // 多次存款失败
     FAIL(999999), // 系统处理失败
