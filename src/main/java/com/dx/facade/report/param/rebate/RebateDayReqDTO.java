@@ -16,5 +16,8 @@ public class RebateDayReqDTO {
     @ApiModelProperty(value = "代理ID")
     private Long proxyId;
 
+    @ApiModelProperty(value = "会员ID")
+    private Long memberId;
+
 
 }
