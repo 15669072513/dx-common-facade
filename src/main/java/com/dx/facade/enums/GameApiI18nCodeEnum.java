@@ -29,6 +29,8 @@ public enum GameApiI18nCodeEnum implements I18nEnum {
     真人_点击桌台_真人主播直接进入桌台接口异常(44011), // 真人_点击桌台_真人主播直接进入桌台接口异常(44011, "真人_点击桌台_真人主播直接进入桌台接口异常"),
     真人_获取所有桌台接口异常(44008), // 真人_获取所有桌台接口异常(44008, "真人_获取所有桌台接口异常"),
 
+    QUERY_GAME_LIST_FAIL(44017),//"查询游戏列表失败"
+
     /** sdk **/
     HTTP_SEND_ERROR(9001), // HTTP_SEND_ERROR(9001, "发送网络请求失败")
     OBJECT_NOT_NULL(9103), // OBJECT_NOT_NULL(9103,"入参对象不能为空"),
