@@ -47,6 +47,10 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("玩家昵称")
     private String nickName;
 
+    @ApiModelProperty("在加注的基础上再加注 比如3B，当raiseCount>=2需要 拼接raiseCount+betAction")
+    private Integer raiseCount;
+
+
     @ApiModelProperty("玩家下注指令")
     private String betAction;
 
@@ -70,5 +74,8 @@ public class GameRecordRoundDeatailDto implements Serializable {
 
     @ApiModelProperty("输赢筹码")
     private BigDecimal netAmount;
+
+    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
+    private Integer showStatus;
 
 }
