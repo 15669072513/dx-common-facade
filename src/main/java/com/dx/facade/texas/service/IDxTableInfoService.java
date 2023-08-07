@@ -58,7 +58,7 @@ public interface IDxTableInfoService {
    * @param tableId
    * @return
    */
-  CommonResp<List<DxTableConfigRuleResp>> getTableConfigByTableId(Set<Long> tableId);
+  CommonResp<List<DxTableConfigRuleResp>> getTableConfigByTableIds(Set<Long> tableId);
 
   /**
    * 新增牌桌
