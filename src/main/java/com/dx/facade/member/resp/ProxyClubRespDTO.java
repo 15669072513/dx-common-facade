@@ -54,6 +54,11 @@ public class ProxyClubRespDTO implements Serializable {
     @ApiModelProperty("代理姓名")
     private String proxyRealName;
     
+    /** 总代Id */
+    @ApiModelProperty("总代Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long topProxyId;
+    
     /** 总代名称 */
     @ApiModelProperty("总代名称")
     private String topProxyName;
