@@ -8,6 +8,7 @@ import com.dx.facade.texas.dto.TableBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringInfoDto;
 import com.dx.facade.texas.dto.WalletDetailDto;
 import com.dx.facade.texas.req.TableBringInfoReq;
+import com.dx.facade.texas.req.TableUserBringInfoReq;
 import com.dx.facade.texas.req.WalletDetailPageRequest;
 
 public interface WalletDetailRpcService {
@@ -32,5 +33,5 @@ public interface WalletDetailRpcService {
    * @param req
    * @return
    */
-  CommonResp<TableUserBringInfoDto> getTableUserBringInfo(TableUserBringInfoDto req);
+  CommonResp<TableUserBringInfoDto> getTableUserBringInfo(TableUserBringInfoReq req);
 }
