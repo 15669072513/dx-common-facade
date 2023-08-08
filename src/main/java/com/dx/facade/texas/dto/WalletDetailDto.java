@@ -28,4 +28,6 @@ public class WalletDetailDto {
   private Long tableId;
   @ApiModelProperty("牌桌名称")
   private String tableName;
+  @ApiModelProperty("账变类型 1-资金带入 2-资金带出")
+  private Integer eventType;
 }
