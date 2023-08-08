@@ -8,6 +8,7 @@ import java.util.List;
 
 @Data
 public class VenueTypeCodeAndVenues {
+
     @ApiModelProperty("场馆类型code,如ty,zr,dy,qkl")
     private String venueTypeCode;
 
