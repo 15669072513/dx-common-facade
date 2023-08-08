@@ -11,6 +11,7 @@ import com.dx.facade.member.param.BaseRebateRateParamDTO;
 import com.dx.facade.member.param.QueryEffectRebateRateParamDTO;
 import com.dx.facade.member.param.QueryRebateRateParamDTO;
 import com.dx.facade.member.param.UpdateRebateRateParamDTO;
+import com.dx.facade.member.resp.BaseRebateRateRespDTO;
 import com.dx.facade.member.resp.MemberRebateRateRespDTO;
 import com.dx.facade.member.resp.RebateRateRespDTO;
 /**
@@ -89,4 +90,11 @@ public interface RebateRateRPCService {
      * @return
      */
 	CommonResp<PageResp<MemberRebateRateRespDTO, ?>> selectMemberRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
+	
+	/**
+	 * 查询返点比例设置上限
+	 * 
+	 * @return
+	 */
+	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit();
 }
