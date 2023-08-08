@@ -8,7 +8,7 @@ import java.util.Arrays;
  */
 public enum BwVenueEnum {
     //捕鱼类
-    DZ("DZ", "德州", BwVenueTypeEnum.DZ),
+    DZ("DZ", "德州", BwVenueTypeEnum.DZ_CARD),
     BY("by", "PM捕鱼", BwVenueTypeEnum.BY),
     AGBY("agby", "AG捕鱼", BwVenueTypeEnum.BY),
 
