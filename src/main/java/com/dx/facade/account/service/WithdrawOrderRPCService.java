@@ -16,7 +16,6 @@ import com.dx.facade.account.resp.WithdrawOrderSumDTO;
 import com.dx.facade.account.resp.WithdrawTodayTotalRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -33,7 +32,12 @@ public interface WithdrawOrderRPCService {
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
 
 
-    WithdrawTodayTotalRespDTO memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
+    /**
+     * 当天提现次数与提现总额统计
+     * @param param
+     * @return
+     */
+    CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 

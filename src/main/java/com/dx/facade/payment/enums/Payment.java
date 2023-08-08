@@ -251,8 +251,8 @@ public class Payment {
      */
     public enum OrderWithdrawAppStatus {
         处理中(0, "处理中"),
-        成功(1, "成功"),
-        失败(2, "失败")
+        成功(1, "审核通过"),
+        失败(2, "审核拒绝")
         ;
         private Integer code;
         private String desc;
