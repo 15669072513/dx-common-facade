@@ -12,7 +12,7 @@ import java.util.Set;
 @Data
 public class TableBringInfoReq implements Serializable, BaseParmDTO {
   @ApiModelProperty("牌桌ids")
-  private Set<Long> tableIds;
+  private Set<Integer> tableIds;
 
   @Override
   public void check() {
