@@ -13,6 +13,9 @@ public class ProxyLoanBillAppRespDTO {
     @ApiModelProperty(value = "账单类型，0-未出，1-已出账单")
     private Integer billType;
 
+    @ApiModelProperty(value = "账单开始日期")
+    private LocalDateTime periodStDate;
+
     @ApiModelProperty(value = "账单结束日期")
     private LocalDateTime periodEndDate;
 
@@ -36,4 +39,7 @@ public class ProxyLoanBillAppRespDTO {
 
     @ApiModelProperty("授信额度")
     private BigDecimal creditQuota;
+
+    @ApiModelProperty("币种")
+    private String currency;
 }

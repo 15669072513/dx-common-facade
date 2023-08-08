@@ -14,5 +14,5 @@ public interface ProxyLoanBillService {
     /**
      * 代理借款账单 for app
      */
-    CommonResp<PageResp<ProxyLoanBillAppRespDTO, ?>> queryProxyLoanBillAppPage(PageReq<ProxyLoanBillAppReqDTO> reqDTO);
+    CommonResp<PageResp<ProxyLoanBillAppRespDTO, ?>> queryProxyLoanBillAppPage(PageReq<ProxyLoanBillAppReqDTO> reqDTO) throws Exception;
 }
