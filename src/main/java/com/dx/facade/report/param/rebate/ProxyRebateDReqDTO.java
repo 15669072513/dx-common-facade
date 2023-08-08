@@ -18,6 +18,12 @@ public class ProxyRebateDReqDTO {
     private Long proxyId;
 
     /**
+     * 会员id
+     */
+    @ApiModelProperty(value = "会员id")
+    private Long memberId;
+
+    /**
      * 周期开始时间
      */
     @ApiModelProperty(value = "周期开始时间(yyyyMMdd)")
