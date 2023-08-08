@@ -11,6 +11,12 @@ import java.io.Serializable;
 public class ProxyRateDDetaiListPageParam extends PageRequest implements Serializable {
 
     /**
+     * 会员id
+     */
+    @ApiModelProperty(value = "会员id")
+    private Long memberId;
+
+    /**
      * 代理id
      */
     @ApiModelProperty(value = "代理id")
