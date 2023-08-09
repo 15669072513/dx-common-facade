@@ -16,18 +16,18 @@ public enum ProxyBizType implements IBizType {
 
     //代理中心钱包
     deposit(1, "代理存款", "6,7"),
-    v2_deposit(1, "充值上分", "1"),
+    v2_deposit(1, "充值上分", "17"),
     deposit_for_member(2, "代会员存款", "6,7"),
     activity(3, "代理活动", "7"),
         quota(4, "代理额度", "7"),
     transfer(5, "代理转账", "6,7"),
     other(6, "其他调整", "6,7"),
     withdraw(7, "代理取款", "6"),
-    v2_withdraw(7, "提现下分", "1"),
+    v2_withdraw(7, "提现下分", "17"),
     to_center(8, "佣金转中心钱包", "6"),
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
-    v2_rebate(10, "代理返点", "1"),
+    v2_rebate(10, "代理返点", "17"),
     //此账变后期废弃
     commission_to_quota(11, "佣金转额度钱包", "6"),
     up_score(12, "上分", "7"),
@@ -69,10 +69,10 @@ public enum ProxyBizType implements IBizType {
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
     //v2新增信用钱包业务类型 4 个
-    v2_loan(36, "借款", "1,9"),
-    v2_repay(37, "还款", "1,9"),
-    v2_credit_up_score(38, "授信上分", "9,10"),
-    v2_credit_down_score(39, "授信下分", "9,10"),
+    v2_loan(36, "借款", "17,18"),
+    v2_repay(37, "还款", "17,18"),
+    v2_credit_up_score(38, "授信上分", "18,19"),
+    v2_credit_down_score(39, "授信下分", "18,19"),
     ;
 
     private Integer code;
