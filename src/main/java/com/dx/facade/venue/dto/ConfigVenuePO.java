@@ -73,6 +73,10 @@ public class ConfigVenuePO implements Serializable {
     @TableField("status")
     private Integer status;
 
+    @ApiModelProperty("排序字段德州、真人、体育、彩票、棋牌、电竞")
+    @TableField("venue_sort")
+    private Integer venueSort;
+
     @ApiModelProperty("备注(用于场馆接入配置页面)")
     @TableField("remark")
     private String remark;

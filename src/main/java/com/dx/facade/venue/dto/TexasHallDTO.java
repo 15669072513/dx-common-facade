@@ -1,8 +1,12 @@
 package com.dx.facade.venue.dto;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -10,7 +14,10 @@ import java.util.List;
  * 游戏大厅，德州特有信息
  **/
 @Data
-public class TexasHallDTO {
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class TexasHallDTO implements Serializable {
 
     @ApiModelProperty(value = "德州场馆在线人数")
     private Integer onlineUserNum;
@@ -21,9 +28,9 @@ public class TexasHallDTO {
     @ApiModelProperty(value = "赢钱滚动公告")
     private List<String> winRollNotice;
 
-    @ApiModelProperty(value = "图标URL")
-    private String venueImageUrl;
-
     @ApiModelProperty(value = "场馆类型type")
     private String venueType;
+
+    @ApiModelProperty(value = "状态(0已禁用,1开启中,2维护中)")
+    private Integer venueStatus;
 }

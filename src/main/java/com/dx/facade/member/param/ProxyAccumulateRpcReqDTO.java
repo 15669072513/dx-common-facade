@@ -29,6 +29,21 @@ public class ProxyAccumulateRpcReqDTO implements Serializable {
     private Long merchantId;
 
     @ApiModelProperty("给会员充值上分")
+    private BigDecimal rebate;
+
+    @ApiModelProperty("中心钱包转信用钱包")
+    private BigDecimal cashToCredit;
+
+    @ApiModelProperty("中心钱包转信用钱包次数")
+    private Integer cashToCreditTimes;
+
+    @ApiModelProperty("信用钱包转中心钱包")
+    private BigDecimal creditToCash;
+
+    @ApiModelProperty("信用钱包转中心钱包次数")
+    private Integer creditToCashTimes;
+
+    @ApiModelProperty("给会员充值上分")
     private BigDecimal activeDepositToMember;
 
     @ApiModelProperty("给会员充值上分次数")
