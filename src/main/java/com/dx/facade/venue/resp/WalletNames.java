@@ -2,8 +2,10 @@ package com.dx.facade.venue.resp;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 
 @Data
+@ToString
 public class WalletNames {
     @ApiModelProperty("钱包名称(汉语)")
     private String zhName;
