@@ -21,4 +21,12 @@ public class GetProxyPathByUserNameReqDTO {
 	@ApiModelProperty("代理账号")
 	private String userName;
 	
+    /** 注册开始时间 */
+    @ApiModelProperty("注册开始时间")
+    private String createdAtStart;
+    
+    /** 注册结束时间 */
+    @ApiModelProperty("注册结束时间")
+    private String createdAtEnd;
+	
 }

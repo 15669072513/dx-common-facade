@@ -103,4 +103,23 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("牌桌开始时间")
+    private LocalDateTime tableBeginTime;
+
+    @ApiModelProperty("进行时间（min）")
+    private Integer onlineTime;
+
+    /** 人员上限 */
+    @ApiModelProperty("人员上限")
+    private Integer upperLimit;
+
+    @ApiModelProperty("同时开牌桌上限")
+    private Integer cardTableLimit;
+
+    @ApiModelProperty("单牌桌旁观人数上限")
+    private Integer lookOnLimit;
+
+    @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
+    private Integer seatsNumberLimit;
 }

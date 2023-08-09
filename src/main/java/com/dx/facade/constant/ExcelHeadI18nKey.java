@@ -181,6 +181,30 @@ public interface ExcelHeadI18nKey {
     String REPORT_总存款 = "EXCEL_HEAD_I18N_KEY.REPORT_总存款"; //
     String REPORT_总取款 = "EXCEL_HEAD_I18N_KEY.REPORT_总取款"; //
 
+    String REPORT_给会员上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分差值"; //
+    String REPORT_给会员上下分人数 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分人数"; //
+    String REPORT_给会员上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给会员上下分次数"; //
+    String REPORT_给代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分差值"; //
+    String REPORT_给代理上下分人数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分人数"; //
+    String REPORT_给代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分次数"; //
+    String REPORT_被代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分差值"; //
+    String REPORT_被代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分次数"; //
+    String REPORT_佣金转中心钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转中心钱包总额"; //
+    String REPORT_佣金转额度钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转额度钱包总额"; //
+    String REPORT_返点调整 = "EXCEL_HEAD_I18N_KEY.REPORT_返点调整"; //
+    String REPORT_佣金钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金钱包余额"; //
+    String REPORT_额度钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_额度钱包余额"; //
+    String REPORT_全部代理人数 = "EXCEL_HEAD_I18N_KEY.REPORT_全部代理人数"; //
+    String REPORT_直属代理人数 = "EXCEL_HEAD_I18N_KEY.REPORT_直属代理人数"; //
+    String REPORT_全部会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_全部会员人数"; //
+    String REPORT_直属会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_直属会员人数"; //
+    String REPORT_转入会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_转入会员人数"; //
+    String REPORT_转出会员人数 = "EXCEL_HEAD_I18N_KEY.REPORT_转出会员人数"; //
+    String REPORT_结算周期 = "EXCEL_HEAD_I18N_KEY.REPORT_结算周期"; //
+    String REPORT_返点人数 = "EXCEL_HEAD_I18N_KEY.REPORT_返点人数"; //
+    String REPORT_实际返点 = "EXCEL_HEAD_I18N_KEY.REPORT_实际返点"; //
+    String REPORT_返点发放 = "EXCEL_HEAD_I18N_KEY.REPORT_返点发放"; //
+
     String REPORT_取款次数 = "EXCEL_HEAD_I18N_KEY.REPORT_取款次数"; //
     String REPORT_存取差 = "EXCEL_HEAD_I18N_KEY.REPORT_存取差"; //
     String REPORT_存款次数 = "EXCEL_HEAD_I18N_KEY.REPORT_存款次数"; //
@@ -256,14 +280,30 @@ public interface ExcelHeadI18nKey {
     String REPORT_会员 = "EXCEL_HEAD_I18N_KEY.REPORT_会员"; //
     String REPORT_代理 = "EXCEL_HEAD_I18N_KEY.REPORT_代理"; //
 
+    String REPORT_代理上分 = "EXCEL_HEAD_I18N_KEY.REPORT_代理上分"; //
+    String REPORT_代理上分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_代理上分次数"; //
+    String REPORT_代理下分 = "EXCEL_HEAD_I18N_KEY.REPORT_代理下分"; //
+    String REPORT_代理下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_代理下分次数"; //
+
+
+
 
     String REPORT_返点周期 = "EXCEL_HEAD_I18N_KEY.REPORT_返点周期"; //
+    String REPORT_返点状态 = "EXCEL_HEAD_I18N_KEY.REPORT_返点状态"; //
+    String REPORT_计算周期 = "EXCEL_HEAD_I18N_KEY.REPORT_计算周期"; //
+    String REPORT_团队总流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总流水"; //
+    String REPORT_流水纠正 = "EXCEL_HEAD_I18N_KEY.REPORT_流水纠正"; //
+    String REPORT_实际流水 = "EXCEL_HEAD_I18N_KEY.REPORT_实际流水"; //
     String REPORT_风控层级 = "EXCEL_HEAD_I18N_KEY.REPORT_风控层级"; //
     String REPORT_个人返点 = "EXCEL_HEAD_I18N_KEY.REPORT_个人返点"; //
+    String REPORT_活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_活跃人数"; //
+    String REPORT_有效活跃人数 = "EXCEL_HEAD_I18N_KEY.REPORT_有效活跃人数"; //
     String REPORT_下级返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级返点"; //
     String REPORT_团队返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队返点"; //
     String REPORT_团队流水 = "EXCEL_HEAD_I18N_KEY.REPORT_团队流水"; //
     String REPORT_返点比例 = "EXCEL_HEAD_I18N_KEY.REPORT_返点比例"; //
+    String REPORT_团队总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_团队总返点"; //
+    String REPORT_下级总返点 = "EXCEL_HEAD_I18N_KEY.REPORT_下级总返点"; //
     String REPORT_发放时间 = "EXCEL_HEAD_I18N_KEY.REPORT_发放时间"; //
 
     String REPORT_审核订单号 = "EXCEL_HEAD_I18N_KEY.REPORT_审核订单号"; //
@@ -280,9 +320,15 @@ public interface ExcelHeadI18nKey {
 
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
     String	FUNDS_上级代理_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_上级代理_代理层级";
+    String	FUNDS_俱乐部id = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部id";
+    String	FUNDS_身份 = "EXCEL_HEAD_I18N_KEY.FUNDS_身份";
+    String	FUNDS_创建人 = "EXCEL_HEAD_I18N_KEY.FUNDS_创建人";
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
     String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
+    String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
+    String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
+    String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
     String	FUNDS_注册终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_注册终端";
     String	FUNDS_最后登录时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录时间";
     String	FUNDS_最后登录IP = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录IP";
@@ -372,6 +418,23 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_代理报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理报表";
     String FILE_NAME_平台出入款报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_平台出入款报表";
     String FILE_NAME_会员游戏盈亏 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员游戏盈亏";
+    String FILE_NAME_登录日志报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_登录日志报表";
+
+    String FUNDS_会员投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员投注金额";
+    String FUNDS_会员有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员有效投注";
+    String FUNDS_会员流水纠正 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员流水纠正";
+    String FUNDS_代理总返点 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理总返点";
+
+    String FUNDS_日志ID = "EXCEL_HEAD_I18N_KEY.FUNDS_日志ID";
+    String FUNDS_用户账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_用户账号";
+    String FUNDS_登录时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_登录时间";
+    String FUNDS_登出时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_登出时间";
+    String FUNDS_登录IP = "EXCEL_HEAD_I18N_KEY.FUNDS_登录IP";
+    String FUNDS_IP地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_IP地址";
+    String FUNDS_GPS = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS";
+    String FUNDS_GPS地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS地址";
+    String FUNDS_设备名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_设备名称";
+    String FUNDS_操作系统 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作系统";
 
     String FILE_NAME_代理返点记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理返点记录";
     String FILE_NAME_总代佣金记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_总代佣金记录";
@@ -462,7 +525,11 @@ public interface ExcelHeadI18nKey {
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
     String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
+    String FUNDS_房主 = "EXCEL_HEAD_I18N_KEY.FUNDS_房主";
     
+    String FUNDS_总有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_总有效投注";
+    String FUNDS_总牌桌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌抽水";
+
     String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
     String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
     String REBATE_RATE = "EXCEL_HEAD_I18N_KEY.CONTRACT_返点比例";
@@ -483,7 +550,20 @@ public interface ExcelHeadI18nKey {
     String FUNDS_打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_打牌抽水";
     String FUNDS_手牌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌盈亏";
     String FUNDS_公牌信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_公牌信息";
+    String FUNDS_荷官位 = "EXCEL_HEAD_I18N_KEY.FUNDS_荷官位";
+    String FUNDS_小盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_小盲位";
+    String FUNDS_大盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_大盲位";
 
+    String PROXY_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_代理账号";
+    String TEXAS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队德州返点";
+    String ACTUAL_PERSON_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队真人返点";
+    String SPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队体育返点";
+    String LOTTERY_TICKET_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队彩票返点";
+    String CHESS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队棋牌返点";
+    String ESPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_团队电竞返点";
+    String STATUS = "EXCEL_HEAD_I18N_KEY.MEMBER_状态";
+    String UPDATE_BY = "EXCEL_HEAD_I18N_KEY.MEMBER_修改人";
+    String UPDATE_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_修改时间";
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
@@ -502,5 +582,10 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
+    
+    String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
+    
+    /** 返点比例列表文件名 */
+    String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
 
 }

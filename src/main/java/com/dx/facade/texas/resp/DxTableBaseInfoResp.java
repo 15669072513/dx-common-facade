@@ -1,14 +1,10 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -95,6 +91,18 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("牌桌抽水")
     private BigDecimal pumpingAmountTotal;
 
+    @ApiModelProperty("机器人数量")
+    private Integer robotNum;
+
+    @ApiModelProperty("人员上限")
+    private Integer upperLimit;
+
+    @ApiModelProperty("同时开牌桌上限")
+    private Integer cardTableLimit;
+
+    @ApiModelProperty("单牌桌旁观人数上限")
+    private Integer lookOnLimit;
+
     @ApiModelProperty("创建时间")
     private Long createdAt;
 
@@ -109,4 +117,13 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("超时（min）自动解散房间")
+    private Integer gameOvertime;
+
+    @ApiModelProperty("牌桌最大人数")
+    private Integer maxSeats;
+
+    @ApiModelProperty("自动开局人数")
+    private Integer autoStartUserCounts;
 }

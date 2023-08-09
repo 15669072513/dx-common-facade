@@ -2,6 +2,7 @@ package com.dx.facade.game.dto;
 
 import java.math.BigDecimal;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 /**
@@ -58,4 +59,19 @@ public class GameBalanceDto {
      * 钱包状态
      */
     private Integer status;
+
+    /**
+     * 场馆名称
+     */
+    @ApiModelProperty("场馆名称")
+    private String venueName;
+
+    @ApiModelProperty("场馆英文名")
+    private String venueEnName;
+
+    @ApiModelProperty("场馆泰文名")
+    private String venueThName;
+
+    @ApiModelProperty("场馆越南名")
+    private String venueVnName;
 }

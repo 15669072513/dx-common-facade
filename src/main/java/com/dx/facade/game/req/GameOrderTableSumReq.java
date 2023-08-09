@@ -10,5 +10,5 @@ import java.util.List;
 @Data
 public class GameOrderTableSumReq {
     @ApiModelProperty("牌桌id")
-    private List<String> tableIds;
+    private List<Long> tableIds;
 }

@@ -76,6 +76,12 @@ public class MemberAuditDetailResp implements Serializable {
 
     @ApiModelProperty("vip等级")
     private Integer vipLevel;
+    
+	@ApiModelProperty(value = "注册IP", hidden = true)
+	private String registerIp;
+	
+	@ApiModelProperty(value = "注册设备号", hidden = true)
+	private String registerDeviceNo;
 
     @ApiModelProperty("锁单状态（0-未锁定 1-已锁定）")
     private Integer lockStatus;

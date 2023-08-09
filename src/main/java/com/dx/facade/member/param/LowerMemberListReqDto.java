@@ -47,4 +47,25 @@ public class LowerMemberListReqDto {
 	private Boolean isWeb = false;
 	@ApiModelProperty("身份1代理 0会员")
 	private Integer identityCode;
+
+	@ApiModelProperty("所属代理账号")
+	private String parentProxyName;
+
+	@ApiModelProperty("注册时间开始")
+	private String occurDtStart;
+
+	@ApiModelProperty("注册时间结束")
+	private String occurDtEnd;
+
+	@ApiModelProperty("最后登录时间-开始")
+	private String startDate;
+
+	@ApiModelProperty("最后登录时间-结束")
+	private String endDate;
+
+	@ApiModelProperty(value = "俱乐部id")
+	private Long clubId;
+
+	@ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
+	private Integer gameLockStatus;
 }

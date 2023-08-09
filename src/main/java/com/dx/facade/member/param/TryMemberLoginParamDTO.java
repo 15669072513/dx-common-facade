@@ -47,6 +47,10 @@ public class TryMemberLoginParamDTO implements BaseParmDTO, Serializable {
 
     @ApiModelProperty(value = "设备版本")
     private String deviceVersion;
+    
+    /** 是否允许多端登录 1：允许 0：不允许 */
+    @ApiModelProperty(value = "是否允许多端登录 1：允许 0：不允许")
+    private Integer isMultiple;
 
     @Override
     public void check() {

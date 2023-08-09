@@ -20,10 +20,22 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class WithdrawTodayTotalRespDTO {
 
-    @ApiModelProperty("今日提款次数")
+    @ApiModelProperty("今日已申请提款次数")
     private Integer todayCount;
 
     @ApiModelProperty("今日提款总额")
     @IsNullConvertZero
     private BigDecimal todayWithdrawMoney = BigDecimal.ZERO;
+    /**
+     * 单笔提现上限
+     */
+    @ApiModelProperty("单笔提现上限")
+    private BigDecimal maxWithdrawAmount;
+    /**
+     * 单日最大申请提现次数
+     */
+    @ApiModelProperty("单日最大申请提下次数")
+    private Integer dailyMaxCount;
+
+
 }

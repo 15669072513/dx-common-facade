@@ -87,6 +87,10 @@ public class QueryProxyClubParamDTO implements BaseParmDTO, Serializable {
     /** 最后操作时间 */
     @ApiModelProperty("最后操作时间")
     private LocalDateTime updatedAt;
+    
+    /** 是否查询总代俱乐部  */
+    @ApiModelProperty("是否查询总代俱乐部 true 查询总代俱乐部 false 非总代俱乐部")
+    private boolean isQueryTop;
 
 	@Override
 	public void check() {

@@ -24,7 +24,7 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("牌局主键，自增")
-    private Long handId;
+    private String handId;
 
     @ApiModelProperty("牌局code，业务生成")
     private String handCode;
@@ -32,6 +32,13 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("牌桌主键")
     private Long tableId;
 
+
+
+    @ApiModelProperty("会员账号")
+    private String userName;
+
+    @ApiModelProperty("会员id")
+    private Long userId;
     @ApiModelProperty("牌桌code")
     private String tableCode;
 
@@ -78,6 +85,9 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
+
+    @ApiModelProperty("0 进行中 1已结束")
+    private Integer tableStatus;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime startTime;

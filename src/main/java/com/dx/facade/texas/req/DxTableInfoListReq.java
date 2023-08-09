@@ -39,6 +39,8 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("关联游戏id")
     private Long gameTypeId;
 
+    @ApiModelProperty("会员id")
+    private Long userId;
     @ApiModelProperty("关联游戏名称")
     private String gameName;
 
@@ -46,7 +48,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
     private Long clubId;
 
     @ApiModelProperty("关联俱乐部名称")
-    private Long clubName;
+    private String clubName;
 
     @ApiModelProperty("创建开始时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -80,4 +82,10 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private List<Integer> status;
+
+    @ApiModelProperty("房主ID")
+    private Long holderId;
+
+    @ApiModelProperty("房主名称")
+    private String holderName;
 }

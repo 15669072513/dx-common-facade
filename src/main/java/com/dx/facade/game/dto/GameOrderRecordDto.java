@@ -1,6 +1,5 @@
 package com.dx.facade.game.dto;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -8,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.util.Date;
 
 /**
  * 游戏注单记录DTO
@@ -24,7 +22,15 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 手牌id
      */
-    private Long handId;
+    private String handId;
+    /**
+     * 抽水金额
+     */
+    private BigDecimal validBetAmount;
+    /**
+     * 手牌code
+     */
+    private String handCode;
     /**
      * 手牌名称
      */
@@ -211,4 +217,25 @@ public class GameOrderRecordDto implements Serializable {
      * 庄家座位号
      */
     private Integer button;
+    /**
+     * 牌桌创建时间
+     */
+    private Long tableCreateDate;
+    /**
+     * 牌桌第一局开始时间
+     */
+    private Long tableBeginDate;
+    /**
+     * 牌桌结束时间
+     */
+    private Long tableGameOverDate;
+    /**
+     * 牌桌解散类型
+     * 0强制解散 1房间内解散 2正常结束
+     */
+    private Integer tableGameOverType;
+    /**
+     * 最大底池
+     */
+    private BigDecimal maxPot;
 }

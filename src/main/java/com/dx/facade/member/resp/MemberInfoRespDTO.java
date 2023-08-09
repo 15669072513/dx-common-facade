@@ -1,7 +1,5 @@
 package com.dx.facade.member.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -49,6 +47,9 @@ public class MemberInfoRespDTO {
 
     @ApiModelProperty("会员币种")
     private String currency;
+    
+    @ApiModelProperty("会员币种符号")
+    private String currencySymbol;
 
     @ApiModelProperty("账号类型, 使用AccountTypeEnum枚举")
     private Integer accountType;
@@ -227,4 +228,6 @@ public class MemberInfoRespDTO {
     /** 代理入口权限开关 0：关闭 1：开启 */
     @ApiModelProperty("代理入口权限开关")
     private Integer proxyEntryAuthority;
+
+    String merchantIdPath;
 }

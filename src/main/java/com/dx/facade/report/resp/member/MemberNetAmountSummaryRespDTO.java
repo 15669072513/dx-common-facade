@@ -14,7 +14,6 @@ import java.math.RoundingMode;
 
 @ApiModel(description = "会员盈亏汇总/小计")
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class MemberNetAmountSummaryRespDTO {
@@ -23,7 +22,7 @@ public class MemberNetAmountSummaryRespDTO {
     private Long betCount = 0L;
 
     @ApiModelProperty("投注金额")
-    private BigDecimal firstDeposit;
+    private BigDecimal firstDeposit = BigDecimal.ZERO;;
 
     @ApiModelProperty("投注金额")
     private BigDecimal betAmount = BigDecimal.ZERO;
@@ -99,8 +98,10 @@ public class MemberNetAmountSummaryRespDTO {
      */
     @ApiModelProperty("会员盈利率")
     public BigDecimal getNetRate() {
-        MathContext mc = new MathContext(2, RoundingMode.HALF_DOWN);
-        return  netAmount.divide(betAmount, mc);
+        if(betAmount==null||betAmount.compareTo(BigDecimal.ZERO)==0){
+            return BigDecimal.ZERO;
+        }
+        return netAmount.divide(betAmount, 4, RoundingMode.DOWN);
     }
 
     /**

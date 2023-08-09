@@ -17,7 +17,7 @@ public class GameOrderRecordUserHandResp {
      * 手牌id
      */
     @ApiModelProperty("手牌id")
-    private Long handId;
+    private String handId;
     /**
      * 牌局结束时间
      */
@@ -54,6 +54,11 @@ public class GameOrderRecordUserHandResp {
      */
     @ApiModelProperty("id")
     private Long id;
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty("会员账号")
+    private String playerName;
     /**
      * 会员账号
      */

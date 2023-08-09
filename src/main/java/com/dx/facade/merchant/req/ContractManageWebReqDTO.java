@@ -65,8 +65,8 @@ public class ContractManageWebReqDTO extends PageRequest implements Serializable
     @ApiModelProperty("发送开始时间")
     private String createDtStart;
     
-    /** 最近登录结束时间 */
-    @ApiModelProperty("最近登录结束时间")
+    /** 发送结束时间 */
+    @ApiModelProperty("发送结束时间")
     private String createDtEnd;
 
     /** 签约开始时间 */
@@ -88,4 +88,12 @@ public class ContractManageWebReqDTO extends PageRequest implements Serializable
     /** 最近修改开始时间 */
     @ApiModelProperty("最近修改开始时间")
     private String lastModDtStart;
+    
+    /** 注册开始时间 */
+    @ApiModelProperty("注册开始时间")
+    private String createdAtStart;
+    
+    /** 注册结束时间 */
+    @ApiModelProperty("注册结束时间")
+    private String createdAtEnd;
 }

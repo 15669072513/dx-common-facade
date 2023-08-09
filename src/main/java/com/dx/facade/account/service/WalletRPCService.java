@@ -8,11 +8,9 @@ import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
 import com.dx.facade.account.param.QueryCashWalletParam;
 import com.dx.facade.account.param.QueryWalletParam;
+import com.dx.facade.account.param.WalletAmountParam;
 import com.dx.facade.account.req.WalletBalanceDTO;
-import com.dx.facade.account.resp.MerchantCenterWalletSumRespDTO;
-import com.dx.facade.account.resp.StillBillAmountRespDTO;
-import com.dx.facade.account.resp.WalletRespDTO;
-import com.dx.facade.account.resp.WalletSimpleParam;
+import com.dx.facade.account.resp.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -82,4 +80,6 @@ public interface WalletRPCService {
      * @return
      */
     CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
+
+    CommonResp<WalletAmountDTO> getWalletAmountByUserId(WalletAmountParam param);
 }
