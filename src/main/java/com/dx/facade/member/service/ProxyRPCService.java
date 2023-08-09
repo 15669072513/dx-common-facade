@@ -6,6 +6,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.*;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
+import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
@@ -17,6 +18,7 @@ public interface ProxyRPCService {
 
     /**
      * 通过代理ID获取代理信息
+     *
      * @param proxyId
      * @return
      */
