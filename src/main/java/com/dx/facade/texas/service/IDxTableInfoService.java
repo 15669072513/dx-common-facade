@@ -9,6 +9,9 @@ import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.*;
 
+import java.util.List;
+import java.util.Set;
+
 public interface IDxTableInfoService {
 
     /**
@@ -26,6 +29,13 @@ public interface IDxTableInfoService {
     CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
     CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
+
+    /**
+     * 根据多个牌桌ID获取牌桌配置信息
+     * @param tableId
+     * @return
+     */
+    CommonResp<List<DxTableConfigRuleResp>> getTableConfigByTableIds(Set<Long> tableId);
 
     /**
      * 新增牌桌
