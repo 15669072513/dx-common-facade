@@ -176,4 +176,7 @@ import lombok.Data;
 
      @ApiModelProperty("手牌编码")
      private String handCode;
+
+     @ApiModelProperty("牌桌名称")
+     private String tableName;
 }
