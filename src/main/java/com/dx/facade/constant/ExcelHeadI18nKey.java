@@ -422,6 +422,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_平台出入款报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_平台出入款报表";
     String FILE_NAME_会员游戏盈亏 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员游戏盈亏";
     String FILE_NAME_登录日志报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_登录日志报表";
+    String FILE_NAME_代理借款未出账单报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理借款未出账单报表";
+    String FILE_NAME_代理借款历史账单报表 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理借款历史账单报表";
 
     String FUNDS_会员投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员投注金额";
     String FUNDS_会员有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员有效投注";

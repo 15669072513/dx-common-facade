@@ -43,7 +43,7 @@ public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
     private BigDecimal withdrawableMax;
 
     @ApiModelProperty(value = "是否查看下级")
-    private boolean nextFlag;
+    private Boolean nextFlag;
 
     @ApiModelProperty(value = "查看数据类型，0-全选，1-自身，2-直属下级代理，3-全部下级代理，4-直属会员，5-全部下级会员")
     private List<Integer> proxyList;

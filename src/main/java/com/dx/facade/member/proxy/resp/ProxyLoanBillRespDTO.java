@@ -16,6 +16,9 @@ public class ProxyLoanBillRespDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
 
+    @ApiModelProperty("账单号, 账单ID")
+    private String billNo;
+
     @ApiModelProperty("账单日期")
     private String applyTime;
 
@@ -27,6 +30,9 @@ public class ProxyLoanBillRespDTO {
 
     @ApiModelProperty("账号类型,1-一代,2-二代,99-会员")
     private Integer acctType;
+
+    @ApiModelProperty("账户状态,0-正常 1-锁定")
+    private Integer acctStatus;
 
     @ApiModelProperty("所属商户")
     private String topMerchantName;
