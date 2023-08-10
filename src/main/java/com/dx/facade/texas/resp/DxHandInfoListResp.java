@@ -1,14 +1,10 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -100,6 +96,13 @@ public class DxHandInfoListResp implements Serializable {
 
     @ApiModelProperty("庄家位置")
     private Integer villageSeat;
+
+
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
 
     @ApiModelProperty("小盲位置")
     private Integer sbSeat;

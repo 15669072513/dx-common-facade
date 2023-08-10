@@ -18,7 +18,7 @@ public class GameReviewResp implements Serializable  {
     private String handId;
 
     /**
-     *  手牌id
+     *  局号
      */
     @ApiModelProperty("局号")
     private Integer roundNo;
@@ -69,7 +69,7 @@ public class GameReviewResp implements Serializable  {
     /**
      * 开牌结果（#PokerResultInfoEnum）
      */
-    @ApiModelProperty("开牌结果")
+    @ApiModelProperty("牌型")
     private String resultInfo;
     /**
      * 投注状态（GameBetStatusEnum)
@@ -93,16 +93,19 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
 
-    /**
-     * 座位类型 (GameSeatTypeEnum)
-     */
-    @ApiModelProperty("座位类型 0 普通 1庄 2 大盲 3小盲")
+    @ApiModelProperty(value = "座位号")
+    private Integer chairId;
+
+    @ApiModelProperty(value = "座位类型大类 1:前位 2:中位 3:后位 4:盲位")
     private Integer seatType;
 
+    @ApiModelProperty(value = "座位类型,参考枚举:TexasSeatTypeEnum")
+    private Integer seatCode;
 
-    /**
-     * 底池竞争亮牌标识 1亮牌 2不亮牌。
-     */
+    @ApiModelProperty("座位号")
+    private Integer seatNum;
+
+    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
     private Integer showStatus;
 
 }
