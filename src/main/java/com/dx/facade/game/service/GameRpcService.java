@@ -26,7 +26,7 @@ public interface GameRpcService {
     /**
      * 创建游戏账号
      */
-    public CommonResp<GameCreateResp> createAgent(GameAgentCreateDto createDto);
+    public CommonResp<GameAgentCreateResp> createAgent(GameAgentCreateDto createDto);
     /**
      * 创建游戏账号
      */
