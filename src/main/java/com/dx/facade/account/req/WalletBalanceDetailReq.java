@@ -70,5 +70,7 @@ public class WalletBalanceDetailReq implements Serializable {
 
     @ApiModelProperty("代理层级路径")
     private String proxyPath;
+    @ApiModelProperty("操作人")
+    private String operatorUser;
 
 }
