@@ -189,11 +189,32 @@ public enum ProxyWalletChange implements IWalletChange {
         return name;
     }
 
-    public static List<ProxyWalletChange> getDepositProxyWalletChangeList(){// TODO  这里需要更新吗？
-        return Arrays.asList(ProxyWalletChange.quota_deposit, ProxyWalletChange.commission_deposit, ProxyWalletChange.quota_deposit_add,ProxyWalletChange.commission_deposit_add);
+    @Override
+    public String toString() {
+        return "{" +
+                "walletType=" + walletType +
+                ", bizType=" + bizType +
+                ", changeType=" + changeType +
+                ", appType=" + appType +
+                ", transType=" + transType +
+                ", name='" + name + '\'' +
+                '}';
     }
 
-    public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList(){// TODO 这里需要更新吗
-        return Arrays.asList(ProxyWalletChange.commission_withdraw_success, ProxyWalletChange.commission_withdraw_sub);
+    // TODO  这里需要更新吗？
+    public static List<ProxyWalletChange> getDepositProxyWalletChangeList(){
+        return Arrays.asList(
+                ProxyWalletChange.quota_deposit,
+                ProxyWalletChange.commission_deposit,
+                ProxyWalletChange.quota_deposit_add,
+                ProxyWalletChange.commission_deposit_add);
+    }
+
+    // TODO 这里需要更新吗
+    public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList(){
+        return Arrays.asList(
+                ProxyWalletChange.commission_withdraw_success,
+                ProxyWalletChange.commission_withdraw_sub
+        );
     }
 }
