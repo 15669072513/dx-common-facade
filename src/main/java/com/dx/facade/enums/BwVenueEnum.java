@@ -32,7 +32,7 @@ public enum BwVenueEnum {
     //棋牌类
     BYQP("byqp", "博雅棋牌", BwVenueTypeEnum.QP),
 
-    QP("byqp", "博雅棋牌", BwVenueTypeEnum.QP),
+    QP("qp", "博雅棋牌", BwVenueTypeEnum.QP),
 
     //体育类
     TY("ty", "PM体育", BwVenueTypeEnum.TY),

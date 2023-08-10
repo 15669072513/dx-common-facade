@@ -5,6 +5,7 @@ import com.dx.facade.venue.dto.GameHallDTO;
 import com.dx.facade.venue.dto.GameVenueDTO;
 import com.dx.facade.venue.dto.TransferDetailDTO;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 /**
@@ -29,5 +30,11 @@ public interface VenueService {
      * @return
      */
     CommonResp<TransferDetailDTO> transferDetail(Long memberId, Long merchantId, String venueTypeCode);
+
+    CommonResp autoBring(Long memberId, Integer autoBring);
+
+
+    CommonResp balanceTransfer(String venueWalletType, Long memberId, Long merchantId, BigDecimal amount,
+                               Integer transferType);
 
 }
