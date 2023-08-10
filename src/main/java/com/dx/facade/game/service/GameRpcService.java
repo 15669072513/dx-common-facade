@@ -65,6 +65,6 @@ public interface GameRpcService {
      * @param merchantId
      * @return
      */
-    public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
+     public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
 
 }
