@@ -54,7 +54,7 @@ public class AddGeneralProxyReqDTO {
 	private String password;
 	
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约", required = true)
-	@NotNull(message = "契约模式不能为空")
+	//@NotNull(message = "契约模式不能为空")
 	private Integer contractModel;
 	
 	@ApiModelProperty(value = "代理线层级上限", required = true)
