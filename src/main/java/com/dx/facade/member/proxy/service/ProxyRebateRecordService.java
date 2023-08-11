@@ -9,7 +9,9 @@ import com.dx.facade.member.proxy.po.DwmProxyRebateRecordPO;
 import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
 import com.dx.facade.report.param.agent.AgentRebateReqDTO;
+import com.dx.facade.report.param.rebate.RebateDayListReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
 
@@ -97,5 +99,13 @@ public interface ProxyRebateRecordService {
      * @throws BizException
      */
     CommonResp<ProxyRebateProxyMemberListResp> getProxyMemberList(Long proxyId) throws BizException;
+
+    /**
+     * 会员返点列表
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTotalRebate(RebateDayListReqDTO req) throws BizException ;
 
 }
