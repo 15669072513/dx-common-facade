@@ -7,6 +7,9 @@ import lombok.Data;
 @Data
 public class ProxyLoanBillAppReqDTO extends LocalDatePageRequest {
 
+    @ApiModelProperty(value = "商户id")
+    private Long merchantId;
+
     @ApiModelProperty(value = "会员id")
     private Long memberId;
 

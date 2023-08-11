@@ -19,6 +19,12 @@ public class ProxyLoanBillUnPubBatchRespDTO {
     @ApiModelProperty(value = "账单生成时间")
     private LocalDateTime billCreateTime;
 
+    @ApiModelProperty("账号类型,1-一代,2-二代,99-会员")
+    private Integer acctType;
+
+    @ApiModelProperty("用户id")
+    private Long userId;
+
     @ApiModelProperty("净资产")
     private BigDecimal netAssets;
 

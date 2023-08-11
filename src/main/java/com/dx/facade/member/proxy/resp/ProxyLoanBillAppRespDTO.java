@@ -22,6 +22,9 @@ public class ProxyLoanBillAppRespDTO {
     @ApiModelProperty(value = "账单生成时间")
     private LocalDateTime billCreateTime;
 
+    @ApiModelProperty(value = "账单Id,账单号")
+    private String billNo;
+
     @ApiModelProperty("净资产")
     private BigDecimal netAssets;
 
@@ -42,4 +45,7 @@ public class ProxyLoanBillAppRespDTO {
 
     @ApiModelProperty("币种")
     private String currency;
+
+    @ApiModelProperty("读取状态,0-未读,1-已读")
+    private Integer readStatus;
 }
