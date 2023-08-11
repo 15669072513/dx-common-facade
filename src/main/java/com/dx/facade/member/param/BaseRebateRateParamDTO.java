@@ -30,7 +30,6 @@ public class BaseRebateRateParamDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @ApiModelProperty("商户Id")
-    @NotNull(message = "商户Id不能为空")
     private Long merchantId;
     
     @ApiModelProperty("用户类型 0：会员 1：代理")
@@ -38,14 +37,12 @@ public class BaseRebateRateParamDTO implements Serializable {
     private Integer userType;
     
     @ApiModelProperty("用户Id")
-    @NotNull(message = "用户id不能为空")
     private Long userId;
 
     @ApiModelProperty("用户名称")
     private String userName;
     
     @ApiModelProperty("上级代理Id")
-    @NotNull(message = "上级代理id不能为空")
     private Long parentProxyId;
 
     @ApiModelProperty("上级代理名称")
