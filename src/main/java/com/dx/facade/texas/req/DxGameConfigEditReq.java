@@ -98,6 +98,6 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty(value = "谷歌验证码", required = true, example = "123456")
     @NotNull(message = "谷歌验证码不能为空")
-    private Integer googleVerifyCode;
+    private String googleVerifyCode;
 
 }
