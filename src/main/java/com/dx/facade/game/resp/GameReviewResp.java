@@ -59,18 +59,6 @@ public class GameReviewResp implements Serializable  {
      */
     @ApiModelProperty("玩家昵称")
     private String nickName;
-/*    *//**
-     * 手牌信息
-     *//*
-    @ApiModelProperty("手牌信息")
-    private String handInfo;
-    *//**
-     * 公共牌信息
-     *//*
-    @ApiModelProperty("公共牌信息")
-    private String globalPokerCode;*/
-
-
 
     /**
      * 公牌 有为空数据
@@ -95,7 +83,7 @@ public class GameReviewResp implements Serializable  {
     private String lastCards;
 
     /** 成牌时7张牌舍弃的2张牌 */
-    @ApiModelProperty("公共牌信息")
+    @ApiModelProperty("成牌时7张牌舍弃的2张牌")
     private String loseCards;
 
     /**
