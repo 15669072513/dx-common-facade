@@ -28,6 +28,9 @@ public class GameRecordDeatailPackResp implements Serializable {
     @ApiModelProperty("弃牌玩家数")
     private Integer losePalyers;
 
+    @ApiModelProperty("该轮参与行动的人数")
+    private Integer joinCount;
+
     @ApiModelProperty("底池金额 （其他轮都是延续上一轮的底池，翻牌前轮的总底池数量）")
     private BigDecimal potAmount;
 

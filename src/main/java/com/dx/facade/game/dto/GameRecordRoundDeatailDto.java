@@ -9,6 +9,9 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 
 @Data
@@ -22,6 +25,9 @@ public class GameRecordRoundDeatailDto implements Serializable {
 
     @ApiModelProperty("圈层")
     private int roundCode;
+
+    @ApiModelProperty("最终成牌")
+    private String lastCards;
 
     @ApiModelProperty("公牌")
     private String publicCards;
@@ -71,6 +77,9 @@ public class GameRecordRoundDeatailDto implements Serializable {
      */
     @ApiModelProperty("牌型")
     private String resultInfo;
+
+    @ApiModelProperty("玩家牌型显示是否置灰标识")
+    private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
 
     @ApiModelProperty("输赢筹码")
     private BigDecimal netAmount;
