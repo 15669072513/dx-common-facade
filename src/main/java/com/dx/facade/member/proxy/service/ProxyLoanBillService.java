@@ -21,13 +21,13 @@ public interface ProxyLoanBillService {
     /**
      * 查询未读账单条数 for app
      */
-    CommonResp<Integer> cntUnReadApp(PageReq<ProxyLoanBillAppReqDTO> reqDTO);
+    CommonResp<Integer> cntUnReadApp(ProxyLoanBillAppReqDTO reqDTO);
 
     /**
      * 更新已读账单 for app
      * @return 更新条数
      */
-    CommonResp<Integer> updReadBillApp(PageReq<ProxyLoanBillUpdReadAppReqDTO> reqDTO);
+    CommonResp<Integer> updReadBillApp(ProxyLoanBillUpdReadAppReqDTO reqDTO);
 
     CommonResp<List<ProxyLoanBillUnPubBatchRespDTO>> queryUnPubBatch(ProxyLoanBillUnPubBatchReqDTO reqDTO);
 
