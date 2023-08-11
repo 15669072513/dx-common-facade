@@ -18,7 +18,7 @@ public interface GameOrderEsRpcService {
     /**
      * 牌局回顾
      */
-    CommonResp<PageResp<GameReviewcardResp, GameReviecardRoundResp>> queryGameReviewList(GameReviewReq req);
+    CommonResp<PageResp<GameReviewResp, GameRevieRoundResp>> queryGameReviewList(GameReviewReq req);
     /**
      * 战绩列表
      */
