@@ -28,8 +28,8 @@ public class TexasHallDTO implements Serializable {
     @ApiModelProperty(value = "赢钱滚动公告")
     private List<String> winRollNotice;
 
-    @ApiModelProperty(value = "场馆类型type")
-    private String venueType;
+    @ApiModelProperty(value = "场馆类型typeCode")
+    private String venueTypeCode;
 
     @ApiModelProperty(value = "状态(0已禁用,1开启中,2维护中)")
     private Integer venueStatus;

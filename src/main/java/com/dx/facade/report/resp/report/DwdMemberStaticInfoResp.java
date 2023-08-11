@@ -76,4 +76,5 @@ public class DwdMemberStaticInfoResp extends DwdMemberStaticInfoSummaryResp{
     @ApiModelProperty(value = "风控层级名称")
     private String windControlName;
 
+
 }

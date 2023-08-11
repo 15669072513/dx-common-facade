@@ -48,6 +48,14 @@ public interface WithdrawOrderRPCService {
      */
     Boolean updateLockStatusById(@NotNull Long id, @NotNull Integer newLockStatus, Long lockAccountId, String lockAccount);
 
+    /**
+     * 统计指定提现订单状态下该用户的锁单数量
+     * @param lockAccount           锁单账号
+     * @param orderStatusList       提现订单状态集合
+     * @return
+     */
+    Integer countLockedStatusWithdrawOrderNum(String lockAccount, List<Integer> orderStatusList);
+
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
 

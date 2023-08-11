@@ -20,7 +20,7 @@ public class RecentlyPlayingResp implements Serializable {
     @ApiModelProperty(value = "场馆名称")
     private String venueName;
 
-    @ApiModelProperty(value = "场馆类型")
-    private String venueCode;
+    @ApiModelProperty(value = "场馆类型zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞")
+    private String venueTypeCode;
 
 }

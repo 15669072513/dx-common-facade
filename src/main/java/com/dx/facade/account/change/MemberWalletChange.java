@@ -1,9 +1,9 @@
 package com.dx.facade.account.change;
 
+import com.dx.facade.account.change.param.Constant;
+
 import java.util.Arrays;
 import java.util.List;
-
-import com.dx.facade.account.change.param.Constant;
 
 /**
  * 会员账变业务 定义
@@ -54,7 +54,7 @@ public enum MemberWalletChange implements IWalletChange {
 
     //*******************V2需求会员账变明细****************
     //中心钱包 余额9个 + 冻结余额4个，共13个
-    //场景1.代理给会员下分，会员中心钱包余额减额度，对应代理的中心钱包余额加额度；
+    //场景1.代理给会员上分，会员中心钱包余额加额度，对应代理的中心钱包余额减额度；
     v2_cash_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.v2_cash_up_score, MemberAppType.v2_cash_up_score, TransType.in, Constant.MEMBER),
     //场景2.代理在代理后台直接给会员提现下分，会员中心钱包支出，对应的代理中心钱包余额加额
     v2_cash_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.out, Constant.MEMBER),
@@ -161,12 +161,30 @@ public enum MemberWalletChange implements IWalletChange {
         return name;
     }
 
+    // TODO 需要更具业务逻辑更新
+    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){
+        return Arrays.asList(MemberWalletChange.deposit,
+                MemberWalletChange.deposit_add,
+                MemberWalletChange.agent_deposit_for_member,
 
-    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){// TODO 需要更具业务逻辑更新
-        return Arrays.asList(MemberWalletChange.deposit, MemberWalletChange.deposit_add, MemberWalletChange.agent_deposit_for_member);
+                MemberWalletChange.v2_cash_up_score
+                //@TODO 信用上分是否计入member表的存入累计？
+                //MemberWalletChange.v2_credit_up_score,
+                //MemberWalletChange.v2_credit_total_up_score
+        );
     }
 
-    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){ // TODO 需要更具业务逻辑更新
-        return Arrays.asList(MemberWalletChange.withdraw_success, MemberWalletChange.withdraw_sub);
+    // TODO 需要更具业务逻辑更新
+    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){
+        return Arrays.asList(
+                MemberWalletChange.withdraw_success,
+                MemberWalletChange.withdraw_sub,
+
+                MemberWalletChange.v2_cash_down_score,
+                MemberWalletChange.V2_cash_lock_down_score_refused
+                //@TODO 信用下分是否计入member表的取出累计？
+                //MemberWalletChange.v2_credit_down_score,
+                //MemberWalletChange.v2_credit_total_down_score
+        );
     }
 }

@@ -78,6 +78,9 @@ public class GameRecordDto {
     @ApiModelProperty("会员输赢")
     private BigDecimal netAmount;
 
+    @ApiModelProperty("派彩金额")
+    private BigDecimal payAmount;
+
     @ApiModelProperty("ob注单状态")
     private Integer obBetStatus;
 
