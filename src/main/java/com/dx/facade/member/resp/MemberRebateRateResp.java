@@ -39,7 +39,7 @@ public class MemberRebateRateResp implements Serializable {
     private String userName;
     
     @ApiModelProperty("上级代理id")
-    private Integer parentProxyId;
+    private Long parentProxyId;
     
     @ApiModelProperty("代理等级")
     private Integer proxyLevel;
