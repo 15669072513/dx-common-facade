@@ -27,7 +27,7 @@ public class UpdateTransferInfoParamDTO implements BaseParmDTO{
     /**
      * 开启免转模式 0-手动，1-免转
      */
-    @ApiModelProperty(value = "开启免转模式 0-手动，1-免转")
+    @ApiModelProperty(value = "开启免转模式 0-不开启，1-开启")
     private Integer noTransfer;
 
     @Override
