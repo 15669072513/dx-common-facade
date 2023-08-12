@@ -69,6 +69,21 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("代理下分次数")
     protected Long proxyDownTimes= 0L;
 
+
+
+    @ApiModelProperty("代理授信上分金额")
+    private BigDecimal proxyCreditUpAmount;
+    @ApiModelProperty("代理授信上分次数")
+    private Long proxyCreditUpTimes;
+    @ApiModelProperty("代理授信下分金额")
+    private BigDecimal proxyCreditDownDmount;
+    @ApiModelProperty("代理授信下分次数")
+    private Long proxyCreditDownTimes;
+    @ApiModelProperty("返点金额")
+    private BigDecimal rebateAmount;
+
+
+
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额
      *

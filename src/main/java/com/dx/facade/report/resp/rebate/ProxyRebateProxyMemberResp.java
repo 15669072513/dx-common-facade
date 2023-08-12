@@ -10,11 +10,16 @@ public class ProxyRebateProxyMemberResp {
 
 
 
-    @ApiModelProperty(value = "代理账号")
-    private String proxyName;
+    @ApiModelProperty(value = "代理ID")
+    private Long proxyId;
 
-    @ApiModelProperty(value = "会员账号")
-    private List<String> memberName;
+    @ApiModelProperty(value = "代理账号")
+    private String userName;
+
+    @ApiModelProperty(value = "所属会员账号列表")
+    private List<String> memberUserNameList;
+
+
 
 
 }
