@@ -11,6 +11,7 @@ public enum Subject {
     CREDIT_SUB("credit_sub","授信下分"),
     EXCHANGE("exchange","兑换筹码"),
     REVERT("revert","归还筹码"),
+    DETAIL("detail","资金明细"),
     ;
 
     private final String code;
