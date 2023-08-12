@@ -5,8 +5,8 @@ import com.dx.entity.PageResp;
 import com.dx.facade.game.dto.GameOrderRecordDto;
 import com.dx.facade.game.req.GameReviewReq;
 import com.dx.facade.game.resp.GameRecordDeatailPackResp;
-import com.dx.facade.game.resp.GameRevieRoundResp;
-import com.dx.facade.game.resp.GameReviewResp;
+import com.dx.facade.game.resp.GameReviecardRoundResp;
+import com.dx.facade.game.resp.GameReviewcardResp;
 import com.dx.facade.texas.req.DxHandInfoListReq;
 
 import java.math.BigDecimal;
@@ -60,7 +60,7 @@ public interface GameOrderRpcService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<GameReviewResp, GameRevieRoundResp>> queryGameReviewList(GameReviewReq req);
+    CommonResp<PageResp<GameReviewcardResp, GameReviecardRoundResp>> queryGameReviewList(GameReviewReq req);
 
 
     /**
