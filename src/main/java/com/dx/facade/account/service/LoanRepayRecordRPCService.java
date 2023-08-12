@@ -30,10 +30,9 @@ public interface LoanRepayRecordRPCService {
 
     /**
      * 校验借还款金额是否合法
-     * @param recordType
-     * @param amount
+     * @param loanRepayParam
      * @return
      */
-    CommonResp<Boolean> checkAmount(Integer recordType, BigDecimal amount);
+    CommonResp<Boolean> checkAmount(LoanRepayParam loanRepayParam);
 
 }

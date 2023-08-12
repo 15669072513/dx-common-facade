@@ -7,20 +7,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Author Rock
  **/
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RecentlyPlayingResp implements Serializable {
+public class RecentlyPlaying implements Serializable {
 
-    @ApiModelProperty(value = "场馆名称")
-    private String venueName;
-
-    @ApiModelProperty(value = "场馆类型zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞")
-    private String venueTypeCode;
+    @ApiModelProperty(value = "最近在玩数据")
+    private List<RecentlyPlayingResp> recentlyPlay;
 
 }

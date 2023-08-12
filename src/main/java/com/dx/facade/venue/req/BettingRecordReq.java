@@ -21,8 +21,8 @@ public class BettingRecordReq extends PageRequest {
     @NotBlank(message = "场馆类型不能为空")
     private String venueType;
 
-    @ApiModelProperty(value = "注单状态1-全部，2-已结算，3-未结算, 4-已取消", required = true)
-    @Range(min = 1, max = 4, message = "注单状态错误,只能1-4")
+    @ApiModelProperty(value = "注单状态3-全部，1-已结算，0-未结算, 2-已取消/不结算", required = true)
+    @Range(min = 0, max = 3, message = "注单状态错误,只能0-3")
     private Integer betStatus;
 
     @ApiModelProperty(value = "开始时间，单位时间戳", required = true)

@@ -23,6 +23,7 @@ public enum ErrorCode {
     MEMBER_PASSWORD("会员密码错误"),
     AUDIT_FAIL("审核失败"),
     ONLY_LOCK_ONE_ORDER("你有锁定的订单未处理，锁单失败"),
+    MANUAL_TRANSFER_ERRPR("转账失败"),
     ;
 
     String message;

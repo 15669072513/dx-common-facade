@@ -49,6 +49,8 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
     @ApiModelProperty("一审审核人")
     @TableField("audit1_operator")
     private String audit1Operator;
+    @ApiModelProperty("一审审核人ID")
+    private Long audit1AccountId;
 
     @ApiModelProperty("一审审核结果(1=通过 2=拒绝)")
     @TableField("audit1_result")
@@ -74,6 +76,8 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
     @ApiModelProperty("二审审核人")
     @TableField("audit2_operator")
     private String audit2Operator;
+    @ApiModelProperty("二审审核人ID")
+    private Long audit2AccountId;
 
     @ApiModelProperty("二审审核结果(1=通过 2=拒绝)")
     @TableField("audit2_result")
@@ -99,6 +103,8 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
     @ApiModelProperty("三审审核人")
     @TableField("audit3_operator")
     private String audit3Operator;
+    @ApiModelProperty("三审审核人ID")
+    private Long audit3AccountId;
 
     @ApiModelProperty("三审审核结果(1=通过 2=拒绝)")
     @TableField("audit3_result")

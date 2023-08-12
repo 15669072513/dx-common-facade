@@ -1,5 +1,6 @@
 package com.dx.facade.venue.resp;
 
+import com.dx.facade.venue.dto.GameVenueDTO;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -7,20 +8,19 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * @Author Rock
  **/
+
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class RecentlyPlayingResp implements Serializable {
+public class SwitchGameVenueResp implements Serializable {
 
-    @ApiModelProperty(value = "场馆名称")
-    private String venueName;
-
-    @ApiModelProperty(value = "场馆类型zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞")
-    private String venueTypeCode;
+    @ApiModelProperty(value = "切换游戏数据列表")
+    private List<GameVenueDTO> switchGameVenues;
 
 }
