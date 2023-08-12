@@ -2,6 +2,7 @@ package com.dx.facade.account.change;
 
 import com.dx.facade.account.change.param.Constant;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -216,5 +217,41 @@ public enum ProxyWalletChange implements IWalletChange {
                 ProxyWalletChange.commission_withdraw_success,
                 ProxyWalletChange.commission_withdraw_sub
         );
+    }
+
+    public static List<ProxyWalletChange> v2List(){
+        List<ProxyWalletChange> list = new ArrayList<>();
+        list.add(ProxyWalletChange.v2_cash_deposit_by_official);
+        list.add(ProxyWalletChange.v2_cash_deposit_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_cash_deposit_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_cash_deposit_to_member);
+        list.add(ProxyWalletChange.v2_cash_withdraw_by_official);
+        list.add(ProxyWalletChange.v2_cash_withdraw_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_cash_withdraw_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_cash_withdraw_to_member);
+        list.add(ProxyWalletChange.v2_cash_rebate);
+        list.add(ProxyWalletChange.v2_cash_rebate_add);
+        list.add(ProxyWalletChange.v2_cash_rebate_sub);
+        list.add(ProxyWalletChange.v2_cash_loan);
+        list.add(ProxyWalletChange.v2_cash_repay);
+        list.add(ProxyWalletChange.v2_credit_up_score_by_official);
+        list.add(ProxyWalletChange.v2_credit_total_up_score_by_official);
+        list.add(ProxyWalletChange.v2_credit_up_score_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_credit_total_up_score_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_credit_up_score_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_credit_total_up_score_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_credit_up_score_to_member);
+        list.add(ProxyWalletChange.v2_credit_total_up_score_to_member);
+        list.add(ProxyWalletChange.v2_credit_down_score_by_official);
+        list.add(ProxyWalletChange.v2_total_credit_down_score_by_official);
+        list.add(ProxyWalletChange.v2_credit_down_score_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_credit_total_down_score_by_parent_proxy);
+        list.add(ProxyWalletChange.v2_credit_down_score_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_credit_total_down_score_to_sub_proxy);
+        list.add(ProxyWalletChange.v2_credit_down_score_to_member);
+        list.add(ProxyWalletChange.v2_credit_total_down_score_to_member);
+        list.add(ProxyWalletChange.v2_credit_repay);
+        list.add(ProxyWalletChange.v2_credit_loan);
+        return list;
     }
 }
