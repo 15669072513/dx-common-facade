@@ -81,4 +81,6 @@ public interface WalletRPCService {
     CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
 
     CommonResp<WalletAmountDTO> getWalletAmountByUserId(WalletAmountParam param);
+
+    CommonResp<WalletAmountDTO> getWalletAmountByUserIdAll(WalletAmountParam param);
 }

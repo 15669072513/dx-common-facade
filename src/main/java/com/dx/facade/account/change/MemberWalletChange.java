@@ -2,6 +2,7 @@ package com.dx.facade.account.change;
 
 import com.dx.facade.account.change.param.Constant;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -120,15 +121,14 @@ public enum MemberWalletChange implements IWalletChange {
     private String name;
 
     /**
-     *
      * @param walletType 钱包类型
-     * @param bizType 会员业务类型
+     * @param bizType    会员业务类型
      * @param changeType 会员账变类型
-     * @param appType 会员客户端账变类型
-     * @param transType 收支类型
-     * @param name 会员name
+     * @param appType    会员客户端账变类型
+     * @param transType  收支类型
+     * @param name       会员name
      */
-    MemberWalletChange(WalletType walletType, MemberBizType bizType, MemberChangeType changeType, MemberAppType appType, TransType transType, String name){
+    MemberWalletChange(WalletType walletType, MemberBizType bizType, MemberChangeType changeType, MemberAppType appType, TransType transType, String name) {
         this.walletType = walletType;
         this.bizType = bizType;
         this.changeType = changeType;
@@ -137,32 +137,32 @@ public enum MemberWalletChange implements IWalletChange {
         this.name = name;
     }
 
-    public IWalletType walletType(){
+    public IWalletType walletType() {
         return walletType;
     }
 
-    public IBizType bizType(){
+    public IBizType bizType() {
         return bizType;
     }
 
-    public IChangeType changeType(){
+    public IChangeType changeType() {
         return changeType;
     }
 
-    public IAppType appType(){
+    public IAppType appType() {
         return appType;
     }
 
-    public TransType transType(){
+    public TransType transType() {
         return transType;
     }
 
-    public String getName(){
+    public String getName() {
         return name;
     }
 
     // TODO 需要更具业务逻辑更新
-    public static List<MemberWalletChange> getDepositMemberWalletChangeList(){
+    public static List<MemberWalletChange> getDepositMemberWalletChangeList() {
         return Arrays.asList(MemberWalletChange.deposit,
                 MemberWalletChange.deposit_add,
                 MemberWalletChange.agent_deposit_for_member,
@@ -175,7 +175,7 @@ public enum MemberWalletChange implements IWalletChange {
     }
 
     // TODO 需要更具业务逻辑更新
-    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList(){
+    public static List<MemberWalletChange> getWithdrawMemberWalletChangeList() {
         return Arrays.asList(
                 MemberWalletChange.withdraw_success,
                 MemberWalletChange.withdraw_sub,
@@ -187,4 +187,48 @@ public enum MemberWalletChange implements IWalletChange {
                 //MemberWalletChange.v2_credit_total_down_score
         );
     }
+
+    public static List<MemberWalletChange> v2List() {
+        List<MemberWalletChange> list = new ArrayList<>();
+        list.add(rebate);
+        list.add(rebate_add);
+        list.add(rebate_sub);
+        list.add(v2_cash_center_to_B);
+        list.add(v2_B_to_center);
+        list.add(MemberWalletChange.v2_cash_up_score);
+        list.add(MemberWalletChange.v2_cash_down_score);
+        list.add(MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy);
+        list.add(MemberWalletChange.v2_cash_down_score_withdraw_refused);
+        list.add(MemberWalletChange.v2_cash_down_score_withdraw_frozen);
+        list.add(MemberWalletChange.v2_cash_lock_down_score_frozen);
+        list.add(MemberWalletChange.V2_cash_lock_down_score_refused);
+        list.add(MemberWalletChange.v2_rebate);
+        list.add(MemberWalletChange.v2_rebate_add);
+        list.add(MemberWalletChange.v2_rebate_sub);
+        list.add(MemberWalletChange.v2_cash_loan);
+        list.add(MemberWalletChange.v2_cash_repay);
+        list.add(MemberWalletChange.v2_bring_to_table_texas);
+        list.add(MemberWalletChange.v2_bring_out_table_texas);
+        list.add(MemberWalletChange.v2_center_to_video);
+        list.add(MemberWalletChange.v2_video_to_center);
+        list.add(MemberWalletChange.v2_center_to_sports);
+        list.add(MemberWalletChange.v2_sports_to_center);
+        list.add(MemberWalletChange.v2_center_to_lottery);
+        list.add(MemberWalletChange.v2_lottery_to_center);
+        list.add(MemberWalletChange.v2_center_to_poker);
+        list.add(MemberWalletChange.v2_poker_to_center);
+        list.add(MemberWalletChange.v2_center_to_e_sports);
+        list.add(MemberWalletChange.v2_e_sports_to_center);
+        list.add(MemberWalletChange.v2_credit_up_score);
+        list.add(MemberWalletChange.v2_credit_total_up_score);
+        list.add(MemberWalletChange.v2_credit_down_score);
+        list.add(MemberWalletChange.v2_credit_total_down_score);
+        list.add(MemberWalletChange.v2_credit_loan);
+        list.add(MemberWalletChange.v2_credit_repay);
+        list.add(MemberWalletChange.bring_to_table);
+        list.add(MemberWalletChange.bring_out_table);
+        return list;
+    }
+
+
 }

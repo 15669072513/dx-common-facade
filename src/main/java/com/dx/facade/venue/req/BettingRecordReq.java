@@ -14,7 +14,7 @@ import javax.validation.constraints.NotNull;
 public class BettingRecordReq extends PageRequest {
 
     @ApiModelProperty(value = "会员ID", required = true)
-    @NotNull(message = "会员ID不能为空")
+    //@NotNull(message = "会员ID不能为空")
     private Long memberId;
 
     @ApiModelProperty(value = "场馆类型,dz:德州,zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞", required = true)
