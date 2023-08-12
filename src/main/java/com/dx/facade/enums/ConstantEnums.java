@@ -192,6 +192,14 @@ public class ConstantEnums {
         public String desc() {
             return this.desc;
         }
+
+        public static boolean ifMember(Integer code){
+            return member.code.equals(code);
+        }
+
+        public static boolean ifAgent(Integer code){
+            return agent.code.equals(code);
+        }
     }
 
     public static enum EnumGenderType {
