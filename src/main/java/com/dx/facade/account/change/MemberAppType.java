@@ -25,7 +25,7 @@ public enum MemberAppType implements IAppType {
 
     //---------------V2新增-------------
     v2_cash_up_score(14, "充值上分"),
-    v2_cash_down_score(15, "提现上分"),
+    v2_cash_down_score(15, "提现下分"),
     v2_transfer(3, "转账"),
     v2_rebate(4, "返水"),
     v2_loan(16, "信用借款"),
