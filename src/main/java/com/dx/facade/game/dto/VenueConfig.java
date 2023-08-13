@@ -14,9 +14,14 @@ public class VenueConfig {
     private String agentCode;
 
     /**
-     * 子商户号
+     * 子商户号 DJ:CID
      */
     private String subAgentCode;
+
+    /**
+     * 上级商户 DJ:CID
+     */
+    private String parentAgentCode;
 
     private String md5Key;
 
