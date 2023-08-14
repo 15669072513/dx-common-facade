@@ -21,7 +21,7 @@ public class UpdateTransferInfoParamDTO implements BaseParmDTO{
     /**
      * 会员ID
      */
-    @ApiModelProperty(value = "会员id")
+    @ApiModelProperty(value = "会员id", required = false)
     private Long userId;
 
     /**

@@ -3,7 +3,9 @@ package com.dx.facade.account.change;
 import com.dx.exception.BizException;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 代理业务类型 6佣金钱包 7额度钱包
@@ -111,6 +113,17 @@ public enum ProxyBizType implements IBizType {
         }
         throw new BizException("没有这个ProxyBizType");
     }
+
+    static Map<Integer, ProxyBizType> code2Enum = new HashMap<>();
+    static {
+        for (ProxyBizType value : ProxyBizType.values()) {
+            code2Enum.put(value.code, value);
+        }
+    }
+    public static ProxyBizType getByCode(Integer code) {
+        return code2Enum.get(code);
+    }
+
 
     /**
      * 代理账变记录-业务类型 下拉列表
