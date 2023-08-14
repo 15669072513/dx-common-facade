@@ -19,7 +19,7 @@ public class FundDetailRecordResp {
   private String gameId;
   @ApiModelProperty("游戏类型 0德州 1短牌")
   private Integer gameType;
-  @ApiModelProperty("注单状态 0已结算 1未结算 2取消")
+  @ApiModelProperty("注单状态 0未结算 1已结算 2不结算")
   private Integer obBetStatus;
   @ApiModelProperty("投注金额")
   private BigDecimal betAmount;
