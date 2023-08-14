@@ -584,6 +584,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_NO_SIGN_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_无签约列表";
     /** 代理列表文件名 */
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
+    /** 代理消息列表文件名 */
+    String FILE_NAME_NOTIFY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理消息列表";
 
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
