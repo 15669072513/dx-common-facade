@@ -68,6 +68,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_账变后余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变后余额"; //
 
     String FUNDS_账变时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变时间"; //
+    String FUNDS_账变ID = "EXCEL_HEAD_I18N_KEY.FUNDS_账变ID"; //
 
     String FUNDS_活动ID = "EXCEL_HEAD_I18N_KEY.FUNDS_活动ID"; //
     String FUNDS_优惠金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_优惠金额"; //
