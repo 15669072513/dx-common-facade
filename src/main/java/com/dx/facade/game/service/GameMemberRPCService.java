@@ -18,7 +18,7 @@ public interface GameMemberRPCService {
      * @param memberId c端会员id
      * @return
      */
-    CommonResp<GameMemberDto> getGameMemberByMemberId(Long merchantId, String venueCode, Long memberId);
+    CommonResp<GameMemberDto> getGameMemberByMemberId(Long merchantId, String venueCode, Long memberId, String agentCode);
 
     /**
      * 根据memberId 和 场馆code 查询会员信息 如果不存在 返回 null
