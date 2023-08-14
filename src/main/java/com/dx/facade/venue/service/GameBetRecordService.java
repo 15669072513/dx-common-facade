@@ -12,6 +12,10 @@ import com.dx.facade.venue.req.BettingRecordReq;
  */
 public interface GameBetRecordService {
 
+    /**
+     *个人中心-资金页-查询个人注单统计信息
+     */
+    GameRecordBetAmountAggregation betRecordAggregation(BettingRecordReq req) throws BizException;
 
     /**
      * 个人中心-资金页-查询个人注单
@@ -20,5 +24,14 @@ public interface GameBetRecordService {
      * @return
      * @throws BizException
      */
-    PageResp<GameRecordDto, GameRecordBetAmountAggregation> betRecordList(BettingRecordReq req) throws BizException;
+    PageResp<GameRecordDto, Void> betRecordList(BettingRecordReq req) throws BizException;
+
+    /**
+     * 代理中心-会员管理-查询直属会员游戏记录
+     *
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    PageResp<GameRecordDto, Void> proxyBetRecordList(BettingRecordReq req) throws BizException;
 }

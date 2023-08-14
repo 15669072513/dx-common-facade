@@ -17,7 +17,19 @@ public class BettingRecordReq extends PageRequest {
     //@NotNull(message = "会员ID不能为空")
     private Long memberId;
 
-    @ApiModelProperty(value = "场馆类型,dz:德州,zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞", required = true)
+    /**
+     * 上级代理id
+     */
+    @ApiModelProperty("上级代理id")
+    private Long parentProxyId;
+
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty("会员账号")
+    private String memberName;
+
+    @ApiModelProperty(value = "场馆类型,zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞", required = true)
     @NotBlank(message = "场馆类型不能为空")
     private String venueType;
 
