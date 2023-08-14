@@ -38,7 +38,7 @@ public interface MessageNoticeRpcService {
     /**
      * app 获取用户未读数量
      */
-    public CommonResp<Integer> getUnReadCount(AppGetNoticeUnReadCountReq appGetNoticeUnReadCountReq) throws BizException;
+    public CommonResp<Integer> getUnReadCount(AppGetMessageNoticeReq appGetNoticeUnReadCountReq) throws BizException;
 
 
     /**
