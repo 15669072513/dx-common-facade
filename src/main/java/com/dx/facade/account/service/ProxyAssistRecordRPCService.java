@@ -20,15 +20,6 @@ public interface ProxyAssistRecordRPCService {
 
 
     /**
-     * 官方给代理上分
-     *
-     * @param reqDTO
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveOfficerProxyUpScoreOrder(ProxyTransferReqDTO reqDTO) throws BizException;
-
-    /**
      * 代理给会员上分
      * @param dto
      * @return
@@ -60,13 +51,6 @@ public interface ProxyAssistRecordRPCService {
      */
     void saveProxyAssitProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
 
-    /**
-     * 官方给代理下分
-     * @param proxyAssistDownScoreDto
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveOfficialProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
 
     /**
      * 代理Web 版本查询的转账记录查询,需要查询全部

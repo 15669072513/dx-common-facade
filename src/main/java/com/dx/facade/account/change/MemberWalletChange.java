@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 会员账变业务 定义
+ * @author Administrator
  */
 public enum MemberWalletChange implements IWalletChange {
     deposit(WalletType.cash, MemberBizType.deposit, MemberChangeType.deposit, MemberAppType.deposit, TransType.in, Constant.MEMBER),
