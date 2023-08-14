@@ -46,6 +46,6 @@ public enum BwLanguageEnum {
 				return anEnum;
 			}
 		}
-		return null;
+		return BwLanguageEnum.ZH;
 	}
 }
