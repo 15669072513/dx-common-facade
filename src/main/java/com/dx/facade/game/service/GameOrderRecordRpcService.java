@@ -2,13 +2,13 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
-import com.dx.facade.game.dto.GameOrderRecordDto;
 import com.dx.facade.game.req.FundDetailReq;
+import com.dx.facade.game.req.GameOrderRecordProxyReq;
 import com.dx.facade.game.req.GameOrderTableDetailSumReq;
 import com.dx.facade.game.resp.FundDetailRecordResp;
 import com.dx.facade.game.resp.FundDetailSumResp;
+import com.dx.facade.game.resp.GameOrderRecordProxyResp;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
-import com.dx.facade.texas.req.DxHandInfoListReq;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -38,4 +38,6 @@ public interface GameOrderRecordRpcService {
      * @return
      */
     CommonResp<PageResp<FundDetailRecordResp,Void>> getFundDetailRecord(FundDetailReq req);
+
+    CommonResp<PageResp<GameOrderRecordProxyResp, ?>> getGameRecord(GameOrderRecordProxyReq req);
 }

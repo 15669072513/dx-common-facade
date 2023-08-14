@@ -1,22 +1,21 @@
 package com.dx.facade.report.param.rebate;
 
 
+import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
+
 @Data
-public class RebateDayReqDTO {
+public class RebateDayListReqDTO  extends LocalDatePageRequest {
 
     @ApiModelProperty(value = "日期，比如20210531")
     private Integer staticsDate;
 
-    @ApiModelProperty(value = "类型  1 团队 2 下级会员")
-    private Integer reportType;
-
-    @ApiModelProperty(value = "代理ID")
-    private Long proxyId;
 
     @ApiModelProperty(value = "会员ID")
+    @NotBlank(message = "[会员ID]不能为空")
     private Long memberId;
 
 
