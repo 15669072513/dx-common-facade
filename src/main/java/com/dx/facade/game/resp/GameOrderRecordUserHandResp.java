@@ -64,6 +64,13 @@ public class GameOrderRecordUserHandResp {
      */
     @ApiModelProperty("会员账号")
     private String userName;
+
+    @ApiModelProperty("上级代理id")
+    private String parentProxyId;
+
+
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
     /**
      * 会员昵称
      */

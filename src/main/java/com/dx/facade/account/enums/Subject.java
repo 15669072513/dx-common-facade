@@ -12,6 +12,8 @@ public enum Subject {
     EXCHANGE("exchange","兑换筹码"),
     REVERT("revert","归还筹码"),
     DETAIL("detail","资金明细"),
+    AGENT("agent","代理"),
+    MEMBER("member","会员"),
     ;
 
     private final String code;

@@ -96,11 +96,11 @@ public class LowerMemberListRespDto {
     @ApiModelProperty(value = "授信额度/信用额度")
     private BigDecimal creditBalance;
 
-    @ApiModelProperty(value = "中心钱包-余额")
-    private BigDecimal centerWalletBalance;
+//    @ApiModelProperty(value = "中心钱包-余额")
+//    private BigDecimal centerWalletBalance;
     
-    @ApiModelProperty(value = "应收账款")
-    private BigDecimal accountsReceivable;
+//    @ApiModelProperty(value = "应收账款")
+//    private BigDecimal accountsReceivable;
 
 	@ApiModelProperty("信用余额")
 	private BigDecimal creditAvailable;

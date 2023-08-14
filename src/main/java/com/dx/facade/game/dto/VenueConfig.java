@@ -9,14 +9,23 @@ import lombok.Data;
 public class VenueConfig {
 
     /**
+     * 电竞代理编号
+     */
+    private String cAgentId;
+    /**
      * 商户API 对应的商户号
      */
     private String agentCode;
 
     /**
-     * 子商户号
+     * 子商户号 DJ:CID
      */
     private String subAgentCode;
+
+    /**
+     * 上级商户 DJ:CID
+     */
+    private String parentAgentCode;
 
     private String md5Key;
 

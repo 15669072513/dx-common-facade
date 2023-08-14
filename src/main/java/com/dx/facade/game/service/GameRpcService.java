@@ -26,10 +26,6 @@ public interface GameRpcService {
     /**
      * 创建游戏账号
      */
-    public CommonResp<GameAgentCreateResp> createAgent(GameAgentCreateDto createDto);
-    /**
-     * 创建游戏账号
-     */
     public CommonResp<GameCreateResp> create(GameCreateDto createDto);
 
 
@@ -69,6 +65,6 @@ public interface GameRpcService {
      * @param merchantId
      * @return
      */
-     public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
+    public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
 
 }
