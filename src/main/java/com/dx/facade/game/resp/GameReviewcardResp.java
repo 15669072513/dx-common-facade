@@ -1,5 +1,6 @@
 package com.dx.facade.game.resp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -79,10 +80,12 @@ public class GameReviewcardResp implements Serializable  {
     private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
 
     /** 最终成牌 */
-    @ApiModelProperty("公共牌信息")
+    @ApiModelProperty("最终成牌")
+    @JsonIgnore
     private String lastCards;
 
     /** 成牌时7张牌舍弃的2张牌 */
+    @JsonIgnore
     @ApiModelProperty("成牌时7张牌舍弃的2张牌")
     private String loseCards;
 
