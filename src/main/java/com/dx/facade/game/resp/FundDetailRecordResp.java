@@ -9,8 +9,8 @@ import java.math.BigDecimal;
 @ApiModel("资金明细页返回实体")
 @Data
 public class FundDetailRecordResp {
-  @ApiModelProperty("id")
-  private Long id;
+  @ApiModelProperty("generatedId")
+  private Long generatedId;
   @ApiModelProperty("用户ID")
   private Long userId;
   @ApiModelProperty("游戏名称")
