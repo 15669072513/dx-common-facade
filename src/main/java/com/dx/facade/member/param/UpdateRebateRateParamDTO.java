@@ -4,8 +4,6 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import javax.validation.constraints.NotNull;
-
 import org.springframework.util.Assert;
 
 import com.dx.facade.member.exception.ErrorCode;
@@ -94,6 +92,9 @@ public class UpdateRebateRateParamDTO  implements BaseParmDTO, Serializable {
     
     @ApiModelProperty("是否为平台调整")
     private boolean isPlatformAdjustment;
+    
+    @ApiModelProperty("remark")
+    private String remark;
     
 	@Override
 	public void check() {
