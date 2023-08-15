@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Data
 public class FundDetailRecordResp {
   @ApiModelProperty("generatedId")
-  private Long generatedId;
+  private String generatedId;
   @ApiModelProperty("用户ID")
   private Long userId;
   @ApiModelProperty("游戏名称")
