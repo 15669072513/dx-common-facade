@@ -69,6 +69,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_账变后余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变后余额"; //
 
     String FUNDS_账变时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变时间"; //
+    String FUNDS_账变ID = "EXCEL_HEAD_I18N_KEY.FUNDS_账变ID"; //
 
     String FUNDS_活动ID = "EXCEL_HEAD_I18N_KEY.FUNDS_活动ID"; //
     String FUNDS_优惠金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_优惠金额"; //
@@ -585,6 +586,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_NO_SIGN_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_无签约列表";
     /** 代理列表文件名 */
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
+    /** 代理消息列表文件名 */
+    String FILE_NAME_NOTIFY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理消息列表";
 
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
@@ -595,4 +598,6 @@ public interface ExcelHeadI18nKey {
     /** 返点比例列表文件名 */
     String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
 
+    /** 个人返点比例列表文件名 */
+    String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
 }

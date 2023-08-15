@@ -13,8 +13,8 @@ public enum WalletType implements IWalletType {
     //虚拟货币(3, "虚拟货币"),
     //会员积分(4, "会员积分"),
     cash_lock(5, "会员中心钱包冻结余额"),
-    commission(6, "佣金钱包"),
-    quota(7, "额度钱包"),
+    commission(6, "佣金钱包"), // 去掉了
+    quota(7, "额度钱包"),       //  去掉了
     agent_lock(8, "代理中心钱包冻结余额"),
     credit_available(9, "会员信用余额"),
     credit_total(10, "会员信用额度"),
