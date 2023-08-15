@@ -14,7 +14,7 @@ public enum BwCurrencyEnum {
     CNY(1, "CNY", "美元", "$"),
     VND(8,"VND", "越南盾", "₫"),
     THB(6,"THB", "泰铢", "฿"),
-    USDT(4,"USD", "美元", "$"),
+    USDT(4,"USDT", "美元", "$"),
     ;
     private Integer codeNumber;
     private String code;
