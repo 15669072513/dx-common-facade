@@ -596,4 +596,6 @@ public interface ExcelHeadI18nKey {
     /** 返点比例列表文件名 */
     String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
 
+    /** 个人返点比例列表文件名 */
+    String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
 }
