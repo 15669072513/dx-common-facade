@@ -3,6 +3,7 @@ package com.dx.facade.texas.req;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.math.BigDecimal;
 
@@ -94,5 +95,9 @@ public class DxGameConfigEditReq implements Serializable {
             hidden = true
     )
     private String updatedBy;
+
+    @ApiModelProperty(value = "谷歌验证码", required = true, example = "123456")
+    @NotNull(message = "谷歌验证码不能为空")
+    private String googleVerifyCode;
 
 }
