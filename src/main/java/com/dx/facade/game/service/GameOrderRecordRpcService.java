@@ -37,4 +37,6 @@ public interface GameOrderRecordRpcService {
     CommonResp<PageResp<FundDetailRecordResp,Void>> getFundDetailRecord(FundDetailReq req);
 
     CommonResp<PageResp<GameOrderRecordProxyResp, ?>> getGameRecord(GameOrderRecordProxyReq req);
+
+
 }
