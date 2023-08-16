@@ -15,8 +15,6 @@ import java.util.List;
  * 盈亏报表-会员盈亏 DTO
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class MemberNetAmountRebateDTO {
 
     @ApiModelProperty(value = "会员Id", dataType = "java.lang.String")
