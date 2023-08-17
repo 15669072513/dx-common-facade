@@ -2,6 +2,8 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.facade.es.req.GameTableInfoListReq;
+import com.dx.facade.es.resp.GameTableInfoListEsResp;
 import com.dx.facade.game.dto.GameOrderRecordDto;
 import com.dx.facade.game.dto.game.GameOrderRecordHandUserRespDto;
 import com.dx.facade.game.dto.game.UserValiBetAmountRespDto;
@@ -114,5 +116,12 @@ public interface GameOrderRpcService {
      */
     CommonResp<PageResp<GameOrderUserSettlementDetailByProxyResp, ?>> gameOrderUserSettlementByProxyList(
         GameOrderUserSettlementDetailByProxyReq req);
+
+    /**
+     * 注单记录
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<GameTableInfoListEsResp, Void>> listPage(GameTableInfoListReq req);
 
 }
