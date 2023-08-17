@@ -1,5 +1,6 @@
 package com.dx.facade.game.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -27,6 +28,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private int roundCode;
 
     @ApiModelProperty("最终成牌")
+    @JsonIgnore
     private String lastCards;
 
     @ApiModelProperty("公牌")
