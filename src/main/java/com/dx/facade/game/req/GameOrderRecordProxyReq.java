@@ -28,10 +28,10 @@ public class GameOrderRecordProxyReq extends BaseRequest {
    @ApiModelProperty("注单状态 0已结算 1未结算 2取消")
    private Integer obBetStatus;
 
-   @ApiModelProperty(value = "投注开始时间 时间戳")
+   @ApiModelProperty(value = "投注开始时间(时间戳)")
    private Long betStartTime;
 
-   @ApiModelProperty(value = "投注结束时间 时间戳")
+   @ApiModelProperty(value = "投注结束时间(时间戳)")
    private Long betEndTime;
 
 }
