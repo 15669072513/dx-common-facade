@@ -3,13 +3,17 @@ package com.dx.facade.game.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.game.dto.GameOrderRecordDto;
+import com.dx.facade.game.dto.game.GameOrderRecordHandUserRespDto;
 import com.dx.facade.game.dto.game.UserValiBetAmountRespDto;
+import com.dx.facade.game.req.GameOrderRecordHandUserReq;
 import com.dx.facade.game.req.GameOrderRecordUserVenueReq;
 import com.dx.facade.game.req.GameOrderUserReq;
+import com.dx.facade.game.req.GameOrderUserSettlementDetailByProxyReq;
 import com.dx.facade.game.req.GameReviewReq;
 import com.dx.facade.game.req.UserValiBetAmountReq;
 import com.dx.facade.game.resp.GameOrderRecordUserVenueResp;
 import com.dx.facade.game.resp.GameOrderUserResp;
+import com.dx.facade.game.resp.GameOrderUserSettlementDetailByProxyResp;
 import com.dx.facade.game.resp.GameOrderUserSumResp;
 import com.dx.facade.game.resp.GameRecordDeatailPackResp;
 import com.dx.facade.game.resp.GameReviecardRoundResp;
@@ -97,4 +101,16 @@ public interface GameOrderRpcService {
      * @return
      */
     CommonResp<UserValiBetAmountRespDto> userVlidBetAmountSum(UserValiBetAmountReq req);
+
+    /**
+     * 手牌玩家列表
+     */
+    CommonResp<GameOrderRecordHandUserRespDto> gameOrderRecordHandUserList(GameOrderRecordHandUserReq req);
+
+
+    /**
+     * 代理后台-结算详情
+     */
+    CommonResp<PageResp<GameOrderUserSettlementDetailByProxyResp, ?>> gameOrderUserSettlementByProxyList(
+        GameOrderUserSettlementDetailByProxyReq req);
 }
