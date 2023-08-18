@@ -62,11 +62,14 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_收支类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_收支类型"; //
 
+    String FUNDS_直属上级代理 = "EXCEL_HEAD_I18N_KEY.FUNDS_直属上级代理"; //
     String FUNDS_账变前余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变前余额"; //
+    String FUNDS_期初余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_期初余额"; //
 
     String FUNDS_账变金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变金额"; //
 
     String FUNDS_账变后余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变后余额"; //
+    String FUNDS_期末余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_期末余额"; //
 
     String FUNDS_账变时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变时间"; //
     String FUNDS_账变ID = "EXCEL_HEAD_I18N_KEY.FUNDS_账变ID"; //
