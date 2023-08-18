@@ -2,6 +2,7 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.facade.game.dto.*;
+import com.dx.facade.game.dto.game.GameModifyPwdDto;
 import com.dx.facade.game.resp.*;
 
 import java.util.List;
@@ -14,6 +15,13 @@ public interface GameRpcService {
      * @return
      */
     public CommonResp<GameLoginResp> login(GameLoginDto loginDto);
+
+    /**
+     * 场馆登录游戏统一方法
+     *
+     * @return
+     */
+    public CommonResp<GameBaseResp> modifyPassword(GameModifyPwdDto modifyPwdDto);
 
     /**
      * 游戏试玩
