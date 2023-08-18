@@ -25,6 +25,10 @@ public class GameOrderHandSumResp {
     private BigDecimal validBetAmount;
     @ApiModelProperty("庄家位置")
     private Integer villageSeat;
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
     @ApiModelProperty("小盲位置")
     private Integer sbSeat;
     @ApiModelProperty("大盲位置")

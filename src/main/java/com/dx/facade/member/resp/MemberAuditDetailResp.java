@@ -64,6 +64,9 @@ public class MemberAuditDetailResp implements Serializable {
 
     @ApiModelProperty("会员真实姓名")
     private String realName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
