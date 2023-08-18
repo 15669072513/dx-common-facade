@@ -46,6 +46,15 @@ public class ClubParamConfigQueryRespDTO implements Serializable {
     /** 单牌桌旁观人数上限 */
     @ApiModelProperty("单牌桌旁观人数上限")
     private Integer lookOnLimit;
+    
+    @ApiModelProperty("单牌桌可坐下人数上限")
+    private Integer sitDownLimit;
+    
+    @ApiModelProperty("德州扑克单牌桌累计带入上限")
+    private Integer texasBringInLimit;
+    
+    @ApiModelProperty("短牌单牌桌累计带入上限")
+    private Integer shortCardBringInLimit;
 
     /** 创建人 */
     @ApiModelProperty("创建人")

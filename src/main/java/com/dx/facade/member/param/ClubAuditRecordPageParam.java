@@ -1,16 +1,15 @@
 package com.dx.facade.member.param;
 
-import com.baomidou.mybatisplus.annotation.TableField;
+import java.util.List;
+
 import com.dx.facade.common.PageRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Data
 @Builder
