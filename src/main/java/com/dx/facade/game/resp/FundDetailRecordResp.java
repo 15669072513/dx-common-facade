@@ -1,5 +1,6 @@
 package com.dx.facade.game.resp;
 
+import com.dx.facade.enums.TexasGameTypeEnum;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -18,7 +19,7 @@ public class FundDetailRecordResp {
   @ApiModelProperty("游戏ID")
   private String gameId;
   @ApiModelProperty("游戏类型 0德州 1短牌")
-  private Integer gameType;
+  private TexasGameTypeEnum gameType;
   @ApiModelProperty("注单状态 0未结算 1已结算 2不结算")
   private Integer obBetStatus;
   @ApiModelProperty("投注金额")
