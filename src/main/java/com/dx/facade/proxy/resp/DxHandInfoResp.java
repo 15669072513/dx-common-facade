@@ -53,5 +53,5 @@ public class DxHandInfoResp implements Serializable {
     private BigDecimal validBetAmount;
 
     @ApiModelProperty("手牌（牌桌第多少手）")
-    private BigDecimal roundNo;
+    private Integer roundNo;
 }
