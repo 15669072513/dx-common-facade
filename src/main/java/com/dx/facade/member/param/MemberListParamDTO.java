@@ -21,7 +21,7 @@ public class MemberListParamDTO {
     @ApiModelProperty(value="结束时间")
     private String timeEnd;
 
-    @ApiModelProperty(value="账号类型，0-会员账号, 1-会员姓名,2-上级代理, 3-总代账号")
+    @ApiModelProperty(value="账号类型，0-会员账号, 1-会员姓名,2-上级代理, 3-总代账号,4-会员昵称")
     private Integer userNameType;
 
     @ApiModelProperty("账号")

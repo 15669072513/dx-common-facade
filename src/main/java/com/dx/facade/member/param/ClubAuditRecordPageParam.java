@@ -51,7 +51,7 @@ public class ClubAuditRecordPageParam extends PageRequest {
     @ApiModelProperty(value = "锁单状态（0-未锁定 1-已锁定）",example = "1")
     private Integer lockStatus;
 
-    @ApiModelProperty("审核状态（0-待处理 1-处理中，2-审核通过，3-审核拒绝）")
+    @ApiModelProperty("审核状态（0-待处理 1-处理中，3-审核通过，2-审核拒绝）")
     private Integer auditStatus;
     
     @ApiModelProperty("代理名称")
