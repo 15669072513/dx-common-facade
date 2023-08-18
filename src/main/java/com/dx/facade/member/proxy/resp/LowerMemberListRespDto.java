@@ -110,4 +110,7 @@ public class LowerMemberListRespDto {
 
 	@ApiModelProperty("头像")
 	private String topImagesUrl;
+
+	@ApiModelProperty(value = "层级：1-非直属会员、2-直属会员")
+	private Integer proxyLevel;
 }
