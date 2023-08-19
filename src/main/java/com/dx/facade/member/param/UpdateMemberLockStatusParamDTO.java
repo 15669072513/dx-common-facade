@@ -37,6 +37,9 @@ public class UpdateMemberLockStatusParamDTO implements BaseParmDTO{
 	@ApiModelProperty(value = "游戏锁定：0-关闭 1-开启")
 	private Integer gameLockStatus;
 	
+	@ApiModelProperty(value = "账号锁定状态 0-未锁定 1-充提锁定")
+	private Integer paymentLockStatus;
+	
     @ApiModelProperty(value = "操作人")
     private String operateBy;
 

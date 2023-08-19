@@ -19,4 +19,8 @@ public class MerchantGameUrlRecordRespDTO {
 
     @ApiModelProperty(value = "全站下载地址")
     private String downUrl;
+    @ApiModelProperty("安卓下载地址")
+    private String androidUrl;
+    @ApiModelProperty("ios下载地址")
+    private String iosUrl;
 }

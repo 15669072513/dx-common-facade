@@ -53,6 +53,6 @@ public interface MemberInfoAppRPCService {
      * @return
      * @throws Exception 
      */
-	CommonResp<Boolean> updateProxyLockStatus(UpdateMemberLockStatusParamDTO updateMemberLockStatusParma) throws BizException;
+	CommonResp<Boolean> updateMemberLockStatus(UpdateMemberLockStatusParamDTO updateMemberLockStatusParma) throws BizException;
 
 }
