@@ -74,4 +74,7 @@ public class GameBalanceDto {
 
     @ApiModelProperty("场馆越南名")
     private String venueVnName;
+
+    @ApiModelProperty("场馆钱包类型,ty:体育钱包,dj:电竞钱包,qp:棋牌钱包,cp:彩票钱包,zr:真人钱包")
+    private String venueWalletType;
 }
