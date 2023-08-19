@@ -17,6 +17,9 @@ public class GameRecordProxyWebRespDTO {
 
     @ApiModelProperty("场馆code(如agzr,imsb,cp,dj,cq9)")
     private String venueCode;
+
+    @ApiModelProperty("场馆类型code(见BwVenueTypeEnum)")
+    private String venueTypeCode;
 	
 	@ApiModelProperty("场馆名称(如ob真人,ag捕鱼)")
 	private String venueName;

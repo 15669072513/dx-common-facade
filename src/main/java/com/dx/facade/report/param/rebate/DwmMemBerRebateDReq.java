@@ -11,13 +11,11 @@ import java.time.LocalDate;
 @Data
 public class DwmMemBerRebateDReq extends LocalDatePageRequest {
 
-    @ApiModelProperty(value = "派发开始时间", required = true, example = "20210617")
-    @DateTimeFormat(pattern = "yyyyMMdd")
-    private Integer payoutStartTime;
+    @ApiModelProperty(value = "派发开始时间", required = true, example = "2023-08-17 00:00:00")
+    private String payoutStartTime;
 
-    @ApiModelProperty(value = "派发结束时间", required = true, example = "20210617")
-    @DateTimeFormat(pattern="yyyyMMdd")
-    private Integer payoutEndTime;
+    @ApiModelProperty(value = "派发结束时间", required = true, example = "2023-08-19 23:59:59")
+    private String payoutEndTime;
 
 
     @ApiModelProperty(value = "派发开始时间", required = true, example = "20210617")
