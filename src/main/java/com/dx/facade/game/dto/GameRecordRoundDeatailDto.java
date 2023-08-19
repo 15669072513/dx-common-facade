@@ -76,6 +76,9 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("弃牌玩家数")
     private Integer losePalyers;
 
+    @ApiModelProperty("连续弃牌标识")
+    private boolean consecutiveFold;
+
     /**
      * 开牌结果（#PokerResultInfoEnum）
      */
