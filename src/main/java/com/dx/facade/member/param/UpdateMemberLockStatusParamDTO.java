@@ -25,9 +25,6 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "更新会员登录、游戏、支付锁定状态", description = "更新会员登录、游戏、支付锁定状态")
 public class UpdateMemberLockStatusParamDTO implements BaseParmDTO{
 
-    @ApiModelProperty(value = "商户id (20)")
-    private Long merchantId;
-	
     @ApiModelProperty(value = "会员id (20)")
     private Long userId;
 
@@ -45,8 +42,7 @@ public class UpdateMemberLockStatusParamDTO implements BaseParmDTO{
 
 	@Override
 	public void check() {
-		Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
-		 Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));
+		Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));
 	}
 
 }
