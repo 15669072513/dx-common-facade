@@ -43,6 +43,16 @@ public interface MemberInfoAppRPCService {
     @ApiModelProperty(value="设置当前头像")
     CommonResp<Integer> setCurrentTopImages(MBUserTopImageParam userTopImageParam) throws BizException;
 
-
+    @ApiModelProperty(value="更新会员游戏锁定状态")
+    CommonResp<Boolean> updateGameLockStatus(MemberUpdatePwdDTO memberUpdatePwdDTO) throws BizException;
+    
+    /**
+     *  更新会员登录、游戏、支付状态
+     * 
+     * @param updateMemberLockStatusParma
+     * @return
+     * @throws Exception 
+     */
+	CommonResp<Boolean> updateProxyLockStatus(UpdateMemberLockStatusParamDTO updateMemberLockStatusParma) throws BizException;
 
 }
