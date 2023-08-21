@@ -28,16 +28,4 @@ public class CmnAccountChangeMQParamDTO implements Serializable {
     //@See com.dx.facade.account.change.param.CmnAccountChangeMQParamType.code
     private Integer paramType;
 
-
-    public void main(String[] args) {
-
-
-
-
-
-
-
-
-    }
-
 }
