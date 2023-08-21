@@ -17,6 +17,10 @@ public class GameOrderRecordDetailResp implements Serializable {
      */
     @ApiModelProperty("主键id")
     private String id;
+
+    @ApiModelProperty("注单id")
+    private String generatedId;
+
     /**
      * 用户类型 0 正式账号 1测试账号
      */

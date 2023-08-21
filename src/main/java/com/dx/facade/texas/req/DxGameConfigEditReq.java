@@ -96,8 +96,23 @@ public class DxGameConfigEditReq implements Serializable {
     )
     private String updatedBy;
 
-    @ApiModelProperty(value = "谷歌验证码", required = true, example = "123456")
-    @NotNull(message = "谷歌验证码不能为空")
-    private String googleVerifyCode;
+    @NotNull(message = "商户code不可为空")
+    @ApiModelProperty( value = "商户code")
+    private String merchantCode;
 
+
+    /** 用户名 */
+    @NotNull(message = "用户名不可为空")
+    @ApiModelProperty( value = "用户名")
+    private String userName;
+
+    /** (类型:0B2B后台,1游戏后台,2信用贷后台) */
+    @ApiModelProperty( value = "类型:0B2B后台,1游戏后台,2信用贷后台" )
+    private String type;
+
+
+    /** google验证码 */
+    @NotNull(message = "google验证码不可为空")
+    @ApiModelProperty( value = "google验证码")
+    private String googleAuthCode;
 }
