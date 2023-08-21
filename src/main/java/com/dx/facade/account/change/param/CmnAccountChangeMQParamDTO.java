@@ -20,12 +20,24 @@ import java.io.Serializable;
 @SuperBuilder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value="通用mq账变对象", description="通用mq账变对象")
+@ApiModel(value = "通用mq账变对象", description = "通用mq账变对象")
 public class CmnAccountChangeMQParamDTO implements Serializable {
 
     private IBWWalletChangeParm changeParm;
 
     //@See com.dx.facade.account.change.param.CmnAccountChangeMQParamType.code
     private Integer paramType;
+
+
+    public void main(String[] args) {
+
+
+
+
+
+
+
+
+    }
 
 }
