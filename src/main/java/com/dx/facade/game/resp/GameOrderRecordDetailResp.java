@@ -17,10 +17,6 @@ public class GameOrderRecordDetailResp implements Serializable {
      */
     @ApiModelProperty("主键id")
     private String id;
-
-    @ApiModelProperty("注单id")
-    private String generatedId;
-
     /**
      * 用户类型 0 正式账号 1测试账号
      */
@@ -97,7 +93,7 @@ public class GameOrderRecordDetailResp implements Serializable {
     /**
      *  终端类型
      */
-    @ApiModelProperty("终端类型 1 电脑网页 2 手机网页 3苹果4安卓5其他")
+    @ApiModelProperty("终端类型")
     private Integer obDeviceType;
     /**
      * 结算状态 (0已结算 1未结算 2取消)
@@ -108,15 +104,36 @@ public class GameOrderRecordDetailResp implements Serializable {
     @ApiModelProperty("该类游戏总输赢")
     private BigDecimal netAmountSum;
 
+    @ApiModelProperty("上级代理id")
+    private Long parentProxyId;
+
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
+
     @ApiModelProperty("总代id")
     private Long topProxyId;
 
     @ApiModelProperty("总代账号")
     private String topProxyName;
 
-    @ApiModelProperty("上级代理id")
-    private Long parentProxyId;
+    @ApiModelProperty("牌桌名称")
+    private String tableName;
 
-    @ApiModelProperty("上级代理账号")
-    private String parentProxyName;
+    @ApiModelProperty("玩家id")
+    private Long memberId;
+
+    @ApiModelProperty("会员账号")
+    private String memberName;
+
+    @ApiModelProperty("登陆锁定状态 0-未锁定 1-登陆锁定")
+    private Integer loginLockStatus;
+
+    @ApiModelProperty("充提锁定状态 0-未锁定 1-充提锁定")
+    private Integer paymentLockStatus;
+
+    @ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
+    private Integer gameLockStatus;
+
+    @ApiModelProperty("vip等级")
+    private Integer vipLevel;
 }
