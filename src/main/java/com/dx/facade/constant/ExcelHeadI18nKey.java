@@ -579,6 +579,8 @@ public interface ExcelHeadI18nKey {
     String STATUS = "EXCEL_HEAD_I18N_KEY.MEMBER_状态";
     String UPDATE_BY = "EXCEL_HEAD_I18N_KEY.MEMBER_修改人";
     String UPDATE_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_修改时间";
+    String LOST_EFFECT_DT = "EXCEL_HEAD_I18N_KEY.MEMBER_失效时间";
+    String CREATED_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_注册时间";
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
