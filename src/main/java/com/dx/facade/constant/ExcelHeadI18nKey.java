@@ -327,6 +327,7 @@ public interface ExcelHeadI18nKey {
 
 
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
+    String	FUNDS_会员昵称 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员昵称";
     String	FUNDS_上级代理_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_上级代理_代理层级";
     String	FUNDS_俱乐部id = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部id";
     String	FUNDS_身份 = "EXCEL_HEAD_I18N_KEY.FUNDS_身份";
@@ -334,6 +335,8 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
     String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
+    String	FUNDS_信用余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用余额";
+    String	FUNDS_应还账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应还账款";
     String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
     String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
     String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
