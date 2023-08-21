@@ -63,9 +63,9 @@ public enum WalletType implements IWalletType {
      */
     public static List<WalletType> initToDb() {
         return Arrays.asList(
-          cash,
+          cash, commission,quota,
           虚拟货币,
-                cash_lock,
+           cash_lock,
           agent_lock,
           credit_available,
           credit_total
