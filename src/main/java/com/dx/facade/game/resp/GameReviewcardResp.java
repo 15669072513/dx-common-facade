@@ -1,16 +1,20 @@
 package com.dx.facade.game.resp;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 /**
  * 牌局信息表
  */
 @Data
-public class GameReviewResp implements Serializable  {
+public class GameReviewcardResp implements Serializable  {
     /**
      *  手牌id
      */
@@ -18,7 +22,7 @@ public class GameReviewResp implements Serializable  {
     private String handId;
 
     /**
-     *  手牌id
+     *  局号
      */
     @ApiModelProperty("局号")
     private Integer roundNo;
@@ -56,20 +60,39 @@ public class GameReviewResp implements Serializable  {
      */
     @ApiModelProperty("玩家昵称")
     private String nickName;
+
     /**
-     * 手牌信息
-     */
-    @ApiModelProperty("手牌信息")
-    private String handInfo;
-    /**
-     * 公共牌信息
+     * 公牌 有为空数据
      */
     @ApiModelProperty("公共牌信息")
-    private String globalPokerCode;
+    private List<Integer> publicCards =new ArrayList<>();
+
+    /***
+     * 手牌 有为空数据
+     */
+    @ApiModelProperty("手牌信息")
+    private List<Integer> handCards =new ArrayList<>();
+
+    /***
+     * 玩家牌型展示是否置亏标识
+     */
+    @ApiModelProperty("玩家牌型显示是否置灰标识")
+    private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
+
+    /** 最终成牌 */
+    @ApiModelProperty("最终成牌")
+    @JsonIgnore
+    private String lastCards;
+
+    /** 成牌时7张牌舍弃的2张牌 */
+    @ApiModelProperty("成牌时7张牌舍弃的2张牌")
+    @JsonIgnore
+    private String loseCards;
+
     /**
      * 开牌结果（#PokerResultInfoEnum）
      */
-    @ApiModelProperty("开牌结果")
+    @ApiModelProperty("牌型")
     private String resultInfo;
     /**
      * 投注状态（GameBetStatusEnum)
@@ -93,16 +116,19 @@ public class GameReviewResp implements Serializable  {
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
 
-    /**
-     * 座位类型 (GameSeatTypeEnum)
-     */
-    @ApiModelProperty("座位类型 0 普通 1庄 2 大盲 3小盲")
+    @ApiModelProperty(value = "座位号")
+    private Integer chairId;
+
+    @ApiModelProperty(value = "座位类型大类 1:前位 2:中位 3:后位 4:盲位")
     private Integer seatType;
 
+    @ApiModelProperty(value = "座位类型,参考枚举:TexasSeatTypeEnum")
+    private Integer seatCode;
 
-    /**
-     * 底池竞争亮牌标识 1亮牌 2不亮牌。
-     */
+    @ApiModelProperty("座位号")
+    private Integer seatNum;
+
+    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
     private Integer showStatus;
 
 }
