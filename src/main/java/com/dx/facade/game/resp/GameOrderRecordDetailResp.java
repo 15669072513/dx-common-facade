@@ -112,7 +112,7 @@ public class GameOrderRecordDetailResp implements Serializable {
     private Long topProxyId;
 
     @ApiModelProperty("总代账号")
-    private Long topProxyName;
+    private String topProxyName;
 
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
