@@ -136,4 +136,7 @@ public class GameOrderRecordDetailResp implements Serializable {
 
     @ApiModelProperty("vip等级")
     private Integer vipLevel;
+
+    @ApiModelProperty("注单ID")
+    private String generatedId;
 }
