@@ -31,12 +31,14 @@ public class ProxyListPageParamDTO {
     @ApiModelProperty(value = "截止时间")
     private String timeEnd;
 
+    /** 账号类型：1-代理账号 2-总代账号 */
     @ApiModelProperty(value = "账号类型：1-代理账号 2-总代账号")
     private Integer nameType;
 
     @ApiModelProperty(value = "代理账号/总代账号")
     private String name;
 
+    /** 是否全部下级：false-直属下级 true-全部下级 */
     @ApiModelProperty(value = "是否全部下级：false-直属下级 true-全部下级")
     private Boolean isAllSub;
     
