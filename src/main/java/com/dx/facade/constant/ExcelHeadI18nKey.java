@@ -333,10 +333,10 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_身份 = "EXCEL_HEAD_I18N_KEY.FUNDS_身份";
     String	FUNDS_创建人 = "EXCEL_HEAD_I18N_KEY.FUNDS_创建人";
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
+    String	FUNDS_邮箱 = "EXCEL_HEAD_I18N_KEY.FUNDS_邮箱";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
     String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
     String	FUNDS_信用余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用余额";
-    String	FUNDS_应还账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应还账款";
     String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
     String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
     String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";

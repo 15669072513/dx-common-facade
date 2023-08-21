@@ -24,6 +24,7 @@ public enum CmnAccountChangeMQParamType {
     ProxyBillWalletChangeParmDTO(5, "代理账变且计算流水(代理目前只有私庄业务才计流水)"),
     TransferWalletChangeParmDTO(6, "转账行为导致的账变对象(包含主动方和被动方)");
 
+	
     public Integer code;
     public String desc;
 
