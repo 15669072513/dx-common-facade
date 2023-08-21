@@ -14,13 +14,13 @@ import lombok.NoArgsConstructor;
 /**
  * 返点比例请求参数DTO
  *
- * @author bicycle
+ * @author
  */
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "返点比例请求Param", description = "返点比例请求Param")
+@ApiModel(value = " RebateRatePageParamDTO", description = "RebateRatePageParamDTO")
 public class RebateRatePageParamDTO extends PageRequest {
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
