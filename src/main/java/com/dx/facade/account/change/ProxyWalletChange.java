@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 代理账变业务 定义
+ * @author Administrator
  */
 public enum ProxyWalletChange implements IWalletChange {
 
@@ -51,7 +52,8 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_add(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_add, ProxyAppType.commission, TransType.in),
     commission_sub(WalletType.commission, ProxyBizType.commission, ProxyChangeType.commission_sub, ProxyAppType.commission, TransType.out),
 
-    commission_rebate(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate, ProxyAppType.rebate, TransType.in),
+    //代理返点 代理中心钱包WalletType.agent_cash
+    commission_rebate(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate, ProxyAppType.rebate, TransType.in),
     commission_rebate_add(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.rebate, TransType.in),
     commission_rebate_sub(WalletType.commission, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.rebate, TransType.out),
 
@@ -166,26 +168,32 @@ public enum ProxyWalletChange implements IWalletChange {
         this.name = Constant.PROXY;
     }
 
+    @Override
     public IWalletType walletType(){
         return walletType;
     }
 
+    @Override
     public IBizType bizType(){
         return bizType;
     }
 
+    @Override
     public IChangeType changeType(){
         return changeType;
     }
 
+    @Override
     public IAppType appType(){
         return appType;
     }
 
+    @Override
     public TransType transType(){
         return transType;
     }
 
+    @Override
     public String getName(){
         return name;
     }

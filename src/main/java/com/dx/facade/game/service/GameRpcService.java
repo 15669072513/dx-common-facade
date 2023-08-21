@@ -2,6 +2,7 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.facade.game.dto.*;
+import com.dx.facade.game.dto.game.GameModifyPwdDto;
 import com.dx.facade.game.resp.*;
 
 import java.util.List;
@@ -16,6 +17,13 @@ public interface GameRpcService {
     public CommonResp<GameLoginResp> login(GameLoginDto loginDto);
 
     /**
+     * 场馆登录游戏统一方法
+     *
+     * @return
+     */
+    public CommonResp<GameBaseResp> modifyPassword(GameModifyPwdDto modifyPwdDto);
+
+    /**
      * 游戏试玩
      *
      * @param loginDto
@@ -23,10 +31,6 @@ public interface GameRpcService {
      */
     public CommonResp<GameLoginResp> tryPlay(GameLoginDto loginDto);
 
-    /**
-     * 创建游戏账号
-     */
-    public CommonResp<GameAgentCreateResp> createAgent(GameAgentCreateDto createDto);
     /**
      * 创建游戏账号
      */
@@ -69,6 +73,6 @@ public interface GameRpcService {
      * @param merchantId
      * @return
      */
-     public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
+    public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
 
 }

@@ -35,6 +35,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
+    @ApiModelProperty("商户名称")
+    private Long merchantName;
+    
     @ApiModelProperty("用户类型 0：会员 1：代理")
     private Integer userType;
     
@@ -43,6 +46,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
 
     @ApiModelProperty("用户名称")
     private String userName;
+    
+    @ApiModelProperty("代理等级")
+    private Integer proxyLevel;
     
     @ApiModelProperty("上级代理Id")
     private Long parentProxyId;
@@ -55,6 +61,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
     @ApiModelProperty("总代ID")
     private Long topProxyId;
+    
+    @ApiModelProperty("顶级代理名称")
+    private String topProxyName;
     
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
@@ -85,5 +94,8 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
     @ApiModelProperty("是否有下级代理")
     private boolean hasSub;
+    
+    @ApiModelProperty("备注")
+    private String remark;
 
 }

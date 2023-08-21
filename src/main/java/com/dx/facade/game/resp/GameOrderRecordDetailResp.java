@@ -17,6 +17,10 @@ public class GameOrderRecordDetailResp implements Serializable {
      */
     @ApiModelProperty("主键id")
     private String id;
+
+    @ApiModelProperty("注单id")
+    private String generatedId;
+
     /**
      * 用户类型 0 正式账号 1测试账号
      */
@@ -104,17 +108,16 @@ public class GameOrderRecordDetailResp implements Serializable {
     @ApiModelProperty("该类游戏总输赢")
     private BigDecimal netAmountSum;
 
+    @ApiModelProperty("总代id")
+    private Long topProxyId;
+
+    @ApiModelProperty("总代账号")
+    private Long topProxyName;
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
 
     @ApiModelProperty("上级代理账号")
     private String parentProxyName;
-
-    @ApiModelProperty("总代id")
-    private Long topProxyId;
-
-    @ApiModelProperty("总代账号")
-    private String topProxyName;
 
     @ApiModelProperty("牌桌名称")
     private String tableName;

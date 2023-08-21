@@ -2,6 +2,7 @@ package com.dx.facade.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.sql.Timestamp;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.*;
@@ -254,5 +255,25 @@ public class DateUtils {
 
     public static String formatyyyyMMdd_(LocalDateTime localDateTime) {
         return localDateTime.format(yyyyMMdd_);
+    }
+
+    /**
+     * 日期字符串转localDateTime
+     * @param dateStr
+     * @return
+     */
+    public static LocalDateTime str2Date(String dateStr) {
+        LocalDateTime localDateTime = LocalDateTime.parse(dateStr,
+                java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+        return localDateTime;
+    }
+
+    /**
+     * localDateTime转long
+     * @param dateTime
+     * @return
+     */
+    public static Long date2Long(LocalDateTime dateTime) {
+        return Timestamp.valueOf(dateTime).getTime();
     }
 }

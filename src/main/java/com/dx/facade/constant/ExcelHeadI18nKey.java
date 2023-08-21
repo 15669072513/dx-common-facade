@@ -39,6 +39,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_到账时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_到账时间"; //
     String FUNDS_备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_备注"; //
     String FUNDS_支付类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付类型"; //
+    String FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型"; //
+    String FUNDS_申请金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_申请金额";//
 
     String FUNDS_通道名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_通道名称"; //
     String FUNDS_关联订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_关联订单号"; //
@@ -61,13 +63,17 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_收支类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_收支类型"; //
 
+    String FUNDS_直属上级代理 = "EXCEL_HEAD_I18N_KEY.FUNDS_直属上级代理"; //
     String FUNDS_账变前余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变前余额"; //
+    String FUNDS_期初余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_期初余额"; //
 
     String FUNDS_账变金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变金额"; //
 
     String FUNDS_账变后余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变后余额"; //
+    String FUNDS_期末余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_期末余额"; //
 
     String FUNDS_账变时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_账变时间"; //
+    String FUNDS_账变ID = "EXCEL_HEAD_I18N_KEY.FUNDS_账变ID"; //
 
     String FUNDS_活动ID = "EXCEL_HEAD_I18N_KEY.FUNDS_活动ID"; //
     String FUNDS_优惠金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_优惠金额"; //
@@ -86,6 +92,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_图片预览 = "EXCEL_HEAD_I18N_KEY.FUNDS_图片预览"; //
     String FUNDS_后台备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_后台备注"; //
     String FUNDS_客户端备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_客户端备注"; //
+    String FUNDS_审核人 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核人"; //
+    String FUNDS_审核时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核时间"; //
 
     String FUNDS_代理账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理账号"; //
 
@@ -319,6 +327,7 @@ public interface ExcelHeadI18nKey {
 
 
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
+    String	FUNDS_会员昵称 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员昵称";
     String	FUNDS_上级代理_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_上级代理_代理层级";
     String	FUNDS_俱乐部id = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部id";
     String	FUNDS_身份 = "EXCEL_HEAD_I18N_KEY.FUNDS_身份";
@@ -326,6 +335,8 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
     String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
+    String	FUNDS_信用余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用余额";
+    String	FUNDS_应还账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应还账款";
     String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
     String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
     String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
@@ -395,7 +406,6 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_开局权限 = "EXCEL_HEAD_I18N_KEY.FUNDS_开局权限";
     String	FUNDS_管理俱乐部权限 = "EXCEL_HEAD_I18N_KEY.FUNDS_管理俱乐部权限";
 
-    String	FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型";
     String	FUNDS_调整金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整金额";
     String	FUNDS_操作人 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作人";
     String	FUNDS_操作时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作时间";
@@ -583,6 +593,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_NO_SIGN_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_无签约列表";
     /** 代理列表文件名 */
     String FILE_NAME_PROXY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理列表";
+    /** 代理消息列表文件名 */
+    String FILE_NAME_NOTIFY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理消息列表";
 
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
@@ -592,5 +604,15 @@ public interface ExcelHeadI18nKey {
     
     /** 返点比例列表文件名 */
     String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
+    
+    String USER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_账号";
+    String MEMBER_TEXAS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_德州";
+    String MEMBER_ACTUAL_PERSON_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_真人";
+    String MEMBER_SPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_体育";
+    String MEMBER_LOTTERY_TICKET_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_彩票";
+    String MEMBER_CHESS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_棋牌";
+    String MEMBER_ESPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_电竞";
 
+    /** 个人返点比例列表文件名 */
+    String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
 }
