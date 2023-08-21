@@ -1,5 +1,7 @@
 package com.dx.facade.game.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -27,6 +29,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private int roundCode;
 
     @ApiModelProperty("最终成牌")
+    @JsonIgnore
     private String lastCards;
 
     @ApiModelProperty("公牌")
@@ -67,21 +70,27 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private BigDecimal afterChip;
 
     @ApiModelProperty("玩家操作后底池")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal leijiPotAmount;
 
     @ApiModelProperty("弃牌玩家数")
     private Integer losePalyers;
 
+    @ApiModelProperty("连续弃牌标识")
+    private boolean consecutiveFold;
+
     /**
      * 开牌结果（#PokerResultInfoEnum）
      */
     @ApiModelProperty("牌型")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private String resultInfo;
 
     @ApiModelProperty("玩家牌型显示是否置灰标识")
     private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
 
     @ApiModelProperty("输赢筹码")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal netAmount;
 
     @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")

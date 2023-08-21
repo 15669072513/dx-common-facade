@@ -85,8 +85,8 @@ public class GameReviewcardResp implements Serializable  {
     private String lastCards;
 
     /** 成牌时7张牌舍弃的2张牌 */
-    @JsonIgnore
     @ApiModelProperty("成牌时7张牌舍弃的2张牌")
+    @JsonIgnore
     private String loseCards;
 
     /**
