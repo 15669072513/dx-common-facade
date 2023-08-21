@@ -9,7 +9,7 @@ public class UpdateClubAuditEnum {
 
     /**
      * 审核状态枚举
-     * 0-待处理 1-处理中，2-审核通过，3-审核拒绝
+     * 0-待处理 1-处理中，2-审核拒绝，3-审核通过
      */
     public enum AuditStatus {
         WAIT_PROCESS(0, "待处理", 1),
