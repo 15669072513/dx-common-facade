@@ -2,12 +2,8 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
-import com.dx.facade.game.req.FundDetailReq;
-import com.dx.facade.game.req.GameOrderRecordProxyReq;
-import com.dx.facade.game.req.GameOrderTableDetailSumReq;
-import com.dx.facade.game.resp.FundDetailRecordResp;
-import com.dx.facade.game.resp.FundDetailSumResp;
-import com.dx.facade.game.resp.GameOrderRecordProxyResp;
+import com.dx.facade.game.req.*;
+import com.dx.facade.game.resp.*;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 /**
@@ -38,5 +34,17 @@ public interface GameOrderRecordRpcService {
 
     CommonResp<PageResp<GameOrderRecordProxyResp, ?>> getGameRecord(GameOrderRecordProxyReq req);
 
+    /**
+     * 查询注单列表
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<GameOrderRecordResp, ?>> queryGameOrderList(GameOrderRecordReq req);
 
+    /**
+     * 查询注单详情
+     * @param req
+     * @return
+     */
+    CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 }

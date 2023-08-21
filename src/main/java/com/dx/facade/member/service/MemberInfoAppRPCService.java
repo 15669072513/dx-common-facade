@@ -42,7 +42,14 @@ public interface MemberInfoAppRPCService {
 
     @ApiModelProperty(value="设置当前头像")
     CommonResp<Integer> setCurrentTopImages(MBUserTopImageParam userTopImageParam) throws BizException;
-
-
+    
+    /**
+     *  更新会员登录、游戏、支付状态
+     * 
+     * @param updateMemberLockStatusParma
+     * @return
+     * @throws Exception 
+     */
+	CommonResp<Boolean> updateMemberLockStatus(UpdateMemberLockStatusParamDTO updateMemberLockStatusParma) throws BizException;
 
 }
