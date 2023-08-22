@@ -10,7 +10,7 @@ public enum RebateRateStatusEnum {
 	UN_SET(0,"未设置"),
 	
 	/** 已生效 */
-	EFFECTIVE(1,"已生效"),
+	EFFECTIVE(1,"生效中"),
 	
 	/** 已失效 */
 	EXPIRED(2,"已失效"),
