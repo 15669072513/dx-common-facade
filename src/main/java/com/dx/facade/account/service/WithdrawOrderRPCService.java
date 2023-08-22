@@ -56,6 +56,13 @@ public interface WithdrawOrderRPCService {
      */
     Integer countLockedStatusWithdrawOrderNum(String lockAccount, List<Integer> orderStatusList);
 
+    /**
+     * 代理待审核订单总数统计
+     * @param memberIds     代理下会员ID集合
+     * @return  待代理审核状态的订单数
+     */
+    Integer countWaitAuditByProxyOrderNum(List<Long> memberIds);
+
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
 
