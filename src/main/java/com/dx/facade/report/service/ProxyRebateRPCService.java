@@ -11,6 +11,8 @@ import com.dx.facade.report.resp.ReportRebateDetailsRespDTO;
 import com.dx.facade.report.resp.ReportRebateRespDTO;
 import com.dx.facade.report.resp.ReportRebateTotalRespDTO;
 
+import java.text.ParseException;
+
 /**
  * @author gollum
  * @version 1.0.0
@@ -30,7 +32,7 @@ public interface ProxyRebateRPCService {
      * @author gollum
      * @since 2021年9月18日 上午00:12:02
      */
-    CommonResp<PageResp<ReportRebateRespDTO, ?>> queryRebateList(PageReq<ReportRebateReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<ReportRebateRespDTO, ?>> queryRebateList(PageReq<ReportRebateReqDTO> reqDTO) throws BizException, ParseException;
 
     /**
      * @param reqDTO
