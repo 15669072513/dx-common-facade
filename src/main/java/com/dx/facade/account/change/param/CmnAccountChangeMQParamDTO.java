@@ -48,4 +48,6 @@ public class CmnAccountChangeMQParamDTO implements Serializable {
     @ApiModelProperty(value = "转账行为导致的账变对象(包含主动方和被动方)")
     private TransferWalletChangeParmDTO transferWalletChangeParmDTO;
 
+
+
 }
