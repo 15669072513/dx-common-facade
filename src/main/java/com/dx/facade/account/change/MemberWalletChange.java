@@ -164,13 +164,13 @@ public enum MemberWalletChange implements IWalletChange {
 
     // TODO 需要更具业务逻辑更新
     public static List<MemberWalletChange> getDepositMemberWalletChangeList() {
-        return Arrays.asList(MemberWalletChange.deposit,
+        return Arrays.asList(
+                MemberWalletChange.deposit,
                 MemberWalletChange.deposit_add,
                 MemberWalletChange.agent_deposit_for_member,
 
-                MemberWalletChange.v2_cash_up_score
-                //@TODO 信用上分是否计入member表的存入累计？
-                //MemberWalletChange.v2_credit_up_score,
+                MemberWalletChange.v2_cash_up_score,
+                MemberWalletChange.v2_credit_up_score
                 //MemberWalletChange.v2_credit_total_up_score
         );
     }
@@ -182,8 +182,9 @@ public enum MemberWalletChange implements IWalletChange {
                 MemberWalletChange.withdraw_sub,
 
                 MemberWalletChange.v2_cash_down_score,//代理直接提现下分，提现成功
-                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy,//代理审核通过提现下分，提现成功
-                MemberWalletChange.v2_cash_down_score_withdraw_refused//提现被拒绝，提现失败
+                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy //代理审核通过提现下分，提现成功
+
+                //MemberWalletChange.v2_cash_down_score_withdraw_refused //提现被拒绝，提现失败
                 //@TODO 信用下分是否计入member表的取出累计？
                 //MemberWalletChange.v2_credit_down_score,
                 //MemberWalletChange.v2_credit_total_down_score
