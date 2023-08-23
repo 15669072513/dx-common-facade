@@ -1,6 +1,4 @@
 package com.dx.facade.merchant.resp;
-
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -123,11 +121,9 @@ public class ConfigBannerAppResp implements Serializable {
     private String venueType;
 
     @ApiModelProperty("baner类型(1:首页Banner,2:首页弹,3:游戏内工具栏,4:个人中心工具栏,5:首页Banner,6:登录弹窗广告)")
-    @TableField("banner_type")
     private Integer bannerType;
 
     @ApiModelProperty("baner类型名称")
-    @TableField("banner_type_value")
     private String bannerTypeValue;
 
 }
