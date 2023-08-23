@@ -24,6 +24,9 @@ import java.io.Serializable;
 @ApiModel(value="通用mq账变对象", description="通用mq账变对象")
 public class CmnAccountChangeMQParamDTO implements Serializable {
 
+    @ApiModelProperty(value = "业务幂等标识-每笔业务唯一标志，如果一个eventId对应过个CmnAccountChangeMQParamDTO， 则不可用eventID")
+    private String idempotentKey;
+
     @ApiModelProperty(value = "OBQJ会员账变且计算流水")
     private MemberBillWalletChangeParmDTO memberBillWalletChangeParmDTO;
 
