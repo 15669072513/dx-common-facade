@@ -70,8 +70,26 @@ public enum MemberAppType implements IAppType {
      * @param appChangeType         客户端账变类型
      * @return                      后端账变类型列表
      */
-    public static List<Integer> getChangeTypeByAppChangeType(@NotNull Integer walletType, @NotNull Integer appChangeType) {
+    public static List<Integer> getChangeTypeByAppChangeType(@NotNull Integer walletType, Integer appChangeType) {
         if (walletType.intValue() == WalletType.cash.code()) {
+            //若appChangeType为空，则返回中心钱包下所有服务端账变类型
+            if(appChangeType == null) {
+                return Arrays.asList(
+                        MemberChangeType.v2_cash_up_score.code(),
+                        MemberChangeType.v2_cash_down_score.code(),
+                        MemberChangeType.v2_cash_B_to_center.code(),
+                        MemberChangeType.v2_cash_center_to_B.code(),
+                        MemberChangeType.v2_rebate.code(),
+                        MemberChangeType.v2_rebate_add.code(),
+                        MemberChangeType.v2_rebate_sub.code(),
+                        MemberChangeType.v2_cash_loan.code(),
+                        MemberChangeType.v2_cash_repay.code(),
+                        MemberChangeType.v2_cash_withdraw_frozen.code(),
+                        MemberChangeType.v2_cash_withdraw_refused.code(),
+                        MemberChangeType.bring_to_table.code(),
+                        MemberChangeType.bring_out_table.code()
+                );
+            }
             if (appChangeType.intValue() == v2_cash_up_score.code) return Arrays.asList(MemberChangeType.v2_cash_up_score.code());
             if (appChangeType.intValue() == v2_cash_down_score.code())
                 return Arrays.asList(MemberChangeType.v2_cash_down_score.code());
@@ -90,6 +108,15 @@ public enum MemberAppType implements IAppType {
             if (appChangeType.intValue() == v2_bring_to_table.code()) return Arrays.asList(MemberChangeType.bring_to_table.code());
         }
         if (walletType.intValue() == WalletType.credit_available.code()) {
+            //若appChangeType为空，则返回所有信用钱包账变类型
+            if(appChangeType == null) {
+                return Arrays.asList(
+                        MemberChangeType.v2_credit_up_score.code(),
+                        MemberChangeType.v2_credit_down_score.code(),
+                        MemberChangeType.v2_credit_loan.code(),
+                        MemberChangeType.v2_credit_repay.code()
+                );
+            }
             if (appChangeType.intValue() == v2_credit_up_score.code())
                 return Arrays.asList(MemberChangeType.v2_credit_up_score.code());
             if (appChangeType.intValue() == v2_credit_down_score.code())
@@ -97,8 +124,8 @@ public enum MemberAppType implements IAppType {
             if (appChangeType.intValue() == v2_loan.code()) return Arrays.asList(MemberChangeType.v2_credit_loan.code());
             if (appChangeType.intValue() == v2_repay.code()) return Arrays.asList(MemberChangeType.v2_credit_repay.code());
         }
-        if (walletType.intValue() != WalletType.cash.code() && walletType != WalletType.credit_available.code()
-                && walletType != WalletType.cash_lock.code() && walletType != WalletType.credit_total.code()) {
+        //若是场馆钱包,则返回场馆钱包下的转入转出
+        if (Arrays.asList(WalletType.video.code(), WalletType.sports.code(), WalletType.poker.code(), WalletType.lottery.code(), WalletType.e_sports.code()).contains(walletType)) {
             if (appChangeType.intValue() == v2_transfer.code)
                 return Arrays.asList(MemberChangeType.v2_B_to_center.code(), MemberChangeType.v2_center_to_B.code());
         }
