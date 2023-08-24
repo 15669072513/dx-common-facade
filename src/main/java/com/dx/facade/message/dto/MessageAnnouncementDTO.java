@@ -101,5 +101,6 @@ public class MessageAnnouncementDTO implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime updatedAt;
 
-
+    @ApiModelProperty("列表位置排序，从0开始")
+    private Integer index;
 }
