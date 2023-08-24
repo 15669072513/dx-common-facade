@@ -37,9 +37,9 @@ public interface MessageAnnouncementRpcService {
     public CommonResp<PageResp<MessageAnnouncementDTO, ?>> getList(AppGetMessageAnnouncementReq appGetMessageAnnouncementReq) throws BizException;
 
     /**
-     * app 获取滚动公告列表
+     * app 获取首页最新一条公告
      */
-    public CommonResp<PageResp<MessageAnnouncementDTO, ?>> getrollAnnouncementList(AppGetMessageAnnouncementReq appGetMessageAnnouncementReq) throws BizException;
+    public CommonResp<MessageAnnouncementDTO> getRollAnnouncement(AppGetMessageAnnouncementReq appGetMessageAnnouncementReq) throws BizException;
 
 
     /**
