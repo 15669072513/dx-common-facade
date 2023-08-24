@@ -38,6 +38,9 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
+    @ApiModelProperty("牌桌类型")
+    private Long gameType;
+
     @ApiModelProperty("俱乐部主键")
     private Long clubId;
 
@@ -92,6 +95,33 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty("抽水金额")
     private BigDecimal pumpingAmount;
+
+    @ApiModelProperty("会员输赢汇总")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("盈利筹码")
+    private BigDecimal winAmount;
+
+    @ApiModelProperty("投注金额")
+    private BigDecimal betAmount;
+
+    @ApiModelProperty("有效金额")
+    private BigDecimal validBetAmount;
+
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
+
+    @ApiModelProperty("庄家位置")
+    private Integer button;
+
+    @ApiModelProperty("小盲位置")
+    private Integer sbChairId;
+
+    @ApiModelProperty("大盲位置")
+    private Integer bbChairId;
 
     @ApiModelProperty(value = "创建时间", hidden = true)
     private LocalDateTime createdAt;
