@@ -34,6 +34,9 @@ public class DxHandInfoSumResp implements Serializable {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
+    @ApiModelProperty("牌桌类型")
+    private String gameType;
+
     @ApiModelProperty("俱乐部主键")
     private Long clubId;
 
