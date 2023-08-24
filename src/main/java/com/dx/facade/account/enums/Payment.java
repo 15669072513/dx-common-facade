@@ -209,7 +209,8 @@ public class Payment {
     public enum WithdrawType {
         银行卡(1, "银行卡"),
         虚拟币(2, "虚拟币"),
-        其他(3, "其他"),
+        线下交易(3, "线下交易"),
+        其他(0, "其他"),
         ;
 
         private Integer code;

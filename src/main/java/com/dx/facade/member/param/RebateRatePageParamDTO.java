@@ -57,6 +57,17 @@ public class RebateRatePageParamDTO extends PageRequest {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss")
     private String lostEffectDtEnd;
+    /** 修改开始时间 */
+    @ApiModelProperty("修改开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtStart;
 
-
+    /** 修改结束时间 */
+    @ApiModelProperty("修改结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtEnd;
+    @ApiModelProperty("用户类型 0：会员 1：代理")
+    private Integer userType;
 }

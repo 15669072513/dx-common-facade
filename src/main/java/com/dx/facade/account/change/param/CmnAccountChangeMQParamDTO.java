@@ -24,6 +24,9 @@ import java.io.Serializable;
 @ApiModel(value="通用mq账变对象", description="通用mq账变对象")
 public class CmnAccountChangeMQParamDTO implements Serializable {
 
+    @ApiModelProperty(value = "业务幂等标识-每笔业务唯一标志")
+    private String idempotentKey;
+
     @ApiModelProperty(value = "OBQJ会员账变且计算流水")
     private MemberBillWalletChangeParmDTO memberBillWalletChangeParmDTO;
 
@@ -44,5 +47,7 @@ public class CmnAccountChangeMQParamDTO implements Serializable {
 
     @ApiModelProperty(value = "转账行为导致的账变对象(包含主动方和被动方)")
     private TransferWalletChangeParmDTO transferWalletChangeParmDTO;
+
+
 
 }

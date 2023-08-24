@@ -7,8 +7,6 @@ import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
 import com.dx.facade.account.resp.LoanRepayRecordRespDTO;
 
-import java.math.BigDecimal;
-
 public interface LoanRepayRecordRPCService {
 
     /**
@@ -33,6 +31,6 @@ public interface LoanRepayRecordRPCService {
      * @param loanRepayParam
      * @return
      */
-    CommonResp<Boolean> checkAmount(LoanRepayParam loanRepayParam);
+    boolean checkAmount(LoanRepayParam loanRepayParam);
 
 }
