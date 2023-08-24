@@ -94,4 +94,13 @@ public class DxHandInfoSumResp implements Serializable {
 
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
+
+    @ApiModelProperty("庄家位置")
+    private Integer button;
+
+    @ApiModelProperty("小盲位置")
+    private Integer sbChairId;
+
+    @ApiModelProperty("大盲位置")
+    private Integer bbChairId;
 }
