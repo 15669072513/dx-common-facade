@@ -238,6 +238,7 @@ public enum MerchantI18nCodeEnum implements I18nEnum {
     ACTIVITY_MEMBER_NOT_PROXY(90013),//该账号不是代理
     ACTIVITY_MEMBER_NOT_EXSIT(90014),//该账号不存在
     ACTIVITY_MEMBER_IN_DATA(90015),//该账号已在名单内
+    ACCOUNT_MERCHANT_ERROR(10080) //风控对象商户关系不正确
 	;
     private int code;
 

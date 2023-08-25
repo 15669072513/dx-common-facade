@@ -5,19 +5,25 @@ import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
-
 import java.time.LocalDate;
 
 @Data
 public class DwmMemBerRebateDReq extends LocalDatePageRequest {
 
-    @ApiModelProperty(value = "派发开始时间", required = true, example = "2021-06-17")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
-    private LocalDate payoutStartTime;
+    @ApiModelProperty(value = "派发开始时间", required = true, example = "2023-08-17 00:00:00")
+    private String payoutStartTime;
 
-    @ApiModelProperty(value = "派发结束时间", required = true, example = "2021-06-17")
-    @DateTimeFormat(pattern="yyyy-MM-dd")
-    private LocalDate payoutEndTime;
+    @ApiModelProperty(value = "派发结束时间", required = true, example = "2023-08-19 23:59:59")
+    private String payoutEndTime;
+
+
+    @ApiModelProperty(value = "派发开始时间", required = true, example = "20210617")
+    @DateTimeFormat(pattern = "yyyyMMdd")
+    private Integer reportStartTime;
+
+    @ApiModelProperty(value = "派发结束时间", required = true, example = "20210617")
+    @DateTimeFormat(pattern="yyyyMMdd")
+    private Integer reportEndTime;
 
 
     @ApiModelProperty(value = "商户ID")
@@ -29,10 +35,10 @@ public class DwmMemBerRebateDReq extends LocalDatePageRequest {
     @ApiModelProperty(value = "订单号")
     private String orderNo;
 
-    @ApiModelProperty(value = "订单号")
+    @ApiModelProperty(value = "会员昵称")
     private String nickName;
 
-    @ApiModelProperty(value = "订单号")
+    @ApiModelProperty(value = "会员账号")
     private String userName;
 
 

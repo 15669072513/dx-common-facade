@@ -42,6 +42,9 @@ public class ProxyListPageParamDTO {
     @ApiModelProperty(value = "是否全部下级：false-直属下级 true-全部下级")
     private Boolean isAllSub;
     
+	@ApiModelProperty(value = "是否查询自身：false-不查自身 true-查自身")
+	private Boolean isSelf;
+    
     @ApiModelProperty(value = "账号类型（1-正式，2-测试，3-合作）")
     private List<String> accountType;
     

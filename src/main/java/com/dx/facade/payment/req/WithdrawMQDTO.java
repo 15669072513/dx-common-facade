@@ -1,5 +1,6 @@
 package com.dx.facade.payment.req;
 
+import com.dx.facade.member.param.ProxyFinanceRpcReqDto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,8 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
-import com.dx.facade.member.param.ProxyFinanceRpcReqDto;
 
 @Data
 @Builder
@@ -79,4 +78,7 @@ public class WithdrawMQDTO {
 
     @ApiModelProperty(value = "代理财务信息")
     ProxyFinanceRpcReqDto proxyFinanceRpcReqDto;
+
+    @ApiModelProperty(value = "代理财务信息-v2")
+    ProxyFinanceRpcReqDto proxyAccumulateRpcReqDto;
 }

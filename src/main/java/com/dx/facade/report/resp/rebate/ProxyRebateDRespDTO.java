@@ -83,4 +83,15 @@ public class ProxyRebateDRespDTO {
      */
     @ApiModelProperty(value = "个人返点")
     private BigDecimal personRebateAmount;
+
+
+    @ApiModelProperty(value = "代理账号")
+    private String proxyName;
+
+    @ApiModelProperty(value = "代理ID")
+    private Long proxyId;
+
+    @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
+    private Integer payoutStatus;
+
 }

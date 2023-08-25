@@ -1,5 +1,6 @@
 package com.dx.facade.report.resp.member;
 
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModelProperty;
@@ -8,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 盈亏报表-会员盈亏 DTO
@@ -36,7 +38,8 @@ public class MemberNetAmountRebateRespDTO {
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
-
+    @ApiModelProperty("团队信息详情")
+    private List<ProxyRebateTeamResp> rebateList;
 
 
 

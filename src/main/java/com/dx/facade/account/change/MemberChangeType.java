@@ -51,9 +51,11 @@ public enum MemberChangeType implements IChangeType {
     v2_rebate_sub(35, "会员返水扣除调整", MemberBizType.rebate.code().toString()),
     v2_cash_loan(36,"信用借款", MemberBizType.v2_loan.code().toString()),
     v2_cash_repay(37, "信用还款", MemberBizType.v2_repay.code().toString()),
+    v2_cash_withdraw_frozen(44,"提现冻结", MemberBizType.down_score.code().toString()),
+    v2_cash_withdraw_refused(45,"提现拒绝", MemberBizType.down_score.code().toString()),
     //场馆钱包 2个
-    v2_center_to_B(38, "中心钱包转入",MemberBizType.B_mutual_center.code().toString()),//中心钱包转入
-    v2_B_to_center(39,"转出至中心钱包",MemberBizType.B_mutual_center.code().toString()),//转出至中心钱包
+    v2_center_to_B(38, "中心钱包转入",MemberBizType.B_mutual_center.code().toString()),
+    v2_B_to_center(39,"转出至中心钱包",MemberBizType.B_mutual_center.code().toString()),
     //信用钱包 4个
     v2_credit_up_score(40, "授信上分", MemberBizType.v2_credit_up_score.code().toString()),
     v2_credit_down_score(41, "授信下分", MemberBizType.v2_credit_down_score.code().toString()),
