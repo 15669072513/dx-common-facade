@@ -23,10 +23,15 @@ public class GameUsernameUtil {
         // if (BwEnvEnum.PROD.getId().equals(envEnum.getId())) {
         // return memberName;
         // } else {
+        String prefix = getPlayerNamePrefix(envEnum, merchantId);
+        return prefix + memberName;
+        // }
+    }
+
+    private static String getPlayerNamePrefix(BwEnvEnum envEnum, Long merchantId) {
         String prefix = "";
         prefix = envEnum.getName().substring(envEnum.getName().length() - 1, envEnum.getName().length());
-        return prefix + merchantId % 10000 + memberName;
-        // }
+        return prefix + merchantId % 10000;
     }
 
     public static Boolean verifyPlayerName(BwEnvEnum envEnum, Long merchantId, String playName) {
@@ -36,7 +41,7 @@ public class GameUsernameUtil {
 //        if (BwEnvEnum.PROD.getId().equals(envEnum.getId())) {
 //            return true;
 //        } else {
-        String prefix = envEnum.getName().substring(0, 1) + merchantId % 10000;
+        String prefix = getPlayerNamePrefix(envEnum, merchantId);
         return playName.indexOf(prefix) >= 0;
         // }
     }
