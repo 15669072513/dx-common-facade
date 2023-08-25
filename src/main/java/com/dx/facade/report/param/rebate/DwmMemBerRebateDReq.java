@@ -11,11 +11,9 @@ import java.time.LocalDate;
 public class DwmMemBerRebateDReq extends LocalDatePageRequest {
 
     @ApiModelProperty(value = "派发开始时间", required = true, example = "2023-08-17 00:00:00")
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private String payoutStartTime;
 
     @ApiModelProperty(value = "派发结束时间", required = true, example = "2023-08-19 23:59:59")
-    @DateTimeFormat(pattern="yyyy-MM-dd")
     private String payoutEndTime;
 
 
