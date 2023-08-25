@@ -76,11 +76,5 @@ public interface AuthService {
      */
     CommonResp<Boolean> checkGoogleAuthCode(CheckGoogleAuthCodeReqDTO req) throws BizException;
 
-    /**
-     * 验证谷歌验证码
-     *
-     * @return
-     */
-    CommonResp<Boolean> checkGoogleAuthCode(CheckGoogleAuthCodeReqDTO req) throws BizException;
 
 }

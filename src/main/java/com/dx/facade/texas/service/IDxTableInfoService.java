@@ -38,15 +38,6 @@ public interface IDxTableInfoService {
      */
     CommonResp<DxTableSummaryResp> getTableSummaryInfo(DxTableInfoListReq req);
 
-<<<<<<< HEAD
-  /**
-   * 根据条件查询牌桌列表信息-导出
-   * 最多只会返回1000条数据
-   * @param req
-   * @return
-   */
-  CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
-=======
     /**
      * 根据条件查询牌桌列表信息-导出
      *
@@ -54,7 +45,6 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
->>>>>>> origin/feature/develop_v2
 
     /**
      * 根据牌桌ID获取牌桌配置信息
@@ -63,20 +53,13 @@ public interface IDxTableInfoService {
      */
     CommonResp<DxTableConfigRuleResp> getTableConfigByTableId(Long tableId);
 
-  /**
-   * 根据多个牌桌ID获取牌桌配置信息
-   * @param tableId
-   * @return
-   */
-  CommonResp<List<DxTableConfigRuleResp>> getTableConfigByTableIds(Set<Long> tableId);
+    /**
+     * 根据多个牌桌ID获取牌桌配置信息
+     * @param tableId
+     * @return
+     */
+    CommonResp<List<DxTableConfigRuleResp>> getTableConfigByTableIds(Set<Long> tableId);
 
-<<<<<<< HEAD
-  /**
-   * 新增牌桌
-   * @param req
-   */
-  CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req);
-=======
     /**
      * 新增牌桌
      * @param req
@@ -90,7 +73,6 @@ public interface IDxTableInfoService {
      * @throws BizException
      */
     CommonResp<Void> updateTable(DxTableInfoAddReq req) throws BizException;
->>>>>>> origin/feature/develop_v2
 
     /**
      * 根据俱乐部id 获取牌桌个数
