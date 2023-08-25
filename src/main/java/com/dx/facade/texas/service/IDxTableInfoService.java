@@ -46,6 +46,9 @@ public interface IDxTableInfoService {
    */
   CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
 
+    CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPageApp(DxTableInfoListReq req);
+
+
     /**
      * 根据牌桌ID获取牌桌配置信息
      * @param tableId
