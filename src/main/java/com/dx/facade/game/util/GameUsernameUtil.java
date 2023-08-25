@@ -29,10 +29,6 @@ public class GameUsernameUtil {
         // }
     }
 
-    public static void main(String[] args) {
-        System.out.println(BwEnvEnum.PRE.getName().substring(BwEnvEnum.PRE.getName().length() - 1, BwEnvEnum.PRE.getName().length()) + 111112111201L % 10000 + "maniac");
-    }
-
     public static Boolean verifyPlayerName(BwEnvEnum envEnum, Long merchantId, String playName) {
         if (Objects.isNull(envEnum) || Objects.isNull(merchantId)) {
             return false;
