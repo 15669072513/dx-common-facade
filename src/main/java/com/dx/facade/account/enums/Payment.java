@@ -209,7 +209,8 @@ public class Payment {
     public enum WithdrawType {
         银行卡(1, "银行卡"),
         虚拟币(2, "虚拟币"),
-        其他(3, "其他"),
+        线下交易(3, "线下交易"),
+        其他(0, "其他"),
         ;
 
         private Integer code;
@@ -421,7 +422,9 @@ public class Payment {
         会员返水(4, "会员返水"),
         会员VIP福利(5, "会员福利"),
         其他调整(6, "其他调整"),
-        存款优惠(7,"存款优惠");
+        存款优惠(7,"存款优惠"),
+        会员返水增加调整(8,"会员返水增加调整"),
+        ;
 
         private Integer code;
         private String desc;

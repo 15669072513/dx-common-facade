@@ -46,4 +46,7 @@ public class ProxyAssistDownScoreDto {
     @NotBlank(message = "支付密码不能为空")
     @ApiModelProperty(value = "支付密码", required = true)
     private String payPassword;
+
+    private Integer walletType;
+
 }

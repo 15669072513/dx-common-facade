@@ -3,11 +3,9 @@ package com.dx.facade.account.param;
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -16,7 +14,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "会员/代理提款记录入参", description = "会员/代理提款记录入参")
-public class WithdrawOrderParamDTO {
+@ToString
+public class WithdrawOrderParamDTO implements Serializable {
+
+    @ApiModelProperty("客户端调用方:1会员pc/app端，2代理后台会员提现列表，3中控后台会员提现审核记录列表，4中控后台")
+    private Integer rpcClientType;
 
     @ApiModelProperty("所属商户，支持多个")
     private List<Long> merchantIds;
@@ -26,6 +28,9 @@ public class WithdrawOrderParamDTO {
 
     @ApiModelProperty("用户id")
     private Long userId;
+
+    @ApiModelProperty("多个用户ID")
+    private List<Long> userIds;
 
     @ApiModelProperty("申请时间开始")
     private LocalDateTime eventTimeStart;
@@ -104,4 +109,24 @@ public class WithdrawOrderParamDTO {
 
     @ApiModelProperty(value = "支付厂商")
     private String payMerchantName;
+
+    @ApiModelProperty("锁单状态是否要排序，默认：否")
+    private Boolean isOrderByLockStatus = false;
+    @ApiModelProperty("锁单状态是否是升序排列，默认:否;注意:该字段生效前，必须让锁单状态参与排序")
+    private Boolean isOrderByLockStatusAsc = false;
+
+    @ApiModelProperty("是否按订单状态排序，默认：否")
+    private Boolean isOrderByOrderStatus = false;
+    @ApiModelProperty("是否按订单状态升序排列，默认：否")
+    private Boolean isOrderByOrderStatusAsc = false;
+    @ApiModelProperty("申请时间是否参与排序，默认:否")
+    private Boolean isOrderByEventTime = false;
+    @ApiModelProperty("申请时间排序规则，默认:升序;注意:该字段升降序生效前，必须让申请时间字段参与排序")
+    private Boolean isOrderByEventTimeAsc = false;
+    @ApiModelProperty("锁单时间是否要排序，默认：否")
+    private Boolean isOrderByLockTime = false;
+    @ApiModelProperty("锁单时间是否是升序排列，默认:否;注意:该字段生效前，必须让锁单状态参与排序")
+    private Boolean isOrderByLockTimeAsc = false;
+
+
 }

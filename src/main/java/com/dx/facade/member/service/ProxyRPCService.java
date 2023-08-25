@@ -6,6 +6,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.*;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
+import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
@@ -17,6 +18,7 @@ public interface ProxyRPCService {
 
     /**
      * 通过代理ID获取代理信息
+     *
      * @param proxyId
      * @return
      */
@@ -107,7 +109,7 @@ public interface ProxyRPCService {
      * @return 校验成功返回true
      * @throws BizException 业务异常
      */
-    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword) throws BizException;
+    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword);
 
     /**
      * 修改代理密码

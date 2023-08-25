@@ -315,4 +315,22 @@ public class AddLowerProxyReqDTO {
     @TableField("manage_club_lock_status")
     private Integer manageClubLockStatus;
     
+    @ApiModelProperty("德州返点比例")
+    private BigDecimal texasRebate;
+    
+    @ApiModelProperty("真人返点比例")
+    private BigDecimal actualPersonRebate;
+    
+    @ApiModelProperty("体育返点比例")
+    private BigDecimal sportsRebate;
+    
+    @ApiModelProperty("彩票返点比例")
+    private BigDecimal lotteryTicketRebate;
+    
+    @ApiModelProperty("棋牌返点比例")
+    private BigDecimal chessRebate;
+    
+    @ApiModelProperty("电竞返点比例")
+    private BigDecimal esportsRebate;
+    
 }

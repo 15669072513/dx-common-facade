@@ -18,32 +18,14 @@ public interface ProxyAssistRecordRPCService {
      */
     Boolean saveProxyTransferProxyOrder(ProxyTransferReqDTO reqDTO) throws BizException;
 
-    /**
-     * 代理代存
-     *
-     * @param proxyAssistDepositDto
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveProxyAssitDepositOrder(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
-
-
-    /**
-     * 官方给代理上分
-     *
-     * @param reqDTO
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveOfficerProxyUpScoreOrder(ProxyTransferReqDTO reqDTO) throws BizException;
 
     /**
      * 代理给会员上分
-     * @param proxyAssistDepositDto
+     * @param dto
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitMemberUpScore(ProxyAssistDepositDto proxyAssistDepositDto) throws BizException;
+    void saveProxyAssitMemberUpScore(MemberUpDownScoreDto dto) throws BizException;
 
     /**
      * 代理给代理上分
@@ -51,15 +33,15 @@ public interface ProxyAssistRecordRPCService {
      * @return
      * @throws BizException
      */
-    Boolean saveProxyAssitProxyUpScore(ProxyTransferReqDTO reqDTO) throws BizException;
+    void saveProxyAssitProxyUpScore(ProxyTransferReqDTO reqDTO) throws BizException;
 
     /**
      *  代理给会员下分
-     * @param proxyAssistDownScoreDto
+     * @param dto
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitMemberDownScoreOrder(ProxyAssistDownScoreDto proxyAssistDownScoreDto) throws BizException;
+    void saveProxyAssitMemberDownScoreOrder(MemberUpDownScoreDto dto) throws BizException;
 
     /**
      * 代理给代理下分
@@ -67,23 +49,8 @@ public interface ProxyAssistRecordRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp saveProxyAssitProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
+    void saveProxyAssitProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
 
-    /**
-     * 官方给代理下分
-     * @param proxyAssistDownScoreDto
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveOfficialProxyDownScoreOrder(ProxyTransferReqDTO proxyAssistDownScoreDto) throws BizException;
-
-    /**
-     * 代理佣金转回
-     * @param reqDTO
-     * @return
-     * @throws BizException
-     */
-    CommonResp saveProxyCommissionBack(ProxyTransferReqDTO reqDTO) throws BizException;
 
     /**
      * 代理Web 版本查询的转账记录查询,需要查询全部

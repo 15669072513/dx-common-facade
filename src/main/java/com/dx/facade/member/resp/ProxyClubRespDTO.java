@@ -54,6 +54,11 @@ public class ProxyClubRespDTO implements Serializable {
     @ApiModelProperty("代理姓名")
     private String proxyRealName;
     
+    /** 总代Id */
+    @ApiModelProperty("总代Id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long topProxyId;
+    
     /** 总代名称 */
     @ApiModelProperty("总代名称")
     private String topProxyName;
@@ -79,6 +84,15 @@ public class ProxyClubRespDTO implements Serializable {
     
     @ApiModelProperty("单牌桌旁观人数上限")
     private Integer lookOnLimit;
+    
+    @ApiModelProperty("单牌桌可坐下人数上限")
+    private Integer sitDownLimit;
+    
+    @ApiModelProperty("德州扑克单牌桌累计带入上限")
+    private Integer texasBringInLimit;
+    
+    @ApiModelProperty("短牌单牌桌累计带入上限")
+    private Integer shortCardBringInLimit;
     
     /** 会员人数 */
     @ApiModelProperty("会员人数")

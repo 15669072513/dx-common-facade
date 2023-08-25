@@ -9,6 +9,7 @@ import com.dx.facade.account.param.PaymentLockStatusDTO;
 import com.dx.facade.account.param.WithdrawOrderParamDTO;
 import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
+import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
 import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
 import com.dx.facade.account.resp.OrderListByIpOrDeviceNoRespDTO;
 import com.dx.facade.account.resp.WithdrawOrderRespDTO;
@@ -17,6 +18,7 @@ import com.dx.facade.account.resp.WithdrawTodayTotalRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import javax.validation.constraints.NotNull;
 import java.util.List;
 
 public interface WithdrawOrderRPCService {
@@ -27,6 +29,39 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
+
+    /**
+     * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+     * @param dto           更新DTO
+     * @param operationDesc 操作说明
+     * @return
+     */
+    Boolean updateWithdrawOrderStatusById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
+
+    /**
+     * 更新提现订单ID更新锁单状态
+     * @param id                提现订单ID
+     * @param newLockStatus     新的锁单状态
+     * @param lockAccountId     锁单人ID
+     * @param lockAccount       锁单人
+     * @return  true：锁单解锁成功；false：失败
+     */
+    Boolean updateLockStatusById(@NotNull Long id, @NotNull Integer newLockStatus, Long lockAccountId, String lockAccount);
+
+    /**
+     * 统计指定提现订单状态下该用户的锁单数量
+     * @param lockAccount           锁单账号
+     * @param orderStatusList       提现订单状态集合
+     * @return
+     */
+    Integer countLockedStatusWithdrawOrderNum(String lockAccount, List<Integer> orderStatusList);
+
+    /**
+     * 代理待审核订单总数统计
+     * @param memberIds     代理下会员ID集合
+     * @return  待代理审核状态的订单数
+     */
+    Integer countWaitAuditByProxyOrderNum(List<Long> memberIds);
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
