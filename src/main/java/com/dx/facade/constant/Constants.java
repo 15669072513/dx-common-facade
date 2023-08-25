@@ -30,6 +30,9 @@ public class Constants {
     public static final String NULL = "暂无数据";
     public static final String SLASH = "/";
 
+    /**
+     * 改为从数据库bw_sys_msg_config获取消息内容，以下已弃用
+     */
     public static final String INVITATION_CODE_NOTIFY_TITLE = "【成为合营伙伴】";
     public static final String INVITATION_CODE_NOTIFY_CONTEXT = "恭喜您已通过平台合营申请审核成为正式代理，通过推广模块可以获取您的推广链接。契约是保证推广收益的前提，请前往我的契约模块确认自身是否签订契约哦";
     public static final String NEW_UNDER_MEMBER_CODE_NOTIFY_TITLE = "【新增下级会员通知】";

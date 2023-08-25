@@ -179,6 +179,8 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_WITHDRAW_SUCCESS_V2("message.member.withdraw.success.v2", "1"),
     //提现通知 中文：提现失败通知
     MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
+    // 新账单通知
+    MESSAGE_MEMBER_NEW_BILL("message.member.new.bill", "1"),
     MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"),
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
