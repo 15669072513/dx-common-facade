@@ -1,7 +1,6 @@
 package com.dx.facade.member.resp;
 
 import com.dx.annotation.I18nField;
-import com.dx.facade.constant.ExcelHeadI18nKey;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -75,4 +74,12 @@ public class MemberAndProxyLoginLogResp {
 
     @ApiModelProperty(value = "登录站点:1：OB旗舰 2：美播真人")
     private Integer loginAppId;
+    @ApiModelProperty("GPS")
+    private String gps;
+    @ApiModelProperty("GPS地址")
+    private String gpsUrl;
+    @ApiModelProperty("操作系统版本")
+    private String osVersion;
+    @ApiModelProperty("登出时间")
+    private String outTime;
 }

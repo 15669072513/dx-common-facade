@@ -123,6 +123,30 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String lostEffectDtEnd;
+    
+    /** 修改开始时间 */
+    @ApiModelProperty("修改开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtStart;
+    
+    /** 修改结束时间 */
+    @ApiModelProperty("修改结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtEnd;
+    
+    /** 注册开始时间 */
+    @ApiModelProperty("注册开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String createdAtStart;
+    
+    /** 注册结束时间 */
+    @ApiModelProperty("注册结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String createdAtEnd;
 
 	@Override
 	public void check() {

@@ -1,40 +1,37 @@
 package com.dx.facade.account.resp;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
 
 
 @Data
+@Builder
+@ToString
+@NoArgsConstructor
+@AllArgsConstructor
 public class WalletAmountDTO implements Serializable {
 
-
+    @ApiModelProperty("商户id")
     private String merchantId;
 
+    @ApiModelProperty("用户id")
     private String userId;
-    /**
-     * 中心钱包额度
-     */
+
+    @ApiModelProperty("中心钱包额度")
     private BigDecimal cash;
-    /**
-     * 冻结额度
-     */
+
+    @ApiModelProperty("冻结额度")
     private BigDecimal frozen;
-    /**
-     * 信用余额
-     */
+
+    @ApiModelProperty("信用余额")
     private BigDecimal creditAvailable;
-    /**
-     * 信用总额
-     */
+
+    @ApiModelProperty("信用总额")
     private BigDecimal creditTotal;
 
-    /**
-     * 币种
-     */
+    @ApiModelProperty("币种")
     private String currency;
 }

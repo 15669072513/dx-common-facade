@@ -6,9 +6,6 @@ import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
-import java.math.BigDecimal;
-import java.util.List;
-
 /**
  * 战绩
  * @author broadway
@@ -50,6 +47,4 @@ public interface GameOrderRecordRpcService {
      * @return
      */
     CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
-
-
 }

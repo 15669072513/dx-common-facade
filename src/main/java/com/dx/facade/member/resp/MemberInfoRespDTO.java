@@ -230,4 +230,16 @@ public class MemberInfoRespDTO {
     private Integer proxyEntryAuthority;
 
     String merchantIdPath;
+
+    @ApiModelProperty("信用余额")
+    private BigDecimal creditAvailable;
+
+    @ApiModelProperty("信用额度")
+    private BigDecimal creditBalance;
+
+    @ApiModelProperty(value = "信用钱包-应还账款")
+    private BigDecimal creditShouldRepayment;
+    
+    @ApiModelProperty("代理登陆锁定状态 0-未锁定 1-登陆锁定")
+    private Integer proxyLoginLockStatus;
 }

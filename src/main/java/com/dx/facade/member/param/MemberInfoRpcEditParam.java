@@ -55,6 +55,9 @@ public class MemberInfoRpcEditParam implements Serializable {
     @ApiModelProperty(value = "真实姓名")
     private String realName;
     
+    @ApiModelProperty(value = "昵称")
+    private String nickName;
+    
     @ApiModelProperty(value = "手机号码")
     private String mobile;
     
@@ -111,6 +114,8 @@ public class MemberInfoRpcEditParam implements Serializable {
     private MemberInfoRpcEditMobile mobileAfter;
     @ApiModelProperty(value = "姓名 修改后内容")
     private MemberInfoRpcEditRealName realNameAfter;
+    @ApiModelProperty(value = "昵称 修改后内容")
+    private MemberInfoRpcEditNickName nickNameAfter;
     @ApiModelProperty(value = "性别 修改后内容")
     private MemberInfoRpcEditGender genderAfter;
     @ApiModelProperty(value = "邮箱 修改后内容")

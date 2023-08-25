@@ -15,4 +15,12 @@ public interface ExclusiveDomainRpcService {
 	 * @return
 	 */
     CommonResp<List<ExclusiveDomainResp>> queryDomainList(Long merchantId, String proxyName, String joinCode);
+
+	/**
+	 * 根据域名查询合营码
+	 * @param merchantId
+	 * @param domainName
+	 * @return
+	 */
+	CommonResp<String> queryJoinCodeByDomainName(Long merchantId, String domainName) ;
 }

@@ -88,6 +88,10 @@ public class MemberLoginParamDTO implements BaseParmDTO, Serializable {
     /** 是否允许多端登录 1：允许 0：不允许 */
     @ApiModelProperty(value = "是否允许多端登录 1：允许 0：不允许")
     private Integer isMultiple;
+    
+    /** 是否为客户端  true:是 false：否 */
+    @ApiModelProperty(value = "是否为客户端  true:是 false：否")
+    private Boolean isClient;
 
     @Override
     public void check() {

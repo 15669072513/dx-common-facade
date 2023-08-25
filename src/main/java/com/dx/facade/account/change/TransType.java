@@ -4,8 +4,8 @@ package com.dx.facade.account.change;
  * 收支类型
  */
 public enum TransType {
-    income(1, "收入"),
-    outlay(2, "支出");
+    in(1, "收入"),
+    out(2, "支出");
 
     private Integer code;
     private String desc;

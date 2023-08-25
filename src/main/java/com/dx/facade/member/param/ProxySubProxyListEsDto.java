@@ -87,7 +87,19 @@ public class ProxySubProxyListEsDto {
     private BigDecimal commissionBalance;
 
     @ApiModelProperty("额度钱包余额")
-    private BigDecimal quotaBalance;	
+    private BigDecimal quotaBalance;
+    
+    @ApiModelProperty(value = "中心钱包余额")
+    private BigDecimal centerWalletBalance;
+    
+    @ApiModelProperty(value = "信用钱包余额")
+    private BigDecimal creditWalletBalance;
+
+    @ApiModelProperty(value = "信用额度")
+    private BigDecimal creditQuota;
+    
+    @ApiModelProperty(value = "应收账款")
+    private BigDecimal accountsReceivable;
     
     @ApiModelProperty("备注")
     private String remark;

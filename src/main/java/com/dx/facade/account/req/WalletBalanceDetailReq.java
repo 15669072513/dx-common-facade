@@ -3,12 +3,11 @@ package com.dx.facade.account.req;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.util.List;
 
 @Data
-@ApiModel(value = "代理 帐变记录入参", description = "代理 帐变记录入参")
+@ApiModel(value = "帐变记录查询入参", description = "帐变记录查询入参")
 public class WalletBalanceDetailReq implements Serializable {
 
     @ApiModelProperty("所属商户，支持多个")
@@ -28,6 +27,7 @@ public class WalletBalanceDetailReq implements Serializable {
 
     @ApiModelProperty("钱包类型, 详细见WalletType枚举类型")
     private Integer walletType;
+
     @ApiModelProperty("钱包类型, 详细见WalletType枚举类型")
     private List<Integer> walletTypeList;
 
@@ -43,6 +43,9 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
 
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
+
     @ApiModelProperty("俱乐部id")
     private Long clubId;
 
@@ -57,18 +60,26 @@ public class WalletBalanceDetailReq implements Serializable {
 
     @ApiModelProperty("业务类型。会员枚举MemberBizType ，代理枚举ProxyBizType")
     private Integer bizType;
+
     @ApiModelProperty("业务类型。会员枚举MemberBizType ，代理枚举ProxyBizType")
     private List<Integer> bizTypeList;
+
     @ApiModelProperty("账变类型。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private Integer changeType;
+
     @ApiModelProperty("账变类型列表。会员枚举MemberChangeType，代理枚举ProxyChangeType")
     private List<Integer> changeTypeList;
+
     @ApiModelProperty("收支类型，TransType")
     private Integer transType;
+
     @ApiModelProperty("app类型")
     private Integer appType;
 
     @ApiModelProperty("代理层级路径")
     private String proxyPath;
+
+    @ApiModelProperty("操作人")
+    private String operatorUser;
 
 }
