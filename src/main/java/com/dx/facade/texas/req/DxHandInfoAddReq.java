@@ -108,6 +108,9 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
 
+    @ApiModelProperty("带入次数")
+    private Long bringCount;
+
     @ApiModelProperty("小盲注")
     private BigDecimal sbBlindScore;
 
