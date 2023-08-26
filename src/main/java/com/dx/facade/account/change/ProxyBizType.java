@@ -14,8 +14,18 @@ import java.util.Map;
  */
 public enum ProxyBizType implements IBizType {
 
-    //佣金钱包钱包额度钱包 佣金钱包可以转中心钱包
+    /**------------------最新v2版本-----------------**/
+    //v2新增信用钱包业务类型 4 个
+    v2_deposit(1, "充值上分", "17"),
+    v2_withdraw(7, "提现下分", "17"),
+    v2_rebate(10, "代理返点", "17"),
+    v2_loan(36, "借款", "17,18"),
+    v2_repay(37, "还款", "17,18"),
+    v2_credit_up_score(38, "授信上分", "18,19"),
+    v2_credit_down_score(39, "授信下分", "18,19"),
 
+
+    /**------------------老旧版本-----------------**/
     //代理中心钱包
     deposit(1, "代理存款", "6,7"),
     deposit_for_member(2, "代会员存款", "6,7"),
@@ -34,7 +44,6 @@ public enum ProxyBizType implements IBizType {
 
 
 //    transfer_with_banker(11, "代理划拨", "6,7"),
-
     //私庄钱包
 //    banker_deposit(12, "存入坐庄保证金", "9"),
 //    banker_gambling(13, "坐庄对赌", "9,10"),
@@ -65,18 +74,11 @@ public enum ProxyBizType implements IBizType {
     officer_proxy_down_score(32, "官方给代理下分", "7"),
     proxy_be_down_score(33, "代理给下级下分", "7"),
     proxy_to_child_down_score(34, "代理给下级下分", "7"),
-    proxy_to_mem_down_score(35, "代理给会员下分", "7"),
+    proxy_to_mem_down_score(35, "代理给会员下分", "7");
 
 
 
-    //v2新增信用钱包业务类型 4 个
-    v2_deposit(1, "充值上分", "17"),
-    v2_withdraw(7, "提现下分", "17"),
-    v2_rebate(10, "代理返点", "17"),
-    v2_loan(36, "借款", "17,18"),
-    v2_repay(37, "还款", "17,18"),
-    v2_credit_up_score(38, "授信上分", "18,19"),
-    v2_credit_down_score(39, "授信下分", "18,19");
+
 
     private Integer code;
     private String desc;
@@ -117,9 +119,13 @@ public enum ProxyBizType implements IBizType {
 
     static Map<Integer, ProxyBizType> code2Enum = new HashMap<>();
     static {
-        for (ProxyBizType value : ProxyBizType.values()) {
-            code2Enum.put(value.code, value);
-        }
+        code2Enum.put(v2_deposit.code, v2_deposit);
+        code2Enum.put(v2_withdraw.code, v2_withdraw);
+        code2Enum.put(v2_rebate.code, v2_rebate);
+        code2Enum.put(v2_loan.code, v2_loan);
+        code2Enum.put(v2_repay.code, v2_repay);
+        code2Enum.put(v2_credit_up_score.code, v2_credit_up_score);
+        code2Enum.put(v2_credit_down_score.code, v2_credit_down_score);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.get(code);
