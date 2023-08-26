@@ -80,6 +80,18 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime handEndTimeTo;
 
+    @ApiModelProperty("牌局开始时间-开始时间戳")
+    private Long handBeginTimeFromTs;
+
+    @ApiModelProperty("牌局开始时间-结束时间戳")
+    private Long handBeginTimeToTs;
+
+    @ApiModelProperty("牌局结束时间-开始时间戳")
+    private Long handEndTimeFromTs;
+
+    @ApiModelProperty("牌局结束时间-结束时间戳")
+    private Long handEndTimeToTs;
+
     @ApiModelProperty("局次")
     private Integer handNum;
 
