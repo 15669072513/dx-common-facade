@@ -15,6 +15,7 @@ import java.util.List;
 public interface ProxyLoanBillService {
     /**
      * 代理借款账单 for app
+     * 第一条是未出账单，剩下的是历史账单时间倒序排列
      */
     CommonResp<PageResp<ProxyLoanBillAppRespDTO, ?>> queryProxyLoanBillAppPage(PageReq<ProxyLoanBillAppReqDTO> reqDTO);
 

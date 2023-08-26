@@ -32,6 +32,14 @@ public interface IDxTableInfoService {
     CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPage(DxTableInfoListReq req);
 
     /**
+     * 根据条件查询牌桌列表信息-翻页（APP使用）
+     *
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPageApp(DxTableInfoListReq req);
+
+    /**
      * 查询牌桌总抽水
      * @param req
      * @return

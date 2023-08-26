@@ -26,7 +26,7 @@ public class GameOrderRecordResp implements Serializable {
     * 俱乐部id
     */
    @ApiModelProperty("俱乐部id")
-   private String clubId;
+   private Long clubId;
    /**
     * 牌桌id
     */
