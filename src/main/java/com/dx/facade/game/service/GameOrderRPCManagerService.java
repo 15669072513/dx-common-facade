@@ -21,7 +21,6 @@ public interface GameOrderRPCManagerService {
      */
     CommonResp<GameOrderRecordUserHandRespDto> gameOrderRecordUserHandList(GameOrderRecordUserHandReq req);
 
-
     /**
      * 综合后天-俱乐部 金额相关汇总
      */
@@ -31,5 +30,15 @@ public interface GameOrderRPCManagerService {
      *  俱乐部贡献
      */
     CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
+    /**
+     *  查询手牌id
+     */
+    CommonResp<GameOrderClubContributeDto> gameOrderClubContributeHandIdList(GameOrderClubSumReq req);
+
+    /**
+     *  会员金额相关汇总
+     *  代理后台会员列表
+     */
+    CommonResp<GameOrderUserSumByUserIdRespDto> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
 
 }
