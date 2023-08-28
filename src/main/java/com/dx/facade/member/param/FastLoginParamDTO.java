@@ -35,4 +35,7 @@ public class FastLoginParamDTO implements Serializable {
     @ApiModelProperty(value = "客户端类型")
     //@NotNull(message = "客户端类型不能为空")
     private Integer clientType;
+    
+    @ApiModelProperty("是否支持多端登录")
+    private Integer isMultiple;
 }

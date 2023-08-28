@@ -80,6 +80,10 @@ public class RegisterParamDTO implements BaseParmDTO{
     
     @ApiModelProperty("昵称")
     private String nickName;
+    
+    @ApiModelProperty("是否支持多端登录")
+    private Integer isMultiple;
+    
 
     @Override
     public void check() {
