@@ -22,6 +22,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     PROXY_IS_LOCKED(10021, "账号存在异常，可联系客服咨询"),
     PROXY_IS_INVALID(10022, "当前代理是无效状态"),
     PROXY_NOT_EXISTS(10018, "代理不存在"),
+    PROXY_NOT_TOP_PARENT_ERROR(10019, "官方不可以给非总代账号增加额度申请"),
     TRANSFER_TYPE_NOT_NULL(100000, "额度转换转账类型不能为空"),
     SOURCE_GAME_NOT_NULL(100001, "额度转换交易场馆不能为空"),
     MEMBER_ID_NOT_NULL(100002, "会员ID不能为空"),
