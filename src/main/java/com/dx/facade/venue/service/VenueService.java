@@ -1,6 +1,7 @@
 package com.dx.facade.venue.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.exception.BizException;
 import com.dx.facade.venue.dto.GameHallDTO;
 import com.dx.facade.venue.dto.GameVenueDTO;
 import com.dx.facade.venue.dto.TransferDetailDTO;
@@ -35,6 +36,6 @@ public interface VenueService {
 
 
     CommonResp balanceTransfer(String venueWalletType, Long memberId, Long merchantId, BigDecimal amount,
-                               Integer transferType, String merchantName, Integer clientType);
+                               Integer transferType, String merchantName, Integer clientType) throws BizException;
 
 }
