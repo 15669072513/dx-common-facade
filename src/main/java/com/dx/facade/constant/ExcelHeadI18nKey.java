@@ -21,6 +21,8 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_总代账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_总代账号"; // 总代账号
     String FUNDS_所属商户 = "EXCEL_HEAD_I18N_KEY.FUNDS_所属商户"; //
+    String FUNDS_所属总代账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_所属总代账号"; // 总代账号
+    String FUNDS_TOP_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.FUNDS_TOP_PROXY_NAME"; //
 
     String FUNDS_主商户 = "EXCEL_HEAD_I18N_KEY.FUNDS_主商户"; //
     String FUNDS_VIP等级 = "EXCEL_HEAD_I18N_KEY.FUNDS_VIP等级"; //
@@ -95,6 +97,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_审核人 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核人"; //
     String FUNDS_审核状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核状态"; //
     String FUNDS_审核时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核时间"; //
+
+    String FUNDS_审核完成时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核完成时间"; //
 
     String FUNDS_代理账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理账号"; //
 
