@@ -149,6 +149,10 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String createdAtEnd;
+    
+    
+    @ApiModelProperty("上级代理等级")
+    private Integer parentProxyLevel;
 
 	@Override
 	public void check() {
