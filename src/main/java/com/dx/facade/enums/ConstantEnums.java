@@ -234,6 +234,8 @@ public class ConstantEnums {
         }
     }
 
+    // 使用 com.dx.enums.ConstantEnums.EnumDeviceType代替
+    @Deprecated
     public static enum EnumClientDeviceType {
         PC(1, "PC"),
         IOS_APP(2, "IOS_APP"),
