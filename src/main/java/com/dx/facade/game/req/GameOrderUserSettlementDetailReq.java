@@ -9,4 +9,8 @@ import lombok.Data;
 public class GameOrderUserSettlementDetailReq {
     @ApiModelProperty("牌桌id")
     private Long tableId;
+
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
+
 }
