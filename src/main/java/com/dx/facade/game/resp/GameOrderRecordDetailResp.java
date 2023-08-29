@@ -140,4 +140,7 @@ public class GameOrderRecordDetailResp implements Serializable {
 
     @ApiModelProperty("vip等级")
     private Integer vipLevel;
+
+    @ApiModelProperty("币种")
+    private String memberCurrency;
 }

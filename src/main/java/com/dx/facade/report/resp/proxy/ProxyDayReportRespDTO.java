@@ -53,7 +53,11 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "风控层级名称")
     private String windControlName;
 
-    @ApiModelProperty(value = "代理标签")
+
+    @ApiModelProperty(value = "标签id")
+    private Long labelId;
+
+    @ApiModelProperty(value = "标签名称")
     private String labelName;
 
     @ApiModelProperty(value = "注册时间")
