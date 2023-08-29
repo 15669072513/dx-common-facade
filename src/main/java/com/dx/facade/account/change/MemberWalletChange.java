@@ -193,9 +193,9 @@ public enum MemberWalletChange implements IWalletChange {
 
     public static List<MemberWalletChange> v2List() {
         List<MemberWalletChange> list = new ArrayList<>();
-        list.add(rebate);
-        list.add(rebate_add);
-        list.add(rebate_sub);
+        //list.add(rebate);
+        //list.add(rebate_add);
+        //list.add(rebate_sub);
         list.add(v2_cash_center_to_B);
         list.add(v2_B_to_center);
         list.add(MemberWalletChange.v2_cash_up_score);
