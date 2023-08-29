@@ -110,6 +110,11 @@ public interface IDxTableInfoService {
     CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(Long tableId);
 
     /**
+     * 根据牌桌ID 或者 table_code 获取牌桌基础信息
+     */
+    CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(String tableId);
+
+    /**
      * 根据牌桌ID获取俱乐部信息
      */
     CommonResp<DxTableClubInfoResp> getTableClubInfoById(Long tableId);
