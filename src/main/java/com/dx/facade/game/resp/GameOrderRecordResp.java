@@ -97,6 +97,7 @@ public class GameOrderRecordResp implements Serializable {
 
    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
    private String venueTypeCode;
+
    @ApiModelProperty("游戏类型 2001 德州游戏 2002 德州短牌局")
    private Integer gameType;
 
