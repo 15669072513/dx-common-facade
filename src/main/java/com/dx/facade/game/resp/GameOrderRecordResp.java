@@ -32,6 +32,13 @@ public class GameOrderRecordResp implements Serializable {
     */
    @ApiModelProperty("牌桌id")
    private String tableId;
+
+   /**
+    * 牌桌code
+    */
+   @ApiModelProperty("牌桌code")
+   private String tableCode;
+
    /**
     * 牌桌名称
     */

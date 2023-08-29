@@ -10,7 +10,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
 
 /**
- * 红利消息 实体类
+ * 代理结构树查询请求DTO
  *
  * @author grayson
  */
@@ -27,6 +27,9 @@ public class ProxyTreeLinkParamDTO implements BaseParmDTO{
 	@ApiModelProperty(value = "代理id")
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long id;
+	
+	@ApiModelProperty(value = "是否查询所有下级代理")
+	private boolean isAllSub;
 
 	@Override
 	public void check() {
