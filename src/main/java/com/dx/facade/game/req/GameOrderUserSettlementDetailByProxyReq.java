@@ -8,10 +8,15 @@ import lombok.Data;
 @ApiModel("代理后台-结算详情查询对象")
 @Data
 public class GameOrderUserSettlementDetailByProxyReq extends BaseRequest {
+
     @ApiModelProperty("游戏类型")
     private Long gameType;
+
     @ApiModelProperty("牌桌id")
     private Long tableId;
+
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
 
     @ApiModelProperty("会员账号")
     private String userName;
