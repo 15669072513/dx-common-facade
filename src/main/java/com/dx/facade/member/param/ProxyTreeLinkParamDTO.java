@@ -29,7 +29,7 @@ public class ProxyTreeLinkParamDTO implements BaseParmDTO{
 	private Long id;
 	
 	@ApiModelProperty(value = "是否查询所有下级代理")
-	private boolean isAllSub;
+	private Boolean isAllSub;
 
 	@Override
 	public void check() {

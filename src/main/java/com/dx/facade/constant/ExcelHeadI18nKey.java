@@ -343,6 +343,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_注册终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_注册终端";
     String	FUNDS_最后登录时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录时间";
     String	FUNDS_最后登录IP = "EXCEL_HEAD_I18N_KEY.FUNDS_最后登录IP";
+    String	FUNDS_LOGIN_STATUS = "EXCEL_HEAD_I18N_KEY.FUNDS_LOGIN_STATUS";
 
     String	FUNDS_转出钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_转出钱包";
     String	FUNDS_转入钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_转入钱包";
@@ -449,6 +450,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_GPS = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS";
     String FUNDS_GPS地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_GPS地址";
     String FUNDS_设备名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_设备名称";
+    String FUNDS_DEVICE_ID = "EXCEL_HEAD_I18N_KEY.FUNDS_DEVICE_ID";
+    String FUNDS_DEVICE_TYPE = "EXCEL_HEAD_I18N_KEY.FUNDS_DEVICE_TYPE";
     String FUNDS_操作系统 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作系统";
 
     String FILE_NAME_代理返点记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理返点记录";
@@ -605,7 +608,10 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
     
     String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
-    
+    String	FUNDS_BIND_TIME = "EXCEL_HEAD_I18N_KEY.FUNDS_BIND_TIME";//绑定时间
+
+    String	FUNDS_UN_LOCK_TIME = "EXCEL_HEAD_I18N_KEY.FUNDS_UN_LOCK_TIME";//解锁时间
+
     /** 返点比例列表文件名 */
     String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
     
@@ -620,6 +626,8 @@ public interface ExcelHeadI18nKey {
     String MEMBER_ESPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_电竞";
     
     String MEMBER_USER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_会员账号";
+    /** 用户登录设备记录表 */
+    String FILE_NAME_MEMBER_LOGIN_DEVICE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_登录设备表";
 
     /** 个人返点比例列表文件名 */
     String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
