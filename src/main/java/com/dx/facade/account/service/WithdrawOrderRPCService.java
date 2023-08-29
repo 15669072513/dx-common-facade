@@ -7,14 +7,12 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.param.ChangeLockStatusParam;
 import com.dx.facade.account.param.PaymentLockStatusDTO;
 import com.dx.facade.account.param.WithdrawOrderParamDTO;
+import com.dx.facade.account.param.WithdrawOrderStatsParamDTO;
 import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
 import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
 import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
-import com.dx.facade.account.resp.OrderListByIpOrDeviceNoRespDTO;
-import com.dx.facade.account.resp.WithdrawOrderRespDTO;
-import com.dx.facade.account.resp.WithdrawOrderSumDTO;
-import com.dx.facade.account.resp.WithdrawTodayTotalRespDTO;
+import com.dx.facade.account.resp.*;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -102,4 +100,10 @@ public interface WithdrawOrderRPCService {
 
     @ApiModelProperty(value = "会员详情 启用充提锁定,修改取款订单状态")
     void paymentLockStatus(PaymentLockStatusDTO dto) throws BizException;
+
+    /**
+     * 时间查询提现统计
+     * @return
+     */
+    WithdrawOrderStatsRespDTO getWithdrawStats(WithdrawOrderStatsParamDTO paramDTO);
 }
