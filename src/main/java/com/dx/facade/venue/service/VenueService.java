@@ -36,6 +36,6 @@ public interface VenueService {
 
 
     CommonResp balanceTransfer(String venueWalletType, Long memberId, Long merchantId, BigDecimal amount,
-                               Integer transferType, String merchantName, Integer clientType);
+                               Integer transferType, String merchantName, Integer clientType) throws BizException;
 
 }
