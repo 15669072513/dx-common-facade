@@ -153,6 +153,9 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     
     @ApiModelProperty("上级代理等级")
     private Integer parentProxyLevel;
+    
+    @ApiModelProperty("是否查询总代")
+    private Boolean isTopProxy;
 
 	@Override
 	public void check() {
