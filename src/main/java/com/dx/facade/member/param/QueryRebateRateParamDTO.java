@@ -3,6 +3,7 @@ package com.dx.facade.member.param;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -150,12 +151,17 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String createdAtEnd;
     
-    
     @ApiModelProperty("上级代理等级")
     private Integer parentProxyLevel;
     
     @ApiModelProperty("是否查询总代")
     private Boolean isTopProxy;
+    
+    @ApiModelProperty("查询所以代理下级")
+    private Boolean isAllSub;
+    
+    @ApiModelProperty("代理id列表")
+    private List<Long> proxyIds;
 
 	@Override
 	public void check() {
