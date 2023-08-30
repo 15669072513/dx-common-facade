@@ -231,6 +231,8 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     ACITVITY_UN_START(81000005, "活动未开始，请留意活动最新公告！"),
     ACITVITY_IS_END(81000006, "活动已结束，请留意活动最近公告！"),
     ACITVITY_DOMAIN_NULL(81000007, "商户活动域名未配置"),
+
+    VENUE_AMOUT_INTEGER_ERROR(81000008, "转账金额不能是小数"),
     ;
 
     private int code;
