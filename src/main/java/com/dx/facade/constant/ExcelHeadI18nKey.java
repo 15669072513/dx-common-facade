@@ -21,6 +21,8 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_总代账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_总代账号"; // 总代账号
     String FUNDS_所属商户 = "EXCEL_HEAD_I18N_KEY.FUNDS_所属商户"; //
+    String FUNDS_所属总代账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_所属总代账号"; // 总代账号
+    String FUNDS_TOP_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.FUNDS_TOP_PROXY_NAME"; //
 
     String FUNDS_主商户 = "EXCEL_HEAD_I18N_KEY.FUNDS_主商户"; //
     String FUNDS_VIP等级 = "EXCEL_HEAD_I18N_KEY.FUNDS_VIP等级"; //
@@ -93,7 +95,10 @@ public interface ExcelHeadI18nKey {
     String FUNDS_后台备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_后台备注"; //
     String FUNDS_客户端备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_客户端备注"; //
     String FUNDS_审核人 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核人"; //
+    String FUNDS_审核状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核状态"; //
     String FUNDS_审核时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核时间"; //
+
+    String FUNDS_审核完成时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_审核完成时间"; //
 
     String FUNDS_代理账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理账号"; //
 
@@ -631,4 +636,7 @@ public interface ExcelHeadI18nKey {
 
     /** 个人返点比例列表文件名 */
     String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
+
+    /** 俱乐部申请记录 */
+    String FILE_NAME_CLUB_APPLY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部申请记录";
 }

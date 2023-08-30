@@ -10,7 +10,7 @@ import com.dx.facade.es.resp.GameRecordDto;
 import java.io.IOException;
 
 /**
- * 为管理后台提供ES相关查询
+ * 为管理后台提供TiDB相关查询
  */
 public interface GameRecordCmsRpcService {
     /**
