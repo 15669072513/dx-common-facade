@@ -110,6 +110,17 @@ public interface ProxyRPCService {
      * @throws BizException 业务异常
      */
     CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword);
+    
+    /**
+     * 校验代理密码
+     *
+     * @param merchantId  商户ID
+     * @param userId    代理用户id
+     * @param password 密码
+     * @return 校验成功返回true
+     * @throws BizException 业务异常
+     */
+    CommonResp<Boolean> validatePassword(Long merchantId, Long userId, String password);
 
     /**
      * 修改代理密码
