@@ -195,7 +195,7 @@ public enum ConfigKeyEnum {
 
     //系统消息code 代理
     MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),
-    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),
+    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_SUB_CONTRACT("message.proxy.sub.contract", "1"),
     MESSAGE_PROXY_CONTRACT_SUCCESS("message.proxy.contract.success", "1"),
     MESSAGE_PROXY_SUB_CONTRACT_ACCEPT("message.proxy.sub.contract.accept", "1"),
@@ -203,7 +203,7 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),
     MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"),
     MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"),
-    MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),
+    MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),//返点比例失效
     MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),
     MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),
 
@@ -212,7 +212,7 @@ public enum ConfigKeyEnum {
 	LOGIN_IP_WHITELIST_SWITCH("login.ip.whitelist.switch", "2"),
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
-    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
+    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
     /** 币种 */
     DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
