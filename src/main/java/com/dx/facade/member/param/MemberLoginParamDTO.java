@@ -5,6 +5,7 @@ import java.io.Serializable;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
 
@@ -12,10 +13,6 @@ import com.dx.facade.member.exception.ErrorCode;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
 @Builder
@@ -57,6 +54,7 @@ public class MemberLoginParamDTO implements BaseParmDTO, Serializable {
 
     /** 注册IP */
     @ApiModelProperty(value = "注册ip")
+    @ToString.Exclude
     private String ip;
 
     /** 终端设备号 */
