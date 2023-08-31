@@ -165,4 +165,10 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("时长（小时）")
     private Integer hourTimeCount;
+
+    @ApiModelProperty("德州扑克单牌桌累计带入上限")
+    private Integer texasBringInLimit;
+
+    @ApiModelProperty("短牌单牌桌累计带入上限")
+    private Integer shortCardBringInLimit;
 }
