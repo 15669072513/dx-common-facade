@@ -2,10 +2,12 @@ package com.dx.facade.es.resp;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
 @Data
+@ToString
 public class GameRecordDto {
     @ApiModelProperty("带场馆code拼接的注单id(如OBTY_8923472)")
     private String id;
@@ -75,6 +77,9 @@ public class GameRecordDto {
 
     @ApiModelProperty("会员输赢")
     private BigDecimal netAmount;
+
+    @ApiModelProperty("派彩金额")
+    private BigDecimal payAmount;
 
     @ApiModelProperty("ob注单状态")
     private Integer obBetStatus;

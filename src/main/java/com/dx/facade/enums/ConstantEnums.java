@@ -192,6 +192,14 @@ public class ConstantEnums {
         public String desc() {
             return this.desc;
         }
+
+        public static boolean ifMember(Integer code){
+            return member.code.equals(code);
+        }
+
+        public static boolean ifAgent(Integer code){
+            return agent.code.equals(code);
+        }
     }
 
     public static enum EnumGenderType {
@@ -226,6 +234,8 @@ public class ConstantEnums {
         }
     }
 
+    // 使用 com.dx.enums.ConstantEnums.EnumDeviceType代替
+    @Deprecated
     public static enum EnumClientDeviceType {
         PC(1, "PC"),
         IOS_APP(2, "IOS_APP"),

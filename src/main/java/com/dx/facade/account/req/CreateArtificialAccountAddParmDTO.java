@@ -63,7 +63,7 @@ public class CreateArtificialAccountAddParmDTO implements BaseParmDTO {
     private Long activityId;
 
     @ApiModelProperty(value = "流水倍数要求", example = "12")
-    @Min(value = 0, message = "流水倍数必须大于等于0")
+    //@Min(value = 0, message = "流水倍数必须大于等于0")
     private BigDecimal validMultiple;
 
     @ApiModelProperty(value = "操作金额",required = true, example = "10")
@@ -90,8 +90,8 @@ public class CreateArtificialAccountAddParmDTO implements BaseParmDTO {
         Assert.notNull(adjustType, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("adjustType"));
         Assert.state(Objects.nonNull(adjustAmount) && adjustAmount.compareTo(BigDecimal.ZERO) > 0,
                 ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("adjustAmount"));
-        Assert.state(Objects.nonNull(validMultiple) && validMultiple.compareTo(BigDecimal.ZERO) >= 0,
-                ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("validMultiple"));
+//        Assert.state(Objects.nonNull(validMultiple) && validMultiple.compareTo(BigDecimal.ZERO) >= 0,
+//                ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("validMultiple"));
         Assert.hasLength(operator, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("operator"));
         Assert.hasLength(eventId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("eventId"));
         Assert.hasLength(remark, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("remark"));

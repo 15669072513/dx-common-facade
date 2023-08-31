@@ -42,7 +42,7 @@ public class MemberBillWalletChangeParmDTO extends MemberWalletChangeParmDTO imp
         Assert.isTrue(validAmount.compareTo(BigDecimal.ZERO) >= 0, ErrorCode.PARAM_EXCEPTION.messageAfter("validAmount 不应为负数"));
 //        Assert.isTrue(super.getAmount().multiply(validMultiple).compareTo(validAmount) == 0, ErrorCode.PARAM_EXCEPTION.messageAfter("会员流水总金额计算错误"));
 
-        if(super.getWalletChange().transType().equals(TransType.outlay)) {
+        if(super.getWalletChange().transType().equals(TransType.out)) {
             throw new IllegalArgumentException(ErrorCode.PARAM_EXCEPTION.messageAfter("支出不应该使用这个账变对象"));
         }
     }

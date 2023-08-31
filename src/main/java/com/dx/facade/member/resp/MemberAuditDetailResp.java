@@ -64,6 +64,9 @@ public class MemberAuditDetailResp implements Serializable {
 
     @ApiModelProperty("会员真实姓名")
     private String realName;
+    
+    @ApiModelProperty("昵称")
+    private String nickName;
 
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
@@ -125,4 +128,10 @@ public class MemberAuditDetailResp implements Serializable {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime updatedAt;
 
+    
+    @ApiModelProperty("俱乐部Id")
+    private Long clubId;
+
+    @ApiModelProperty("俱乐部名称")
+    private String clubName;
 }

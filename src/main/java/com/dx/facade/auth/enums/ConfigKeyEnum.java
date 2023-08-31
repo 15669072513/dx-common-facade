@@ -172,6 +172,15 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_REGISTER("message.member.register", "1"),
     MESSAGE_MEMBER_VIP_PROMOTION("message.member.vip.promotion", "1"),
     MESSAGE_MEMBER_DEPOSIT("message.member.deposit", "1"),
+
+    //到账通知 中文：充值上分到账通知
+    MESSAGE_MEMBER_DEPOSIT_V2("message.member.deposit.v2", "1"),
+    //提现通知 中文：提现成功通知
+    MESSAGE_MEMBER_WITHDRAW_SUCCESS_V2("message.member.withdraw.success.v2", "1"),
+    //提现通知 中文：提现失败通知
+    MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
+    // 新账单通知
+    MESSAGE_MEMBER_NEW_BILL("message.member.new.bill", "1"),
     MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"),
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
@@ -205,11 +214,13 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
     /** 币种 */
-    DX_CURRENCY("dx_currency","1"),
+    DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
 
-
+    //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
+    PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
+    PROXY_LOAN_BILL_PERIOD_HOUR("proxy.loan.bill.period.hour", "1"),
     //*****************************资金模块配置,其它模块请注意自己的位置哈*************************************
     //资资金>账单相关设置 会员单日提现申请最大次数，中控后台参数字典配置
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),

@@ -1,7 +1,6 @@
 package com.dx.facade.member.resp;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -11,7 +10,6 @@ import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -24,11 +22,10 @@ import lombok.NoArgsConstructor;
  * @since 2023-7-22
  */
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "RebateRate响应DTO对象", description = "返点比例响应DTO")
-public class RebateRateRespDTO implements Serializable {
+public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,7 +35,10 @@ public class RebateRateRespDTO implements Serializable {
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 1：会员 2：代理")
+    @ApiModelProperty("商户名称")
+    private String merchantName;
+    
+    @ApiModelProperty("用户类型 0：会员 1：代理")
     private Integer userType;
     
     @ApiModelProperty("用户Id")
@@ -46,6 +46,9 @@ public class RebateRateRespDTO implements Serializable {
 
     @ApiModelProperty("用户名称")
     private String userName;
+    
+    @ApiModelProperty("代理等级")
+    private Integer proxyLevel;
     
     @ApiModelProperty("上级代理Id")
     private Long parentProxyId;
@@ -59,25 +62,10 @@ public class RebateRateRespDTO implements Serializable {
     @ApiModelProperty("总代ID")
     private Long topProxyId;
     
-    @ApiModelProperty("德州返点比例")
-    private BigDecimal texasRebate;
+    @ApiModelProperty("顶级代理名称")
+    private String topProxyName;
     
-    @ApiModelProperty("真人返点比例")
-    private BigDecimal actualPersonRebate;
-    
-    @ApiModelProperty("体育返点比例")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    private BigDecimal esportsRebate;
-    
-    @ApiModelProperty("状态:0-未生效 1-已生效 2-已失效")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
     
     /** 生效时间 */
@@ -103,5 +91,11 @@ public class RebateRateRespDTO implements Serializable {
 
     @ApiModelProperty("最后操作时间")
     private LocalDateTime updatedAt;
+    
+    @ApiModelProperty("是否有下级代理")
+    private boolean hasSub;
+    
+    @ApiModelProperty("备注")
+    private String remark;
 
 }

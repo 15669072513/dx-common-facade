@@ -27,4 +27,7 @@ public class LoanRepayRecordRespDTO {
 
     @ApiModelProperty(value = "操作金额")
     private BigDecimal amount;
+
+    @ApiModelProperty(value = "货币")
+    private String currency;
 }

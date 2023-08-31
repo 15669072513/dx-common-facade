@@ -26,12 +26,19 @@ public class GameOrderRecordResp implements Serializable {
     * 俱乐部id
     */
    @ApiModelProperty("俱乐部id")
-   private String clubId;
+   private Long clubId;
    /**
     * 牌桌id
     */
    @ApiModelProperty("牌桌id")
    private String tableId;
+
+   /**
+    * 牌桌code
+    */
+   @ApiModelProperty("牌桌code")
+   private String tableCode;
+
    /**
     * 牌桌名称
     */
@@ -90,7 +97,11 @@ public class GameOrderRecordResp implements Serializable {
 
    @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
    private String venueTypeCode;
+
    @ApiModelProperty("游戏类型 2001 德州游戏 2002 德州短牌局")
    private Integer gameType;
+
+   @ApiModelProperty("币种")
+   private String memberCurrency;
 
 }

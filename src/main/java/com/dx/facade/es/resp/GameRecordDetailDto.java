@@ -171,4 +171,12 @@ import lombok.Data;
      @ApiModelProperty(value = "体育、电竞注单详情", hidden = true)
      private String details;
 
+     @ApiModelProperty("俱乐部id")
+     private String clubId;
+
+     @ApiModelProperty("手牌编码")
+     private String handCode;
+
+     @ApiModelProperty("牌桌名称")
+     private String tableName;
 }

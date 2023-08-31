@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 @Data
 public class GameOrderHandSumResp {
     @ApiModelProperty("手牌id")
-    private Long handId;
+    private String handId;
     @ApiModelProperty("期初金额汇总")
     private BigDecimal beforeChip;
     @ApiModelProperty("中途带入金额汇总")
@@ -25,6 +25,10 @@ public class GameOrderHandSumResp {
     private BigDecimal validBetAmount;
     @ApiModelProperty("庄家位置")
     private Integer villageSeat;
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore;
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore;
     @ApiModelProperty("小盲位置")
     private Integer sbSeat;
     @ApiModelProperty("大盲位置")

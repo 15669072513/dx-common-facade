@@ -49,8 +49,8 @@ public enum ProxyAppType implements IAppType {
     proxy_to_child_down_score(34, "代理给下级下分"),
     proxy_to_mem_down_score(35, "代理给会员下分"),
     undertake_rebate(36, "流水返点"),
-    commission_to_quota(38, "佣金转额度钱包-支出"),
-    commission_be_transfer_to_quota(41, "佣金转额度钱包-收入"),
+    commission_to_quota(37, "佣金转额度钱包-支出"),
+    commission_be_transfer_to_quota(38, "佣金转额度钱包-收入"),
     commission_rebate_add(39, "返点增加调整"),
     commission_rebate_sub(40, "返点扣除调整"),
     //---------------------v2需求客户端账变类型----------------
