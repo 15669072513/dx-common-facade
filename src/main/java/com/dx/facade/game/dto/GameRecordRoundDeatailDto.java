@@ -87,6 +87,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     private String resultInfo;
 
     @ApiModelProperty("玩家牌型显示是否置灰标识")
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
 
     @ApiModelProperty("输赢筹码")

@@ -3,10 +3,12 @@ package com.dx.facade.merchant.resp;
 import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
 @Data
+@ToString
 public class MerchantVenueInfoResp {
     @ApiModelProperty(value = "商户ID")
     private Long id;

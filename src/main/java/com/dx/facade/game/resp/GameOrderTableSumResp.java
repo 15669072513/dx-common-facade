@@ -11,6 +11,8 @@ public class GameOrderTableSumResp {
     private Long tableId;
     @ApiModelProperty("参与手牌数")
     private Long handCount;
+    @ApiModelProperty("带入次数")
+    private Long bringCount;
     @ApiModelProperty("盈亏金额")
     private BigDecimal netAmount;
     @ApiModelProperty("有效金额")

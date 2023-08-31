@@ -14,7 +14,7 @@ public class GameOrderRecordDetailReq {
     /**
      * 注单
      */
-    @ApiModelProperty("注单id")
+    @ApiModelProperty(value = "注单id", required = true)
     private String id;
     @ApiModelProperty("场馆类型code(如zr,ty,qkl)")
     private String venueTypeCode;

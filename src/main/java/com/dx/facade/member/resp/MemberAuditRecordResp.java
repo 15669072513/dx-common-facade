@@ -56,6 +56,9 @@ public class MemberAuditRecordResp {
 
     @ApiModelProperty(value="会员账号")
     private String memberName;
+    
+    @ApiModelProperty(value="昵称")
+    private String nickName;
 
     @ApiModelProperty(value="账号类型（1-试玩，2-商务，3-正式，4-测试，5-置换）")
     private Integer accountType;

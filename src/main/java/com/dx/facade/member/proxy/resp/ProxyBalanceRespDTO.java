@@ -16,9 +16,14 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "代理余额返回参数", description = "代理余额返回参数")
 public class ProxyBalanceRespDTO {
 
-    @ApiModelProperty("额度钱包余额对象")
-    private WalletRespDTO quotaBalance;
 
-    @ApiModelProperty("佣金钱包余额对象")
-    private WalletRespDTO commissionBalance;
+    @ApiModelProperty("中心钱包余额对象")
+    private WalletRespDTO centerWalletBalance;
+    
+    @ApiModelProperty("信用钱包余额对象")
+    private WalletRespDTO creditWalletBalance;
+    
+    @ApiModelProperty("信用额度对象")
+    private WalletRespDTO creditQuota;
+    
 }

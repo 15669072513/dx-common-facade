@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
+@Deprecated
 public class AppGetNoticeUnReadCountReq extends PageRequest {
 
     private int noticeType;

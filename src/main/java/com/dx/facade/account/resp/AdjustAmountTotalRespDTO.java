@@ -17,12 +17,17 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class AdjustAmountTotalRespDTO {
 
-    @ApiModelProperty(value = "CNY总计")
-    private BigDecimal adjustAmountTotalCNY = BigDecimal.ZERO;
+//    @ApiModelProperty(value = "CNY总计")
+//    private BigDecimal adjustAmountTotalCNY = BigDecimal.ZERO;
+//
+//    @ApiModelProperty(value = "THB总计")
+//    private BigDecimal adjustAmountTotalTHB = BigDecimal.ZERO;
+//
+//    @ApiModelProperty(value = "VND总计")
+//    private BigDecimal adjustAmountTotalVND = BigDecimal.ZERO;
 
-    @ApiModelProperty(value = "THB总计")
-    private BigDecimal adjustAmountTotalTHB = BigDecimal.ZERO;
+     @ApiModelProperty(value = "总计")
+     private BigDecimal adjustAmountTotal = BigDecimal.ZERO;
 
-    @ApiModelProperty(value = "VND总计")
-    private BigDecimal adjustAmountTotalVND = BigDecimal.ZERO;
+
 }

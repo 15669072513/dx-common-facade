@@ -15,7 +15,7 @@ public class RebateDayListReqDTO  extends LocalDatePageRequest {
 
 
     @ApiModelProperty(value = "会员ID")
-    @NotBlank(message = "[会员ID]不能为空")
+    //@NotBlank(message = "[会员ID]不能为空")
     private Long memberId;
 
 

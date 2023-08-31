@@ -89,4 +89,28 @@ public class LowerMemberListRespDto {
 	private BigDecimal validBetAmount;
 	@ApiModelProperty
 	private String identity;
+	
+    @ApiModelProperty(value = "信用钱包-应还账款")
+    private BigDecimal creditShouldRepayment;
+
+    @ApiModelProperty(value = "授信额度/信用额度")
+    private BigDecimal creditBalance;
+
+//    @ApiModelProperty(value = "中心钱包-余额")
+//    private BigDecimal centerWalletBalance;
+    
+//    @ApiModelProperty(value = "应收账款")
+//    private BigDecimal accountsReceivable;
+
+	@ApiModelProperty("信用余额")
+	private BigDecimal creditAvailable;
+
+	@ApiModelProperty("昵称")
+	private String nickName;
+
+	@ApiModelProperty("头像")
+	private String topImagesUrl;
+
+	@ApiModelProperty(value = "层级：1-非直属会员、2-直属会员")
+	private Integer proxyLevel;
 }

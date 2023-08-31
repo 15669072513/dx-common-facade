@@ -19,18 +19,31 @@ public class GameOrderRecordReq extends BaseRequest {
     private String id;
 
     private Long proxyId;
+
     @ApiModelProperty("游戏账号")
     private String playerName;
+
     @ApiModelProperty("游戏名称")
     private String gameName;
+
     @ApiModelProperty("游戏类型")
     private String gameType;
+
     @ApiModelProperty("手牌id")
     private String handId;
+
+    @ApiModelProperty("手牌Code")
+    private String handCode;
+
     @ApiModelProperty("俱乐部id")
-    private String clubId;
+    private Long clubId;
+
     @ApiModelProperty("牌桌id")
     private String tableId;
+
+    @ApiModelProperty("牌桌Code")
+    private String tableCode;
+
     @ApiModelProperty(value = "投注开始时间 yyyy-MM-dd HH:mm:ss")
     private String betStartTime;
 

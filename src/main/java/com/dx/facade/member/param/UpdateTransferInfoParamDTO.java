@@ -21,13 +21,13 @@ public class UpdateTransferInfoParamDTO implements BaseParmDTO{
     /**
      * 会员ID
      */
-    @ApiModelProperty(value = "会员id")
+    @ApiModelProperty(value = "会员id", required = false)
     private Long userId;
 
     /**
      * 开启免转模式 0-手动，1-免转
      */
-    @ApiModelProperty(value = "开启免转模式 0-手动，1-免转")
+    @ApiModelProperty(value = "开启免转模式 0-不开启，1-开启")
     private Integer noTransfer;
 
     @Override

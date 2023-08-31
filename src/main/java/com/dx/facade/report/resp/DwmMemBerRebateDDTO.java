@@ -34,7 +34,7 @@ public class DwmMemBerRebateDDTO {
 
 
     @ApiModelProperty(value="会员昵称")
-    private String nick_name;
+    private String nickName;
 
     @ApiModelProperty(value="订单号")
     private String orderNo;
@@ -47,7 +47,7 @@ public class DwmMemBerRebateDDTO {
     private LocalDateTime payoutTime;
 
     @ApiModelProperty(value="创建时间")
-    private LocalDateTime createDt;
+    private LocalDateTime createdAt;
 
 
     @ApiModelProperty(value="返点金额")

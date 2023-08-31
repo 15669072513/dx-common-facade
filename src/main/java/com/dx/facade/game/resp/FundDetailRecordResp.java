@@ -18,7 +18,7 @@ public class FundDetailRecordResp {
   private String gameName;
   @ApiModelProperty("游戏ID")
   private String gameId;
-  @ApiModelProperty("游戏类型 2001:德州局 2002:短牌局")
+  @ApiModelProperty("游戏类型 0德州 1短牌")
   private TexasGameTypeEnum gameType;
   @ApiModelProperty("注单状态 0未结算 1已结算 2不结算")
   private Integer obBetStatus;
