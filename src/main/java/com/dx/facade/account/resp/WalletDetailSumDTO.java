@@ -55,4 +55,17 @@ public class WalletDetailSumDTO {
     @ApiModelProperty("账变后金额总共统计：泰铢")
     private BigDecimal changeAfterTotalSumTHR;
 
+    @ApiModelProperty("账变金额当前页面统计: 默认美金")
+    private BigDecimal amountPageSum;
+    @ApiModelProperty("账变金额所有统计: 默认美金")
+    private BigDecimal amountTotalSum;
+    @ApiModelProperty("账变前金额当前页面统计: 默认美金")
+    private BigDecimal changeBeforePageSum;
+    @ApiModelProperty("账变前金额所有统计: 默认美金")
+    private BigDecimal changeBeforeTotalSum;
+    @ApiModelProperty("账变后金额当前页面统计: 默认美金")
+    private BigDecimal changeAfterPageSum;
+    @ApiModelProperty("账变后金额总共统计: 默认美金")
+    private BigDecimal changeAfterTotalSum;
+
 }

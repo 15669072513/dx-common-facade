@@ -2,6 +2,7 @@ package com.dx.facade.member.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
+import com.dx.facade.member.param.FastLoginParamDTO;
 import com.dx.facade.member.param.MemberLoginParamDTO;
 import com.dx.facade.member.param.RegisterParamDTO;
 import com.dx.facade.member.param.TryMemberLoginParamDTO;
@@ -60,4 +61,11 @@ public interface RegisterLoginRPCService {
      * @throws Exception
      */
     CommonResp<MemberVO> tryMemberLogin(TryMemberLoginParamDTO paramDTO) throws Exception;
+    /**
+     *  快捷登录
+     * 
+     * @param dto
+     * @return
+     */
+	CommonResp<MemberVO> fastLogin(FastLoginParamDTO dto) throws Exception;
 }

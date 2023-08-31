@@ -2,14 +2,8 @@ package com.dx.facade.member.param;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 import javax.validation.constraints.NotNull;
-
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -36,22 +30,19 @@ public class BaseRebateRateParamDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @ApiModelProperty("商户Id")
-    @NotNull(message = "商户Id不能为空")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 1：会员 2：代理")
+    @ApiModelProperty("用户类型 0：会员 1：代理")
     @NotNull(message = "用户类型不能为空")
     private Integer userType;
     
     @ApiModelProperty("用户Id")
-    @NotNull(message = "用户id不能为空")
     private Long userId;
 
     @ApiModelProperty("用户名称")
     private String userName;
     
     @ApiModelProperty("上级代理Id")
-    @NotNull(message = "上级代理id不能为空")
     private Long parentProxyId;
 
     @ApiModelProperty("上级代理名称")
@@ -81,7 +72,7 @@ public class BaseRebateRateParamDTO implements Serializable {
     @NotNull(message = "电竞返点比例不能为空")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未生效 1-已生效 2-已失效")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
 
 }

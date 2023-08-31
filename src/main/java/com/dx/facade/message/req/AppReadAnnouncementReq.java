@@ -14,4 +14,5 @@ public class AppReadAnnouncementReq {
 
     private List<Long> messageIds;
 
+    private Integer deviceType;
 }

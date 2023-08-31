@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.Assert;
 import org.springframework.util.CollectionUtils;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Slf4j
@@ -16,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class WalletAmountParam implements BaseParmDTO {
+public class WalletAmountParam implements BaseParmDTO, Serializable {
 
     @Getter
     @Setter
@@ -32,6 +33,11 @@ public class WalletAmountParam implements BaseParmDTO {
     @Setter
     @ApiModelProperty(value = "币种")
     private String currency;
+
+    @ApiModelProperty("用户类型：0会员，1代理")
+    @Getter
+    @Setter
+    private Integer userType;
 
     @Override
     public void check() {

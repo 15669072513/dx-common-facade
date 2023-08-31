@@ -28,12 +28,6 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UpdatePwdByMemberIdDTO implements BaseParmDTO {
-    
-    private static final long serialVersionUID = 1L;
-
-//	@ApiModelProperty(value = "会员id")
-//	@NotNull(message = "会员id不能为空")
-//	private Long memberId;
 
 	@ApiModelProperty(value = "新密码")
 	@NotNull(message = "新密码不能为空")

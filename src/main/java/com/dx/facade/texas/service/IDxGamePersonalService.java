@@ -1,7 +1,6 @@
 package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
-import com.dx.facade.texas.req.DxGameConfigListReq;
 import com.dx.facade.texas.req.DxGamePersonalReq;
 import com.dx.facade.texas.resp.DxGamePersonalResp;
 

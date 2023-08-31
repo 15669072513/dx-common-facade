@@ -21,6 +21,8 @@ public class GameRecordDeatailPackResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("手牌编码")
+    private String handCode;
 
     @ApiModelProperty("圈层")
     private String roundCode;

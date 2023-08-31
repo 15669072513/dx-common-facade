@@ -14,6 +14,7 @@ public enum GameApiI18nCodeEnum implements I18nEnum {
     PLATFORM_IN_MAINTENANCE2(20012), // PLATFORM_IN_MAINTENANCE(20007, "当前场馆正在维护"), BWCS-2423  该场馆正在维护中，请选择其他场馆
     PLATFORM_IN_DISABLE(20008), // PLATFORM_IN_DISABLE(20008, "当前场馆已禁用"),
     MEMBER_NOT_EXISTS(10001), // MEMBER_NOT_EXISTS(10001, "统一会员不存在"),
+    PROXY_NOT_EXISTS(10005), // PROXY_NOT_EXISTS(10005, "代理不存在"),
     MERCHANT_CODE_NOT_NULL(41200), // MERCHANT_CODE_NOT_NULL(41200, "商户代码不能为空"),
     GAME_CODE_NOT_NULL(31120), // GAME_CODE_NOT_NULL(31120, "游戏代码不能为空"),
     MERCHANT_NOT_EXISTS(20091), // MERCHANT_NOT_EXISTS(20091, "找不到对应的商户"),
@@ -28,6 +29,8 @@ public enum GameApiI18nCodeEnum implements I18nEnum {
     真人_游戏会员名称为空(44013), // 真人_游戏会员名称为空(44013, "真人_游戏会员名称不能为空"),
     真人_点击桌台_真人主播直接进入桌台接口异常(44011), // 真人_点击桌台_真人主播直接进入桌台接口异常(44011, "真人_点击桌台_真人主播直接进入桌台接口异常"),
     真人_获取所有桌台接口异常(44008), // 真人_获取所有桌台接口异常(44008, "真人_获取所有桌台接口异常"),
+
+    QUERY_GAME_LIST_FAIL(44017),//"查询游戏列表失败"
 
     /** sdk **/
     HTTP_SEND_ERROR(9001), // HTTP_SEND_ERROR(9001, "发送网络请求失败")

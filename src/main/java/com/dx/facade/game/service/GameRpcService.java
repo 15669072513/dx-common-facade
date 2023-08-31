@@ -2,6 +2,7 @@ package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.facade.game.dto.*;
+import com.dx.facade.game.dto.game.GameModifyPwdDto;
 import com.dx.facade.game.resp.*;
 
 import java.util.List;
@@ -10,12 +11,21 @@ public interface GameRpcService {
 
     /**
      * 场馆登录游戏统一方法
+     *
      * @return
      */
     public CommonResp<GameLoginResp> login(GameLoginDto loginDto);
 
     /**
+     * 场馆登录游戏统一方法
+     *
+     * @return
+     */
+    public CommonResp<GameBaseResp> modifyPassword(GameModifyPwdDto modifyPwdDto);
+
+    /**
      * 游戏试玩
+     *
      * @param loginDto
      * @return
      */
@@ -53,10 +63,16 @@ public interface GameRpcService {
 
     /**
      * 根据指定单号查询转账
-     *
      */
     public CommonResp<GameQueryTransferResp> queryTransfer(GameQueryTransferDto queryTransferDto);
 
-
+    /**
+     * 根据会员ID查询该会员在所有场馆中的账户余额（剔除德州-中心钱包）
+     *
+     * @param memberId
+     * @param merchantId
+     * @return
+     */
+    public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
 
 }

@@ -90,7 +90,7 @@ public class AddProxyClubParamDTO implements BaseParmDTO, Serializable {
     
     @Override
     public void check() {
-        Assert.notNull(proxyId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
+        Assert.notNull(proxyId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyId"));
         Assert.notNull(clubName, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userName"));
     }
 }

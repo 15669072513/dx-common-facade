@@ -37,7 +37,7 @@ public class ClubAuditRecordResp {
     @ApiModelProperty(value="申请备注")
     private String applyRemark;
 
-    @ApiModelProperty(value="审核状态（0-待处理 1-处理中，2-审核通过，3-审核拒绝）")
+    @ApiModelProperty(value="审核状态（0-待处理 1-处理中 2-审核拒绝 3-审核通过）")
     private Integer auditStatus;
 
     @ApiModelProperty("审核操作（0-结单查看 1-审核）")

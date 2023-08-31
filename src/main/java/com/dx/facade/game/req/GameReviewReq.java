@@ -31,4 +31,7 @@ public class GameReviewReq extends BaseRequest {
      */
     @ApiModelProperty("登录会员id")
     private Long userId;
+
+    @ApiModelProperty("平台标识 1，app  2,代理 3,中控")
+    private Integer platFormId;
 }

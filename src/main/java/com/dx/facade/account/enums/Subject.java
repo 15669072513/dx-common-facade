@@ -5,10 +5,15 @@ public enum Subject {
     /**
      *
      */
-    ADD("add","上分"),
-    SUB("sub","下分"),
+    ADD("add","充值上分"),
+    SUB("sub","提现下分"),
+    CREDIT_ADD("credit_add","授信上分"),
+    CREDIT_SUB("credit_sub","授信下分"),
     EXCHANGE("exchange","兑换筹码"),
     REVERT("revert","归还筹码"),
+    DETAIL("detail","资金明细"),
+    AGENT("agent","代理"),
+    MEMBER("member","会员"),
     ;
 
     private final String code;

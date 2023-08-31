@@ -16,4 +16,7 @@ public class AppReadNoticeReq {
 
     private List<Long> messageIds;//detail 表的id
 
+    private Integer noticeCategory;
+
+    private Integer noticeType;
 }
