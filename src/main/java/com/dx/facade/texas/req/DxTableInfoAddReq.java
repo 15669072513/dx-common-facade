@@ -130,7 +130,7 @@ public class DxTableInfoAddReq implements Serializable {
     private String topProxyName;
 
     @ApiModelProperty("时长（小时）")
-    private Integer hourTimeCount;
+    private BigDecimal hourTimeCount;
 
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit;
