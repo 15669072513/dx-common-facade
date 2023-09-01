@@ -162,4 +162,13 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
     private Integer seatsNumberLimit;
+
+    @ApiModelProperty("时长（小时）")
+    private Integer hourTimeCount;
+
+    @ApiModelProperty("单牌桌累计带入上限（倍数）")
+    private Integer bringInLimit;
+
+    @ApiModelProperty("单牌桌累计带入上限（金额）")
+    private Integer bringInLimitChipScore;
 }

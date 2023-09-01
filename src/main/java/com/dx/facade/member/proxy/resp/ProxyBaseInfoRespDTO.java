@@ -95,6 +95,9 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     @ApiModelProperty(value="已有契约 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
     private Integer newContractModel;
     
+    @ApiModelProperty("登录权限（0-关闭 1-开启）")
+    private Integer loginLockStatus;
+    
     @ApiModelProperty("开局权限（0-关闭 1-开启）")
     private Integer openLockStatus;
     
@@ -127,4 +130,10 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty("最后登陆时间")
     private LocalDateTime lastLoginDatetime;
+    
+    @ApiModelProperty("最后登录IP")
+    private String lastLoginIp;
+    
+    @ApiModelProperty("上级代理名称")
+    private String parentProxyName;
 }
