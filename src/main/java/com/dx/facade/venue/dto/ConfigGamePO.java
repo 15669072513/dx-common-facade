@@ -107,4 +107,7 @@ public class ConfigGamePO implements Serializable {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updatedAt;
 
+    @ApiModelProperty("场馆游戏ID")
+    @TableField("game_type_id")
+    private String gameTypeId;
 }
