@@ -4,6 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.facade.game.dto.*;
 import com.dx.facade.game.dto.game.GameModifyPwdDto;
 import com.dx.facade.game.resp.*;
+import com.dx.facade.venue.resp.VeuneGameConfigListResp;
 
 import java.util.List;
 
@@ -74,5 +75,9 @@ public interface GameRpcService {
      * @return
      */
     public CommonResp<List<VenueWalletDTO>> walletBalancesList(Long memberId, Long merchantId);
+
+    public CommonResp<VeuneGameConfigListResp> getVenueGames();
+
+
 
 }
