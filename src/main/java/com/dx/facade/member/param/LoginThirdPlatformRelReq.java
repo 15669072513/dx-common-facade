@@ -1,10 +1,7 @@
 package com.dx.facade.member.param;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.util.Assert;
 
@@ -35,6 +32,7 @@ public class LoginThirdPlatformRelReq implements BaseParmDTO {
     private Integer clientType;
 
     @ApiModelProperty(value = "登录ip")
+    @ToString.Exclude
     private String ip;
 
     @ApiModelProperty(value = "终端设备号（6-100）")

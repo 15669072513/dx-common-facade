@@ -128,4 +128,10 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("总代名称")
     private String topProxyName;
+
+    @ApiModelProperty("时长（小时）")
+    private Integer hourTimeCount;
+
+    @ApiModelProperty("单牌桌累计带入上限")
+    private Integer bringInLimit;
 }

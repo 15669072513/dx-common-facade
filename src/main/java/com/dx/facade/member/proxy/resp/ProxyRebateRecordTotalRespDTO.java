@@ -12,14 +12,15 @@ public class ProxyRebateRecordTotalRespDTO {
     /**
      * 个人返点金额
      */
-    @ApiModelProperty(value = "个人返点(CNY)",  example = "2343")
-    private BigDecimal personRebateAmountIn;
+    @ApiModelProperty(value = "个人返点",  example = "2343")
+    private BigDecimal personRebateAmount;
 
-    @ApiModelProperty(value = "个人返点(VND)",  example = "2343")
-    private BigDecimal personRebateAmountInVND;
 
-    @ApiModelProperty(value = "个人返点(THB)",  example = "2343")
-    private BigDecimal personRebateAmountInTHB;
+    @ApiModelProperty(value = "团队返点",  example = "2343")
+    private BigDecimal rebateAmount;
+
+    @ApiModelProperty(value = "下级返点",  example = "2343")
+    private BigDecimal childRebateAmount;
 
 //    /**
 //     * 下级返点金额
