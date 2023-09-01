@@ -1,4 +1,4 @@
-package com.dx.facade.texas.req;
+package com.dx.facade.game.req;
 
 import com.dx.facade.account.service.BaseParmDTO;
 import com.dx.facade.member.exception.ErrorCode;
@@ -15,7 +15,7 @@ import java.io.Serializable;
  */
 @ApiModel("根据用户牌桌纬度获取最后一条账变后的余额请求实体")
 @Data
-public class ChangeAfterAmountReq  implements Serializable, BaseParmDTO {
+public class ChangeAfterAmountReq implements Serializable, BaseParmDTO {
   @ApiModelProperty("用户ID")
   private Long userId;
   @ApiModelProperty("牌桌ID")

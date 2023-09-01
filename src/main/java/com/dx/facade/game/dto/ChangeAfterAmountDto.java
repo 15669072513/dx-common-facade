@@ -1,4 +1,4 @@
-package com.dx.facade.texas.dto;
+package com.dx.facade.game.dto;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
