@@ -1,12 +1,15 @@
 package com.dx.facade.account.change;
 
+import java.util.HashMap;
+import java.util.Map;
+
 /**
  * 会员业务账变类型
  * @author Administrator
  */
 public enum MemberBizType implements IBizType {
+
     deposit(1, "会员存款", "1"),
-//    staff_deposit_for_member(2, "代客充值", "1"),
     agent_deposit_for_member(3, "上级转下级", "1"),
     B_mutual_center(4, "自身钱包互转", "1"),
     withdraw(5, "会员提款", "1"),
@@ -20,11 +23,10 @@ public enum MemberBizType implements IBizType {
     up_score(12, "充值上分", "1"),
     down_score(13, "提现下分", "1"),
     game(14, "游戏", "1"),
-    //V2需求新增bizTye
     v2_credit_up_score(15,"授信上分", "9,10"),
     v2_credit_down_score(16,"授信下分", "9,10"),
     v2_loan(17,"借款", "1,9"),
-    v2_repay(18, "还款", "1,9");
+    v2_repay(18, "还款", "1,9"),
     ;
 
     private Integer code;
@@ -55,12 +57,14 @@ public enum MemberBizType implements IBizType {
         return accountCodes;
     }
 
-    public static MemberBizType getType(Integer code) {
-        for (MemberBizType bizType : values()) {
-            if (bizType.code.equals(code)) {
-                return bizType;
-            }
+    static Map<Integer, MemberBizType> code2Enum = new HashMap<>();
+    static {
+        for (MemberBizType value : MemberBizType.values()) {
+            code2Enum.put(value.code, value);
         }
-        return null;
+    }
+
+    public static MemberBizType getType(Integer code) {
+        return code2Enum.get(code);
     }
 }

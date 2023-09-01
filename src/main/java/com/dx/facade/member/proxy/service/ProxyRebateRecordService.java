@@ -108,4 +108,12 @@ public interface ProxyRebateRecordService {
      */
     CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTotalRebate(RebateDayListReqDTO req) throws BizException ;
 
+    /**
+     * 历史会员返点列表
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
+
 }
