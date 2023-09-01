@@ -30,7 +30,7 @@ public enum ProxyBizType implements IBizType {
     quota(4, "代理额度", "7"),
     transfer(5, "代理转账", "6,7"),
     other(6, "其他调整", "6,7"),
-    withdraw(7, "代理取款", "6"),
+    withdraw(70, "代理取款", "6"),
     to_center(8, "佣金转中心钱包", "6"),
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
