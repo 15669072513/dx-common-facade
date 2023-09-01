@@ -2,10 +2,7 @@ package com.dx.facade.member.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -142,6 +139,7 @@ public class MemberInfoRespDTO {
     private Integer registerDeviceType;
 
     @ApiModelProperty("注册IP")
+    @ToString.Exclude
     private String registerIp;
 
     @ApiModelProperty("IP归属地")
@@ -154,6 +152,7 @@ public class MemberInfoRespDTO {
     private LocalDateTime lastLoginDatetime;
 
     @ApiModelProperty("最后登录IP")
+    @ToString.Exclude
     private String lastLoginIp;
 
     @ApiModelProperty("最后登录设备号")

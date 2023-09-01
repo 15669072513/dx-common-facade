@@ -48,5 +48,10 @@ public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
     @ApiModelProperty(value = "查看数据类型，0-全选，1-自身，2-直属下级代理，3-全部下级代理，4-直属会员，5-全部下级会员")
     private List<Integer> proxyList;
 
+    /**
+     * 当前登录userid
+     */
+    private Long curUserId;
+
 
 }

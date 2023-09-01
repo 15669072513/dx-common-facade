@@ -1,5 +1,9 @@
 package com.dx.facade.enums;
 
+/*
+使用 com.dx.enums.ConstantEnums.EnumDeviceType代替
+ */
+@Deprecated
 public enum ClientTypeEnum {
 
     PC(1, "PC"),

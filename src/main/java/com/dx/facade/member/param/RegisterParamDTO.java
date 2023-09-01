@@ -1,10 +1,7 @@
 package com.dx.facade.member.param;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
 
@@ -43,6 +40,7 @@ public class RegisterParamDTO implements BaseParmDTO{
     private Integer clientType;
 
     @ApiModelProperty(value = "注册ip")
+    @ToString.Exclude
     private String ip;
 
     @ApiModelProperty(value = "终端设备号")
@@ -80,6 +78,10 @@ public class RegisterParamDTO implements BaseParmDTO{
     
     @ApiModelProperty("昵称")
     private String nickName;
+    
+    @ApiModelProperty("是否支持多端登录")
+    private Integer isMultiple;
+    
 
     @Override
     public void check() {

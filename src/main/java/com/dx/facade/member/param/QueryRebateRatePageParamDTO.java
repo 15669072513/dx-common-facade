@@ -147,6 +147,12 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String createdAtEnd;
+    
+    @ApiModelProperty("上级代理等级")
+    private Integer parentProxyLevel;
+    
+    @ApiModelProperty("查询所以代理下级")
+    private Boolean isAllSub;
 
 	@Override
 	public void check() {

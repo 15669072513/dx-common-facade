@@ -22,6 +22,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     PROXY_IS_LOCKED(10021, "账号存在异常，可联系客服咨询"),
     PROXY_IS_INVALID(10022, "当前代理是无效状态"),
     PROXY_NOT_EXISTS(10018, "代理不存在"),
+    PROXY_NOT_TOP_PARENT_ERROR(10019, "官方不可以给非总代账号增加额度申请"),
     TRANSFER_TYPE_NOT_NULL(100000, "额度转换转账类型不能为空"),
     SOURCE_GAME_NOT_NULL(100001, "额度转换交易场馆不能为空"),
     MEMBER_ID_NOT_NULL(100002, "会员ID不能为空"),
@@ -230,6 +231,8 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     ACITVITY_UN_START(81000005, "活动未开始，请留意活动最新公告！"),
     ACITVITY_IS_END(81000006, "活动已结束，请留意活动最近公告！"),
     ACITVITY_DOMAIN_NULL(81000007, "商户活动域名未配置"),
+
+    VENUE_AMOUT_INTEGER_ERROR(81000008, "转账金额必须是整数"),
     ;
 
     private int code;

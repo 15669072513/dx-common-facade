@@ -120,7 +120,7 @@ public class ConfigBannerAppResp implements Serializable {
     @ApiModelProperty("场馆类型()")
     private String venueType;
 
-    @ApiModelProperty("baner类型(1:首页Banner,2:首页弹,3:游戏内工具栏,4:个人中心工具栏,5:首页Banner,6:登录弹窗广告)")
+    @ApiModelProperty("baner类型(1:首页Banner(中控后台配置为app banner首页时使用),2:首页弹,3:游戏内工具栏,4:个人中心工具栏,5:首页Banner(pc使用),6:登录弹窗广告)")
     private Integer bannerType;
 
     @ApiModelProperty("baner类型名称")

@@ -122,4 +122,16 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
     private Integer seatsNumberLimit;
+
+    @ApiModelProperty("总代id")
+    private Long topProxyId;
+
+    @ApiModelProperty("总代名称")
+    private String topProxyName;
+
+    @ApiModelProperty("时长（小时）")
+    private BigDecimal hourTimeCount;
+
+    @ApiModelProperty("单牌桌累计带入上限")
+    private Integer bringInLimit;
 }
