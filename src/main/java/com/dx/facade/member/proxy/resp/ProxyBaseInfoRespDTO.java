@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -10,6 +11,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Data
 @Builder
@@ -116,4 +118,13 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+    
+    @ApiModelProperty("代理层级")
+    private Integer proxyLevel;
+
+    @ApiModelProperty("代理层级名称")
+    private String proxyLevelName;
+    
+    @ApiModelProperty("最后登陆时间")
+    private LocalDateTime lastLoginDatetime;
 }
