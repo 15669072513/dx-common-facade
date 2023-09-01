@@ -54,4 +54,15 @@ public class DxHandInfoResp implements Serializable {
 
     @ApiModelProperty("手牌（牌桌第多少手）")
     private Integer roundNo;
+    /***
+     * 小盲注
+     */
+    @ApiModelProperty("小盲注")
+    private Long sbBlindScore;
+
+    /***
+     * 大盲注
+     */
+    @ApiModelProperty("大盲注")
+    private Long bbBlindScore;
 }
