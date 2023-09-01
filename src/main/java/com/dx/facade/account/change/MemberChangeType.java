@@ -2,15 +2,17 @@ package com.dx.facade.account.change;
 
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * 会员账变类型
  */
 public enum MemberChangeType implements IChangeType {
+
     deposit(1, "会员存款", "1"),
     deposit_back(2, "会员存款后台", "1"),
-    //    staff_deposit_for_member(3, "代客充值", "2"),
     agent_deposit_for_member(4, "上级转入", "3"),
     center_to_B(5, "转到B端钱包", "4"),
     B_to_center(6, "转回中心钱包", "4"),
@@ -33,15 +35,12 @@ public enum MemberChangeType implements IChangeType {
     deposit_discount_add(23, "存款优惠增加调整", "11"),
     deposit_discount_sub(24, "存款优惠扣除调整", "11"),
 
-    //新增
     proxy_up_score(25, "代理上分", "12"),
     proxy_down_score(26, "代理下分", "13"),
-    //德州钱包
     bring_to_table(27, "带入牌桌", "14"),
     bring_out_table(28, "带出牌桌", "14"),
 
-    //------------------v2需求新增-------------
-    //中心钱包 9个
+    //v2需求新增
     v2_cash_up_score(29, "充值上分", MemberBizType.up_score.code().toString()),
     v2_cash_down_score(30, "提现下分", MemberBizType.down_score.code().toString()),
     v2_cash_center_to_B(31, "中心钱包转入", MemberBizType.B_mutual_center.code().toString()),
@@ -53,10 +52,8 @@ public enum MemberChangeType implements IChangeType {
     v2_cash_repay(37, "信用还款", MemberBizType.v2_repay.code().toString()),
     v2_cash_withdraw_frozen(44,"提现冻结", MemberBizType.down_score.code().toString()),
     v2_cash_withdraw_refused(45,"提现拒绝", MemberBizType.down_score.code().toString()),
-    //场馆钱包 2个
     v2_center_to_B(38, "中心钱包转入",MemberBizType.B_mutual_center.code().toString()),
     v2_B_to_center(39,"转出至中心钱包",MemberBizType.B_mutual_center.code().toString()),
-    //信用钱包 4个
     v2_credit_up_score(40, "授信上分", MemberBizType.v2_credit_up_score.code().toString()),
     v2_credit_down_score(41, "授信下分", MemberBizType.v2_credit_down_score.code().toString()),
     v2_credit_loan(42, "信用借款",MemberBizType.v2_loan.code().toString()),
@@ -89,13 +86,15 @@ public enum MemberChangeType implements IChangeType {
         return bizCodes;
     }
 
-    public static MemberChangeType getType(Integer code) {
-        for (MemberChangeType memberChangeType : values()) {
-            if (memberChangeType.code.equals(code)) {
-                return memberChangeType;
-            }
+    static Map<Integer, MemberChangeType> code2Enum = new HashMap<>();
+    static {
+        for (MemberChangeType value : MemberChangeType.values()) {
+            code2Enum.put(value.code, value);
         }
-        return null;
+    }
+
+    public static MemberChangeType getType(Integer code) {
+        return code2Enum.get(code);
     }
 
     public static List<MemberChangeType> getArtificialMemberChangeTypeList() {

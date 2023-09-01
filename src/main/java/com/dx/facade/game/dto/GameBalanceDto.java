@@ -77,4 +77,7 @@ public class GameBalanceDto {
 
     @ApiModelProperty("场馆钱包类型,ty:体育钱包,dj:电竞钱包,qp:棋牌钱包,cp:彩票钱包,zr:真人钱包")
     private String venueWalletType;
+
+    @ApiModelProperty("钱包类型,12真人钱包，13体育钱包，14彩票钱包，15棋牌钱包，16电竞钱包")
+    private Integer walletType;
 }

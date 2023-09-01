@@ -2,10 +2,7 @@ package com.dx.facade.member.param;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.NotNull;
@@ -46,6 +43,7 @@ public class MemberVerifyCodeDTO implements Serializable {
 	private Long merchantId;
 
 	@ApiModelProperty(value = "ip地址")
+	@ToString.Exclude
 	private String ip;
 
 }
