@@ -46,13 +46,15 @@ public interface MemberRPCService {
      */
     CommonResp<List<MemberInfoRespDTO>> selectListByParentProxyId(Long merchantId, String parentProxyId);
 
-    /**
-     * 根据上级代理Id获取全部会员
-     * @param merchantId
-     * @param topProxyPath
-     * @return
-     */
-    CommonResp<List<MemberInfoRespDTO>> selectAllByTopProxyPath(Long merchantId, String topProxyPath);
+	/**
+	 * 根据上级代理Id获取全部会员
+	 * @param merchantId : 机构id
+	 * @param topProxyPath: 父代理路径
+	 * @param parentProxyId: 父代理id
+	 * @param allMembers: true 全部会员， false: 直属会员
+	 * @return
+	 */
+    CommonResp<List<MemberInfoRespDTO>> selectAllByTopProxyPath(Long merchantId, String topProxyPath, String parentProxyId, boolean allMembers);
 
     CommonResp memberRpcInfoEdit(MemberInfoRpcEditParam param) throws BizException;
 
