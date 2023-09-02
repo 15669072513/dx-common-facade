@@ -73,10 +73,17 @@ public class ProxyNetAmountMonthReqDTO {
     @ApiModelProperty("最大注单量")
     private Long maxBetCount;
 
-    @ApiModelProperty("有效投注")
+    @ApiModelProperty("有效投注最小金额")
     private BigDecimal minValidBetAmount;
-    @ApiModelProperty("有效投注")
+    @ApiModelProperty("有效投注最大金额")
     private BigDecimal maxValidBetAmount;
+
+    @ApiModelProperty(value = "投注最小金额")
+    private BigDecimal minBetAmount;
+
+    @ApiModelProperty(value = "投注最大金额")
+    private BigDecimal maxBetAmount;
+
 
 //    @ApiModelProperty("最小净盈亏")
 //    private BigDecimal minBetAmount;

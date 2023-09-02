@@ -51,10 +51,10 @@ public class ProxyNetAmountDayBackReqDTO {
     private Integer accountType;
 
     @ApiModelProperty("最小总投注")
-    private BigDecimal minNetAmount;
+    private BigDecimal minBetAmount;
 
     @ApiModelProperty("最大总投注")
-    private BigDecimal maxNetAmount;
+    private BigDecimal maxBetAmount;
 
     @ApiModelProperty("最小有效投注金额")
     private BigDecimal minValidBetAmount;
