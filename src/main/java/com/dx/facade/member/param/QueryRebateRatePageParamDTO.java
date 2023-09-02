@@ -153,6 +153,12 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     
     @ApiModelProperty("查询所以代理下级")
     private Boolean isAllSub;
+    
+    @ApiModelProperty("排序列 1：修改时间 2：账号")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
+    private String orderType;
 
 	@Override
 	public void check() {

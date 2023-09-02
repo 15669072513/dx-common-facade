@@ -162,6 +162,12 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     
     @ApiModelProperty("代理id列表")
     private List<Long> proxyIds;
+    
+    @ApiModelProperty("排序列 1：修改时间 2：账号")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
+    private String orderType;
 
 	@Override
 	public void check() {
