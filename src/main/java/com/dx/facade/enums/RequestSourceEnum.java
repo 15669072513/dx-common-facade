@@ -7,7 +7,7 @@ import java.util.Map;
 
 public enum RequestSourceEnum {
   GAME_APP(1,"游戏app"),
-  PROXT_APP(2,"代理app")
+  PROXY_APP(2,"代理app")
   ;
   @JsonValue
   private int code;
