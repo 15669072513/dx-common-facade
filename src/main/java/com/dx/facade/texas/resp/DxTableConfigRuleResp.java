@@ -171,4 +171,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("单牌桌累计带入上限（金额）")
     private Integer bringInLimitChipScore;
+
+    @ApiModelProperty("单牌桌可坐下人数上限")
+    private Integer sitDownLimit;
 }
