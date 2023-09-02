@@ -37,6 +37,9 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("用户id")
     private Long userId;
 
+    @ApiModelProperty("用户id")
+    private List<Long> userIdList;
+
     @ApiModelProperty("会员代理用户名")
     private String userName;
 
