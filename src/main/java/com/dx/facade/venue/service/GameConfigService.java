@@ -2,10 +2,12 @@ package com.dx.facade.venue.service;
 
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.texas.dto.DxGameConfigListDto;
 import com.dx.facade.venue.dto.ConfigGamePO;
 import com.dx.facade.venue.req.*;
 import com.dx.facade.venue.resp.GameListResp;
 import com.dx.facade.venue.resp.GameVenueListResp;
+import com.dx.facade.venue.resp.VeuneGameConfigListResp;
 
 import java.util.List;
 
@@ -44,4 +46,9 @@ public interface GameConfigService {
     List<ConfigGamePO> getGameByIds(List<Long> gameIds);
 
     List<ConfigGamePO> getAllGamesByMerchantId(Long merchantId, String device);
+
+    /**
+     * 查询所有场馆子游戏
+     */
+    VeuneGameConfigListResp getVenueGames();
 }

@@ -82,6 +82,15 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("返点金额")
     private BigDecimal rebateAmount;
 
+    @ApiModelProperty("代理充值上分金额")
+    private BigDecimal proxyCashUpAmount;
+    @ApiModelProperty("代理充值上分次数")
+    private Long proxyCashUpTimes;
+    @ApiModelProperty("代理提现下分金额")
+    private BigDecimal proxyCashDownAmount;
+    @ApiModelProperty("代理提现下分金额")
+    private Long proxyCashDownTimes;
+
 
 
     /**

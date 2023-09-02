@@ -223,7 +223,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     what协议的虚拟地址必须以1或者3开头(300028, "协议的虚拟地址必须以1或者3开头"),
     what协议的虚拟地址必须以0x开头(300028, "协议的虚拟地址必须以0x开头"),
     what协议的虚拟地址必须以T开头(300028, "协议的虚拟地址必须以T开头"),
-    USER_GAME_STATUS_ERROR_2(600005, "账号已被锁定，无法进行游戏，请联系客服询问!"),
+    USER_GAME_STATUS_ERROR_2(600005, "账号已被锁定，请联系客服。"),
     //USER_VIRTUAL_ACCOUNT_BLACK(300075),//账户已被禁用，请更换其他虚拟币账户
     ACCESS_TOKEN(500, "授权码不能为空"), //
     请输入合法的姓名(81000004, "请输入合法的姓名"), //
