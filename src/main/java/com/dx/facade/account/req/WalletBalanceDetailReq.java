@@ -2,11 +2,13 @@ package com.dx.facade.account.req;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.Builder;
 import lombok.Data;
 import java.io.Serializable;
 import java.util.List;
 
 @Data
+@Builder
 @ApiModel(value = "帐变记录查询入参", description = "帐变记录查询入参")
 public class WalletBalanceDetailReq implements Serializable {
 
