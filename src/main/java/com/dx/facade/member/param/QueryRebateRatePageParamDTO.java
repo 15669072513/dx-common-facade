@@ -73,7 +73,7 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或者平台调整")
     private Integer status;
     
     /** 生效时间 */
