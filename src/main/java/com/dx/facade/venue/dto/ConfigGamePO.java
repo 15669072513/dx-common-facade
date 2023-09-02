@@ -110,4 +110,12 @@ public class ConfigGamePO implements Serializable {
     @ApiModelProperty("场馆游戏ID")
     @TableField("game_type_id")
     private String gameTypeId;
+
+    @ApiModelProperty("场馆类型名称")
+    @TableField("venue_type_name")
+    private String venueTypeName;
+
+    @ApiModelProperty("场馆名称")
+    @TableField("venue_name")
+    private String venueName;
 }
