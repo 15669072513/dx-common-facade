@@ -18,6 +18,10 @@ import java.io.Serializable;
 @Builder
 public class RealtimeBillParam implements Serializable {
     /**
+     * 商户ID
+     */
+    private Long merchantId;
+    /**
      * 用户ID(代理或会员ID)
      */
     private Long userId;
