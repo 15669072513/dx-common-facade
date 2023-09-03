@@ -16,6 +16,7 @@ import com.dx.facade.member.param.ProxyTreeParamDTO;
 import com.dx.facade.member.param.UpdatePassWordParamDTO;
 import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
+import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
@@ -63,7 +64,7 @@ public interface ProxyRPCService {
     CommonResp<ProxyTreeRespDTO> getProxyTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
     
     @ApiModelProperty("获取代理和会员树状结构")
-    CommonResp<ProxyTreeRespDTO> getProxyAndMemberTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
+    CommonResp<ProxyAndMemberTreeRespDTO> getProxyAndMemberTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
 
     @ApiModelProperty("根据代理账号/商户号查询代理层级链路")
     CommonResp<List<ProxyTreeRespDTO>> getProxyTreeLinkByUserName(GetProxyPathByUserNameParamDTO paramDTO) throws BizException;
