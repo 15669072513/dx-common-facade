@@ -20,6 +20,4 @@ public class GameOrderRecordDetailReq {
     private String venueTypeCode;
     @ApiModelProperty("会员id")
     private String userId;
-    @ApiModelProperty("注单id")
-    private String generatedId;
 }
