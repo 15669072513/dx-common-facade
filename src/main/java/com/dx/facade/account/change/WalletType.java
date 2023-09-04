@@ -25,7 +25,9 @@ public enum WalletType implements IWalletType {
     e_sports(16, "电竞场馆钱包"),
     agent_cash(17, "代理中心钱包"),
     agent_credit_available(18, "代理信用钱包"),
-    agent_credit_total(19, "代理信用额度")
+    agent_credit_total(19, "代理信用额度"),
+
+    illegal_type(-1, "未知的类型")
     ;
 
     private Integer code;
@@ -59,7 +61,7 @@ public enum WalletType implements IWalletType {
     }
 
     public static WalletType getType(Integer code) {
-        return code2Enum.get(code);
+        return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 
     /**

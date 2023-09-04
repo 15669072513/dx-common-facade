@@ -25,14 +25,7 @@ import java.math.BigDecimal;
 @ApiModel("返点报表查询合计接口响应数据传输对象")
 public class ReportRebateTotalRespDTO implements Serializable {
 
-    @ApiModelProperty(value = "返点金额(CNY)", required = true, example = "2343")
-    protected BigDecimal personRebateAmountInCNY;
 
-    @ApiModelProperty(value = "返点金额(VND)", required = true, example = "2343")
-    protected BigDecimal personRebateAmountInVND;
-
-    @ApiModelProperty(value = "返点金额(THB)", required = true, example = "2343")
-    protected BigDecimal personRebateAmountInTHB;
 
     /**
      * 返点人数

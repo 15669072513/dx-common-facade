@@ -94,4 +94,16 @@ public class ProxyRebateDRespDTO {
     @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
     private Integer payoutStatus;
 
+    /**
+     * 返点比例
+     */
+    @ApiModelProperty(value = "会员返点比例")
+    private BigDecimal memberRebateAmount;
+
+
+    /**
+     * 会员账号
+     */
+    private String memberName;
+
 }

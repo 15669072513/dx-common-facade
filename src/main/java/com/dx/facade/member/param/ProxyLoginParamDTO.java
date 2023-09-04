@@ -3,6 +3,7 @@ package com.dx.facade.member.param;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.ToString;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.NotBlank;
@@ -28,6 +29,7 @@ public class ProxyLoginParamDTO implements Serializable {
     private Integer clientType;
 
     @ApiModelProperty(value = "登录ip")
+    @ToString.Exclude
     private String ip;
 
     @ApiModelProperty(value = "终端设备号（6-100）")

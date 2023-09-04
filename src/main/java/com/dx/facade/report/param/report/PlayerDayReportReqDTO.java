@@ -73,5 +73,11 @@ public class PlayerDayReportReqDTO extends LocalDatePageRequest {
     @ApiModelProperty("最大净盈亏")
     private BigDecimal maxNetProfit;
 
+    @ApiModelProperty("最小净盈亏")
+    private BigDecimal minValidBetAmount;
+
+    @ApiModelProperty("最大净盈亏")
+    private BigDecimal maxValidBetAmount;
+
 
 }

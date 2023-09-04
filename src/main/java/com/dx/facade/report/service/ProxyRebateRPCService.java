@@ -52,7 +52,7 @@ public interface ProxyRebateRPCService {
      * @author gollum
      * @since 2021年9月18日 上午00:44:14
      */
-    CommonResp<ReportRebateTotalRespDTO> queryRebateReportTotal(ReportRebateReqDTO reqDTO) throws BizException;
+    CommonResp<ReportRebateTotalRespDTO> queryRebateReportTotal(ReportRebateReqDTO reqDTO) throws BizException, ParseException;
 
     /**
      * 待返点条数总计
