@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -140,4 +141,7 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty(value = "是否删除（0 未删除 1已删除）", hidden = true)
     private Integer deleteFlag;
+
+    @ApiModelProperty("初期金额")
+    private BigDecimal beginAmount;
 }
