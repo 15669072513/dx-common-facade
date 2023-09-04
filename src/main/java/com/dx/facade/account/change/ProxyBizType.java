@@ -49,7 +49,11 @@ public enum ProxyBizType implements IBizType {
     officer_proxy_down_score(32, "官方给代理下分", "7"),
     proxy_be_down_score(33, "代理给下级下分", "7"),
     proxy_to_child_down_score(34, "代理给下级下分", "7"),
-    proxy_to_mem_down_score(35, "代理给会员下分", "7");
+    proxy_to_mem_down_score(35, "代理给会员下分", "7"),
+
+    illegal_type(-1, "未知的类型", "-1")
+
+    ;
 
 
     private Integer code;
@@ -87,7 +91,7 @@ public enum ProxyBizType implements IBizType {
         }
     }
     public static ProxyBizType getType(Integer code) {
-        return code2EnumOri.get(code);
+        return code2EnumOri.containsKey(code) ? code2EnumOri.get(code) : illegal_type;
     }
 
     static Map<Integer, ProxyBizType> code2Enum = new HashMap<>();
@@ -101,7 +105,7 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_credit_down_score.code, v2_credit_down_score);
     }
     public static ProxyBizType getByCode(Integer code) {
-        return code2Enum.get(code);
+        return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 
 
