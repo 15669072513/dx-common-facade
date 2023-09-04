@@ -1,5 +1,7 @@
 package com.dx.facade.member.service;
 
+import java.util.List;
+
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
@@ -12,12 +14,24 @@ import com.dx.facade.member.member.param.MemberListByWindControlInfoReqDto;
 import com.dx.facade.member.member.param.MerchantUnderMemberInfoReqDTO;
 import com.dx.facade.member.member.resp.MemberListByWindControlInfoRespDto;
 import com.dx.facade.member.member.resp.MerchantUnderMemberRespDTO;
-import com.dx.facade.member.param.*;
+import com.dx.facade.member.param.AddLowerMemberReqDto;
+import com.dx.facade.member.param.CheckMemberNickNameParamDTO;
+import com.dx.facade.member.param.MemberAndProxyDto;
+import com.dx.facade.member.param.MemberAndProxyUpdateParamDTO;
+import com.dx.facade.member.param.MemberInfoRpcEditParam;
+import com.dx.facade.member.param.MemberListParamDTO;
+import com.dx.facade.member.param.MemberParamDTO;
+import com.dx.facade.member.param.MemberPasswordEditParam;
+import com.dx.facade.member.param.MemberQueryReqParamDTO;
+import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
+import com.dx.facade.member.param.UpdateMemberNickNameParamDTO;
+import com.dx.facade.member.param.UpdateMemberTopImagesUrlParamDTO;
+import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
 import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
-import io.swagger.annotations.ApiModelProperty;
+import com.dx.facade.member.resp.MemberMainInfoRespDTO;
 
-import java.util.List;
+import io.swagger.annotations.ApiModelProperty;
 
 public interface MemberRPCService {
 
@@ -45,6 +59,13 @@ public interface MemberRPCService {
      * @return
      */
     CommonResp<List<MemberInfoRespDTO>> selectListByParentProxyId(Long merchantId, String parentProxyId);
+    
+    /**
+     * 根据上级代理Id获取全部直属会员
+     * @param paramDTO
+     * @return
+     */
+    CommonResp<List<MemberMainInfoRespDTO>> selectByParentProxyId(MemberQueryReqParamDTO paramDTO);
 
 	/**
 	 * 根据上级代理Id获取全部会员
