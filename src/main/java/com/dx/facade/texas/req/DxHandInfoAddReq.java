@@ -76,9 +76,6 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("局次")
     private Integer handNum;
 
-    @ApiModelProperty("初期金额")
-    private BigDecimal beginMount;
-
     @ApiModelProperty("中途带入金额")
     private BigDecimal bringMidwayAmount;
 
