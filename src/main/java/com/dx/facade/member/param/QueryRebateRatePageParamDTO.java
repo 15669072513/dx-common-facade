@@ -73,7 +73,7 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或者平台调整")
     private Integer status;
     
     /** 生效时间 */
@@ -153,6 +153,12 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     
     @ApiModelProperty("查询所以代理下级")
     private Boolean isAllSub;
+    
+    @ApiModelProperty("排序列 1：修改时间 2：账号")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
+    private String orderType;
 
 	@Override
 	public void check() {

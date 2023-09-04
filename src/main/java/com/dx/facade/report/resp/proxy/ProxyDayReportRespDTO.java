@@ -207,7 +207,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("给会员上下分差值")
     @TableField("proxy_to_mem_differ_amount")
-    private Long proxyToMemDifferAmount;
+    private BigDecimal proxyToMemDifferAmount;
 
     @ApiModelProperty("给会员上下分次数")
     @TableField("proxy_to_mem_times")
@@ -219,7 +219,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("给代理上下分差值")
     @TableField("proxy_to_child_differ_amount")
-    private Long proxyToChildDifferAmount;
+    private BigDecimal proxyToChildDifferAmount;
 
     @ApiModelProperty("给代理上下分次数")
     @TableField("proxy_to_child_times")
@@ -231,7 +231,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("被代理上下分差值")
     @TableField("proxy_be_differ_amount")
-    private Long proxyBeDifferAmount;
+    private BigDecimal proxyBeDifferAmount;
 
     @ApiModelProperty("被代理上下分差次数")
     @TableField("proxy_be_differ_times")
@@ -241,7 +241,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("官方给代理充值上分")
     @TableField("officer_proxy_cash_up_amount")
-    private Long officerProxyCashUpAmount;
+    private BigDecimal officerProxyCashUpAmount;
 
     @ApiModelProperty("官方给代理充值上分次数")
     @TableField("officer_proxy_cash_up_times")
@@ -249,7 +249,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理被上级充值上分")
     @TableField("proxy_be_cash_up_amount")
-    private Long proxyBeCashUpAmount;
+    private BigDecimal proxyBeCashUpAmount;
 
     @ApiModelProperty("代理被上级充值上分次数")
     @TableField("proxy_be_cash_up_times")
@@ -257,7 +257,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给下级充值上分")
     @TableField("proxy_to_child_cash_up_amount")
-    private Long proxyToChildCashUpAmount;
+    private BigDecimal proxyToChildCashUpAmount;
 
     @ApiModelProperty("代理给下级充值上分次数")
     @TableField("proxy_to_child_cash_up_times")
@@ -266,7 +266,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给会员充值上分")
     @TableField("proxy_to_mem_cash_up_amount")
-    private Long proxyToMemCashUpAmount;
+    private BigDecimal proxyToMemCashUpAmount;
 
     @ApiModelProperty("代理给会员充值上分次数")
     @TableField("proxy_to_mem_cash_up_times")
@@ -275,7 +275,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("官方给代理提现下分")
     @TableField("officer_proxy_cash_down_amount")
-    private Long officerProxyCashDownAmount;
+    private BigDecimal officerProxyCashDownAmount;
 
     @ApiModelProperty("官方给代理提现下分次数")
     @TableField("officer_proxy_cash_down_times")
@@ -283,7 +283,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理被上级提现下分")
     @TableField("proxy_be_cash_down_amount")
-    private Long proxyBeCashDownAmount;
+    private BigDecimal proxyBeCashDownAmount;
 
     @ApiModelProperty("代理被上级提现下分次数")
     @TableField("proxy_be_cash_down_times")
@@ -291,7 +291,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给下级提现下分")
     @TableField("proxy_to_child_cash_down_amount")
-    private Long proxyToChildCashDownAmount;
+    private BigDecimal proxyToChildCashDownAmount;
 
     @ApiModelProperty("代理给下级提现下分次数")
     @TableField("proxy_to_child_cash_down_times")
@@ -299,7 +299,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给会员提现下分")
     @TableField("proxy_to_mem_cash_down_amount")
-    private Long proxyToMemCashDownAmount;
+    private BigDecimal proxyToMemCashDownAmount;
 
     @ApiModelProperty("代理给会员提现下分次数")
     @TableField("proxy_to_mem_cash_down_times")
@@ -307,7 +307,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("官方给代理授信上分")
     @TableField("officer_proxy_credit_up_amount")
-    private Long officerProxyCreditUpAmount;
+    private BigDecimal officerProxyCreditUpAmount;
 
     @ApiModelProperty("官方给代理授信上分次数")
     @TableField("officer_proxy_credit_up_times")
@@ -315,7 +315,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理被上级授信上分")
     @TableField("proxy_be_credit_up_amount")
-    private Long proxyBeCreditUpAmount;
+    private BigDecimal proxyBeCreditUpAmount;
 
     @ApiModelProperty("代理被上级授信上分次数")
     @TableField("proxy_be_credit_up_times")
@@ -323,7 +323,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给下级授信上分")
     @TableField("proxy_to_child_credit_up_amount")
-    private Long proxyToChildCreditUpAmount;
+    private BigDecimal proxyToChildCreditUpAmount;
 
     @ApiModelProperty("代理给下级授信上分次数")
     @TableField("proxy_to_child_credit_up_times")
@@ -331,7 +331,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给会员授信上分")
     @TableField("proxy_to_mem_credit_up_amount")
-    private Long proxyToMemCreditUpAmount;
+    private BigDecimal proxyToMemCreditUpAmount;
 
     @ApiModelProperty("代理给会员授信上分次数")
     @TableField("proxy_to_mem_credit_up_times")
@@ -339,7 +339,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("官方给代理授信下分")
     @TableField("officer_proxy_credit_down_amount")
-    private Long officerProxyCreditDownAmount;
+    private BigDecimal officerProxyCreditDownAmount;
 
     @ApiModelProperty("官方给代理授信下分次数")
     @TableField("officer_proxy_credit_down_times")
@@ -347,7 +347,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理被上级授信下分")
     @TableField("proxy_be_credit_down_amount")
-    private Long proxyBeCreditDownAmount;
+    private BigDecimal proxyBeCreditDownAmount;
 
     @ApiModelProperty("代理被上级授信下分次数")
     @TableField("proxy_be_credit_down_times")
@@ -355,7 +355,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给下级授信下分")
     @TableField("proxy_to_child_credit_down_amount")
-    private Long proxyToChildCreditDownAmount;
+    private BigDecimal proxyToChildCreditDownAmount;
 
     @ApiModelProperty("代理给下级授信下分次数")
     @TableField("proxy_to_child_credit_down_times")
@@ -363,7 +363,7 @@ public class ProxyDayReportRespDTO implements Serializable {
 
     @ApiModelProperty("代理给会员授信下分")
     @TableField("proxy_to_mem_credit_down_amount")
-    private Long proxyToMemCreditDownAmount;
+    private BigDecimal proxyToMemCreditDownAmount;
 
     @ApiModelProperty("代理给会员授信下分次数")
     @TableField("proxy_to_mem_credit_down_times")

@@ -72,24 +72,24 @@ public class DwdMemberStaticInfoSummaryResp {
 
 
     @ApiModelProperty("代理授信上分金额")
-    private BigDecimal proxyCreditUpAmount;
+    private BigDecimal proxyCreditUpAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信上分次数")
-    private Long proxyCreditUpTimes;
+    private Long proxyCreditUpTimes = 0L;
     @ApiModelProperty("代理授信下分金额")
-    private BigDecimal proxyCreditDownDmount;
+    private BigDecimal proxyCreditDownDmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信下分次数")
-    private Long proxyCreditDownTimes;
+    private Long proxyCreditDownTimes = 0L;
     @ApiModelProperty("返点金额")
-    private BigDecimal rebateAmount;
+    private BigDecimal rebateAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("代理充值上分金额")
-    private BigDecimal proxyCashUpAmount;
+    private BigDecimal proxyCashUpAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理充值上分次数")
-    private Long proxyCashUpTimes;
+    private Long proxyCashUpTimes = 0L;
     @ApiModelProperty("代理提现下分金额")
-    private BigDecimal proxyCashDownAmount;
+    private BigDecimal proxyCashDownAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理提现下分金额")
-    private Long proxyCashDownTimes;
+    private Long proxyCashDownTimes = 0L;
 
 
 
