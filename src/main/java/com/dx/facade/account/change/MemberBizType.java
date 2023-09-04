@@ -27,6 +27,8 @@ public enum MemberBizType implements IBizType {
     v2_credit_down_score(16,"授信下分", "9,10"),
     v2_loan(17,"借款", "1,9"),
     v2_repay(18, "还款", "1,9"),
+
+    illegal_type(-1, "未知的类型", "-1"),
     ;
 
     private Integer code;
@@ -65,6 +67,6 @@ public enum MemberBizType implements IBizType {
     }
 
     public static MemberBizType getType(Integer code) {
-        return code2Enum.get(code);
+        return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 }

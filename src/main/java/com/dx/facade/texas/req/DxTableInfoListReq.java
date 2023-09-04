@@ -91,4 +91,10 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("总代id")
     private Long topProxyId;
+
+    @ApiModelProperty("商户Id")
+    private String merchantId;
+
+    @ApiModelProperty("会员账号")
+    private String userName;
 }
