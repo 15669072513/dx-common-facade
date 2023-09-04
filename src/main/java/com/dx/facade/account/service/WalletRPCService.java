@@ -8,6 +8,7 @@ import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
 import com.dx.facade.account.param.QueryWalletParam;
 import com.dx.facade.account.param.WalletAmountParam;
+import com.dx.facade.account.req.RealtimeBillParam;
 import com.dx.facade.account.req.WalletBalanceDTO;
 import com.dx.facade.account.resp.*;
 
@@ -83,4 +84,11 @@ public interface WalletRPCService {
     CommonResp<WalletAmountDTO> getWalletAmountByUserId(WalletAmountParam param);
 
     CommonResp<WalletAmountDTO> getWalletAmountByUserIdAll(WalletAmountParam param);
+
+    /**
+     * 根据用户id和用户类型计算实时账单
+     * @param param
+     * @return
+     */
+    CommonResp<RealtimeBillRespDTO> getRealtimeBill(RealtimeBillParam param);
 }

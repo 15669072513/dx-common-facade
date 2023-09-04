@@ -69,7 +69,9 @@ public enum ProxyChangeType implements IChangeType {
     v2_credit_down_score_to_sub_proxy(95, "代理给下级授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
     v2_credit_down_score_to_member(96, "代理给会员授信下分", ProxyBizType.v2_credit_down_score.code().toString()),
     v2_credit_repay(97, "信用还款", ProxyBizType.v2_repay.code().toString()),
-    v2_credit_loan(98, "信用借款", ProxyBizType.v2_loan.code().toString())
+    v2_credit_loan(98, "信用借款", ProxyBizType.v2_loan.code().toString()),
+
+    illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString())
     ;
 
     private Integer code;
@@ -117,7 +119,7 @@ public enum ProxyChangeType implements IChangeType {
         });
     }
     public static ProxyChangeType getByCode(Integer code){
-        return code2Enum.get(code);
+        return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 
 

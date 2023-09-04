@@ -1,18 +1,26 @@
 package com.dx.facade.member.service;
 
+import java.util.List;
+
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.member.param.*;
+import com.dx.facade.member.param.GetProxyPathByUserNameParamDTO;
+import com.dx.facade.member.param.JoinCodeIsRepeatParamDTO;
+import com.dx.facade.member.param.ProxyInfoParamDTO;
+import com.dx.facade.member.param.ProxyInfoRpcEditReqDTO;
+import com.dx.facade.member.param.ProxyListPageParamDTO;
+import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
+import com.dx.facade.member.param.ProxyTreeParamDTO;
+import com.dx.facade.member.param.UpdatePassWordParamDTO;
+import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
-import com.dx.facade.member.resp.MemberInfoRespDTO;
+import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-
-import java.util.List;
 
 public interface ProxyRPCService {
 
@@ -54,6 +62,9 @@ public interface ProxyRPCService {
 
     @ApiModelProperty("获取代理树状结构")
     CommonResp<ProxyTreeRespDTO> getProxyTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
+    
+    @ApiModelProperty("获取代理和会员树状结构")
+    CommonResp<ProxyAndMemberTreeRespDTO> getProxyAndMemberTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
 
     @ApiModelProperty("根据代理账号/商户号查询代理层级链路")
     CommonResp<List<ProxyTreeRespDTO>> getProxyTreeLinkByUserName(GetProxyPathByUserNameParamDTO paramDTO) throws BizException;

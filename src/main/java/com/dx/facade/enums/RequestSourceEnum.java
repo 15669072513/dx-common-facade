@@ -6,8 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum RequestSourceEnum {
-  TEXAS(1,"游戏app"),
-  SHORT_CARD(2,"代理app")
+  GAME_APP(1,"游戏app"),
+  PROXY_APP(2,"代理app")
   ;
   @JsonValue
   private int code;
