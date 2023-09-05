@@ -3,6 +3,7 @@ package com.dx.facade.texas.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.proxy.resp.DxHandInfoResp;
 import com.dx.facade.texas.dto.DxHandPumpInfoDto;
 import com.dx.facade.texas.req.DxHandInfoAddReq;
 import com.dx.facade.texas.req.DxHandInfoListReq;
@@ -68,4 +69,9 @@ public interface IDxHandInfoService {
      * @return
      */
     public CommonResp<DxHandPumpInfoDto> getHandInfoByHandIds(List<Long> handIds);
+
+    /**
+     * 战绩手牌列表
+     */
+    public CommonResp<PageResp<DxHandInfoResp, Void>> getRecordHandListPage(DxHandInfoListReq dxHandInfoListReq);
 }
