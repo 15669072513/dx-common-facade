@@ -74,4 +74,9 @@ public interface IDxHandInfoService {
      * 战绩手牌列表
      */
     public CommonResp<PageResp<DxHandInfoResp, Void>> getRecordHandListPage(DxHandInfoListReq dxHandInfoListReq);
+
+    /**
+     * 代理后台手牌列表
+     */
+    public CommonResp<PageResp<DxHandInfoResp, Void>> getProxyHandListPage(DxHandInfoListReq dxHandInfoListReq);
 }
