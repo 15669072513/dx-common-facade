@@ -47,13 +47,19 @@ public class GameTableInfoListEsResp implements Serializable {
 
     @ApiModelProperty("游戏名称")
     private String gameName;
+
+    @ApiModelProperty("游戏类型 2001:德州局 2002:短牌局")
+    private Integer gameType;
+
     @ApiModelProperty("玩家ID")
     private Long userId;
 
     @ApiModelProperty("玩家名称")
     private String playerName;
+
     @ApiModelProperty("牌桌创建时间")
     private Long tableCreateDate;
+
     @ApiModelProperty("牌局开始时间")
     private Long handBeginDate;
 
