@@ -56,8 +56,8 @@ public class DxHandInfoResp implements Serializable {
     private Integer roundNo;
 
     @ApiModelProperty("小盲注")
-    private Long sbBlindScore;
+    private BigDecimal sbBlindScore;
 
     @ApiModelProperty("大盲注")
-    private Long bbBlindScore;
+    private BigDecimal bbBlindScore;
 }
