@@ -3,6 +3,8 @@ package com.dx.facade.texas.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.game.req.GameOrderClubSumReq;
+import com.dx.facade.game.resp.GameOrderClubSumResp;
 import com.dx.facade.texas.dto.DxTableInfoDto;
 import com.dx.facade.texas.dto.DxTableLimitDto;
 import com.dx.facade.texas.dto.DxTableListDto;
@@ -136,4 +138,11 @@ public interface IDxTableInfoService {
     CommonResp<DxTableRobotResp> getTableRobotInfo(Long tableId) throws Exception;
 
     CommonResp<DxTableLimitDto> getTableInfoByClubLimit(DxTableInfoLimitReq req);
+
+    /**
+     * 获取俱乐部贡献
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
 }
