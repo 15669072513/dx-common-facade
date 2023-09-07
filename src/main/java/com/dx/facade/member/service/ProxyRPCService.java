@@ -11,6 +11,7 @@ import com.dx.facade.member.param.JoinCodeIsRepeatParamDTO;
 import com.dx.facade.member.param.ProxyInfoParamDTO;
 import com.dx.facade.member.param.ProxyInfoRpcEditReqDTO;
 import com.dx.facade.member.param.ProxyListPageParamDTO;
+import com.dx.facade.member.param.ProxyQueryParamDTO;
 import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
 import com.dx.facade.member.param.ProxyTreeParamDTO;
 import com.dx.facade.member.param.UpdatePassWordParamDTO;
@@ -149,5 +150,13 @@ public interface ProxyRPCService {
      * @throws Exception 
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
+	
+	/**
+	 * 校验userName是否已存在
+	 * 
+	 * @param paramDTO
+	 * @return
+	 */
+	CommonResp<Boolean> checkUserName(ProxyQueryParamDTO paramDTO);
 
 }
