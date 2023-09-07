@@ -181,7 +181,7 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
     // 新账单通知
     MESSAGE_MEMBER_NEW_BILL("message.member.new.bill", "1"),
-    MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"),
+    MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"), // 个人资料修改通知
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
     MESSAGE_MEMBER_UPGRADE_BONUS("message.member.upgrade.bonus", "1"),
@@ -194,18 +194,21 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_DEPOSIT_BONUS("message.member.deposit.bonus", "1"),
 
     //系统消息code 代理
-    MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),
+    MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),//合营伙伴
     MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_SUB_CONTRACT("message.proxy.sub.contract", "1"),
     MESSAGE_PROXY_CONTRACT_SUCCESS("message.proxy.contract.success", "1"),
     MESSAGE_PROXY_SUB_CONTRACT_ACCEPT("message.proxy.sub.contract.accept", "1"),
     MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),
-    MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),
-    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"),
+    MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),//新增下级会员通知
+    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"), // 返点奖励
     MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),//返点比例失效
-    MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),
-    MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),
+    MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),//开通总代
+    MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),//开通代理通知
+
+    MESSAGE_PROXY_CLUB_SUCCESS("message.proxy.club.success", "1"), // 俱乐部审核通过
+    MESSAGE_PROXY_CLUB_FAIL("message.proxy.club.fail", "1"), //俱乐部审核拒绝
 
 	
 	//后台登录IP白名单功能开关（0=关闭  1=开启）
