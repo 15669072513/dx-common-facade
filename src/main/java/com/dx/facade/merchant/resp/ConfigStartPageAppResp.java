@@ -84,8 +84,8 @@ public class ConfigStartPageAppResp implements Serializable {
     private String updatedBy;
     @ApiModelProperty(value = "是否跳转")
     private Integer isLink;
-    @ApiModelProperty(value = "跳转类型")
-    private String linkTarget;
+    @ApiModelProperty(value = "跳转目标[0:B端,1:现金网内部,2:外部地址]")
+    private Integer linkTarget;
     @ApiModelProperty(value = "跳转地址")
     private String targetUrl;
 
