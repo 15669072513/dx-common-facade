@@ -30,7 +30,6 @@ public class VenueNetAmountDayReqDTO extends LocalDatePageRequest {
     @ApiModelProperty(value = "场馆名称")
     private String gameCode;
 
-    // TODO 修改查询条件 venueCode
     @ApiModelProperty(value = "场馆Code")
     private List<String> venueCodes;
 

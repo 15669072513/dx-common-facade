@@ -53,6 +53,9 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
+    @ApiModelProperty("所属总代名称")
+    private String topProxyName;
+    
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     

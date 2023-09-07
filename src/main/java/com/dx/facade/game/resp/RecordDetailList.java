@@ -22,6 +22,10 @@ public class RecordDetailList implements Serializable {
     @ApiModelProperty("牌桌id")
     @JsonSerialize(using = ToStringSerializer.class)
     private Long tableId;
+
+    @ApiModelProperty("创建者")
+    private String creator;
+
     /**
      * 玩家id
      */

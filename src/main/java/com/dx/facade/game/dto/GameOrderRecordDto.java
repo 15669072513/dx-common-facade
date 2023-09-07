@@ -146,12 +146,12 @@ public class GameOrderRecordDto implements Serializable {
     /***
      * 小盲注
      */
-    private Long sbBlindScore;
+    private BigDecimal sbBlindScore;
 
     /***
      * 大盲注
      */
-    private Long bbBlindScore;
+    private BigDecimal bbBlindScore;
     /**
      * 手牌信息
      */
