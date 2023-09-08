@@ -15,7 +15,7 @@ public enum RebateRateStatusEnum {
 	/** 已失效 */
 	EXPIRED(2,"已失效"),
 	
-	/** 平台调整 */
+	/** 平台调整 这个时候也是失效的 */
 	PLATFORM_ADJUSTMENT(3,"平台调整"),
 	
 	UN_SET_OR_PLATFORM_ADJUSTMENT(4,"未设置或者平台调整"),

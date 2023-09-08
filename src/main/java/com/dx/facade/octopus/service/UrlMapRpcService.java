@@ -4,6 +4,6 @@ import com.dx.entity.CommonResp;
 import com.dx.facade.octopus.dto.CreateUrlMapReq;
 import com.dx.facade.octopus.dto.CreateUrlMapResp;
 
-public interface UrlMapService {
+public interface UrlMapRpcService {
     CommonResp<CreateUrlMapResp> createUrlMap(CreateUrlMapReq request);
 }
