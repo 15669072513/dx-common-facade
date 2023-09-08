@@ -140,9 +140,16 @@ public interface IDxTableInfoService {
     CommonResp<DxTableLimitDto> getTableInfoByClubLimit(DxTableInfoLimitReq req);
 
     /**
-     * 获取俱乐部贡献
+     * 获取俱乐部纬度的统计数据
      * @param req
      * @return
      */
     CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
+
+    /**
+     * 获取牌桌概况
+     * @param tableId 牌桌ID
+     * @return
+     */
+    CommonResp<DxTableBaseInfoResp> getTableOverviewInfo(Long tableId);
 }
