@@ -73,6 +73,9 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("参与用户名称集合")
     private String userNames;
 
+    @ApiModelProperty("结算信息盈亏集合")
+    private String settleInfo;
+
     @ApiModelProperty("局次")
     private Integer handNum;
 
@@ -84,6 +87,9 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
+
+    @ApiModelProperty("参与用户手牌集合")
+    private String handCards;
 
     @ApiModelProperty("有效底池")
     private String validPot;
