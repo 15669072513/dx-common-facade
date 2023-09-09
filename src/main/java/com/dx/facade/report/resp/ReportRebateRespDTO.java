@@ -73,4 +73,6 @@ public class ReportRebateRespDTO  extends ReportRebateTotalRespDTO{
     @ApiModelProperty(value = "周期结束日期", example = "2021-09-12")
     private String cycleEndDate;
 
+    @ApiModelProperty(value = "返点状态")
+    private Integer payoutStatus;
 }
