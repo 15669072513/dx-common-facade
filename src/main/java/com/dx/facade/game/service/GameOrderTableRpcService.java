@@ -12,5 +12,5 @@ public interface GameOrderTableRpcService {
      * @param tableId   表的 ID。
      * @return  DxTableInfoSumResp 的汇总响应。
      */
-    CommonResp<DxTableInfoSumResp> getDxHandInfoSumResp(Long tableId);
+    CommonResp<DxTableInfoSumResp> getDxTableInfoSumResp(Long tableId);
 }
