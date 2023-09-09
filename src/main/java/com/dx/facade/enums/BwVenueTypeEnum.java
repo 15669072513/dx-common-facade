@@ -14,7 +14,7 @@ public enum BwVenueTypeEnum {
     DY("dy", "电子","电子","Slots","สล็อต","Xuất"),
     BY("by", "捕鱼","捕鱼","Fishing","ตกปลา","BẮN CÁ"),
     DZ_CARD("DZ_CARD", "德州","德州","DZ_CARD","DZ_CARD","DZ_CARD"),
-    DX("dx", "德州","德州","dx","dx","dx"),
+    //DX("dx", "德州","德州","dx","dx","dx"),
     QKL("qkl", "区块链","区块链","Blockchain","บล็อกเชน","Chuỗi khối"); //这个顺序不可以调整,影响到管理后台下拉中的顺序,测试会提bug
 
 
