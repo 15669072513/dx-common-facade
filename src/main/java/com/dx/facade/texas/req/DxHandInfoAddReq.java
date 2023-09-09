@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -72,11 +73,11 @@ public class DxHandInfoAddReq implements Serializable {
     @ApiModelProperty("参与用户名称集合")
     private String userNames;
 
+    @ApiModelProperty("结算信息盈亏集合")
+    private String settleInfo;
+
     @ApiModelProperty("局次")
     private Integer handNum;
-
-    @ApiModelProperty("初期金额")
-    private BigDecimal beginMount;
 
     @ApiModelProperty("中途带入金额")
     private BigDecimal bringMidwayAmount;
@@ -86,6 +87,9 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
+
+    @ApiModelProperty("参与用户手牌集合")
+    private String handCards;
 
     @ApiModelProperty("有效底池")
     private String validPot;
@@ -140,4 +144,7 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty(value = "是否删除（0 未删除 1已删除）", hidden = true)
     private Integer deleteFlag;
+
+    @ApiModelProperty("初期金额")
+    private BigDecimal beginAmount;
 }

@@ -28,7 +28,7 @@ public class ProxyLoanBillRespDTO {
     @ApiModelProperty("账号")
     private String acctName;
 
-    @ApiModelProperty("账号类型,1-一代,2-二代,99-会员")
+    @ApiModelProperty("账号类型,0-总代,1-一代,2-二代,99-会员")
     private Integer acctType;
 
     @ApiModelProperty("账户状态,0-正常 1-锁定")

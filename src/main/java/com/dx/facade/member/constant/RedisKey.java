@@ -19,6 +19,14 @@ public class RedisKey {
     public static String GAME_RECORD_DETAIL_LIST = "GAME:ORDER:RECORD:DETAIL:LIST:";
     public static String GAME_RECORD_DETAIL_SUMMARY = "GAME:ORDER:RECORD:DETAIL:SUMMARY:";
 
+    /**
+     * 资金--提现KEY前缀
+     */
+    private static final String ACCOUNT_WITHDRAW = "ACCOUNT:WITHDRAW:";
+    /**
+     * 资金--借还款KEY前缀
+     */
+    private static final String ACCOUNT_LOAN_REPAY = "ACCOUNT:LOAN:REPAY:";
     public static String getGameRecordDetailSummaryKey(Long tableId) {
         return GAME_RECORD_DETAIL_SUMMARY.concat(String.valueOf(tableId));
     }
@@ -45,5 +53,17 @@ public class RedisKey {
 
     public static String genProxyTokenKey(String clientType, Long proxyId) {
         return TOKEN_PROXY_KEY + ":" + clientType + "_" + proxyId;
+    }
+    //获取会员提现Redis key
+    public static String getMemberWithdrawLoanRepayKey(Long memberId) {
+        return ACCOUNT_WITHDRAW + "0:" + memberId;
+    }
+    //获取会员借还款Redis key
+    public static String getMemberLoanRepayKey(Long memberId) {
+        return ACCOUNT_LOAN_REPAY + "0:" + memberId;
+    }
+    //获取代理借还款Redis key
+    public static String getProxyLoanRepayKey(Long proxyId) {
+        return ACCOUNT_LOAN_REPAY + "1:" + proxyId;
     }
 }

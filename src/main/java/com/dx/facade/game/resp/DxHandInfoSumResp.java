@@ -65,6 +65,9 @@ public class DxHandInfoSumResp implements Serializable {
     @ApiModelProperty("参与用户昵称集合")
     private String nickNames;
 
+    @ApiModelProperty("结算信息盈亏集合")
+    private String settleInfo;
+
     @ApiModelProperty("局次")
     private Integer handNum;
 

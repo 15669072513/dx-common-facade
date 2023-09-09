@@ -32,6 +32,9 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("牌桌主键")
     private Long tableId;
 
+
+    @ApiModelProperty("牌桌Code")
+    private String tableCode;
     /**
      *
      @ApiModelProperty("0 进行中 1已结束")

@@ -38,6 +38,9 @@ public class LowerMemberListRespDto {
 	@ApiModelProperty("上级代理账号")
 	private String parentProxyName;
 	
+	@ApiModelProperty("总代id")
+	private Long topProxyId;
+	
 	@ApiModelProperty("VIP等级名称")
 	private String vipGradeName;
 	

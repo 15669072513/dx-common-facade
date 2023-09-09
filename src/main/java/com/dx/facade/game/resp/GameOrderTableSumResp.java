@@ -23,6 +23,6 @@ public class GameOrderTableSumResp {
     private BigDecimal bringMidwayChip;
     @ApiModelProperty("总带出")
     private BigDecimal afterChip;
-    @ApiModelProperty("总抽水")
-    private BigDecimal pumpAmount;
+    @ApiModelProperty("进入牌桌的初始带入")
+    private BigDecimal enterTableChip;
 }
