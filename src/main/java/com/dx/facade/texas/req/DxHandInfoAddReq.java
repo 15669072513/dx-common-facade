@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -86,6 +87,9 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
+
+    @ApiModelProperty("参与用户手牌集合")
+    private String handCards;
 
     @ApiModelProperty("有效底池")
     private String validPot;
