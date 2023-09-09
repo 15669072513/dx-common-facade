@@ -35,7 +35,7 @@ public class AddFeedBackDTO {
     private Long userId;
 
     @ApiModelProperty(value = "会员账号", example = "zhang")
-    @NotNull(message = "会员账号不能为空")
+    @NotNull(message = "账号不能为空")
     private String userName;
 
     @ApiModelProperty(value = "会员类型（1-试玩，2-商务，3-正式，4-测试，5-置换）", example = "0")
