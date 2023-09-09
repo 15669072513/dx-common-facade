@@ -55,4 +55,7 @@ public class ReportRebateReqDTO implements Serializable, MultiplyMerchantAble {
 
     @ApiModelProperty(value = "代理名称", required = true, example = "20210918")
     private String topProxyName;
+    
+    @ApiModelProperty(value = "返点状态",example = "20220301")
+    private Integer payoutStatus;
 }
