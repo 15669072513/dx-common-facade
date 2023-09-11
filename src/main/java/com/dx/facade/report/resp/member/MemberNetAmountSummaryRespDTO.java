@@ -54,6 +54,9 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("返水金额")
     private BigDecimal rebateAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("其他调整")
+    private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
+
     @ApiModelProperty("返水金额VND")
     private BigDecimal rebateAmountVND = BigDecimal.ZERO;
 
@@ -90,9 +93,6 @@ public class MemberNetAmountSummaryRespDTO {
     // 会员盈利率=投注盈亏/投注金额
     @ApiModelProperty(value = "会员盈利率")
     private BigDecimal netRate = BigDecimal.ZERO;
-
-    @ApiModelProperty(value = "其他调整")
-    private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
 
     /**
      * 会员盈利率=投注盈亏/投注金额
