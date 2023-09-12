@@ -217,5 +217,7 @@ public class ProxyNetAmountMonthRespDTO {
     private BigDecimal directProfitAmount;
 
 
+    @ApiModelProperty(value = "其他调整金额")
+    private BigDecimal adjustAmount;
 
 }
