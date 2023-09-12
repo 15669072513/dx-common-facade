@@ -136,4 +136,16 @@ public class DxTableInfoAddReq implements Serializable {
     private Integer bringInLimit;
     @ApiModelProperty("单牌桌可坐下人数上限")
     private Integer sitDownLimit;
+
+    @ApiModelProperty("玩家总带入")
+    private BigDecimal bringInChipScore;
+
+    @ApiModelProperty("总打牌抽水")
+    private BigDecimal pumpingAmountTotal;
+
+    @ApiModelProperty("盈亏金额")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("牌桌总费用")
+    private BigDecimal costTotal;
 }

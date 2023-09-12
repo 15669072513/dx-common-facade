@@ -83,4 +83,6 @@ public class ProxyNetAmountMonthSummaryRespDTO {
     @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
     private BigDecimal directProfitAmount;
 
+    @ApiModelProperty(value = "其他调整金额")
+    private BigDecimal adjustAmount;
 }
