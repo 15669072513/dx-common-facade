@@ -16,6 +16,7 @@ import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
 import com.dx.facade.member.param.ProxyTreeParamDTO;
 import com.dx.facade.member.param.UpdatePassWordParamDTO;
 import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
+import com.dx.facade.member.param.UpdateProxyPasswordParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
 import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
@@ -158,5 +159,14 @@ public interface ProxyRPCService {
 	 * @return
 	 */
 	CommonResp<Boolean> checkUserName(ProxyQueryParamDTO paramDTO);
+	
+	/**
+	 * 设置登录密码
+	 * 
+	 * @param params
+	 * @return
+	 * @throws BizException
+	 */
+    CommonResp<Boolean> updatePassword(UpdateProxyPasswordParamDTO params) throws BizException;
 
 }
