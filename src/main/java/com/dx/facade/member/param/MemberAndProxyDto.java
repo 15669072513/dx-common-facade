@@ -237,6 +237,9 @@ public class MemberAndProxyDto {
 	
 	@ApiModelProperty(value = "游戏锁定状态 0-未锁定 1-游戏锁定")
 	private Integer gameLockStatus;
+	
+	@ApiModelProperty(value = "入局锁定状态 0-未锁定 1-入局锁定")
+	private Integer joinGameLockStatus;
 
     /**
      * 注册ip
