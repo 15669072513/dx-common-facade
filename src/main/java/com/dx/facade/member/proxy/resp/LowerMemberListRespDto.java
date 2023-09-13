@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -83,6 +84,8 @@ public class LowerMemberListRespDto {
 	private String remark;
 	@ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
 	private Integer gameLockStatus;
+    @ApiModelProperty("入局锁定状态 0-未锁定 1-入局锁定")
+    private Integer joinGameLockStatus;
 	//参与手牌,累计有效投注，创建人
 	@ApiModelProperty("创建人")
 	private String createBy;

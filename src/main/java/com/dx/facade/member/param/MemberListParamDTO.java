@@ -38,6 +38,9 @@ public class MemberListParamDTO {
 
     @ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
     private Integer gameLockStatus;
+    
+    @ApiModelProperty("入局锁定状态 0-未锁定 1-入局锁定")
+    private Integer joinGameLockStatus;
 
     @ApiModelProperty("vip等级")
     private Integer vipLevel;
