@@ -91,4 +91,11 @@ public interface WalletRPCService {
      * @return
      */
     CommonResp<RealtimeBillRespDTO> getRealtimeBill(RealtimeBillParam param);
+
+    /**
+     * 批量查询用户钱包额度
+     * @param userIds   用户id集合
+     * @return
+     */
+    CommonResp<List<BatchWalletAmountRespDTO>> getBatchWalletAmountByhUserIds(List<Long> userIds);
 }
