@@ -27,7 +27,7 @@ public class DxHandInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "手牌ID", index = 0)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌ID)
-    private Long handId;
+    private String handCode;
 
     @ApiModelProperty("0 进行中 1已结束")
     @ExcelProperty(value = "状态", index = 1, converter = I18nConverter.class)
@@ -36,7 +36,7 @@ public class DxHandInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "牌桌ID", index = 2)
     @I18nField(headI18nKey = ExcelHeadI18nKey.TABLE_ID)
-    private Long tableId;
+    private String tableCode;
 
     @ExcelProperty(value = "牌桌名称", index = 3)
     @I18nField(headI18nKey = ExcelHeadI18nKey.TABLE_NAME)
@@ -62,7 +62,7 @@ public class DxHandInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "手牌号", index = 8)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌号)
-    private Long handNum;
+    private String handId;
 
     @ExcelProperty(value = "期初金额汇总", index = 9)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_期初金额汇总)
