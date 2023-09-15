@@ -36,7 +36,7 @@ public class DxHandInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "牌桌ID", index = 2)
     @I18nField(headI18nKey = ExcelHeadI18nKey.TABLE_ID)
-    private Long tableId;
+    private String tableCode;
 
     @ExcelProperty(value = "牌桌名称", index = 3)
     @I18nField(headI18nKey = ExcelHeadI18nKey.TABLE_NAME)
