@@ -94,6 +94,12 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("牌型")
     private String resultInfo;
+
+    /**
+     * 眼睛标识
+     */
+    @ApiModelProperty("眼睛标识")
+    private boolean showFlag;
     /**
      * 投注状态（GameBetStatusEnum)
      */
