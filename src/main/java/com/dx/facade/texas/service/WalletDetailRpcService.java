@@ -43,5 +43,5 @@ public interface WalletDetailRpcService {
    * 获取牌桌带入带出信息
    * @return
    */
-  CommonResp<List<GameAmountTotalRespDTO>> getTableBringInfo(DxTableBringInfoReq req);
+  CommonResp<List<GameAmountTotalRespDTO>> getTablesBringInfo(DxTableBringInfoReq req);
 }
