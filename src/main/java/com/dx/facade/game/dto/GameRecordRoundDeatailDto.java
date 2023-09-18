@@ -85,6 +85,11 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("牌型")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String resultInfo;
+    /**
+     * 眼睛标识
+     */
+    @ApiModelProperty("眼睛标识")
+    private boolean showFlag;
 
     @ApiModelProperty("玩家牌型显示是否置灰标识")
     @JsonInclude(JsonInclude.Include.NON_NULL)
