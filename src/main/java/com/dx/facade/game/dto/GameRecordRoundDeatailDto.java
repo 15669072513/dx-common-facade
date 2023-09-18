@@ -94,7 +94,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal netAmount;
 
-    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
+    @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
 
 }
