@@ -122,8 +122,8 @@ public enum ProxyWalletChange implements IWalletChange {
     v2_credit_up_score_by_parent_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
     v2_credit_total_up_score_by_parent_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
     //代理通过代理后台对下级代理充值上分，代理自己的信用钱包余额和信用额度同时扣减
-    v2_credit_up_score_to_sub_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.out),
-    v2_credit_total_up_score_to_sub_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.out),
+    v2_credit_up_score_to_sub_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
+    v2_credit_total_up_score_to_sub_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
     //代理通过代理后台对下级会员充值上分，代理自己的信用钱包余额和信用额度同时扣减
     v2_credit_up_score_to_member(WalletType.agent_credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
     v2_credit_total_up_score_to_member(WalletType.agent_credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
