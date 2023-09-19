@@ -12,10 +12,10 @@ import java.util.Set;
 @Data
 public class TableBringInfoReq implements Serializable, BaseParmDTO {
   @ApiModelProperty("牌桌ids")
-  private Set<Integer> tableIds;
+  private Long tableId;
 
   @Override
   public void check() {
-    Assert.notNull(tableIds, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("tableIds"));
+    Assert.notNull(tableId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("tableId"));
   }
 }
