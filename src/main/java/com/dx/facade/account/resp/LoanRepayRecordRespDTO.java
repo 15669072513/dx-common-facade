@@ -1,5 +1,7 @@
 package com.dx.facade.account.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,7 +18,8 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class LoanRepayRecordRespDTO {
 
-    @ApiModelProperty(value = "操作时间")
+    @ApiModelProperty("操作时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime operateTime;
 
     @ApiModelProperty(value = "借还款id")
