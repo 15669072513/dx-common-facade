@@ -4,12 +4,16 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.texas.dto.TableBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringInfoDto;
 import com.dx.facade.texas.dto.WalletDetailDto;
+import com.dx.facade.texas.req.DxTableBringInfoReq;
 import com.dx.facade.texas.req.TableBringInfoReq;
 import com.dx.facade.texas.req.TableUserBringInfoReq;
 import com.dx.facade.texas.req.WalletDetailPageRequest;
+
+import java.util.List;
 
 public interface WalletDetailRpcService {
 
@@ -34,4 +38,10 @@ public interface WalletDetailRpcService {
    * @return
    */
   CommonResp<TableUserBringInfoDto> getTableUserBringInfo(TableUserBringInfoReq req);
+
+  /**
+   * 获取牌桌带入带出信息
+   * @return
+   */
+  CommonResp<List<GameAmountTotalRespDTO>> getTablesBringInfo(DxTableBringInfoReq req);
 }
