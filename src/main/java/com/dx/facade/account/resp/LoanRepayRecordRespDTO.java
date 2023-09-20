@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 public class LoanRepayRecordRespDTO {
 
     @ApiModelProperty("操作时间")
+    @TableField("operate_time")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime operateTime;
 
