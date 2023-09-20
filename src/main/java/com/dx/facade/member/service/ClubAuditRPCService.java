@@ -6,6 +6,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.ClubAuditRecordPageParam;
+import com.dx.facade.member.param.ClubAuditRecordParam;
 import com.dx.facade.member.param.ClubDetailsByIdParam;
 import com.dx.facade.member.param.ClubSaveReqDTO;
 import com.dx.facade.member.param.UpdClubAuditLockOrderParmDTO;
@@ -80,4 +81,12 @@ public interface ClubAuditRPCService {
      */
     @ApiModelProperty(value="待处理数量")
     Integer getPendingCount(List<Long> merchantIdLs);
+    /**
+     * 查询最新的俱乐部审核
+     * 
+     * @param pageParam
+     * @return
+     * @throws BizException
+     */
+	CommonResp<ClubAuditRecordResp> queryLatestClubAudit(ClubAuditRecordParam param) throws BizException;
 }
