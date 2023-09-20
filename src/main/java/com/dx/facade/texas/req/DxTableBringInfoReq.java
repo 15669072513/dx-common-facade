@@ -2,20 +2,23 @@ package com.dx.facade.texas.req;
 
 import com.dx.facade.account.service.BaseParmDTO;
 import com.dx.facade.member.exception.ErrorCode;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.springframework.util.Assert;
 
 import java.io.Serializable;
-import java.util.Set;
+import java.util.List;
 
+@ApiModel("牌桌带入带出请求实体")
 @Data
-public class TableBringInfoReq implements Serializable, BaseParmDTO {
+public class DxTableBringInfoReq  implements Serializable, BaseParmDTO {
+
   @ApiModelProperty("牌桌ids")
-  private Long tableId;
+  private List<Long> tableIds;
 
   @Override
   public void check() {
-    Assert.notNull(tableId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("tableId"));
+    Assert.notNull(tableIds, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("tableIds"));
   }
 }

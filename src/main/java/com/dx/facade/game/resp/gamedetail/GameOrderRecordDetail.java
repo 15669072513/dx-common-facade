@@ -95,6 +95,11 @@ public class GameOrderRecordDetail implements Serializable {
          */
         @ApiModelProperty("当前盈亏")
         private BigDecimal netAmountSum;
+
+        /**
+         * 手牌数
+         */
+        private int handCount;
     }
 
 }

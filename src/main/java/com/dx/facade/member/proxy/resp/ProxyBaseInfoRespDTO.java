@@ -136,4 +136,7 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
+    
+    @ApiModelProperty("合营码")
+    private String joinCode;
 }

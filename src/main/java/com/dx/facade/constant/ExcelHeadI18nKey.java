@@ -546,6 +546,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_盲注 = "EXCEL_HEAD_I18N_KEY.FUNDS_盲注";
     String FUNDS_牌桌手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌手牌数";
     String FUNDS_玩家总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带入";
+    String FUNDS_会员带入次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员带入次数";
     String FUNDS_玩家总带出 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带出";
     String FUNDS_总打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总打牌抽水";
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
@@ -614,6 +615,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
+
+    String	FUNDS_会员详情_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员详情_牌桌列表";
     
     String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
     String	FUNDS_绑定时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_绑定时间";//绑定时间
