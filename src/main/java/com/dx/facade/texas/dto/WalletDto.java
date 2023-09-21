@@ -58,4 +58,7 @@ public class WalletDto {
    */
   @ApiModelProperty("创建时间")
   private LocalDateTime createdAt;
+
+  @ApiModelProperty("带入总额")
+  private BigDecimal bringInSumAmount;
 }
