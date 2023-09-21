@@ -176,5 +176,13 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<List<ProxyInfoRespDTO>> getProxyAndSubList(ProxyTreeLinkParamDTO paramDTO);
+    
+    /**
+     * 获取所以下级代理id
+     * 
+     * @param proxyId
+     * @return
+     */
+    CommonResp<List<Long>> getSubProxyIdList(Long proxyId);
 
 }
