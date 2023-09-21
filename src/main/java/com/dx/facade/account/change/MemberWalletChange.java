@@ -196,40 +196,72 @@ public enum MemberWalletChange implements IWalletChange {
         //list.add(rebate);
         //list.add(rebate_add);
         //list.add(rebate_sub);
-        list.add(v2_cash_center_to_B);
-        list.add(v2_B_to_center);
+        //1，充值上分
         list.add(MemberWalletChange.v2_cash_up_score);
+        //1，提现下分
         list.add(MemberWalletChange.v2_cash_down_score);
-        list.add(MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy);
-        list.add(MemberWalletChange.v2_cash_down_score_withdraw_refused);
+        //1，提现冻结
         list.add(MemberWalletChange.v2_cash_down_score_withdraw_frozen);
-        list.add(MemberWalletChange.v2_cash_lock_down_score_frozen);
-        list.add(MemberWalletChange.V2_cash_lock_down_score_refused);
+        //1，提现拒绝
+        list.add(MemberWalletChange.v2_cash_down_score_withdraw_refused);
+        //1，中心钱包转入
+        list.add(v2_cash_center_to_B);
+        //1，转出至中心钱包
+        list.add(v2_B_to_center);
+        //1，会员返水
         list.add(MemberWalletChange.v2_rebate);
+        //1，会员返水增加调整
         list.add(MemberWalletChange.v2_rebate_add);
+        //1，会员返水扣除调整
         list.add(MemberWalletChange.v2_rebate_sub);
+        //1，信用借款
         list.add(MemberWalletChange.v2_cash_loan);
+        //1，信用还款
         list.add(MemberWalletChange.v2_cash_repay);
+        //1，带入牌桌
+        list.add(MemberWalletChange.bring_to_table);
+        //1，带出牌桌
+        list.add(MemberWalletChange.bring_out_table);
+        //5，提现下分
+        list.add(MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy);
+        //5，提现冻结
+        list.add(MemberWalletChange.v2_cash_lock_down_score_frozen);
+        //5，提现拒绝
+        list.add(MemberWalletChange.V2_cash_lock_down_score_refused);
+        //11，带入牌桌
         list.add(MemberWalletChange.v2_bring_to_table_texas);
+        //11，带出牌桌
         list.add(MemberWalletChange.v2_bring_out_table_texas);
+        //12，中心钱包转入
         list.add(MemberWalletChange.v2_center_to_video);
+        //12，转出至中心钱包
         list.add(MemberWalletChange.v2_video_to_center);
+        //13，中心钱包转入
         list.add(MemberWalletChange.v2_center_to_sports);
+        //13，转出至中心钱包
         list.add(MemberWalletChange.v2_sports_to_center);
+        //14，中心钱包转入
         list.add(MemberWalletChange.v2_center_to_lottery);
+        //14，转出至中心钱包
         list.add(MemberWalletChange.v2_lottery_to_center);
+        //15，中心钱包转入
         list.add(MemberWalletChange.v2_center_to_poker);
+        //15，转出至中心钱包
         list.add(MemberWalletChange.v2_poker_to_center);
         list.add(MemberWalletChange.v2_center_to_e_sports);
         list.add(MemberWalletChange.v2_e_sports_to_center);
+        //9，授信上分
         list.add(MemberWalletChange.v2_credit_up_score);
+        //10，授信上分
         list.add(MemberWalletChange.v2_credit_total_up_score);
+        //9，授信下分
         list.add(MemberWalletChange.v2_credit_down_score);
+        //10，授信下分
         list.add(MemberWalletChange.v2_credit_total_down_score);
-        list.add(MemberWalletChange.v2_credit_loan);
+        //9，信用还款
         list.add(MemberWalletChange.v2_credit_repay);
-        list.add(MemberWalletChange.bring_to_table);
-        list.add(MemberWalletChange.bring_out_table);
+        //9，信用借款
+        list.add(MemberWalletChange.v2_credit_loan);
         return list;
     }
 
