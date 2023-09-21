@@ -81,9 +81,29 @@ public interface WalletRPCService {
      */
     CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
 
+    /**
+     * @author Dealer
+     * @description: 获取指定用户(类型)的, 资金信息[中心、信用、额度]
+     * @date 2023/9/21
+     * @copyright
+     */
     CommonResp<WalletAmountDTO> getWalletAmountByUserId(WalletAmountParam param);
 
+    /**
+     * @author Dealer
+     * @description: 获取指定用户(类型)的, 资金信息[中心、信用、额度、冻结]
+     * @date 2023/9/21
+     * @copyright
+     */
     CommonResp<WalletAmountDTO> getWalletAmountByUserIdAll(WalletAmountParam param);
+
+    /**
+     * @author Dealer
+     * @description: 批量获取指定用户(类型)的, 资金信息[中心、信用、额度、冻结]
+     * @date 2023/9/21
+     * @copyright
+     */
+    CommonResp<List<WalletAmountDTO>> walletAmounts(WalletAmountParam param);
 
     /**
      * 根据用户id和用户类型计算实时账单

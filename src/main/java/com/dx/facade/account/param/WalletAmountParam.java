@@ -31,6 +31,11 @@ public class WalletAmountParam implements BaseParmDTO, Serializable {
 
     @Getter
     @Setter
+    @ApiModelProperty(value = "会员id列表")
+    private List<Long> userIdList;
+
+    @Getter
+    @Setter
     @ApiModelProperty(value = "币种")
     private String currency;
 
@@ -38,6 +43,26 @@ public class WalletAmountParam implements BaseParmDTO, Serializable {
     @Getter
     @Setter
     private Integer userType;
+
+    @ApiModelProperty("用户类型：是否需要中心钱包")
+    @Getter
+    @Setter
+    private Boolean needCash;
+
+    @ApiModelProperty("用户类型：是否需要冻结金额")
+    @Getter
+    @Setter
+    private Boolean needFrozen;
+
+    @ApiModelProperty("用户类型：是否需要信用金额")
+    @Getter
+    @Setter
+    private Boolean needCreditAvailable;
+
+    @ApiModelProperty("用户类型：是否需要信用额度")
+    @Getter
+    @Setter
+    private Boolean needCreditTotal;
 
     @Override
     public void check() {
