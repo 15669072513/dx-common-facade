@@ -1,5 +1,6 @@
 package com.dx.facade.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -60,4 +61,7 @@ public class DxHandInfoResp implements Serializable {
 
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
+
+    @ApiModelProperty("0 进行中 1已结束")
+    private Integer handStatus;
 }
