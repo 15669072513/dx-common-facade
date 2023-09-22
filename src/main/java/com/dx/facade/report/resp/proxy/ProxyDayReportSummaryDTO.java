@@ -253,4 +253,8 @@ public class ProxyDayReportSummaryDTO {
     @TableField("proxy_to_mem_credit_down_times")
     private Long proxyToMemCreditDownTimes;
 
+    @ApiModelProperty(value = "其他调整")
+    @TableField("other_adjust_amount")
+    private BigDecimal otherAdjustAmount;
+
 }
