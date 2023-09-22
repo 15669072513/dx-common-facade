@@ -53,5 +53,8 @@ public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
      */
     private Long curUserId;
 
+    @ApiModelProperty("代理层级")
+    private Integer proxyLevel;
+
 
 }
