@@ -117,8 +117,6 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "优惠总额")
     private BigDecimal discountAmount;
 
-    @ApiModelProperty(value = "其他调整")
-    private BigDecimal otherAdjustAmount;
 
     @ApiModelProperty(value = "佣金钱包余额")
     private BigDecimal rebateBalance;
@@ -369,5 +367,7 @@ public class ProxyDayReportRespDTO implements Serializable {
     @TableField("proxy_to_mem_credit_down_times")
     private Long proxyToMemCreditDownTimes;
 
-    //  上下分 end
+    @ApiModelProperty(value = "其他调整")
+    @TableField("other_adjust_amount")
+    private BigDecimal otherAdjustAmount;
 }

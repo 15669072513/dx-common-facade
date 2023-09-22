@@ -142,8 +142,11 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
 
-    @ApiModelProperty("游戏名称")
+    @ApiModelProperty("游戏类型名称")
     private String gameTypeName;
+
+    @ApiModelProperty("游戏名称")
+    private String gameName;
 
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
