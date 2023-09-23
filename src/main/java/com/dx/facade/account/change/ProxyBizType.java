@@ -51,8 +51,9 @@ public enum ProxyBizType implements IBizType {
     proxy_to_child_down_score(34, "代理给下级下分", "7"),
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
+    v2_1_deposit(60, "代理存款", "17"),
+    v2_1_withdraw(61, "代理取款", "17,8"),
     illegal_type(-1, "未知的类型", "-1")
-
     ;
 
 
