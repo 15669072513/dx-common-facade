@@ -318,6 +318,9 @@ public class AddLowerProxyReqDTO {
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     
+    @ApiModelProperty("德州保险返点比例")
+    private BigDecimal texasInsuranceRebate;
+    
     @ApiModelProperty("真人返点比例")
     private BigDecimal actualPersonRebate;
     

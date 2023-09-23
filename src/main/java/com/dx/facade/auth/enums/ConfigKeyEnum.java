@@ -130,6 +130,7 @@ public enum ConfigKeyEnum {
     PROXY_BY_RATE("proxy.by.rate", "1"),
     
     TEXAS_REBATE_RATE_LIMIT("texas.rebate.rate.limit","1"),
+    TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.rebate.rate.limit","1"),
     ACTUAL_PERSON_REBATE_RATE_LIMIT("actual.person.rebate.rate.limit","1"),
     SPORTS_REBATE_RATE_LIMIT("sports.rebate.rate.limit","1"),
     LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit","1"),

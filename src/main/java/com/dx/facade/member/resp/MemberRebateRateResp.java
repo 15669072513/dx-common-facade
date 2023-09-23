@@ -2,11 +2,6 @@ package com.dx.facade.member.resp;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -46,6 +41,9 @@ public class MemberRebateRateResp implements Serializable {
     
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
+    
+    @ApiModelProperty("德州保险返点比例")
+    private BigDecimal texasInsuranceRebate;
     
     @ApiModelProperty("真人返点比例")
     private BigDecimal actualPersonRebate;
