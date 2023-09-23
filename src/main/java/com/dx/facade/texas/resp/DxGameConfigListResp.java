@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.common.utils.DateToLongSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
@@ -112,4 +113,10 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit;
+
+    @ApiModelProperty("turn购买保险最低值，多个用逗号隔开，支持小数点2位")
+    private String insuranceTurn;
+
+    @ApiModelProperty("选张购买功能 0-不选张 1-选张，多个用逗号隔开，支持小数点2位")
+    private Boolean insuranceChoosSheet;
 }
