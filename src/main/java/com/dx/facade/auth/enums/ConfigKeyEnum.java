@@ -221,6 +221,9 @@ public enum ConfigKeyEnum {
     DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
+    
+    /** App会员默认头像 */
+    APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url","1"),
 
     //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
     PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
