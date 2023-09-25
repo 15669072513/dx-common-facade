@@ -1,15 +1,11 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -111,6 +107,9 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("盈亏金额")
     private BigDecimal netAmount;
+
+    @ApiModelProperty("保险输赢")
+    private BigDecimal insuredNetAmount;
 
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;

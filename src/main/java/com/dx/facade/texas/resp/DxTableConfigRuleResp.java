@@ -133,6 +133,18 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("牌桌结束时间")
     private Long tableEndTime;
 
+    @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+    private BigDecimal totalNetAmount;
+
+    @ApiModelProperty("打牌输赢")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("保险输赢")
+    private BigDecimal insuredNetAmount;
+
+    @ApiModelProperty("总带出")
+    private BigDecimal bringOutChipScore;
+
     @ApiModelProperty("手牌数")
     private Long handCount;
 

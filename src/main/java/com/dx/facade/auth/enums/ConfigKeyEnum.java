@@ -221,7 +221,8 @@ public enum ConfigKeyEnum {
     DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
-
+    /** App会员默认头像 */
+    APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url","1"),
     //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
     PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
     PROXY_LOAN_BILL_PERIOD_HOUR("proxy.loan.bill.period.hour", "1"),
@@ -230,7 +231,17 @@ public enum ConfigKeyEnum {
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),
     //资资金>账单相关设置 会员单笔可提现最大额度
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
-    //******************************资金模块配置,其它模块请注意自己的位置哈************************************
+    //会员取款RMB/USDT汇率边界值「6.5，7.5」
+    ACCOUNT_MEMBER_WITHDRAW_DEPOSIT_USDT_RATE("account.member.withdraw.deposit.usdt.rate", "1"),
+    //会员取款RMB/USDT汇率边界值「6.5，7.5」
+    ACCOUNT_PROXY_WITHDRAW_DEPOSIT_USDT_RATE("account.proxy.withdraw.deposit.usdt.rate", "1"),
+    //会员取款时是否需要输入支付密码校验：0-无需校验；1-需要校验
+    ACCOUNT_MEMBER_WITHDRAW_PAY_PASSWORD_CHECK("account.member.withdraw.pay.password.check", "1"),
+    //代理取款时是否需要输入支付密码校验：0-无需校验；1-需要校验
+    ACCOUNT_PROXY_WITHDRAW_PAY_PASSWORD_CHECK("account.proxy.withdraw.pay.password.check", "1"),
+
+
+        //******************************资金模块配置,其它模块请注意自己的位置哈************************************
 	;
 
     //code转换
