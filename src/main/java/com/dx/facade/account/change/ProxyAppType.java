@@ -7,10 +7,6 @@ import com.dx.exception.BizException;
  */
 public enum ProxyAppType implements IAppType {
 
-    //v2.1新增
-    withdraw_frozen(60, "取款冻结"),
-    withdraw_fail(61, "取款失败"),
-
     //代理钱包
     deposit(1, "存款"),
     deposit_for_member(2, "代下级存款"),

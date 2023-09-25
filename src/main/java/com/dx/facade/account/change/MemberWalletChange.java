@@ -110,16 +110,6 @@ public enum MemberWalletChange implements IWalletChange {
     //场景:会员信用借(还)款,信用余额减(加)额，中心钱包余额加(减)额
     v2_credit_loan(WalletType.credit_available, MemberBizType.v2_loan, MemberChangeType.v2_credit_loan, MemberAppType.v2_loan, TransType.out, Constant.MEMBER),
     v2_credit_repay(WalletType.credit_available, MemberBizType.v2_repay, MemberChangeType.v2_credit_repay, MemberAppType.v2_repay, TransType.in, Constant.MEMBER),
-
-    //v2.1新增
-    //存款优惠
-    v21_deposit_discount(WalletType.cash, MemberBizType.deposit_discount, MemberChangeType.v21_deposit, MemberAppType.deposit, TransType.in, Constant.MEMBER),
-    //会员取款
-    v21_withdraw(WalletType.cash, MemberBizType.v21_withdraw, MemberChangeType.v21_withdraw, MemberAppType.withdraw, TransType.out, Constant.MEMBER),
-    //取款失败
-    v21_withdraw_fail(WalletType.cash, MemberBizType.v21_withdraw, MemberChangeType.v21_fail, MemberAppType.v21_withdraw_failure, TransType.in, Constant.MEMBER),
-    //取款冻结
-    v21_withdraw_freeze(WalletType.cash, MemberBizType.v21_withdraw, MemberChangeType.v21_freeze, MemberAppType.v21_withdraw_frozen, TransType.out, Constant.MEMBER),
     ;
 
     private IWalletType walletType;
