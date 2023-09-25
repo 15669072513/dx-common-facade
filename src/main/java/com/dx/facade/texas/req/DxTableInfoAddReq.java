@@ -148,4 +148,12 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
+    @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
+    private Integer insuranceMode;
+    @ApiModelProperty("turn购买保险最低值,整数类型")
+    private Integer insuranceTurn;
+    @ApiModelProperty("选张购买功能 0-不选张 1-选张")
+    private String insuranceChooseSheet;
+    @ApiModelProperty("保险触发下限")
+    private Integer insuranceLowerLimit;
 }

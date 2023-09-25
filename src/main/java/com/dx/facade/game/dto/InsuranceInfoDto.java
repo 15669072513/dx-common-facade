@@ -2,6 +2,7 @@ package com.dx.facade.game.dto;
 import lombok.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * <p>
@@ -179,6 +180,12 @@ public class InsuranceInfoDto implements Serializable {
      * 修改人
      */
     private String updateBy;
+
+
+    /**
+     * 保险购买详情明细
+     */
+    private List<InsuranceBuyDetailDto> detailList;
 
 
 }
