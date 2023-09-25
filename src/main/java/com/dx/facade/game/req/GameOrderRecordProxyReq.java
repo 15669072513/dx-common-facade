@@ -4,6 +4,8 @@ import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.List;
+
 /**
  * 游戏记录结果对象
  */
@@ -33,5 +35,8 @@ public class GameOrderRecordProxyReq extends BaseRequest {
 
    @ApiModelProperty(value = "投注结束时间(时间戳)")
    private Long betEndTime;
+
+   @ApiModelProperty("所有下级代理id集合")
+   private List<Long> subProxyIdList;
 
 }

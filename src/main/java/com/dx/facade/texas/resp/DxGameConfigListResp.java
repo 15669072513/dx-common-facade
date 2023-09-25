@@ -109,4 +109,7 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("单牌桌累计带入上限")
+    private Integer bringInLimit;
 }
