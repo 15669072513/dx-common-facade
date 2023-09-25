@@ -28,9 +28,6 @@ public enum MemberBizType implements IBizType {
     v2_loan(17,"借款", "1,9"),
     v2_repay(18, "还款", "1,9"),
 
-    //v2.1新增
-    v21_withdraw(19, "会员取款", "1"),
-
     illegal_type(-1, "未知的类型", "-1"),
 
     ;
