@@ -92,6 +92,8 @@ public class NetAmountDaySummaryRespDTO {
     @ApiModelProperty("净盈亏THB")
     private BigDecimal netProfitTHB = BigDecimal.ZERO;
 
+    @ApiModelProperty("其他调整")
+    private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
      *
