@@ -37,6 +37,9 @@ public enum MemberAppType implements IAppType {
     v2_withdraw_frozen(20, "提现冻结"),
     v2_withdraw_refused(21, "提现拒绝"),
 
+    //---------------v2.1新增------------
+    v21_withdraw_frozen(23, "取款冻结"),
+    v21_withdraw_failure(24, "取款失败"),
     ;
 
     private Integer code;

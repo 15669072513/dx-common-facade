@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
  * <p>
  * 返点比例DTO父类
  * </p>
- *
  * @author bicycle
  * @since 2023-7-22
  */

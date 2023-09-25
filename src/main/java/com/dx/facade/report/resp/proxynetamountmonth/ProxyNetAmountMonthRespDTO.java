@@ -26,11 +26,12 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "币种", example = "CNY")
     private String currency;
 
-    /**
-     * staticsDate
-     */
-    @ApiModelProperty(value = "月份", example = "2021-09")
-    private String staticsDate;
+    /** staticsDate */
+    @ApiModelProperty(value = "月维度", example = "202109")
+    private Integer staticsDate;
+
+    @ApiModelProperty(value = "月维度", example = "2021-09")
+    private String reportDate;
 
     /**
      * proxyId
