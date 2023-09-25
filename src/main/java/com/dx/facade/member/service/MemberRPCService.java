@@ -205,4 +205,20 @@ public interface MemberRPCService {
      * @return
      */
     CommonResp<MemberBaseInfoRespDTO> selectBaseInfoById(Long userId);
+
+	/**
+	 * @author Dealer
+	 * @description: 创建和修改会员支付密码
+	 * @date 2023/9/25
+	 * @copyright
+	 */
+    CommonResp<Boolean> createPayPassword(Long userId, String inPayPassword) throws BizException;
+
+	/**
+	 * @author Dealer
+	 * @description: 验证会员支付密码
+	 * @date 2023/9/25
+	 * @copyright
+	 */
+	CommonResp<Boolean> validateWithdrawPassword(Long merchantId, Long userId, String payPassword);
 }
