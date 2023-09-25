@@ -28,11 +28,11 @@ public class BaseCommissionRateRespDTO implements Serializable {
     private static final long serialVersionUID = 1L;
     
     @ApiModelProperty("德州俱乐部返佣比例")
-    private BigDecimal texasRebate;
+    private BigDecimal texasCommission;
     
     @ApiModelProperty("德州保险返佣比例")
-    private BigDecimal texasInsuranceRebate;
+    private BigDecimal texasInsuranceCommission;
     
     @ApiModelProperty("其他返佣比例")
-    private BigDecimal otherRebate;
+    private BigDecimal otherCommission;
 }

@@ -136,7 +136,10 @@ public enum ConfigKeyEnum {
     LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit","1"),
     CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit","1"),
     ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit","1"),
-
+    
+    TEXAS_COMMISSION_RATE_LIMIT("texas.commission.rate.limit","1"),
+    TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.commission.rate.limit","1"),
+    OTHER_COMMISSION_RATE_LIMIT("other.commission.rate.limit","1"),
     ////// OB旗舰精简优化
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBDJ("deposit.usdt.protocol.address.obdj", "1"),
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBQJ("deposit.usdt.protocol.address.obqj", "1"),
