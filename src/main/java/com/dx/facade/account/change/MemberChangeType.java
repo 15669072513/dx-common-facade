@@ -50,17 +50,24 @@ public enum MemberChangeType implements IChangeType {
     v2_rebate_sub(35, "会员返水扣除调整", MemberBizType.rebate.code().toString()),
     v2_cash_loan(36, "信用借款", MemberBizType.v2_loan.code().toString()),
     v2_cash_repay(37, "信用还款", MemberBizType.v2_repay.code().toString()),
-    v2_cash_withdraw_frozen(44, "提现冻结", MemberBizType.down_score.code().toString()),
-    v2_cash_withdraw_refused(45, "提现拒绝", MemberBizType.down_score.code().toString()),
     v2_center_to_B(38, "中心钱包转入", MemberBizType.B_mutual_center.code().toString()),
     v2_B_to_center(39, "转出至中心钱包", MemberBizType.B_mutual_center.code().toString()),
     v2_credit_up_score(40, "授信上分", MemberBizType.v2_credit_up_score.code().toString()),
     v2_credit_down_score(41, "授信下分", MemberBizType.v2_credit_down_score.code().toString()),
     v2_credit_loan(42, "信用借款", MemberBizType.v2_loan.code().toString()),
     v2_credit_repay(43, "信用还款", MemberBizType.v2_repay.code().toString()),
+    v2_cash_withdraw_frozen(44, "提现冻结", MemberBizType.down_score.code().toString()),
+    v2_cash_withdraw_refused(45, "提现拒绝", MemberBizType.down_score.code().toString()),
 
-    illegal_type(-1, "未知的类型", "-1"),
-
+    v2_1_deposit(46, "会员存款", MemberBizType.v2_1_deposit.code().toString()),
+    v2_1_deposit_discount(47, "会员存款优惠", MemberBizType.v2_1_deposit.code().toString()),
+    v2_1_deposit_back(48, "会员存款（后台）", MemberBizType.v2_1_deposit.code().toString()),
+    v2_1_deposit_discount_back(49, "会员优惠（后台）", MemberBizType.v2_1_deposit.code().toString()),
+    v2_1_withdraw(50, "会员取款", MemberBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_frozen(51, "取款冻结", MemberBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_fail(52, "取款失败", MemberBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_back(53, "会员取款（后台）", MemberBizType.v2_1_withdraw.code().toString()),
+    illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;
     private String desc;

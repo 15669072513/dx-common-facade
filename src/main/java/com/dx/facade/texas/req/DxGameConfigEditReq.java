@@ -101,4 +101,13 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty( value = "google验证码")
     private String googleVerifyCode;
 
+    @ApiModelProperty("turn购买保险最低值，多个用逗号隔开，支持小数点2位")
+    private String insuranceTurn;
+
+    @ApiModelProperty("选张购买功能 false-不选张 true-选张，多个用逗号隔开，支持小数点2位")
+    private Boolean insuranceChoosSheet;
+
+    @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
+    private Boolean insuranceMode;
+
 }
