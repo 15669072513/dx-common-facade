@@ -40,6 +40,9 @@ public class WalletBalanceDTO implements BaseParmDTO {
     @ApiModelProperty("牌桌名称")
     private String tableName;
 
+    @ApiModelProperty("牌桌编码")
+    private String tableCode;
+
     @Override
     public void check() {
         Assert.notNull(this.serialNo, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("serialNo"));

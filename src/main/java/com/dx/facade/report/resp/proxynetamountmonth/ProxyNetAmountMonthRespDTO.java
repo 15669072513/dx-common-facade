@@ -26,11 +26,12 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "币种", example = "CNY")
     private String currency;
 
-    /**
-     * staticsDate
-     */
-    @ApiModelProperty(value = "月份", example = "2021-09")
+    /** staticsDate */
+    @ApiModelProperty(value = "月维度", example = "202109")
     private String staticsDate;
+
+    @ApiModelProperty(value = "月维度", example = "2021-09")
+    private String reportDate;
 
     /**
      * proxyId
@@ -219,5 +220,14 @@ public class ProxyNetAmountMonthRespDTO {
 
     @ApiModelProperty(value = "其他调整金额")
     private BigDecimal adjustAmount;
+
+    @ApiModelProperty("直属返水金额=会员返水")
+    private BigDecimal directRebateAmount;
+
+    @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
+    private BigDecimal directArtificialPatchAmount;
+
+    @ApiModelProperty("直属会员净盈亏 = 直属会员投注盈亏+  直属会员返水（新的）+直属会员其他调整")
+    private BigDecimal directNetwinAmount;
 
 }

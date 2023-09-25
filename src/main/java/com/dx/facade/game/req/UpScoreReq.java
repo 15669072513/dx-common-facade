@@ -24,6 +24,8 @@ public class UpScoreReq{
     private Long userId;
     @ApiModelProperty("金额")
     private BigDecimal amount;
+    @ApiModelProperty("牌桌code")
+    private String tableCode;
 
     /**
      * 账号名
