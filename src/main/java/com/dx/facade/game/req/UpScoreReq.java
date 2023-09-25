@@ -20,8 +20,6 @@ public class UpScoreReq{
     private Long tableId;
     @ApiModelProperty("tableName")
     private String tableName;
-    @ApiModelProperty("牌桌code")
-    private String tableCode;
     @ApiModelProperty("玩家id")
     private Long userId;
     @ApiModelProperty("金额")
