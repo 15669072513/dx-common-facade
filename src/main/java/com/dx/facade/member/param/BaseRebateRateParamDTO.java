@@ -54,11 +54,6 @@ public class BaseRebateRateParamDTO implements Serializable {
     @NotNull(message = "德州返点比例不能为空")
     private BigDecimal texasRebate;
     
-    @ApiModelProperty("德州保险返点比例")
-    @DecimalMin(value = "0.00", message = "德州保险返点比例不能小于0.00")
-    @NotNull(message = "德州保险返点比例不能为空")
-    private BigDecimal texasInsuranceRebate;
-    
     @ApiModelProperty("真人返点比例")
     @NotNull(message = "真人返点比例不能为空")
     @DecimalMin(value = "0.00", message = "真人返点比例不能小于0.00")

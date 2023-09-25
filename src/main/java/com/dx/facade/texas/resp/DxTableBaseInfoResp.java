@@ -92,6 +92,9 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("牌桌抽水")
     private BigDecimal pumpingAmountTotal;
 
+    @ApiModelProperty("保险输赢")
+    private BigDecimal insuredNetAmount;
+
     @ApiModelProperty("机器人数量")
     private Integer robotNum;
 
