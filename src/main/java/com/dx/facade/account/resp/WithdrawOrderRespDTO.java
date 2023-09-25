@@ -92,6 +92,10 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("通道名称")
     private String channelName;*/
 
+    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币")
+    @TableField("withdraw_type")
+    private Integer withdrawType;
+
     @ApiModelProperty("用户提款金额")
     @TableField("order_amount")
     private BigDecimal orderAmount;
