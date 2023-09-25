@@ -142,7 +142,17 @@ public enum ProxyWalletChange implements IWalletChange {
     //代理从中心钱包余额还款到信用余额
     v2_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v2_credit_repay, ProxyAppType.v2_repay, TransType.in),
     //代理从信用余额借款到中心钱包余额
-    v2_credit_loan(WalletType.agent_credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.out);
+    v2_credit_loan(WalletType.agent_credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.out),
+
+    //v2.1新增
+    //代理存款
+    v21_quota_deposit(WalletType.agent_cash, ProxyBizType.v21_deposit, ProxyChangeType.v21_deposit, ProxyAppType.deposit, TransType.in),
+    //代理取款
+    v21_quota_withdraw(WalletType.agent_cash, ProxyBizType.v21_withdraw, ProxyChangeType.v21_withdraw, ProxyAppType.withdraw, TransType.out),
+    //取款失败
+    v21_withdraw_fail(WalletType.agent_cash, ProxyBizType.v21_withdraw, ProxyChangeType.v21_withdraw_fail, ProxyAppType.withdraw_fail, TransType.in),
+    //取款冻结
+    v21_withdraw_frozen(WalletType.agent_cash, ProxyBizType.v21_withdraw, ProxyChangeType.v21_withdraw_frozen, ProxyAppType.withdraw_frozen, TransType.out);
 
     private IWalletType walletType;
     private IBizType bizType;

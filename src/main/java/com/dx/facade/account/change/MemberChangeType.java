@@ -59,6 +59,13 @@ public enum MemberChangeType implements IChangeType {
     v2_credit_loan(42, "信用借款", MemberBizType.v2_loan.code().toString()),
     v2_credit_repay(43, "信用还款", MemberBizType.v2_repay.code().toString()),
 
+    //v2.1需求新增
+    v21_deposit(44, "会员存款优惠", MemberBizType.deposit.code().toString()),
+    v21_preferential_back(45, "会员优惠后台", MemberBizType.deposit.code().toString()),
+    v21_freeze(46, "取款冻结", MemberBizType.v21_withdraw.code().toString()),
+    v21_withdraw(47, "会员取款", MemberBizType.v21_withdraw.code().toString()),
+    v21_fail(48, "取款失败", MemberBizType.v21_withdraw.code().toString()),
+
     illegal_type(-1, "未知的类型", "-1"),
 
     ;

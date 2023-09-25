@@ -14,6 +14,10 @@ import java.util.Map;
  */
 public enum ProxyBizType implements IBizType {
 
+    //v2.1新增
+    v21_deposit(40, "代理存款", "17"),
+    v21_withdraw(41, "代理取款", "17"),
+
     //最新v2版本
     v2_deposit(1, "充值上分", "17"),
     v2_withdraw(7, "提现下分", "17"),
