@@ -56,13 +56,13 @@ public class QueryCommissionRateParamDTO implements BaseParmDTO, Serializable {
     private String topProxyName;
     
     @ApiModelProperty("德州俱乐部返佣比例")
-    private BigDecimal texasRebate;
+    private BigDecimal texasCommission;
     
     @ApiModelProperty("德州保险返佣比例")
-    private BigDecimal texasInsuranceRebate;
+    private BigDecimal texasInsuranceCommission;
     
     @ApiModelProperty("其他返佣比例")
-    private BigDecimal otherRebate;
+    private BigDecimal otherCommission;
     
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或平台调整")
     private Integer status;

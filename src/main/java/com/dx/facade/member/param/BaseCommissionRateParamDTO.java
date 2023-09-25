@@ -15,17 +15,17 @@ import lombok.NoArgsConstructor;
 
 /**
  * <p>
- * 返点比例DTO父类
+ * 返佣比例DTO父类
  * </p>
  *
  * @author bicycle
- * @since 2023-7-22
+ * @since 2023-9-22
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRateDTO父类", description = "返点比例DTO父类")
+@ApiModel(value = "CommissionRateDTO父类", description = "返佣比例DTO父类")
 public class BaseCommissionRateParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -49,35 +49,21 @@ public class BaseCommissionRateParamDTO implements Serializable {
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
-    @ApiModelProperty("德州返点比例")
-    @DecimalMin(value = "0.00", message = "德州返点比例不能小于0.00")
-    @NotNull(message = "德州返点比例不能为空")
-    private BigDecimal texasRebate;
+    @ApiModelProperty("德州俱乐部返佣比例")
+    @DecimalMin(value = "0.00", message = "德州返佣比例不能小于0.00")
+    @NotNull(message = "德州返佣比例不能为空")
+    private BigDecimal texasCommission;
     
-    @ApiModelProperty("真人返点比例")
-    @NotNull(message = "真人返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "真人返点比例不能小于0.00")
-    private BigDecimal actualPersonRebate;
+    @ApiModelProperty("德州保险返佣比例")
+    @DecimalMin(value = "0.00", message = "德州返佣比例不能小于0.00")
+    @NotNull(message = "德州保险返佣比例不能为空")
+    private BigDecimal texasInsuranceCommission;
     
-    @ApiModelProperty("体育返点比例")
-    @NotNull(message = "体育返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "体育返点比例不能小于0.00")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    @NotNull(message = "彩票返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "彩票返点比例不能小于0.00")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    @NotNull(message = "棋牌返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "棋牌返点比例不能小于0.00")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    @NotNull(message = "电竞返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
-    private BigDecimal esportsRebate;
+    @ApiModelProperty("其他返佣比例")
+    @DecimalMin(value = "0.00", message = "其他返佣比例不能小于0.00")
+    @NotNull(message = "其他返佣比例不能为空")
+    private BigDecimal otherCommission;
+
     
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
