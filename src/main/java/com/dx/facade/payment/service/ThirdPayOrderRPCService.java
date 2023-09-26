@@ -7,6 +7,15 @@ import com.dx.facade.payment.resp.CallThirdWithdrawResp;
 public interface ThirdPayOrderRPCService {
 
     /**
+     * 调用三方支付查询基础汇率
+     * @param config
+     * @return
+     * @throws BizException
+     */
+    JyBaseFreeDataRespDTO queryBaseFree(PaymentMerchantRespDTO config)throws BizException;
+
+
+    /**
      * 调用三方支付发起存款
      * @param order
      * @param config
@@ -18,7 +27,6 @@ public interface ThirdPayOrderRPCService {
     /**
      * 调用三方支付发起提款
      * @param order
-     * @param config
      * @return
      * @throws BizException
      */
