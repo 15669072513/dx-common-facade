@@ -53,8 +53,11 @@ public class WithdrawOrderParamDTO implements Serializable {
     @ApiModelProperty("客户端状态,WithdrawClientStatus")
     private Integer clientStatus;
 
-    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币")
+    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币，3代理线下支付(通过代理提款)")
     private Integer withdrawType;
+
+    @ApiModelProperty("提款类型")
+    private List<Integer> withdrawTypes;
 
     @ApiModelProperty("通道名称")
     private String channelName;
