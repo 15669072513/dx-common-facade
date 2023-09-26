@@ -16,6 +16,13 @@ public interface ThirdPayOrderRPCService {
 
 
     /**
+     * 调用三方支付查询基础汇率
+     * @return
+     * @throws BizException
+     */
+    JyBaseFreeDataRespDTO queryBaseFree()throws BizException;
+
+    /**
      * 调用三方支付发起存款
      * @param order
      * @param config
