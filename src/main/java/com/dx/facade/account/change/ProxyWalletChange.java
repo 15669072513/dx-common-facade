@@ -235,14 +235,19 @@ public enum ProxyWalletChange implements IWalletChange {
                 ProxyWalletChange.quota_deposit,
                 ProxyWalletChange.commission_deposit,
                 ProxyWalletChange.quota_deposit_add,
-                ProxyWalletChange.commission_deposit_add);
+                ProxyWalletChange.commission_deposit_add,
+                ProxyWalletChange.v2_1_deposit,
+                ProxyWalletChange.v2_1_deposit_back
+        );
     }
 
     // TODO 这里需要更新吗
     public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList(){
         return Arrays.asList(
                 ProxyWalletChange.commission_withdraw_success,
-                ProxyWalletChange.commission_withdraw_sub
+                ProxyWalletChange.commission_withdraw_sub,
+                ProxyWalletChange.v2_1_withdraw,
+                ProxyWalletChange.v2_1_deposit_back
         );
     }
 
