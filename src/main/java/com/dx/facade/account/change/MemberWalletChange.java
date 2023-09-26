@@ -131,7 +131,9 @@ public enum MemberWalletChange implements IWalletChange {
     //会员通过平台提供的存款渠道进行存款
     v2_1_withdraw_frozen_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
     //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
-    v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER)
+    v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
+    //会员取款成功
+    v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER)
     ;
 
     private IWalletType walletType;
