@@ -58,6 +58,10 @@ public class WithdrawOrderRespDTO {
     @TableField("app_type")
     private Integer appType;*/
 
+    @ApiModelProperty("提款客户端类型")
+    @TableField("app_type")
+    private Integer appType;
+
     @ApiModelProperty("我方订单号")
     @TableField("event_id")
     private String eventId;
@@ -91,6 +95,18 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty("通道名称")
     private String channelName;*/
+
+    @ApiModelProperty("设备号")
+    @TableField("device_no")
+    private String deviceNo;
+
+    @ApiModelProperty("提款ip")
+    @TableField("ip")
+    private String ip;
+
+    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币")
+    @TableField("withdraw_type")
+    private Integer withdrawType;
 
     @ApiModelProperty("用户提款金额")
     @TableField("order_amount")
@@ -126,6 +142,25 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("银行卡号")
     @TableField("bankcard_no")
     private String bankcardNo;*/
+
+    @TableField("usdt_type")
+    private Integer usdtType;
+
+    @ApiModelProperty("usdt提款地址")
+    @TableField("usdt_address")
+    private String usdtAddress;
+
+    @ApiModelProperty("真实姓名")
+    @TableField("real_name")
+    private String realName;
+
+    @ApiModelProperty("银行开户行名称")
+    @TableField("bank_name")
+    private String bankName;
+
+    @ApiModelProperty("银行卡号")
+    @TableField("bankcard_no")
+    private String bankcardNo;
 
     @ApiModelProperty("订单状态")
     @TableField("order_status")
