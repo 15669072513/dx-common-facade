@@ -53,7 +53,7 @@ public class InsuranceBuyDetailDto implements Serializable {
     /**
      * 事件时间
      */
-    private String eventTime;
+    private Long eventTime;
 
     /**
      * 手牌
