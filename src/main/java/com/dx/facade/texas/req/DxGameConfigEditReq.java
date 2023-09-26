@@ -110,4 +110,6 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
     private Boolean insuranceMode;
 
+    @ApiModelProperty("保险出发下限")
+    private Integer insuranceLower;
 }
