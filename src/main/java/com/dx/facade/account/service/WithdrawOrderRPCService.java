@@ -8,10 +8,7 @@ import com.dx.facade.account.param.ChangeLockStatusParam;
 import com.dx.facade.account.param.PaymentLockStatusDTO;
 import com.dx.facade.account.param.WithdrawOrderParamDTO;
 import com.dx.facade.account.param.WithdrawOrderStatsParamDTO;
-import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
-import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
-import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
-import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -115,4 +112,14 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     WithdrawOrderStatsRespDTO getWithdrawStats(WithdrawOrderStatsParamDTO paramDTO);
+
+    /**
+     * 查询会员或代理存取款统计信息
+     * @param paramDTO
+     * @return
+     */
+    UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
+
+
+
 }
