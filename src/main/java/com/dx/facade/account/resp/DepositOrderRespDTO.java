@@ -158,4 +158,7 @@ public class DepositOrderRespDTO implements Serializable {
 
     @ApiModelProperty("厂商名称")
     private String payMerchantName;
+
+    @ApiModelProperty("USDT人民币汇率")
+    private BigDecimal usdtRate;
 }

@@ -550,6 +550,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_会员带入次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员带入次数";
     String FUNDS_玩家总带出 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带出";
     String FUNDS_总打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总打牌抽水";
+    String FUNDS_总保险盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_总保险盈亏";
+    String FUNDS_总牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌盈亏";
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
     String FUNDS_状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_状态";
