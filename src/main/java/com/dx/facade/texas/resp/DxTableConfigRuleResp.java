@@ -191,7 +191,7 @@ public class DxTableConfigRuleResp implements Serializable {
     private Integer sitDownLimit;
 
     @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
-    private Boolean insuranceMode;
+    private Integer insuranceMode;
     @ApiModelProperty("turn购买保险最低值,整数类型")
     private BigDecimal insuranceTurn;
     @ApiModelProperty("选张购买功能 false-不选张 true-选张")
