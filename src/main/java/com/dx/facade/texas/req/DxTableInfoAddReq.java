@@ -156,4 +156,7 @@ public class DxTableInfoAddReq implements Serializable {
     private Boolean insuranceChooseSheet;
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit;
+
+    @ApiModelProperty("保险盈亏")
+    private BigDecimal insuredNetAmount;
 }

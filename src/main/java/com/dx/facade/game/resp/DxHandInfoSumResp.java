@@ -124,4 +124,7 @@ public class DxHandInfoSumResp implements Serializable {
 
     @ApiModelProperty("大盲位置")
     private Integer bbChairId;
+
+    @ApiModelProperty("保险盈亏")
+    private BigDecimal insuredNetAmount;
 }
