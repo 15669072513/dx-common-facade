@@ -261,7 +261,7 @@ public class WithdrawOrderRespDTO {
     @TableField("audit3_cost")
     private Integer audit3Cost;
 
-    /*@ApiModelProperty("创建时间")
+    @ApiModelProperty("创建时间")
     @TableField("created_at")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime createdAt;
@@ -297,5 +297,5 @@ public class WithdrawOrderRespDTO {
     private Long bankId;
 
     @ApiModelProperty(value = "支付厂商")
-    private String payMerchantName;*/
+    private String payMerchantName;
 }

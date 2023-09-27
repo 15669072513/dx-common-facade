@@ -28,12 +28,21 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
 
+
     /**
-     * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
-     * @param dto           更新DTO
-     * @param operationDesc 操作说明
+     * 代理添加银行卡/虚拟币时提款记录列表
+     * @param pageReq
      * @return
      */
+    CommonResp<PageResp<WithdrawOrderRespDTO, ?>> getProxyWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
+
+
+        /**
+         * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+         * @param dto           更新DTO
+         * @param operationDesc 操作说明
+         * @return
+         */
     Boolean updateWithdrawOrderStatusById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
 
     /**
