@@ -33,4 +33,11 @@ public class DepositDiscountSumDTO {
     @ApiModelProperty("红利金额所有统计：泰铢")
     private BigDecimal amountTotalSumTHR;
 
+
+    @ApiModelProperty("红利金额当前页面统计：美金")
+    private BigDecimal amountPageSumUSDT;
+
+    @ApiModelProperty("红利金额所有统计：美金")
+    private BigDecimal amountTotalSumUSDT;
+
 }
