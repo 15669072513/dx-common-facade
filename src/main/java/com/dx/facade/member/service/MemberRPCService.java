@@ -205,4 +205,5 @@ public interface MemberRPCService {
      * @return
      */
     CommonResp<MemberBaseInfoRespDTO> selectBaseInfoById(Long userId);
+
 }

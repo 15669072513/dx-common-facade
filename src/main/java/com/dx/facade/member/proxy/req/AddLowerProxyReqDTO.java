@@ -163,6 +163,9 @@ public class AddLowerProxyReqDTO {
 
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
 	private Integer contractModel;
+	
+	@ApiModelProperty(value = "佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
 
 	@ApiModelProperty(value = "欠款标志 0-无欠款 1-有欠款")
 	private Integer debtStatus;
@@ -335,5 +338,14 @@ public class AddLowerProxyReqDTO {
     
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
+    
+    @ApiModelProperty("德州返佣比例")
+    private BigDecimal texasCommission;
+    
+    @ApiModelProperty("德州保险返佣比例")
+    private BigDecimal texasInsuranceCommission;
+    
+    @ApiModelProperty("其他返佣比例")
+    private BigDecimal otherCommission;
     
 }

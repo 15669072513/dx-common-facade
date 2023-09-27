@@ -19,13 +19,10 @@ public class WithdrawOrderSumDTO {
     private BigDecimal realAmountPageCNY;
     @ApiModelProperty("提款记录总计：人民币")
     private BigDecimal realAmountTotalCNY;
-    @ApiModelProperty("提款记录当前页面统计：越南盾")
-    private BigDecimal realAmountPageVND;
-    @ApiModelProperty("提款记录总计：越南盾")
-    private BigDecimal realAmountTotalVND;
-    @ApiModelProperty("提款记录当前页面统计：泰铢")
-    private BigDecimal realAmountPageTHR;
-    @ApiModelProperty("提款记录总计：泰铢")
-    private BigDecimal realAmountTotalTHR;
+    @ApiModelProperty("提款记录当前页面统计：USDT")
+    private BigDecimal realAmountPageUSDT;
+    @ApiModelProperty("提款记录总计：USDT")
+    private BigDecimal realAmountTotalUSDT;
+
 
 }

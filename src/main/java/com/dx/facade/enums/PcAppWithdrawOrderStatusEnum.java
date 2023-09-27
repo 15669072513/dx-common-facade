@@ -48,7 +48,7 @@ public enum PcAppWithdrawOrderStatusEnum {
         if (dbOrderStatus == WithdrawOrderStatus.一审拒绝.code()
                 || dbOrderStatus == WithdrawOrderStatus.二审拒绝.code()
                 || dbOrderStatus == WithdrawOrderStatus.三审拒绝.code()
-                || dbOrderStatus == WithdrawOrderStatus.出款拒绝.code()) {
+                || dbOrderStatus == WithdrawOrderStatus.出款失败.code()) {
             return 审核拒绝.code();
         }
         if (dbOrderStatus == WithdrawOrderStatus.三审审核.code()

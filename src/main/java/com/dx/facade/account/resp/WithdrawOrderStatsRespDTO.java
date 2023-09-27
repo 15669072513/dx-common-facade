@@ -25,4 +25,12 @@ public class WithdrawOrderStatsRespDTO {
 
     @ApiModelProperty("提现拒绝总额")
     private BigDecimal refusedAmount;
+
+    private BigDecimal onlineTotalAmount;
+
+    private BigDecimal onlineRefusedAmount;
+
+    private BigDecimal offlineTotalAmount;
+
+    private BigDecimal offlineRefusedAmount;
 }

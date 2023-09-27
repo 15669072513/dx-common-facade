@@ -27,8 +27,11 @@ public class ProxyNetAmountDayBackRespDTO {
     private String currency;
 
     /** staticsDate */
-    @ApiModelProperty(value = "日维度", example = "2021-09")
-    private String staticsDate;
+    @ApiModelProperty(value = "日维度", example = "20210921")
+    private Integer staticsDate;
+
+    @ApiModelProperty(value = "日维度", example = "2021-09-21")
+    private String reportDate;
 
     /** proxyId */
     @JsonFormat(shape = JsonFormat.Shape.STRING)

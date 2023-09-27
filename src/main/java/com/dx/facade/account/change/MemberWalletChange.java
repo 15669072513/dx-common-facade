@@ -131,7 +131,9 @@ public enum MemberWalletChange implements IWalletChange {
     //会员通过平台提供的存款渠道进行存款
     v2_1_withdraw_frozen_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
     //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
-    v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER)
+    v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
+    //会员取款成功
+    v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER)
     ;
 
     private IWalletType walletType;
@@ -182,7 +184,6 @@ public enum MemberWalletChange implements IWalletChange {
         return name;
     }
 
-    // TODO 需要更具业务逻辑更新
     public static List<MemberWalletChange> getDepositMemberWalletChangeList() {
         return Arrays.asList(
                 MemberWalletChange.deposit,
@@ -190,24 +191,24 @@ public enum MemberWalletChange implements IWalletChange {
                 MemberWalletChange.agent_deposit_for_member,
 
                 MemberWalletChange.v2_cash_up_score,
-                MemberWalletChange.v2_credit_up_score
+                MemberWalletChange.v2_credit_up_score,
+
+                MemberWalletChange.v2_1_deposit,
+                MemberWalletChange.v2_1_deposit_discount,
+                MemberWalletChange.v2_1_deposit_back,
+                MemberWalletChange.v2_1_deposit_discount_back
                 //MemberWalletChange.v2_credit_total_up_score
         );
     }
 
-    // TODO 需要更具业务逻辑更新
     public static List<MemberWalletChange> getWithdrawMemberWalletChangeList() {
         return Arrays.asList(
                 MemberWalletChange.withdraw_success,
                 MemberWalletChange.withdraw_sub,
 
-                MemberWalletChange.v2_cash_down_score,//代理直接提现下分，提现成功
-                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy //代理审核通过提现下分，提现成功
-
-                //MemberWalletChange.v2_cash_down_score_withdraw_refused //提现被拒绝，提现失败
-                //@TODO 信用下分是否计入member表的取出累计？
-                //MemberWalletChange.v2_credit_down_score,
-                //MemberWalletChange.v2_credit_total_down_score
+                MemberWalletChange.v2_cash_down_score,                          //代理直接提现下分，提现成功
+                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy,    //代理审核通过提现下分，提现成功
+                MemberWalletChange.v2_1_withdraw
         );
     }
 

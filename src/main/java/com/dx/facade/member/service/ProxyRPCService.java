@@ -114,6 +114,13 @@ public interface ProxyRPCService {
     ProxyBaseInfoRespDTO proxyBaseInfo(Long proxyId) throws BizException;
 
     /**
+     * @description: v2.1提款通用密码校验逻辑
+     * @date 2023/9/25
+     * @copyright
+     */
+    CommonResp<Boolean> validateWithdrawPassword(Long merchantId, Long userId, String payPassword);
+
+    /**
      * 校验代理支付密码
      *
      * @param merchantId  商户ID

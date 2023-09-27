@@ -35,12 +35,12 @@ public class PasswordUtil {
     }
 
     public static boolean checkPassword(String inputPwd, String storedPwd, String salt) {
-
         if (StringUtils.isBlank(inputPwd) || StringUtils.isBlank(storedPwd) || StringUtils.isBlank(salt)) {
             log.error("校验密码参数 inputPwd:[{}], storedPwd:[{}], salt:[{}]", StringUtils.isBlank(inputPwd), StringUtils.isBlank(storedPwd), StringUtils.isBlank(salt));
             return false;
         }
         String newPassword = PasswordUtil.genePassword(salt, inputPwd);
+        log.info("校验用户密码, 输入密码: {}, 存储密码: {}, salt: {}, 生成密码: {}", inputPwd, storedPwd, salt, newPassword);
         return storedPwd.equals(newPassword);
     }
 

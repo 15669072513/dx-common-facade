@@ -55,8 +55,10 @@ public class AddGeneralProxyReqDTO {
 	private String password;
 	
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约", required = true)
-	//@NotNull(message = "契约模式不能为空")
 	private Integer contractModel;
+	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
 	
 	@ApiModelProperty(value = "代理线层级上限", required = true)
 	@NotNull(message = "代理线层级上限不能为空")
@@ -132,6 +134,18 @@ public class AddGeneralProxyReqDTO {
     @NotNull(message = "电竞返点比例不能为空")
     @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
     private BigDecimal esportsRebate;
+    
+    @ApiModelProperty("德州返佣比例")
+    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
+    private BigDecimal texasCommission;
+    
+    @ApiModelProperty("德州保险返佣比例")
+    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
+    private BigDecimal texasInsuranceCommission;
+    
+    @ApiModelProperty("其他返佣比例")
+    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
+    private BigDecimal otherCommission;
 	
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		

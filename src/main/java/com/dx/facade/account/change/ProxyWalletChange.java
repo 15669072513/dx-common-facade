@@ -159,7 +159,9 @@ public enum ProxyWalletChange implements IWalletChange {
     //运营在中控后台帮助代理人工加额上分
     v2_1_deposit_back(WalletType.agent_cash, ProxyBizType.v2_1_deposit, ProxyChangeType.v2_1_deposit_back, ProxyAppType.v2_1_deposit, TransType.in),
     //运营在中控后台帮助代理人工减额下分
-    v2_1_withdraw_back(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_back, ProxyAppType.v2_1_withdraw, TransType.out);
+    v2_1_withdraw_back(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_back, ProxyAppType.v2_1_withdraw, TransType.out),
+    //代理提现成功
+    v2_1_withdraw_success(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw, ProxyAppType.v2_1_withdraw, TransType.out);
 
     private IWalletType walletType;
     private IBizType bizType;
@@ -233,14 +235,19 @@ public enum ProxyWalletChange implements IWalletChange {
                 ProxyWalletChange.quota_deposit,
                 ProxyWalletChange.commission_deposit,
                 ProxyWalletChange.quota_deposit_add,
-                ProxyWalletChange.commission_deposit_add);
+                ProxyWalletChange.commission_deposit_add,
+                ProxyWalletChange.v2_1_deposit,
+                ProxyWalletChange.v2_1_deposit_back
+        );
     }
 
     // TODO 这里需要更新吗
     public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList(){
         return Arrays.asList(
                 ProxyWalletChange.commission_withdraw_success,
-                ProxyWalletChange.commission_withdraw_sub
+                ProxyWalletChange.commission_withdraw_sub,
+                ProxyWalletChange.v2_1_withdraw,
+                ProxyWalletChange.v2_1_deposit_back
         );
     }
 

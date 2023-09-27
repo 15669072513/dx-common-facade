@@ -597,6 +597,10 @@ public interface ExcelHeadI18nKey {
     String UPDATE_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_修改时间";
     String LOST_EFFECT_DT = "EXCEL_HEAD_I18N_KEY.MEMBER_失效时间";
     String CREATED_AT = "EXCEL_HEAD_I18N_KEY.MEMBER_注册时间";
+    
+    String TEXAS_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_团队德州返佣";
+    String TEXAS_INSURANCE_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_团队德州保险返佣";
+    String OTHER_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_团队其他返佣";
 
     String FILE_NAME_域名导入模板 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名导入模板";
 
@@ -627,6 +631,8 @@ public interface ExcelHeadI18nKey {
 
     /** 返点比例列表文件名 */
     String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
+    /** 返佣比例列表文件名 */
+    String FILE_NAME_COMMISSION_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返佣比例列表";
     
     String USER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_账号";
     String MEMBER_PROXY_LEVEL = "EXCEL_HEAD_I18N_KEY.MEMBER_层级";
@@ -639,12 +645,19 @@ public interface ExcelHeadI18nKey {
     String MEMBER_CHESS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_棋牌";
     String MEMBER_ESPORTS_REBATE = "EXCEL_HEAD_I18N_KEY.MEMBER_电竞";
     
+    String MEMBER_TEXAS_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_德州俱乐部";
+    String MEMBER_TEXAS_INSURANCE_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_德州保险";
+    String MEMBER_OTHER_COMMISSION = "EXCEL_HEAD_I18N_KEY.MEMBER_其他";
+    
     String MEMBER_USER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_会员账号";
     /** 用户登录设备记录表 */
     String FILE_NAME_MEMBER_LOGIN_DEVICE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_登录设备表";
 
     /** 个人返点比例列表文件名 */
     String FILE_NAME_MEMBER_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返点比例列表";
+    
+    /** 个人返点比例列表文件名 */
+    String FILE_NAME_MEMBER_COMMISSION_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_个人返佣比例列表";
 
     /** 俱乐部申请记录 */
     String FILE_NAME_CLUB_APPLY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部申请记录";
