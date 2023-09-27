@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.common.utils.DateToLongSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.models.auth.In;
 import lombok.Data;
 
 import java.io.Serializable;
@@ -121,5 +122,8 @@ public class DxGameConfigListResp implements Serializable {
     private Boolean insuranceChoosSheet;
 
     @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
-    private Boolean insuranceMode;
+    private Integer insuranceMode;
+
+    @ApiModelProperty("保险出发下限")
+    private Integer insuranceLower;
 }

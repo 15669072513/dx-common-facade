@@ -141,4 +141,17 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit;
+
+    @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
+    private Integer insuranceMode;
+
+    @ApiModelProperty("保险模式中文描述 0-不开保险 1-经典保险")
+    private String insuranceModeStr;
+
+    @ApiModelProperty("turn购买保险最低值,整数类型")
+    private BigDecimal insuranceTurn;
+    @ApiModelProperty("选张购买功能 false-不选张 true-选张")
+    private Boolean insuranceChooseSheet;
+    @ApiModelProperty("保险触发下限")
+    private Integer insuranceLowerLimit;
 }

@@ -25,6 +25,6 @@ public class WithdrawOrderStatsParamDTO implements Serializable {
 
     @ApiModelProperty("申请时间开始")
     private LocalDateTime eventTimeStart;
-    @ApiModelProperty("账单周期开始试驾")
+
     private LocalDateTime billStartTime;
 }
