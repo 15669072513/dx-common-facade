@@ -22,4 +22,6 @@ public class GameOrderUserTableSumReq extends BaseRequest {
     @ApiModelProperty("游戏类型 2001 德州游戏 2002 德州短牌局")
     private Integer gameType;
 
+    @ApiModelProperty(value = "俱乐部ID")
+    private Long clubId;
 }

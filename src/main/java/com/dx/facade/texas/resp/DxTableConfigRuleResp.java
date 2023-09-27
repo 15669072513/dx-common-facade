@@ -151,7 +151,7 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("牌桌总抽水")
     private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("牌桌总输赢")
     private BigDecimal costTotal;
 
     @ApiModelProperty("游戏类型名称")
@@ -189,4 +189,13 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("单牌桌可坐下人数上限")
     private Integer sitDownLimit;
+
+    @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
+    private Boolean insuranceMode;
+    @ApiModelProperty("turn购买保险最低值,整数类型")
+    private BigDecimal insuranceTurn;
+    @ApiModelProperty("选张购买功能 false-不选张 true-选张")
+    private Boolean insuranceChooseSheet;
+    @ApiModelProperty("保险触发下限")
+    private Integer insuranceLowerLimit;
 }

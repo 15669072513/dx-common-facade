@@ -31,6 +31,7 @@ public enum MemberBizType implements IBizType {
     v2_1_withdraw(20, "会员取款", "1,5"),
 
     illegal_type(-1, "未知的类型", "-1"),
+
     ;
 
     private Integer code;
