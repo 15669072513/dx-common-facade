@@ -1,14 +1,12 @@
 package com.dx.facade.account.enums;
 
+import com.dx.exception.BizException;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-import com.dx.exception.BizException;
-
-//这个类和payment包下的重名了，后面使用AcctPayment代替这个payment吧。
-@Deprecated
-public class Payment {
+public class AcctPayment {
 
     public enum CurrencyType {
         CNY("CNY", "人民币", "¥"),
@@ -445,12 +443,12 @@ public class Payment {
             return this.desc;
         }
 
-        public static Payment.MemberAdjustType getType(Integer code) throws BizException {
-            Payment.MemberAdjustType[] var1 = values();
+        public static AcctPayment.MemberAdjustType getType(Integer code) throws BizException {
+            AcctPayment.MemberAdjustType[] var1 = values();
             int var2 = var1.length;
 
             for(int var3 = 0; var3 < var2; ++var3) {
-                Payment.MemberAdjustType enums = var1[var3];
+                AcctPayment.MemberAdjustType enums = var1[var3];
                 if (enums.code.equals(code)) {
                     return enums;
                 }
@@ -485,12 +483,12 @@ public class Payment {
             return this.desc;
         }
 
-        public static Payment.AddAdjustAuditStatus getType(Integer code) throws BizException {
-            Payment.AddAdjustAuditStatus[] var1 = values();
+        public static AcctPayment.AddAdjustAuditStatus getType(Integer code) throws BizException {
+            AcctPayment.AddAdjustAuditStatus[] var1 = values();
             int var2 = var1.length;
 
             for(int var3 = 0; var3 < var2; ++var3) {
-                Payment.AddAdjustAuditStatus enums = var1[var3];
+                AcctPayment.AddAdjustAuditStatus enums = var1[var3];
                 if (enums.code.equals(code)) {
                     return enums;
                 }
@@ -565,16 +563,16 @@ public class Payment {
         }
 
         public static String getDesc(Integer code) {
-            Payment.EnumBlackStatusType blackStatusType = getType(code);
+            AcctPayment.EnumBlackStatusType blackStatusType = getType(code);
             return Objects.nonNull(blackStatusType) ? blackStatusType.desc : "";
         }
 
-        public static Payment.EnumBlackStatusType getType(Integer code) {
-            Payment.EnumBlackStatusType[] var1 = values();
+        public static AcctPayment.EnumBlackStatusType getType(Integer code) {
+            AcctPayment.EnumBlackStatusType[] var1 = values();
             int var2 = var1.length;
 
             for(int var3 = 0; var3 < var2; ++var3) {
-                Payment.EnumBlackStatusType blackStatusType = var1[var3];
+                AcctPayment.EnumBlackStatusType blackStatusType = var1[var3];
                 if (blackStatusType.code.equals(code)) {
                     return blackStatusType;
                 }
@@ -600,16 +598,16 @@ public class Payment {
         }
 
         public static String getDesc(String code) {
-            Payment.EnumVirtualType virtualType = getType(code);
+            AcctPayment.EnumVirtualType virtualType = getType(code);
             return Objects.nonNull(virtualType) ? virtualType.desc : "";
         }
 
-        public static Payment.EnumVirtualType getType(String code) {
-            Payment.EnumVirtualType[] var1 = values();
+        public static AcctPayment.EnumVirtualType getType(String code) {
+            AcctPayment.EnumVirtualType[] var1 = values();
             int var2 = var1.length;
 
             for(int var3 = 0; var3 < var2; ++var3) {
-                Payment.EnumVirtualType virtualType = var1[var3];
+                AcctPayment.EnumVirtualType virtualType = var1[var3];
                 if (virtualType.code.equals(code)) {
                     return virtualType;
                 }
