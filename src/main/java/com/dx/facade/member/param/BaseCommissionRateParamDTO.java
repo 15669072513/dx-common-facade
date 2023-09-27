@@ -33,10 +33,6 @@ public class BaseCommissionRateParamDTO implements Serializable {
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 0：会员 1：代理")
-    @NotNull(message = "用户类型不能为空")
-    private Integer userType;
-    
     @ApiModelProperty("用户Id")
     private Long userId;
 
@@ -50,8 +46,8 @@ public class BaseCommissionRateParamDTO implements Serializable {
     private String parentProxyName;
     
     @ApiModelProperty("德州俱乐部返佣比例")
-    @DecimalMin(value = "0.00", message = "德州返佣比例不能小于0.00")
-    @NotNull(message = "德州返佣比例不能为空")
+    @DecimalMin(value = "0.00", message = "德州俱乐部返佣比例不能小于0.00")
+    @NotNull(message = "德州俱乐部返佣比例不能为空")
     private BigDecimal texasCommission;
     
     @ApiModelProperty("德州保险返佣比例")
