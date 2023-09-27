@@ -17,7 +17,6 @@ import lombok.NoArgsConstructor;
  * <p>
  * 返点比例DTO父类
  * </p>
- *
  * @author bicycle
  * @since 2023-7-22
  */
@@ -53,11 +52,6 @@ public class BaseRebateRateParamDTO implements Serializable {
     @DecimalMin(value = "0.00", message = "德州返点比例不能小于0.00")
     @NotNull(message = "德州返点比例不能为空")
     private BigDecimal texasRebate;
-    
-    @ApiModelProperty("德州保险返点比例")
-    @DecimalMin(value = "0.00", message = "德州保险返点比例不能小于0.00")
-    @NotNull(message = "德州保险返点比例不能为空")
-    private BigDecimal texasInsuranceRebate;
     
     @ApiModelProperty("真人返点比例")
     @NotNull(message = "真人返点比例不能为空")

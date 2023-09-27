@@ -151,7 +151,7 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("牌桌总抽水")
     private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("牌桌总输赢")
     private BigDecimal costTotal;
 
     @ApiModelProperty("游戏类型名称")
