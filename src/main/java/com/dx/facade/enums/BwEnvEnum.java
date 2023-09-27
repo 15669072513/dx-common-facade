@@ -12,7 +12,7 @@ public enum BwEnvEnum {
      */
     DEV(1,"dev"),
     TEST(2,"test"),
-    PRE(3,"prerelease"),
+    PRE(3,"pre"),
     PROD(4,"prod"),
     ;
 
