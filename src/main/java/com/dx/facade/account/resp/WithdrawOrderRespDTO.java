@@ -135,9 +135,9 @@ public class WithdrawOrderRespDTO {
     @TableField("order_status")
     private Integer orderStatus;
 
-    /*@ApiModelProperty("客户端状态 0.处理中 1.成功 2.失败")
+    @ApiModelProperty("客户端状态 0.处理中 1.成功 2.失败")
     @TableField("client_status")
-    private Integer clientStatus;*/
+    private Integer clientStatus;
 
     @ApiModelProperty("申请时间")
     @TableField("event_time")
@@ -298,4 +298,7 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty(value = "支付厂商")
     private String payMerchantName;
+
+    @ApiModelProperty(value = "提款手续费")
+    private BigDecimal withdrawFee;
 }
