@@ -39,6 +39,9 @@ public class GameRecordDeatailPackResp implements Serializable {
     @ApiModelProperty("底池金额 （其他轮都是延续上一轮的底池，翻牌前轮的总底池数量）")
     private BigDecimal potAmount;
 
+    @ApiModelProperty("保险池(手牌平台的保险盈亏)")
+    private BigDecimal insuredPool=BigDecimal.ZERO;
+
     @ApiModelProperty("当前局数")
     private Long roundNum;
 

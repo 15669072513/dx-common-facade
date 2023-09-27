@@ -117,7 +117,7 @@ public class DxGameConfigAddReq implements Serializable {
     private Boolean insuranceChoosSheet;
 
     @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
-    private Boolean insuranceMode;
+    private Integer insuranceMode;
 
     @ApiModelProperty("保险出发下限")
     private Integer insuranceLower;

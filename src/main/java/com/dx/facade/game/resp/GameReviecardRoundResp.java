@@ -50,4 +50,7 @@ public class GameReviecardRoundResp {
 
     @ApiModelProperty("手牌号")
     private Integer roundNo;
+
+    @ApiModelProperty("保险池(手牌平台的保险盈亏)")
+    private BigDecimal insuredPool=BigDecimal.ZERO;
 }
