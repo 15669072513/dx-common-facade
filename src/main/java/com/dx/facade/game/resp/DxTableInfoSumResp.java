@@ -24,6 +24,9 @@ public class DxTableInfoSumResp implements Serializable {
     @ApiModelProperty("牌桌局数")
     private Integer tableHandNumber;
 
+    @ApiModelProperty("累计参与者")
+    private Integer participantTotal;
+
     @ApiModelProperty("玩家总带出")
     private BigDecimal bringOutChipScore;
 

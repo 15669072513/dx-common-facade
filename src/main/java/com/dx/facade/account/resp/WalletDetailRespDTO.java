@@ -167,4 +167,8 @@ public class WalletDetailRespDTO {
     @ApiModelProperty("牌桌名称")
     @TableField("table_name")
     private String tableName;
+
+    @ApiModelProperty("牌桌名称")
+    @TableField("table_code")
+    private String tableCode;
 }
