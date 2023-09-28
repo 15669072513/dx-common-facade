@@ -130,7 +130,7 @@ public class GameOrderRecordUserHandResp {
     /**
      * 有效投注
      */
-    @ApiModelProperty("有效投注")
+    @ApiModelProperty("俱乐部游戏有效投注")
     private BigDecimal validBetAmount;
     /**
      * 抽水占比
@@ -150,11 +150,20 @@ public class GameOrderRecordUserHandResp {
     /**
      * 投注金额
      */
-    @ApiModelProperty("投注金额")
+    @ApiModelProperty("俱乐部游戏投注金额")
     private BigDecimal betAmount;
     /**
      * 座位号
      */
     @ApiModelProperty("座位号")
     private Integer seatNum;
+
+    @ApiModelProperty("保险投注金额")
+    private BigDecimal insuranceBetAmount;
+
+    @ApiModelProperty("保险有效投注")
+    private BigDecimal insuranceValidBetAmount;
+
+    @ApiModelProperty("抽水贡献")
+    private BigDecimal pumpContribution;
 }

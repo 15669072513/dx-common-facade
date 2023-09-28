@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.common.utils.DateToLongSerializer;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
@@ -118,4 +119,7 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("保险盈亏")
+    private BigDecimal insuredNetAmount;
 }
