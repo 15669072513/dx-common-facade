@@ -3,6 +3,7 @@ package com.dx.facade.payment.service;
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.req.GetPayParamDTO;
+import com.dx.facade.account.req.SubmitVetfityParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
@@ -20,6 +21,14 @@ import java.util.List;
  * @author agan
  */
 public interface TyPayOrderRpcService {
+    /**
+     * 会员/代理上传凭证
+     * @param submitVetfityParamDTO
+     * @return
+     * @throws Exception
+     */
+    @ApiModelProperty(value = "会员取款")
+    CommonResp submitVetfity(SubmitVetfityParamDTO submitVetfityParamDTO) throws Exception;
 
     /**
      * 会员取款接口

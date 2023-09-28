@@ -23,6 +23,8 @@ public class WithdrawOrderSumDTO {
     private BigDecimal realAmountPageUSDT;
     @ApiModelProperty("提款记录总计：USDT")
     private BigDecimal realAmountTotalUSDT;
-
-
+    @ApiModelProperty("提现手续费小计：USDT")
+    private BigDecimal withdrawFeePageUSDT;
+    @ApiModelProperty("提现手续费总计：USDT")
+    private BigDecimal withdrawFeeTotalUSDT;
 }

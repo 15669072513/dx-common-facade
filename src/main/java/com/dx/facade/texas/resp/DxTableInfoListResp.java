@@ -108,16 +108,16 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("盈亏金额")
     private BigDecimal netAmount;
 
-    @ApiModelProperty("保险输赢")
+    @ApiModelProperty("总保险盈亏")
     private BigDecimal insuredNetAmount;
 
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount;
 
-    @ApiModelProperty("牌桌总抽水")
+    @ApiModelProperty("总打牌抽水")
     private BigDecimal pumpingAmountTotal;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("总牌桌盈亏")
     private BigDecimal costTotal;
 
     @ApiModelProperty("会员带入次数")
