@@ -8,7 +8,7 @@ public enum ObBetStatusEnum implements ICodeEnum{
     UNKNOWN(-1, "未知状态"),
     UNSETTLED(0, "未结算"),
     SETTLED(1, "已结算"),
-    WONT_SETTLE(2, "不结算");
+    WONT_SETTLE(2, "已取消");
 
     private final Integer code;
     private final String description;
