@@ -14,6 +14,9 @@ public class ProfitAndLossStatementResp  implements Serializable {
     @ApiModelProperty("德信注单id")
     private String id;
 
+    @ApiModelProperty("项目")
+    private String itemName;
+
     @ApiModelProperty("投注人数")
     private Long betNumber;
 
@@ -27,5 +30,5 @@ public class ProfitAndLossStatementResp  implements Serializable {
     private BigDecimal validBetAmount;
 
     @ApiModelProperty("盈亏")
-    private BigDecimal profitAndLoss;
+    private BigDecimal netAmount;
 }
