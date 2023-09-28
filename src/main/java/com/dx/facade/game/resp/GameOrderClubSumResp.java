@@ -11,14 +11,28 @@ import java.math.BigDecimal;
 public class GameOrderClubSumResp {
     @ApiModelProperty("俱乐部id")
     private Long clubId;
+
     @ApiModelProperty("俱乐部名称")
     private String clubName;
+
     @ApiModelProperty("参数手牌数")
     private Long handCount;
-    @ApiModelProperty("累计手牌盈利")
+
+    @ApiModelProperty("累计俱乐部游戏盈利")
     private BigDecimal netAmount;
-    @ApiModelProperty("有效金额")
+
+    @ApiModelProperty("累计保险盈利")
+    private BigDecimal insuranceNetAmount;
+
+    @ApiModelProperty("累计俱乐部游戏有效投注")
     private BigDecimal validBetAmount;
+
+    @ApiModelProperty("累计保险有效投注")
+    private BigDecimal insuranceValidBetAmount;
+
     @ApiModelProperty("累计抽水总额")
     private BigDecimal pumpingAmount;
+
+    @ApiModelProperty("累计抽水贡献")
+    private BigDecimal pumpContribution;
 }
