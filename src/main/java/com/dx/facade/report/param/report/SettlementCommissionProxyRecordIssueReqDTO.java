@@ -4,10 +4,14 @@ import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
 import java.util.List;
 
+/**
+ * @author 发放佣金查询
+ */
 @Data
-public class SettlementCommissionProxyRecordIssueReqDTO extends LocalDatePageRequest {
+public class SettlementCommissionProxyRecordIssueReqDTO implements Serializable {
 
 
     /**
@@ -21,5 +25,12 @@ public class SettlementCommissionProxyRecordIssueReqDTO extends LocalDatePageReq
      */
     @ApiModelProperty("代理id")
     private Long  proxyId;
+
+
+    /**
+     * 报表日期
+     */
+    @ApiModelProperty("报表日期")
+    private Integer reportDate;
 
 }
