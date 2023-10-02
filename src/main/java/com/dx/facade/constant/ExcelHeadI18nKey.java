@@ -36,8 +36,11 @@ public interface ExcelHeadI18nKey {
     String FUNDS_存款终端设备号风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款终端设备号风控层级"; //
     String FUNDS_支付厂商 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付厂商"; //
     String FUNDS_支付方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付方式"; //
+    String FUNDS_支付币种 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付币种"; //
     String FUNDS_存款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款金额"; //
+    String FUNDS_实际支付金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_实际支付金额"; //
     String FUNDS_实际到账金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_实际到账金额"; //
+    String FUNDS_收款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_收款信息"; //
     String FUNDS_信用等级 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用等级"; //
     String FUNDS_申请时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_申请时间"; //
     String FUNDS_到账时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_到账时间"; //
@@ -48,6 +51,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_取款账户 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款账户"; //
     String FUNDS_取款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款金额"; //
     String FUNDS_手续费 = "EXCEL_HEAD_I18N_KEY.FUNDS_手续费"; //
+    String FUNDS_存款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款时间"; //
     String FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型"; //
     String FUNDS_申请金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_申请金额";//
 
