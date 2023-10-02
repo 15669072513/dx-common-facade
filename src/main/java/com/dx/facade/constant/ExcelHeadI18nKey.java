@@ -43,6 +43,11 @@ public interface ExcelHeadI18nKey {
     String FUNDS_到账时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_到账时间"; //
     String FUNDS_备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_备注"; //
     String FUNDS_支付类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付类型"; //
+    String FUNDS_取款类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款类型"; //
+    String FUNDS_取款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款信息"; //
+    String FUNDS_取款账户 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款账户"; //
+    String FUNDS_取款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款金额"; //
+    String FUNDS_手续费 = "EXCEL_HEAD_I18N_KEY.FUNDS_手续费"; //
     String FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型"; //
     String FUNDS_申请金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_申请金额";//
 
