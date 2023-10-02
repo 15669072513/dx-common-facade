@@ -111,8 +111,10 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
 
     /**
      * 团队返佣金额
+     *
+     *
      */
-    @ApiModelProperty("团队返佣金额")
+    @ApiModelProperty("团队返佣金额    ->   已发放返佣=commissionAmount-commissionPayAmount")
     private BigDecimal commissionAmount;
 
     /**
@@ -134,9 +136,9 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
     private BigDecimal commissionAdjustBackSubAmount;
 
     /**
-     * 团队返佣金额
+     * 已支付金额
      */
-    @ApiModelProperty("团队返佣金额")
+    @ApiModelProperty("已支付金额 ->已发放返佣=commissionAmount-commissionPayAmount")
     private BigDecimal commissionPayAmount;
 
     /**
