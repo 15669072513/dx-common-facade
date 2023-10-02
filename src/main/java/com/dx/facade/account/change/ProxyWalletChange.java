@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 代理账变业务 定义
+ *
  * @author Administrator
  */
 public enum ProxyWalletChange implements IWalletChange {
@@ -83,9 +84,9 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_rebate_adjustment_add(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.in),
     commission_rebate_adjustment_sub(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.out),
 
-//    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
+    //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
 //    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
-     //--------------------v2需求代理全部账变类型------------
+    //--------------------v2需求代理全部账变类型------------
     //中心钱包 13种
     //场景1：官方通过中控后台给代理人工加额，代理的中心钱包余额增加
     v2_cash_deposit_by_official(WalletType.agent_cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_by_official, ProxyAppType.v2_cash_deposit_by_official, TransType.in),
@@ -94,17 +95,17 @@ public enum ProxyWalletChange implements IWalletChange {
     //场景3：代理自己通过代理后台对下级代理充值上分，代理自己的中心钱包余额扣减，下级代理的中心钱包额度增加，与场景2对应
     v2_cash_deposit_to_sub_proxy(WalletType.agent_cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_sub_proxy, ProxyAppType.v2_cash_deposit_to_sub_proxy, TransType.out),
     //场景4：代理通过代理后台，给自己的下级会员充值上分，代理自己的中心钱包余额扣减，会员的中心钱包余额增加
-    v2_cash_deposit_to_member(WalletType.agent_cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_member,ProxyAppType.v2_cash_deposit_to_member, TransType.out),
+    v2_cash_deposit_to_member(WalletType.agent_cash, ProxyBizType.v2_deposit, ProxyChangeType.v2_cash_deposit_to_member, ProxyAppType.v2_cash_deposit_to_member, TransType.out),
     //官方通过中控后台给代理人工扣减，代理的中心钱包额度扣除
     v2_cash_withdraw_by_official(WalletType.agent_cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_official, ProxyAppType.v2_cash_withdraw_by_official, TransType.out),
     //代理被上级代理在代理后台提现，代理的中心钱包余额扣减，上级代理的中心钱包余额增加
     v2_cash_withdraw_by_parent_proxy(WalletType.agent_cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_by_parent_proxy, ProxyAppType.v2_cash_withdraw_by_parent_proxy, TransType.out),
     //代理通过代理后台给下级代理提现，代理的中心钱包余额增加，下级代理的中心钱包余额扣除
-    v2_cash_withdraw_to_sub_proxy(WalletType.agent_cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_sub_proxy, ProxyAppType.v2_cash_withdraw_to_sub_proxy,TransType.in),
+    v2_cash_withdraw_to_sub_proxy(WalletType.agent_cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_sub_proxy, ProxyAppType.v2_cash_withdraw_to_sub_proxy, TransType.in),
     //代理通过代理后台给会员提现，或者会员主动提现订单被代理审核通过，代理的中心钱包余额增加，会员的中心钱包余额扣减或中心钱包冻结额度扣减
     v2_cash_withdraw_to_member(WalletType.agent_cash, ProxyBizType.v2_withdraw, ProxyChangeType.v2_cash_withdraw_to_member, ProxyAppType.v2_cash_withdraw_to_member, TransType.in),
     //下级会员有效投注后，给上级代理的返点，代理的中心钱包余额增加
-    v2_cash_rebate(WalletType.agent_cash,  ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_cash_rebate(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate, ProxyAppType.v2_cash_rebate, TransType.in),
     //官方通过人工增加额度，给代理的返点进行增加调整，代理的中心钱包余额增加
     v2_cash_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
     //官方通过人工扣除额度，给代理的返点进行扣除调整，代理的中心钱包余额扣减
@@ -119,11 +120,11 @@ public enum ProxyWalletChange implements IWalletChange {
     v2_credit_up_score_by_official(WalletType.agent_credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.in),
     v2_credit_total_up_score_by_official(WalletType.agent_credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_official, ProxyAppType.v2_credit_up_score_by_official, TransType.in),
     //上级代理通过代理后对自己信用钱包授信上分，代理的信用余额和信用额度同时增加
-    v2_credit_up_score_by_parent_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
-    v2_credit_total_up_score_by_parent_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
+    v2_credit_up_score_by_parent_proxy(WalletType.agent_credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
+    v2_credit_total_up_score_by_parent_proxy(WalletType.agent_credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_by_parent_proxy, ProxyAppType.v2_credit_up_score_by_parent_proxy, TransType.in),
     //代理通过代理后台对下级代理充值上分，代理自己的信用钱包余额和信用额度同时扣减
-    v2_credit_up_score_to_sub_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
-    v2_credit_total_up_score_to_sub_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
+    v2_credit_up_score_to_sub_proxy(WalletType.agent_credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
+    v2_credit_total_up_score_to_sub_proxy(WalletType.agent_credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_sub_proxy, ProxyAppType.v2_credit_up_score_to_sub_proxy, TransType.out),
     //代理通过代理后台对下级会员充值上分，代理自己的信用钱包余额和信用额度同时扣减
     v2_credit_up_score_to_member(WalletType.agent_credit_available, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
     v2_credit_total_up_score_to_member(WalletType.agent_credit_total, ProxyBizType.v2_credit_up_score, ProxyChangeType.v2_credit_up_score_to_member, ProxyAppType.v2_credit_up_score_to_member, TransType.out),
@@ -134,8 +135,8 @@ public enum ProxyWalletChange implements IWalletChange {
     v2_credit_down_score_by_parent_proxy(WalletType.agent_credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.out),
     v2_credit_total_down_score_by_parent_proxy(WalletType.agent_credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_by_parent_proxy, ProxyAppType.v2_credit_down_score_by_parent_proxy, TransType.out),
     //代理通过代理后台给下级代理通过信用钱包授信下分，代理的信用钱包余额和额度增加
-    v2_credit_down_score_to_sub_proxy(WalletType.agent_credit_available,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
-    v2_credit_total_down_score_to_sub_proxy(WalletType.agent_credit_total,  ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
+    v2_credit_down_score_to_sub_proxy(WalletType.agent_credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
+    v2_credit_total_down_score_to_sub_proxy(WalletType.agent_credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_sub_proxy, ProxyAppType.v2_credit_down_score_to_sub_proxy, TransType.in),
     //代理通过代理后台给会员授信下分，代理的信用钱包余额和额度增加
     v2_credit_down_score_to_member(WalletType.agent_credit_available, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.in),
     v2_credit_total_down_score_to_member(WalletType.agent_credit_total, ProxyBizType.v2_credit_down_score, ProxyChangeType.v2_credit_down_score_to_member, ProxyAppType.v2_credit_down_score_to_member, TransType.in),
@@ -145,13 +146,13 @@ public enum ProxyWalletChange implements IWalletChange {
     v2_credit_loan(WalletType.agent_credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.out),
 
     //代理主动申请取款，中心钱包的金额会先减少被冻结
-    v2_1_withdraw_frozen(WalletType.agent_cash,  ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.out),
+    v2_1_withdraw_frozen(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.out),
     //代理申请取款被拒绝后，冻结的钱会返还回到中心钱包
-    v2_1_withdraw_fail(WalletType.agent_cash,  ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.in),
+    v2_1_withdraw_fail(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.in),
     //代理主动申请取款，中心钱包的金额会先减少被冻结
-    v2_1_withdraw_frozen_lock(WalletType.agent_lock,  ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.in),
+    v2_1_withdraw_frozen_lock(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.in),
     //代理申请取款被拒绝后，冻结的钱会返还回到中心钱包
-    v2_1_withdraw_fail_lock(WalletType.agent_lock,  ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.out),
+    v2_1_withdraw_fail_lock(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.out),
     //代理通过平台提供的存款渠道进行自主存款
     v2_1_deposit(WalletType.agent_cash, ProxyBizType.v2_1_deposit, ProxyChangeType.v2_1_deposit, ProxyAppType.v2_1_deposit, TransType.in),
     //代理通过平台提供的取款渠道进行自主取款
@@ -161,7 +162,22 @@ public enum ProxyWalletChange implements IWalletChange {
     //运营在中控后台帮助代理人工减额下分
     v2_1_withdraw_back(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_back, ProxyAppType.v2_1_withdraw, TransType.out),
     //代理提现成功
-    v2_1_withdraw_success(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw, ProxyAppType.v2_1_withdraw, TransType.out);
+    v2_1_withdraw_success(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw, ProxyAppType.v2_1_withdraw, TransType.out),
+
+
+    v2_1_club_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_club_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_1_insure_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_insure_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_1_other_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_other_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_1_club_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_club_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
+    v2_1_insure_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_insure_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
+    v2_1_other_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_other_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
+    v2_1_negate_benefit_commission_income(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_negate_benefit_commission_income, ProxyAppType.v2_1_negative_benefit_commission, TransType.in),
+    v2_1_negate_benefit_commission_dispatch(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_negate_benefit_commission_dispatch, ProxyAppType.v2_1_negative_benefit_commission, TransType.out),
+    v2_1_proxy_commission_add(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_proxy_commission_add, ProxyAppType.v2_1_negative_benefit_commission, TransType.in),
+    v2_1_proxy_commission_sub(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_proxy_commission_sub, ProxyAppType.v2_1_negative_benefit_commission, TransType.out),
+
+
+    ;
 
     private IWalletType walletType;
     private IBizType bizType;
@@ -171,14 +187,13 @@ public enum ProxyWalletChange implements IWalletChange {
     private String name;
 
     /**
-     *
      * @param walletType 钱包类型
-     * @param bizType 代理业务类型
+     * @param bizType    代理业务类型
      * @param changeType 代理账变类型
-     * @param appType 代理客户端账变类型
-     * @param transType 收支类型
+     * @param appType    代理客户端账变类型
+     * @param transType  收支类型
      */
-    ProxyWalletChange(WalletType walletType, ProxyBizType bizType, ProxyChangeType changeType, ProxyAppType appType, TransType transType){
+    ProxyWalletChange(WalletType walletType, ProxyBizType bizType, ProxyChangeType changeType, ProxyAppType appType, TransType transType) {
         this.walletType = walletType;
         this.bizType = bizType;
         this.changeType = changeType;
@@ -188,32 +203,32 @@ public enum ProxyWalletChange implements IWalletChange {
     }
 
     @Override
-    public IWalletType walletType(){
+    public IWalletType walletType() {
         return walletType;
     }
 
     @Override
-    public IBizType bizType(){
+    public IBizType bizType() {
         return bizType;
     }
 
     @Override
-    public IChangeType changeType(){
+    public IChangeType changeType() {
         return changeType;
     }
 
     @Override
-    public IAppType appType(){
+    public IAppType appType() {
         return appType;
     }
 
     @Override
-    public TransType transType(){
+    public TransType transType() {
         return transType;
     }
 
     @Override
-    public String getName(){
+    public String getName() {
         return name;
     }
 
@@ -230,7 +245,7 @@ public enum ProxyWalletChange implements IWalletChange {
     }
 
     // TODO  这里需要更新吗？
-    public static List<ProxyWalletChange> getDepositProxyWalletChangeList(){
+    public static List<ProxyWalletChange> getDepositProxyWalletChangeList() {
         return Arrays.asList(
                 ProxyWalletChange.quota_deposit,
                 ProxyWalletChange.commission_deposit,
@@ -242,7 +257,7 @@ public enum ProxyWalletChange implements IWalletChange {
     }
 
     // TODO 这里需要更新吗
-    public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList(){
+    public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList() {
         return Arrays.asList(
                 ProxyWalletChange.commission_withdraw_success,
                 ProxyWalletChange.commission_withdraw_sub,
@@ -251,7 +266,7 @@ public enum ProxyWalletChange implements IWalletChange {
         );
     }
 
-    public static List<ProxyWalletChange> v2List(){
+    public static List<ProxyWalletChange> v2List() {
         List<ProxyWalletChange> list = new ArrayList<>();
         list.add(ProxyWalletChange.v2_cash_deposit_by_official);
         list.add(ProxyWalletChange.v2_cash_deposit_by_parent_proxy);
