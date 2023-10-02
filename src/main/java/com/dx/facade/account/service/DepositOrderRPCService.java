@@ -16,6 +16,8 @@ import com.dx.facade.account.resp.SubmitPayRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
 
+import java.math.BigDecimal;
+
 /**
  * 会员代理充值相关接口
  */
@@ -28,7 +30,14 @@ public interface DepositOrderRPCService {
      */
     CommonResp<PageResp<DepositOrderRespDTO, DepositOrderSumDTO>> getDepositOrderList(PageReq<DepositOrderParamDTO> pageReq);
 
-
+    /**
+     * 获取某个用户的存款优惠比例*
+     * @param merchantId
+     * @param userType
+     * @param userId
+     * @return
+     */
+    BigDecimal getDiscountRate(Long merchantId,Integer userType,Long userId);
 
     CommonResp<SubmitPayRespDTO> submitPay(SubmitPayParamDTO param) throws BizException;
 

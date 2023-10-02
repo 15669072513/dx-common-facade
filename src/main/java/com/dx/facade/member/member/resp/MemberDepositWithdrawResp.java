@@ -36,7 +36,7 @@ public class MemberDepositWithdrawResp {
     @ApiModelProperty(value = "实际支付金额")
     private BigDecimal realAmount;
     @ApiModelProperty(value = "存款优惠")
-    private BigDecimal discountRate;
+    private BigDecimal discountAmount;
     @ApiModelProperty(value = "存款状态(0=待付款,1=待确认,2=处理中,3=成功,4=失败,5=已取消)，取款状态(0=处理中,1=成功,2=失败)")
     private Integer orderStatus;
     @ApiModelProperty(value = "备注")
