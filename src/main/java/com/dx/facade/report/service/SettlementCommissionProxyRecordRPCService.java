@@ -34,8 +34,8 @@ public interface SettlementCommissionProxyRecordRPCService {
     CommonResp<List<SettlementCommissionProxyRecordAwaitIssueRspDTO>> awaitIssueListByProxyIds(SettlementCommissionProxyRecordAwaitIssueReqDTO reqDTO);
     /**
      * 发放返佣
-     * @param payDTOS
+     * @param payList
      * @return
      */
-    CommonResp<Integer> issueCommission(List<ProxyCommissionListPayDTO> payDTOS);
+    CommonResp<Integer> issueCommission(List<ProxyCommissionListPayDTO> payList);
 }
