@@ -92,6 +92,16 @@ public class WithdrawConfigResp implements Serializable {
     private BigDecimal bankCardFee;
     @ApiModelProperty("存款流水倍数")
     private BigDecimal depositMultiple;
+    @ApiModelProperty("存款优惠流水倍数")
+    private BigDecimal depositDiscountMultiple;
+    @ApiModelProperty("后台存款流水倍数")
+    private BigDecimal depositBackMultiple;
+    @ApiModelProperty("后台存款优惠流水倍数")
+    private BigDecimal depositBackDiscountMultiple;
+    @ApiModelProperty("会员返水流水倍数")
+    private BigDecimal rebateMultiple;
+    @ApiModelProperty("会员返水增加调整流水倍数")
+    private BigDecimal rebateAddMultiple;
     @ApiModelProperty("上分流水倍数")
     private BigDecimal upScoreMultiple;
     @ApiModelProperty("借款流水倍数")
