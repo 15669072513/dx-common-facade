@@ -168,13 +168,13 @@ public enum ProxyWalletChange implements IWalletChange {
     //官方可以在给代理的返点上增加金额
     v2_1_insure_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_insure_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
     //官方可以在给代理的返点上增加金额
-    v2_1_other_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_other_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
+    v2_1_other_rebate_add(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_add, ProxyAppType.v2_cash_rebate, TransType.in),
     //官方可以在给代理的返点上扣减金额
     v2_1_club_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_club_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
     //官方可以在给代理的返点上扣减金额
     v2_1_insure_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_insure_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
     //官方可以在给代理的返点上扣减金额
-    v2_1_other_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_1_other_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
+    v2_1_other_rebate_sub(WalletType.agent_cash, ProxyBizType.v2_rebate, ProxyChangeType.v2_cash_rebate_sub, ProxyAppType.v2_cash_rebate, TransType.out),
     //根据定期返佣账单，给相关代理结算返佣点金额
     v2_1_negate_benefit_commission_income(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_negate_benefit_commission_income, ProxyAppType.v2_1_negative_benefit_commission, TransType.in),
     //根据定期返佣账单，给相关代理结算返佣点金额
