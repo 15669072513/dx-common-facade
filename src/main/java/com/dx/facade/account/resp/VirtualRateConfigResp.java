@@ -51,6 +51,12 @@ public class VirtualRateConfigResp implements Serializable {
     @ApiModelProperty("汇率")
     private BigDecimal rate;
 
+    @ApiModelProperty("浮动汇率")
+    private BigDecimal floatRate;
+
+    @ApiModelProperty("三方汇率")
+    private BigDecimal thirdRate = BigDecimal.ZERO;
+
     @ApiModelProperty("操作人")
     private String operator;
 
