@@ -1,11 +1,23 @@
 package com.dx.facade.report.param.report;
 
-import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.hibernate.validator.constraints.Range;
+
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
 
 @Data
-public class SettlementCommissionProxyRecordReqDTO  extends LocalDatePageRequest {
+public class SettlementCommissionProxyRecordReqDTO{
+    @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
+    @NotNull(message = "分页参数不能为空")
+    @Min(value = 1, message = "当前页最小值不能小于1")
+    protected Long pageNum = 1L;
+
+    @ApiModelProperty(value = "每页条数,默认20条", required = true, example = "10")
+    @NotNull(message = "分页参数不能为空")
+    @Range(min = 1, max = 500, message = "每页条数必须 ≥ 1 并且 ≤ 500")
+    protected Long pageSize = 20L;
     /**
      * 商户id
      */
@@ -32,6 +44,11 @@ public class SettlementCommissionProxyRecordReqDTO  extends LocalDatePageRequest
      */
     @ApiModelProperty("代理id")
     private Long proxyId;
+
+    /** 上级代理id */
+    @ApiModelProperty(value = "上级代理ID")
+    private Long parentProxyId;
+
     /**
      * 代理账号
      */
