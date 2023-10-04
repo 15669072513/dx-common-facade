@@ -133,7 +133,19 @@ public enum MemberWalletChange implements IWalletChange {
     //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
     v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
     //会员取款成功
-    v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER)
+    v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_club_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_insure_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_club_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_insure_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER)
     ;
 
     private IWalletType walletType;

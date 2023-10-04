@@ -68,22 +68,6 @@ public interface WalletRPCService {
     BigDecimal getTodayNetAmount(WalletSimpleParam param);
 
     /**
-     * 用户钱包余额操作-筹码兑换
-     *
-     * @param dto 操作参数
-     * @throws BizException
-     */
-    CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto) throws BizException;
-
-    /**
-     * 用户钱包余额操作批量兑换
-     *
-     * @param balanceDTOS
-     * @return
-     */
-    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
-
-    /**
      * @author Dealer
      * @description: 获取指定用户(类型)的, 资金信息[中心、信用、额度]
      * @date 2023/9/21

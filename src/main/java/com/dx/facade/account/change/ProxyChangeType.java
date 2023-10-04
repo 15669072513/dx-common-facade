@@ -54,8 +54,8 @@ public enum ProxyChangeType implements IChangeType {
     v2_cash_withdraw_to_sub_proxy(82, "代理给下级提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_withdraw_to_member(83, "代理给会员提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_rebate(84, "流水返点", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_add(85, "返点增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_sub(86, "返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_add(85, "其他返点增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_sub(86, "其他返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
     v2_cash_loan(87, "信用借款", ProxyBizType.v2_loan.code().toString()),
     v2_cash_repay(88, "信用还款", ProxyBizType.v2_repay.code().toString()),
 
@@ -80,10 +80,8 @@ public enum ProxyChangeType implements IChangeType {
 
     v2_1_club_rebate_add(105, "俱乐部返点增加调整", ProxyBizType.v2_rebate.code().toString()),
     v2_1_insure_rebate_add(106, "保险返点增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_1_other_rebate_add(107, "其他返点增加调整", ProxyBizType.v2_rebate.code().toString()),
     v2_1_club_rebate_sub(108, "俱乐部返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
     v2_1_insure_rebate_sub(109, "保险返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_1_other_rebate_sub(110, "其他返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
     v2_1_negate_benefit_commission_income(111, "负盈利返佣收入", ProxyBizType.v2_1_proxy_commission.code().toString()),
     v2_1_negate_benefit_commission_dispatch(112, "负盈利返佣发放", ProxyBizType.v2_1_proxy_commission.code().toString()),
     v2_1_proxy_commission_add(113, "代理返佣增加调整", ProxyBizType.v2_1_proxy_commission.code().toString()),
