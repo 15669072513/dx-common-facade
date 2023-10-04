@@ -14,12 +14,6 @@ public enum CommissionRateStatusEnum {
 	
 	/** 已失效 */
 	EXPIRED(2,"已失效"),
-	
-	/** 平台调整 这个时候也是失效的 */
-	PLATFORM_ADJUSTMENT(3,"平台调整"),
-	
-	/** 未设置或者平台调整 主要用于代理后台查询未设置的返佣比例 */
-	UN_SET_OR_PLATFORM_ADJUSTMENT(4,"未设置或者平台调整"),
 	;
 	
     private Integer code;

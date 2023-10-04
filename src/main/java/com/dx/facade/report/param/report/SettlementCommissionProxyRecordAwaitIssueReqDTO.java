@@ -30,6 +30,6 @@ public class SettlementCommissionProxyRecordAwaitIssueReqDTO implements Serializ
      * 报表日期
      */
     @ApiModelProperty("报表日期")
-    private Integer reportDate;
+    private Integer reportYm;
 
 }
