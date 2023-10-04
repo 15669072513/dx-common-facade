@@ -100,8 +100,12 @@ public class WithdrawConfigResp implements Serializable {
     private BigDecimal depositBackDiscountMultiple;
     @ApiModelProperty("会员返水流水倍数")
     private BigDecimal rebateMultiple;
-    @ApiModelProperty("会员返水增加调整流水倍数")
-    private BigDecimal rebateAddMultiple;
+    @ApiModelProperty("会员其它返水增加调整流水倍数")
+    private BigDecimal otherRebateAddMultiple;
+    @ApiModelProperty("会员俱乐部返水增加调整流水倍数")
+    private BigDecimal clubRebateAddMultiple;
+    @ApiModelProperty("会员保险返水增加调整流水倍数")
+    private BigDecimal insuranceRebateAddMultiple;
     @ApiModelProperty("上分流水倍数")
     private BigDecimal upScoreMultiple;
     @ApiModelProperty("借款流水倍数")

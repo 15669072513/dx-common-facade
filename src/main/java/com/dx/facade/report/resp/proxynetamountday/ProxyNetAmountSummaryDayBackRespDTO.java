@@ -48,6 +48,22 @@ public class ProxyNetAmountSummaryDayBackRespDTO {
     @ApiModelProperty(value = "会员总输赢", example = "1500.00")
     private BigDecimal netAmount;
 
+
+
+    /** memberRebateAmount */
+    @ApiModelProperty(value = "会员返水,0.2.1", example = "1500.00")
+    private BigDecimal memberRebateAmount;
+
+
+    /** memberRebateAmount */
+    @ApiModelProperty(value = "会员其他调整 0.2.1", example = "1500.00")
+    private BigDecimal memberArtificalPathAmount;
+
+
+
+    /** memberRebateAmount */
+    @ApiModelProperty(value = "会员净输赢 0.2.1", example = "1500.00")
+    private BigDecimal memberNetWinAmount;
     /** venueFee */
     @ApiModelProperty(value = "场馆费", example = "1500.00")
     private BigDecimal venueFee;
