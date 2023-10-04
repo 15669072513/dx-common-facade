@@ -20,7 +20,10 @@ public class DwdBetMemberRecordDDTO {
     private String gameTypeName;
 
     @ApiModelProperty(value="注单时间")
-    private LocalDateTime createAt;
+    private Long createAt;
+
+    @ApiModelProperty(value="注单时间2")
+    private LocalDateTime createAt2;
 
     @ApiModelProperty(value="上级代理")
     private String parentProxyName;
