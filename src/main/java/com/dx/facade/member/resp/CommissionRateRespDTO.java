@@ -62,7 +62,7 @@ public class CommissionRateRespDTO extends BaseCommissionRateRespDTO implements 
     @ApiModelProperty("顶级代理名称")
     private String topProxyName;
     
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效")
     private Integer status;
     
     /** 生效时间 */

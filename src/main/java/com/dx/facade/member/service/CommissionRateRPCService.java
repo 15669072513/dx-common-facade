@@ -50,7 +50,7 @@ public interface CommissionRateRPCService {
 	 * @param request
 	 * @return
 	 */
-    CommonResp<CommissionRateRespDTO> getEffectiveCommissionRate(QueryEffectCommissionRateParamDTO request);
+    CommonResp<List<CommissionRateRespDTO>> getEffectiveCommissionRate(QueryEffectCommissionRateParamDTO request);
 
     /**
      * 更新返佣比例
@@ -74,14 +74,6 @@ public interface CommissionRateRPCService {
 	 * @return
 	 */
     CommonResp<CommissionRateRespDTO> getSubMaxCommissionRate(QueryCommissionRateParamDTO request);
-    
-    /**
-     * 查询个人返佣比例
-     * 
-     * @param pageReq
-     * @return
-     */
-	CommonResp<PageResp<MemberCommissionRateRespDTO, ?>> selectMemberCommissionRateListPage(PageReq<QueryCommissionRateParamDTO> pageReq);
 	
 	/**
 	 * 查询返佣比例设置上限

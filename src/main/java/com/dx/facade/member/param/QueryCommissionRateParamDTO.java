@@ -64,7 +64,7 @@ public class QueryCommissionRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("其他返佣比例")
     private BigDecimal otherCommission;
     
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或平台调整")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效")
     private Integer status;
     
     @ApiModelProperty("生效时间")
