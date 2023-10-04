@@ -18,8 +18,8 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "会员/代理提款记录详情", description = "会员/代理提款记录详情")
-public class WithdrawOrderRespVO {
+@ApiModel(value = "代理后台-会员/代理提款记录详情", description = "会员/代理提款记录详情")
+public class ProxyWithdrawOrderRespVO {
 
     @ApiModelProperty("我方订单号")
     private String eventId;
@@ -34,6 +34,9 @@ public class WithdrawOrderRespVO {
     @ApiModelProperty("取款方式，1.银行卡，2.虚拟币")
     private Integer withdrawType;
 
+    @ApiModelProperty("取款信息")
+    private String withdrawInfo;
+
     @ApiModelProperty("取款账户")
     private String withdrawAccount;
 
@@ -43,10 +46,13 @@ public class WithdrawOrderRespVO {
     @ApiModelProperty("用户取款金额USDT")
     private BigDecimal orderAmountUSDT;
 
-    @ApiModelProperty("手续费")
-    private BigDecimal fee;
+    @ApiModelProperty("CNY手续费")
+    private BigDecimal withdrawFeeCNY;
 
-    @ApiModelProperty("商户名称")
+    @ApiModelProperty("USDT手续费")
+    private BigDecimal withdrawFeeUSDT;
+
+    @ApiModelProperty("备注")
     private String remark;
 
 
