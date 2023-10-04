@@ -44,11 +44,11 @@ public interface MemberRebateRecordService {
     /**
      * 批量审核通过
      */
-    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchPass(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
+    CommonResp<List<MemberRebateAuditResultRespDTO>> memberRebateRecordAuditBatchPass(MemberRebateDealAuditReqDTO reqDTO) throws BizException;
     /**
      * 批量审核拒绝
      */
-    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
+    CommonResp<List<MemberRebateAuditResultRespDTO>> memberRebateRecordAuditBatchRefuse(MemberRebateDealAuditReqDTO reqDTO) throws BizException;
     //--------返点审核结束---------
 
 
