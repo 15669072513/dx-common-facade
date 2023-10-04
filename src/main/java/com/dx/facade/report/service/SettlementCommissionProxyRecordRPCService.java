@@ -3,11 +3,11 @@ package com.dx.facade.report.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.report.param.report.SettlementCommissionProxyRecordIssueReqDTO;
+import com.dx.facade.report.param.report.SettlementCommissionProxyRecordAwaitIssueReqDTO;
 import com.dx.facade.report.param.report.SettlementCommissionProxyRecordReqDTO;
-import com.dx.facade.report.resp.report.SettlementCommissionProxyRecordIssueRspDTO;
+import com.dx.facade.report.resp.agent.ProxyCommissionListPayDTO;
+import com.dx.facade.report.resp.report.SettlementCommissionProxyRecordAwaitIssueRspDTO;
 import com.dx.facade.report.resp.report.SettlementCommissionProxyRecordRspDTO;
-
 import java.util.List;
 
 
@@ -31,5 +31,11 @@ public interface SettlementCommissionProxyRecordRPCService {
      * @param reqDTO
      * @return
      */
-    CommonResp<List<SettlementCommissionProxyRecordIssueRspDTO>> issueListByProxyIds(SettlementCommissionProxyRecordIssueReqDTO reqDTO);
+    CommonResp<List<SettlementCommissionProxyRecordAwaitIssueRspDTO>> awaitIssueListByProxyIds(SettlementCommissionProxyRecordAwaitIssueReqDTO reqDTO);
+    /**
+     * 发放返佣
+     * @param payList
+     * @return
+     */
+    CommonResp<Integer> issueCommission(List<ProxyCommissionListPayDTO> payList);
 }

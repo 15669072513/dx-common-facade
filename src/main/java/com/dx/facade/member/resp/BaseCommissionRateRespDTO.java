@@ -27,6 +27,18 @@ public class BaseCommissionRateRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty("序号")
+	private Integer serialNo;
+
+	@ApiModelProperty("净输赢")
+	private BigDecimal validBetAmount;
+
+	@ApiModelProperty("本月活跃人数")
+	private Integer activeUsers;
+
+	@ApiModelProperty("本月新增活跃人数")
+	private Integer addActiveUsers;
+    
     @ApiModelProperty("德州俱乐部返佣比例")
     private BigDecimal texasCommission;
     

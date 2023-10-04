@@ -25,7 +25,7 @@ public class DwmCommissionProxyDReqDTO {
      */
     @ApiModelProperty("报表日期")
     @NotNull(message = "报表日期不能为空")
-    private Integer reportDate;
+    private Integer reportYm;
 
     /**
      * 代理id

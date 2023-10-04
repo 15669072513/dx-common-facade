@@ -281,5 +281,8 @@ public class ProxyInfoRespDTO {
     
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+
+    @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
     
 }

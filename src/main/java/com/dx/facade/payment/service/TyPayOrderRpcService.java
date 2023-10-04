@@ -31,6 +31,15 @@ public interface TyPayOrderRpcService {
     CommonResp submitVetfity(SubmitVetfityParamDTO submitVetfityParamDTO) throws Exception;
 
     /**
+     * 会员/代理取消存款订单
+     * @param submitVetfityParamDTO
+     * @return
+     * @throws Exception
+     */
+    @ApiModelProperty(value = "取消存款")
+    CommonResp cancelOrder(SubmitVetfityParamDTO submitVetfityParamDTO) throws Exception;
+
+    /**
      * 会员取款接口
      * @param var1
      * @return

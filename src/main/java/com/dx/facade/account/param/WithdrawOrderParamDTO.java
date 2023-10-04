@@ -113,6 +113,8 @@ public class WithdrawOrderParamDTO implements Serializable {
     @ApiModelProperty(value = "支付厂商")
     private String payMerchantName;
 
+    private String currency;
+
     @ApiModelProperty("锁单状态是否要排序，默认：否")
     private Boolean isOrderByLockStatus = false;
     @ApiModelProperty("锁单状态是否是升序排列，默认:否;注意:该字段生效前，必须让锁单状态参与排序")

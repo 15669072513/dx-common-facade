@@ -86,13 +86,13 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("玩家总带出")
     private BigDecimal afterChipTotal;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("总牌桌盈亏")
     private BigDecimal costTotal;
 
     @ApiModelProperty("牌桌抽水")
     private BigDecimal pumpingAmountTotal;
 
-    @ApiModelProperty("保险输赢")
+    @ApiModelProperty("总保险盈亏")
     private BigDecimal insuredNetAmount;
 
     @ApiModelProperty("机器人数量")
