@@ -30,20 +30,26 @@ public class BaseCommissionRateParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty("ID")
+    private Long id;
+    
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户Id")
-    private Long userId;
-
-    @ApiModelProperty("用户名称")
-    private String userName;
-    
     @ApiModelProperty("上级代理Id")
     private Long parentProxyId;
+    
+    @ApiModelProperty("序号")
+	private Integer serialNo;
 
-    @ApiModelProperty("上级代理名称")
-    private String parentProxyName;
+	@ApiModelProperty("净输赢")
+	private BigDecimal validBetAmount;
+
+	@ApiModelProperty("本月活跃人数")
+	private Integer activeUsers;
+
+	@ApiModelProperty("本月新增活跃人数")
+	private Integer addActiveUsers;
     
     @ApiModelProperty("德州俱乐部返佣比例")
     @DecimalMin(value = "0.00", message = "德州俱乐部返佣比例不能小于0.00")
@@ -60,8 +66,5 @@ public class BaseCommissionRateParamDTO implements Serializable {
     @NotNull(message = "其他返佣比例不能为空")
     private BigDecimal otherCommission;
 
-    
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
-    private Integer status;
 
 }
