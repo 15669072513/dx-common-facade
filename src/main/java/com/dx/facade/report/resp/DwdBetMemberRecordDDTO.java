@@ -11,7 +11,7 @@ public class DwdBetMemberRecordDDTO {
 
 
     @ApiModelProperty(value="注单号")
-    private String orderId;
+    private String orderNo ;
 
     @ApiModelProperty(value="场馆名称")
     private String venueName;
