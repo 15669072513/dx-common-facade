@@ -104,6 +104,17 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
     private String parentProxyName;
 
     /**
+     * 总代id
+     */
+    @ApiModelProperty("总代id")
+    private Long topProxyId;
+    /**
+     * 总代账号
+     */
+    @ApiModelProperty("总代账号")
+    private String topProxyName;
+
+    /**
      * 币种
      */
     @ApiModelProperty("币种")
@@ -111,8 +122,6 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
 
     /**
      * 团队返佣金额
-     *
-     *
      */
     @ApiModelProperty("团队返佣金额    ->   已发放返佣=commissionAmount-commissionPayAmount")
     private BigDecimal commissionAmount;
@@ -184,6 +193,35 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
     private BigDecimal memberRebateSubAmount;
 
     /**
+     * 单量
+     */
+    @ApiModelProperty("单量")
+    private Long betCount;
+
+    /**
+     * 投注额
+     */
+    @ApiModelProperty("投注额")
+    private BigDecimal betAmount;
+    /**
+     * 有效投注额
+     */
+    @ApiModelProperty("有效投注额")
+    private BigDecimal validBetAmount;
+
+    /**
+     * 活跃用户
+     */
+    @ApiModelProperty("活跃用户")
+    private Long activeMemberNum;
+
+    /**
+     * 有效用户
+     */
+    @ApiModelProperty("有效用户")
+    private Long effecactiveM0emberNum;
+
+    /**
      * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
      */
     @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
@@ -194,6 +232,12 @@ public class SettlementCommissionProxyRecordRspDTO implements Serializable {
      */
     @ApiModelProperty("返佣状态(1=待发放 2-已发放 3-无返佣 4-已取消)")
     private int rebateStatus;
+
+    /**
+     * 返佣状态 (1=待发放 2-已发放 3-无返佣 4-已取消)
+     */
+    @ApiModelProperty("返佣状态(1=待发放 2-已发放 3-无返佣 4-已取消)")
+    private int proxyStatus;
 
     /**
      * 派发时间
