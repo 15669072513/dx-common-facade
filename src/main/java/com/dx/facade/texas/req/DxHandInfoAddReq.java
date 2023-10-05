@@ -150,4 +150,7 @@ public class DxHandInfoAddReq implements Serializable {
 
     @ApiModelProperty("初期金额")
     private BigDecimal beginAmount;
+
+    @ApiModelProperty("总底池")
+    private BigDecimal totalPotAmount;
 }
