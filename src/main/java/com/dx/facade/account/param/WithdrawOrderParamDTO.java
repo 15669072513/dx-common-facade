@@ -28,6 +28,25 @@ public class WithdrawOrderParamDTO implements Serializable {
 
     @ApiModelProperty("用户id")
     private Long userId;
+    @ApiModelProperty("银行卡号")
+    private String bankCardNo;
+    @ApiModelProperty("上级代理名称")
+    private String parentAgentName;
+    @ApiModelProperty("操作人")
+    private String operatorName;
+    @ApiModelProperty("操作类型（0-解绑 1-绑定 2-下架 3-启用 4-禁用）")
+    private String operateType;
+    @ApiModelProperty(value = "账号类型（1-正式，2-测试，3-合作）")
+    private Integer accountType;
+    @ApiModelProperty("银行名称")
+    private String bankName;
+    @ApiModelProperty("虚拟币种类")
+    private String virtualKind;
+    @ApiModelProperty("虚拟币账号地址")
+    private String usdtAddress;
+    @ApiModelProperty("usdt提款协议类型，1.omni，2.erc20, 3.trc20")
+    private Integer usdtType;
+
 
     @ApiModelProperty("多个用户ID")
     private List<Long> userIds;
