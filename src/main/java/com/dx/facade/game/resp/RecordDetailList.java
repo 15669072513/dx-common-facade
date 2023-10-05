@@ -1,6 +1,7 @@
 package com.dx.facade.game.resp;
 
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModel;
@@ -92,6 +93,19 @@ public class RecordDetailList implements Serializable {
 
     @ApiModelProperty("入池率")
     private BigDecimal bringPoolRate;
+
+    @JsonInclude(value= JsonInclude.Include.NON_NULL)
+    @ApiModelProperty("带入钱最多的展示为土豪的用户id")
+    private Long bringChipSumMaxId;
+
+    @JsonInclude(value= JsonInclude.Include.NON_NULL)
+    @ApiModelProperty("赢钱最多的展示为MVP的用户id")
+    private Long netAmountMaxId;
+
+    @JsonInclude(value= JsonInclude.Include.NON_NULL)
+    @ApiModelProperty("输钱最多的展示为大鱼的用户id")
+    private Long NetAmountMinId;
+
 
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
         if (resp == null) {
