@@ -5,9 +5,13 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.report.SettlementCommissionProxyRecordAwaitIssueReqDTO;
 import com.dx.facade.report.param.report.SettlementCommissionProxyRecordReqDTO;
+import com.dx.facade.report.param.report.SettlementCommissionTopProxyRecordReqDTO;
 import com.dx.facade.report.resp.agent.ProxyCommissionListPayDTO;
 import com.dx.facade.report.resp.report.SettlementCommissionProxyRecordAwaitIssueRspDTO;
 import com.dx.facade.report.resp.report.SettlementCommissionProxyRecordRspDTO;
+import com.dx.facade.report.resp.report.SettlementCommissionTopProxyRecordSumRspDTO;
+import com.dx.facade.report.resp.report.SettlementCommissionTopProxyRecordRspDTO;
+
 import java.util.List;
 
 
@@ -38,4 +42,11 @@ public interface SettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<Integer> issueCommission(List<ProxyCommissionListPayDTO> payList);
+
+    /**
+     * 报表-业务报表-代理返佣报表
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<SettlementCommissionTopProxyRecordRspDTO, SettlementCommissionTopProxyRecordSumRspDTO>> listTopProxyListPage(SettlementCommissionTopProxyRecordReqDTO reqDTO);
 }
