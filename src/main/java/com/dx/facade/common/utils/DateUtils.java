@@ -43,6 +43,24 @@ public class DateUtils {
         return Integer.valueOf(localDate.format(PATTERN_YMR2));
     }
 
+
+    //20231001
+    public static Integer getDateIntToLastDay(Integer day) {
+        Date d = null;
+        try {
+            d = new SimpleDateFormat("yyyyMMdd").parse(day.toString());
+        } catch (ParseException e) {
+            log.error("getDateIntToLastDay 转化异常，{}",e);
+        }
+        // 将Date对象转换为Instant对象
+        Instant instant = d.toInstant();
+        // 使用默认时区将Instant对象转换为LocalDate对象
+        LocalDate localDate22 = instant.atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate lastDayOfMonth2 = localDate22.with(TemporalAdjusters.lastDayOfMonth());
+        Integer endDate = DateUtils.getDateInt(lastDayOfMonth2);
+        return endDate;
+    }
+
     /**
      * 时间戳转为 yyyy-MM-dd HH:mm:ss
      */
