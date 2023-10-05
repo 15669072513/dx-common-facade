@@ -57,6 +57,8 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("提款客户端类型")
     @TableField("app_type")
     private Integer appType;*/
+    @ApiModelProperty("信用等级")
+    private Integer creditLevel;
 
     @ApiModelProperty("提款客户端类型")
     @TableField("app_type")
