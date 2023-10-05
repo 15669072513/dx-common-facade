@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 
 @Data
-public class SettlementCommissionProxyRecordReqDTO{
+public class SettlementCommissionTopProxyRecordReqDTO {
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
     @NotNull(message = "分页参数不能为空")
     @Min(value = 1, message = "当前页最小值不能小于1")
@@ -36,49 +36,13 @@ public class SettlementCommissionProxyRecordReqDTO{
     @ApiModelProperty("周期结束日期")
     private Integer cycleEndDate;
     /**
-     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)
+     *
+     * 代理id -> 总代id
      */
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
-    private int payoutStatus;
-    /**
-     * 代理id
-     */
-    @ApiModelProperty("代理id")
+    @ApiModelProperty("代理id -> 总代id")
     private Long proxyId;
 
-    /** 上级代理id */
-    @ApiModelProperty(value = "上级代理ID")
-    private Long parentProxyId;
 
-    /**
-     * 代理账号
-     */
-    @ApiModelProperty("代理账号")
-    private String proxyName;
-
-
-    /**
-     * 团队返佣金额
-     */
-    @ApiModelProperty("团队返佣金额")
-    private BigDecimal mixCommissionAmount;
-
-    /**
-     * 团队返佣金额
-     */
-    @ApiModelProperty("团队返佣金额")
-    private BigDecimal maxCommissionAmount;
-
-    /**
-     * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
-     */
-    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
-    private int orderStatus;
-    /**
-     * 总代账号
-     */
-    @ApiModelProperty("总代账号")
-    private String topProxyName;
 
 
 
