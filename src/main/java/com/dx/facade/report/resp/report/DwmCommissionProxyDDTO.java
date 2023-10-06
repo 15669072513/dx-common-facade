@@ -1,5 +1,5 @@
 package com.dx.facade.report.resp.report;
-import com.dx.facade.member.proxy.resp.ProxyResp;
+import com.dx.facade.member.proxy.resp.ProxyStatusResp;
 import io.swagger.annotations.ApiModel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,5 +35,5 @@ public class DwmCommissionProxyDDTO implements Serializable {
     /**
      * 当前代理信息
      */
-    private ProxyResp proxyResp;
+    private ProxyStatusResp proxyResp;
 }

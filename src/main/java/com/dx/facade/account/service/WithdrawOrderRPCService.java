@@ -84,6 +84,14 @@ public interface WithdrawOrderRPCService {
     CommonResp auditWithdrawOrder(WithdrawOrderAuditParamDTO param) throws BizException;
 
     /**
+     * 发起第三方提现操作
+     * @param eventId
+     * @return
+     * @throws BizException
+     */
+    CommonResp confirmCreateWithdraw(String eventId) throws BizException;
+
+    /**
      * 通过订单号获取订单详情
      * @param eventId
      * @return

@@ -34,7 +34,7 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     * 报表日期
     */
     @ApiModelProperty("报表日期")
-    private Integer reportDate;
+    private Integer reportYm;
 
     /**
     * 周期类型: 1-天 2-周 3-月
@@ -52,7 +52,7 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     * 周期起始日期
     */
     @ApiModelProperty("周期起始日期")
-    private Integer cycleStatrtDate;
+    private Integer cycleStartDate;
 
     /**
     * 周期结束日期

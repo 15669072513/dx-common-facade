@@ -39,7 +39,7 @@ public class SettlementCommissionProxyRecordReqDTO{
      * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)
      */
     @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
-    private int payoutStatus;
+    private Integer payoutStatus;
     /**
      * 代理id
      */
@@ -73,7 +73,7 @@ public class SettlementCommissionProxyRecordReqDTO{
      * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
      */
     @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
-    private int orderStatus;
+    private Integer orderStatus;
     /**
      * 总代账号
      */

@@ -57,6 +57,8 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("提款客户端类型")
     @TableField("app_type")
     private Integer appType;*/
+    @ApiModelProperty("信用等级")
+    private Integer creditLevel;
 
     @ApiModelProperty("提款客户端类型")
     @TableField("app_type")
@@ -65,6 +67,10 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("我方订单号")
     @TableField("event_id")
     private String eventId;
+
+    @ApiModelProperty("出款账号id")
+    @TableField("account_id")
+    private Long accountId;
 
     @ApiModelProperty("调整类型：1会员提现下分")
     private Integer adjustType;
@@ -298,6 +304,16 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty(value = "支付厂商")
     private String payMerchantName;
+
+    @ApiModelProperty("提现限制类型：1-账单限制，2-流水限制，参见withdrawLimitTypeEnum枚举")
+    private Integer withdrawLimitType;
+
+    @ApiModelProperty("提现时所需有效流水快照")
+    private BigDecimal validAmount;
+    @ApiModelProperty("提现时完成有效流水快照")
+    private BigDecimal completeAmount;
+    @ApiModelProperty("提现时剩余可提现额度快照")
+    private BigDecimal remainAmount;
 
     @ApiModelProperty(value = "提款手续费")
     private BigDecimal withdrawFee;
