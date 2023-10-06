@@ -14,11 +14,14 @@ import com.dx.facade.member.param.ProxyListPageParamDTO;
 import com.dx.facade.member.param.ProxyQueryParamDTO;
 import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
 import com.dx.facade.member.param.ProxyTreeParamDTO;
+import com.dx.facade.member.param.QueryProxyCommissionSettleCycleParamDTO;
 import com.dx.facade.member.param.UpdatePassWordParamDTO;
+import com.dx.facade.member.param.UpdateProxyCommissionSettleCycleParamDTO;
 import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
 import com.dx.facade.member.param.UpdateProxyPasswordParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
 import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
+import com.dx.facade.member.resp.ProxyCommissionSettleCycleRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
@@ -150,6 +153,7 @@ public interface ProxyRPCService {
      * @throws BizException 全局异常
      */
     CommonResp<Boolean> updateProxyPassWord(UpdatePassWordParamDTO paramDTO) throws BizException;
+    
     /**
      *  更新代理登录、开局、俱乐部管理权限
      * 
@@ -158,6 +162,7 @@ public interface ProxyRPCService {
      * @throws Exception 
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
+	
 	
 	/**
 	 * 校验userName是否已存在
@@ -191,5 +196,24 @@ public interface ProxyRPCService {
      * @return
      */
     CommonResp<List<Long>> getSubProxyIdList(Long proxyId);
+    
+    /**
+     *  更新代理佣金结算周期
+     * 
+     * @param paramDTO
+     * @return
+     * @throws Exception 
+     */
+	CommonResp<Boolean> updateProxyCommissionSettleCycle(UpdateProxyCommissionSettleCycleParamDTO paramDTO);
+	
+    /**
+     *  查询代理佣金结算周期
+     * 
+     * @param paramDTO
+     * @return
+     * @throws Exception 
+     */
+	CommonResp<ProxyCommissionSettleCycleRespDTO> getProxyCommissionSettleCycle(QueryProxyCommissionSettleCycleParamDTO paramDTO);
+    
 
 }

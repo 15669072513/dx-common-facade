@@ -143,4 +143,10 @@ public class GameOrderRecordDetailResp implements Serializable {
 
     @ApiModelProperty("币种")
     private String memberCurrency;
+
+    @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+    private Integer betType;
+
+    @ApiModelProperty(value = "抽水贡献")
+    private BigDecimal pumpContribution;
 }
