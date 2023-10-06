@@ -106,12 +106,6 @@ public class RecordDetailList implements Serializable {
     @ApiModelProperty("输钱最多的展示为大鱼的用户id")
     private Long NetAmountMinId;
 
-    /**
-     * 头像
-     */
-    @ApiModelProperty("俱乐部头像")
-    private String clubHeadUrl;
-
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
         if (resp == null) {
             return null;
