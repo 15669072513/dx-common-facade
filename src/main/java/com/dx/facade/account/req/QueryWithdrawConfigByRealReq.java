@@ -38,8 +38,8 @@ public class QueryWithdrawConfigByRealReq implements BaseParmDTO {
             Assert.notNull(vipLevel, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
             Assert.isTrue(vipLevel >= 0 && vipLevel <= 10 , ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
         }
-        if(ConstantEnums.UserType.agent.code().equals(userType)){
-            Assert.notNull(proxyId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyId"));
-        }
+//        if(ConstantEnums.UserType.agent.code().equals(userType)){
+//            Assert.notNull(proxyId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyId"));
+//        }
     }
 }
