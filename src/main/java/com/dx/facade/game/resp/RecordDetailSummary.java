@@ -90,9 +90,6 @@ public class RecordDetailSummary implements Serializable {
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
 
-    @ApiModelProperty("入池率")
-    private BigDecimal bringPoolRate;
-
     @ApiModelProperty("带入钱最多的展示为土豪的用户")
     private UserSummary bringChipSumMaxUser;
 
