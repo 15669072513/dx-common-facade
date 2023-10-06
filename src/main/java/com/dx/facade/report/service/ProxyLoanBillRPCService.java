@@ -31,14 +31,6 @@ public interface ProxyLoanBillRPCService {
      * @since 2022年4月12日 下午8:19:44
      */
     CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayDirectNetAmountRespDTO>> queryProxyDayNetAmountList_v1(PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
-
-    /**
-     * 查询代理日盈亏列表 0.2.1
-     * @param reqDTO
-     * @return
-     * @throws Exception
-     */
-    CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayNetAmountRespDTO>> queryProxyDayNetAmountList_v2(PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
     /**
      * bwjk
      * 查询代理月盈亏列表
