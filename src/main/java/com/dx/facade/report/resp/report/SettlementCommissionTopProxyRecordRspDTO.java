@@ -28,7 +28,7 @@ public class SettlementCommissionTopProxyRecordRspDTO implements Serializable {
      * 报表日期
      */
     @ApiModelProperty("报表日期")
-    private Integer reportDate;
+    private Integer reportYm;
 
     /**
      * 周期类型: 1-天 2-周 3-月
