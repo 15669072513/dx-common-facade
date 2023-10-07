@@ -31,7 +31,7 @@ public interface MemberRebateRecordService {
     /**
      * 返点详情页
      */
-    CommonResp<ProxyRebateRecordDetailRespDTO> queryProxyRebateAuditDetailPage(ProxyRebateRecordDetailReqDTO reqDTO) throws BizException;
+    CommonResp<MemberRebateRecordDetailRespDTO> queryMemberRebateAuditDetailPage(MemberRebateRecordDetailReqDTO reqDTO) throws BizException;
 
     /**
      * 待审页代理返点分页一审查询
