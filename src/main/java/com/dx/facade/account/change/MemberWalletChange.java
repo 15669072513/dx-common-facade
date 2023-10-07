@@ -220,7 +220,7 @@ public enum MemberWalletChange implements IWalletChange {
 
                 MemberWalletChange.v2_cash_down_score,                          //代理直接提现下分，提现成功
                 MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy,    //代理审核通过提现下分，提现成功
-                MemberWalletChange.v2_1_withdraw
+                MemberWalletChange.v2_1_withdraw_success
         );
     }
 
@@ -295,6 +295,23 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(MemberWalletChange.v2_credit_repay);
         //9，信用借款
         list.add(MemberWalletChange.v2_credit_loan);
+        list.add(v2_1_deposit);
+        list.add(v2_1_deposit_discount);
+        list.add(v2_1_deposit_back);
+        list.add(v2_1_deposit_discount_back);
+        list.add(v2_1_withdraw);
+        list.add(v2_1_withdraw_frozen);
+        list.add(v2_1_withdraw_fail);
+        list.add(v2_1_withdraw_back);
+        list.add(v2_1_withdraw_frozen_cash_lock);
+        list.add(v2_1_withdraw_fail_cash_lock);
+        list.add(v2_1_withdraw_success);
+        list.add(v2_1_club_rebate_add);
+        list.add(v2_1_insure_rebate_add);
+        list.add(v2_1_rebate_add);
+        list.add(v2_1_club_rebate_sub);
+        list.add(v2_1_insure_rebate_sub);
+        list.add(v2_1_rebate_sub);
         return list;
     }
 
