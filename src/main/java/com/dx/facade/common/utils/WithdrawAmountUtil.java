@@ -22,7 +22,7 @@ public class WithdrawAmountUtil {
             return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.CNY.getCode())) {
-             return amount.divide(usdtRate, new MathContext(2, RoundingMode.DOWN));
+            return amount.divide(usdtRate, 2, RoundingMode.DOWN);
         }
         throw new IllegalArgumentException("非法币种类型:" + currency);
      }
@@ -35,8 +35,12 @@ public class WithdrawAmountUtil {
             return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.USDT.getCode())) {
-            return amount.multiply(usdtRate, new MathContext(2, RoundingMode.DOWN));
+            return amount.multiply(usdtRate).setScale(2, RoundingMode.DOWN);
         }
         throw new IllegalArgumentException("非法币种类型:" + currency);
+    }
+
+    public static void main(String[] args) {
+        System.out.println(WithdrawAmountUtil.getCnyAmount(BigDecimal.valueOf(2.344), BigDecimal.valueOf(3.45), "USDT"));
     }
 }
