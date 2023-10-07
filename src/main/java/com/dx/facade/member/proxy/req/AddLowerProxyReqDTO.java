@@ -1,6 +1,7 @@
 package com.dx.facade.member.proxy.req;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.member.param.BaseCommissionRateParamDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
@@ -342,13 +343,7 @@ public class AddLowerProxyReqDTO {
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("德州返佣比例")
-    private BigDecimal texasCommission;
-    
-    @ApiModelProperty("德州保险返佣比例")
-    private BigDecimal texasInsuranceCommission;
-    
-    @ApiModelProperty("其他返佣比例")
-    private BigDecimal otherCommission;
+    @ApiModelProperty("返佣比例列表")
+    private List<BaseCommissionRateParamDTO> commissionRateList;
     
 }

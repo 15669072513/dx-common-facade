@@ -39,8 +39,4 @@ public class WithdrawAmountUtil {
         }
         throw new IllegalArgumentException("非法币种类型:" + currency);
     }
-
-    public static void main(String[] args) {
-        System.out.println(WithdrawAmountUtil.getCnyAmount(BigDecimal.valueOf(2.344), BigDecimal.valueOf(3.45), "USDT"));
-    }
 }
