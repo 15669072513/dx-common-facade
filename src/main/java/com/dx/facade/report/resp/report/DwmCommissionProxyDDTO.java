@@ -23,7 +23,7 @@ public class DwmCommissionProxyDDTO implements Serializable {
     /**
      * 团队返佣数据
      */
-    private  SettlementCommissionProxyRecordRspDTO settlementCommissionProxyRecordRspDTO;
+    private DxSettlementCommissionProxyRecordRspDTO settlementCommissionProxyRecordRspDTO;
 
 
     /**
