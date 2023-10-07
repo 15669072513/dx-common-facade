@@ -269,8 +269,7 @@ public enum ProxyWalletChange implements IWalletChange {
         return Arrays.asList(
                 ProxyWalletChange.commission_withdraw_success,
                 ProxyWalletChange.commission_withdraw_sub,
-                ProxyWalletChange.v2_1_withdraw,
-                ProxyWalletChange.v2_1_withdraw_back
+                ProxyWalletChange.v2_1_withdraw_success
         );
     }
 
