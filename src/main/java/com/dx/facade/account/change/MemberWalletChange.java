@@ -220,7 +220,8 @@ public enum MemberWalletChange implements IWalletChange {
 
                 MemberWalletChange.v2_cash_down_score,                          //代理直接提现下分，提现成功
                 MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy,    //代理审核通过提现下分，提现成功
-                MemberWalletChange.v2_1_withdraw_success
+                MemberWalletChange.v2_1_withdraw_success,
+                MemberWalletChange.v2_1_withdraw_back
         );
     }
 
