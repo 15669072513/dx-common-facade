@@ -89,7 +89,7 @@ public interface WithdrawOrderRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp confirmCreateWithdraw(String eventId) throws BizException;
+    CommonResp confirmCreateWithdraw(String eventId);
 
     /**
      * 通过订单号获取订单详情

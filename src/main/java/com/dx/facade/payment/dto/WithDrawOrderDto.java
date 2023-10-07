@@ -57,7 +57,7 @@ public class WithDrawOrderDto implements Serializable {
 	@NotNull(message = "提款方式不能为空")
 	@ApiModelProperty(value = "提款方式(1=人民币取款 2=USDT取款)", required = true,example = "1")
 	@Min(value = 1, message = "提款方式最小值只能是1")
-	@Max(value = 2, message = "提款方式最大值只能是2")
+	@Max(value = 4, message = "提款方式最大值只能是4")
 	private Integer withdrawType;
 
 	@NotNull(message = "收款账户id不能为空")
