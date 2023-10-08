@@ -36,6 +36,9 @@ public class ProxyDayNetAmountRespDTO {
     @ApiModelProperty(value = "代理账号", example = "daxia2222")
     private String proxyName;
 
+    @ApiModelProperty("代理层级路径（代理账号）")
+    //@TableField("proxy_path_username")
+    private String proxyPathUsername;
     /**
      * betAmount
      */
@@ -53,39 +56,21 @@ public class ProxyDayNetAmountRespDTO {
      */
     @ApiModelProperty(value = "游戏盈亏", example = "1500.00")
     private BigDecimal netAmount;
-    @Deprecated
-    /** rebateAmount */
-    @ApiModelProperty(value = "会员返水", example = "1500.00")
-    private BigDecimal rebateAmount;
-    @ApiModelProperty(value = "会员返水", example = "1500.00")
+
+    @ApiModelProperty("会员净输赢金额")
+    private BigDecimal memberNetWinAmount;
+    @ApiModelProperty("会员返水金额")
     private BigDecimal memberRebateAmount;
+
+    @ApiModelProperty("会员其他调整金额")
+    private BigDecimal memberArtificalPathAmount;
+
     /**
      * rebateAmount
      */
     @ApiModelProperty(value = "代理返水", example = "1500.00")
     private BigDecimal proxyRebateAmount;
 
-    /**
-     * discountAmount
-     */
-    @ApiModelProperty(value = "会员优惠", example = "1500.00")
-    private BigDecimal discountAmount;
-    @Deprecated
-    /**
-     * artificialPatchAmount
-     */
-    @ApiModelProperty(value = "会员账户调整", example = "1500.00")
-    private BigDecimal artificialPatchAmount;
-
-
-    @ApiModelProperty(value = "会员账户调整", example = "1500.00")
-    private BigDecimal memberArtificialPatchAmount;
-
-    @ApiModelProperty(value = "流水纠正", example = "150.00")
-    private BigDecimal flowCorrection;
-
-    @ApiModelProperty(value = "会员净盈亏", example = "150.00")
-    private BigDecimal memberNetWinAmount;
 
     /**
      * proxyNet
@@ -113,9 +98,6 @@ public class ProxyDayNetAmountRespDTO {
 
     @ApiModelProperty("是否存在下级")
     private Boolean isAllSub;
-
-    @ApiModelProperty("会员总盈亏")
-    private BigDecimal totalNetAmount;
 
 
     @ApiModelProperty("直属投注人数")
@@ -148,5 +130,5 @@ public class ProxyDayNetAmountRespDTO {
     private BigDecimal directArtificialPatchAmount;
 
     @ApiModelProperty("直属会员净输赢")
-    private BigDecimal directProfitAmount;
+    private BigDecimal directNetwinAmount;
 }
