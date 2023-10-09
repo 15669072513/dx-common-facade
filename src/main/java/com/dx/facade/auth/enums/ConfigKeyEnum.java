@@ -231,6 +231,19 @@ public enum ConfigKeyEnum {
     //资资金>账单相关设置 会员单笔可提现最大额度
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
     //******************************资金模块配置,其它模块请注意自己的位置哈************************************
+    /** 同时开牌桌上限 */
+    CLUB_MAXIMUM_NUMBER("club.maximum.number","1"),
+    /** 同时开牌桌上限 */
+    MAXIMUM_SIMULTANEOUS_LIMIT("maximum.simultaneous.limit","1"),
+    /** 单牌桌旁观人数上限 */
+    MAXIMUM_ONLOOKERS_LIMIT("maximum.onlookers.limit","1"),
+    /** 单牌桌可坐下人数上限 */
+    MAXIMUM_SIT_LIMIT("maximum.sit.limit","1"),
+    /** 德州单牌桌累计带入上限（倍BB） */
+    TEXAS_UPPER_LIMIT("texas.upper.limit","1"),
+    /** 短牌单牌桌累计带入上限（倍Ante） */
+    SHOORT_UPPER_LIMIT("short.upper.limit","1"),
+    
 	;
 
     //code转换

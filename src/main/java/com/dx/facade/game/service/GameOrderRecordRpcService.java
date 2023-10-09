@@ -48,5 +48,5 @@ public interface GameOrderRecordRpcService {
      */
     CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 
-    CommonResp<PageResp<RecordDetailList, RecordDetailList>> recordDetailList(RecordDetailReq req);
+    CommonResp<PageResp<RecordDetailList, RecordDetailSummary>> recordDetailList(RecordDetailReq req);
 }

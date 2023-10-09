@@ -7,6 +7,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.texas.dto.TableBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringInfoDto;
+import com.dx.facade.texas.dto.TableUserBringListDto;
 import com.dx.facade.texas.dto.WalletDetailDto;
 import com.dx.facade.texas.req.DxTableBringInfoReq;
 import com.dx.facade.texas.req.TableBringInfoReq;
@@ -38,6 +39,13 @@ public interface WalletDetailRpcService {
    * @return
    */
   CommonResp<TableUserBringInfoDto> getTableUserBringInfo(TableUserBringInfoReq req);
+
+  /**
+   * 获取牌桌用每个户带入信息
+   * @param req
+   * @return
+   */
+  CommonResp<List<TableUserBringListDto>> getTableUserBringList(TableUserBringInfoReq req);
 
   /**
    * 获取牌桌带入带出信息

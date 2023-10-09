@@ -36,9 +36,9 @@ public class ProxyRebateConstantWrapper {
     public  enum PayoutStatusEnum {
 
         UNSETTLED(0, "未结算"),
-        UNAUDITED(1, "未审核"),
+        UNAUDITED(1, "待发放"),
         UNRECEIVED(2, "未领取"),
-        RECEIVED(3, "领取成功"),
+        RECEIVED(3, "已发放"),
         RECEIVE_TIMEOUT(4, "超时未领取"),
         NO_REBATE(5, "无返点"),
         CANCELLED(6, "已取消");
