@@ -113,5 +113,5 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit;
 
-    private Integer insurance;
+    private Integer a;
 }
