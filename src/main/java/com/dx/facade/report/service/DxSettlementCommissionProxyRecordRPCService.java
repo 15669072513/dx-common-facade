@@ -12,6 +12,7 @@ import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordSumRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordRspDTO;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -49,4 +50,10 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<PageResp<DxSettlementCommissionTopProxyRecordRspDTO, DxSettlementCommissionTopProxyRecordSumRspDTO>> listTopProxyListPage(DxSettlementCommissionTopProxyRecordReqDTO reqDTO);
+    /**
+     * 报表-提供代理佣金总额
+     * @param
+     * @return
+     */
+    CommonResp<BigDecimal> getProxyCommissionAmountSum(Long proxyId);
 }
