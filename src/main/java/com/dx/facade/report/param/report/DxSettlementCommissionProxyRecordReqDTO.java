@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 public class DxSettlementCommissionProxyRecordReqDTO {
@@ -40,6 +41,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
      */
     @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
     private Integer payoutStatus;
+
+    private List<Integer> payoutStatusList;
     /**
      * 代理id
      */
@@ -74,6 +77,9 @@ public class DxSettlementCommissionProxyRecordReqDTO {
      */
     @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
     private Integer orderStatus;
+
+    private List<Integer> orderStatusList;
+
     /**
      * 总代账号
      */
@@ -84,5 +90,10 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @Range(min = 1, max = 2, message = "查询类型参数不合法")
     private Integer qryType;
 
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    private Integer payoutStatusNeZero;
+
+    @ApiModelProperty("排序通配符")
+    private String orderStr;
 
 }
