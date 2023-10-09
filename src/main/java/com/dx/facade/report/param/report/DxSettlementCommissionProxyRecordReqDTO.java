@@ -80,6 +80,9 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("总代账号")
     private String topProxyName;
 
+    @ApiModelProperty(value = "查询类型：1待一审，2待二审", example = "1", required = true)
+    @Range(min = 1, max = 2, message = "查询类型参数不合法")
+    private Integer qryType;
 
 
 }
