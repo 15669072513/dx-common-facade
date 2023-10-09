@@ -32,4 +32,6 @@ public class GameOrderUserSettlementDetailByProxyResp {
     private BigDecimal bringMidwayChip;
     @ApiModelProperty("总带入次数")
     private Long bringCount;
+    @ApiModelProperty("牌桌id")
+    private Long tableId;
 }
