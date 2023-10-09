@@ -43,6 +43,9 @@ public class WalletDetailParamDTO {
     @ApiModelProperty("会员/代理id")
     private Long userId;
 
+    @ApiModelProperty("会员/代理id")
+    private List<Long> userIdList;
+
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
 
