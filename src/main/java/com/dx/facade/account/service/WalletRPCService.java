@@ -120,4 +120,13 @@ public interface WalletRPCService {
     CommonResp<WithdrawLimitInfoRespDTO> getWithdrawLimitInfo(WithdrawLimitInfoParam param);
 
 
+    /**
+     * @description: 获取充提汇总信息
+     * @date 2023/10/7
+     * @copyright
+     */
+    CommonResp<DepositWithdrawSummaryDTO> depositWithdrawSummaryInfo(Long memberId, Integer userType);
+
+
+
 }

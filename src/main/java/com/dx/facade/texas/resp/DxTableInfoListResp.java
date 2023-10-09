@@ -143,4 +143,12 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;
+    @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
+    private Integer insuranceMode;
+    @ApiModelProperty("turn购买保险最低值,整数类型")
+    private BigDecimal insuranceTurn;
+    @ApiModelProperty("选张购买功能 0-不选张 1-选张")
+    private Boolean insuranceChooseSheet;
+    @ApiModelProperty("保险触发下限")
+    private Integer insuranceLowerLimit;
 }

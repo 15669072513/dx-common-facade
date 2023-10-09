@@ -302,6 +302,9 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("确认/取消出款客户端备注")
     private String confirmClientDesc;
 
+    @ApiModelProperty("确认/取消出款审核耗时，单位：秒")
+    private Integer confirmCost;
+
     @ApiModelProperty("银行id")
     private Long bankId;
 
