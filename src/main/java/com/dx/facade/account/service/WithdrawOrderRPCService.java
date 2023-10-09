@@ -78,6 +78,8 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
+    CommonResp<GetTodayWithdrawStaRespDTO> getTodayWithdrawStat(Integer userType, Long userId);
+
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 
 
