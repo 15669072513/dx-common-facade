@@ -591,6 +591,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_期末余额汇总 = "EXCEL_HEAD_I18N_KEY.FUNDS_期末余额汇总";
     String FUNDS_有效底池 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效底池";
     String FUNDS_打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_打牌抽水";
+    String FUNDS_保险盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_保险盈亏";
     String FUNDS_手牌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌盈亏";
     String FUNDS_公牌信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_公牌信息";
     String FUNDS_荷官位 = "EXCEL_HEAD_I18N_KEY.FUNDS_荷官位";
