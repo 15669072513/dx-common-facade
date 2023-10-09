@@ -35,6 +35,10 @@ public class ProxyMonthNetAmountRespDTO {
      */
     @ApiModelProperty(value = "代理账号", example = "daxia2222")
     private String proxyName;
+    @ApiModelProperty(value = "代理账号层级", example = "/daxia2222/")
+    private String proxyPathUsername;
+    @ApiModelProperty(value = "是否有下级代理", example = "true/false")
+    private Boolean isAllSub;
 
     /**
      * betAmount
@@ -115,9 +119,6 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "冲正后净输赢", example = "1500.00")
     private BigDecimal rushNet;
 
-    @Deprecated
-    @ApiModelProperty("是否存在下级")
-    private Boolean isAllSub;
     @Deprecated
     @ApiModelProperty("会员总盈亏")
     private BigDecimal totalNetAmount;

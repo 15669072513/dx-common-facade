@@ -137,6 +137,9 @@ public class WithdrawOrderRespDTO {
     @TableField("bankcard_no")
     private String bankcardNo;
 
+    @ApiModelProperty("开户行地址")
+    private String bankAddress;
+
     @ApiModelProperty("订单状态")
     @TableField("order_status")
     private Integer orderStatus;

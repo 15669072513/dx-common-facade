@@ -153,6 +153,9 @@ public class DepositOrderRespDTO implements Serializable {
     @ApiModelProperty("银行id")
     private Long bankId;
 
+    @ApiModelProperty("银行名称")
+    private String bankName;
+
     @ApiModelProperty("虚拟币协议")
     private String virtualProtocol;
 
