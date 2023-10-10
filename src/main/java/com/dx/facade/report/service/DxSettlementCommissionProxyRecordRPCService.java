@@ -3,6 +3,8 @@ package com.dx.facade.report.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.member.proxy.req.ProxyRebateDealAuditReqDTO;
+import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultRespDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordAwaitIssueReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionTopProxyRecordReqDTO;
@@ -12,6 +14,7 @@ import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordSumRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordRspDTO;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 
@@ -49,4 +52,21 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<PageResp<DxSettlementCommissionTopProxyRecordRspDTO, DxSettlementCommissionTopProxyRecordSumRspDTO>> listTopProxyListPage(DxSettlementCommissionTopProxyRecordReqDTO reqDTO);
+    /**
+     * 报表-提供代理佣金总额
+     * @param
+     * @return
+     */
+    CommonResp<BigDecimal> getProxyCommissionAmountSum(Long proxyId);
+
+    /**
+     * 报表-锁单
+     * @param
+     * @return
+     */
+    CommonResp batchEditProxyRebateLockStatus(List<Long> idList, Long currentUserMerchantId,  Long currentUserId, String currentUser, Integer lockStatus, Integer lockType);
+
+    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchPass(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
+
+    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
 }

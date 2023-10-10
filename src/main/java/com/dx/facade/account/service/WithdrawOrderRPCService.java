@@ -78,6 +78,8 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
+    CommonResp<GetTodayWithdrawStaRespDTO> getTodayWithdrawStat(Integer userType, Long userId);
+
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 
 
@@ -89,7 +91,7 @@ public interface WithdrawOrderRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp confirmCreateWithdraw(String eventId) throws BizException;
+    CommonResp confirmCreateWithdraw(String eventId);
 
     /**
      * 通过订单号获取订单详情

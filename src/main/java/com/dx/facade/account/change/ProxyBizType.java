@@ -107,6 +107,9 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_repay.code, v2_repay);
         code2Enum.put(v2_credit_up_score.code, v2_credit_up_score);
         code2Enum.put(v2_credit_down_score.code, v2_credit_down_score);
+        code2Enum.put(v2_1_deposit.code, v2_1_deposit);
+        code2Enum.put(v2_1_withdraw.code, v2_1_withdraw);
+        code2Enum.put(v2_1_proxy_commission.code, v2_1_proxy_commission);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;

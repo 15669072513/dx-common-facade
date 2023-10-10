@@ -572,8 +572,9 @@ public class Payment {
 
     public enum DepositBizType {
         会员存款(1, "会员存款"),
-        佣金存款(6, "佣金存款"),
-        额度存款(7, "额度存款"),
+        代理存款(17, "代理存款"),
+        //佣金存款(6, "佣金存款"),
+        //额度存款(7, "额度存款"),
         ;
         private Integer code;
         private String desc;

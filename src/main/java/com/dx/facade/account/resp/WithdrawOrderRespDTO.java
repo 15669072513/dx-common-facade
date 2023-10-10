@@ -137,6 +137,9 @@ public class WithdrawOrderRespDTO {
     @TableField("bankcard_no")
     private String bankcardNo;
 
+    @ApiModelProperty("开户行地址")
+    private String bankAddress;
+
     @ApiModelProperty("订单状态")
     @TableField("order_status")
     private Integer orderStatus;
@@ -298,6 +301,9 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty("确认/取消出款客户端备注")
     private String confirmClientDesc;
+
+    @ApiModelProperty("确认/取消出款审核耗时，单位：秒")
+    private Integer confirmCost;
 
     @ApiModelProperty("银行id")
     private Long bankId;
