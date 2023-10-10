@@ -14,4 +14,5 @@ public class ProxyRebateRecordDetailParam {
     @NotNull(message = "返点记录ID不能为空")
     private Long id;
 
+
 }
