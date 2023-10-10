@@ -1,23 +1,24 @@
 package com.dx.facade.member.proxy.req;
 
-import com.dx.facade.constant.Constants;
-import com.dx.facade.member.param.BaseCommissionRateParamDTO;
-import com.dx.facade.merchant.req.ProxyContractAddReqDTO;
-import com.dx.facade.merchant.req.RebateContractParam;
-import com.fasterxml.jackson.annotation.JsonFormat;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import java.math.BigDecimal;
+import java.util.List;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 
-import java.math.BigDecimal;
-import java.util.List;
+import com.dx.facade.constant.Constants;
+import com.dx.facade.member.param.BaseCommissionRateParamDTO;
+import com.dx.facade.merchant.req.ProxyContractAddReqDTO;
+import com.dx.facade.merchant.req.RebateContractParam;
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * 代理 实体类
@@ -100,8 +101,8 @@ public class AddGeneralProxyReqDTO {
 	@ApiModelProperty(value = "佣金契约ID", hidden = true)
 	private Long commissionContractId;
 	
-	@ApiModelProperty("德州返点比例")
-    @DecimalMin(value = "0.0000", message = "德州返点比例不能小于0.0000")
+    @ApiModelProperty("德州返点比例")
+    @DecimalMin(value = "0.000000", message = "德州返点比例不能小于0.0000")
     @NotNull(message = "德州返点比例不能为空")
     private BigDecimal texasRebate;
 	

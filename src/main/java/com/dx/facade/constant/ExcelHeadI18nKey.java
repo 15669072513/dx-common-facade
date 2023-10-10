@@ -597,6 +597,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_荷官位 = "EXCEL_HEAD_I18N_KEY.FUNDS_荷官位";
     String FUNDS_小盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_小盲位";
     String FUNDS_大盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_大盲位";
+    String FUNDS_桌牌 = "EXCEL_HEAD_I18N_KEY.FUNDS_桌牌";
 
     String MEMBER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_会员账号";
     String PROXY_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_代理账号";

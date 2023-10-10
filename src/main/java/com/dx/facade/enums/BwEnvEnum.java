@@ -15,7 +15,7 @@ public enum BwEnvEnum {
     PRE(3,"pre"),
     PROD(4,"prod"),
 
-    DEV1(5,"dev1"),
+    DEV1(5,"dev1"), // dev1环境
     ;
 
     /**

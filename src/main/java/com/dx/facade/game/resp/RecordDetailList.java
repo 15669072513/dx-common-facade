@@ -106,7 +106,6 @@ public class RecordDetailList implements Serializable {
     @ApiModelProperty("输钱最多的展示为大鱼的用户id")
     private Long NetAmountMinId;
 
-
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
         if (resp == null) {
             return null;
@@ -118,11 +117,11 @@ public class RecordDetailList implements Serializable {
         return result;
     }
 
-    public static RecordDetailList covertSummary(GameOrderRecordDetail.GameOrderRecordSummary resp) {
+    public static RecordDetailSummary covertSummary(GameOrderRecordDetail.GameOrderRecordSummary resp) {
         if (resp == null) {
             return null;
         }
-        RecordDetailList result = new RecordDetailList();
+        RecordDetailSummary result = new RecordDetailSummary();
         result.setTableId(resp.getTableId());
         result.setUserId(resp.getUserId());
         result.setTableTime(resp.getTableBeginDate());

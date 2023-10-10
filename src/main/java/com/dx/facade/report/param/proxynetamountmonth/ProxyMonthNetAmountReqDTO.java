@@ -43,6 +43,9 @@ public class ProxyMonthNetAmountReqDTO extends PageRequest {
     @ApiModelProperty(value = "上级代理名称")
     private String parentProxyName;
 
+    @ApiModelProperty("当前用户代理账号名")
+    private String selfProxyName;
+
     /**
      * parentProxyId
      */
