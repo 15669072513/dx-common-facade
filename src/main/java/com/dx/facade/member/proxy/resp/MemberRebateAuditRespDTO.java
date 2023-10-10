@@ -15,22 +15,13 @@ public class MemberRebateAuditRespDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
 
-    @ApiModelProperty(value = "上级代理id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long parentProxyId;
 
-    @ApiModelProperty(value = "代理id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long proxyId;
+    @ApiModelProperty(value = "订单号")
+    private String orderNo;
 
-    @ApiModelProperty(value = "代理账号")
-    private String proxyName;
 
-    @ApiModelProperty(value = "总代账号")
-    private String topProxyName;
-
-    @ApiModelProperty(value = "代理层级ID")
-    private Integer proxyLevelId;
+    @ApiModelProperty(value = "周期名称 - 返水期数")
+    private String cycleName;
 
     @ApiModelProperty(value = "商户ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -39,11 +30,36 @@ public class MemberRebateAuditRespDTO {
     @ApiModelProperty(value = "商户名称")
     private String merchantName;
 
+    @ApiModelProperty(value = "上级代理id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long parentProxyId;
+
+    @ApiModelProperty(value = "代理id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long proxyId;
+
+    @ApiModelProperty(value = "总代账号")
+    private String topProxyName;
+
+    @ApiModelProperty(value = "代理层级ID")
+    private Integer proxyLevelId;
+
+    @ApiModelProperty(value = "会员账号")
+    private String memberName;
+
+    @ApiModelProperty(value = "返水金额")
+    private BigDecimal rebateAmount;
+
+    @ApiModelProperty(value = "个人返水金额")
+    private BigDecimal personRebateAmount;
+
+    @ApiModelProperty(value = "审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 3-二审通过")
+    private Integer orderStatus;
+
+
     @ApiModelProperty(value = "货币符号")
     private String currency;
 
-    @ApiModelProperty(value = "单号")
-    private String orderNo;
     
     @ApiModelProperty(value = "账号状态")
     private Integer accountStatus;
@@ -56,9 +72,6 @@ public class MemberRebateAuditRespDTO {
 
     @ApiModelProperty(value = "风控")
     private String windControlName;
-
-    @ApiModelProperty(value = "审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 3-二审通过")
-    private Integer orderStatus;
 
     @ApiModelProperty(value = "锁单状态(0=未锁单 1=锁单中)")
     private Integer lockStatus;
@@ -75,20 +88,11 @@ public class MemberRebateAuditRespDTO {
     @ApiModelProperty(value = "周期类型: 1-天 2-周 3-月")
     private Integer cycleType;
 
-    @ApiModelProperty(value = "周期名称")
-    private String cycleName;
-
     @ApiModelProperty(value = "周期起始日期")
     private Integer cycleStatrtDate;
 
     @ApiModelProperty(value = "周期结束日期")
     private Integer cycleEndDate;
-
-    @ApiModelProperty(value = "个人返点金额")
-    private BigDecimal personRebateAmount;
-
-    @ApiModelProperty(value = "返点金额")
-    private BigDecimal rebateAmount;
 
     @ApiModelProperty(value = "下级返点")
     private BigDecimal childRebateAmount;
