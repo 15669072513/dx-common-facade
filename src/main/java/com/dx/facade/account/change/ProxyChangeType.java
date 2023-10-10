@@ -168,7 +168,21 @@ public enum ProxyChangeType implements IChangeType {
                 v2_credit_down_score_to_sub_proxy,
                 v2_credit_down_score_to_member,
                 v2_credit_repay,
-                v2_credit_loan
+                v2_credit_loan,
+                v2_1_deposit,
+                v2_1_deposit_back,
+                v2_1_withdraw,
+                v2_1_withdraw_frozen,
+                v2_1_withdraw_fail,
+                v2_1_withdraw_back,
+                v2_1_club_rebate_add,
+                v2_1_insure_rebate_add,
+                v2_1_club_rebate_sub,
+                v2_1_insure_rebate_sub,
+                v2_1_negate_benefit_commission_income,
+                v2_1_negate_benefit_commission_dispatch,
+                v2_1_proxy_commission_add,
+                v2_1_proxy_commission_sub
                 /*
                 officer_proxy_up_score,
                 proxy_be_up_score,

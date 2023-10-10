@@ -6,9 +6,11 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.math.BigDecimal;
+import java.util.List;
 
 @Data
-public class SettlementCommissionProxyRecordReqDTO{
+public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
     @NotNull(message = "分页参数不能为空")
     @Min(value = 1, message = "当前页最小值不能小于1")
@@ -27,7 +29,7 @@ public class SettlementCommissionProxyRecordReqDTO{
      * 周期起始日期
      */
     @ApiModelProperty("周期起始日期")
-    private Integer startTime;
+    private Integer cycleStartDate;
 
     /**
      * 周期结束日期
@@ -38,7 +40,9 @@ public class SettlementCommissionProxyRecordReqDTO{
      * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)
      */
     @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
-    private int payoutStatus;
+    private Integer payoutStatus;
+
+    private List<Integer> payoutStatusList;
     /**
      * 代理id
      */
@@ -56,5 +60,40 @@ public class SettlementCommissionProxyRecordReqDTO{
     private String proxyName;
 
 
+    /**
+     * 团队返佣金额
+     */
+    @ApiModelProperty("团队返佣金额")
+    private BigDecimal mixCommissionAmount;
+
+    /**
+     * 团队返佣金额
+     */
+    @ApiModelProperty("团队返佣金额")
+    private BigDecimal maxCommissionAmount;
+
+    /**
+     * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
+     */
+    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
+    private Integer orderStatus;
+
+    private List<Integer> orderStatusList;
+
+    /**
+     * 总代账号
+     */
+    @ApiModelProperty("总代账号")
+    private String topProxyName;
+
+    @ApiModelProperty(value = "查询类型：1待一审，2待二审", example = "1", required = true)
+    @Range(min = 1, max = 2, message = "查询类型参数不合法")
+    private Integer qryType;
+
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    private Integer payoutStatusNeZero;
+
+    @ApiModelProperty("排序通配符")
+    private String orderStr;
 
 }

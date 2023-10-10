@@ -269,8 +269,7 @@ public enum ProxyWalletChange implements IWalletChange {
         return Arrays.asList(
                 ProxyWalletChange.commission_withdraw_success,
                 ProxyWalletChange.commission_withdraw_sub,
-                ProxyWalletChange.v2_1_withdraw,
-                ProxyWalletChange.v2_1_deposit_back
+                ProxyWalletChange.v2_1_withdraw_success
         );
     }
 
@@ -307,6 +306,27 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(ProxyWalletChange.v2_credit_total_down_score_to_member);
         list.add(ProxyWalletChange.v2_credit_repay);
         list.add(ProxyWalletChange.v2_credit_loan);
+
+        list.add(ProxyWalletChange.v2_1_withdraw_frozen);
+        list.add(ProxyWalletChange.v2_1_withdraw_fail);
+        list.add(ProxyWalletChange.v2_1_withdraw_frozen_lock);
+        list.add(ProxyWalletChange.v2_1_withdraw_fail_lock);
+        list.add(ProxyWalletChange.v2_1_deposit);
+        list.add(ProxyWalletChange.v2_1_withdraw);
+        list.add(ProxyWalletChange.v2_1_deposit_back);
+        list.add(ProxyWalletChange.v2_1_withdraw_back);
+        list.add(ProxyWalletChange.v2_1_withdraw_success);
+        list.add(ProxyWalletChange.v2_1_club_rebate_add);
+        list.add(ProxyWalletChange.v2_1_insure_rebate_add);
+        list.add(ProxyWalletChange.v2_1_other_rebate_add);
+        list.add(ProxyWalletChange.v2_1_club_rebate_sub);
+        list.add(ProxyWalletChange.v2_1_insure_rebate_sub);
+        list.add(ProxyWalletChange.v2_1_other_rebate_sub);
+        list.add(ProxyWalletChange.v2_1_negate_benefit_commission_income);
+        list.add(ProxyWalletChange.v2_1_negate_benefit_commission_dispatch);
+        list.add(ProxyWalletChange.v2_1_proxy_commission_add);
+        list.add(ProxyWalletChange.v2_1_proxy_commission_sub);
+
         return list;
     }
 }

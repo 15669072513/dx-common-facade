@@ -45,11 +45,11 @@ public class PasswordUtil {
     }
 
     public static void main(String[] args) {
-        String salt = geneSalt(878597836592201781L,"early33");
+        String salt = geneSalt(878597836592201781L,"dzzd03");
         System.out.println("salt:"+salt);
         System.out.println("password:"+Md5Util.getMD5("abc123456"));
         //String newpassword = genePassword(salt, Md5Util.getMD5("abc1234567"));
-        String newpassword = genePassword(salt, Md5Util.getMD5("q1c6cPSh"));
+        String newpassword = genePassword(salt, Md5Util.getMD5("abc123456"));
         System.out.println("password:"+newpassword);
         String storedPwd = "70A205C5FE65C310136F00CBC61CB6B0";
         System.out.println(newpassword.equals(storedPwd));

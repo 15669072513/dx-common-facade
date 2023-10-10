@@ -106,7 +106,7 @@ public class DepositOrderRespDTO implements Serializable {
     @ApiModelProperty("通道名称")
     private String channelName;
 
-    @ApiModelProperty("充值类型,1:会员充值，6 代理佣金充值，7 代理额度充值")
+    @ApiModelProperty("充值类型,1:会员充值，17: 代理中心钱包")
     @TableField("biz_type")
     private Integer bizType;
 
@@ -152,6 +152,9 @@ public class DepositOrderRespDTO implements Serializable {
 
     @ApiModelProperty("银行id")
     private Long bankId;
+
+    @ApiModelProperty("银行名称")
+    private String bankName;
 
     @ApiModelProperty("虚拟币协议")
     private String virtualProtocol;

@@ -23,40 +23,67 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class ProxyMonthNetAmountRespDTO {
 
-    /** proxyId */
+    /**
+     * proxyId
+     */
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @ApiModelProperty(value = "代理id", example = "10001")
     private Long proxyId;
 
-    /** proxyName */
+    /**
+     * proxyName
+     */
     @ApiModelProperty(value = "代理账号", example = "daxia2222")
     private String proxyName;
+    @ApiModelProperty(value = "代理账号层级", example = "/daxia2222/")
+    private String proxyPathUsername;
+    @ApiModelProperty(value = "是否有下级代理", example = "true/false")
+    private Boolean isAllSub;
 
-    /** betAmount */
+    /**
+     * betAmount
+     */
     @ApiModelProperty(value = "总投注", example = "1500.00")
     private BigDecimal betAmount;
 
-    /** validBetAmount */
+    /**
+     * validBetAmount
+     */
     @ApiModelProperty(value = "有效投注", example = "1500.00")
     private BigDecimal validBetAmount;
 
-    /** netAmount */
+    /**
+     * netAmount
+     */
     @ApiModelProperty(value = "游戏盈亏", example = "1500.00")
     private BigDecimal netAmount;
 
-    /** rebateAmount */
+    /**
+     * rebateAmount
+     */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal rebateAmount;
 
-    /** discountAmount */
+    /**
+     * rebateAmount
+     */
+    @ApiModelProperty(value = "会员返水 0.2.1", example = "1500.00")
+    private BigDecimal memberRebateAmount;
+    /**
+     * discountAmount
+     */
     @ApiModelProperty(value = "会员优惠", example = "1500.00")
     private BigDecimal discountAmount;
 
-    /** artificialPatchAmount */
+    /**
+     * artificialPatchAmount
+     */
     @ApiModelProperty(value = "会员账户调整", example = "1500.00")
     private BigDecimal artificialPatchAmount;
 
-    /** proxyNet */
+    /**
+     * proxyNet
+     */
     @ApiModelProperty(value = "场馆费", example = "1500.00")
     private BigDecimal venueFee;
 
@@ -69,21 +96,61 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "代理返点", example = "1500.00")
     private BigDecimal proxyRebateAmount;
 
-    /** proxyNet */
+    /**
+     * artificialPatchAmount
+     */
+    @ApiModelProperty(value = "代理返点其他调整", example = "1500.00")
+    private BigDecimal proxyArtificialPatchAmount;
+    /**
+     * proxyNet
+     */
     @ApiModelProperty(value = "代净输赢", example = "1500.00")
     private BigDecimal proxyNet;
 
-    /** lastMonthBalance */
+    /**
+     * lastMonthBalance
+     */
     @ApiModelProperty(value = "上月结余", example = "1500.00")
     private BigDecimal lastMonthBalance;
 
-    /** rushNet */
+    /**
+     * rushNet
+     */
     @ApiModelProperty(value = "冲正后净输赢", example = "1500.00")
     private BigDecimal rushNet;
 
-    @ApiModelProperty("是否存在下级")
-    private Boolean isAllSub;
-
+    @Deprecated
     @ApiModelProperty("会员总盈亏")
     private BigDecimal totalNetAmount;
+
+
+    /**
+     * directValidBetAmount
+     */
+    @ApiModelProperty(value = "直属会员有效投注", example = "1500.00")
+    private BigDecimal directValidBetAmount;
+
+    /**
+     * directNetAmount
+     */
+    @ApiModelProperty(value = "直属会员总输赢", example = "1500.00")
+    private BigDecimal directNetAmount;
+
+
+    /**
+     * directRebateAmount
+     */
+    @ApiModelProperty(value = "直属会员返水", example = "1500.00")
+    private BigDecimal directRebateAmount;
+    /**
+     * directPayAmount
+     */
+    @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
+    private BigDecimal directProfitAmount;
+
+
+
+    /*directArtificialPatchAmount*/
+    @ApiModelProperty(value = "直属会员其他调整", example = "1500.00")
+    private BigDecimal directArtificialPatchAmount;
 }

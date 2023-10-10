@@ -1,6 +1,7 @@
 package com.dx.facade.member.proxy.req;
 
 import com.dx.facade.constant.Constants;
+import com.dx.facade.member.param.BaseCommissionRateParamDTO;
 import com.dx.facade.merchant.req.ProxyContractAddReqDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -100,52 +101,42 @@ public class AddGeneralProxyReqDTO {
 	private Long commissionContractId;
 	
 	@ApiModelProperty("德州返点比例")
-    @DecimalMin(value = "0.00", message = "德州返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "德州返点比例不能小于0.0000")
     @NotNull(message = "德州返点比例不能为空")
     private BigDecimal texasRebate;
 	
 	@ApiModelProperty("德州保险返点比例")
-    @DecimalMin(value = "0.00", message = "德州保险返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "德州保险返点比例不能小于0.0000")
     @NotNull(message = "德州保险返点比例不能为空")
     private BigDecimal texasInsuranceRebate;
     
-    
     @ApiModelProperty("真人返点比例")
     @NotNull(message = "真人返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "真人返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "真人返点比例不能小于0.0000")
     private BigDecimal actualPersonRebate;
     
     @ApiModelProperty("体育返点比例")
     @NotNull(message = "体育返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "体育返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "体育返点比例不能小于0.0000")
     private BigDecimal sportsRebate;
     
     @ApiModelProperty("彩票返点比例")
     @NotNull(message = "彩票返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "彩票返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "彩票返点比例不能小于0.0000")
     private BigDecimal lotteryTicketRebate;
     
     @ApiModelProperty("棋牌返点比例")
     @NotNull(message = "棋牌返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "棋牌返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "棋牌返点比例不能小于0.0000")
     private BigDecimal chessRebate;
     
     @ApiModelProperty("电竞返点比例")
     @NotNull(message = "电竞返点比例不能为空")
-    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
+    @DecimalMin(value = "0.0000", message = "电竞返点比例不能小于0.0000")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("德州返佣比例")
-    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
-    private BigDecimal texasCommission;
-    
-    @ApiModelProperty("德州保险返佣比例")
-    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
-    private BigDecimal texasInsuranceCommission;
-    
-    @ApiModelProperty("其他返佣比例")
-    @DecimalMin(value = "0.00", message = "电竞返点比例不能小于0.00")
-    private BigDecimal otherCommission;
+    @ApiModelProperty("返佣比例列表")
+    private List<BaseCommissionRateParamDTO> commissionRateList;
 	
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		

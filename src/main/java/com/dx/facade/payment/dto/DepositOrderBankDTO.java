@@ -61,4 +61,7 @@ public class DepositOrderBankDTO implements Serializable {
 	@ApiModelProperty(value = "对于商户没有页面展示收款卡信息的可以直接显示该页面")
 	private String payUrl;
 
+	@ApiModelProperty(value = "虚拟币充值返回的充值链接")
+	private String url;
+
 }

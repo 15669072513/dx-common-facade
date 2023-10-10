@@ -68,7 +68,7 @@ public class SubmitPayParamDTO {
             Assert.notNull(memberBO, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("memberBO"));
         } else if (userType.intValue() == 1) {
             Assert.notNull(proxyBO, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyBO"));
-            Assert.isTrue(bizType.intValue() == 6 || bizType.intValue() ==7, ErrorCode.CHECK_PARAM_EXCEPTION.messageAfter("bizType"));
+            Assert.isTrue(bizType.intValue() == 17, ErrorCode.CHECK_PARAM_EXCEPTION.messageAfter("bizType"));
         }
     }
 

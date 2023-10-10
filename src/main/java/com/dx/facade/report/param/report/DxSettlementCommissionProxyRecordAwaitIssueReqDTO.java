@@ -10,7 +10,7 @@ import java.util.List;
  * @author 发放佣金查询
  */
 @Data
-public class SettlementCommissionProxyRecordAwaitIssueReqDTO implements Serializable {
+public class DxSettlementCommissionProxyRecordAwaitIssueReqDTO implements Serializable {
 
 
     /**

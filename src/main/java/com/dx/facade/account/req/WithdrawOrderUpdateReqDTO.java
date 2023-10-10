@@ -142,6 +142,9 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
     @ApiModelProperty("确认/取消出款客户端备注")
     private String confirmClientDesc;
 
+    @ApiModelProperty("确认/取消出款耗时，单位：秒")
+    private Integer confirmCost;
+
     @ApiModelProperty("确认/取消出款操作人id")
     private Long confirmAccountId;
 }

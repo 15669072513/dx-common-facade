@@ -13,6 +13,7 @@ import com.dx.facade.member.param.UpdateCommissionRateParamDTO;
 import com.dx.facade.member.resp.BaseCommissionRateRespDTO;
 import com.dx.facade.member.resp.CommissionRateRespDTO;
 import com.dx.facade.member.resp.MemberCommissionRateRespDTO;
+import com.dx.facade.member.resp.QueryCommissionRateRespDTO;
 /**
  * 返佣比例RPC服务
  * 
@@ -65,7 +66,7 @@ public interface CommissionRateRPCService {
      * @param pageReq
      * @return
      */
-    CommonResp<PageResp<CommissionRateRespDTO, ?>> selectCommissionRateListPage(PageReq<QueryCommissionRateParamDTO> pageReq);
+    CommonResp<PageResp<QueryCommissionRateRespDTO, ?>> selectCommissionRateListPage(PageReq<QueryCommissionRateParamDTO> pageReq);
     
 	/**
 	 * 查询下级最大的返佣比例

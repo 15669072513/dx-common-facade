@@ -17,7 +17,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = " 代理返佣发放列表查询", description = "代理返佣发放列表查询")
-public class SettlementCommissionProxyRecordAwaitIssueRspDTO implements Serializable {
+public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
