@@ -33,7 +33,7 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
     /**
      * 当前取款限制类型
      */
-    @ApiModelProperty("用户类型:1-账单，2-流水")
+    @ApiModelProperty("取款限制类型:1-账单，2-流水")
     private Integer withdrawLimitType;
     /**
      * 剩余可提现金额
