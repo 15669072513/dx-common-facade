@@ -86,8 +86,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("总代账号")
     private String topProxyName;
 
-    @ApiModelProperty(value = "查询类型：1待一审，2待二审", example = "1", required = true)
-    @Range(min = 1, max = 2, message = "查询类型参数不合法")
+    @ApiModelProperty(value = "查询类型：1待一审，2待二审", example = "1")
+    //@Range(min = 1, max = 2, message = "查询类型参数不合法")
     private Integer qryType;
 
     @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
