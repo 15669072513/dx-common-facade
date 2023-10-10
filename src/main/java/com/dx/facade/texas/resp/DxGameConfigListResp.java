@@ -121,8 +121,8 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("选张购买功能 false-不选张 true-选张，多个用逗号隔开，支持小数点2位")
     private Boolean insuranceChoosSheet;
 
-    @ApiModelProperty("保险模式 false-不开保险 true-经典保险")
-    private Integer insuranceMode;
+    @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
+    private String insuranceMode;
 
     @ApiModelProperty("保险出发下限")
     private Integer insuranceLower;
