@@ -8,11 +8,9 @@ import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
 import com.dx.facade.account.param.QueryWalletParam;
 import com.dx.facade.account.param.WalletAmountParam;
-import com.dx.facade.account.req.RealtimeBillParam;
-import com.dx.facade.account.req.WalletBalanceDTO;
-import com.dx.facade.account.req.WithdrawInfoParam;
-import com.dx.facade.account.req.WithdrawLimitInfoParam;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
+import com.dx.facade.account.resp.WalletSimpleParam;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -111,6 +109,15 @@ public interface WalletRPCService {
      * @return
      */
     CommonResp<WithdrawInfoRespDTO> getWithdrawInfo(WithdrawInfoParam param);
+
+    /**
+     * @author Dealer
+     * @description: 手动调整会员提现所需流水要求
+     * @date 2023/10/10
+     * @copyright
+     */
+
+    CommonResp<Boolean> adjustValidFlowAmount(MemberFlowAdjustDTO flowAdjustDTO);
 
     /**
      * 获取取款限制信息：1.提取款限制类型，2取款限制信息
