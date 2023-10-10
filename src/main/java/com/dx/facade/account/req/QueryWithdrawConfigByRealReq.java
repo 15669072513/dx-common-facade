@@ -34,10 +34,10 @@ public class QueryWithdrawConfigByRealReq implements BaseParmDTO {
     public void check() {
         Assert.notNull(userType, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userType"));
         Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
-        if(ConstantEnums.UserType.member.code().equals(userType)){
-            Assert.notNull(vipLevel, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
-            Assert.isTrue(vipLevel >= 0 && vipLevel <= 10 , ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
-        }
+//        if(ConstantEnums.UserType.member.code().equals(userType)){
+//            Assert.notNull(vipLevel, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
+//            Assert.isTrue(vipLevel >= 0 && vipLevel <= 10 , ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("vipLevel"));
+//        }
 //        if(ConstantEnums.UserType.agent.code().equals(userType)){
 //            Assert.notNull(proxyId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyId"));
 //        }
