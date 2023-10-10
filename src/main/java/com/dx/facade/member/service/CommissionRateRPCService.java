@@ -12,7 +12,6 @@ import com.dx.facade.member.param.QueryEffectCommissionRateParamDTO;
 import com.dx.facade.member.param.UpdateCommissionRateParamDTO;
 import com.dx.facade.member.resp.BaseCommissionRateRespDTO;
 import com.dx.facade.member.resp.CommissionRateRespDTO;
-import com.dx.facade.member.resp.MemberCommissionRateRespDTO;
 import com.dx.facade.member.resp.QueryCommissionRateRespDTO;
 /**
  * 返佣比例RPC服务
