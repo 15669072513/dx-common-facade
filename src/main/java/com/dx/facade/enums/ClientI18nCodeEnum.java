@@ -24,6 +24,8 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     PROXY_NOT_EXISTS(10018, "代理不存在"),
     PROXY_NOT_TOP_PARENT_ERROR(10019, "官方不可以给非总代账号增加额度申请"),
     MEMBER_NOT_EXISTS(10020, "会员不存在"),
+    MEMBER_BILL_ID_NOT_EXISTS(10021, "会员提款流水要求记录ID不存在"),
+    MEMBER_BILL_NOT_EXISTS(10022, "会员提款流水要求记录不存在"),
     TRANSFER_TYPE_NOT_NULL(100000, "额度转换转账类型不能为空"),
     SOURCE_GAME_NOT_NULL(100001, "额度转换交易场馆不能为空"),
     MEMBER_ID_NOT_NULL(100002, "会员ID不能为空"),
