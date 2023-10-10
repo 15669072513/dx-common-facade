@@ -25,10 +25,10 @@ public class ProxyRebateDealAuditReqDTO {
     @ApiModelProperty(value = "商户id")
     private Long merchantId;
 
-    @ApiModelProperty(value = "调整类型(1=返佣增加 2=返佣减少)",  example = "1")
-    private Integer adjustType;
-
-    @ApiModelProperty(value = "调整金额", example = "1")
-    private BigDecimal adjustAmount;
+//    @ApiModelProperty(value = "调整类型(1=返佣增加 2=返佣减少)",  example = "1")
+//    private Integer adjustType;
+//
+//    @ApiModelProperty(value = "调整金额", example = "1")
+//    private BigDecimal adjustAmount;
 
 }
