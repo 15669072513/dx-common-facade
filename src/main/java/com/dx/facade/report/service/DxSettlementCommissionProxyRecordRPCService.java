@@ -3,6 +3,8 @@ package com.dx.facade.report.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.member.proxy.req.ProxyRebateDealAuditReqDTO;
+import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultRespDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordAwaitIssueReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionTopProxyRecordReqDTO;
@@ -56,4 +58,15 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<BigDecimal> getProxyCommissionAmountSum(Long proxyId);
+
+    /**
+     * 报表-锁单
+     * @param
+     * @return
+     */
+    CommonResp batchEditProxyRebateLockStatus(List<Long> idList, Long currentUserMerchantId,  Long currentUserId, String currentUser, Integer lockStatus, Integer lockType);
+
+    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchPass(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
+
+    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
 }
