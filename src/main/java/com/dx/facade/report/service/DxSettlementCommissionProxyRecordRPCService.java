@@ -9,6 +9,7 @@ import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordAwaitI
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionTopProxyRecordReqDTO;
 import com.dx.facade.report.resp.agent.ProxyCommissionListPayDTO;
+import com.dx.facade.report.resp.rebate.ProxyRebateRecordDetailParam;
 import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordAwaitIssueRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordRspDTO;
 import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordSumRspDTO;
@@ -69,4 +70,5 @@ public interface DxSettlementCommissionProxyRecordRPCService {
     CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchPass(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
 
     CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
+    CommonResp adjustAmount(ProxyRebateRecordDetailParam param);
 }
