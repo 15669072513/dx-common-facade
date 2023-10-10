@@ -58,7 +58,7 @@ public interface MemberRebateRecordService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<ProxyRebateAuditedRespDTO, ?>> queryProxyRebateRecordPage(PageReq<ProxyRebateAuditedRecordReqDTO> reqDTO) throws BizException;
+    CommonResp<PageResp<MemberRebateAuditedRespDTO, ?>> queryMemberRebateRecordPage(PageReq<MemberRebateAuditedRecordReqDTO> reqDTO) throws BizException;
 
     /**
      * 代理资金记录->返点流水记录
