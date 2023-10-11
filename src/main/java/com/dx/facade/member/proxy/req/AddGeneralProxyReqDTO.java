@@ -6,6 +6,7 @@ import java.util.List;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import com.baomidou.mybatisplus.annotation.TableField;
 import javax.validation.constraints.Pattern;
 
 import com.dx.facade.constant.Constants;
@@ -138,7 +139,12 @@ public class AddGeneralProxyReqDTO {
     
     @ApiModelProperty("返佣比例列表")
     private List<BaseCommissionRateParamDTO> commissionRateList;
-	
+
+	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
+	@NotNull(message = "取款限制类型 不能为空")
+	@TableField("withdraw_limit_type")
+	private Integer withdrawLimitType;
+
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		
 		return ProxyContractAddReqDTO.builder()
