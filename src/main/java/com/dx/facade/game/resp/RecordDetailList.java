@@ -80,12 +80,18 @@ public class RecordDetailList implements Serializable {
      */
     @ApiModelProperty("最大底池")
     private BigDecimal maxEffectivePool;
+
     @ApiModelProperty("盈亏筹码")
     private BigDecimal netAmount;
+
     @ApiModelProperty("小盲注")
     private BigDecimal sbBlindScore;
+
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore;
+
+    @ApiModelProperty("入池率")
+    private BigDecimal bringPoolRate;
 
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
         if (resp == null) {
@@ -98,11 +104,11 @@ public class RecordDetailList implements Serializable {
         return result;
     }
 
-    public static RecordDetailList covertSummary(GameOrderRecordDetail.GameOrderRecordSummary resp) {
+    public static RecordDetailSummary covertSummary(GameOrderRecordDetail.GameOrderRecordSummary resp) {
         if (resp == null) {
             return null;
         }
-        RecordDetailList result = new RecordDetailList();
+        RecordDetailSummary result = new RecordDetailSummary();
         result.setTableId(resp.getTableId());
         result.setUserId(resp.getUserId());
         result.setTableTime(resp.getTableBeginDate());

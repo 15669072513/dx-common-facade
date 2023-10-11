@@ -81,6 +81,11 @@ public enum ConfigKeyEnum {
     LIMIT_REGION_COUNTRY_IP("limit.region.country.ip", "1"),
     REGISTER_DEFAULT_VENTURE_CODE("register.default.venture.code ", "1"),//默认代理合营码
     DEPOSIT_DEFAULT_APPID_MODEL("deposit.default.appid.model", "1"),//存取款新增通道切换参数
+    CLIENT_GEETEST_SWITCH("client.geetest.switch", "1"),//app端极验开关
+    PROXY_GEETEST_SWITCH("proxy.geetest.switch", "1"),//代理后台极验开关
+    MERCHANT_GEETEST_SWITCH("merchant.geetest.switch", "1"),//中控后台极验开关
+
+
 
     //jav项目中的字典
     JAV_FREE_VIEW_DAY_COUNT("jav.free.view.day.count", "1"),
@@ -231,6 +236,19 @@ public enum ConfigKeyEnum {
     //资资金>账单相关设置 会员单笔可提现最大额度
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
     //******************************资金模块配置,其它模块请注意自己的位置哈************************************
+    /** 同时开牌桌上限 */
+    CLUB_MAXIMUM_NUMBER("club.maximum.number","1"),
+    /** 同时开牌桌上限 */
+    MAXIMUM_SIMULTANEOUS_LIMIT("maximum.simultaneous.limit","1"),
+    /** 单牌桌旁观人数上限 */
+    MAXIMUM_ONLOOKERS_LIMIT("maximum.onlookers.limit","1"),
+    /** 单牌桌可坐下人数上限 */
+    MAXIMUM_SIT_LIMIT("maximum.sit.limit","1"),
+    /** 德州单牌桌累计带入上限（倍BB） */
+    TEXAS_UPPER_LIMIT("texas.upper.limit","1"),
+    /** 短牌单牌桌累计带入上限（倍Ante） */
+    SHOORT_UPPER_LIMIT("short.upper.limit","1"),
+    
 	;
 
     //code转换
