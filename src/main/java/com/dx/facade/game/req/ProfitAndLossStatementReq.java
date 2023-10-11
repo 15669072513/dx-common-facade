@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
  */
 @ApiModel("德信-盈亏表查询对象")
 @Data
-public class ProfitAndLossStatementReq extends BaseRequest {
+public class ProfitAndLossStatementReq {
     @ApiModelProperty("注单id")
     private String id;
 
