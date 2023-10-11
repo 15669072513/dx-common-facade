@@ -18,7 +18,7 @@ public class ProfitAndLossStatementReq extends BaseRequest {
     @ApiModelProperty("注单id")
     private String id;
 
-    @ApiModelProperty("转账时间结束")
+    @ApiModelProperty("转账时间开始")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime profitStartTime;
