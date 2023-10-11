@@ -680,4 +680,12 @@ public interface ExcelHeadI18nKey {
 
     /** 俱乐部申请记录 */
     String FILE_NAME_CLUB_APPLY_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_俱乐部申请记录";
+
+    String PROFIT_盈亏表= "EXCEL_HEAD_I18N_KEY.PROFIT_盈亏表";
+    String PROFIT_项目 = "EXCEL_HEAD_I18N_KEY.PROFIT_项目";
+    String PROFIT_投注人数 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注人数";
+    String PROFIT_注单量 = "EXCEL_HEAD_I18N_KEY.PROFIT_注单量";
+    String PROFIT_投注金额 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注金额";
+    String PROFIT_有效投注 = "EXCEL_HEAD_I18N_KEY.PROFIT_有效投注";
+    String PROFIT_盈亏 = "EXCEL_HEAD_I18N_KEY.PROFIT_盈亏";
 }
