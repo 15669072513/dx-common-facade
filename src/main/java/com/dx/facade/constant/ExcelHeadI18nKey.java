@@ -637,6 +637,8 @@ public interface ExcelHeadI18nKey {
 
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
+    String FILE_NAME_INSURANCE_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_保险列表";
+
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
 
     String	FUNDS_会员详情_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员详情_牌桌列表";

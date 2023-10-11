@@ -21,12 +21,6 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
 
     private static final long serialVersionUID = 1L;
 
-    /**
-     * 支付密码
-     */
-    @ApiModelProperty("周期名称 - 结算期数")
-    private String payPassword;
-
 
     /**
      * 周期名称 - 结算期数
