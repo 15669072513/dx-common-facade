@@ -6,7 +6,7 @@ import com.dx.facade.other.dto.MessageReq;
 import java.io.IOException;
 import java.security.SignatureException;
 
-public interface GeeTetstRpcService {
+public interface GeeTestMessageRpcService {
     /**
      * 发送消息
      *
