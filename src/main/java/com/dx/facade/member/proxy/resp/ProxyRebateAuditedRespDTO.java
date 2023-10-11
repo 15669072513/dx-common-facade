@@ -20,6 +20,12 @@ public class ProxyRebateAuditedRespDTO {
     @ApiModelProperty(value = "代理账号")
     private String proxyName;
 
+    @ApiModelProperty(value = "顶级代理id")
+    private String topProxyId;
+
+    @ApiModelProperty(value = "顶级代理账号")
+    private String topProxyName;
+
     @ApiModelProperty(value = "商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;

@@ -41,4 +41,7 @@ public interface GameOrderRPCManagerService {
      */
     CommonResp<GameOrderUserSumByUserIdRespDto> gameOrderUserSumList(GameOrderUserSumByUserIdReq req);
 
+
+    CommonResp<GameOrderTableListRespDto> gameOrderTableListByUserName(GameOrderUserNameReq req);
+
 }

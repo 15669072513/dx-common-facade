@@ -115,6 +115,12 @@ public class GameOrderRecordDto implements Serializable {
      * 有效低池
      */
     private BigDecimal effectivePool;
+
+    /**
+     * 总底池 = 有效底池+无效底池
+     */
+    private BigDecimal totalPotAmount;
+
     /**
      * 有效投注（抽水金额）
      */
@@ -146,12 +152,12 @@ public class GameOrderRecordDto implements Serializable {
     /***
      * 小盲注
      */
-    private Long sbBlindScore;
+    private BigDecimal sbBlindScore;
 
     /***
      * 大盲注
      */
-    private Long bbBlindScore;
+    private BigDecimal bbBlindScore;
     /**
      * 手牌信息
      */

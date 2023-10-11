@@ -18,11 +18,14 @@ public class ProxyOverviewPrimaryDataRespDTO implements Serializable {
     @ApiModelProperty("总投注")
     private BigDecimal betAmount;
 
+    @ApiModelProperty("总投注环比")
+    private BigDecimal betAmountMonthRate;
+
     @ApiModelProperty("有效投注")
     private BigDecimal validBetAmount;
 
-    @ApiModelProperty("总投注环比")
-    private BigDecimal betAmountMonthRate;
+    @ApiModelProperty("总有效投注环比")
+    private BigDecimal validBetAmountMonthRate;
 
     @ApiModelProperty("游戏盈亏")
     private BigDecimal netAmount;

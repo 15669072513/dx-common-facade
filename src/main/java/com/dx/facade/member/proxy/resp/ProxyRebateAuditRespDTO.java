@@ -26,6 +26,9 @@ public class ProxyRebateAuditRespDTO {
     @ApiModelProperty(value = "代理账号")
     private String proxyName;
 
+    @ApiModelProperty(value = "总代账号")
+    private String topProxyName;
+
     @ApiModelProperty(value = "代理层级ID")
     private Integer proxyLevelId;
 
@@ -86,6 +89,9 @@ public class ProxyRebateAuditRespDTO {
 
     @ApiModelProperty(value = "返点金额")
     private BigDecimal rebateAmount;
+
+    @ApiModelProperty(value = "下级返点")
+    private BigDecimal childRebateAmount;
 
     @ApiModelProperty(value = "返点调整金额")
     private BigDecimal rebateAdjustAmount;

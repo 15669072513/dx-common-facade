@@ -94,10 +94,16 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("牌型")
     private String resultInfo;
+
+    /**
+     * 眼睛标识
+     */
+    @ApiModelProperty("眼睛标识")
+    private boolean showFlag;
     /**
      * 投注状态（GameBetStatusEnum)
      */
-    @ApiModelProperty("投注状态")
+    @ApiModelProperty("投注状态,参考枚举: GameBetStatusEnum")
     private Integer betStatus;
     /**
      * 盈亏筹码
@@ -128,7 +134,7 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("座位号")
     private Integer seatNum;
 
-    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
+    @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
 
 }

@@ -1,18 +1,28 @@
 package com.dx.facade.member.service;
 
+import java.util.List;
+
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.member.param.*;
+import com.dx.facade.member.param.GetProxyPathByUserNameParamDTO;
+import com.dx.facade.member.param.JoinCodeIsRepeatParamDTO;
+import com.dx.facade.member.param.ProxyInfoParamDTO;
+import com.dx.facade.member.param.ProxyInfoRpcEditReqDTO;
+import com.dx.facade.member.param.ProxyListPageParamDTO;
+import com.dx.facade.member.param.ProxyQueryParamDTO;
+import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
+import com.dx.facade.member.param.ProxyTreeParamDTO;
+import com.dx.facade.member.param.UpdatePassWordParamDTO;
+import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
+import com.dx.facade.member.param.UpdateProxyPasswordParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
-import com.dx.facade.member.resp.MemberInfoRespDTO;
+import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-
-import java.util.List;
 
 public interface ProxyRPCService {
 
@@ -54,6 +64,9 @@ public interface ProxyRPCService {
 
     @ApiModelProperty("获取代理树状结构")
     CommonResp<ProxyTreeRespDTO> getProxyTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
+    
+    @ApiModelProperty("获取代理和会员树状结构")
+    CommonResp<ProxyAndMemberTreeRespDTO> getProxyAndMemberTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
 
     @ApiModelProperty("根据代理账号/商户号查询代理层级链路")
     CommonResp<List<ProxyTreeRespDTO>> getProxyTreeLinkByUserName(GetProxyPathByUserNameParamDTO paramDTO) throws BizException;
@@ -138,5 +151,38 @@ public interface ProxyRPCService {
      * @throws Exception 
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
+	
+	/**
+	 * 校验userName是否已存在
+	 * 
+	 * @param paramDTO
+	 * @return
+	 */
+	CommonResp<Boolean> checkUserName(ProxyQueryParamDTO paramDTO);
+	
+	/**
+	 * 设置登录密码
+	 * 
+	 * @param params
+	 * @return
+	 * @throws BizException
+	 */
+    CommonResp<Boolean> updatePassword(UpdateProxyPasswordParamDTO params) throws BizException;
+
+    /**
+     * @author Dealer
+     * @description: 查询指定代理全部下辖代理
+     * @date 2023/9/18
+     * @copyright
+     */
+    CommonResp<List<ProxyInfoRespDTO>> getProxyAndSubList(ProxyTreeLinkParamDTO paramDTO);
+    
+    /**
+     * 获取所以下级代理id
+     * 
+     * @param proxyId
+     * @return
+     */
+    CommonResp<List<Long>> getSubProxyIdList(Long proxyId);
 
 }

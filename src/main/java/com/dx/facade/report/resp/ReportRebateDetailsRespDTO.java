@@ -69,4 +69,7 @@ public class ReportRebateDetailsRespDTO implements Serializable {
      */
     @ApiModelProperty(value = "实际返点", example = "1000.00")
     private BigDecimal realOfRebate;
+
+    @ApiModelProperty(value = "返点状态")
+    private Integer payoutStatus;
 }

@@ -72,15 +72,24 @@ public class DwdMemberStaticInfoSummaryResp {
 
 
     @ApiModelProperty("代理授信上分金额")
-    private BigDecimal proxyCreditUpAmount;
+    protected BigDecimal proxyCreditUpAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信上分次数")
-    private Long proxyCreditUpTimes;
+    protected Long proxyCreditUpTimes = 0L;
     @ApiModelProperty("代理授信下分金额")
-    private BigDecimal proxyCreditDownDmount;
+    protected BigDecimal proxyCreditDownDmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信下分次数")
-    private Long proxyCreditDownTimes;
+    protected Long proxyCreditDownTimes = 0L;
     @ApiModelProperty("返点金额")
-    private BigDecimal rebateAmount;
+    protected BigDecimal rebateAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("代理充值上分金额")
+    protected BigDecimal proxyCashUpAmount = BigDecimal.ZERO;
+    @ApiModelProperty("代理充值上分次数")
+    protected Long proxyCashUpTimes = 0L;
+    @ApiModelProperty("代理提现下分金额")
+    protected BigDecimal proxyCashDownAmount = BigDecimal.ZERO;
+    @ApiModelProperty("代理提现下分金额")
+    protected Long proxyCashDownTimes = 0L;
 
 
 
@@ -89,14 +98,14 @@ public class DwdMemberStaticInfoSummaryResp {
      *
      * @return
      */
-    public BigDecimal getNetProfit() {
-        if (Objects.isNull(netAmount)
-                || Objects.isNull(returnWaterAmount)
-                || Objects.isNull(discountAmount)
-                || Objects.isNull(otherAdjustAmount)) {
-            return null;
-        }
-        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
-    }
+//    public BigDecimal getNetProfit() {
+//        if (Objects.isNull(netAmount)
+//                || Objects.isNull(returnWaterAmount)
+//                || Objects.isNull(discountAmount)
+//                || Objects.isNull(otherAdjustAmount)) {
+//            return null;
+//        }
+//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+//    }
 
 }

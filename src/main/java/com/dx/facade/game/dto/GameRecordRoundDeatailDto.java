@@ -85,6 +85,11 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("牌型")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String resultInfo;
+    /**
+     * 眼睛标识
+     */
+    @ApiModelProperty("眼睛标识")
+    private boolean showFlag;
 
     @ApiModelProperty("玩家牌型显示是否置灰标识")
     @JsonInclude(JsonInclude.Include.NON_NULL)
@@ -94,7 +99,7 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private BigDecimal netAmount;
 
-    @ApiModelProperty("底池竞争亮牌标识 1亮牌 2弃牌")
+    @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
 
 }

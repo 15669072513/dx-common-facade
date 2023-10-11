@@ -62,8 +62,11 @@ public class DxHandDetailResp implements Serializable {
     @ApiModelProperty("'参与用户ID集合'")
     private String userIds;
 
-    @ApiModelProperty("参与用户名称集合")
+    @ApiModelProperty("参与用户名称集合（账号）")
     private String userNames;
+
+    @ApiModelProperty("参与用户昵称集合")
+    private String nickNames;
 
     @ApiModelProperty("局次")
     private Integer handNum;

@@ -24,6 +24,9 @@ public class GameRecordDeatailPackResp implements Serializable {
     @ApiModelProperty("手牌编码")
     private String handCode;
 
+    @ApiModelProperty("牌桌类型 2001:德州局 2002:短牌局")
+    private Long gameType;
+
     @ApiModelProperty("圈层")
     private String roundCode;
 

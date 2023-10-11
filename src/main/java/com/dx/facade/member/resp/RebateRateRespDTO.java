@@ -2,6 +2,7 @@ package com.dx.facade.member.resp;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -97,5 +98,8 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
     @ApiModelProperty("备注")
     private String remark;
+    
+	@ApiModelProperty(value = "代理层级路径(代理账号)")
+	private List<String> proxyPathUsername;
 
 }

@@ -128,4 +128,24 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("总代名称")
     private String topProxyName;
+
+    @ApiModelProperty("时长（小时）")
+    private BigDecimal hourTimeCount;
+
+    @ApiModelProperty("单牌桌累计带入上限")
+    private Integer bringInLimit;
+    @ApiModelProperty("单牌桌可坐下人数上限")
+    private Integer sitDownLimit;
+
+    @ApiModelProperty("玩家总带入")
+    private BigDecimal bringInChipScore;
+
+    @ApiModelProperty("总打牌抽水")
+    private BigDecimal pumpingAmountTotal;
+
+    @ApiModelProperty("盈亏金额")
+    private BigDecimal netAmount;
+
+    @ApiModelProperty("牌桌总费用")
+    private BigDecimal costTotal;
 }

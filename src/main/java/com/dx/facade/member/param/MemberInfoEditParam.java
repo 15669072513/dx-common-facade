@@ -56,7 +56,7 @@ public class MemberInfoEditParam implements Serializable {
     private MemberInfoRpcEditResetPwd resetPwdAfter;
 
     @ApiModelProperty(value = "会员账号",required = true,example = "abc123")
-    @NotBlank(message = "会员账号不能为空")
+    @NotBlank(message = "账号不能为空")
     @Pattern(regexp = DXManagerConstant.REG_4_11, message = "账号 4-11位，最少1个字母+数字组合，首位字母")
     private String userName;
 

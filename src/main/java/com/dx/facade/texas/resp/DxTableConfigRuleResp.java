@@ -142,8 +142,11 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal;
 
-    @ApiModelProperty("游戏名称")
+    @ApiModelProperty("游戏类型名称")
     private String gameTypeName;
+
+    @ApiModelProperty("游戏名称")
+    private String gameName;
 
     @ApiModelProperty("累计参与者")
     private Integer participantTotal;
@@ -162,4 +165,16 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
     private Integer seatsNumberLimit;
+
+    @ApiModelProperty("时长（小时）")
+    private BigDecimal hourTimeCount;
+
+    @ApiModelProperty("单牌桌累计带入上限（倍数）")
+    private Integer bringInLimit;
+
+    @ApiModelProperty("单牌桌累计带入上限（金额）")
+    private BigDecimal bringInLimitChipScore;
+
+    @ApiModelProperty("单牌桌可坐下人数上限")
+    private Integer sitDownLimit;
 }

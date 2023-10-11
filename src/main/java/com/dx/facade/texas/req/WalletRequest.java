@@ -15,6 +15,8 @@ public class WalletRequest implements Serializable, BaseParmDTO {
   private Long userId;
   @ApiModelProperty("钱包类型 1-德州")
   private Integer walletType;
+  @ApiModelProperty("牌桌id")
+  private Long tableId;
 
   @Override
   public void check() {

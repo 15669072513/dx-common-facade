@@ -9,6 +9,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddProxyClubParamDTO;
 import com.dx.facade.member.param.CheckClubNameParamDTO;
 import com.dx.facade.member.param.CheckClubOwnerParamDTO;
+import com.dx.facade.member.param.CheckProxyClubParamDTO;
 import com.dx.facade.member.param.ProxyClubConfigParamDTO;
 import com.dx.facade.member.param.QueryProxyClubParamDTO;
 import com.dx.facade.member.param.UpdateProxyClubParamDTO;
@@ -95,4 +96,12 @@ public interface ProxyClubRPCService {
      * @param request
      */
     CommonResp<Boolean> updateProxyClubConfigParam(ProxyClubConfigParamDTO request) throws BizException;
+
+    /**
+     * 验证俱乐部人员是否已满，返回true已满，返回false未满
+     * 
+     * @param param
+     * @return
+     */
+	CommonResp<Boolean> checkClubIsFull(CheckProxyClubParamDTO param);
 }

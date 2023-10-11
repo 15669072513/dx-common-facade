@@ -109,6 +109,7 @@ public class ProxyInfoRespDTO {
     private String proxyPathUsername;
 
     @ApiModelProperty("上级代理id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long parentProxyId;
 
     @ApiModelProperty("上级代理名称")
@@ -138,6 +139,7 @@ public class ProxyInfoRespDTO {
     private String labelName;
 
     @ApiModelProperty("风控层级id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long windControlId;
 
     @ApiModelProperty("风控层级名称")

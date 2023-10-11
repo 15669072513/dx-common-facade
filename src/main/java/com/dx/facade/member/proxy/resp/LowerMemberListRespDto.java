@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -37,6 +38,9 @@ public class LowerMemberListRespDto {
 
 	@ApiModelProperty("上级代理账号")
 	private String parentProxyName;
+	
+	@ApiModelProperty("总代id")
+	private Long topProxyId;
 	
 	@ApiModelProperty("VIP等级名称")
 	private String vipGradeName;
@@ -80,6 +84,8 @@ public class LowerMemberListRespDto {
 	private String remark;
 	@ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
 	private Integer gameLockStatus;
+    @ApiModelProperty("入局锁定状态 0-未锁定 1-入局锁定")
+    private Integer joinGameLockStatus;
 	//参与手牌,累计有效投注，创建人
 	@ApiModelProperty("创建人")
 	private String createBy;
@@ -95,12 +101,6 @@ public class LowerMemberListRespDto {
 
     @ApiModelProperty(value = "授信额度/信用额度")
     private BigDecimal creditBalance;
-
-//    @ApiModelProperty(value = "中心钱包-余额")
-//    private BigDecimal centerWalletBalance;
-    
-//    @ApiModelProperty(value = "应收账款")
-//    private BigDecimal accountsReceivable;
 
 	@ApiModelProperty("信用余额")
 	private BigDecimal creditAvailable;

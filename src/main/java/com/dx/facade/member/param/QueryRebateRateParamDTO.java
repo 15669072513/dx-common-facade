@@ -56,6 +56,9 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("总Id")
     private Long topProxyId;
     
+    @ApiModelProperty("总代名称")
+    private String topProxyName;
+    
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     
@@ -76,16 +79,14 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或平台调整")
     private Integer status;
     
-    /** 生效时间 */
     @ApiModelProperty("生效时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime effectDt;
 
-    /** 契约失效时间 */
     @ApiModelProperty("失效时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
@@ -162,6 +163,15 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     
     @ApiModelProperty("代理id列表")
     private List<Long> proxyIds;
+    
+    @ApiModelProperty("排序列 1：修改时间 2：账号 3：失效时间")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
+    private String orderType;
+    
+    @ApiModelProperty("当前用户名称")
+    private String curUserName;
 
 	@Override
 	public void check() {

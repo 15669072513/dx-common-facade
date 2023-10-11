@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -126,4 +127,15 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("自动开局人数")
     private Integer autoStartUserCounts;
+
+    @ApiModelProperty("最小带入的筹码")
+    @TableField("min_bring_chip_score")
+    private BigDecimal minBringChipScore;
+
+    @ApiModelProperty("最大带入的筹码")
+    @TableField("max_bring_chip_score")
+    private BigDecimal maxBringChipScore;
+
+    @ApiModelProperty("单牌桌累计带入上限")
+    private Integer bringInLimit;
 }

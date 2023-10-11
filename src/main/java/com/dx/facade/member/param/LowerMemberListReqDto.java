@@ -34,7 +34,7 @@ public class LowerMemberListReqDto {
 	@ApiModelProperty(value = "层级：1-全部会员、2-直属会员")
 	private Integer proxyLevel;
 	
-	@ApiModelProperty("排序：1-注册时间近至远 2-登录时间近至远 3-存款大至小 4-取款大至小")
+	@ApiModelProperty("排序：1-注册时间近至远 2-登录时间近至远 3-存款大至小 4-取款大至小 5-存款小到大 6-取款小到大 7-注册事情远至近 8-登录时间远至近")
 	private Integer orderType;
 	
 	@ApiModelProperty(value = "代理pc排序列(1)：1-总存款  2-总取款 3-注册时间 4-最后登录时间")
@@ -68,4 +68,7 @@ public class LowerMemberListReqDto {
 
 	@ApiModelProperty("游戏锁定状态 0-未锁定 1-游戏锁定")
 	private Integer gameLockStatus;
+	
+	@ApiModelProperty("入局锁定状态 0-未锁定 1-入局锁定")
+	private Integer joinGameLockStatus;
 }

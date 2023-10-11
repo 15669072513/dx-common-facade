@@ -31,13 +31,13 @@ public class UpdateProxyLockStatusParamDTO implements BaseParmDTO{
     @ApiModelProperty(value = "代理id (20)")
     private Long proxyId;
 
-	@ApiModelProperty(value = "登录权限：0-关闭 1-开启")
+	@ApiModelProperty(value = "登录权限：1-关闭 0-开启")
 	private Integer loginLockStatus;
 	
-	@ApiModelProperty(value = "开局权限：0-关闭 1-开启")
+	@ApiModelProperty(value = "开局权限：1-关闭 0-开启")
 	private Integer openLockStatus;
 	
-	@ApiModelProperty(value = "管理俱乐部权限：0-关闭 1-开启")
+	@ApiModelProperty(value = "管理俱乐部权限：1-关闭 0-开启")
 	private Integer manageClubLockStatus;
 	
     @ApiModelProperty(value = "操作人")
