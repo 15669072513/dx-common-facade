@@ -22,7 +22,7 @@ public class WithdrawAmountUtil {
             return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.CNY.getCode())) {
-            return amount.divide(usdtRate, 4, RoundingMode.DOWN);
+            return amount.divide(usdtRate, 2, RoundingMode.DOWN);
         }
         throw new IllegalArgumentException("非法币种类型:" + currency);
      }
@@ -35,7 +35,7 @@ public class WithdrawAmountUtil {
             return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.USDT.getCode())) {
-            return amount.multiply(usdtRate).setScale(4, RoundingMode.DOWN);
+            return amount.multiply(usdtRate).setScale(2, RoundingMode.DOWN);
         }
         throw new IllegalArgumentException("非法币种类型:" + currency);
     }
