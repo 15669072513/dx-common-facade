@@ -99,11 +99,13 @@ public class DxSettlementCommissionTopProxyRecordRspDTO implements Serializable 
     @ApiModelProperty("活跃用户")
     private Long activeMemberNum;
 
+
     /**
      * 有效用户
      */
     @ApiModelProperty("有效用户")
-    private Long effecactiveM0emberNum;
+    private Long effecactiveMemberNum;
+
 
 
 
