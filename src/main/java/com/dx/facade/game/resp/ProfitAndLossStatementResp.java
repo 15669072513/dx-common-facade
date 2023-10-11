@@ -11,9 +11,6 @@ import java.math.BigDecimal;
  */
 @Data
 public class ProfitAndLossStatementResp  implements Serializable {
-    @ApiModelProperty("德信注单id")
-    private String id;
-
     @ApiModelProperty("项目")
     private String itemName;
 
