@@ -43,6 +43,9 @@ public class ProxyLoanBillRespDTO {
     @ApiModelProperty("所属总代")
     private String topProxyName;
 
+    @ApiModelProperty("代理用户名层级路径")
+    private String proxyPathUserName;
+
     @ApiModelProperty("风控层级")
     private String windControlName;
 
