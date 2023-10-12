@@ -1,5 +1,10 @@
 package com.dx.facade.enums;
 
+import io.swagger.models.auth.In;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public enum DepositOrderStatus {
     待付款(0, "待付款", "待付款"),
     待确认(1, "待确认", "待确认"),
@@ -36,6 +41,16 @@ public enum DepositOrderStatus {
 
     public String clientDesc() {
         return this.clientDesc;
+    }
+
+    static Map<Integer, DepositOrderStatus> code2DepositOrderStatus = new HashMap<>();
+    static {
+        for (DepositOrderStatus value : DepositOrderStatus.values()) {
+            code2DepositOrderStatus.put(value.code, value);
+        }
+    }
+    public static DepositOrderStatus byCode(Integer code){
+        return code2DepositOrderStatus.get(code);
     }
 
     public static String getDesc(Integer code) {
