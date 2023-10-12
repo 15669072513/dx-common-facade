@@ -10,7 +10,6 @@ public interface GameOrderTableRpcService {
     /**
      * 获取牌桌维度统计汇总数据
      * @param tableId   表的 ID。
-     * @param handCounts 手数
      * @return  DxTableInfoSumResp 的汇总响应。
      */
     CommonResp<DxTableInfoSumResp> getDxTableInfoSumResp(Long tableId);
