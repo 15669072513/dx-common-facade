@@ -214,5 +214,13 @@ public interface MemberRPCService {
 	 * @return
 	 */
 	CommonResp<Boolean> updateMobile(UpdateMemberMobileParamDTO paramDTO);
+	
+    /**
+     * 根据userId查询会员是否设置支付密码
+     * 
+     * @param userId
+     * @return
+     */
+    CommonResp<Boolean> isSetPayPassword(Long userId);
 
 }
