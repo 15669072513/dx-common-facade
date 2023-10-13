@@ -58,22 +58,13 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "游戏盈亏", example = "1500.00")
     private BigDecimal netAmount;
 
-    /**
-     * rebateAmount
-     */
-    @ApiModelProperty(value = "会员返水", example = "1500.00")
-    private BigDecimal rebateAmount;
 
     /**
      * rebateAmount
      */
     @ApiModelProperty(value = "会员返水 0.2.1", example = "1500.00")
     private BigDecimal memberRebateAmount;
-    /**
-     * discountAmount
-     */
-    @ApiModelProperty(value = "会员优惠", example = "1500.00")
-    private BigDecimal discountAmount;
+
 
     /**
      * artificialPatchAmount
@@ -87,8 +78,6 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "场馆费", example = "1500.00")
     private BigDecimal venueFee;
 
-    @ApiModelProperty(value = "流水纠正", example = "1500.00")
-    private BigDecimal flowCorrection;
 
     /**
      * proxyRebatePoint
@@ -105,7 +94,7 @@ public class ProxyMonthNetAmountRespDTO {
      * proxyNet
      */
     @ApiModelProperty(value = "代净输赢", example = "1500.00")
-    private BigDecimal proxyNet;
+    private BigDecimal proxyNetwinAmount;
 
     /**
      * lastMonthBalance
@@ -117,12 +106,13 @@ public class ProxyMonthNetAmountRespDTO {
      * rushNet
      */
     @ApiModelProperty(value = "冲正后净输赢", example = "1500.00")
-    private BigDecimal rushNet;
+    private BigDecimal proxyRushNet;
 
-    @Deprecated
-    @ApiModelProperty("会员总盈亏")
-    private BigDecimal totalNetAmount;
 
+
+
+    @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
+    private BigDecimal directBetAmount;
 
     /**
      * directValidBetAmount
@@ -142,11 +132,9 @@ public class ProxyMonthNetAmountRespDTO {
      */
     @ApiModelProperty(value = "直属会员返水", example = "1500.00")
     private BigDecimal directRebateAmount;
-    /**
-     * directPayAmount
-     */
-    @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
-    private BigDecimal directProfitAmount;
+
+    @ApiModelProperty("直属会员净盈亏 = 直属会员投注盈亏+  直属会员返水（新的）+直属会员其他调整")
+    private BigDecimal directNetwinAmount;
 
 
 
