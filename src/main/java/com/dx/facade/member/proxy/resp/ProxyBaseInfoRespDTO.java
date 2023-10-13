@@ -146,4 +146,7 @@ public class ProxyBaseInfoRespDTO implements Serializable {
 
     @ApiModelProperty("充提锁定状态 0-未锁定 1-充提锁定")
     private Integer paymentLockStatus;
+
+    @ApiModelProperty("冻结中余额")
+    private BigDecimal lockBalance;
 }
