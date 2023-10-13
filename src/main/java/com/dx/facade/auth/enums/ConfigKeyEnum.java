@@ -67,6 +67,7 @@ public enum ConfigKeyEnum {
     RECHARGE_TYPE_CONFIG("recharge.type.config", "2"),
     RECHARGE_SIGNAL_INVALID_TIME("recharge.signal.invalid.time", "2"),
     EXPORT_WAIT_TIME("export.wait.time", "2"),
+    REPORT_QUERY_WAIT_TIME("report.query.wait.time", "2"),
     SURROGATE_SETTLE_DEFAULT_CONFIG("surrogate.settle.default.config", "2"),
     SURROGATE_SETTLE_PERIOD_CONFIG("surrogate.settle.period.config", "1"),
     FUNDS_AUDIT_PAGEREFRESH_INTERVAL_CONFIG("funds.audit.pagerefresh.interval.config", "2"),
