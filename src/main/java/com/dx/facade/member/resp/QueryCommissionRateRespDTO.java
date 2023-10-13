@@ -95,7 +95,7 @@ public class QueryCommissionRateRespDTO implements Serializable {
     @ApiModelProperty("德州保险返佣比例")
     private BigDecimal minTexasInsuranceCommission;
     
-    @ApiModelProperty("真人返佣比例")
+    @ApiModelProperty("其他返佣比例")
     private BigDecimal minOtherCommission;
     
     @ApiModelProperty("德州俱乐部返佣比例")
@@ -104,7 +104,7 @@ public class QueryCommissionRateRespDTO implements Serializable {
     @ApiModelProperty("德州保险返佣比例")
     private BigDecimal maxTexasInsuranceCommission;
     
-    @ApiModelProperty("真人返佣比例")
+    @ApiModelProperty("其他返佣比例")
     private BigDecimal maxOtherCommission;
 
     @ApiModelProperty("是否有下级代理")
