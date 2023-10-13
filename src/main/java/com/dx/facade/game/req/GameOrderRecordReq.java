@@ -17,6 +17,8 @@ import java.time.LocalDateTime;
 public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("注单id")
     private String id;
+    @ApiModelProperty("3方注单")
+    private String generatedId;
 
     private Long proxyId;
 

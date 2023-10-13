@@ -237,4 +237,7 @@ public class ProxyDetailRespDTO {
 	@ApiModelProperty("创建时间")
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	private LocalDateTime createdAt;
+	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
 }
