@@ -78,11 +78,6 @@ public class ProxyDayNetAmountRespDTO {
     @ApiModelProperty(value = "场馆费", example = "1500.00")
     private BigDecimal venueFee;
 
-    /**
-     * proxyNet
-     */
-    @ApiModelProperty(value = "代净输赢", example = "1500.00")
-    private BigDecimal proxyNet;
 
     /**
      * lastMonthBalance
@@ -90,11 +85,6 @@ public class ProxyDayNetAmountRespDTO {
     @ApiModelProperty(value = "上月结余", example = "1500.00")
     private BigDecimal lastMonthBalance;
 
-    /**
-     * rushNet
-     */
-    @ApiModelProperty(value = "冲正后净输赢", example = "1500.00")
-    private BigDecimal rushNet;
 
     @ApiModelProperty("是否存在下级")
     private Boolean isAllSub;
