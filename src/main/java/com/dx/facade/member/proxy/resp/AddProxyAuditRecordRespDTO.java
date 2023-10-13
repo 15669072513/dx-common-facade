@@ -108,4 +108,7 @@ public class AddProxyAuditRecordRespDTO {
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long commissionPolicyTypeId;
 	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
+	
 }
