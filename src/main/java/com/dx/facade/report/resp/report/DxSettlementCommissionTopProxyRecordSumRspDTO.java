@@ -24,6 +24,8 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
 
     private static final long serialVersionUID = 1L;
 
+
+
     /**
      * 团队返佣金额
      */
@@ -57,6 +59,14 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
      * 有效用户
      */
     @ApiModelProperty("有效用户")
-    private Long effecactiveM0emberNum;
+    private Long effecactiveMemberNum;
+
+
+    /**
+     * 当前分页汇总
+     */
+    private  DxSettlementCommissionTopProxyRecordSumRspDTO currentSum;
+
+
 
 }

@@ -540,7 +540,9 @@ public class MemberAndProxyDto {
     
     @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
     private Integer manageClubLockStatus;
-	
+
+	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
+	private Integer withdrawLimitType;
 	
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
