@@ -20,6 +20,7 @@ import java.util.Objects;
 public class MemberDepositWithdrawResp {
 
     @ApiModelProperty(value = "时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private String eventTime;
     @ApiModelProperty(value = "订单号")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -31,10 +32,14 @@ public class MemberDepositWithdrawResp {
     private String thirdPaymentType;
     @ApiModelProperty(value = "支付币种")
     private String currency;
-    @ApiModelProperty(value = "订单存款金额CNY")
-    private BigDecimal orderAmountCNY;
-    @ApiModelProperty(value = "订单存款金额USDT")
-    private BigDecimal orderAmountUSDT;
+    @ApiModelProperty(value = "支付币种基准")
+    private String currencyBase;
+    @ApiModelProperty(value = "支付币种转换后")
+    private String currencyExchange;
+    @ApiModelProperty(value = "订单存款金额基准")
+    private BigDecimal orderAmountBase;
+    @ApiModelProperty(value = "订单存款金额转换后")
+    private BigDecimal orderAmountExchange;
     @ApiModelProperty(value = "实际支付金额")
     private BigDecimal realAmount;
     @ApiModelProperty(value = "存款优惠")
@@ -44,10 +49,10 @@ public class MemberDepositWithdrawResp {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-    @ApiModelProperty(value = "取款金额CNY")
-    private BigDecimal withdrawAmountCNY;
-    @ApiModelProperty(value = "取款金额USDT")
-    private BigDecimal withdrawAmountUSDT;
+    @ApiModelProperty(value = "取款金额基准")
+    private BigDecimal withdrawAmountBase;
+    @ApiModelProperty(value = "取款金额转换后")
+    private BigDecimal withdrawAmountExchange;
     @ApiModelProperty(value = "手续费")
     private BigDecimal fee;
 
