@@ -31,8 +31,10 @@ public class MemberDepositWithdrawResp {
     private String thirdPaymentType;
     @ApiModelProperty(value = "支付币种")
     private String currency;
-    @ApiModelProperty(value = "订单存款金额")
-    private BigDecimal orderAmount;
+    @ApiModelProperty(value = "订单存款金额CNY")
+    private BigDecimal orderAmountCNY;
+    @ApiModelProperty(value = "订单存款金额USDT")
+    private BigDecimal orderAmountUSDT;
     @ApiModelProperty(value = "实际支付金额")
     private BigDecimal realAmount;
     @ApiModelProperty(value = "存款优惠")
@@ -42,8 +44,10 @@ public class MemberDepositWithdrawResp {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-    @ApiModelProperty(value = "取款金额")
-    private BigDecimal withdrawAmount;
+    @ApiModelProperty(value = "取款金额CNY")
+    private BigDecimal withdrawAmountCNY;
+    @ApiModelProperty(value = "取款金额USDT")
+    private BigDecimal withdrawAmountUSDT;
     @ApiModelProperty(value = "手续费")
     private BigDecimal fee;
 
