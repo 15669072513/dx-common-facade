@@ -26,6 +26,9 @@ public class DxHandInfoResp implements Serializable {
     @ApiModelProperty("手牌号")
     private String handCode;
 
+    @ApiModelProperty("局次")
+    private Integer handNum;
+
     @ApiModelProperty("牌局开始时间")
     private Long handBeginDate;
 
