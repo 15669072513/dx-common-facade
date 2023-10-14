@@ -667,7 +667,7 @@ public class AcctPayment {
                     return enums;
                 }
             }
-            throw new BizException("没有这个VirtualProtocolTypeEnum");
+            return null;
         }
     }
 
