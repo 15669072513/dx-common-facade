@@ -14,7 +14,7 @@ public class GameOrderClubSumResp {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
     @ApiModelProperty("参数手牌数")
-    private Long handCount = 0L ;
+    private Long handCount ;
     @ApiModelProperty("累计手牌盈利")
     private BigDecimal netAmount ;
     @ApiModelProperty("有效金额")
