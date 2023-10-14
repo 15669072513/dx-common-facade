@@ -64,28 +64,28 @@ public class DxTableInfoListResp implements Serializable {
     private Integer timeCount=0;
 
     @ApiModelProperty("最小带入的筹码")
-    private BigDecimal minBringChipScore=BigDecimal.ZERO;;
+    private BigDecimal minBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("最大带入的筹码")
-    private BigDecimal maxBringChipScore=BigDecimal.ZERO;;
+    private BigDecimal maxBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("默认带入筹码")
-    private BigDecimal bringChipScore=BigDecimal.ZERO;;
+    private BigDecimal bringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal bringOutChipScore=BigDecimal.ZERO;;
+    private BigDecimal bringOutChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringInChipScore=BigDecimal.ZERO;;
+    private BigDecimal bringInChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore=BigDecimal.ZERO;;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore=BigDecimal.ZERO;;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("抽水比例")
-    private BigDecimal rake=BigDecimal.ZERO;;
+    private BigDecimal rake=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
@@ -106,16 +106,16 @@ public class DxTableInfoListResp implements Serializable {
     private Long handCount=0L;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount=BigDecimal.ZERO;;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount=BigDecimal.ZERO;;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总抽水")
-    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;;
+    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal=BigDecimal.ZERO;;
+    private BigDecimal costTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("会员带入次数")
     private Integer userBringCount=0;

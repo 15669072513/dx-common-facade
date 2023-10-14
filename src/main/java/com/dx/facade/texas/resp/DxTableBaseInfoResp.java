@@ -69,28 +69,28 @@ public class DxTableBaseInfoResp implements Serializable {
     private Long handCount=0L;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount=BigDecimal.ZERO;;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount=BigDecimal.ZERO;;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore=BigDecimal.ZERO;;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore=BigDecimal.ZERO;;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringChipTotal=BigDecimal.ZERO;;
+    private BigDecimal bringChipTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal afterChipTotal=BigDecimal.ZERO;;
+    private BigDecimal afterChipTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal=BigDecimal.ZERO;;
+    private BigDecimal costTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌抽水")
-    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;;
+    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("机器人数量")
     private Integer robotNum=0;
@@ -130,11 +130,11 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("最小带入的筹码")
     @TableField("min_bring_chip_score")
-    private BigDecimal minBringChipScore=BigDecimal.ZERO;;
+    private BigDecimal minBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("最大带入的筹码")
     @TableField("max_bring_chip_score")
-    private BigDecimal maxBringChipScore=BigDecimal.ZERO;;
+    private BigDecimal maxBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit=0;
