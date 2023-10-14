@@ -164,4 +164,24 @@ public class DepositOrderRespDTO implements Serializable {
 
     @ApiModelProperty("USDT人民币汇率")
     private BigDecimal usdtRate;
+
+    @ApiModelProperty("usdt协议类型，1.omni，2.erc20, 3.trc20")
+    @TableField("receive_usdt_type")
+    private Integer receiveUsdtType;
+
+    @ApiModelProperty("收款方usdt地址")
+    @TableField("receive_usdt_address")
+    private String receiveUsdtAddress;
+
+    @ApiModelProperty("收款方银行名称")
+    @TableField("receive_bank_name")
+    private String receiveBankName;
+
+    @ApiModelProperty("收款方真实姓名")
+    @TableField("receive_real_name")
+    private String receiveRealName;
+
+    @ApiModelProperty("收款方银行账号")
+    @TableField("receive_bankcard_no")
+    private String receiveBankcardNo;
 }

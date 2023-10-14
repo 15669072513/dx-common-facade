@@ -3,6 +3,7 @@ package com.dx.facade.payment.service;
 import com.dx.exception.BizException;
 import com.dx.facade.account.resp.*;
 import com.dx.facade.payment.resp.CallThirdWithdrawResp;
+import com.dx.facade.payment.resp.ThirdDepositOrderResp;
 
 public interface ThirdPayOrderRPCService {
 
@@ -38,5 +39,14 @@ public interface ThirdPayOrderRPCService {
      * @throws BizException
      */
     CallThirdWithdrawResp createWithdraw(WithdrawOrderRespDTO order, PaymentChannelRespDTO channel, PaymentMerchantRespDTO merchant) throws BizException;
+
+    /**
+     * 查询充值订单
+     * @param order
+     * @param channel
+     * @return
+     * @throws BizException
+     */
+    ThirdDepositOrderResp queryThirdDepositOrder(DepositOrderRespDTO order, PaymentChannelRespDTO channel, PaymentMerchantRespDTO merchant)throws BizException;
 
 }
