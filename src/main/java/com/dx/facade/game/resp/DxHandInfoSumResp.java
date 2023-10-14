@@ -72,13 +72,13 @@ public class DxHandInfoSumResp implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("初期金额")
-    private BigDecimal beginMount;
+    private BigDecimal beginMount=BigDecimal.ZERO;
 
     @ApiModelProperty("中途带入金额")
-    private BigDecimal bringMidwayAmount;
+    private BigDecimal bringMidwayAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("期末金额")
-    private BigDecimal endAmount;
+    private BigDecimal endAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
@@ -87,34 +87,34 @@ public class DxHandInfoSumResp implements Serializable {
     private String handCards;
 
     @ApiModelProperty("有效底池")
-    private String validPot;
+    private String validPot="0";
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpingAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("盈利筹码")
-    private BigDecimal winAmount;
+    private BigDecimal winAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("带入次数")
-    private Long bringCount;
+    private Long bringCount=0L;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("庄家位置")
     private Integer button;

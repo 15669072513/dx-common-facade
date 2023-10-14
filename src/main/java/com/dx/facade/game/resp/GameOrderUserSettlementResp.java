@@ -17,9 +17,9 @@ public class GameOrderUserSettlementResp {
     @ApiModelProperty("结束时间")
     private LocalDateTime endDate;
     @ApiModelProperty("游戏输赢")
-    private BigDecimal netChipSum;
+    private BigDecimal netChipSum=BigDecimal.ZERO;
     @ApiModelProperty("总带入")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
     @ApiModelProperty("总带入次数")
-    private Long bringCount;
+    private Long bringCount=0L;
 }
