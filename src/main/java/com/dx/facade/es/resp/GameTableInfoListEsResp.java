@@ -22,7 +22,7 @@ public class GameTableInfoListEsResp implements Serializable {
     private String handCode;
 
     @ApiModelProperty("牌桌主键")
-    private String tableId;
+    private Long tableId;
 
     @ApiModelProperty("牌桌code")
     private String tableCode;
