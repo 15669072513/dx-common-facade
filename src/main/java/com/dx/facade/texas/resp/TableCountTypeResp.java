@@ -6,5 +6,5 @@ import lombok.Data;
 public class TableCountTypeResp {
     private Integer tableType;
 
-    private Integer count;
+    private Integer count=0;
 }

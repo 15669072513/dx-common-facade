@@ -54,7 +54,7 @@ public class DxTableBaseInfoResp implements Serializable {
     private Integer status;
 
     @ApiModelProperty("累计参与者")
-    private Integer participantTotal;
+    private Integer participantTotal=0;
 
     @ApiModelProperty("牌桌开始时间")
     private Long tableBeginTime;
@@ -66,43 +66,43 @@ public class DxTableBaseInfoResp implements Serializable {
     private Integer overType;
 
     @ApiModelProperty("手牌数")
-    private Long handCount;
+    private Long handCount=0L;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringChipTotal;
+    private BigDecimal bringChipTotal=BigDecimal.ZERO;;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal afterChipTotal;
+    private BigDecimal afterChipTotal=BigDecimal.ZERO;;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal;
+    private BigDecimal costTotal=BigDecimal.ZERO;;
 
     @ApiModelProperty("牌桌抽水")
-    private BigDecimal pumpingAmountTotal;
+    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;;
 
     @ApiModelProperty("机器人数量")
-    private Integer robotNum;
+    private Integer robotNum=0;
 
     @ApiModelProperty("人员上限")
-    private Integer upperLimit;
+    private Integer upperLimit=0;
 
     @ApiModelProperty("同时开牌桌上限")
-    private Integer cardTableLimit;
+    private Integer cardTableLimit=0;
 
     @ApiModelProperty("单牌桌旁观人数上限")
-    private Integer lookOnLimit;
+    private Integer lookOnLimit=0;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;
@@ -123,19 +123,19 @@ public class DxTableBaseInfoResp implements Serializable {
     private Integer gameOvertime;
 
     @ApiModelProperty("牌桌最大人数")
-    private Integer maxSeats;
+    private Integer maxSeats=0;
 
     @ApiModelProperty("自动开局人数")
-    private Integer autoStartUserCounts;
+    private Integer autoStartUserCounts=0;
 
     @ApiModelProperty("最小带入的筹码")
     @TableField("min_bring_chip_score")
-    private BigDecimal minBringChipScore;
+    private BigDecimal minBringChipScore=BigDecimal.ZERO;;
 
     @ApiModelProperty("最大带入的筹码")
     @TableField("max_bring_chip_score")
-    private BigDecimal maxBringChipScore;
+    private BigDecimal maxBringChipScore=BigDecimal.ZERO;;
 
     @ApiModelProperty("单牌桌累计带入上限")
-    private Integer bringInLimit;
+    private Integer bringInLimit=0;
 }
