@@ -14,11 +14,11 @@ public class GameOrderClubSumResp {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
     @ApiModelProperty("参数手牌数")
-    private Long handCount;
+    private Long handCount = 0L ;
     @ApiModelProperty("累计手牌盈利")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount = new BigDecimal(0);
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount = new BigDecimal(0);
     @ApiModelProperty("累计抽水总额")
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpingAmount = new BigDecimal(0);
 }
