@@ -84,5 +84,5 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @param reqDTO
      * @return
      */
-    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspDTO, DxFundSettlementCommissionRecordSumRspDTO>> listNotTopProxyCommissionRecordPage(DxFundSettlementCommissionProxyRecordReqDTO reqDTO);
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspDTO, DxFundSettlementCommissionRecordNotTopProxySumRspDTO>> listNotTopProxyCommissionRecordPage(DxFundSettlementCommissionProxyRecordReqDTO reqDTO);
 }
