@@ -27,11 +27,11 @@ public class GameOrderUserSettlementDetailByProxyResp {
     @ApiModelProperty("结束时间")
     private Long handEndDate;
     @ApiModelProperty("游戏输赢")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
     @ApiModelProperty("总带入")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
     @ApiModelProperty("总带入次数")
-    private Long bringCount;
+    private Long bringCount=0L;
     @ApiModelProperty("牌桌id")
     private Long tableId;
 }
