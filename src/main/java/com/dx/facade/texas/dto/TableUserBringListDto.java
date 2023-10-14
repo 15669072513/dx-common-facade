@@ -13,14 +13,14 @@ public class TableUserBringListDto {
   private Long userId;
 
   @ApiModelProperty("总带入金额")
-  private BigDecimal totalInAmount=new BigDecimal(0.0);
+  private BigDecimal totalInAmount;
 
   @ApiModelProperty("带入次数")
-  private Integer inCount=0;
+  private Integer inCount;
 
   @ApiModelProperty("总带出金额")
-  private BigDecimal totalOutAmount=new BigDecimal(0.0);
+  private BigDecimal totalOutAmount;
 
   @ApiModelProperty("带出次数")
-  private Integer outCount=0;
+  private Integer outCount;
 }

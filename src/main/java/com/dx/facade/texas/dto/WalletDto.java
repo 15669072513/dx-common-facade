@@ -51,7 +51,7 @@ public class WalletDto {
    * 账户余额
    */
   @ApiModelProperty("账户余额")
-  private BigDecimal balance=new BigDecimal(0.0);
+  private BigDecimal balance;
 
   /**
    * 创建时间
@@ -60,5 +60,5 @@ public class WalletDto {
   private LocalDateTime createdAt;
 
   @ApiModelProperty("带入总额")
-  private BigDecimal bringInSumAmount=new BigDecimal(0.0);
+  private BigDecimal bringInSumAmount;
 }

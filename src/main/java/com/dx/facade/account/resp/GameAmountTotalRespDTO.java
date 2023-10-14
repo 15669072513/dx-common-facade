@@ -23,14 +23,14 @@ public class GameAmountTotalRespDTO {
     private Long tableId;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal totalInAmount=new BigDecimal(0.0);
+    private BigDecimal totalInAmount;
 
     @ApiModelProperty("玩家总带入总次数")
-    private Integer inCount=0;
+    private Integer inCount;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal totalOutAmount=new BigDecimal(0.0);
+    private BigDecimal totalOutAmount;
 
     @ApiModelProperty("玩家总带出总次数")
-    private Integer outCount=0;
+    private Integer outCount;
 }
