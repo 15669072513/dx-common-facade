@@ -58,65 +58,65 @@ public class DxTableConfigRuleResp implements Serializable {
      * 牌桌最大人数
      */
     @ApiModelProperty("牌桌最大人数")
-    private Integer maxSeats;
+    private Integer maxSeats=0;
 
     /***
      * 自动开局人数
      */
     @ApiModelProperty("自动开局人数")
-    private Integer autoStartUserCounts;
+    private Integer autoStartUserCounts=0;
 
     /**
      * 默认带入的筹码
      */
     @ApiModelProperty("默认带入的筹码")
-    private BigDecimal bringChipScore;
+    private BigDecimal bringChipScore=BigDecimal.ZERO;
 
     /***
      * 小盲注
      */
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     /***
      * 大盲注
      */
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     /**
      * 时长 单位 分钟
      */
     @ApiModelProperty("时长 单位 分钟")
-    private Integer timeCount;
+    private Integer timeCount=0;
 
     /**
      * 最小带入的筹码
      */
     @ApiModelProperty("最小带入的筹码")
-    private BigDecimal minBringChipScore;
+    private BigDecimal minBringChipScore=BigDecimal.ZERO;
 
     /**
      * 最大带入的筹码
      */
     @ApiModelProperty("最大带入的筹码")
-    private BigDecimal maxBringChipScore;
+    private BigDecimal maxBringChipScore=BigDecimal.ZERO;
 
     /**
      * 抽水比例配置
      */
     @ApiModelProperty("抽水比例配置")
-    private BigDecimal rake;
+    private BigDecimal rake=BigDecimal.ZERO;
 
     /** 人员上限 */
     @ApiModelProperty("人员上限")
-    private Integer upperLimit;
+    private Integer upperLimit=0;
 
     @ApiModelProperty("同时开牌桌上限")
-    private Integer cardTableLimit;
+    private Integer cardTableLimit=0;
 
     @ApiModelProperty("单牌桌旁观人数上限")
-    private Integer lookOnLimit;
+    private Integer lookOnLimit=0;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     private Integer status;
@@ -134,25 +134,25 @@ public class DxTableConfigRuleResp implements Serializable {
     private Long tableEndTime;
 
     @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
-    private BigDecimal totalNetAmount;
+    private BigDecimal totalNetAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("打牌输赢")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("保险输赢")
-    private BigDecimal insuredNetAmount;
+    private BigDecimal insuredNetAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("总带出")
-    private BigDecimal bringOutChipScore;
+    private BigDecimal bringOutChipScore= BigDecimal.ZERO;
 
     @ApiModelProperty("手牌数")
-    private Long handCount;
+    private Long handCount=0L;
 
     @ApiModelProperty("牌桌总抽水")
     private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总输赢")
-    private BigDecimal costTotal;
+    private BigDecimal costTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("游戏类型名称")
     private String gameTypeName;
@@ -161,34 +161,34 @@ public class DxTableConfigRuleResp implements Serializable {
     private String gameName;
 
     @ApiModelProperty("累计参与者")
-    private Integer participantTotal;
+    private Integer participantTotal=0;
 
     @ApiModelProperty("超时（min）自动解散房间")
-    private Integer gameOvertime;
+    private Integer gameOvertime=0;
 
     @ApiModelProperty("进行时间（min）")
-    private Integer onlineTime;
+    private Integer onlineTime=0;
 
     @ApiModelProperty("实际最小带入的筹码")
-    private BigDecimal realMinBringChipScore;
+    private BigDecimal realMinBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("实际最大带入的筹码")
-    private BigDecimal realMaxBringChipScore;
+    private BigDecimal realMaxBringChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("入座实时人数上限（控制实时账单 展示人数控制）")
-    private Integer seatsNumberLimit;
+    private Integer seatsNumberLimit=0;
 
     @ApiModelProperty("时长（小时）")
-    private BigDecimal hourTimeCount;
+    private BigDecimal hourTimeCount=BigDecimal.ZERO;
 
     @ApiModelProperty("单牌桌累计带入上限（倍数）")
-    private Integer bringInLimit;
+    private Integer bringInLimit=0;
 
     @ApiModelProperty("单牌桌累计带入上限（金额）")
-    private BigDecimal bringInLimitChipScore;
+    private BigDecimal bringInLimitChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("单牌桌可坐下人数上限")
-    private Integer sitDownLimit;
+    private Integer sitDownLimit=0;
 
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
     private Integer insuranceMode;
