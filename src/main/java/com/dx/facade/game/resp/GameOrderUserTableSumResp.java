@@ -25,7 +25,7 @@ public class GameOrderUserTableSumResp implements Serializable {
      * 时长
      */
     @ApiModelProperty("牌桌时长")
-    private Long timeCount;
+    private Long timeCount=0L;
     /**
      * 牌桌名称
      */
@@ -45,17 +45,17 @@ public class GameOrderUserTableSumResp implements Serializable {
      * 盈亏筹码
      */
     @ApiModelProperty("盈亏筹码")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
     /***
      * 小盲注
      */
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     /***
      * 大盲注
      */
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
 }

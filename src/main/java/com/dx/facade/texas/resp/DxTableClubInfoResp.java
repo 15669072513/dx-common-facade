@@ -53,7 +53,7 @@ public class DxTableClubInfoResp implements Serializable {
     private Integer status;
 
     @ApiModelProperty("累计参与者")
-    private Integer participantTotal;
+    private Integer participantTotal=0;
 
     @ApiModelProperty("牌桌开始时间")
     private Long tableBeginTime;
@@ -65,31 +65,31 @@ public class DxTableClubInfoResp implements Serializable {
     private Integer overType;
 
     @ApiModelProperty("手牌数")
-    private Long handCount;
+    private Long handCount=0L;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringChipTotal;
+    private BigDecimal bringChipTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal afterChipTotal;
+    private BigDecimal afterChipTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal;
+    private BigDecimal costTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌抽水")
-    private BigDecimal pumpingAmountTotal;
+    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;

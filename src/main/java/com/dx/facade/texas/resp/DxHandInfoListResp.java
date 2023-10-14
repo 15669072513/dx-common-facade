@@ -68,41 +68,41 @@ public class DxHandInfoListResp implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal beforeChip;
+    private BigDecimal beforeChip=BigDecimal.ZERO;
 
     @ApiModelProperty("中途带入金额汇总")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
 
     @ApiModelProperty("期末余额汇总")
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal validPot;
+    private BigDecimal validPot=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpingAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("庄家位置")
     private Integer villageSeat;
 
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲位置")
     private Integer sbSeat;
