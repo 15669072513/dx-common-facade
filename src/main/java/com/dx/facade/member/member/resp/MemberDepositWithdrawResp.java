@@ -20,6 +20,7 @@ import java.util.Objects;
 public class MemberDepositWithdrawResp {
 
     @ApiModelProperty(value = "时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private String eventTime;
     @ApiModelProperty(value = "订单号")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -29,6 +30,8 @@ public class MemberDepositWithdrawResp {
     private Long userId;
     @ApiModelProperty(value = "支付方式")
     private String thirdPaymentType;
+    @ApiModelProperty(value = "支付币种")
+    private String currency;
     @ApiModelProperty(value = "支付币种基准")
     private String currencyBase;
     @ApiModelProperty(value = "支付币种转换后")
