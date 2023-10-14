@@ -110,6 +110,5 @@ public class ProxySubProxyListEsDto {
 
 	@ApiModelProperty(value="累计提款金额")
 	private BigDecimal totalWithdrawAmount;
-    
 	
 }

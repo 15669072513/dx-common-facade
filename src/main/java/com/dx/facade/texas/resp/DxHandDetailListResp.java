@@ -1,14 +1,10 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -42,7 +38,7 @@ public class DxHandDetailListResp implements Serializable {
     private String handInfo;
 
     @ApiModelProperty("总输赢")
-    private BigDecimal totalWinLoss;
+    private BigDecimal totalWinLoss=BigDecimal.ZERO;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;
