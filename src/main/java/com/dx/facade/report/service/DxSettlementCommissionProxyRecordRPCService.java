@@ -5,15 +5,13 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.proxy.req.ProxyRebateDealAuditReqDTO;
 import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultRespDTO;
+import com.dx.facade.report.param.report.DxFundSettlementCommissionProxyRecordReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordAwaitIssueReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordReqDTO;
 import com.dx.facade.report.param.report.DxSettlementCommissionTopProxyRecordReqDTO;
 import com.dx.facade.report.resp.agent.ProxyCommissionListPayDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateRecordDetailParam;
-import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordAwaitIssueRspDTO;
-import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordRspDTO;
-import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordSumRspDTO;
-import com.dx.facade.report.resp.report.DxSettlementCommissionTopProxyRecordRspDTO;
+import com.dx.facade.report.resp.report.*;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -53,6 +51,15 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<PageResp<DxSettlementCommissionTopProxyRecordRspDTO, DxSettlementCommissionTopProxyRecordSumRspDTO>> listTopProxyListPage(DxSettlementCommissionTopProxyRecordReqDTO reqDTO);
+
+    /**
+     * 代理资金记录-代理返佣记录-总代
+     * @param reqDTO
+     * @return
+     */
+    //代理返佣记录
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspDTO, DxFundSettlementCommissionRecordSumRspDTO>> listTopProxyCommissionRecordPage(DxFundSettlementCommissionProxyRecordReqDTO reqDTO);
+
     /**
      * 报表-提供代理佣金总额
      * @param
@@ -71,4 +78,11 @@ public interface DxSettlementCommissionProxyRecordRPCService {
 
     CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
     CommonResp adjustAmount(ProxyRebateRecordDetailParam param);
+
+    /**
+     * 代理返佣记录-非总代
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspDTO, DxFundSettlementCommissionRecordSumRspDTO>> listNotTopProxyCommissionRecordPage(DxFundSettlementCommissionProxyRecordReqDTO reqDTO);
 }
