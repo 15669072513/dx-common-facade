@@ -69,26 +69,26 @@ public class RecordDetailSummary implements Serializable {
      * 牌桌流水
      */
     @ApiModelProperty("牌桌流水")
-    private BigDecimal betChipSum;
+    private BigDecimal betChipSum=BigDecimal.ZERO;
     /**
      * 牌桌带入
      */
     @ApiModelProperty("牌桌带入")
-    private BigDecimal bringChipSum;
+    private BigDecimal bringChipSum=BigDecimal.ZERO;
     /**
      * 最大底池
      */
     @ApiModelProperty("最大底池")
-    private BigDecimal maxEffectivePool;
+    private BigDecimal maxEffectivePool=BigDecimal.ZERO;
 
     @ApiModelProperty("盈亏筹码")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("带入钱最多的展示为土豪的用户")
     private UserSummary bringChipSumMaxUser;

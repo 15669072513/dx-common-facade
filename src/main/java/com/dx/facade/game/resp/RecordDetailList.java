@@ -79,19 +79,19 @@ public class RecordDetailList implements Serializable {
      * 最大底池
      */
     @ApiModelProperty("最大底池")
-    private BigDecimal maxEffectivePool;
+    private BigDecimal maxEffectivePool=BigDecimal.ZERO;
 
     @ApiModelProperty("盈亏筹码")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("入池率")
-    private BigDecimal bringPoolRate;
+    private BigDecimal bringPoolRate=BigDecimal.ZERO;
 
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
         if (resp == null) {
