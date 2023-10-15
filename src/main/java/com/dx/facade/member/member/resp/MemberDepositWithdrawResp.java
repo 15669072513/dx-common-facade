@@ -31,7 +31,7 @@ public class MemberDepositWithdrawResp {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long userId;
     @ApiModelProperty(value = "支付方式")
-    private String thirdPaymentType;
+    private Integer paymentType;
     @ApiModelProperty(value = "支付币种")
     private String currency;
     @ApiModelProperty(value = "支付币种基准")
