@@ -25,6 +25,8 @@ public class MemberDepositWithdrawResp {
     @ApiModelProperty(value = "订单号")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
+    @ApiModelProperty(value = "我方订单号")
+    private String eventId;
     @ApiModelProperty(value = "会员id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long userId;
