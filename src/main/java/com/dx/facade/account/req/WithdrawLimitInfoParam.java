@@ -1,6 +1,7 @@
 package com.dx.facade.account.req;
 
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -19,16 +20,15 @@ import java.io.Serializable;
 @Builder
 public class WithdrawLimitInfoParam implements Serializable {
 
-    /**
-     * 商户ID
-     */
+    @ApiModelProperty("商户ID")
     private Long merchantId;
-    /**
-     * 用户ID(会员或代理ID)
-     */
+
+    @ApiModelProperty("用户ID(会员或代理ID)")
     private Long userId;
-    /**
-     * 用户类型:0-会员，1-代理
-     */
+
+    @ApiModelProperty("用户类型:0-会员，1-代理")
     private Integer userType;
+
+    @ApiModelProperty("是否统计手动调整流水总额")
+    private Boolean manualAdjust;
 }
