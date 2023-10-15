@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * @author orbit
@@ -26,7 +27,7 @@ public class ResetBillDetailReq implements Serializable {
     /**
      * 会员ID
      */
-    private Long memberId;
+    private List<Long> memberIds;
     /**
      * 流水重置操作人
      */

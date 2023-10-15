@@ -25,11 +25,13 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
      */
     @ApiModelProperty("用户id")
     private Long userId;
+
     /**
      * 用户类型:0-会员，1-代理
      */
     @ApiModelProperty("用户类型:0-会员，1-代理")
     private Integer userType;
+
     /**
      * 当前取款限制类型
      */
@@ -45,20 +47,29 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
      * 线下取款剩余可提现金额
      */
     private BigDecimal offlineWithdrawRemainAmount;
+
     /**
      * 已完成有效流水
      */
     @ApiModelProperty("已完成有效流水")
     private BigDecimal completeBillAmount;
+
     /**
      * 所需有效流水
      */
     @ApiModelProperty("所需有效流水")
     private BigDecimal validBillAmount;
+
     /**
      * 流水开始时间
      */
     @ApiModelProperty("流水开始时间")
     private LocalDateTime billStartTime;
+
+    /**
+     * 手动调整总额
+     */
+    @ApiModelProperty("手动调整总额")
+    private BigDecimal totalAdjust;
 
 }

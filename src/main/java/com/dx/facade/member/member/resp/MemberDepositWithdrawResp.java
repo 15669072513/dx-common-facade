@@ -31,7 +31,7 @@ public class MemberDepositWithdrawResp {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long userId;
     @ApiModelProperty(value = "支付方式")
-    private String thirdPaymentType;
+    private Integer paymentType;
     @ApiModelProperty(value = "支付币种")
     private String currency;
     @ApiModelProperty(value = "支付币种基准")
@@ -57,6 +57,23 @@ public class MemberDepositWithdrawResp {
     private BigDecimal withdrawAmountExchange;
     @ApiModelProperty(value = "手续费")
     private BigDecimal fee;
+
+    @ApiModelProperty(value = "通道id")
+    private Long channelId;
+    @ApiModelProperty(value = "平台汇率")
+    private BigDecimal usdtRate;
+    @ApiModelProperty(value = "usdt协议类型，1.omni，2.erc20, 3.trc20")
+    private Integer receiveUsdtType;
+    @ApiModelProperty(value = "收款方usdt地址")
+    private String receiveUsdtAddress;
+    @ApiModelProperty(value = "收款人真实姓名")
+    private String receiveRealName;
+    @ApiModelProperty(value = "收款人银行名称")
+    private String receiveBankName;
+    @ApiModelProperty(value = "收款人银行账号")
+    private String receiveBankcardNo;
+    @ApiModelProperty(value = "收款方银行支行地址")
+    private String receiveBankAddress;
 
 
 }

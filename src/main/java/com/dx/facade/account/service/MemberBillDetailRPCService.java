@@ -9,6 +9,8 @@ import com.dx.facade.account.req.ResetBillDetailReq;
 import com.dx.facade.account.resp.MemberBillDetailResp;
 import com.dx.facade.member.resp.MemberBaseParam;
 
+import java.math.BigDecimal;
+
 public interface MemberBillDetailRPCService {
 
     /**
@@ -38,4 +40,6 @@ public interface MemberBillDetailRPCService {
      * @return true:成功，false:失败
      */
     CommonResp<Boolean> resetBillDetail(ResetBillDetailReq req);
+
+    BigDecimal totalManualAdjust(Long userId);
 }

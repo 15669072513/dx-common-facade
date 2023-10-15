@@ -43,27 +43,33 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
 
 
     /**
-     * 单量
+     * 注单量
      */
-    @ApiModelProperty("单量")
+    @ApiModelProperty("注单量")
     private Long betCount;
 
     /**
-     * 投注额
+     * 总投注
      */
-    @ApiModelProperty("投注额")
+    @ApiModelProperty("总投注")
     private BigDecimal betAmount;
+
     /**
-     * 有效投注额
+     * 投注盈亏
      */
-    @ApiModelProperty("有效投注额")
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal rushAmount;
+    /**
+     * 总有效投注额
+     */
+    @ApiModelProperty("总有效投注额")
     private BigDecimal validBetAmount;
 
     /**
      * 活跃用户
      */
     @ApiModelProperty("活跃用户")
-    private Long activeUsers;
+    private Long activeMemberNum;
 
     /**
      * 有效用户
