@@ -53,6 +53,14 @@ public interface CommissionRateRPCService {
     CommonResp<List<CommissionRateRespDTO>> getReCommissionRate(QueryCommissionRateParamDTO request);
     
 	/**
+	 * 根据条件查询返佣比例
+	 * 
+	 * @param request
+	 * @return
+	 */
+    CommonResp<PageResp<CommissionRateRespDTO,?>> getReCommissionRate(PageReq<QueryCommissionRateParamDTO> pageReq);
+    
+	/**
 	 * 获取生效中的返佣比例
 	 * 
 	 * @param request
