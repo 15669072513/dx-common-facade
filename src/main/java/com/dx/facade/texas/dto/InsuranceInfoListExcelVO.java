@@ -37,11 +37,11 @@ public class InsuranceInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "俱乐部ID", index = 3)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_俱乐部ID)
-    private Long clubId;
+    private String clubId;
 
     @ExcelProperty(value = "手牌号", index = 4)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_手牌号)
-    private Long handId;
+    private Long roundNo;
 
     @ExcelProperty(value = "轮次", index = 5)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_轮次)
@@ -53,16 +53,16 @@ public class InsuranceInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "保险注单号", index = 7)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_保险注单号)
-    private Long insuredOrderId;
+    private String insuredOrderId;
 
     @ApiModelProperty(value = "购买类型 0放弃购买 1主动购买 2强制购买")
     @ExcelProperty(value = "购买类型", index = 8)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_购买类型)
-    private Integer buyType;
+    private String buyType;
 
     @ExcelProperty(value = "俱乐部游戏注单号", index = 9)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_俱乐部游戏注单号)
-    private Long orderId;
+    private String orderId;
 
     @ExcelProperty(value = "底池", index = 10)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_底池)
