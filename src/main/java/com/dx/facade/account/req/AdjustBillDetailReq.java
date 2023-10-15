@@ -1,5 +1,10 @@
 package com.dx.facade.account.req;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
@@ -9,7 +14,10 @@ import java.time.LocalDateTime;
  * @datetime 2023-10-15 11:46
  * @desc 所需流水调整请求参数
  */
-
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class AdjustBillDetailReq implements Serializable {
     /**
      * 会员ID
