@@ -111,15 +111,6 @@ public interface WalletRPCService {
     CommonResp<WithdrawInfoRespDTO> getWithdrawInfo(WithdrawInfoParam param);
 
     /**
-     * @author Dealer
-     * @description: 手动调整会员提现所需流水要求
-     * @date 2023/10/10
-     * @copyright
-     */
-
-    CommonResp<Boolean> adjustValidFlowAmount(MemberFlowAdjustDTO flowAdjustDTO);
-
-    /**
      * 获取取款限制信息：1.提取款限制类型，2取款限制信息
      * @param param
      * @return

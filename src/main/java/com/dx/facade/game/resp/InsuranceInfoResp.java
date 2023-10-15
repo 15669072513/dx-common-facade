@@ -77,7 +77,7 @@ public class InsuranceInfoResp {
   @ApiModelProperty(value = "投注金额")
   private BigDecimal betAmount;
 
-  @ApiModelProperty(value = "投保赔付额")
+  @ApiModelProperty(value = "投保赔付额(爆牌)")
   private BigDecimal insuredRewards;
 
   @ApiModelProperty(value = "保险投注额")
