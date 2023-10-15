@@ -1,8 +1,12 @@
 package com.dx.facade.account.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageReq;
+import com.dx.entity.PageResp;
 import com.dx.facade.account.req.AdjustBillDetailReq;
 import com.dx.facade.account.req.MemberBillDetailIncreaseReq;
+import com.dx.facade.account.resp.MemberBillDetailResp;
+import com.dx.facade.member.resp.MemberBaseParam;
 
 public interface MemberBillDetailRPCService {
 
@@ -18,4 +22,11 @@ public interface MemberBillDetailRPCService {
      * @return true:调整成功，false，调整失败
      */
     CommonResp<Boolean> adjustBillDetail(AdjustBillDetailReq req);
+
+    /**
+     * @description: 查询人工调整历史
+     * @date 2023/10/15
+     * @copyright
+     */
+    CommonResp<PageResp<MemberBillDetailResp, String>> adjustHistory(PageReq<MemberBaseParam> pageReq);
 }
