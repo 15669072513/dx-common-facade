@@ -94,7 +94,7 @@ public class DxTableBaseInfoResp implements Serializable {
     private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("总保险盈亏")
-    private BigDecimal insuredNetAmount;
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("机器人数量")
     private Integer robotNum=0;

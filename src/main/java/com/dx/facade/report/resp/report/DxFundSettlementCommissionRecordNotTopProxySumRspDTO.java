@@ -34,13 +34,13 @@ public class DxFundSettlementCommissionRecordNotTopProxySumRspDTO implements Ser
      * 个人返佣金额
      */
     @ApiModelProperty("个人返佣金额")
-    private BigDecimal personalCommissionAmount;
+    private BigDecimal personCommissionAmount;
 
     /**
      * 下级团队返佣金额
      */
     @ApiModelProperty("下级团队返佣金额")
-    private BigDecimal subCommissionAmount;
+    private BigDecimal childCommissionAmount;
 
     /**
      * 调整后团队返佣
