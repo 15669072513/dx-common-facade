@@ -1,5 +1,8 @@
 package com.dx.facade.report.param.report;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;
@@ -7,6 +10,7 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * 代理资金记录-代理返佣记录查询
@@ -28,28 +32,32 @@ public class DxFundSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("商户id")
     private Long merchantId;
     /**
-     * 周期起始日期
+     * 周期起始日期 202210
      */
-    @ApiModelProperty("周期起始日期")
+    @ApiModelProperty("周期起始日期 20221001")
     private Integer cycleStartDate;
 
     /**
-     * 周期结束日期
+     * 周期结束日期202211
      */
-    @ApiModelProperty("周期结束日期")
+    @ApiModelProperty("周期结束日期20221131")
     private Integer cycleEndDate;
     /**
      /**
-     * 发放时间
+     * 发放时间 2022-12-12 11:11:11
      */
-    @ApiModelProperty("发放时间")
-    private Integer payoutTimeStart;
+    @ApiModelProperty("发放时间 ->2022-12-12 11:11:11")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime payoutTimeStart;
 
     /**
      * 发放时间
      */
-    @ApiModelProperty("发放时间")
-    private Integer payoutTimeEnd;
+    @ApiModelProperty("发放时间  ->2022-12-13 11:11:11")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime payoutTimeEnd;
     /**
      *
      * 代理账号
