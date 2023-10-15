@@ -1,6 +1,7 @@
 package com.dx.facade.account.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.facade.account.req.AdjustBillDetailReq;
 import com.dx.facade.account.req.MemberBillDetailIncreaseReq;
 
 public interface MemberBillDetailRPCService {
@@ -11,4 +12,10 @@ public interface MemberBillDetailRPCService {
      * @return true，处理成功，false，处理失败
      */
     CommonResp<Boolean> increaseBillDetail (MemberBillDetailIncreaseReq req);
+
+    /**
+     * 人工调整会员所需流水
+     * @return true:调整成功，false，调整失败
+     */
+    CommonResp<Boolean> adjustBillDetail(AdjustBillDetailReq req);
 }
