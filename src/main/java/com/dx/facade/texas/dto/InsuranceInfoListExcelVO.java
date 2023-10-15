@@ -33,7 +33,7 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @ApiModelProperty(value = "牌桌类型 2001:德州局 2002:短牌局")
     @ExcelProperty(value = "游戏名称", index = 2)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_游戏名称)
-    private Long tableType;
+    private String gameName;
 
     @ExcelProperty(value = "俱乐部ID", index = 3)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_俱乐部ID)
