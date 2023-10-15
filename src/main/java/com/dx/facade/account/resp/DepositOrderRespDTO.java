@@ -184,4 +184,8 @@ public class DepositOrderRespDTO implements Serializable {
     @ApiModelProperty("收款方银行账号")
     @TableField("receive_bankcard_no")
     private String receiveBankcardNo;
+
+    @ApiModelProperty(value = "收款方银行支行地址")
+    @TableField("receive_bank_address")
+    private String receiveBankAddress;
 }
