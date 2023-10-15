@@ -94,6 +94,11 @@ public class DxSettlementCommissionTopProxyRecordRspDTO implements Serializable 
     private BigDecimal validBetAmount;
 
     /**
+     * 投注盈亏
+     */
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal rushAmount;
+    /**
      * 活跃用户
      */
     @ApiModelProperty("活跃用户")
