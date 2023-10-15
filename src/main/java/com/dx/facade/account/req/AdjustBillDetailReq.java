@@ -20,6 +20,10 @@ import java.time.LocalDateTime;
 @Builder
 public class AdjustBillDetailReq implements Serializable {
     /**
+     * 商户ID
+     */
+    private Long merchantId;
+    /**
      * 会员ID
      */
     private Long memberId;
