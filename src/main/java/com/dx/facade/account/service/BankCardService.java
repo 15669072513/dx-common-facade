@@ -75,7 +75,7 @@ public interface BankCardService {
      * @throws BizException
      */
     @ApiModelProperty(value = "通过绑定会员银行卡信息")
-    CommonResp bindBank(BankCardBindParmDTO bankCardParam) throws BizException;
+    CommonResp<BankCardRespDTO> bindBank(BankCardBindParmDTO bankCardParam) throws BizException;
 
     /**
      * 管理后台修改银行卡黑名单状态

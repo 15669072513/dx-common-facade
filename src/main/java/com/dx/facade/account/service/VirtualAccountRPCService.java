@@ -50,7 +50,7 @@ public interface VirtualAccountRPCService {
      * @throws BizException
      */
     @ApiModelProperty(value = "添加虚拟币")
-    CommonResp bindVirtual(VirtualAccountParmDTO virtualAccountParams);
+    CommonResp<VirtualAccountRespDTO> bindVirtual(VirtualAccountParmDTO virtualAccountParams);
 
     /**
      * 修改会员取款时间
