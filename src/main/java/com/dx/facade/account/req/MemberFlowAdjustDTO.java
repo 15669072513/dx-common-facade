@@ -31,6 +31,10 @@ public class MemberFlowAdjustDTO implements Serializable {
 
 	@ApiModelProperty("会员id")
 	@NotNull(message = "会员id不能为空")
+	private Long merchantId;
+
+	@ApiModelProperty("会员id")
+	@NotNull(message = "会员id不能为空")
 	private String remark;
 
 	public BigDecimal validAmountAdj(){
