@@ -63,7 +63,7 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
      * 活跃用户
      */
     @ApiModelProperty("活跃用户")
-    private Long activeMemberNum;
+    private Long activeUsers;
 
     /**
      * 有效用户
