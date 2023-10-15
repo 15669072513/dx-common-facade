@@ -6,6 +6,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.member.param.AddCommissionRateParamDTO;
 import com.dx.facade.member.param.BaseCommissionRateParamDTO;
 import com.dx.facade.member.param.QueryCommissionRateParamDTO;
 import com.dx.facade.member.param.QueryEffectCommissionRateParamDTO;
@@ -20,6 +21,13 @@ import com.dx.facade.member.resp.QueryCommissionRateRespDTO;
  *
  */
 public interface CommissionRateRPCService {
+	
+    /**
+     * 新增返佣比例
+     * 
+     * @param request
+     */
+    CommonResp<Boolean> AddCommissionRate(AddCommissionRateParamDTO request) throws BizException;
 	
     /**
      * 校验返佣比例

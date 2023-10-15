@@ -33,12 +33,6 @@ public class BaseCommissionRateParamDTO implements Serializable {
     @ApiModelProperty("ID")
     private Long id;
     
-    @ApiModelProperty("商户Id")
-    private Long merchantId;
-    
-    @ApiModelProperty("上级代理Id")
-    private Long parentProxyId;
-    
     @ApiModelProperty("序号")
 	private Integer serialNo;
 
