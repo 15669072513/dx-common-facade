@@ -58,6 +58,8 @@ public class MemberDepositWithdrawResp {
     @ApiModelProperty(value = "手续费")
     private BigDecimal fee;
 
+    @ApiModelProperty(value = "通道id")
+    private Long channelId;
     @ApiModelProperty(value = "平台汇率")
     private BigDecimal usdtRate;
     @ApiModelProperty(value = "usdt协议类型，1.omni，2.erc20, 3.trc20")
