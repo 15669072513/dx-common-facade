@@ -8,7 +8,8 @@ import java.util.Objects;
 public enum StatementAdjustTypeEnum {
 	非调整(0, "非流水调整"),
 	调整增加(1, "所需流水调整增加"),
-	调整扣除(2, "所需流水调整扣除");
+	调整扣除(2, "所需流水调整扣除"),
+	调整重置(3, "流水重置");
 
 	private Integer code;
 	private String desc;
