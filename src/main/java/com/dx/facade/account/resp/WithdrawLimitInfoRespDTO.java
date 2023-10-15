@@ -35,11 +35,16 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
      */
     @ApiModelProperty("取款限制类型:1-账单，2-流水")
     private Integer withdrawLimitType;
+
     /**
-     * 剩余可提现金额
+     * 线上取款剩余可提现金额
      */
-    @ApiModelProperty("剩余可提现金额")
-    private BigDecimal withdrawRemainAmount;
+    private BigDecimal onlineWithdrawRemainAmount;
+
+    /**
+     * 线下取款剩余可提现金额
+     */
+    private BigDecimal offlineWithdrawRemainAmount;
     /**
      * 已完成有效流水
      */

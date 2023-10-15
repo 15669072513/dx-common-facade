@@ -31,9 +31,4 @@ public class WithdrawLimitInfoParam implements Serializable {
      * 用户类型:0-会员，1-代理
      */
     private Integer userType;
-
-    /**
-     * 取款类型：1-银行卡，2-虚拟币，3-通过代理线下交易
-     */
-    private Integer withdrawType;
 }
