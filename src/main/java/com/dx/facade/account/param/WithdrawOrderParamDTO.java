@@ -41,8 +41,6 @@ public class WithdrawOrderParamDTO implements Serializable {
     @ApiModelProperty("银行名称")
     private String bankName;
 
-    @ApiModelProperty("银行卡号")
-    private String bankcardNo;
     @ApiModelProperty("虚拟币种类")
     private String virtualKind;
     @ApiModelProperty("虚拟币账号地址")
