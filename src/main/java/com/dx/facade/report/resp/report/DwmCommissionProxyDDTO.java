@@ -36,8 +36,8 @@ public class DwmCommissionProxyDDTO implements Serializable {
 
 
     /**
-     * 当前代理信息
+     * 代理状态信息
      */
-    @ApiModelProperty("当前代理信息")
+    @ApiModelProperty("代理状态信息")
     private ProxyStatusResp proxyResp;
 }

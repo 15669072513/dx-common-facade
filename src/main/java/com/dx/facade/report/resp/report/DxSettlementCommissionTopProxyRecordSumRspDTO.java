@@ -81,6 +81,7 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
     /**
      * 当前分页汇总
      */
+    @ApiModelProperty("当前查询页汇总")
     private  DxSettlementCommissionTopProxyRecordSumRspDTO currentSum;
 
 
