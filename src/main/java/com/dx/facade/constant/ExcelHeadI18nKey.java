@@ -33,7 +33,9 @@ public interface ExcelHeadI18nKey {
     String FUNDS_结算状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_结算状态";
     String FUNDS_客户端状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_客户端状态"; //
     String FUNDS_存款IP风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款IP风控层级"; //
+    String FUNDS_取款IP风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款IP风控层级";
     String FUNDS_存款终端设备号风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款终端设备号风控层级"; //
+    String FUNDS_取款设备终端风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款设备终端风控层级"; //
     String FUNDS_支付厂商 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付厂商"; //
     String FUNDS_支付方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付方式"; //
     String FUNDS_支付币种 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付币种"; //
