@@ -24,8 +24,6 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
 
     private static final long serialVersionUID = 1L;
 
-
-
     /**
      * 团队返佣金额
      */
@@ -33,20 +31,38 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
     private BigDecimal commissionAmount;
 
     /**
-     * 单量
+     * 佣金调整金额
      */
-    @ApiModelProperty("单量")
+    @ApiModelProperty("佣金调整金额")
+    private BigDecimal adjustAmount;
+    /**
+     * 佣金调整后团队返佣
+     */
+    @ApiModelProperty("佣金调整后团队返佣")
+    private BigDecimal commissionAdjustAmount;
+
+
+    /**
+     * 注单量
+     */
+    @ApiModelProperty("注单量")
     private Long betCount;
 
     /**
-     * 投注额
+     * 总投注
      */
-    @ApiModelProperty("投注额")
+    @ApiModelProperty("总投注")
     private BigDecimal betAmount;
+
     /**
-     * 有效投注额
+     * 投注盈亏
      */
-    @ApiModelProperty("有效投注额")
+    @ApiModelProperty("投注盈亏")
+    private BigDecimal rushAmount;
+    /**
+     * 总有效投注额
+     */
+    @ApiModelProperty("总有效投注额")
     private BigDecimal validBetAmount;
 
     /**
@@ -65,6 +81,7 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
     /**
      * 当前分页汇总
      */
+    @ApiModelProperty("当前查询页汇总")
     private  DxSettlementCommissionTopProxyRecordSumRspDTO currentSum;
 
 

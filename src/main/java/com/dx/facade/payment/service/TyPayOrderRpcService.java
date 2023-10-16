@@ -12,6 +12,7 @@ import com.dx.facade.payment.dto.ThirdPayChannelDictResp;
 import com.dx.facade.payment.dto.WithDrawOrderDto;
 
 import com.dx.facade.payment.dto.WithDrawOrderDtoV2;
+import com.dx.facade.payment.resp.JyAvalidAmountResp;
 import com.dx.facade.payment.resp.PaymentWithdrawOrderRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -21,6 +22,16 @@ import java.util.List;
  * @author agan
  */
 public interface TyPayOrderRpcService {
+
+    /**
+     * 查询有效金额范围
+     * @param deviceType
+     * @param userId
+     * @param payType
+     * @return
+     * @throws Exception
+     */
+    JyAvalidAmountResp getValidAmount(Integer deviceType, Long userId, Integer payType) throws Exception;
     /**
      * 会员/代理上传凭证
      * @param submitVetfityParamDTO

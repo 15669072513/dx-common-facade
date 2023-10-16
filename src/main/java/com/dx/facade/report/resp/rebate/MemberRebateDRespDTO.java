@@ -78,21 +78,12 @@ public class MemberRebateDRespDTO {
     @ApiModelProperty(value = "下级返点")
     private BigDecimal childRebateAmount;
 
-    /**
-     * 个人返点
-     */
-    @ApiModelProperty(value = "个人返点")
-    private BigDecimal personRebateAmount;
-
 
     @ApiModelProperty(value = "代理账号")
     private String proxyName;
 
     @ApiModelProperty(value = "代理ID")
     private Long proxyId;
-
-    @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
-    private Integer payoutStatus;
 
     /**
      * 返点比例
@@ -104,6 +95,16 @@ public class MemberRebateDRespDTO {
     /**
      * 会员账号
      */
+    @ApiModelProperty(value = "会员账号")
     private String memberName;
+
+    @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
+    private Integer payoutStatus;
+
+    /**
+     * 个人返点
+     */
+    @ApiModelProperty(value = "个人返点")
+    private BigDecimal personRebateAmount;
 
 }

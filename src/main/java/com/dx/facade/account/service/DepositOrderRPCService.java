@@ -46,6 +46,8 @@ public interface DepositOrderRPCService {
 
     void updateDepositOrderStatus(CancelDepositOrderDTO param) throws BizException;
 
+    void updateDepositOrderFailStatus(CancelDepositOrderDTO param) throws BizException;
+
     /**
      * @param dto 上次提款到现在的存款金额 请求参数
      * @return 存款总金额

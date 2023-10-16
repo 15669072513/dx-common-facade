@@ -1,6 +1,7 @@
 package com.dx.facade.report.resp.report;
 import com.dx.facade.member.proxy.resp.ProxyStatusResp;
 import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -23,17 +24,20 @@ public class DwmCommissionProxyDDTO implements Serializable {
     /**
      * 团队返佣数据
      */
+    @ApiModelProperty("团队返佣数据")
     private DxSettlementCommissionProxyRecordRspDTO settlementCommissionProxyRecordRspDTO;
 
 
     /**
      * 代理返佣明细表数据
      */
+    @ApiModelProperty("代理返佣明细表数据")
     private List<DwmCommissionDetailProxyDDTO> dwmCommissionDetailProxyDDTOS;
 
 
     /**
-     * 当前代理信息
+     * 代理状态信息
      */
+    @ApiModelProperty("代理状态信息")
     private ProxyStatusResp proxyResp;
 }

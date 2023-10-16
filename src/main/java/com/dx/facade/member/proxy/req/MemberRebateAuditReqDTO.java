@@ -26,8 +26,11 @@ public class MemberRebateAuditReqDTO {
     @ApiModelProperty(value = "订单号", example = "y202104181029521234")
     private String orderNo;
 
-    @ApiModelProperty(value = "代理账号")
-    private String proxyName;
+    @ApiModelProperty(value = "会员账号")
+    private String memberName;
+
+    @ApiModelProperty(value = "直属代理")
+    private String parentProxyName;
 
     @ApiModelProperty(value = "总代账号")
     private String topProxyName;

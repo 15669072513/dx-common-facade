@@ -1,6 +1,7 @@
 package com.dx.facade.member.proxy.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,6 +13,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@ApiModel(value = "代理状态信息", description = "代理状态信息")
 public class ProxyStatusResp {
 
     @ApiModelProperty(value = "id")
