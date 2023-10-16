@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "代理返佣结算表", description = "代理返佣结算明细表")
+@ApiModel(value = "代理返佣明细表", description = "代理返佣明细表")
 public class DwmCommissionDetailProxyDDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

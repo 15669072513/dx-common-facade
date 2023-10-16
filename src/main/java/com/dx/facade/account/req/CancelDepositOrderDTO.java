@@ -32,6 +32,9 @@ public class CancelDepositOrderDTO {
 	@ApiModelProperty(value = "商户订单号", required = true)
 	private String eventId;
 
+	@ApiModelProperty(value = "备注")
+	private String remark;
+
 	public void check() {
 		Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
 		Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));

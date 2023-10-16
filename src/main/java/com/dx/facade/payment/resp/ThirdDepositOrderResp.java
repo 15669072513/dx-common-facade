@@ -35,6 +35,9 @@ public class ThirdDepositOrderResp {
     @ApiModelProperty("返回信息")
     private String message;
 
+    @ApiModelProperty("备注")
+    private String remark;
+
     private ThirdDepositOrderResp(boolean result){
         this.result = result;
     }

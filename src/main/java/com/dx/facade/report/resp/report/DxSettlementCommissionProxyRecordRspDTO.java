@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = " ->代理返佣结算表", description = "代理返佣结算表")
+@ApiModel(value = "团队返佣数据", description = "团队返佣数据")
 public class DxSettlementCommissionProxyRecordRspDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
