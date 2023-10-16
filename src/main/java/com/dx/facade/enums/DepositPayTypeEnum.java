@@ -3,11 +3,11 @@ package com.dx.facade.enums;
 import java.util.Objects;
 
 /**
- * 存款支付类型：1-银行卡,3-虚拟币
+ * 存款支付类型：1-银行卡,2-虚拟币
  */
 public enum DepositPayTypeEnum {
 	银行卡支付(1, "银行卡支付"),
-	虚拟币支付(3, "虚拟币支付");
+	虚拟币支付(2, "虚拟币支付");
 
 	private Integer code;
 	private String desc;
