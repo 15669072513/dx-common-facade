@@ -88,7 +88,7 @@ public interface MemberRebateRecordService {
      * @return
      * @throws BizException
      */
-    CommonResp<List<ProxyRebateTeamResp>> getProxyTeamRebate(Long proxyId, Integer reportDate,Integer reportType) throws BizException;
+    CommonResp<List<ProxyRebateTeamResp>> getMemberTeamRebate(Long proxyId, Integer reportDate) throws BizException;
     /**
      * 代理PC-返回代理列表
      * @param proxyId

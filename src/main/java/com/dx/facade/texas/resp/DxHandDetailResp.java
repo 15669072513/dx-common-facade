@@ -122,4 +122,7 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("保险盈亏")
     private BigDecimal insuredNetAmount;
+
+    @ApiModelProperty("手牌盈亏（打牌抽水+保险盈亏）")
+    private BigDecimal handNetAmount = BigDecimal.ZERO;
 }
