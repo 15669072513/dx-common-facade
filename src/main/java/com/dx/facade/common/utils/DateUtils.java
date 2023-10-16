@@ -1,6 +1,7 @@
 package com.dx.facade.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -294,4 +295,16 @@ public class DateUtils {
     public static Long date2Long(LocalDateTime dateTime) {
         return Timestamp.valueOf(dateTime).getTime();
     }
+
+    public static String getDateYMD(String staticsDate) {
+        if (StringUtils.isEmpty(staticsDate)) {
+            return staticsDate;
+        }
+        return staticsDate.substring(0, 4)
+                + "-"
+                + staticsDate.substring(4, 6)
+                + "-"
+                + staticsDate.substring(6, 8);
+    }
+
 }
