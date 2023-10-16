@@ -23,6 +23,9 @@ public class CancelDepositOrderParamDTO {
     @ApiModelProperty("订单号")
     private String eventId;
 
+    @ApiModelProperty("原因")
+    private String reason;
+
     @ApiModelProperty("充值通道id")
     private Long channelId;
 
