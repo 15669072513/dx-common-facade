@@ -2,9 +2,17 @@ package com.dx.facade.member.proxy.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class SelectBankProxyRecordRespDTO {
 
     @ApiModelProperty(value = "id")
@@ -14,6 +22,9 @@ public class SelectBankProxyRecordRespDTO {
     @ApiModelProperty(value = "商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
+
+    @ApiModelProperty(value = "商户名称")
+    private String merchantName;
 
     @ApiModelProperty(value = "代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -51,10 +62,10 @@ public class SelectBankProxyRecordRespDTO {
     @ApiModelProperty(value = "数据类型（1-银行卡 2-虚拟货币）")
     private Integer dataType;
 
-    @ApiModelProperty("风控层级")
-    private String windControlLevelName;
+    @ApiModelProperty("取款账号风控层级名称")
+    private String accountWindControl;
 
     @ApiModelProperty(value = "提款时间")
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    private String withdrawalTime;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    private LocalDateTime withdrawalTime;
 }
