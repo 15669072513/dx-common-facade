@@ -40,6 +40,7 @@ public class WithdrawOrderParamDTO implements Serializable {
     private Integer accountType;
     @ApiModelProperty("银行名称")
     private String bankName;
+
     @ApiModelProperty("虚拟币种类")
     private String virtualKind;
     @ApiModelProperty("虚拟币账号地址")
@@ -133,6 +134,8 @@ public class WithdrawOrderParamDTO implements Serializable {
     private String payMerchantName;
 
     private String currency;
+    //取款银行卡账号或虚拟币账号风控层级名称
+    private String accountWindControl;
 
     @ApiModelProperty("锁单状态是否要排序，默认：否")
     private Boolean isOrderByLockStatus = false;

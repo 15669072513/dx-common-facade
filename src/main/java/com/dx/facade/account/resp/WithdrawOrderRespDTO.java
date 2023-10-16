@@ -323,4 +323,6 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty(value = "提款手续费")
     private BigDecimal withdrawFee;
+    @ApiModelProperty("银行卡账号或虚拟币账号风控名称")
+    private String accountWindControl;
 }
