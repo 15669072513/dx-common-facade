@@ -538,6 +538,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_提款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款时间";
     String FUNDS_虚拟币协议 = "EXCEL_HEAD_I18N_KEY.FUNDS_虚拟币协议";
     String FUNDS_虚拟币账号地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_虚拟币账号地址";
+    String FUNDS_虚拟币种类 = "EXCEL_HEAD_I18N_KEY.FUNDS_虚拟币种类";
 
     String LENGHT_商户名称 = "EXCEL_HEAD_I18N_KEY.LENGTH_商户名称";
     String LENGTH_域名地址 = "EXCEL_HEAD_I18N_KEY.LENGTH_域名地址";
