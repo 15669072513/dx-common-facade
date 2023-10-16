@@ -532,6 +532,12 @@ public interface ExcelHeadI18nKey {
     String FUNDS_域名状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名状态";
     String FUNDS_域名类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_域名类型";
     String FUNDS_描述说明 = "EXCEL_HEAD_I18N_KEY.FUNDS_描述说明";
+    String FUNDS_银行卡号 = "EXCEL_HEAD_I18N_KEY.FUNDS_银行卡号";
+    String FUNDS_银行名称银行支行 = "EXCEL_HEAD_I18N_KEY.FUNDS_银行名称银行支行";
+    String FUNDS_持卡人 = "EXCEL_HEAD_I18N_KEY.FUNDS_持卡人";
+    String FUNDS_提款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款时间";
+    String FUNDS_虚拟币协议 = "EXCEL_HEAD_I18N_KEY.FUNDS_虚拟币协议";
+    String FUNDS_虚拟币账号地址 = "EXCEL_HEAD_I18N_KEY.FUNDS_虚拟币账号地址";
 
     String LENGHT_商户名称 = "EXCEL_HEAD_I18N_KEY.LENGTH_商户名称";
     String LENGTH_域名地址 = "EXCEL_HEAD_I18N_KEY.LENGTH_域名地址";
