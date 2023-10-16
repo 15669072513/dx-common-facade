@@ -95,5 +95,4 @@ public class DxHandInfoListExcelVO implements Serializable {
     @ExcelProperty(value = "公牌信息", index = 16)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_公牌信息)
     private String publicCards;
-
 }
