@@ -30,17 +30,6 @@ public class DxSettlementCommissionTopProxyRecordSumRspDTO implements Serializab
     @ApiModelProperty("团队返佣金额")
     private BigDecimal commissionAmount;
 
-    /**
-     * 佣金调整金额
-     */
-    @ApiModelProperty("佣金调整金额")
-    private BigDecimal adjustAmount;
-    /**
-     * 佣金调整后团队返佣
-     */
-    @ApiModelProperty("佣金调整后团队返佣")
-    private BigDecimal commissionAdjustAmount;
-
 
     /**
      * 注单量

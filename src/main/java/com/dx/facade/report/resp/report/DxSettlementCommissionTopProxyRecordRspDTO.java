@@ -19,7 +19,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = " 代理返佣结算 ->总代", description = "代理返佣结算汇总")
+@ApiModel(value = " 代理返佣结算总代", description = "代理返佣结算汇总")
 public class DxSettlementCommissionTopProxyRecordRspDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
