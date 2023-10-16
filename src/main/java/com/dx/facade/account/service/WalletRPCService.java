@@ -125,6 +125,14 @@ public interface WalletRPCService {
      */
     CommonResp<DepositWithdrawSummaryDTO> depositWithdrawSummaryInfo(Long memberId, Integer userType);
 
+    /**
+     * 获取取款限制类型：1-账单限制，2-流水限制
+     * @param userId
+     * @param userType
+     * @return
+     */
+    CommonResp<Integer> getWithdrawLimitType(Long userId, Integer userType);
+
 
 
 }
