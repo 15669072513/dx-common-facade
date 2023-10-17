@@ -124,7 +124,7 @@ public class DxTableInfoListResp implements Serializable {
     private Integer userBringCount=0;
 
     @ApiModelProperty("进行时间（min）")
-    private Integer onlineTime;
+    private Integer onlineTime =0;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;

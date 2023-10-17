@@ -8,16 +8,16 @@ public class DxTableCountResp {
     /***
      * 全部
      */
-    private Integer allCount;
+    private Integer allCount=0;
 
     /***
      * 德州
      */
-    private Integer dzCount;
+    private Integer dzCount=0;
 
     /***
      * 短牌
      */
-    private Integer dpCount;
+    private Integer dpCount=0;
 
 }

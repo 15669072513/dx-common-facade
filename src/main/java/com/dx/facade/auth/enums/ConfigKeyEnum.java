@@ -68,6 +68,7 @@ public enum ConfigKeyEnum {
     RECHARGE_TYPE_CONFIG("recharge.type.config", "2"),
     RECHARGE_SIGNAL_INVALID_TIME("recharge.signal.invalid.time", "2"),
     EXPORT_WAIT_TIME("export.wait.time", "2"),
+    REPORT_QUERY_WAIT_TIME("report.query.wait.time", "2"),
     SURROGATE_SETTLE_DEFAULT_CONFIG("surrogate.settle.default.config", "2"),
     SURROGATE_SETTLE_PERIOD_CONFIG("surrogate.settle.period.config", "1"),
     FUNDS_AUDIT_PAGEREFRESH_INTERVAL_CONFIG("funds.audit.pagerefresh.interval.config", "2"),
@@ -82,6 +83,11 @@ public enum ConfigKeyEnum {
     LIMIT_REGION_COUNTRY_IP("limit.region.country.ip", "1"),
     REGISTER_DEFAULT_VENTURE_CODE("register.default.venture.code ", "1"),//默认代理合营码
     DEPOSIT_DEFAULT_APPID_MODEL("deposit.default.appid.model", "1"),//存取款新增通道切换参数
+    CLIENT_GEETEST_SWITCH("client.geetest.switch", "1"),//app端极验开关
+    PROXY_GEETEST_SWITCH("proxy.geetest.switch", "1"),//代理后台极验开关
+    MERCHANT_GEETEST_SWITCH("merchant.geetest.switch", "1"),//中控后台极验开关
+
+
 
     //jav项目中的字典
     JAV_FREE_VIEW_DAY_COUNT("jav.free.view.day.count", "1"),

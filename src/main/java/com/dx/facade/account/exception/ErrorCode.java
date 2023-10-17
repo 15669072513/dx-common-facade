@@ -3,7 +3,7 @@ package com.dx.facade.account.exception;
 public enum ErrorCode {
 
     MISSING_PARAM_EXCEPTION("缺少参数"),
-    PARAM_EXCEPTION("参数错误"),
+    PARAM_EXCEPTION("系统错误，请联系客服"),
     CHECK_PARAM_EXCEPTION("检查参数异常"),
 
     REMARK_CAN_NOT_NULL("审核备注不能为空"),
