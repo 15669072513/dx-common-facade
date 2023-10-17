@@ -169,6 +169,9 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
+    
+    @ApiModelProperty("当前用户名称")
+    private String curUserName;
 
 	@Override
 	public void check() {

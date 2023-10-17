@@ -22,20 +22,23 @@ public class DxTableInfoSumResp implements Serializable {
     private Long tableId;
 
     @ApiModelProperty("牌桌局数")
-    private Integer tableHandNumber;
+    private Integer tableHandNumber=0;
+
+    @ApiModelProperty("累计参与者")
+    private Integer participantTotal=0;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal bringOutChipScore;
+    private BigDecimal bringOutChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringInChipScore;
+    private BigDecimal bringInChipScore=BigDecimal.ZERO;
 
     @ApiModelProperty("总打牌抽水")
-    private BigDecimal pumpingAmountTotal;
+    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal;
+    private BigDecimal costTotal=BigDecimal.ZERO;
 }

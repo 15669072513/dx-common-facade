@@ -29,6 +29,7 @@ public enum MemberBizType implements IBizType {
     v2_repay(18, "还款", "1,9"),
 
     illegal_type(-1, "未知的类型", "-1"),
+
     ;
 
     private Integer code;

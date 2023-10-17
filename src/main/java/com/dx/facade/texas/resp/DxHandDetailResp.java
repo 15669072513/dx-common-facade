@@ -1,14 +1,10 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -72,31 +68,31 @@ public class DxHandDetailResp implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal beforeChip;
+    private BigDecimal beforeChip=BigDecimal.ZERO;
 
     @ApiModelProperty("中途带入金额汇总")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
 
     @ApiModelProperty("期末余额汇总")
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal validPot;
+    private BigDecimal validPot=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount;
+    private BigDecimal pumpingAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("手牌信息")
     private String handInfos;  //手牌信息

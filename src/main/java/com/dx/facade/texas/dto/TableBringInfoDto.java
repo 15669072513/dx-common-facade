@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Data
 public class TableBringInfoDto {
   @ApiModelProperty("总带入金额")
-  private BigDecimal bringMidwayChip;
+  private BigDecimal bringMidwayChip=new BigDecimal(0.0);
   @ApiModelProperty("总带出金额")
-  private BigDecimal bringOutChip;
+  private BigDecimal bringOutChip=new BigDecimal(0.0);
 }
