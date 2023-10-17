@@ -21,6 +21,13 @@ import javax.validation.constraints.NotNull;
 public class DwmCommissionProxyDReqDTO {
 
     /**
+     * 报表列id
+     */
+    @ApiModelProperty("报表列id")
+    @NotNull(message = "报表列id不能为空")
+    private Long id;
+
+    /**
      * 报表日期
      */
     @ApiModelProperty("报表日期")
