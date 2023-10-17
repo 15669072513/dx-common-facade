@@ -12,24 +12,16 @@ import java.util.List;
 @Data
 public class DxSettlementCommissionProxyRecordAwaitIssueReqDTO implements Serializable {
 
-
     /**
-     * 需要发放的下级代理id集合
+     * 团队返佣列表行id
      */
-    @ApiModelProperty("需要发放的下级代理id集合")
-    private List<Long> proxyIds;
+    @ApiModelProperty("团队返佣列表行id")
+    private List<Long> ids;
 
     /**
      * 上级代理id
      */
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
-
-
-    /**
-     * 报表日期
-     */
-    @ApiModelProperty("报表日期")
-    private Integer reportYm;
 
 }
