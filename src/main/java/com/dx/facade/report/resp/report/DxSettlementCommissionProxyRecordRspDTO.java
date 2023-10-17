@@ -222,22 +222,17 @@ public class DxSettlementCommissionProxyRecordRspDTO implements Serializable {
     private Long effecactiveM0emberNum;
 
     /**
+     * 总代返佣中控审核，非总代默认二审通过
      * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
      */
-    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
-    private int orderStatus;
+    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过,代返佣中控审核，非总代默认二审通过")
+    private Integer orderStatus;
 
     /**
-     * 返佣状态 (1=待发放 2-已发放 3-无返佣 4-已取消)
+     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消  )
      */
-    @ApiModelProperty("返佣状态(1=待发放 2-已发放 3-无返佣 4-已取消)")
-    private int rebateStatus;
-
-    /**
-     * 返佣状态 (1=待发放 2-已发放 3-无返佣 4-已取消)
-     */
-    @ApiModelProperty("返佣状态(1=待发放 2-已发放 3-无返佣 4-已取消)")
-    private int proxyStatus;
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    private Integer payoutStatus;
 
     /**
      * 派发时间
