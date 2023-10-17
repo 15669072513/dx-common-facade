@@ -98,49 +98,49 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 开始筹码
      */
-    private BigDecimal beforeChip;
+    private BigDecimal beforeChip=BigDecimal.ZERO;
     /**
      * 中途带入筹码
      */
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
     /**
      * 结束筹码
      */
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
     /**
      * 带入筹码次数
      */
-    private Integer bringCount;
+    private Integer bringCount=0;
     /**
      * 有效低池
      */
-    private BigDecimal effectivePool;
+    private BigDecimal effectivePool=BigDecimal.ZERO;
 
     /**
      * 总底池 = 有效底池+无效底池
      */
-    private BigDecimal totalPotAmount;
+    private BigDecimal totalPotAmount=BigDecimal.ZERO;
 
     /**
      * 有效投注（抽水金额）
      */
-    private BigDecimal pumpingChip;
+    private BigDecimal pumpingChip=BigDecimal.ZERO;
     /**
      * 抽水占比
      */
-    private Double rakeProportion;
+    private Double rakeProportion=0d;
     /**
      *  赢的筹码
      */
-    private BigDecimal winChip;
+    private BigDecimal winChip=BigDecimal.ZERO;
     /**
      *  盈亏的筹码
      */
-    private BigDecimal netChip;
+    private BigDecimal netChip=BigDecimal.ZERO;
     /**
      * 投注金额
      */
-    private BigDecimal betChip;
+    private BigDecimal betChip=BigDecimal.ZERO;
     /**
      * 座位号
      */
@@ -152,12 +152,12 @@ public class GameOrderRecordDto implements Serializable {
     /***
      * 小盲注
      */
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     /***
      * 大盲注
      */
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
     /**
      * 手牌信息
      */
@@ -199,12 +199,12 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 总抽水金额
      */
-    private BigDecimal rakeAmountAll;
+    private BigDecimal rakeAmountAll=BigDecimal.ZERO;
 
     /**
      * 总有效底池金额
      */
-    private BigDecimal prosperPoolAll;
+    private BigDecimal prosperPoolAll=BigDecimal.ZERO;
 
     /**
      * 批次id
@@ -243,5 +243,5 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 最大底池
      */
-    private BigDecimal maxPot;
+    private BigDecimal maxPot=BigDecimal.ZERO;
 }

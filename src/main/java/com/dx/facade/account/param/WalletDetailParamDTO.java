@@ -123,4 +123,7 @@ public class WalletDetailParamDTO {
     @ApiModelProperty("代理层级路径")
     private String proxyPath;
 
+    @ApiModelProperty("true-表示不需要汇总信息")
+    private Boolean excludeSummary = false;
+
 }

@@ -39,24 +39,24 @@ public class GameOrderRecordDetail implements Serializable {
          * 时长
          */
         @ApiModelProperty("时长")
-        private Long duration;
+        private Long duration=0L;
 
         /**
          * 牌桌手数
          */
         @ApiModelProperty("全部手数")
-        private Long handCount;
+        private Long handCount=0L;
         /**
          * 牌桌流水
          */
         @ApiModelProperty("全部流水")
-        private BigDecimal betAmountSum;
+        private BigDecimal betAmountSum=BigDecimal.ZERO;;
 
         /**
          *  牌桌带入
          */
         @ApiModelProperty("全部带入")
-        private BigDecimal bringChipSum;
+        private BigDecimal bringChipSum=BigDecimal.ZERO;
 
         /**
          *  最大底池
@@ -68,13 +68,13 @@ public class GameOrderRecordDetail implements Serializable {
          * 小盲注
          */
         @ApiModelProperty("小盲注")
-        private BigDecimal sbBlindScore;
+        private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
         /***
          * 大盲注
          */
         @ApiModelProperty("大盲注")
-        private BigDecimal bbBlindScore;
+        private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     }
     @Data
@@ -88,18 +88,18 @@ public class GameOrderRecordDetail implements Serializable {
          *  牌桌带入
          */
         @ApiModelProperty("总带入")
-        private BigDecimal bringChipSum;
+        private BigDecimal bringChipSum=BigDecimal.ZERO;
 
         /**
          *  盈亏筹码
          */
         @ApiModelProperty("当前盈亏")
-        private BigDecimal netAmountSum;
+        private BigDecimal netAmountSum=BigDecimal.ZERO;
 
         /**
          * 手牌数
          */
-        private int handCount;
+        private int handCount=0;
     }
 
 }
