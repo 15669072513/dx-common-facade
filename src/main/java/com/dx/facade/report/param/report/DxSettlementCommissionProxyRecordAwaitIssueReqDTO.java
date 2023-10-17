@@ -13,9 +13,9 @@ import java.util.List;
 public class DxSettlementCommissionProxyRecordAwaitIssueReqDTO implements Serializable {
 
     /**
-     * 团队返佣列表行id
+     * 团队返佣列表行id（当前选中的行数据id）
      */
-    @ApiModelProperty("团队返佣列表行id")
+    @ApiModelProperty("团队返佣列表行id（当前选中的行数据id）")
     private List<Long> ids;
 
     /**
