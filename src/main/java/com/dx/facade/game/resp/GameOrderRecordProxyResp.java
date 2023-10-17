@@ -35,17 +35,17 @@ public class GameOrderRecordProxyResp implements Serializable {
     * 投注金额
     */
    @ApiModelProperty("投注金额")
-   private BigDecimal betAmount;
+   private BigDecimal betAmount=BigDecimal.ZERO;
    /**
     * 有效投注
     */
    @ApiModelProperty("有效投注")
-   private BigDecimal validBetAmount;
+   private BigDecimal validBetAmount=BigDecimal.ZERO;
    /**
     *  游戏盈亏
     */
    @ApiModelProperty("游戏盈亏")
-   private BigDecimal netAmount;
+   private BigDecimal netAmount=BigDecimal.ZERO;
 
    @ApiModelProperty("投注时间")
    private Long handBeginDate;

@@ -10,5 +10,5 @@ public class DxTableRobotResp {
   @ApiModelProperty(value = "牌桌ID")
   private Long tableId;
   @ApiModelProperty(value = "机器人数量")
-  private Integer robotNum;
+  private Integer robotNum=0;
 }

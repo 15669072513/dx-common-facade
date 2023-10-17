@@ -37,6 +37,15 @@ public interface ProxyFinanceRPCService {
 	ProxyFinanceRespDTO selectByProxyId(Long proxyId);
 
 	/**
+	 * 通过代理id集合获取代理财务信息
+	 *
+	 * @param proxyId 代理id
+	 * @return 代理财务信息
+	 */
+	@ApiModelProperty("通过代理id获取代理财务信息")
+	List<ProxyFinanceRespDTO> selectListByProxyId(List<Long> proxyId);
+
+	/**
 	 * 根据累计获取佣金范围或者累计返点范围查询代理集合
 	 *
 	 * @param record 代理ID
