@@ -14,7 +14,7 @@ import java.util.Map;
  */
 public enum ProxyBizType implements IBizType {
 
-    //最新v2版本
+    //v2版本
     v2_deposit(1, "充值上分", "17"),
     v2_withdraw(7, "提现下分", "17"),
     v2_rebate(10, "代理返点", "17"),
@@ -22,6 +22,11 @@ public enum ProxyBizType implements IBizType {
     v2_repay(37, "还款", "17,18"),
     v2_credit_up_score(38, "授信上分", "18,19"),
     v2_credit_down_score(39, "授信下分", "18,19"),
+
+    //v2.1版本
+    v2_1_deposit(60, "代理存款", "17"),
+    v2_1_withdraw(61, "代理取款", "17,8"),
+    v2_1_proxy_commission(63, "代理返佣", "17"),
 
     //老旧版本
     deposit(101, "代理存款", "6,7"),
@@ -52,7 +57,6 @@ public enum ProxyBizType implements IBizType {
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
     illegal_type(-1, "未知的类型", "-1")
-
     ;
 
 
@@ -103,6 +107,9 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_repay.code, v2_repay);
         code2Enum.put(v2_credit_up_score.code, v2_credit_up_score);
         code2Enum.put(v2_credit_down_score.code, v2_credit_down_score);
+        code2Enum.put(v2_1_deposit.code, v2_1_deposit);
+        code2Enum.put(v2_1_withdraw.code, v2_1_withdraw);
+        code2Enum.put(v2_1_proxy_commission.code, v2_1_proxy_commission);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;

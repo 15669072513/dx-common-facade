@@ -60,6 +60,9 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("会员密码")
     private String password;
 
+    @ApiModelProperty("会员支付密码")
+    private String payPassword;
+
     @ApiModelProperty("会员真实姓名")
     private String realName;
 

@@ -1,5 +1,6 @@
 package com.dx.facade.account.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -62,6 +63,15 @@ public class MemberBillDetailResp implements Serializable {
 
     @ApiModelProperty("更新时间")
     private LocalDateTime updatedAt;
+
+    @ApiModelProperty("所需流水调整类型：0-非调整，1-增加调整，2-扣除调整")
+    private Integer adjustType;
+
+    @ApiModelProperty("所需流水调整操作人")
+    private String adjustOperator;
+
+    @ApiModelProperty("所需流水调整备注")
+    private String adjustRemark;
 
 
 }

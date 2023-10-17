@@ -195,6 +195,12 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
     private Integer contractModel;
+    
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
+    
+    @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
+    private Integer commissionSettleCycle;
 
     @ApiModelProperty("欠款标志 0-无欠款 1-有欠款")
     private Integer debtStatus;
@@ -281,5 +287,8 @@ public class ProxyInfoRespDTO {
     
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+
+    @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
     
 }

@@ -19,6 +19,9 @@ public class ProxyBalanceRespDTO {
 
     @ApiModelProperty("中心钱包余额对象")
     private WalletRespDTO centerWalletBalance;
+
+    @ApiModelProperty("中心钱包冻结余额对象")
+    private WalletRespDTO centerWalletLockBalance;
     
     @ApiModelProperty("信用钱包余额对象")
     private WalletRespDTO creditWalletBalance;

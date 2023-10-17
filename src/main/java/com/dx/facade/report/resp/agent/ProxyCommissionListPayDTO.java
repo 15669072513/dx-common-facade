@@ -26,7 +26,7 @@ public class ProxyCommissionListPayDTO {
     @ApiModelProperty(value = "申请信息")
     private String desc;
 
-    @ApiModelProperty(value = "月份",example = "202204")
+    @ApiModelProperty(value = "账单日期",example = "202204")
     private String reportYm;
 
     @ApiModelProperty(value = "操作类型.1-佣金发放")

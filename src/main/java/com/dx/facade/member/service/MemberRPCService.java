@@ -24,6 +24,7 @@ import com.dx.facade.member.param.MemberParamDTO;
 import com.dx.facade.member.param.MemberPasswordEditParam;
 import com.dx.facade.member.param.MemberQueryReqParamDTO;
 import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
+import com.dx.facade.member.param.UpdateMemberMobileParamDTO;
 import com.dx.facade.member.param.UpdateMemberNickNameParamDTO;
 import com.dx.facade.member.param.UpdateMemberTopImagesUrlParamDTO;
 import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
@@ -205,4 +206,21 @@ public interface MemberRPCService {
      * @return
      */
     CommonResp<MemberBaseInfoRespDTO> selectBaseInfoById(Long userId);
+    
+	/**
+	 * 更新用户手机
+	 * 
+	 * @param paramDTO
+	 * @return
+	 */
+	CommonResp<Boolean> updateMobile(UpdateMemberMobileParamDTO paramDTO);
+	
+    /**
+     * 根据userId查询会员是否设置支付密码
+     * 
+     * @param userId
+     * @return
+     */
+    CommonResp<Boolean> isSetPayPassword(Long userId);
+
 }

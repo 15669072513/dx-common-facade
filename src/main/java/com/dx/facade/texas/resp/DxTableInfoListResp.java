@@ -108,13 +108,16 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("盈亏金额")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
+    @ApiModelProperty("总保险盈亏")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount=BigDecimal.ZERO;
 
-    @ApiModelProperty("牌桌总抽水")
+    @ApiModelProperty("总打牌抽水")
     private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
-    @ApiModelProperty("牌桌总费用")
+    @ApiModelProperty("总牌桌盈亏")
     private BigDecimal costTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("会员带入次数")
@@ -140,4 +143,12 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;
+    @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
+    private Integer insuranceMode;
+    @ApiModelProperty("turn购买保险最低值,整数类型")
+    private BigDecimal insuranceTurn=BigDecimal.ZERO;
+    @ApiModelProperty("选张购买功能 0-不选张 1-选张")
+    private Boolean insuranceChooseSheet;
+    @ApiModelProperty("保险触发下限")
+    private Integer insuranceLowerLimit=0;
 }

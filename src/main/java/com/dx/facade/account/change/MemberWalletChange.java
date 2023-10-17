@@ -110,6 +110,42 @@ public enum MemberWalletChange implements IWalletChange {
     //场景:会员信用借(还)款,信用余额减(加)额，中心钱包余额加(减)额
     v2_credit_loan(WalletType.credit_available, MemberBizType.v2_loan, MemberChangeType.v2_credit_loan, MemberAppType.v2_loan, TransType.out, Constant.MEMBER),
     v2_credit_repay(WalletType.credit_available, MemberBizType.v2_repay, MemberChangeType.v2_credit_repay, MemberAppType.v2_repay, TransType.in, Constant.MEMBER),
+
+    //v2.1新增账变明细
+    //会员通过平台提供的存款渠道进行存款
+    v2_1_deposit(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit, MemberAppType.v2_1_deposit, TransType.in, Constant.MEMBER),
+    //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
+    v2_1_deposit_discount(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
+    //运营在中控后台帮助用户人工加额上分
+    v2_1_deposit_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_back, MemberAppType.v2_1_deposit, TransType.in, Constant.MEMBER),
+    //运营在中控后台帮助用户人工加额上分
+    v2_1_deposit_discount_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount_back, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
+    //会员通过平台提供的取款渠道进行取款
+    v2_1_withdraw(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
+    //会员主动申请取款，中心钱包的金额会先减少被冻结
+    v2_1_withdraw_frozen(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.out, Constant.MEMBER),
+    //会员申请取款被拒绝后，冻结的钱会返还回到中心钱包
+    v2_1_withdraw_fail(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.in, Constant.MEMBER),
+    //运营在中控后台帮助用户人工减额下分
+    v2_1_withdraw_back(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_back, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
+    //会员通过平台提供的存款渠道进行存款
+    v2_1_withdraw_frozen_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
+    //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
+    v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
+    //会员取款成功
+    v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_club_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_insure_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员增加金额
+    v2_1_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_club_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_insure_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    //中控后台可以在返水上给会员扣减金额
+    v2_1_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER)
     ;
 
     private IWalletType walletType;
@@ -160,7 +196,6 @@ public enum MemberWalletChange implements IWalletChange {
         return name;
     }
 
-    // TODO 需要更具业务逻辑更新
     public static List<MemberWalletChange> getDepositMemberWalletChangeList() {
         return Arrays.asList(
                 MemberWalletChange.deposit,
@@ -168,24 +203,25 @@ public enum MemberWalletChange implements IWalletChange {
                 MemberWalletChange.agent_deposit_for_member,
 
                 MemberWalletChange.v2_cash_up_score,
-                MemberWalletChange.v2_credit_up_score
+                MemberWalletChange.v2_credit_up_score,
+
+                MemberWalletChange.v2_1_deposit,
+                MemberWalletChange.v2_1_deposit_discount,
+                MemberWalletChange.v2_1_deposit_back,
+                MemberWalletChange.v2_1_deposit_discount_back
                 //MemberWalletChange.v2_credit_total_up_score
         );
     }
 
-    // TODO 需要更具业务逻辑更新
     public static List<MemberWalletChange> getWithdrawMemberWalletChangeList() {
         return Arrays.asList(
                 MemberWalletChange.withdraw_success,
                 MemberWalletChange.withdraw_sub,
 
-                MemberWalletChange.v2_cash_down_score,//代理直接提现下分，提现成功
-                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy //代理审核通过提现下分，提现成功
-
-                //MemberWalletChange.v2_cash_down_score_withdraw_refused //提现被拒绝，提现失败
-                //@TODO 信用下分是否计入member表的取出累计？
-                //MemberWalletChange.v2_credit_down_score,
-                //MemberWalletChange.v2_credit_total_down_score
+                MemberWalletChange.v2_cash_down_score,                          //代理直接提现下分，提现成功
+                MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy,    //代理审核通过提现下分，提现成功
+                MemberWalletChange.v2_1_withdraw_success,
+                MemberWalletChange.v2_1_withdraw_back
         );
     }
 
@@ -260,6 +296,23 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(MemberWalletChange.v2_credit_repay);
         //9，信用借款
         list.add(MemberWalletChange.v2_credit_loan);
+        list.add(v2_1_deposit);
+        list.add(v2_1_deposit_discount);
+        list.add(v2_1_deposit_back);
+        list.add(v2_1_deposit_discount_back);
+        list.add(v2_1_withdraw);
+        list.add(v2_1_withdraw_frozen);
+        list.add(v2_1_withdraw_fail);
+        list.add(v2_1_withdraw_back);
+        list.add(v2_1_withdraw_frozen_cash_lock);
+        list.add(v2_1_withdraw_fail_cash_lock);
+        list.add(v2_1_withdraw_success);
+        list.add(v2_1_club_rebate_add);
+        list.add(v2_1_insure_rebate_add);
+        list.add(v2_1_rebate_add);
+        list.add(v2_1_club_rebate_sub);
+        list.add(v2_1_insure_rebate_sub);
+        list.add(v2_1_rebate_sub);
         return list;
     }
 

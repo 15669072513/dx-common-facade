@@ -110,6 +110,10 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("盈亏筹码")
     private BigDecimal netAmount;
+
+    @ApiModelProperty("保险输赢")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
     /***
      * 小盲注
      */
