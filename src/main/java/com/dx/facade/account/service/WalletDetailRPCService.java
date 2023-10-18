@@ -57,6 +57,7 @@ public interface WalletDetailRPCService {
      */
     CommonResp<Void> transferBToCenterDetail(TransferGameParam param) throws BizException;
 
+
     /**
      * 实时账单
      * @param req
@@ -64,5 +65,4 @@ public interface WalletDetailRPCService {
      * @throws BizException
      */
     CommonResp<List<DxGameBillResp>> getCurrentTableBill(TableBringInfoReq req) throws BizException;
-
 }
