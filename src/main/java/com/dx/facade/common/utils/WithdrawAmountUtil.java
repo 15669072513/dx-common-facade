@@ -15,7 +15,8 @@ import java.util.Objects;
 public class WithdrawAmountUtil {
     public static BigDecimal getUsdtAmount(BigDecimal amount,BigDecimal usdtRate, String currency) {
         if(Objects.isNull(amount) || Objects.isNull(usdtRate) || StringUtils.isBlank(currency)) {
-            throw new IllegalArgumentException("货币转换参数错误");
+            return amount;
+            //throw new IllegalArgumentException("货币转换参数错误");
         }
         if(Objects.equals(currency, BwCurrencyEnum.USDT.getCode())) {
             return amount.setScale(2, RoundingMode.DOWN);
@@ -28,7 +29,8 @@ public class WithdrawAmountUtil {
 
     public static BigDecimal getCnyAmount(BigDecimal amount, BigDecimal usdtRate, String currency) {
         if(Objects.isNull(amount) || Objects.isNull(usdtRate) || StringUtils.isBlank(currency)) {
-            throw new IllegalArgumentException("货币转换参数错误");
+            return amount;
+            //throw new IllegalArgumentException("货币转换参数错误");
         }
         if(Objects.equals(currency, BwCurrencyEnum.CNY.getCode())) {
             return amount.setScale(2, RoundingMode.DOWN);
