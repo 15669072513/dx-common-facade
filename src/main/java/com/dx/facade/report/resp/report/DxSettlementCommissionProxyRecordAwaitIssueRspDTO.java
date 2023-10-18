@@ -27,10 +27,10 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
     @ApiModelProperty("id")
     private Long id;
     /**
-     * 周期
+     * 报表时间
      */
-    @ApiModelProperty("周期")
-    private String cycleYm;
+    @ApiModelProperty("报表时间")
+    private Integer reportYm;
 
     /**
      * 周期名称 - 结算期数
