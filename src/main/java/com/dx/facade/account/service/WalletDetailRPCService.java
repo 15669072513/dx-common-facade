@@ -10,6 +10,8 @@ import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
+import com.dx.facade.texas.req.TableBringInfoReq;
+import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
 
