@@ -10,6 +10,8 @@ import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
+import com.dx.facade.texas.req.TableBringInfoReq;
+import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
 
@@ -54,5 +56,13 @@ public interface WalletDetailRPCService {
      * @throws BizException
      */
     CommonResp<Void> transferBToCenterDetail(TransferGameParam param) throws BizException;
+
+    /**
+     * 实时账单
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<List<DxGameBillResp>> getCurrentTableBill(TableBringInfoReq req) throws BizException;
 
 }
