@@ -103,7 +103,15 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.v2_cash_center_to_B.code(), MemberChangeType.v2_cash_B_to_center.code());
             }
             if (appChangeType.intValue() == v2_rebate.code()) {
-                return Arrays.asList(MemberChangeType.v2_rebate.code(), MemberChangeType.v2_rebate_add.code(), MemberChangeType.v2_rebate_sub.code());
+                return Arrays.asList(
+                        MemberChangeType.v2_rebate.code(),
+                        MemberChangeType.v2_rebate_add.code(),
+                        MemberChangeType.v2_rebate_sub.code(),
+                        MemberChangeType.v2_1_club_rebate_sub.code(),
+                        MemberChangeType.v2_1_club_rebate_add.code(),
+                        MemberChangeType.v2_1_insure_rebate_sub.code(),
+                        MemberChangeType.v2_1_insure_rebate_add.code()
+                );
             }
             if (appChangeType.intValue() == v2_loan.code()) {
                 return Arrays.asList(MemberChangeType.v2_cash_loan.code());
@@ -190,6 +198,18 @@ public enum MemberAppType implements IAppType {
                 return v2_rebate.code();
             }
             if(serverChangeType.intValue() == MemberChangeType.v2_rebate_sub.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_club_rebate_sub.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_club_rebate_add.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_insure_rebate_sub.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_insure_rebate_add.code()) {
                 return v2_rebate.code();
             }
             if(serverChangeType.intValue() == MemberChangeType.v2_cash_loan.code()) {
