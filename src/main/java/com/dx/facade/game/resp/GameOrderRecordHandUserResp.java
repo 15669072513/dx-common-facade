@@ -21,17 +21,17 @@ public class GameOrderRecordHandUserResp implements Serializable {
      * 投注金额
      */
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount=BigDecimal.ZERO;
     /**
      * 有效投注（抽水金额）
      */
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
     /**
      *  盈亏的筹码
      */
     @ApiModelProperty("输赢金额")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
     /**
      * 手牌信息
      */

@@ -223,4 +223,11 @@ public interface MemberRPCService {
      */
     CommonResp<Boolean> isSetPayPassword(Long userId);
 
+	/**
+	 * 根据总代ID查询所有子会员ID集合
+	 * @param topProxyId
+	 * @return
+	 */
+	CommonResp<List<Long>> getMemberIdsByTopProxyId(Long topProxyId);
+
 }

@@ -1,6 +1,5 @@
 package com.dx.facade.proxy.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -51,19 +50,19 @@ public class DxHandInfoResp implements Serializable {
     private String globalPokerCode;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal effectivePool;
+    private BigDecimal effectivePool=BigDecimal.ZERO;
 
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("手牌（牌桌第多少手）")
-    private Integer roundNo;
+    private Integer roundNo=0;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore;
+    private BigDecimal sbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore;
+    private BigDecimal bbBlindScore=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;

@@ -29,22 +29,22 @@ public class DxGamePersonalResp implements Serializable {
     private Long tableType;
 
     @ApiModelProperty("总手数")
-    private Long handNumberTotal;
+    private Long handNumberTotal=0L;
 
     @ApiModelProperty("百手盈利")
-    private BigDecimal hundredHandProfit;
+    private BigDecimal hundredHandProfit=BigDecimal.ZERO;
 
     @ApiModelProperty("主动入池次数")
-    private Long activeBringPoolNumber;
+    private Long activeBringPoolNumber=0L;
 
     @ApiModelProperty("Walks手牌数")
-    private Long walksHandNumber;
+    private Long walksHandNumber=0L;
 
     @ApiModelProperty("翻牌前加注次数")
-    private Long preFlopRaiseNumber;
+    private Long preFlopRaiseNumber=0L;
 
     @ApiModelProperty("翻牌前的游戏手数")
-    private Long preFlopHandNumber;
+    private Long preFlopHandNumber=0L;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;

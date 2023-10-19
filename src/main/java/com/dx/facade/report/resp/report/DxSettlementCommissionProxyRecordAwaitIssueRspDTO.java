@@ -21,13 +21,22 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * id
+     */
+    @ApiModelProperty("id")
+    private Long id;
+    /**
+     * 报表时间
+     */
+    @ApiModelProperty("报表时间")
+    private Integer reportYm;
 
     /**
      * 周期名称 - 结算期数
      */
     @ApiModelProperty("周期名称 - 结算期数")
     private String cycleName;
-
 
     /**
      * 代理id
@@ -72,20 +81,21 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
     private BigDecimal commissionPayAmount;
 
     /**
+     * 待发放团队返佣
+     */
+    @ApiModelProperty("待发放团队返佣")
+    private BigDecimal commissionAwaitIssueAmount;
+    /**
+     * 总代返佣中控审核，非总代默认二审通过
      * 审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过
      */
-    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
-    private int orderStatus;
+    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过,代返佣中控审核，非总代默认二审通过")
+    private Integer orderStatus;
 
     /**
-     * 返佣状态 (1=待发放 2-已发放 3-无返佣 4-已取消)
+     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消  )
      */
-    @ApiModelProperty("返佣状态(1=待发放 2-已发放 3-无返佣 4-已取消)")
-    private int rebateStatus;
-
-
-
-
-
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    private Integer payoutStatus;
 
 }
