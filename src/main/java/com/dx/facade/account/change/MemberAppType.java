@@ -93,22 +93,50 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.bring_out_table.code()
                 );
             }
-            if (appChangeType.intValue() == v2_cash_up_score.code) return Arrays.asList(MemberChangeType.v2_cash_up_score.code());
-            if (appChangeType.intValue() == v2_cash_down_score.code())
+            if (appChangeType.intValue() == v2_cash_up_score.code) {
+                return Arrays.asList(MemberChangeType.v2_cash_up_score.code());
+            }
+            if (appChangeType.intValue() == v2_cash_down_score.code()) {
                 return Arrays.asList(MemberChangeType.v2_cash_down_score.code());
-            if (appChangeType.intValue() == v2_transfer.code)
+            }
+            if (appChangeType.intValue() == v2_transfer.code) {
                 return Arrays.asList(MemberChangeType.v2_cash_center_to_B.code(), MemberChangeType.v2_cash_B_to_center.code());
-            if (appChangeType.intValue() == v2_rebate.code())
+            }
+            if (appChangeType.intValue() == v2_rebate.code()) {
                 return Arrays.asList(MemberChangeType.v2_rebate.code(), MemberChangeType.v2_rebate_add.code(), MemberChangeType.v2_rebate_sub.code());
-            if (appChangeType.intValue() == v2_loan.code()) return Arrays.asList(MemberChangeType.v2_cash_loan.code());
-            if (appChangeType.intValue() == v2_repay.code()) return Arrays.asList(MemberChangeType.v2_cash_repay.code());
-            if (appChangeType.intValue() == v2_withdraw_frozen.code())
+            }
+            if (appChangeType.intValue() == v2_loan.code()) {
+                return Arrays.asList(MemberChangeType.v2_cash_loan.code());
+            }
+            if (appChangeType.intValue() == v2_repay.code()) {
+                return Arrays.asList(MemberChangeType.v2_cash_repay.code());
+            }
+            if (appChangeType.intValue() == v2_withdraw_frozen.code()) {
                 return Arrays.asList(MemberChangeType.v2_cash_withdraw_frozen.code());
-            if (appChangeType.intValue() == v2_withdraw_refused.code())
+            }
+            if (appChangeType.intValue() == v2_withdraw_refused.code()) {
                 return Arrays.asList(MemberChangeType.v2_cash_withdraw_refused.code());
-            if (appChangeType.intValue() == v2_bring_out_table.code())
+            }
+            if (appChangeType.intValue() == v2_bring_out_table.code()) {
                 return Arrays.asList(MemberChangeType.bring_out_table.code());
-            if (appChangeType.intValue() == v2_bring_to_table.code()) return Arrays.asList(MemberChangeType.bring_to_table.code());
+            }
+            if (appChangeType.intValue() == v2_bring_to_table.code()) {
+                return Arrays.asList(MemberChangeType.bring_to_table.code());
+            }
+            if(appChangeType.intValue() == v2_1_withdraw.code) {
+                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),MemberChangeType.v2_1_withdraw_back.code());
+            }
+            if(appChangeType.intValue() == v2_1_deposit.code()) {
+                return Arrays.asList(MemberChangeType.v2_1_deposit.code(), MemberChangeType.v2_1_deposit_back.code());
+            }
+            if(appChangeType.intValue() == v2_1_deposit_discount.code) {
+                return Arrays.asList(
+                        MemberChangeType.v2_1_deposit_discount.code(),
+                        MemberChangeType.v2_1_deposit_discount_back.code()
+                );
+            }
+
+
         }
         if (walletType.intValue() == WalletType.credit_available.code()) {
             //若appChangeType为空，则返回所有信用钱包账变类型
@@ -143,25 +171,84 @@ public enum MemberAppType implements IAppType {
      */
     public static Integer getAppChangeTypeByServerChangeType (Integer walletType, Integer serverChangeType) {
         if(walletType.intValue() == WalletType.cash.code()) {
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_up_score.code()) return v2_cash_up_score.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_down_score.code()) return v2_cash_down_score.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_center_to_B.code()) return transfer.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_B_to_center.code()) return transfer.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_rebate.code()) return v2_rebate.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_rebate_add.code()) return v2_rebate.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_rebate_sub.code()) return v2_rebate.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_loan.code()) return v2_loan.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_repay.code()) return v2_repay.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_withdraw_frozen.code()) return v2_withdraw_frozen.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_cash_withdraw_refused.code()) return v2_withdraw_refused.code();
-            if(serverChangeType.intValue() == MemberChangeType.bring_to_table.code()) return v2_bring_to_table.code();
-            if(serverChangeType.intValue() == MemberChangeType.bring_out_table.code()) return v2_bring_out_table.code();
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_up_score.code()) {
+                return v2_cash_up_score.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_down_score.code()) {
+                return v2_cash_down_score.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_center_to_B.code()) {
+                return transfer.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_B_to_center.code()) {
+                return transfer.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_rebate.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_rebate_add.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_rebate_sub.code()) {
+                return v2_rebate.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_loan.code()) {
+                return v2_loan.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_repay.code()) {
+                return v2_repay.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_withdraw_frozen.code()) {
+                return v2_withdraw_frozen.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_cash_withdraw_refused.code()) {
+                return v2_withdraw_refused.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.bring_to_table.code()) {
+                return v2_bring_to_table.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.bring_out_table.code()) {
+                return v2_bring_out_table.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_withdraw.code()) {
+                return v2_1_withdraw.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_withdraw_back.code()) {
+                return v2_1_withdraw.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_withdraw_frozen.code()) {
+                return v2_withdraw_frozen.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_withdraw_fail.code()) {
+                return v2_withdraw_refused.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit.code()) {
+                return v2_1_deposit.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_back.code()) {
+                return v2_1_deposit.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
+                return v2_1_deposit_discount.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount_back.code()) {
+                return v2_1_deposit_discount.code;
+            }
+
         }
         if(walletType.intValue() == WalletType.credit_available.code()) {
-            if(serverChangeType.intValue() == MemberChangeType.v2_credit_up_score.code()) return v2_credit_up_score.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_credit_down_score.code()) return v2_credit_down_score.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_credit_loan.code()) return v2_loan.code();
-            if(serverChangeType.intValue() == MemberChangeType.v2_credit_repay.code()) return v2_repay.code();
+            if(serverChangeType.intValue() == MemberChangeType.v2_credit_up_score.code()) {
+                return v2_credit_up_score.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_credit_down_score.code()) {
+                return v2_credit_down_score.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_credit_loan.code()) {
+                return v2_loan.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v2_credit_repay.code()) {
+                return v2_repay.code();
+            }
         }
         List<Integer> gameWalletTypes = Arrays.asList(
                 WalletType.texas.code(),
