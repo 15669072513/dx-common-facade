@@ -34,12 +34,12 @@ public interface WalletDetailRPCService {
      */
     CommonResp<GameAmountTotalRespDTO> getDxGameTableIdAmount(Long tableId);
 
-    /**
-     * 根据牌桌查询代入带出 list
-     * @param idsList
-     * @return
-     */
-    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
+//    /**
+//     * 根据牌桌查询代入带出 list
+//     * @param idsList
+//     * @return
+//     */
+//    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
 
     /**
      * 中心钱包向馆钱包上分完成后，向资金发送上分过程中场馆钱包的加额账变信息
