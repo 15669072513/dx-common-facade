@@ -36,11 +36,6 @@ public class SelectVirtualProxyRecordReqDTO extends SelectPagingQueryReqDTO{
     @ApiModelProperty(value = "代理账号", position = 5)
     private String userName;
 
-    @ApiModelProperty(value = "上级代理账号", position = 6)
-    private String parentProxyUserName;
-
-    @ApiModelProperty(value = "操作人", position = 7)
-    private String operator;
 
     @ApiModelProperty(value = "虚拟币协议:1-omni协议，2-trc20，3-erc20", position = 8)
     private Integer virtualProtocol;
