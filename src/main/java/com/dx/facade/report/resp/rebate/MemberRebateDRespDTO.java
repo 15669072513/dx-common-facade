@@ -9,6 +9,12 @@ import java.math.BigDecimal;
 public class MemberRebateDRespDTO {
 
     /**
+     * 返水id
+     */
+    @ApiModelProperty(value = "返水id")
+    private Long id;
+
+    /**
      * 报表日期
      */
     @ApiModelProperty(value = "报表日期")
