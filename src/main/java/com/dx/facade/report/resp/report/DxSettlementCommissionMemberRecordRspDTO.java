@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "团队返佣数据", description = "团队返佣数据")
+@ApiModel(value = "团队会员返水数据", description = "团队会员返水数据")
 public class DxSettlementCommissionMemberRecordRspDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
