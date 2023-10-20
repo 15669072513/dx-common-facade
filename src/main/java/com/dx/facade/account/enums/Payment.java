@@ -81,11 +81,11 @@ public class Payment {
 
     public enum DepositType {
         银行卡(1, "银行卡"),
-        //信用卡(2, "信用卡"),
+        信用卡(3, "信用卡"),
         虚拟币(2, "虚拟币"),
-        //支付宝(4, "支付宝"),
-        //微信(5, "微信"),
-        //其他(6, "其他"),
+        支付宝(4, "支付宝"),
+        微信(5, "微信"),
+        其他(6, "其他"),
         ;
 
         private Integer code;
@@ -135,8 +135,8 @@ public class Payment {
 
     public enum DepositChannelType{
         银行卡转卡(1, "银行卡转卡", DepositType.银行卡),
-        信用卡充值(2, "信用卡充值", DepositType.信用卡),
-        虚拟币充值(3, "虚拟币充值", DepositType.虚拟币),
+        信用卡充值(3, "信用卡充值", DepositType.信用卡),
+        虚拟币充值(2, "虚拟币充值", DepositType.虚拟币),
         支付宝转卡(4, "支付宝转卡", DepositType.支付宝),
         支付宝扫码(5, "支付宝扫码", DepositType.支付宝),
         微信转卡(6, "微信转卡", DepositType.微信),
