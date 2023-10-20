@@ -1,5 +1,6 @@
 package com.dx.facade.payment.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -29,6 +30,9 @@ public class OrderNumByUserIdEsReqDto {
 	
 	@ApiModelProperty(value = "用户类型(0=会员 1=代理) 枚举ConstantEnums.UserType")
 	private Integer userType;
+
+	@ApiModelProperty("提款类型，1.银行卡，2.虚拟币，3.通过代理取款")
+	private Integer withdrawType;
 	
 
 }
