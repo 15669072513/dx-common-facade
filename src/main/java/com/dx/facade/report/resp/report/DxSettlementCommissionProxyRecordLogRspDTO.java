@@ -118,6 +118,11 @@ public class DxSettlementCommissionProxyRecordLogRspDTO implements Serializable 
      */
     @ApiModelProperty("操作人名称")
     private String operateName;
+    /**
+     * 备注
+     */
+    @ApiModelProperty("操作备注")
+    private String remark;
 
     /**
      * 创建时间
