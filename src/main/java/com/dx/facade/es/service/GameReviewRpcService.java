@@ -12,7 +12,7 @@ import com.dx.facade.game.resp.GameReviewcardResp;
  * 游戏牌局回顾查询
  * @author streak
  */
-public interface GameOrderRecordReviewService {
+public interface GameReviewRpcService {
 
     /**
      * 查询展示牌局回顾牌谱列表
