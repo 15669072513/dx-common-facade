@@ -8,21 +8,23 @@ import java.util.Objects;
 
 public enum DepositOrderStatus {
 
-    待付款(0, "待付款", 2),
-    待确认(1, "待确认", 2),
-    处理中(2, "处理中", 2),
-    成功(3, "成功", 3),
-    失败(4, "失败", 4),
-    已取消(5, "已取消", 4),
-    未知(-1, "未知", -1);
+    待付款(0, "待付款", "处理中", 2),
+    待确认(1, "待确认", "处理中", 2),
+    处理中(2, "处理中", "处理中", 2),
+    成功(3, "成功", "成功", 3),
+    失败(4, "失败", "失败", 4),
+    已取消(5, "已取消", "失败", 4),
+    未知(-1, "未知", "未知", -1);
 
     public Integer code;
     public String desc;
+    public String clientDesc;
     public Integer clientCode;
 
-    DepositOrderStatus(Integer code, String desc, Integer clientCode) {
+    DepositOrderStatus(Integer code, String desc,String clientDesc, Integer clientCode) {
         this.code = code;
         this.desc = desc;
+        this.clientDesc = clientDesc;
         this.clientCode = clientCode;
     }
 
@@ -32,6 +34,10 @@ public enum DepositOrderStatus {
 
     public String desc() {
         return this.desc;
+    }
+
+    public String clientDesc() {
+        return this.clientDesc;
     }
 
     public Integer clientCode() {
