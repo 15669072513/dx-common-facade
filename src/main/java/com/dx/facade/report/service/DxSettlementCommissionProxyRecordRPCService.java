@@ -5,10 +5,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.proxy.req.ProxyRebateDealAuditReqDTO;
 import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultRespDTO;
-import com.dx.facade.report.param.report.DxFundSettlementCommissionProxyRecordReqDTO;
-import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordAwaitIssueReqDTO;
-import com.dx.facade.report.param.report.DxSettlementCommissionProxyRecordReqDTO;
-import com.dx.facade.report.param.report.DxSettlementCommissionTopProxyRecordReqDTO;
+import com.dx.facade.report.param.report.*;
 import com.dx.facade.report.resp.agent.ProxyCommissionListPayDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateRecordDetailParam;
 import com.dx.facade.report.resp.report.*;
@@ -85,4 +82,12 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<PageResp<DxSettlementCommissionProxyRecordRspDTO, DxFundSettlementCommissionRecordNotTopProxySumRspDTO>> listNotTopProxyCommissionRecordPage(DxFundSettlementCommissionProxyRecordReqDTO reqDTO);
+
+    /**
+     * 资金调整-非总代返佣管理列表查询
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<DxFundAdjustSettlementCommissionProxyRecordRspDTO, DxFundAdjustSettlementCommissionProxyRecordSumRspDTO>> listNotTopProxyFundAdjustmentCommissionRecordPage(DxFundAdjustSettlementCommissionProxyRecordReqDTO reqDTO);
+
 }
