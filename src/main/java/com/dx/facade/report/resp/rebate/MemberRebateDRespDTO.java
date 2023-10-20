@@ -104,6 +104,12 @@ public class MemberRebateDRespDTO {
     @ApiModelProperty(value = "会员账号")
     private String memberName;
 
+    /**
+     * 直属上级账号
+     */
+    @ApiModelProperty(value = "直属上级账号")
+    private String parentProxyName;
+
     @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
     private Integer payoutStatus;
 
