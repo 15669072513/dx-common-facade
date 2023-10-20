@@ -16,28 +16,28 @@ public class InsureIsOursRecordResp implements Serializable {
     private static final long serialVersionUID = -7499056290434202508L;
 
     /**
-     * 昵称
-     */
-    private String nickName;
-    /**
-     * 手
-     */
-    private Integer handCounts;
-    /**
      * 用户id
      */
     private Long userId;
     /**
-     * 圈
+     * 昵称
      */
-    private Integer betRound;
+    private String nickName;
+    /**
+     * 第几手牌
+     */
+    private Integer roundNo;
+    /**
+     * 手牌圈层
+     */
+    private Integer roundCode;
     /**
      * 投保金额
      */
-    private BigDecimal insureScore;
+    private BigDecimal insuredAmount;
     /**
      * 赔付金额
      */
-    private BigDecimal compensationScore;
+    private BigDecimal insuredRewards;
 
 }

@@ -52,6 +52,9 @@ public class WithdrawOrderParamDTO implements Serializable {
     @ApiModelProperty("多个用户ID")
     private List<Long> userIds;
 
+    @ApiModelProperty("上级代理ID")
+    private Long parentProxyId;
+
     @ApiModelProperty("申请时间开始")
     private LocalDateTime eventTimeStart;
 

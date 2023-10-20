@@ -280,7 +280,12 @@ public enum ConfigKeyEnum {
     TEXAS_UPPER_LIMIT("texas.upper.limit","1"),
     /** 短牌单牌桌累计带入上限（倍Ante） */
     SHOORT_UPPER_LIMIT("short.upper.limit","1"),
-    
+
+    //******************************短信验证相关
+    /** 短信验证码有效时长*/
+    CMS_VALID_TIME("cms.valid.time","1"),
+    /** 短信验证码默认过期时间*/
+    CMS_DEFAULT_COUNTDOWN("cms.default.countdown","1"),
 	;
 
     //code转换

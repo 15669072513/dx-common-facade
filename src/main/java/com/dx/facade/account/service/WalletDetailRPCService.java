@@ -10,6 +10,8 @@ import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
+import com.dx.facade.texas.req.TableBringInfoReq;
+import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
 
@@ -32,12 +34,12 @@ public interface WalletDetailRPCService {
      */
     CommonResp<GameAmountTotalRespDTO> getDxGameTableIdAmount(Long tableId);
 
-    /**
-     * 根据牌桌查询代入带出 list
-     * @param idsList
-     * @return
-     */
-    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
+//    /**
+//     * 根据牌桌查询代入带出 list
+//     * @param idsList
+//     * @return
+//     */
+//    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
 
     /**
      * 中心钱包向馆钱包上分完成后，向资金发送上分过程中场馆钱包的加额账变信息
