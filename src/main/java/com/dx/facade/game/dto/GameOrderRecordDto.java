@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * 游戏注单记录DTO
@@ -149,6 +150,12 @@ public class GameOrderRecordDto implements Serializable {
      * 座位类型 (0普通 1 庄家 2 大盲，3小盲)
      */
     private Integer seatType;
+
+    /**
+     * 注单记录创建时间
+     */
+    private LocalDateTime recordCreateTime;
+
     /***
      * 小盲注
      */
