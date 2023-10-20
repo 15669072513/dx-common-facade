@@ -962,7 +962,7 @@ public class Payment {
      */
     public enum ObDepositOrderAppStatus {
         待处理(1, "待支付", 0),
-        成功(3, "成功", 1),
+        成功(3, "成功", 3),
         已取消(2, "失败", 4);
         private Integer code;
         private String desc;
