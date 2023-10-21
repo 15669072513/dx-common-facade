@@ -34,5 +34,8 @@ public class MemberRebateDReqDTO {
      */
     @ApiModelProperty(value = "周期结束时间(yyyyMMdd)")
     private Long reportEndDate;
+
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    private Integer payoutStatus;
 }
 
