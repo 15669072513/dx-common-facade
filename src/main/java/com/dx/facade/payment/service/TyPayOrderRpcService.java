@@ -7,11 +7,8 @@ import com.dx.facade.account.req.SubmitVetfityParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
-import com.dx.facade.payment.dto.ProxyTransferInnerDto;
-import com.dx.facade.payment.dto.ThirdPayChannelDictResp;
-import com.dx.facade.payment.dto.WithDrawOrderDto;
+import com.dx.facade.payment.dto.*;
 
-import com.dx.facade.payment.dto.WithDrawOrderDtoV2;
 import com.dx.facade.payment.resp.JyAvalidAmountResp;
 import com.dx.facade.payment.resp.PaymentWithdrawOrderRespDTO;
 import io.swagger.annotations.ApiModelProperty;
@@ -58,6 +55,9 @@ public interface TyPayOrderRpcService {
      */
     @ApiModelProperty(value = "会员取款")
     CommonResp saveWithDrawOrder(WithDrawOrderDto var1) throws Exception;
+
+    @ApiModelProperty(value = "会员取款")
+    CommonResp<PaymentWithdrawOrderRespDTO> saveWithDrawOrderV21(WithDrawOrderDtoV21 dto);
 
     /**
      * 信用盘用户提现请求，请求到payment服务创建订单
