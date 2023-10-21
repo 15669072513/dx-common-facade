@@ -8,6 +8,8 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * <p>
@@ -71,31 +73,31 @@ public class DxHandDetailResp implements Serializable {
     private Integer handNum;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal beforeChip=BigDecimal.ZERO;
+    private BigDecimal beforeChip;
 
     @ApiModelProperty("中途带入金额汇总")
-    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
+    private BigDecimal bringMidwayChip;
 
     @ApiModelProperty("期末余额汇总")
-    private BigDecimal afterChip=BigDecimal.ZERO;
+    private BigDecimal afterChip;
 
     @ApiModelProperty("公牌信息")
     private String publicCards;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal validPot=BigDecimal.ZERO;
+    private BigDecimal validPot;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpingAmount=BigDecimal.ZERO;
+    private BigDecimal pumpingAmount;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount=BigDecimal.ZERO;
+    private BigDecimal netAmount;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount=BigDecimal.ZERO;
+    private BigDecimal validBetAmount;
 
     @ApiModelProperty("手牌信息")
     private String handInfos;  //手牌信息
