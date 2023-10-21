@@ -79,6 +79,8 @@ public interface DxSettlementCommissionProxyRecordRPCService {
 
     CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyRebateRecordAuditBatchRefuse(ProxyRebateDealAuditReqDTO reqDTO) throws BizException;
     CommonResp adjustAmount(ProxyRebateRecordDetailParam param);
+    CommonResp cancelAmount(ProxyRebateRecordDetailParam param);
+
 
     /**
      * 代理返佣记录-非总代
