@@ -43,6 +43,10 @@ public interface DxSettlementCommissionProxyRecordRPCService {
     CommonResp<Integer> issueCommission(List<ProxyCommissionListPayDTO> payList);
 
     /**
+     * 代发佣金
+     */
+    CommonResp<Boolean> replaceIssueCommission(ProxyCommissionListPayDTO payDTO);
+    /**
      * 报表-业务报表-代理返佣报表
      * @param reqDTO
      * @return
