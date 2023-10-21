@@ -153,4 +153,8 @@ public interface ProxyNetAmountRPCService {
      * @throws BizException
      */
     CommonResp<PageResp<ProxyNetAmountDayRespDTO,?>> queryProxyNetAmountMonthDetail(ProxyNetAmountDayReqDTO reqDTO) throws Exception;
+
+    CommonResp<ProxyMonthNetAmountRespDTO> queryProxyNetAmountMonth(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
+    CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmount(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
+
 }
