@@ -11,11 +11,9 @@ import java.util.List;
 @Setter
 public class DxSettlementDto implements Serializable {
     private static final long serialVersionUID = 1L;
-    private List<DxSettlementDetailDto> chipScoreChangeDtoList;
+    private List<DxSettlementDetailDto> list;
     private String eventId;
     private Long eventTime;
-    private Integer changeType;
-    private List<DxSettlementDetailDto> gameOrderDetailDtoList;
     private Long tableId;
     private String tableCode;
 }
