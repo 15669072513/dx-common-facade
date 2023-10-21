@@ -136,6 +136,10 @@ public class QueryCommissionRatePageParamDTO extends PageRequest implements Base
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
+    
+    
+    @ApiModelProperty("版本号")
+    private Integer version;
 
 	@Override
 	public void check() {
