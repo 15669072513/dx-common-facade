@@ -127,7 +127,7 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 抽水占比
      */
-    private Double rakeProportion;
+    private Double rakeProportion=0d;
 
     /**
      * 抽水贡献

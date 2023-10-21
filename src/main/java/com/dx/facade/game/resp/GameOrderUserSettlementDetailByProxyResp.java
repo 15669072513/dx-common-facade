@@ -38,8 +38,13 @@ public class GameOrderUserSettlementDetailByProxyResp {
 
     @ApiModelProperty("总带入")
     private BigDecimal bringMidwayChip=BigDecimal.ZERO;
+
+    @ApiModelProperty("总带出")
+    private BigDecimal bringOutChipScore=BigDecimal.ZERO;
+
     @ApiModelProperty("总带入次数")
     private Long bringCount=0L;
+
     @ApiModelProperty("牌桌id")
     private Long tableId;
 }
