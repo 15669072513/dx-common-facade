@@ -58,6 +58,21 @@ public interface ProxyNetAmountRPCService {
     CommonResp<PageResp<ProxyMonthNetAmountRespDTO, ProxyMonthDirectNetAmountRespDTO>> queryProxyMonthNetAmountList_v1(PageReq<ProxyMonthNetAmountReqDTO> reqDTO) throws Exception;
 
     /**
+     * 代理后台查询代理月盈亏列表 0.2.1
+     * @param reqDTO
+     * @return
+     * @throws Exception
+     */
+    CommonResp<PageResp<ProxyMonthNetAmountRespDTO,ProxyMonthNetAmountRespDTO>> queryProxyMonthNetAmountList_v2(PageReq<ProxyMonthNetAmountReqDTO> reqDTO) throws Exception;
+
+    /**
+     * 代理后台日报表列表 0.2.1
+     * @param reqDTO
+     * @return
+     * @throws Exception
+     */
+    public CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayNetAmountRespDTO>> queryProxyDayNetAmountList_v2(PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
+    /**
      * bwjk
      * 代理月盈亏详情 - 当月日盈亏列表
      *
