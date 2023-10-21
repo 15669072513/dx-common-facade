@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.Range;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Data
 public class DxSettlementCommissionProxyRecordLogReqDTO {
@@ -24,6 +25,11 @@ public class DxSettlementCommissionProxyRecordLogReqDTO {
      */
     @ApiModelProperty("商户id")
     private Long merchantId;
+    /**
+     * '1：调整返佣增加，2：调整返佣减少，2：返佣取消，3：待发佣金）
+     */
+    @ApiModelProperty("'操作类型（1：调整返佣增加，2：调整返佣减少，2：返佣取消，3：待发佣金）")
+    private List<Integer> operationTypes;
     /**
      * 操作时间
      */
