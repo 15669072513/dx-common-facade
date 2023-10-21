@@ -6,6 +6,8 @@ import java.util.Objects;
 
 import com.dx.exception.BizException;
 
+//这个类和payment包下的重名了，后面使用AcctPayment代替这个payment吧。
+@Deprecated
 public class Payment {
 
     public enum CurrencyType {

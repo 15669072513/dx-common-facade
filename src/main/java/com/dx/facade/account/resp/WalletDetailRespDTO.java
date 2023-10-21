@@ -171,4 +171,17 @@ public class WalletDetailRespDTO {
     @ApiModelProperty("牌桌名称")
     @TableField("table_code")
     private String tableCode;
+
+    @ApiModelProperty("通用扩展字段A")
+    @TableField("extension_a")
+    private String extensionA;
+
+    @ApiModelProperty("通用扩展字段B")
+    @TableField("extension_b")
+    private String extensionB;
+
+    @ApiModelProperty("通用扩展字段C")
+    @TableField("extension_c")
+    private BigDecimal extensionC;
+
 }

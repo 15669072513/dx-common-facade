@@ -32,9 +32,6 @@ public class MemberCommissionRateResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("用户类型 0：会员 1：代理")
-    private Integer userType;
-
     @ApiModelProperty("用户名称")
     private String userName;
     
@@ -44,22 +41,13 @@ public class MemberCommissionRateResp implements Serializable {
     @ApiModelProperty("代理等级")
     private Integer proxyLevel;
     
-    @ApiModelProperty("德州返点比例")
-    private BigDecimal texasRebate;
+    @ApiModelProperty("德州俱乐部返佣比例")
+    private BigDecimal texasCommission;
     
-    @ApiModelProperty("真人返点比例")
-    private BigDecimal actualPersonRebate;
+    @ApiModelProperty("德州保险返点比例")
+    private BigDecimal texasInsuranceCommission;
     
-    @ApiModelProperty("体育返点比例")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    private BigDecimal esportsRebate;
+    @ApiModelProperty("其他返佣比例")
+    private BigDecimal otherCommission;
 
 }

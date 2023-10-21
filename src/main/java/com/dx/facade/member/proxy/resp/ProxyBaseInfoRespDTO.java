@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
@@ -139,4 +140,13 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty("合营码")
     private String joinCode;
+
+    @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
+
+    @ApiModelProperty("充提锁定状态 0-未锁定 1-充提锁定")
+    private Integer paymentLockStatus;
+
+    @ApiModelProperty("冻结中余额")
+    private BigDecimal lockBalance;
 }

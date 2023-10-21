@@ -3,6 +3,7 @@ package com.dx.facade.payment.service;
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.req.GetPayParamDTO;
+import com.dx.facade.account.req.SubmitVetfityParamDTO;
 import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
@@ -11,6 +12,7 @@ import com.dx.facade.payment.dto.ThirdPayChannelDictResp;
 import com.dx.facade.payment.dto.WithDrawOrderDto;
 
 import com.dx.facade.payment.dto.WithDrawOrderDtoV2;
+import com.dx.facade.payment.resp.JyAvalidAmountResp;
 import com.dx.facade.payment.resp.PaymentWithdrawOrderRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -20,6 +22,33 @@ import java.util.List;
  * @author agan
  */
 public interface TyPayOrderRpcService {
+
+    /**
+     * 查询有效金额范围
+     * @param deviceType
+     * @param userId
+     * @param payType
+     * @return
+     * @throws Exception
+     */
+    JyAvalidAmountResp getValidAmount(Integer deviceType, Long userId, Integer payType) throws Exception;
+    /**
+     * 会员/代理上传凭证
+     * @param submitVetfityParamDTO
+     * @return
+     * @throws Exception
+     */
+    @ApiModelProperty(value = "会员取款")
+    CommonResp submitVetfity(SubmitVetfityParamDTO submitVetfityParamDTO) throws Exception;
+
+    /**
+     * 会员/代理取消存款订单
+     * @param submitVetfityParamDTO
+     * @return
+     * @throws Exception
+     */
+    @ApiModelProperty(value = "取消存款")
+    CommonResp cancelOrder(SubmitVetfityParamDTO submitVetfityParamDTO) throws Exception;
 
     /**
      * 会员取款接口

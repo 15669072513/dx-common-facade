@@ -8,9 +8,9 @@ import com.dx.facade.account.change.param.TransferWalletChangeParmDTO;
 import com.dx.facade.account.param.AdjustWithdrawWaterParamDTO;
 import com.dx.facade.account.param.QueryWalletParam;
 import com.dx.facade.account.param.WalletAmountParam;
-import com.dx.facade.account.req.RealtimeBillParam;
-import com.dx.facade.account.req.WalletBalanceDTO;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
+import com.dx.facade.account.resp.WalletSimpleParam;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -66,22 +66,6 @@ public interface WalletRPCService {
     BigDecimal getTodayNetAmount(WalletSimpleParam param);
 
     /**
-     * 用户钱包余额操作-筹码兑换
-     *
-     * @param dto 操作参数
-     * @throws BizException
-     */
-    CommonResp<WalletRespDTO> walletBalance(WalletBalanceDTO dto) throws BizException;
-
-    /**
-     * 用户钱包余额操作批量兑换
-     *
-     * @param balanceDTOS
-     * @return
-     */
-    CommonResp<Void> multiWalletBalance(List<WalletBalanceDTO> balanceDTOS) throws BizException;
-
-    /**
      * @author Dealer
      * @description: 获取指定用户(类型)的, 资金信息[中心、信用、额度]
      * @date 2023/9/21
@@ -118,4 +102,37 @@ public interface WalletRPCService {
      * @return
      */
     CommonResp<List<BatchWalletAmountRespDTO>> getBatchWalletAmountByhUserIds(List<Long> userIds);
+
+    /**
+     * 提现时获取提现相关信息
+     * @param param
+     * @return
+     */
+    CommonResp<WithdrawInfoRespDTO> getWithdrawInfo(WithdrawInfoParam param);
+
+    /**
+     * 获取取款限制信息：1.提取款限制类型，2取款限制信息
+     * @param param
+     * @return
+     */
+    CommonResp<WithdrawLimitInfoRespDTO> getWithdrawLimitInfo(WithdrawLimitInfoParam param);
+
+
+    /**
+     * @description: 获取充提汇总信息
+     * @date 2023/10/7
+     * @copyright
+     */
+    CommonResp<DepositWithdrawSummaryDTO> depositWithdrawSummaryInfo(Long memberId, Integer userType);
+
+    /**
+     * 获取取款限制类型：1-账单限制，2-流水限制
+     * @param userId
+     * @param userType
+     * @return
+     */
+    CommonResp<Integer> getWithdrawLimitType(Long userId, Integer userType);
+
+
+
 }

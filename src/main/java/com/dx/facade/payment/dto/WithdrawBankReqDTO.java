@@ -11,25 +11,25 @@ import javax.validation.constraints.Size;
 @Data
 public class WithdrawBankReqDTO {
 
-    /**
-     * 商户ID
-     */
-    @ApiModelProperty(value = "商户编号 (20)", required = true, hidden = true)
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long merchantId;
-
-    /**
-     * 会员ID
-     */
-    @ApiModelProperty(value = "会员ID (20)", required = true, hidden = true)
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long userId;
-
-    /**
-     * 账号类型
-     */
-    @ApiModelProperty(value="账号类型 （0-会员 1-代理）", required = true, hidden = true)
-    private Integer accountType;
+//    /**
+//     * 商户ID
+//     */
+//    @ApiModelProperty(value = "商户编号 (20)", required = true, hidden = true)
+//    @JsonFormat(shape = JsonFormat.Shape.STRING)
+//    private Long merchantId;
+//
+//    /**
+//     * 会员ID
+//     */
+//    @ApiModelProperty(value = "会员ID (20)", required = true, hidden = true)
+//    @JsonFormat(shape = JsonFormat.Shape.STRING)
+//    private Long userId;
+//
+//    /**
+//     * 账号类型
+//     */
+//    @ApiModelProperty(value="账号类型 （0-会员 1-代理）", required = true, hidden = true)
+//    private Integer accountType;
 
     /**
      * 持卡人姓名
@@ -51,8 +51,8 @@ public class WithdrawBankReqDTO {
      * 银行编号
      */
     @ApiModelProperty(value = "银行编号 (16)", required = true)
-    @NotBlank(message = "银行编号不能为空")
-    @Size(max = 16, message = "银行编号长度不能超过16位！")
+    //@NotBlank(message = "银行编号不能为空")
+    //@Size(max = 16, message = "银行编号长度不能超过16位！")
     private String bankCode;
 
     /**

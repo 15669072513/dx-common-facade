@@ -28,28 +28,16 @@ public class DepositOrderSumDTO {
     @ApiModelProperty("实到金额所有统计：人民币")
     private BigDecimal realAmountTotalSumCNY;
 
-    @ApiModelProperty("充值金额当前页面统计：越南盾")
-    private BigDecimal orderAmountPageSumVND;
+    @ApiModelProperty("充值金额当前页面统计：美元")
+    private BigDecimal orderAmountPageSumUSDT;
 
-    @ApiModelProperty("充值金额所有统计：越南盾")
-    private BigDecimal orderAmountTotalSumVND;
+    @ApiModelProperty("充值金额所有统计：美元")
+    private BigDecimal orderAmountTotalSumUSDT;
 
-    @ApiModelProperty("实到金额当前页面统计：越南盾")
-    private BigDecimal realAmountPageSumVND;
+    @ApiModelProperty("实到金额当前页面统计：美元")
+    private BigDecimal realAmountPageSumUSDT;
 
-    @ApiModelProperty("实到金额所有统计：越南盾")
-    private BigDecimal realAmountTotalSumVND;
-
-    @ApiModelProperty("充值金额当前页面统计：泰铢")
-    private BigDecimal orderAmountPageSumTHR;
-
-    @ApiModelProperty("充值金额所有统计：泰铢")
-    private BigDecimal orderAmountTotalSumTHR;
-
-    @ApiModelProperty("实到金额当前页面统计：泰铢")
-    private BigDecimal realAmountPageSumTHR;
-
-    @ApiModelProperty("实到金额所有统计：泰铢")
-    private BigDecimal realAmountTotalSumTHR;
+    @ApiModelProperty("实到金额所有统计：美元")
+    private BigDecimal realAmountTotalSumUSDT;
 
 }

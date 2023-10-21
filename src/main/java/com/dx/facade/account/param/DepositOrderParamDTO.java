@@ -93,7 +93,7 @@ public class DepositOrderParamDTO {
     private String sortType;
 
     public void check(){
-        Assert.notEmpty(bizTypes, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("bizTypes"));
+        //Assert.notEmpty(bizTypes, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("bizTypes"));
     }
 
 

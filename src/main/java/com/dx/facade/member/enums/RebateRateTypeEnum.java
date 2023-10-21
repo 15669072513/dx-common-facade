@@ -8,16 +8,18 @@ public enum RebateRateTypeEnum {
 	
 	/** 德州 */
 	TEXAS(1, "德州"),
+	/** 德州保险 */
+	TEXAS_INSURANCE(2, "德州保险"),
 	/** 德州 */
-	ACTUAL_PERSON(2, "真人"),
+	ACTUAL_PERSON(3, "真人"),
 	/** 德州 */
-	SPORTS(3, "体育"),
+	SPORTS(4, "体育"),
 	/** 德州 */
-	LOTTERY_TICKET(4, "彩票"),
+	LOTTERY_TICKET(5, "彩票"),
 	/** 德州 */
-	CHESS(5, "棋牌"),
+	CHESS(6, "棋牌"),
 	/** 德州 */
-	ESPORTS(6, "电竞"),
+	ESPORTS(7, "电竞"),
 ;
 	
 

@@ -26,8 +26,16 @@ public class GameOrderUserSettlementDetailByProxyResp {
     private Long handBeginDate;
     @ApiModelProperty("结束时间")
     private Long handEndDate;
-    @ApiModelProperty("游戏输赢")
+
+    @ApiModelProperty("打牌输赢")
     private BigDecimal netAmount=BigDecimal.ZERO;
+
+    @ApiModelProperty("保险输赢")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
+    @ApiModelProperty("总输赢")
+    private BigDecimal costTotal=BigDecimal.ZERO;
+
     @ApiModelProperty("总带入")
     private BigDecimal bringMidwayChip=BigDecimal.ZERO;
     @ApiModelProperty("总带入次数")
