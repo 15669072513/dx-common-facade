@@ -17,11 +17,11 @@ public class WalletDetailDto {
   @ApiModelProperty("用户ID")
   private Long userId;
   @ApiModelProperty("账变钱金额")
-  private BigDecimal changeBefore;
+  private BigDecimal changeBefore=new BigDecimal(0.0);
   @ApiModelProperty("账变额")
-  private BigDecimal amount;
+  private BigDecimal amount=new BigDecimal(0.0);
   @ApiModelProperty("账变后额")
-  private BigDecimal changeAfter;
+  private BigDecimal changeAfter=new BigDecimal(0.0);
   @ApiModelProperty("账变时间")
   private LocalDateTime createdAt;
   @ApiModelProperty("牌桌ID")

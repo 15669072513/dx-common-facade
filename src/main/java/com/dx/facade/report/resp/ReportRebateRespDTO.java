@@ -75,4 +75,8 @@ public class ReportRebateRespDTO  extends ReportRebateTotalRespDTO{
 
     @ApiModelProperty(value = "返点状态")
     private Integer payoutStatus;
+
+    @ApiModelProperty(value = "返点状态")
+    private String payoutStatusList;
+
 }

@@ -30,7 +30,7 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
     private String handCode;
 
     @ApiModelProperty("牌桌主键")
-    private Long tableId;
+    private String tableId;
 
 
     @ApiModelProperty("牌桌Code")

@@ -28,7 +28,7 @@ public class ProxyNetAmountMonthRespDTO {
 
     /** staticsDate */
     @ApiModelProperty(value = "月维度", example = "202109")
-    private Integer staticsDate;
+    private String staticsDate;
 
     @ApiModelProperty(value = "月维度", example = "2021-09")
     private String reportDate;

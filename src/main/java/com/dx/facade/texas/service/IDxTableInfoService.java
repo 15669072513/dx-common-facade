@@ -5,6 +5,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.game.req.GameOrderClubSumReq;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
+import com.dx.facade.game.resp.GameOrderUserTableSumResp;
 import com.dx.facade.texas.dto.DxTableInfoDto;
 import com.dx.facade.texas.dto.DxTableLimitDto;
 import com.dx.facade.texas.dto.DxTableListDto;
@@ -20,6 +21,7 @@ import com.dx.facade.texas.resp.DxTableInfoListResp;
 import com.dx.facade.texas.resp.DxTableRobotResp;
 import com.dx.facade.texas.resp.DxTableSummaryResp;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
@@ -152,4 +154,14 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<DxTableBaseInfoResp> getTableOverviewInfo(Long tableId);
+
+    /**
+     * 根据俱乐部id合游戏类型获取牌桌记录
+     * @param clubId
+     * @param gameType
+     * @param startTime
+     * @param endTime
+     * @return
+     */
+    CommonResp<List<GameOrderUserTableSumResp>> getTableRecordByClubId(Long clubId, Integer gameType, LocalDateTime startTime, LocalDateTime endTime);
 }

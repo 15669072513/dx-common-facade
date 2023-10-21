@@ -1,6 +1,7 @@
 package com.dx.facade.common.utils;
 
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 
 import java.sql.Timestamp;
 import java.text.ParseException;
@@ -41,6 +42,24 @@ public class DateUtils {
 
     public static Integer getDateInt(LocalDate localDate) {
         return Integer.valueOf(localDate.format(PATTERN_YMR2));
+    }
+
+
+    //20231001
+    public static Integer getDateIntToLastDay(Integer day) {
+        Date d = null;
+        try {
+            d = new SimpleDateFormat("yyyyMMdd").parse(day.toString());
+        } catch (ParseException e) {
+            log.error("getDateIntToLastDay 转化异常，{}",e);
+        }
+        // 将Date对象转换为Instant对象
+        Instant instant = d.toInstant();
+        // 使用默认时区将Instant对象转换为LocalDate对象
+        LocalDate localDate22 = instant.atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate lastDayOfMonth2 = localDate22.with(TemporalAdjusters.lastDayOfMonth());
+        Integer endDate = DateUtils.getDateInt(lastDayOfMonth2);
+        return endDate;
     }
 
     /**
@@ -276,4 +295,16 @@ public class DateUtils {
     public static Long date2Long(LocalDateTime dateTime) {
         return Timestamp.valueOf(dateTime).getTime();
     }
+
+    public static String getDateYMD(String staticsDate) {
+        if (StringUtils.isEmpty(staticsDate)) {
+            return staticsDate;
+        }
+        return staticsDate.substring(0, 4)
+                + "-"
+                + staticsDate.substring(4, 6)
+                + "-"
+                + staticsDate.substring(6, 8);
+    }
+
 }

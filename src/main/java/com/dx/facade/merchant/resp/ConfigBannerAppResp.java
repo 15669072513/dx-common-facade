@@ -46,6 +46,9 @@ public class ConfigBannerAppResp implements Serializable {
     @ApiModelProperty(value = "轮播图名称")
     private String bannerName;
 
+    @ApiModelProperty(value = "轮播图间隔")
+    private String bannerIntervalTime;
+
     @ApiModelProperty(value = "轮播图时效[0:限时,1:永久]")
     private Integer bannerValidity;
 

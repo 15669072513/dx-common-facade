@@ -79,5 +79,14 @@ public interface GameRpcService {
     public CommonResp<VeuneGameConfigListResp> getVenueGames();
 
 
+    /**
+     * 进入德州场馆下分动作+最近在玩
+     * @param merchantId 商户id
+     * @param memberId 用户id
+     * @return
+     */
+    CommonResp dzLoginVenue(Long merchantId, Long memberId);
+
+
 
 }

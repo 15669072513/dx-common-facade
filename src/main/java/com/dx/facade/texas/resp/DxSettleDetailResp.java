@@ -1,15 +1,11 @@
 package com.dx.facade.texas.resp;
 
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -50,10 +46,10 @@ public class DxSettleDetailResp implements Serializable {
     private Long endTime;
 
     @ApiModelProperty("总输赢")
-    private BigDecimal totalWinLoss;
+    private BigDecimal totalWinLoss=BigDecimal.ZERO;
 
     @ApiModelProperty("总带入")
-    private Long totalBring;
+    private Long totalBring=0L;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;
