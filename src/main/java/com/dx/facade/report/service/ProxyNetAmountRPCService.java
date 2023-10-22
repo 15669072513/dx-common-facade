@@ -161,46 +161,7 @@ public interface ProxyNetAmountRPCService {
 //     */
 //    void statistics(LocalDate localDate) throws BizException;
 
-//    /**
-//     * T+1离线数据更新业绩报表 会员报表 (更新前删除）
-//     *
-//     * @param staticDate
-//     * @return
-//     */
-//    Integer deleteProxyNetAmountRecords(Integer staticDate) throws Exception;
-
-//    /**
-//     * T+1离线数据更新业绩报表 会员报表
-//     *
-//     * @param records
-//     * @return
-//     */
-//    Integer batchInsertProxyNetAmountRecords(List<ProxyNetAmountDayInsertDTO> records,List<ProxyNetAmountMonthInsertDTO> monthRecords) throws Exception;
-
-    //===========================================================>>代理接口追加_v1<<===============================================================================
-
-//    /**
-//     * 查询代理日盈亏总计
-//     *
-//     * @param reqDTO
-//     * @return CommonResp
-//     * @throws BizException
-//     * @author focus
-//     * @version 1.0.0
-//     * @since 2022年4月12日 下午8:19:44
-//     */
-//    CommonResp<ProxyDayNetAmountSummaryRespDTO> queryProxyDayNetAmountSummary_v1(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
-
-//    /**
-//     * 查询代理月盈亏总计
-//     *
-//     * @param reqDTO
-//     * @return CommonResp
-//     * @throws BizException
-//     * @author focus
-//     * @version 1.0.0
-//     * @since 2022年4月13日 下午4:11:22
-//     */
-//    CommonResp<ProxyMonthNetAmountSummaryRespDTO> queryProxyMonthNetAmountSummary_v1(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
+    CommonResp<ProxyMonthNetAmountRespDTO> queryProxyNetAmountMonth(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
+    CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmount(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
 
 }
