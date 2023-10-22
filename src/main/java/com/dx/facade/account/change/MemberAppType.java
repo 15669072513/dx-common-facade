@@ -137,12 +137,12 @@ public enum MemberAppType implements IAppType {
             if(appChangeType.intValue() == v2_1_deposit.code()) {
                 return Arrays.asList(MemberChangeType.v2_1_deposit.code(), MemberChangeType.v2_1_deposit_back.code());
             }
-            if(appChangeType.intValue() == v2_1_deposit_discount.code) {
+            /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
                         MemberChangeType.v2_1_deposit_discount.code(),
                         MemberChangeType.v2_1_deposit_discount_back.code()
                 );
-            }
+            }*/
 
 
         }
@@ -248,12 +248,12 @@ public enum MemberAppType implements IAppType {
             if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_back.code()) {
                 return v2_1_deposit.code;
             }
-            if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
+            /*if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
                 return v2_1_deposit_discount.code;
             }
             if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount_back.code()) {
                 return v2_1_deposit_discount.code;
-            }
+            }*/
 
         }
         if(walletType.intValue() == WalletType.credit_available.code()) {
