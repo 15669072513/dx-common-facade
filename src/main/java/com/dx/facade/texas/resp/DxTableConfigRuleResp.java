@@ -111,8 +111,14 @@ public class DxTableConfigRuleResp implements Serializable {
     /**
      * 抽水比例配置
      */
-    @ApiModelProperty("抽水比例配置")
+    @ApiModelProperty("抽水比例配置, 游戏内计算")
     private BigDecimal rake=BigDecimal.ZERO;
+
+    /**
+     * 抽水比例配置
+     */
+    @ApiModelProperty("抽水比例配置, 游戏配置")
+    private BigDecimal gameRake=BigDecimal.ZERO;
 
     /** 人员上限 */
     @ApiModelProperty("人员上限")
@@ -162,7 +168,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("游戏类型名称")
     private String gameTypeName;
-
+w
     @ApiModelProperty("游戏名称")
     private String gameName;
 
