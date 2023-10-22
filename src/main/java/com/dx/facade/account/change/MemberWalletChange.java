@@ -115,11 +115,13 @@ public enum MemberWalletChange implements IWalletChange {
     //会员通过平台提供的存款渠道进行存款
     v2_1_deposit(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit, MemberAppType.v2_1_deposit, TransType.in, Constant.MEMBER),
     //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
-    v2_1_deposit_discount(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
+    //TODO 2.1不上，暂时去掉
+    //v2_1_deposit_discount(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
     //运营在中控后台帮助用户人工加额上分
     v2_1_deposit_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_back, MemberAppType.v2_1_deposit, TransType.in, Constant.MEMBER),
     //运营在中控后台帮助用户人工加额上分
-    v2_1_deposit_discount_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount_back, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
+    //TODO 2.1不上，暂时去掉
+    //v2_1_deposit_discount_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount_back, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
     //会员通过平台提供的取款渠道进行取款
     v2_1_withdraw(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
     //会员主动申请取款，中心钱包的金额会先减少被冻结
@@ -206,9 +208,11 @@ public enum MemberWalletChange implements IWalletChange {
                 MemberWalletChange.v2_credit_up_score,
 
                 MemberWalletChange.v2_1_deposit,
-                MemberWalletChange.v2_1_deposit_discount,
-                MemberWalletChange.v2_1_deposit_back,
-                MemberWalletChange.v2_1_deposit_discount_back
+                //TODO 2.1去掉优惠了
+                //MemberWalletChange.v2_1_deposit_discount,
+                MemberWalletChange.v2_1_deposit_back
+                //TODO 2.1去掉优惠了
+                //MemberWalletChange.v2_1_deposit_discount_back
                 //MemberWalletChange.v2_credit_total_up_score
         );
     }
@@ -297,9 +301,10 @@ public enum MemberWalletChange implements IWalletChange {
         //9，信用借款
         list.add(MemberWalletChange.v2_credit_loan);
         list.add(v2_1_deposit);
-        list.add(v2_1_deposit_discount);
+        //TODO 2.1去掉优惠了
+        //list.add(v2_1_deposit_discount);
         list.add(v2_1_deposit_back);
-        list.add(v2_1_deposit_discount_back);
+        //list.add(v2_1_deposit_discount_back);
         list.add(v2_1_withdraw);
         list.add(v2_1_withdraw_frozen);
         list.add(v2_1_withdraw_fail);

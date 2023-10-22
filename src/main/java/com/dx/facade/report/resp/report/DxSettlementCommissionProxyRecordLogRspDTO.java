@@ -38,9 +38,9 @@ public class DxSettlementCommissionProxyRecordLogRspDTO implements Serializable 
     private Long settlementCommissionProxyRecordId;
 
     /**
-     * '1：调整返佣增加，2：调整返佣减少，2：返佣取消，3：佣金发放）
+     * '1：调整返佣增加，2：调整返佣减少，3：返佣取消，4：代发佣金）
      */
-    @ApiModelProperty("'操作类型（1：调整返佣增加，2：调整返佣减少，2：返佣取消，3：佣金发放）")
+    @ApiModelProperty("'操作类型（1：调整返佣增加，2：调整返佣减少，3：返佣取消，4：代发佣金）")
     private Integer operationType;
     /**
      * 报表日期

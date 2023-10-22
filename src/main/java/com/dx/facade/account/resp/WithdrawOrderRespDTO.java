@@ -216,6 +216,9 @@ public class WithdrawOrderRespDTO {
     @TableField("client_audit1_desc")
     private String clientAudit1Desc;
 
+    @ApiModelProperty("一审客户端备注")
+    private String audit1ClientDesc;
+
     @ApiModelProperty("一审审核时长，秒，锁单到审核完毕的耗时")
     @TableField("audit1_cost")
     private Integer audit1Cost;

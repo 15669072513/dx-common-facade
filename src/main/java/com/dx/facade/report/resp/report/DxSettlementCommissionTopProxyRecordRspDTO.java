@@ -52,6 +52,19 @@ public class DxSettlementCommissionTopProxyRecordRspDTO implements Serializable 
     @ApiModelProperty("代理账号")
     private String proxyName;
 
+    /**
+     * 代理层级
+     */
+    @ApiModelProperty("代理层级")
+    private Long proxyLevel;
+
+    /**
+     * windControlName
+     */
+    @ApiModelProperty(value = "风控层级名称")
+    private String windControlName;
+
+
     @ApiModelProperty("登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer loginLockStatus = 0;
 

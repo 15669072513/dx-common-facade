@@ -63,6 +63,18 @@ public class DxFundAdjustSettlementCommissionProxyRecordRspDTO implements Serial
     @ApiModelProperty("代理类型")
     private String proxyType;
 
+
+    @ApiModelProperty("登陆锁定状态 0-未锁定 1-登陆锁定")
+    private Integer loginLockStatus;
+
+    @ApiModelProperty("充提锁定状态 0-未锁定 1-充提锁定")
+    private Integer paymentLockStatus;
+    /**
+     * accountType
+     */
+    @ApiModelProperty("账号类型（1-试玩，2-商务，3-正式，4-测试，5-置换）")
+    private Integer accountType;
+
     /**
      * 商户id
      */
