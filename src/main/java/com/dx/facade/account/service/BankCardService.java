@@ -12,7 +12,11 @@ import com.dx.facade.account.req.GetBankCardParmDTO;
 import com.dx.facade.account.req.UserBankAndVirtualUpdateStatusReqDTO;
 import com.dx.facade.account.resp.BankCardRespDTO;
 import com.dx.facade.account.resp.UserBankAndVirtualUpdateBindStatusReqDTO;
+import com.dx.facade.member.param.UserBankCardOperationQureyParam;
 import com.dx.facade.member.param.UserBankCardQureyParam;
+import com.dx.facade.member.param.UserVirtualOperationQureyParam;
+import com.dx.facade.member.resp.MemberBankCardOperationResp;
+import com.dx.facade.member.resp.MemberVirtualOperationResp;
 import com.dx.facade.member.resp.UserBankCardResp;
 import com.dx.facade.payment.req.BankCardParmDTO;
 
@@ -71,7 +75,7 @@ public interface BankCardService {
      * @throws BizException
      */
     @ApiModelProperty(value = "通过绑定会员银行卡信息")
-    CommonResp bindBank(BankCardBindParmDTO bankCardParam) throws BizException;
+    CommonResp<BankCardRespDTO> bindBank(BankCardBindParmDTO bankCardParam) throws BizException;
 
     /**
      * 管理后台修改银行卡黑名单状态
@@ -112,4 +116,15 @@ public interface BankCardService {
      * @param param
      */
     void updateBankCardWithdrawalInfo(UpdateWithdrawalParam param);
+
+    /**
+     * 会员银行卡操作记录查询*
+     * @return
+     */
+    CommonResp<PageResp<MemberBankCardOperationResp, ?>> getMemberBankCardOperation(UserBankCardOperationQureyParam param);
+
+    /**
+     * 会员虚拟币操作记录查询*
+     */
+    CommonResp<PageResp<MemberVirtualOperationResp,?>> getMemberVirtualOperation(UserVirtualOperationQureyParam param);
 }

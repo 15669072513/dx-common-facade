@@ -48,11 +48,11 @@ public enum PcAppWithdrawOrderStatusEnum {
         if (dbOrderStatus == WithdrawOrderStatus.一审拒绝.code()
                 || dbOrderStatus == WithdrawOrderStatus.二审拒绝.code()
                 || dbOrderStatus == WithdrawOrderStatus.三审拒绝.code()
-                || dbOrderStatus == WithdrawOrderStatus.出款拒绝.code()) {
+                || dbOrderStatus == WithdrawOrderStatus.出款失败.code()
+                || dbOrderStatus == WithdrawOrderStatus.出款取消.code()) {
             return 审核拒绝.code();
         }
-        if (dbOrderStatus == WithdrawOrderStatus.三审审核.code()
-                || dbOrderStatus == WithdrawOrderStatus.已出款.code()) {
+        if (dbOrderStatus == WithdrawOrderStatus.已出款.code()) {
             return 审核通过.code();
         }
         return 处理中.code();

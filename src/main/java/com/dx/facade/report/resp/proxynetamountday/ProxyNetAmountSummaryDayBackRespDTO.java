@@ -48,68 +48,47 @@ public class ProxyNetAmountSummaryDayBackRespDTO {
     @ApiModelProperty(value = "会员总输赢", example = "1500.00")
     private BigDecimal netAmount;
 
-    /** venueFee */
-    @ApiModelProperty(value = "场馆费", example = "1500.00")
-    private BigDecimal venueFee;
 
-    /** rebateAmount */
-    @ApiModelProperty(value = "会员返水", example = "1500.00")
-    private BigDecimal rebateAmount;
+    @ApiModelProperty("会员净输赢金额")
+    private BigDecimal memberNetWinAmount;
+    @ApiModelProperty("会员返水金额")
+    private BigDecimal memberRebateAmount;
 
-    /** discountAmount */
-    @ApiModelProperty(value = "会员优惠", example = "1500.00")
-    private BigDecimal discountAmount;
 
-    /** proxyRebatePoint */
-    @ApiModelProperty(value = "代理返点", example = "1500.00")
-    private BigDecimal proxyRebatePoint;
+    @ApiModelProperty("会员其他调整金额")
+    private BigDecimal memberArtificalPathAmount;
 
-    /** artificialPatchAmount */
-    @ApiModelProperty(value = "会员账户调整", example = "1500.00")
-    private BigDecimal artificialPatchAmount;
 
-    /** repairBetAmount */
-    @ApiModelProperty(value = "补单输赢", example = "1500.00")
-    private BigDecimal repairBetAmount;
+    @ApiModelProperty("直属投注人数")
+    //@TableField("direct_member_count")
+    private Long directMemberCount;
 
-    /** proxyNet */
-    @ApiModelProperty(value = "代理商净输赢", example = "1500.00")
-    private BigDecimal proxyNet;
+    @ApiModelProperty("直属注单数")
+    //@TableField("direct_bet_count")
+    private Long directBetCount;
 
-    /** lastMonthBalance */
-    @ApiModelProperty(value = "上月结余", example = "1500.00")
-    private BigDecimal lastMonthBalance;
-
-    /** rushNet */
-    @ApiModelProperty(value = "冲正后输赢", example = "1500.00")
-    private BigDecimal rushNet;
-
-    /** directBetAmount */
-    @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
+    @ApiModelProperty("直属投注额")
+    //@TableField("direct_bet_amount")
     private BigDecimal directBetAmount;
 
-    /** directValidBetAmount */
-    @ApiModelProperty(value = "直属会员有效投注", example = "1500.00")
+    @ApiModelProperty("直属有效投注额")
+    //@TableField("direct_valid_bet_amount")
     private BigDecimal directValidBetAmount;
 
-    /** directNetAmount */
-    @ApiModelProperty(value = "直属会员总输赢/投注盈亏", example = "1500.00")
+    @ApiModelProperty("直属输赢金额")
+    //@TableField("direct_net_amount")
     private BigDecimal directNetAmount;
 
-    /** directPayAmount */
-    @ApiModelProperty(value = "直属会员净输赢", example = "1500.00")
-    private BigDecimal directProfitAmount;
-
-    @ApiModelProperty(value = "其他调整金额")
-    private BigDecimal adjustAmount;
 
     @ApiModelProperty("直属返水金额=会员返水")
+    //@TableField("direct_rebate_amount")
     private BigDecimal directRebateAmount;
 
     @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
+    //@TableField("direct_artificial_patch_amount")
     private BigDecimal directArtificialPatchAmount;
 
-    @ApiModelProperty("直属会员净盈亏 = 直属会员投注盈亏+  直属会员返水（新的）+直属会员其他调整")
+    @ApiModelProperty("直属会员净输赢")
     private BigDecimal directNetwinAmount;
 
 

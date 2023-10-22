@@ -125,4 +125,7 @@ public class MerchantUnderProxyRespDTO {
 	@ApiModelProperty("风控层级名称")
 	private String windControlName;
 	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
+	
 }

@@ -60,6 +60,9 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("会员密码")
     private String password;
 
+    @ApiModelProperty("会员支付密码")
+    private String payPassword;
+
     @ApiModelProperty("会员真实姓名")
     private String realName;
 
@@ -244,4 +247,7 @@ public class MemberInfoRespDTO {
     
     @ApiModelProperty("代理登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer proxyLoginLockStatus;
+    
+    @ApiModelProperty("是否设置支付密码标识 true 已设置 false 未设置")
+    private boolean payPasswordFlag;
 }

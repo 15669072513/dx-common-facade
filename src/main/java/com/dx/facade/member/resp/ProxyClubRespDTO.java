@@ -5,7 +5,6 @@ import java.time.LocalDateTime;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
@@ -30,8 +29,9 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "代理俱乐部响应DTO", description = "代理俱乐部响应DTO")
 public class ProxyClubRespDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    /** id */
+	private static final long serialVersionUID = -6318619816759811093L;
+
+	/** id */
     @ApiModelProperty("ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;
@@ -78,10 +78,10 @@ public class ProxyClubRespDTO implements Serializable {
     /** 人员上线 */
     @ApiModelProperty("人员上线")
     private Integer upperLimit;
-    
+
     @ApiModelProperty("同时开牌桌上限")
     private Integer cardTableLimit;
-    
+
     @ApiModelProperty("单牌桌旁观人数上限")
     private Integer lookOnLimit;
     

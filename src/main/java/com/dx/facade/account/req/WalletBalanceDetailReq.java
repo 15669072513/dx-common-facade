@@ -1,5 +1,6 @@
 package com.dx.facade.account.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -8,6 +9,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 import java.util.List;
 
 @Data
@@ -91,5 +93,15 @@ public class WalletBalanceDetailReq implements Serializable {
 
     @ApiModelProperty("操作人")
     private String operatorUser;
+
+    @ApiModelProperty("通用扩展字段A")
+    private String extensionA;
+
+    @ApiModelProperty("通用扩展字段B")
+    private String extensionB;
+
+    @ApiModelProperty("通用扩展字段C")
+    private BigDecimal extensionC;
+
 
 }

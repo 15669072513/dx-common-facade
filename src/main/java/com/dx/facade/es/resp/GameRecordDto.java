@@ -90,6 +90,9 @@ public class GameRecordDto {
     @ApiModelProperty("结算时间")
     private Long netAt;
 
+    @ApiModelProperty("赛事名称")
+    private String matchInfo;
+
     @ApiModelProperty("赛事ID")
     private String matchId;
 

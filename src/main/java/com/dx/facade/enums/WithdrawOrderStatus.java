@@ -13,7 +13,9 @@ public enum WithdrawOrderStatus {
     三审拒绝(10, "三审拒绝", 2),
     已出款(11, "出款成功", 1),
     出款取消(12, "出款取消", 2),
-    出款拒绝(13, "出款失败", 2),
+    出款失败(13, "出款失败", 2),
+    //待出款，点击确认后是出款中
+    出款中(14, "出款中",0),
     ;
     private Integer code;
     private String desc;

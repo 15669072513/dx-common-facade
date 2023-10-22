@@ -41,7 +41,7 @@ public enum ProxyChangeType implements IChangeType {
     proxy_to_child_down_score(31, "代理给下级下分", "13"),
     proxy_to_mem_down_score(32, "代理给会员下分", "13"),
     commission_to_quota(33, "佣金转额度钱包", "38"),
-    commission_be_transfer_to_quota(34,"佣金转额度钱包","41"),
+    commission_be_transfer_to_quota(34, "佣金转额度钱包", "41"),
 
     //-------------v2---------------
     //中心钱包 13种账变类型
@@ -54,8 +54,8 @@ public enum ProxyChangeType implements IChangeType {
     v2_cash_withdraw_to_sub_proxy(82, "代理给下级提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_withdraw_to_member(83, "代理给会员提现下分", ProxyBizType.v2_withdraw.code().toString()),
     v2_cash_rebate(84, "流水返点", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_add(85, "返点增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_cash_rebate_sub(86, "返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_add(85, "其他返点增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_cash_rebate_sub(86, "其他返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
     v2_cash_loan(87, "信用借款", ProxyBizType.v2_loan.code().toString()),
     v2_cash_repay(88, "信用还款", ProxyBizType.v2_repay.code().toString()),
 
@@ -71,8 +71,22 @@ public enum ProxyChangeType implements IChangeType {
     v2_credit_repay(97, "信用还款", ProxyBizType.v2_repay.code().toString()),
     v2_credit_loan(98, "信用借款", ProxyBizType.v2_loan.code().toString()),
 
-    illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString())
-    ;
+    v2_1_deposit(99, "代理存款", ProxyBizType.v2_1_deposit.code().toString()),
+    v2_1_deposit_back(100, "代理存款（后台）", ProxyBizType.v2_1_deposit.code().toString()),
+    v2_1_withdraw(101, "代理取款", ProxyBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_frozen(102, "取款冻结", ProxyBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_fail(103, "取款失败", ProxyBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_back(104, "代理取款（后台）", ProxyBizType.v2_1_withdraw.code().toString()),
+
+    v2_1_club_rebate_add(105, "俱乐部返点增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_1_insure_rebate_add(106, "保险返点增加调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_1_club_rebate_sub(108, "俱乐部返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_1_insure_rebate_sub(109, "保险返点扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_1_negate_benefit_commission_income(111, "负盈利返佣收入", ProxyBizType.v2_1_proxy_commission.code().toString()),
+    v2_1_negate_benefit_commission_dispatch(112, "负盈利返佣发放", ProxyBizType.v2_1_proxy_commission.code().toString()),
+    v2_1_proxy_commission_add(113, "代理返佣增加调整", ProxyBizType.v2_1_proxy_commission.code().toString()),
+    v2_1_proxy_commission_sub(114, "代理返佣扣除调整", ProxyBizType.v2_1_proxy_commission.code().toString()),
+    illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 
     private Integer code;
     private String desc;
@@ -112,13 +126,15 @@ public enum ProxyChangeType implements IChangeType {
         return null;
     }
 
-    static final Map<Integer,ProxyChangeType> code2Enum = new ConcurrentHashMap<>();
+    static final Map<Integer, ProxyChangeType> code2Enum = new ConcurrentHashMap<>();
+
     static {
-        Arrays.stream(ProxyChangeType.values()).forEach(e->{
+        Arrays.stream(ProxyChangeType.values()).forEach(e -> {
             code2Enum.put(e.code, e);
         });
     }
-    public static ProxyChangeType getByCode(Integer code){
+
+    public static ProxyChangeType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 
@@ -152,7 +168,21 @@ public enum ProxyChangeType implements IChangeType {
                 v2_credit_down_score_to_sub_proxy,
                 v2_credit_down_score_to_member,
                 v2_credit_repay,
-                v2_credit_loan
+                v2_credit_loan,
+                v2_1_deposit,
+                v2_1_deposit_back,
+                v2_1_withdraw,
+                v2_1_withdraw_frozen,
+                v2_1_withdraw_fail,
+                v2_1_withdraw_back,
+                v2_1_club_rebate_add,
+                v2_1_insure_rebate_add,
+                v2_1_club_rebate_sub,
+                v2_1_insure_rebate_sub,
+                v2_1_negate_benefit_commission_income,
+                v2_1_negate_benefit_commission_dispatch,
+                v2_1_proxy_commission_add,
+                v2_1_proxy_commission_sub
                 /*
                 officer_proxy_up_score,
                 proxy_be_up_score,
@@ -165,6 +195,4 @@ public enum ProxyChangeType implements IChangeType {
                 commission_to_quota*/
         };
     }
-
-
 }
