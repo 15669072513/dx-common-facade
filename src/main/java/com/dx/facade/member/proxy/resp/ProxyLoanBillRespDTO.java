@@ -81,4 +81,6 @@ public class ProxyLoanBillRespDTO {
 
     @ApiModelProperty("是否有下级,0-否,1-有")
     private Integer hasNext;
+
+    private Long userId;
 }

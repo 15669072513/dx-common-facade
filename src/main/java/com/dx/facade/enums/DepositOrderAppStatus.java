@@ -6,9 +6,10 @@ import java.util.*;
 
 public enum DepositOrderAppStatus {
 
-    处理中(2, "处理中", Arrays.asList(DepositOrderStatus.待付款, DepositOrderStatus.待确认, DepositOrderStatus.处理中)),
+    待处理(2, "待处理", Arrays.asList(DepositOrderStatus.待付款, DepositOrderStatus.待确认, DepositOrderStatus.处理中)),
     成功(3, "成功", Arrays.asList(DepositOrderStatus.成功)),
-    失败(4, "失败", Arrays.asList(DepositOrderStatus.失败, DepositOrderStatus.已取消)),
+    失败(4, "失败", Arrays.asList(DepositOrderStatus.失败)),
+    已取消(5, "已取消", Arrays.asList(DepositOrderStatus.已取消)),
     未知(-1, "未知", Collections.emptyList());
 
     public Integer code;
