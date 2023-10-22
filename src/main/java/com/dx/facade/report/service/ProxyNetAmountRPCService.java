@@ -58,21 +58,6 @@ public interface ProxyNetAmountRPCService {
     CommonResp<PageResp<ProxyMonthNetAmountRespDTO, ProxyMonthDirectNetAmountRespDTO>> queryProxyMonthNetAmountList_v1(PageReq<ProxyMonthNetAmountReqDTO> reqDTO) throws Exception;
 
     /**
-     * 代理后台查询代理月盈亏列表 0.2.1
-     * @param reqDTO
-     * @return
-     * @throws Exception
-     */
-    CommonResp<PageResp<ProxyMonthNetAmountRespDTO,ProxyMonthNetAmountRespDTO>> queryProxyMonthNetAmountList_v2(PageReq<ProxyMonthNetAmountReqDTO> reqDTO) throws Exception;
-
-    /**
-     * 代理后台日报表列表 0.2.1
-     * @param reqDTO
-     * @return
-     * @throws Exception
-     */
-    public CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayNetAmountRespDTO>> queryProxyDayNetAmountList_v2(PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
-    /**
      * bwjk
      * 代理月盈亏详情 - 当月日盈亏列表
      *
@@ -153,6 +138,28 @@ public interface ProxyNetAmountRPCService {
      * @throws BizException
      */
     CommonResp<PageResp<ProxyNetAmountDayRespDTO,?>> queryProxyNetAmountMonthDetail(ProxyNetAmountDayReqDTO reqDTO) throws Exception;
+//
+//    /**
+//     * 代理月盈亏详情 - 日盈亏列表
+//     *
+//     * @author focus
+//     * @since 2021年9月17日 下午4:40:02
+//     * @param reqDTO
+//     * @return CommonResp
+//     * @throws BizException
+//     */
+//    CommonResp<List<ProxyNetAmountDetailRespDTO>> queryProxyNetAmountDayDetail(
+//            ProxyNetAmountDayReqDTO reqDTO) throws Exception;
+
+//    /**
+//     * 代理盈亏（天表和月表）统计 天表缺少统计有：proxy_rebate_point（代理返点） 月表缺少统计有：
+//     * venue_fee（场馆费）、proxy_rebate_point（代理返点）、
+//     * proxy_net（代理净输赢）、last_month_balance（上月结余）、rush_net（冲正后净输赢）、
+//     *
+//     * @param localDate
+//     * @throws BizException
+//     */
+//    void statistics(LocalDate localDate) throws BizException;
 
     CommonResp<ProxyMonthNetAmountRespDTO> queryProxyNetAmountMonth(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
     CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmount(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
