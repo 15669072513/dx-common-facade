@@ -149,4 +149,10 @@ public class ProxyBaseInfoRespDTO implements Serializable {
 
     @ApiModelProperty("冻结中余额")
     private BigDecimal lockBalance;
+    
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
+    
+    @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
+    private Integer commissionSettleCycle;
 }
