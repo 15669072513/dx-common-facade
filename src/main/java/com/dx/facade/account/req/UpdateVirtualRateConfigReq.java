@@ -44,7 +44,7 @@ public class UpdateVirtualRateConfigReq implements BaseParmDTO {
     public void check() {
         Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
         Assert.notNull(rate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("rate"));
-        Assert.notNull(floatRate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("thirdRate"));
+        Assert.notNull(floatRate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("floatRate"));
         Assert.hasText(operator, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("operator"));
     }
 }
