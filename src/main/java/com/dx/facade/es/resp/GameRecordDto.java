@@ -90,8 +90,11 @@ public class GameRecordDto {
     @ApiModelProperty("结算时间")
     private Long netAt;
 
-    @ApiModelProperty("赛事对阵信息")
+    @ApiModelProperty("赛事名称")
     private String matchInfo;
+
+    @ApiModelProperty("赛事ID")
+    private String matchId;
 
     @ApiModelProperty("投注内容(由现有字段生成的字段,为app和管理后台展示用)")
     private String betContent;

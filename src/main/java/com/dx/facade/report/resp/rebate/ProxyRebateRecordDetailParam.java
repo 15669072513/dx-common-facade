@@ -24,7 +24,8 @@ public class ProxyRebateRecordDetailParam {
     @ApiModelProperty(value = "审核结果(1=返佣增加 2=返佣减少)", example = "1")
     private BigDecimal adjustAmount;
 
-
+    @ApiModelProperty("金额调整备注")
+    private String auditDesc;
 
 
 }

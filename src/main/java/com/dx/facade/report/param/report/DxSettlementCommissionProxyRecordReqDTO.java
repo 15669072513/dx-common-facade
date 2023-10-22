@@ -96,4 +96,13 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("排序通配符")
     private String orderStr;
 
+    @ApiModelProperty("id")
+    private Long id;
+
+    @ApiModelProperty(value = "周期开始时间(yyyyMMdd)")
+    private Long reportStartDate;
+
+    @ApiModelProperty(value = "周期结束时间(yyyyMMdd)")
+    private Long reportEndDate;
+
 }

@@ -2,6 +2,7 @@ package com.dx.facade.member.proxy.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.models.auth.In;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -53,8 +54,11 @@ public class SelectVirtualProxyRecordRespDTO {
     @ApiModelProperty(value = "虚拟币种类,目前只有USDT", position = 5)
     private String virtualKind;
 
+    @ApiModelProperty(value = "虚拟币协议：1-omni协议，2-TRC20，3-ERC20",position = 6)
+    private Integer virtualProtocol;
+
     @ApiModelProperty(value = "虚拟币协议",position = 6)
-    private String virtualProtocol;
+    private String virtualProtocolStr;
 
     @ApiModelProperty(value = "取款账号风控层级名称",position = 7)
     private String accountWindControl;
