@@ -84,14 +84,6 @@ public interface CommissionRateRPCService {
     CommonResp<PageResp<QueryCommissionRateRespDTO, ?>> selectCommissionRateListPage(PageReq<QueryCommissionRateParamDTO> pageReq);
     
 	/**
-	 * 查询下级最大的返佣比例
-	 * 
-	 * @param request
-	 * @return
-	 */
-    CommonResp<CommissionRateRespDTO> getSubMaxCommissionRate(QueryCommissionRateParamDTO request);
-	
-	/**
 	 * 查询返佣比例设置上限
 	 * 
 	 * @return
