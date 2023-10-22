@@ -168,7 +168,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("游戏类型名称")
     private String gameTypeName;
-w
+
     @ApiModelProperty("游戏名称")
     private String gameName;
 
