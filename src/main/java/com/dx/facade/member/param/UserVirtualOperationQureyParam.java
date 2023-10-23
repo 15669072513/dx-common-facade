@@ -23,10 +23,12 @@ public class UserVirtualOperationQureyParam extends PageRequest {
 
     @ApiModelProperty("操作时间开始")
     @NotNull(message = "操作时间开始不能为空")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime eventTimeStart;
 
     @ApiModelProperty("操作时间结束")
     @NotNull(message = "操作时间结束不能为空")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime eventTimeEnd;
 
     @ApiModelProperty(value = "虚拟币账号地址")
