@@ -21,4 +21,13 @@ public interface WithdrawConfigRPCService {
     WithdrawConfigResp queryWithdrawConfig(QueryWithdrawConfigByRealReq queryWithdrawConfigByRealReq);
 
     WithdrawConfigResp queryWithdrawConfig(Long id);
+
+    /**
+     * 根据用户类型查询取款配置
+     * @param userType，用户类型，0-会员，1-代理
+     * @return
+     */
+    WithdrawConfigResp getByUserType(Integer userType);
+
+
 }

@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-
 /**
  * 游戏注单记录DTO
  * @author heart
@@ -129,6 +128,18 @@ public class GameOrderRecordDto implements Serializable {
      * 抽水占比
      */
     private Double rakeProportion=0d;
+
+    /**
+     * 抽水贡献
+     */
+    private BigDecimal pumpContribution=BigDecimal.ZERO;
+
+    /**
+     * 注单类型 1 俱乐部游戏 2保险
+     *
+     */
+    private Integer betType=1;
+
     /**
      *  赢的筹码
      */
@@ -149,6 +160,12 @@ public class GameOrderRecordDto implements Serializable {
      * 座位类型 (0普通 1 庄家 2 大盲，3小盲)
      */
     private Integer seatType;
+
+    /**
+     * 注单记录创建时间
+     */
+    private Long recordCreateTime;
+
     /***
      * 小盲注
      */

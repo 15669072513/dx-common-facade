@@ -57,15 +57,25 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("提款客户端类型")
     @TableField("app_type")
     private Integer appType;*/
+    @ApiModelProperty("信用等级")
+    private Integer creditLevel;
+
+    @ApiModelProperty("提款客户端类型")
+    @TableField("app_type")
+    private Integer appType;
 
     @ApiModelProperty("我方订单号")
     @TableField("event_id")
     private String eventId;
 
+    @ApiModelProperty("出款账号id")
+    @TableField("account_id")
+    private Long accountId;
+
     @ApiModelProperty("调整类型：1会员提现下分")
     private Integer adjustType;
 
-    /*@ApiModelProperty("第三方订单号")
+    @ApiModelProperty("第三方订单号")
     @TableField("third_order_no")
     private String thirdOrderNo;
 
@@ -90,7 +100,7 @@ public class WithdrawOrderRespDTO {
     private Integer withdrawType;
 
     @ApiModelProperty("通道名称")
-    private String channelName;*/
+    private String channelName;
 
     @ApiModelProperty("用户提款金额")
     @TableField("order_amount")
@@ -103,7 +113,7 @@ public class WithdrawOrderRespDTO {
     @TableField("real_amount")
     private BigDecimal realAmount;
 
-    /*@ApiModelProperty("usdt提款协议类型，1.omni，2.erc20, 3.trc20")
+    @ApiModelProperty("usdt提款协议类型，1.omni，2.erc20, 3.trc20")
     @TableField("usdt_type")
     private Integer usdtType;
 
@@ -125,15 +135,18 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty("银行卡号")
     @TableField("bankcard_no")
-    private String bankcardNo;*/
+    private String bankcardNo;
+
+    @ApiModelProperty("开户行地址")
+    private String bankAddress;
 
     @ApiModelProperty("订单状态")
     @TableField("order_status")
     private Integer orderStatus;
 
-    /*@ApiModelProperty("客户端状态 0.处理中 1.成功 2.失败")
+    @ApiModelProperty("客户端状态 0.处理中 1.成功 2.失败")
     @TableField("client_status")
-    private Integer clientStatus;*/
+    private Integer clientStatus;
 
     @ApiModelProperty("申请时间")
     @TableField("event_time")
@@ -149,7 +162,7 @@ public class WithdrawOrderRespDTO {
     @TableField("remark")
     private String remark;
 
-    /*@ApiModelProperty("请求三方商户支付的配置id")
+    @ApiModelProperty("请求三方商户支付的配置id")
     @TableField("config_id")
     private Long configId;
 
@@ -163,7 +176,7 @@ public class WithdrawOrderRespDTO {
 
     @ApiModelProperty("是否大额,0:不是，1:是")
     @TableField("big_withdraw")
-    private Integer bigWithdraw;*/
+    private Integer bigWithdraw;
 
     @ApiModelProperty("锁单状态(0=未锁单 1=锁单中)")
     @TableField("lock_status")
@@ -202,6 +215,9 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("一审客户端备注")
     @TableField("client_audit1_desc")
     private String clientAudit1Desc;
+
+    @ApiModelProperty("一审客户端备注")
+    private String audit1ClientDesc;
 
     @ApiModelProperty("一审审核时长，秒，锁单到审核完毕的耗时")
     @TableField("audit1_cost")
@@ -257,7 +273,7 @@ public class WithdrawOrderRespDTO {
     @TableField("audit3_cost")
     private Integer audit3Cost;
 
-    /*@ApiModelProperty("创建时间")
+    @ApiModelProperty("创建时间")
     @TableField("created_at")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime createdAt;
@@ -289,9 +305,27 @@ public class WithdrawOrderRespDTO {
     @ApiModelProperty("确认/取消出款客户端备注")
     private String confirmClientDesc;
 
+    @ApiModelProperty("确认/取消出款审核耗时，单位：秒")
+    private Integer confirmCost;
+
     @ApiModelProperty("银行id")
     private Long bankId;
 
     @ApiModelProperty(value = "支付厂商")
-    private String payMerchantName;*/
+    private String payMerchantName;
+
+    @ApiModelProperty("提现限制类型：1-账单限制，2-流水限制，参见withdrawLimitTypeEnum枚举")
+    private Integer withdrawLimitType;
+
+    @ApiModelProperty("提现时所需有效流水快照")
+    private BigDecimal validAmount;
+    @ApiModelProperty("提现时完成有效流水快照")
+    private BigDecimal completeAmount;
+    @ApiModelProperty("提现时剩余可提现额度快照")
+    private BigDecimal remainAmount;
+
+    @ApiModelProperty(value = "提款手续费")
+    private BigDecimal withdrawFee;
+    @ApiModelProperty("银行卡账号或虚拟币账号风控名称")
+    private String accountWindControl;
 }

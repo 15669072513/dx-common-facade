@@ -8,10 +8,7 @@ import com.dx.facade.account.param.ChangeLockStatusParam;
 import com.dx.facade.account.param.PaymentLockStatusDTO;
 import com.dx.facade.account.param.WithdrawOrderParamDTO;
 import com.dx.facade.account.param.WithdrawOrderStatsParamDTO;
-import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
-import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
-import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
-import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -28,12 +25,21 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
 
+
     /**
-     * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
-     * @param dto           更新DTO
-     * @param operationDesc 操作说明
+     * 代理添加银行卡/虚拟币时提款记录列表
+     * @param pageReq
      * @return
      */
+    CommonResp<PageResp<WithdrawOrderRespDTO, ?>> getProxyWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
+
+
+        /**
+         * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+         * @param dto           更新DTO
+         * @param operationDesc 操作说明
+         * @return
+         */
     Boolean updateWithdrawOrderStatusById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
 
     /**
@@ -72,10 +78,20 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
+    CommonResp<GetTodayWithdrawStaRespDTO> getTodayWithdrawStat(Integer userType, Long userId);
+
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 
 
     CommonResp auditWithdrawOrder(WithdrawOrderAuditParamDTO param) throws BizException;
+
+    /**
+     * 发起第三方提现操作
+     * @param eventId
+     * @return
+     * @throws BizException
+     */
+    CommonResp confirmCreateWithdraw(String eventId);
 
     /**
      * 通过订单号获取订单详情
@@ -106,4 +122,14 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     WithdrawOrderStatsRespDTO getWithdrawStats(WithdrawOrderStatsParamDTO paramDTO);
+
+    /**
+     * 查询会员或代理存取款统计信息
+     * @param paramDTO
+     * @return
+     */
+    UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
+
+
+
 }

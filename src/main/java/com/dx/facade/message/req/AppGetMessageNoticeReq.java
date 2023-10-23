@@ -38,4 +38,7 @@ public class AppGetMessageNoticeReq extends PageRequest {
 
     @ApiModelProperty("是否已读(0否,1是)")
     private Integer isRead;
+
+    @ApiModelProperty(value = "是否pc端展示 0:app，1:pc", required = false)
+    private Integer pc = 0 ;
 }

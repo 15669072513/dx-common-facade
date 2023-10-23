@@ -41,6 +41,30 @@ public class UpdateWithdrawConfigReq implements BaseParmDTO {
     @ApiModelProperty("大额标记金额")
     private BigDecimal bigAmount;
 
+    @ApiModelProperty("会员存款")
+    private BigDecimal depositMultiple;
+
+    @ApiModelProperty("会员存款后台")
+    private BigDecimal depositBackMultiple;
+
+    @ApiModelProperty("充值上分")
+    private BigDecimal upScoreMultiple;
+
+    @ApiModelProperty("会员返水")
+    private BigDecimal rebateMultiple;
+
+    @ApiModelProperty("会员返水增加调整")
+    private BigDecimal otherRebateAddMultiple;
+
+    @ApiModelProperty("信用借款")
+    private BigDecimal loanMultiple;
+
+    @ApiModelProperty("通过代理每日取款次数")
+    private Integer proxyDailyCount;
+
+    @ApiModelProperty("通过代理每日取款金额")
+    private BigDecimal proxyDailyAmount;
+
     @ApiModelProperty("代理ID")
     private Long proxyId;
 
@@ -55,6 +79,12 @@ public class UpdateWithdrawConfigReq implements BaseParmDTO {
 
     @ApiModelProperty("每日累计提款金额")
     private BigDecimal dailyAmount;
+
+    @ApiModelProperty("俱乐部返水调整")
+    private BigDecimal clubRebateAddMultiple;
+
+    @ApiModelProperty("保险返水调整")
+    private BigDecimal insuranceRebateAddMultiple;
 
     @ApiModelProperty("操作人")
     private String operator;

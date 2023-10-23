@@ -62,6 +62,9 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     
+    @ApiModelProperty("德州保险返点比例")
+    private BigDecimal texasInsuranceRebate;
+    
     @ApiModelProperty("真人返点比例")
     @TableField("actual_person_rebate")
     private BigDecimal actualPersonRebate;

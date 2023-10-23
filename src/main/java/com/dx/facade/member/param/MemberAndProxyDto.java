@@ -415,6 +415,12 @@ public class MemberAndProxyDto {
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
 	private Integer contractModel;
 	
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
+    
+    @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
+    private Integer commissionSettleCycle;
+	
 	/**
 	 * 欠款标志 0-无欠款 1-有欠款
 	 */
@@ -534,7 +540,9 @@ public class MemberAndProxyDto {
     
     @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
     private Integer manageClubLockStatus;
-	
+
+	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
+	private Integer withdrawLimitType;
 	
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
@@ -597,6 +605,7 @@ public class MemberAndProxyDto {
 		result.setEntryAuthority(item.getEntryAuthority());
 		result.setEnforceContractStatus(item.getEnforceContractStatus());
 		result.setContractModel(item.getContractModel());
+		result.setCommissionMode(item.getCommissionMode());
 		result.setDebtStatus(item.getDebtStatus());
 		result.setRebateContractId(item.getRebateContractId());
 		result.setUnderProxyNum(item.getUnderProxyNum());
@@ -622,6 +631,7 @@ public class MemberAndProxyDto {
 		result.setClubName(item.getClubName());
 		result.setOpenLockStatus(item.getOpenLockStatus());
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
+		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
 		return result;
 	}
 	

@@ -32,7 +32,7 @@ public interface PaymentComponetRPCService {
      * @return
      * @throws BizException
      */
-	PaymentComponetDTO remainder(Long merchantId, Long proxyId, BigDecimal amount, Integer withdrawType) throws BizException;
+	PaymentComponetDTO remainder(BigDecimal usdtRate,Long merchantId, Long proxyId, BigDecimal amount, Integer withdrawType) throws BizException;
 
 
 	/**
@@ -45,7 +45,7 @@ public interface PaymentComponetRPCService {
 	 * @return
 	 * @throws BizException
 	 */
-	PaymentComponetDTO remainder(Long merchantId, Long memberId, Integer vipNum, BigDecimal amount, Integer withdrawType) throws BizException;
+	PaymentComponetDTO remainder(BigDecimal usdtRate,Long merchantId, Long memberId, Integer vipNum, BigDecimal amount, Integer withdrawType) throws BizException;
 	/**
 	 * 查询会员或者代理存款待处理剩余笔数
 	 * @param userId
