@@ -31,12 +31,10 @@ public class MemberRebateAuditRespDTO {
     private String merchantName;
 
     @ApiModelProperty(value = "上级代理id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long parentProxyId;
 
     @ApiModelProperty(value = "上级代理账号")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long parentProxyName;
+    private String parentProxyName;
 
     @ApiModelProperty(value = "总代账号")
     private String topProxyName;
