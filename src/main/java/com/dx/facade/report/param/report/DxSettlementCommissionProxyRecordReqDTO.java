@@ -108,5 +108,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("层级级别  0总代 ")
     private Integer proxyLevel;
 
+    @ApiModelProperty("锁单状态 0：未锁单，1已锁单")
+    private Integer lockStatus;
+
 
 }
