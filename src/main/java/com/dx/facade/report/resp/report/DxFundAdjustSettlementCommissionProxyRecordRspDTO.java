@@ -129,9 +129,8 @@ public class DxFundAdjustSettlementCommissionProxyRecordRspDTO implements Serial
     private Integer orderStatus;
 
     /**
-     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消  )
      */
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-待领取(返佣废弃当前状态) 3-已发放 4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消  )")
     private Integer payoutStatus;
 
     /**

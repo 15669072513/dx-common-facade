@@ -26,6 +26,15 @@ public class MemberRebateAuditedRespDTO {
     @ApiModelProperty(value = "顶级代理账号")
     private String topProxyName;
 
+    @ApiModelProperty(value = "上级代理id")
+    private Long parentProxyId;
+
+    @ApiModelProperty(value = "上级代理账号")
+    private String parentProxyName;
+
+    @ApiModelProperty(value = "上级代理路径")
+    private String parentProxyPath;
+
     @ApiModelProperty(value = "商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;

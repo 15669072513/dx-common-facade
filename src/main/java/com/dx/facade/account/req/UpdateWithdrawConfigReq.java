@@ -80,6 +80,12 @@ public class UpdateWithdrawConfigReq implements BaseParmDTO {
     @ApiModelProperty("每日累计提款金额")
     private BigDecimal dailyAmount;
 
+    @ApiModelProperty("俱乐部返水调整")
+    private BigDecimal clubRebateAddMultiple;
+
+    @ApiModelProperty("保险返水调整")
+    private BigDecimal insuranceRebateAddMultiple;
+
     @ApiModelProperty("操作人")
     private String operator;
 
