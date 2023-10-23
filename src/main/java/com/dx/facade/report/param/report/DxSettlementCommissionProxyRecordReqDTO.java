@@ -105,4 +105,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty(value = "周期结束时间(yyyyMMdd)")
     private Long reportEndDate;
 
+    @ApiModelProperty("层级级别  0总代 ")
+    private Integer proxyLevel;
+
+
 }
