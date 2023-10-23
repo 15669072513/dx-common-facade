@@ -101,6 +101,11 @@ public class MemberRebateDRespDTO {
     /**
      * 会员账号
      */
+    @ApiModelProperty(value = "会员id")
+    private Long memberId;
+    /**
+     * 会员账号
+     */
     @ApiModelProperty(value = "会员账号")
     private String memberName;
 
