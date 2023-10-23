@@ -111,5 +111,11 @@ public class WithdrawConfigResp implements Serializable {
     @ApiModelProperty("借款流水倍数")
     private BigDecimal loanMultiple;
 
+    @ApiModelProperty("通过代理每日取款次数")
+    private Integer proxyDailyCount;
+
+    @ApiModelProperty("通过代理每日取款金额")
+    private BigDecimal proxyDailyAmount;
+
 
 }
