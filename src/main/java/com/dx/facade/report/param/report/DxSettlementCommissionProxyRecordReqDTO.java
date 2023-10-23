@@ -110,6 +110,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
 
     @ApiModelProperty("锁单状态 0：未锁单，1已锁单")
     private Integer lockStatus;
+    @ApiModelProperty("订单号")
+    private String orderNo;
 
 
 }
