@@ -45,10 +45,10 @@ public class MemberRebateAuditedRespDTO {
     @ApiModelProperty(value = "报表日期")
     private Integer reportDate;
 
-    @ApiModelProperty(value = "返点金额")
+    @ApiModelProperty(value = "个人返水金额")
     private BigDecimal rebateAmount;
 
-    @ApiModelProperty(value = "个人返点金额")
+//    @ApiModelProperty(value = "个人返点金额")
     private BigDecimal personRebateAmount;
 
     @ApiModelProperty(value = "代理层级名称")
