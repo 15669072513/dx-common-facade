@@ -29,4 +29,7 @@ public class InsuranceInfoListReq extends BaseRequest {
 
   @ApiModelProperty(value = "购买类型 0放弃购买 1主动购买 2强制购买")
   private Integer buyType;
+
+  @ApiModelProperty("总代id")
+  private Long topProxyId;
 }
