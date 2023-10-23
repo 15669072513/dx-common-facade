@@ -19,6 +19,11 @@ public class UserVirtualOperationQureyParam extends PageRequest {
     @ApiModelProperty(value = "商户id")
     @NotNull(message = "商户ID不能为空")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long merchantId;
+
+
+    @ApiModelProperty(value = "商户idList")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private List<Long> merchantIds;
 
     @ApiModelProperty("操作时间开始")
