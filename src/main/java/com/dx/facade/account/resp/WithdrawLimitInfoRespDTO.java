@@ -49,6 +49,11 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
     private BigDecimal offlineWithdrawRemainAmount;
 
     /**
+     * 线下取款剩余可提现金额
+     */
+    private BigDecimal withdrawRemainAmount;
+
+    /**
      * 已完成有效流水
      */
     @ApiModelProperty("已完成有效流水")
