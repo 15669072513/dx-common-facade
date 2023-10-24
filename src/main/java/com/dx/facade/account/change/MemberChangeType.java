@@ -60,18 +60,20 @@ public enum MemberChangeType implements IChangeType {
     v2_cash_withdraw_refused(45, "提现拒绝", MemberBizType.down_score.code().toString()),
 
     v2_1_deposit(46, "会员存款", MemberBizType.v2_1_deposit.code().toString()),
-    v2_1_deposit_discount(47, "会员存款优惠", MemberBizType.v2_1_deposit.code().toString()),
+    //TODO 2.1不上，暂时去掉
+    //v2_1_deposit_discount(47, "会员存款优惠", MemberBizType.v2_1_deposit.code().toString()),
     v2_1_deposit_back(48, "会员存款（后台）", MemberBizType.v2_1_deposit.code().toString()),
-    v2_1_deposit_discount_back(49, "会员优惠（后台）", MemberBizType.v2_1_deposit.code().toString()),
+    //TODO 2.1不上，暂时去掉
+    //v2_1_deposit_discount_back(49, "会员优惠（后台）", MemberBizType.v2_1_deposit.code().toString()),
     v2_1_withdraw(50, "会员取款", MemberBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_frozen(51, "取款冻结", MemberBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_fail(52, "取款失败", MemberBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_back(53, "会员取款（后台）", MemberBizType.v2_1_withdraw.code().toString()),
 
-    v2_1_club_rebate_add(105, "俱乐部返水增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_1_insure_rebate_add(106, "保险返水增加调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_1_club_rebate_sub(108, "俱乐部返水扣除调整", ProxyBizType.v2_rebate.code().toString()),
-    v2_1_insure_rebate_sub(109, "保险返水扣除调整", ProxyBizType.v2_rebate.code().toString()),
+    v2_1_club_rebate_add(105, "俱乐部返水增加调整", MemberBizType.rebate.code().toString()),
+    v2_1_insure_rebate_add(106, "保险返水增加调整", MemberBizType.rebate.code().toString()),
+    v2_1_club_rebate_sub(108, "俱乐部返水扣除调整", MemberBizType.rebate.code().toString()),
+    v2_1_insure_rebate_sub(109, "保险返水扣除调整", MemberBizType.rebate.code().toString()),
 
     illegal_type(-1, "未知的类型", "-1")
     ;

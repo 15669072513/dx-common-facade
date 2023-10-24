@@ -37,9 +37,8 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     @ApiModelProperty("周期结束日期")
     private Integer cycleEndDate;
     /**
-     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)
      */
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-待领取(返佣废弃当前状态) 3-已发放 4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消  )")
     private Integer payoutStatus;
 
     private List<Integer> payoutStatusList;
@@ -90,10 +89,28 @@ public class DxSettlementCommissionProxyRecordReqDTO {
     //@Range(min = 1, max = 2, message = "查询类型参数不合法")
     private Integer qryType;
 
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-待领取(返佣废弃当前状态) 3-已发放 4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消  )")
     private Integer payoutStatusNeZero;
 
     @ApiModelProperty("排序通配符")
     private String orderStr;
+
+    @ApiModelProperty("id")
+    private Long id;
+
+    @ApiModelProperty(value = "周期开始时间(yyyyMMdd)")
+    private Long reportStartDate;
+
+    @ApiModelProperty(value = "周期结束时间(yyyyMMdd)")
+    private Long reportEndDate;
+
+    @ApiModelProperty("层级级别  0总代 ")
+    private Integer proxyLevel;
+
+    @ApiModelProperty("锁单状态 0：未锁单，1已锁单")
+    private Integer lockStatus;
+    @ApiModelProperty("订单号")
+    private String orderNo;
+
 
 }

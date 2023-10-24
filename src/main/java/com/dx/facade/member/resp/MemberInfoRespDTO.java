@@ -247,4 +247,10 @@ public class MemberInfoRespDTO {
     
     @ApiModelProperty("代理登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer proxyLoginLockStatus;
+    
+    @ApiModelProperty("是否设置支付密码标识 true 已设置 false 未设置")
+    private boolean payPasswordFlag;
+
+    @ApiModelProperty(value = "取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
 }

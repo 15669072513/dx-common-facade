@@ -34,13 +34,17 @@ public class UpdateVirtualRateConfigReq implements BaseParmDTO {
     @ApiModelProperty("汇率")
     private BigDecimal rate;
 
+    @ApiModelProperty("浮动汇率")
+    private BigDecimal floatRate;
+
     @ApiModelProperty("操作人")
     private String operator;
 
     @Override
     public void check() {
         Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
-        Assert.notNull(rate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("thirdRate"));
+        Assert.notNull(rate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("rate"));
+        Assert.notNull(floatRate, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("floatRate"));
         Assert.hasText(operator, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("operator"));
     }
 }

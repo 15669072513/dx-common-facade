@@ -132,13 +132,13 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 抽水贡献
      */
-    private BigDecimal pumpContribution;
+    private BigDecimal pumpContribution=BigDecimal.ZERO;
 
     /**
      * 注单类型 1 俱乐部游戏 2保险
      *
      */
-    private Integer betType;
+    private Integer betType=1;
 
     /**
      *  赢的筹码

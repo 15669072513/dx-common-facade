@@ -13,9 +13,16 @@ import java.util.Objects;
  * @desc 根据提现额度，转换不同币种对应值
  */
 public class WithdrawAmountUtil {
+    /**
+     * 货币转美金
+     * @param amount
+     * @param usdtRate
+     * @param currency
+     * @return
+     */
     public static BigDecimal getUsdtAmount(BigDecimal amount,BigDecimal usdtRate, String currency) {
         if(Objects.isNull(amount) || Objects.isNull(usdtRate) || StringUtils.isBlank(currency)) {
-            throw new IllegalArgumentException("货币转换参数错误");
+            return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.USDT.getCode())) {
             return amount.setScale(2, RoundingMode.DOWN);
@@ -23,12 +30,19 @@ public class WithdrawAmountUtil {
         if(Objects.equals(currency, BwCurrencyEnum.CNY.getCode())) {
             return amount.divide(usdtRate, 2, RoundingMode.DOWN);
         }
-        throw new IllegalArgumentException("非法币种类型:" + currency);
+        return amount;
      }
 
+    /**
+     * 货币转人民币
+     * @param amount
+     * @param usdtRate
+     * @param currency
+     * @return
+     */
     public static BigDecimal getCnyAmount(BigDecimal amount, BigDecimal usdtRate, String currency) {
         if(Objects.isNull(amount) || Objects.isNull(usdtRate) || StringUtils.isBlank(currency)) {
-            throw new IllegalArgumentException("货币转换参数错误");
+            return amount;
         }
         if(Objects.equals(currency, BwCurrencyEnum.CNY.getCode())) {
             return amount.setScale(2, RoundingMode.DOWN);
@@ -36,6 +50,6 @@ public class WithdrawAmountUtil {
         if(Objects.equals(currency, BwCurrencyEnum.USDT.getCode())) {
             return amount.multiply(usdtRate).setScale(2, RoundingMode.DOWN);
         }
-        throw new IllegalArgumentException("非法币种类型:" + currency);
+        return amount;
     }
 }

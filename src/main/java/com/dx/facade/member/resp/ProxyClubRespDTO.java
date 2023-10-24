@@ -29,8 +29,9 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "代理俱乐部响应DTO", description = "代理俱乐部响应DTO")
 public class ProxyClubRespDTO implements Serializable {
 
-    private static final long serialVersionUID = 1L;
-    /** id */
+	private static final long serialVersionUID = -6318619816759811093L;
+
+	/** id */
     @ApiModelProperty("ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long id;

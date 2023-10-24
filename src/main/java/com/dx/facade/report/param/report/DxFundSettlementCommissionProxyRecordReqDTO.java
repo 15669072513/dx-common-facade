@@ -66,6 +66,12 @@ public class DxFundSettlementCommissionProxyRecordReqDTO {
     private String proxyName;
     /**
      *
+     * 上级代理名称
+     */
+    @ApiModelProperty("上级代理名称")
+    private String parentProxyName;
+    /**
+     *
      * 订单号
      */
     @ApiModelProperty("订单号")

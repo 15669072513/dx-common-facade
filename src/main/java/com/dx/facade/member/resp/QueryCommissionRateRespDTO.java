@@ -109,4 +109,7 @@ public class QueryCommissionRateRespDTO implements Serializable {
 
     @ApiModelProperty("是否有下级代理")
     private boolean hasSub;
+    
+    @ApiModelProperty("版本号")
+    private Integer version;
 }

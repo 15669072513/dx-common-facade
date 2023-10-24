@@ -21,6 +21,16 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * id
+     */
+    @ApiModelProperty("id")
+    private Long id;
+    /**
+     * 报表时间
+     */
+    @ApiModelProperty("报表时间")
+    private Integer reportYm;
 
     /**
      * 周期名称 - 结算期数
@@ -83,9 +93,8 @@ public class DxSettlementCommissionProxyRecordAwaitIssueRspDTO implements Serial
     private Integer orderStatus;
 
     /**
-     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消  )
      */
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-待领取(返佣废弃当前状态) 3-已发放 4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消  )")
     private Integer payoutStatus;
 
 }

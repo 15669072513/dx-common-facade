@@ -78,6 +78,24 @@ public class DxSettlementCommissionProxyRecordRspDTO implements Serializable {
      */
     @ApiModelProperty("代理账号")
     private String proxyName;
+    /**
+     * 代理层级
+     */
+    @ApiModelProperty("代理层级")
+    private Long proxyLevel;
+
+    /**
+     * windControlName
+     */
+    @ApiModelProperty(value = "风控层级名称")
+    private String windControlName;
+
+
+    @ApiModelProperty("登陆锁定状态 0-未锁定 1-登陆锁定")
+    private Integer loginLockStatus;
+
+    @ApiModelProperty("充提锁定状态 0-未锁定 1-充提锁定")
+    private Integer paymentLockStatus;
 
     /**
      * 商户id
@@ -229,9 +247,8 @@ public class DxSettlementCommissionProxyRecordRspDTO implements Serializable {
     private Integer orderStatus;
 
     /**
-     * 返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消  )
      */
-    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-无返佣 3-已发放  4-已取消)")
+    @ApiModelProperty("返佣状态(0-未结算 1=待发放 2-待领取(返佣废弃当前状态) 3-已发放 4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消  )")
     private Integer payoutStatus;
 
     /**

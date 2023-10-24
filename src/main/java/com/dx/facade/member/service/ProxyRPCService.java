@@ -181,7 +181,12 @@ public interface ProxyRPCService {
 	 */
     CommonResp<Boolean> updatePassword(UpdateProxyPasswordParamDTO params) throws BizException;
 
-
+    /**
+     * 查询所有子代理包含直属和非直属
+     * 
+     * @param proxyId
+     * @return
+     */
     CommonResp<List<ProxyInfoRespDTO>> getProxyAndSubListByProxyPath(Long proxyId);
 
     /**

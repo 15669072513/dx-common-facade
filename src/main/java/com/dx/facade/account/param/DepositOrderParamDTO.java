@@ -67,8 +67,10 @@ public class DepositOrderParamDTO {
 
     @ApiModelProperty("会员/代理账号")
     private String userName;
+
     @ApiModelProperty("会员/代理id")
     private String userId;
+
     @ApiModelProperty("存款类型，会员中心钱包=1，代理佣金余额=6,代理额度余额=7")
     private List<Integer> bizTypes;
 
@@ -86,15 +88,21 @@ public class DepositOrderParamDTO {
             example = "eventTime"
     )
     private String orderKey;
+
     @ApiModelProperty(
             value = "排序方式(1)：desc-降序 asc-升序",
             example = "asc"
     )
     private String sortType;
 
+    @ApiModelProperty(value = "币种 - 人民币:CNY, 越南盾:VND, 泰铢:THB, 美元:USDT, 传递的时候传递货币货号，例如人民币的查询就产地CNY")
+    private String currency;
+
+    @ApiModelProperty(value = "是否跳过汇总信息计算：默认-不跳过")
+    private Boolean excludeSummary = Boolean.FALSE;
+
     public void check(){
         //Assert.notEmpty(bizTypes, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("bizTypes"));
     }
-
 
 }
