@@ -115,7 +115,7 @@ public class GameReviewcardResp implements Serializable  {
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("是否投保 0否  1是")
-    private Integer isInsured;
+    private Integer isInsured=0;
 
     @ApiModelProperty("小盲注")
     private BigDecimal sbBlindScore;
