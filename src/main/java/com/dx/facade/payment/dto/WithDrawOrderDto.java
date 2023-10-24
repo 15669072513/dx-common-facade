@@ -38,6 +38,9 @@ public class WithDrawOrderDto implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long userId;
 
+	@ApiModelProperty(value = "会员名称")
+	private String userName;
+
 	@ApiModelProperty(value = "支付大类型")
 	private Integer payType;
 
