@@ -347,7 +347,15 @@ public interface ExcelHeadI18nKey {
     String REPORT_佣金比例 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金比例";
     String REPORT_会员总输赢 = "EXCEL_HEAD_I18N_KEY.REPORT_会员总输赢";
 
+    String REPORT_会员净输赢="EXCEL_HEAD_I18N_KEY.REPORT_会员净输赢";
+    String REPORT_会员返水金额="EXCEL_HEAD_I18N_KEY.REPORT_会员返水金额";
+    String REPORT_会员其他调整金额="EXCEL_HEAD_I18N_KEY.REPORT_会员其他调整金额";
 
+    String REPORT_直属投注额="EXCEL_HEAD_I18N_KEY.REPORT_直属投注额";
+    String REPORT_直属有效投注额="EXCEL_HEAD_I18N_KEY.REPORT_直属有效投注额";
+    String REPORT_直属输赢金额="EXCEL_HEAD_I18N_KEY.REPORT_直属输赢金额";
+
+    String REPORT_直属返水金额="EXCEL_HEAD_I18N_KEY.REPORT_直属返水金额";
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
     String	FUNDS_会员昵称 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员昵称";
     String	FUNDS_上级代理_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_上级代理_代理层级";
