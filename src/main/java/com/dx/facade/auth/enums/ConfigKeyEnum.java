@@ -286,6 +286,8 @@ public enum ConfigKeyEnum {
     CMS_VALID_TIME("cms.valid.time","1"),
     /** 短信验证码默认过期时间*/
     CMS_DEFAULT_COUNTDOWN("cms.default.countdown","1"),
+    
+    PROXY_LEVEL_LIMIT("proxy.level.limit","1"),
 	;
 
     //code转换

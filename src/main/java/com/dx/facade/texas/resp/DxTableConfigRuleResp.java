@@ -111,8 +111,14 @@ public class DxTableConfigRuleResp implements Serializable {
     /**
      * 抽水比例配置
      */
-    @ApiModelProperty("抽水比例配置")
+    @ApiModelProperty("抽水比例配置, 游戏内计算")
     private BigDecimal rake=BigDecimal.ZERO;
+
+    /**
+     * 抽水比例配置
+     */
+    @ApiModelProperty("抽水比例配置, 游戏配置")
+    private BigDecimal gameRake=BigDecimal.ZERO;
 
     /** 人员上限 */
     @ApiModelProperty("人员上限")
@@ -197,15 +203,15 @@ public class DxTableConfigRuleResp implements Serializable {
     private Integer sitDownLimit=0;
 
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
-    private Integer insuranceMode;
+    private Integer insuranceMode=0;
 
     @ApiModelProperty("保险模式中文描述 0-不开保险 1-经典保险")
     private String insuranceModeStr;
 
     @ApiModelProperty("turn购买保险最低值,整数类型")
-    private BigDecimal insuranceTurn;
+    private BigDecimal insuranceTurn=BigDecimal.ZERO;
     @ApiModelProperty("选张购买功能 false-不选张 true-选张")
     private Boolean insuranceChooseSheet;
     @ApiModelProperty("保险触发下限")
-    private Integer insuranceLowerLimit;
+    private Integer insuranceLowerLimit=0;
 }

@@ -120,10 +120,10 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.v2_cash_repay.code());
             }
             if (appChangeType.intValue() == v2_withdraw_frozen.code()) {
-                return Arrays.asList(MemberChangeType.v2_cash_withdraw_frozen.code());
+                return Arrays.asList(MemberChangeType.v2_cash_withdraw_frozen.code(),MemberChangeType.v2_1_withdraw_frozen.code());
             }
             if (appChangeType.intValue() == v2_withdraw_refused.code()) {
-                return Arrays.asList(MemberChangeType.v2_cash_withdraw_refused.code());
+                return Arrays.asList(MemberChangeType.v2_cash_withdraw_refused.code(), MemberChangeType.v2_1_withdraw_fail.code());
             }
             if (appChangeType.intValue() == v2_bring_out_table.code()) {
                 return Arrays.asList(MemberChangeType.bring_out_table.code());

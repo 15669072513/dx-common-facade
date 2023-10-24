@@ -26,6 +26,15 @@ public class MemberRebateAuditedRespDTO {
     @ApiModelProperty(value = "顶级代理账号")
     private String topProxyName;
 
+    @ApiModelProperty(value = "上级代理id")
+    private Long parentProxyId;
+
+    @ApiModelProperty(value = "上级代理账号")
+    private String parentProxyName;
+
+    @ApiModelProperty(value = "上级代理路径")
+    private String parentProxyPath;
+
     @ApiModelProperty(value = "商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
@@ -45,10 +54,10 @@ public class MemberRebateAuditedRespDTO {
     @ApiModelProperty(value = "报表日期")
     private Integer reportDate;
 
-    @ApiModelProperty(value = "返点金额")
+    @ApiModelProperty(value = "个人返水金额")
     private BigDecimal rebateAmount;
 
-    @ApiModelProperty(value = "个人返点金额")
+//    @ApiModelProperty(value = "个人返点金额")
     private BigDecimal personRebateAmount;
 
     @ApiModelProperty(value = "代理层级名称")
