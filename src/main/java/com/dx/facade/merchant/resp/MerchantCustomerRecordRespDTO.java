@@ -3,8 +3,10 @@ package com.dx.facade.merchant.resp;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class MerchantCustomerRecordRespDTO {
+public class MerchantCustomerRecordRespDTO implements Serializable {
     @ApiModelProperty(value = "商户ID")
     private Long merchantId;
 

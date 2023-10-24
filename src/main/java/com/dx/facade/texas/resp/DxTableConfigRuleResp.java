@@ -72,6 +72,12 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("默认带入的筹码")
     private BigDecimal bringChipScore=BigDecimal.ZERO;
 
+    /**
+     * 默认带入的筹码BB = 默认带入的筹码 除以 大盲注
+     */
+    @ApiModelProperty("默认带入的筹码(倍BB)")
+    private BigDecimal bringChipTimes = BigDecimal.ZERO;
+
     /***
      * 小盲注
      */
@@ -107,6 +113,12 @@ public class DxTableConfigRuleResp implements Serializable {
      */
     @ApiModelProperty("抽水比例配置")
     private BigDecimal rake=BigDecimal.ZERO;
+
+    /**
+     * 抽水比例配置
+     */
+    @ApiModelProperty("抽水比例配置, 游戏配置")
+    private BigDecimal gameRake=BigDecimal.ZERO;
 
     /** 人员上限 */
     @ApiModelProperty("人员上限")
