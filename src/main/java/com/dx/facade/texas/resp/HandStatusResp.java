@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
-public class HandStatusResp  {
+
+public class HandStatusResp {
     private Integer status;
     private String handCode;
 
