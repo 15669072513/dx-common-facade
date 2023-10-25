@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
 /**
  * 游戏注单记录DTO
  * @author heart
@@ -164,7 +166,7 @@ public class GameOrderRecordDto implements Serializable {
     /**
      * 注单记录创建时间
      */
-    private Long recordCreateTime;
+    private LocalDateTime recordCreateTime;
 
     /***
      * 小盲注
