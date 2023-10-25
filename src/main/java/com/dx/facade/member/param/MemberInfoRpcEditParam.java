@@ -126,6 +126,8 @@ public class MemberInfoRpcEditParam implements Serializable {
     private MemberInfoRpcEditActivityTaskLimit activityTaskLimitAfter;
 	@ApiModelProperty(value = "重置密码以及备注")
 	private MemberInfoRpcEditResetPwd resetPwdAfter;
+    @ApiModelProperty(value = "支付密码重置 修改后内容")
+    private MemberInfoRpcResetPayPassword resetPayPasswordAfter;
 
     @ApiModelProperty(value="当前操作人")
     private String currentUserName;
