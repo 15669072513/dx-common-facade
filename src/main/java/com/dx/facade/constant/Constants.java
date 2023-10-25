@@ -60,11 +60,12 @@ public class Constants {
     public static final String SLASH_i_CODE = "/?i_code=";
     public static final String SLASH_CODE = "/?code=";
     public static final String AND_CODE = "&code=";
+    public static final String USER_NAME_ERROR_MSG = "请输入4～11位字母或数字账号";
 
     /**
-     * 账号 4-11位 至少两个字母加数字组合，首位字母
+     * 账号 4～11位字母或数字账号
      */
-    public static final String REG_4_11 = "^[A-Za-z]{1}(?=(.*[a-zA-Z]){0,})(?=(.*[0-9]){1,})[0-9A-Za-z]{3,10}$";
+    public static final String REG_4_11 = "^[A-Za-z0-9]{4,11}$";;
 
     /**
      * 前后端约定查询中代表所有的参数
