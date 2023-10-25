@@ -201,6 +201,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_有效投注THB = "EXCEL_HEAD_I18N_KEY.REPORT_有效投注THB"; //
 
     String REPORT_游戏名称 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏名称"; //
+    String REPORT_游戏类型 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏类型"; //
     String REPORT_投注盈亏 = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏"; //
     String REPORT_投注盈亏CNY = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏CNY"; //
     String REPORT_投注盈亏VND = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏VND"; //
