@@ -18,7 +18,7 @@ public class GameReviecardRoundResp {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
 
-    @ApiModelProperty("手牌类型 0德州 1短牌")
+    @ApiModelProperty("牌桌类型 2001:德州局 2002:短牌局")
     private Long gameType;
 
     @ApiModelProperty("总底池金额")

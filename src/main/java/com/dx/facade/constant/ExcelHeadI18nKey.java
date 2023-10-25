@@ -14,6 +14,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_DEPOSIT_ORDER_STATUS = "EXCEL_HEAD_I18N_KEY.FUNDS_DEPOSIT_ORDER_STATUS"; // 存款订单状态
     String FUNDS_DEPOSIT_CLIENT_STATUS = "EXCEL_HEAD_I18N_KEY.FUNDS_DEPOSIT_CLIENT_STATUS"; // 存款客户端状态
     String FUNDS_订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_订单号"; // 订单号
+    String FUNDS_德州注单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_德州注单号";
     String FUNDS_三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_三方订单号"; // 会员账号
     String FUNDS_会员账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员账号"; // 会员账号
 
@@ -29,6 +30,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_存款人姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款人姓名"; //
     String FUNDS_订单来源 = "EXCEL_HEAD_I18N_KEY.FUNDS_订单来源"; //
     String FUNDS_订单状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_订单状态"; //
+    String FUNDS_结算状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_结算状态";
     String FUNDS_客户端状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_客户端状态"; //
     String FUNDS_存款IP风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款IP风控层级"; //
     String FUNDS_存款终端设备号风控层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款终端设备号风控层级"; //
@@ -184,6 +186,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_有效投注THB = "EXCEL_HEAD_I18N_KEY.REPORT_有效投注THB"; //
 
     String REPORT_游戏名称 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏名称"; //
+    String REPORT_游戏类型 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏类型"; //
     String REPORT_投注盈亏 = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏"; //
     String REPORT_投注盈亏CNY = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏CNY"; //
     String REPORT_投注盈亏VND = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏VND"; //
@@ -359,6 +362,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_游戏账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_游戏账号";
     String	FUNDS_注单状态 = "EXCEL_HEAD_I18N_KEY.FUNDS_注单状态";
     String	FUNDS_投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注金额";
+    String	FUNDS_输赢金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_输赢金额";
     String	FUNDS_会员输赢 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员输赢";
     String	FUNDS_有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注";
     String	FUNDS_返水比例 = "EXCEL_HEAD_I18N_KEY.FUNDS_返水比例";
@@ -543,6 +547,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_盲注 = "EXCEL_HEAD_I18N_KEY.FUNDS_盲注";
     String FUNDS_牌桌手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌手牌数";
     String FUNDS_玩家总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带入";
+    String FUNDS_会员总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员总带入";
+    String FUNDS_会员带入次数 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员带入次数";
     String FUNDS_玩家总带出 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带出";
     String FUNDS_总打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总打牌抽水";
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
@@ -576,6 +582,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_荷官位 = "EXCEL_HEAD_I18N_KEY.FUNDS_荷官位";
     String FUNDS_小盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_小盲位";
     String FUNDS_大盲位 = "EXCEL_HEAD_I18N_KEY.FUNDS_大盲位";
+    String FUNDS_桌牌 = "EXCEL_HEAD_I18N_KEY.FUNDS_桌牌";
 
     String MEMBER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_会员账号";
     String PROXY_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_代理账号";
@@ -611,6 +618,8 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_HAND_LIST="EXCEL_HEAD_I18N_KEY.FILE_NAME_手牌列表";
 
     String	FUNDS_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌列表";
+
+    String	FUNDS_会员详情_牌桌列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员详情_牌桌列表";
     
     String	FUNDS_牌桌信息列表 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌信息列表";
     String	FUNDS_绑定时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_绑定时间";//绑定时间

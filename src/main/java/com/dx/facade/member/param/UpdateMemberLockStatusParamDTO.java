@@ -22,17 +22,20 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "更新会员登录、游戏、支付锁定状态", description = "更新会员登录、游戏、支付锁定状态")
+@ApiModel(value = "更新会员登录、游戏、入局、支付锁定状态", description = "更新会员登录、游戏、入局、支付锁定状态")
 public class UpdateMemberLockStatusParamDTO implements BaseParmDTO{
 
     @ApiModelProperty(value = "会员id (20)")
     private Long userId;
 
-	@ApiModelProperty(value = "登录权限：0-关闭 1-开启")
+	@ApiModelProperty(value = "登录权限：1-关闭 0-开启")
 	private Integer loginLockStatus;
 	
-	@ApiModelProperty(value = "游戏锁定：0-关闭 1-开启")
+	@ApiModelProperty(value = "游戏锁定：1-关闭 0-开启")
 	private Integer gameLockStatus;
+	
+	@ApiModelProperty(value = "入局锁定：1-关闭 0-开启")
+	private Integer joinGameLockStatus;
 	
 	@ApiModelProperty(value = "账号锁定状态 0-未锁定 1-充提锁定")
 	private Integer paymentLockStatus;

@@ -20,145 +20,7 @@ import java.math.BigDecimal;
 public class ProxyDayReportSummaryDTO {
 
 
-//    @ApiModelProperty(value = "存款总额(CNY)", required = true, example = "2343")
-//    private BigDecimal depositAmountInCNY;
-//
-//    @ApiModelProperty(value = "存款总额(VND)", required = true, example = "2343")
-//    private BigDecimal depositAmountInVND;
-//
-//    @ApiModelProperty(value = "存款总额(THB)", required = true, example = "2343")
-//    private BigDecimal depositAmountInTHB;
 
-//    @ApiModelProperty(value = "存款次数")
-//    private Integer depositTimes;
-
-//    @ApiModelProperty(value = "取款总额(CNY)", required = true, example = "2343")
-//    private BigDecimal withdrawAmountInCNY;
-//
-//    @ApiModelProperty(value = "取款总额(VND)", required = true, example = "2343")
-//    private BigDecimal withdrawAmountInVND;
-//
-//    @ApiModelProperty(value = "取款总额(THB)", required = true, example = "2343")
-//    private BigDecimal withdrawAmountInTHB;
-
-//    @ApiModelProperty(value = "取款次数")
-//    private Integer withdrawTimes;
-
-//    @ApiModelProperty(value = "存取差(CNY)", required = true, example = "2343")
-//    private BigDecimal depositWithdrawDifferAmountInCNY;
-//
-//    @ApiModelProperty(value = "存取差(VND)", required = true, example = "2343")
-//    private BigDecimal depositWithdrawDifferAmountInVND;
-//
-//    @ApiModelProperty(value = "存取差(THB)", required = true, example = "2343")
-//    private BigDecimal depositWithdrawDifferAmountInTHB;
-//
-//    @ApiModelProperty(value = "累计返佣(CNY)", required = true, example = "2343")
-//    private BigDecimal totalReceivePersonBrokerageInCNY;
-//
-//    @ApiModelProperty(value = "累计返佣(VND)", required = true, example = "2343")
-//    private BigDecimal totalReceivePersonBrokerageInVND;
-//
-//    @ApiModelProperty(value = "累计返佣(THB)", required = true, example = "2343")
-//    private BigDecimal totalReceivePersonBrokerageInTHB;
-//
-//    @ApiModelProperty(value = "累计返点(CNY)", required = true, example = "2343")
-//    private BigDecimal totalReceiveRebateInCNY;
-//
-//    @ApiModelProperty(value = "累计返点(VND)", required = true, example = "2343")
-//    private BigDecimal totalReceiveRebateInVND;
-//
-//    @ApiModelProperty(value = "累计返点(THB)", required = true, example = "2343")
-//    private BigDecimal totalReceiveRebateInTHB;
-//
-//    @ApiModelProperty(value = "代存会员总额(CNY)", required = true, example = "2343")
-//    private BigDecimal insteadPlayerDepositAmountInCNY;
-//
-//    @ApiModelProperty(value = "代存会员总额(VND)", required = true, example = "2343")
-//    private BigDecimal insteadPlayerDepositAmountInVND;
-//
-//    @ApiModelProperty(value = "代存会员总额(THB)", required = true, example = "2343")
-//    private BigDecimal insteadPlayerDepositAmountInTHB;
-
-//    @ApiModelProperty(value = "代存会员人数")
-//    private Integer insteadPlayerDepositNum;
-//
-//    @ApiModelProperty(value = "代存会员次数")
-//    private Integer insteadPlayerDepositTimes;
-
-//    @ApiModelProperty(value = "转入中心钱包总额(CNY)", required = true, example = "2343")
-//    private BigDecimal transferCenterWalletAmountInCNY;
-//
-//    @ApiModelProperty(value = "转入中心钱包总额(VND)", required = true, example = "2343")
-//    private BigDecimal transferCenterWalletAmountInVND;
-//
-//    @ApiModelProperty(value = "转入中心钱包总额(THB)", required = true, example = "2343")
-//    private BigDecimal transferCenterWalletAmountInTHB;
-
-
-
-//    @ApiModelProperty(value = "上级转账金额(CNY)", required = true, example = "2343")
-//    private BigDecimal proxyTransferInAmountInCNY;
-//
-//    @ApiModelProperty(value = "上级转账金额(VND)", required = true, example = "2343")
-//    private BigDecimal proxyTransferInAmountInVND;
-//
-//    @ApiModelProperty(value = "上级转账金额(THB)", required = true, example = "2343")
-//    private BigDecimal proxyTransferInAmountInTHB;
-
-//    @ApiModelProperty(value = "上级转账次数")
-//    private Integer proxyTransferInTimes;
-
-//    @ApiModelProperty(value = "转账下级金额(CNY)", required = true, example = "2343")
-//    private BigDecimal proxyTransferOutAmountInCNY;
-//
-//    @ApiModelProperty(value = "转账下级金额(VND)", required = true, example = "2343")
-//    private BigDecimal proxyTransferOutAmountInVND;
-//
-//    @ApiModelProperty(value = "转账下级金额(THB)", required = true, example = "2343")
-//    private BigDecimal proxyTransferOutAmountInTHB;
-
-//    @ApiModelProperty(value = "转账下级次数")
-//    private Integer proxyTransferOutTimes;
-
-//    @ApiModelProperty(value = "优惠总额(CNY)", required = true, example = "2343")
-//    private BigDecimal discountAmountInCNY;
-//
-//    @ApiModelProperty(value = "优惠总额(VND)", required = true, example = "2343")
-//    private BigDecimal discountAmountInVND;
-//
-//    @ApiModelProperty(value = "优惠总额(THB)", required = true, example = "2343")
-//    private BigDecimal discountAmountInTHB;
-//
-//    @ApiModelProperty(value = "其他调整(CNY)", required = true, example = "2343")
-//    private BigDecimal otherAdjustAmountInCNY;
-//
-//    @ApiModelProperty(value = "其他调整(VND)", required = true, example = "2343")
-//    private BigDecimal otherAdjustAmountInVND;
-//
-//    @ApiModelProperty(value = "其他调整(THB)", required = true, example = "2343")
-//    private BigDecimal otherAdjustAmountInTHB;
-//
-//    @ApiModelProperty(value = "会员首存总额(CNY)", required = true, example = "2343")
-//    private BigDecimal memberFirstDepositAmountInCNY;
-//
-//    @ApiModelProperty(value = "会员首存总额(VND)", required = true, example = "2343")
-//    private BigDecimal memberFirstDepositAmountInVND;
-//
-//    @ApiModelProperty(value = "会员首存总额(THB)", required = true, example = "2343")
-//    private BigDecimal memberFirstDepositAmountInTHB;
-//
-//    @ApiModelProperty(value = "会员注册首存人数")
-//    private Integer memberRegisterAndFirstDepositNum;
-//
-//    @ApiModelProperty(value = "会员投注盈亏(CNY)", required = true, example = "2343")
-//    private BigDecimal memberNetAmountInCNY;
-//
-//    @ApiModelProperty(value = "会员投注盈亏(VND)", required = true, example = "2343")
-//    private BigDecimal memberNetAmountInVND;
-//
-//    @ApiModelProperty(value = "会员投注盈亏(THB)", required = true, example = "2343")
-//    private BigDecimal memberNetAmountInTHB;
 
 
     //
@@ -171,7 +33,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("给会员上下分差值")
     @TableField("proxy_to_mem_differ_amount")
-    private Long proxyToMemDifferAmount;
+    private BigDecimal proxyToMemDifferAmount;
 
     @ApiModelProperty("给会员上下分次数")
     @TableField("proxy_to_mem_times")
@@ -183,7 +45,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("给代理上下分差值")
     @TableField("proxy_to_child_differ_amount")
-    private Long proxyToChildDifferAmount;
+    private BigDecimal proxyToChildDifferAmount;
 
     @ApiModelProperty("给代理上下分次数")
     @TableField("proxy_to_child_times")
@@ -195,7 +57,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("被代理上下分差值")
     @TableField("proxy_be_differ_amount")
-    private Long proxyBeDifferAmount;
+    private BigDecimal proxyBeDifferAmount;
 
     @ApiModelProperty("被代理上下分差次数")
     @TableField("proxy_be_differ_times")
@@ -263,7 +125,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("官方给代理充值上分")
     @TableField("officer_proxy_cash_up_amount")
-    private Long officerProxyCashUpAmount;
+    private BigDecimal officerProxyCashUpAmount;
 
     @ApiModelProperty("官方给代理充值上分次数")
     @TableField("officer_proxy_cash_up_times")
@@ -271,7 +133,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理被上级充值上分")
     @TableField("proxy_be_cash_up_amount")
-    private Long proxyBeCashUpAmount;
+    private BigDecimal proxyBeCashUpAmount;
 
     @ApiModelProperty("代理被上级充值上分次数")
     @TableField("proxy_be_cash_up_times")
@@ -279,7 +141,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给下级充值上分")
     @TableField("proxy_to_child_cash_up_amount")
-    private Long proxyToChildCashUpAmount;
+    private BigDecimal proxyToChildCashUpAmount;
 
     @ApiModelProperty("代理给下级充值上分次数")
     @TableField("proxy_to_child_cash_up_times")
@@ -288,7 +150,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给会员充值上分")
     @TableField("proxy_to_mem_cash_up_amount")
-    private Long proxyToMemCashUpAmount;
+    private BigDecimal proxyToMemCashUpAmount;
 
     @ApiModelProperty("代理给会员充值上分次数")
     @TableField("proxy_to_mem_cash_up_times")
@@ -297,7 +159,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("官方给代理提现下分")
     @TableField("officer_proxy_cash_down_amount")
-    private Long officerProxyCashDownAmount;
+    private BigDecimal officerProxyCashDownAmount;
 
     @ApiModelProperty("官方给代理提现下分次数")
     @TableField("officer_proxy_cash_down_times")
@@ -305,7 +167,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理被上级提现下分")
     @TableField("proxy_be_cash_down_amount")
-    private Long proxyBeCashDownAmount;
+    private BigDecimal proxyBeCashDownAmount;
 
     @ApiModelProperty("代理被上级提现下分次数")
     @TableField("proxy_be_cash_down_times")
@@ -313,7 +175,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给下级提现下分")
     @TableField("proxy_to_child_cash_down_amount")
-    private Long proxyToChildCashDownAmount;
+    private BigDecimal proxyToChildCashDownAmount;
 
     @ApiModelProperty("代理给下级提现下分次数")
     @TableField("proxy_to_child_cash_down_times")
@@ -321,7 +183,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给会员提现下分")
     @TableField("proxy_to_mem_cash_down_amount")
-    private Long proxyToMemCashDownAmount;
+    private BigDecimal proxyToMemCashDownAmount;
 
     @ApiModelProperty("代理给会员提现下分次数")
     @TableField("proxy_to_mem_cash_down_times")
@@ -329,7 +191,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("官方给代理授信上分")
     @TableField("officer_proxy_credit_up_amount")
-    private Long officerProxyCreditUpAmount;
+    private BigDecimal officerProxyCreditUpAmount;
 
     @ApiModelProperty("官方给代理授信上分次数")
     @TableField("officer_proxy_credit_up_times")
@@ -337,7 +199,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理被上级授信上分")
     @TableField("proxy_be_credit_up_amount")
-    private Long proxyBeCreditUpAmount;
+    private BigDecimal proxyBeCreditUpAmount;
 
     @ApiModelProperty("代理被上级授信上分次数")
     @TableField("proxy_be_credit_up_times")
@@ -345,7 +207,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给下级授信上分")
     @TableField("proxy_to_child_credit_up_amount")
-    private Long proxyToChildCreditUpAmount;
+    private BigDecimal proxyToChildCreditUpAmount;
 
     @ApiModelProperty("代理给下级授信上分次数")
     @TableField("proxy_to_child_credit_up_times")
@@ -353,7 +215,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给会员授信上分")
     @TableField("proxy_to_mem_credit_up_amount")
-    private Long proxyToMemCreditUpAmount;
+    private BigDecimal proxyToMemCreditUpAmount;
 
     @ApiModelProperty("代理给会员授信上分次数")
     @TableField("proxy_to_mem_credit_up_times")
@@ -361,7 +223,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("官方给代理授信下分")
     @TableField("officer_proxy_credit_down_amount")
-    private Long officerProxyCreditDownAmount;
+    private BigDecimal officerProxyCreditDownAmount;
 
     @ApiModelProperty("官方给代理授信下分次数")
     @TableField("officer_proxy_credit_down_times")
@@ -369,7 +231,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理被上级授信下分")
     @TableField("proxy_be_credit_down_amount")
-    private Long proxyBeCreditDownAmount;
+    private BigDecimal proxyBeCreditDownAmount;
 
     @ApiModelProperty("代理被上级授信下分次数")
     @TableField("proxy_be_credit_down_times")
@@ -377,7 +239,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给下级授信下分")
     @TableField("proxy_to_child_credit_down_amount")
-    private Long proxyToChildCreditDownAmount;
+    private BigDecimal proxyToChildCreditDownAmount;
 
     @ApiModelProperty("代理给下级授信下分次数")
     @TableField("proxy_to_child_credit_down_times")
@@ -385,10 +247,14 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("代理给会员授信下分")
     @TableField("proxy_to_mem_credit_down_amount")
-    private Long proxyToMemCreditDownAmount;
+    private BigDecimal proxyToMemCreditDownAmount;
 
     @ApiModelProperty("代理给会员授信下分次数")
     @TableField("proxy_to_mem_credit_down_times")
     private Long proxyToMemCreditDownTimes;
+
+    @ApiModelProperty(value = "其他调整")
+    @TableField("other_adjust_amount")
+    private BigDecimal otherAdjustAmount;
 
 }

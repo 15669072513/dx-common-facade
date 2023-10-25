@@ -75,6 +75,10 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     NO_CONTRACT_PROXY(100054, "您尚未签订契约,无法新增下级代理哦"),
     NO_BIZTYPE_PROXY(100055, "代理天下钱包充值类型不能为空"),
     MOBILE_EXP_JAV(100056, "手机号码格式验证错误"),
+    NOT_DIRECT_SUB_MEMBER(100057, "该会员不是直属会员"),
+    NOT_SUB_MEMBER(10058, "不是代理的下级会员"),
+    NOT_DIRECT_SUB_PROXY(10059, "不是直属下级代理"),
+    NOT_SUB_PROXY(10060,"不是下级代理"),
     QUERY_SUCCESS(200000, "查询成功！"),
     QUERY_FAIL(200001, "查询失败！"),
     SAVE_SUCCESS(200002, "保存成功！"),
@@ -173,6 +177,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     LOAN_EXCEED_LIMIT(700014, "借款金额超过限度"),
     REPAY_EXCEED_LIMIT(700015, "还款金额超过限度"),
     WALLET_AMOUNT_VALID_FAIL(700017, "校验失败"),
+    PAY_PASSWORD_NOT_SET(700018, "支付密码未设置"),
     DEPOSIT_AMOUNT_ERROR(800001, "充值金额必须大于0"),
     DEPOSIT_MORE_COUNT(800002, "多次存款失败"),
     FAIL(999999, "系统处理失败"),
@@ -223,7 +228,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     what协议的虚拟地址必须以1或者3开头(300028, "协议的虚拟地址必须以1或者3开头"),
     what协议的虚拟地址必须以0x开头(300028, "协议的虚拟地址必须以0x开头"),
     what协议的虚拟地址必须以T开头(300028, "协议的虚拟地址必须以T开头"),
-    USER_GAME_STATUS_ERROR_2(600005, "账号已被锁定，无法进行游戏，请联系客服询问!"),
+    USER_GAME_STATUS_ERROR_2(600005, "账号已被锁定，请联系客服。"),
     //USER_VIRTUAL_ACCOUNT_BLACK(300075),//账户已被禁用，请更换其他虚拟币账户
     ACCESS_TOKEN(500, "授权码不能为空"), //
     请输入合法的姓名(81000004, "请输入合法的姓名"), //

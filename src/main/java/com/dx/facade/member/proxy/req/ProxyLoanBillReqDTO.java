@@ -25,6 +25,9 @@ public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
     @ApiModelProperty("会员账号")
     private String memberName;
 
+    @ApiModelProperty("查看下级账号名称")
+    private String nextName;
+
     @ApiModelProperty("账单号")
     private String billNo;
 
@@ -52,6 +55,9 @@ public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
      * 当前登录userid
      */
     private Long curUserId;
+
+    @ApiModelProperty("代理层级")
+    private Integer proxyLevel;
 
 
 }

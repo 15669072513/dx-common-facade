@@ -54,6 +54,9 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("返水金额")
     private BigDecimal rebateAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("其他调整")
+    private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
+
     @ApiModelProperty("返水金额VND")
     private BigDecimal rebateAmountVND = BigDecimal.ZERO;
 
@@ -104,14 +107,14 @@ public class MemberNetAmountSummaryRespDTO {
         return netAmount.divide(betAmount, 4, RoundingMode.DOWN);
     }
 
-    /**
-     * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
-     *
-     * @return
-     */
-    public BigDecimal getNetProfit() {
-        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
-    }
+//    /**
+//     * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
+//     *
+//     * @return
+//     */
+//    public BigDecimal getNetProfit() {
+//        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+//    }
 
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 VND

@@ -28,7 +28,7 @@ public class ProxyLoanBillRespDTO {
     @ApiModelProperty("账号")
     private String acctName;
 
-    @ApiModelProperty("账号类型,1-一代,2-二代,99-会员")
+    @ApiModelProperty("账号类型,0-总代,1-一代,2-二代,99-会员")
     private Integer acctType;
 
     @ApiModelProperty("账户状态,0-正常 1-锁定")
@@ -42,6 +42,9 @@ public class ProxyLoanBillRespDTO {
 
     @ApiModelProperty("所属总代")
     private String topProxyName;
+
+    @ApiModelProperty("代理用户名层级路径")
+    private String proxyPathUserName;
 
     @ApiModelProperty("风控层级")
     private String windControlName;
@@ -78,4 +81,6 @@ public class ProxyLoanBillRespDTO {
 
     @ApiModelProperty("是否有下级,0-否,1-有")
     private Integer hasNext;
+
+    private Long userId;
 }

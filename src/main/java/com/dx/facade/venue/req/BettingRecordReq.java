@@ -30,7 +30,7 @@ public class BettingRecordReq extends PageRequest {
     private String memberName;
 
     @ApiModelProperty(value = "场馆类型,zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞", required = true)
-    @NotBlank(message = "场馆类型不能为空")
+    //@NotBlank(message = "场馆类型不能为空")
     private String venueType;
 
     @ApiModelProperty(value = "注单状态3-全部，1-已结算，0-未结算, 2-已取消/不结算", required = true)

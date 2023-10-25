@@ -67,6 +67,7 @@ public enum ConfigKeyEnum {
     RECHARGE_TYPE_CONFIG("recharge.type.config", "2"),
     RECHARGE_SIGNAL_INVALID_TIME("recharge.signal.invalid.time", "2"),
     EXPORT_WAIT_TIME("export.wait.time", "2"),
+    REPORT_QUERY_WAIT_TIME("report.query.wait.time", "2"),
     SURROGATE_SETTLE_DEFAULT_CONFIG("surrogate.settle.default.config", "2"),
     SURROGATE_SETTLE_PERIOD_CONFIG("surrogate.settle.period.config", "1"),
     FUNDS_AUDIT_PAGEREFRESH_INTERVAL_CONFIG("funds.audit.pagerefresh.interval.config", "2"),
@@ -81,6 +82,11 @@ public enum ConfigKeyEnum {
     LIMIT_REGION_COUNTRY_IP("limit.region.country.ip", "1"),
     REGISTER_DEFAULT_VENTURE_CODE("register.default.venture.code ", "1"),//默认代理合营码
     DEPOSIT_DEFAULT_APPID_MODEL("deposit.default.appid.model", "1"),//存取款新增通道切换参数
+    CLIENT_GEETEST_SWITCH("client.geetest.switch", "1"),//app端极验开关
+    PROXY_GEETEST_SWITCH("proxy.geetest.switch", "1"),//代理后台极验开关
+    MERCHANT_GEETEST_SWITCH("merchant.geetest.switch", "1"),//中控后台极验开关
+
+
 
     //jav项目中的字典
     JAV_FREE_VIEW_DAY_COUNT("jav.free.view.day.count", "1"),
@@ -181,7 +187,7 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
     // 新账单通知
     MESSAGE_MEMBER_NEW_BILL("message.member.new.bill", "1"),
-    MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"),
+    MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"), // 个人资料修改通知
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
     MESSAGE_MEMBER_UPGRADE_BONUS("message.member.upgrade.bonus", "1"),
@@ -194,30 +200,34 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_DEPOSIT_BONUS("message.member.deposit.bonus", "1"),
 
     //系统消息code 代理
-    MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),
-    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),
+    MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),//合营伙伴
+    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_SUB_CONTRACT("message.proxy.sub.contract", "1"),
     MESSAGE_PROXY_CONTRACT_SUCCESS("message.proxy.contract.success", "1"),
     MESSAGE_PROXY_SUB_CONTRACT_ACCEPT("message.proxy.sub.contract.accept", "1"),
     MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),
-    MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),
-    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"),
+    MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),//新增下级会员通知
+    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"), // 返点奖励
     MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"),
-    MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),
-    MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),
-    MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),
+    MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),//返点比例失效
+    MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),//开通总代
+    MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),//开通代理通知
+
+    MESSAGE_PROXY_CLUB_SUCCESS("message.proxy.club.success", "1"), // 俱乐部审核通过
+    MESSAGE_PROXY_CLUB_FAIL("message.proxy.club.fail", "1"), //俱乐部审核拒绝
 
 	
 	//后台登录IP白名单功能开关（0=关闭  1=开启）
 	LOGIN_IP_WHITELIST_SWITCH("login.ip.whitelist.switch", "2"),
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
-    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),
+    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
     /** 币种 */
     DX_CURRENCY("dx.currency","1"),
     /** 会员默认头像 */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
-
+    /** App端会员默认头像 */
+    APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url","1"),
     //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
     PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
     PROXY_LOAN_BILL_PERIOD_HOUR("proxy.loan.bill.period.hour", "1"),
@@ -227,6 +237,19 @@ public enum ConfigKeyEnum {
     //资资金>账单相关设置 会员单笔可提现最大额度
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
     //******************************资金模块配置,其它模块请注意自己的位置哈************************************
+    /** 同时开牌桌上限 */
+    CLUB_MAXIMUM_NUMBER("club.maximum.number","1"),
+    /** 同时开牌桌上限 */
+    MAXIMUM_SIMULTANEOUS_LIMIT("maximum.simultaneous.limit","1"),
+    /** 单牌桌旁观人数上限 */
+    MAXIMUM_ONLOOKERS_LIMIT("maximum.onlookers.limit","1"),
+    /** 单牌桌可坐下人数上限 */
+    MAXIMUM_SIT_LIMIT("maximum.sit.limit","1"),
+    /** 德州单牌桌累计带入上限（倍BB） */
+    TEXAS_UPPER_LIMIT("texas.upper.limit","1"),
+    /** 短牌单牌桌累计带入上限（倍Ante） */
+    SHOORT_UPPER_LIMIT("short.upper.limit","1"),
+    
 	;
 
     //code转换

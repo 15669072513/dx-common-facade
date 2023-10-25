@@ -1,6 +1,5 @@
 package com.dx.facade.account.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -24,9 +23,14 @@ public class GameAmountTotalRespDTO {
     private Long tableId;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal totalInAmount;
+    private BigDecimal totalInAmount=new BigDecimal(0.0);
+
+    @ApiModelProperty("玩家总带入总次数")
+    private Integer inCount=0;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal totalOutAmount;
+    private BigDecimal totalOutAmount=new BigDecimal(0.0);
 
+    @ApiModelProperty("玩家总带出总次数")
+    private Integer outCount=0;
 }

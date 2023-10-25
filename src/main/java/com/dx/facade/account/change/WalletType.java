@@ -1,7 +1,9 @@
 package com.dx.facade.account.change;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -9,26 +11,23 @@ import java.util.List;
  */
 public enum WalletType implements IWalletType {
     cash(1, "会员中心钱包"),
-    //彩金钱包(2, "彩金钱包"),
-    //虚拟货币(3, "虚拟货币"),
-    //会员积分(4, "会员积分"),
     cash_lock(5, "会员中心钱包冻结余额"),
-    commission(6, "佣金钱包"), // 去掉了
-    quota(7, "额度钱包"),       //  去掉了
+    commission(6, "佣金钱包"),
+    quota(7, "额度钱包"),
     agent_lock(8, "代理中心钱包冻结余额"),
     credit_available(9, "会员信用钱包"),
     credit_total(10, "会员信用额度"),
-    //场馆钱包 虚拟钱包
     texas(11, "德州场馆钱包"),
     video(12, "真人场馆钱包"),
     sports(13, "体育场馆钱包"),
     lottery(14, "彩票场馆钱包"),
     poker(15, "棋牌场馆钱包"),
     e_sports(16, "电竞场馆钱包"),
-
     agent_cash(17, "代理中心钱包"),
     agent_credit_available(18, "代理信用钱包"),
     agent_credit_total(19, "代理信用额度"),
+
+    illegal_type(-1, "未知的类型")
     ;
 
     private Integer code;
@@ -54,14 +53,15 @@ public enum WalletType implements IWalletType {
         return desc;
     }
 
+    static Map<Integer, WalletType> code2Enum = new HashMap<>();
+    static {
+        for (WalletType value : WalletType.values()) {
+            code2Enum.put(value.code, value);
+        }
+    }
 
     public static WalletType getType(Integer code) {
-        for (WalletType accountType : values()) {
-            if (accountType.code.equals(code)) {
-                return accountType;
-            }
-        }
-        return null;
+        return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
     }
 
     /**

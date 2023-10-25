@@ -26,6 +26,9 @@ public class MemberLoginLogParam extends PageRequest {
     @ApiModelProperty(value = "商户id", hidden = true)
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private List<Long> merchantIds;
+    
+    @ApiModelProperty(value = "用户ID")
+    private Long userId;
 
     /**
      * 用户名

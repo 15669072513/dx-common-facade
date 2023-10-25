@@ -47,13 +47,19 @@ public class GameTableInfoListEsResp implements Serializable {
 
     @ApiModelProperty("游戏名称")
     private String gameName;
+
+    @ApiModelProperty("游戏类型 2001:德州局 2002:短牌局")
+    private Integer gameType;
+
     @ApiModelProperty("玩家ID")
     private Long userId;
 
     @ApiModelProperty("玩家名称")
     private String playerName;
+
     @ApiModelProperty("牌桌创建时间")
     private Long tableCreateDate;
+
     @ApiModelProperty("牌局开始时间")
     private Long handBeginDate;
 
@@ -67,22 +73,22 @@ public class GameTableInfoListEsResp implements Serializable {
     private String userNames;
 
     @ApiModelProperty("局次")
-    private Integer handNum;
+    private Integer handNum=0;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal firstBringChip;
+    private BigDecimal firstBringChip=BigDecimal.ZERO;
 
     @ApiModelProperty("中途带入金额汇总")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
 
     @ApiModelProperty("期末余额汇总")
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
 
     @ApiModelProperty("公牌信息")
     private String globalPokerCode;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal effectivePool;
+    private BigDecimal effectivePool=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
@@ -91,13 +97,13 @@ public class GameTableInfoListEsResp implements Serializable {
     private Integer tableStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpAmount;
+    private BigDecimal pumpAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("庄家位置")
     private Integer button;

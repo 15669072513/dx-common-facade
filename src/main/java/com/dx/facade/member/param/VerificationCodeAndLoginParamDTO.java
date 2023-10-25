@@ -1,10 +1,7 @@
 package com.dx.facade.member.param;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
 
@@ -38,6 +35,7 @@ public class VerificationCodeAndLoginParamDTO implements BaseParmDTO{
     private Integer clientType;
 
     @ApiModelProperty(value = "注册ip")
+    @ToString.Exclude
     private String ip;
 
     @ApiModelProperty(value = "终端设备号（6-40）")

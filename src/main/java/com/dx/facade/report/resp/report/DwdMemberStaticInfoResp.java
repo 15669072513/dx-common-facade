@@ -76,5 +76,26 @@ public class DwdMemberStaticInfoResp extends DwdMemberStaticInfoSummaryResp{
     @ApiModelProperty(value = "风控层级名称")
     private String windControlName;
 
+//    @ApiModelProperty("代理授信上分金额")
+//    private BigDecimal proxyCreditUpAmount;
+//    @ApiModelProperty("代理授信上分次数")
+//    private Long proxyCreditUpTimes;
+//    @ApiModelProperty("代理授信下分金额")
+//    private BigDecimal proxyCreditDownDmount;
+//    @ApiModelProperty("代理授信下分次数")
+//    private Long proxyCreditDownTimes;
+//    @ApiModelProperty("返点金额")
+//    private BigDecimal rebateAmount;
+//
+//    @ApiModelProperty("代理授信下分次数")
+//    private Long proxyCashUpAmount;
+//    @ApiModelProperty("代理授信下分次数")
+//    private Long proxyCashUpTimes;
+//    @ApiModelProperty("代理授信下分次数")
+//    private Long proxyCashDownAmount;
+//    @ApiModelProperty("代理授信下分次数")
+//    private Long proxyCashDownTimes;
+    @ApiModelProperty("昵称")
+    private String nickName;
 
 }

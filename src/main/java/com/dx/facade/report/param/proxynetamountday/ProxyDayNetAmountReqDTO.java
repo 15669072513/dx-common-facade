@@ -40,6 +40,12 @@ public class ProxyDayNetAmountReqDTO extends PageRequest {
     @ApiModelProperty("当前用户代理账号名")
     private String currentProxyName;
 
+    @ApiModelProperty(value = "上级代理名称")
+    private String parentProxyName;
+
+    @ApiModelProperty("当前用户代理账号名")
+    private String selfProxyName;
+
     /**
      * parentProxyId
      */

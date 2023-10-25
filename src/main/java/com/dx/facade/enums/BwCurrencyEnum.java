@@ -1,5 +1,7 @@
 package com.dx.facade.enums;
 
+import lombok.Data;
+
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.Objects;
