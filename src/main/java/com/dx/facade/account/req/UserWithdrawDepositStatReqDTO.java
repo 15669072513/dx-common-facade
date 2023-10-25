@@ -30,7 +30,7 @@ public class UserWithdrawDepositStatReqDTO implements Serializable {
     private Integer userType;
 
     /**
-     * 存款支付方式集合
+     * 存款支付方式集合：1-银行卡，2-虚拟币
      */
     private List<Integer> payTypes;
     /**
