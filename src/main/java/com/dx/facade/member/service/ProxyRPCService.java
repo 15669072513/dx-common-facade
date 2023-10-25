@@ -121,7 +121,7 @@ public interface ProxyRPCService {
      * @date 2023/9/25
      * @copyright
      */
-    CommonResp<Boolean> validateWithdrawPassword(Long merchantId, Long userId, String payPassword);
+    CommonResp<Boolean> validateDepositWithdrawPassword(Long merchantId, Long userId, String payPassword, Integer userType);
 
     /**
      * 校验代理支付密码
@@ -132,7 +132,7 @@ public interface ProxyRPCService {
      * @return 校验成功返回true
      * @throws BizException 业务异常
      */
-    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword);
+    CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword, Integer userType);
     
     /**
      * 校验代理密码

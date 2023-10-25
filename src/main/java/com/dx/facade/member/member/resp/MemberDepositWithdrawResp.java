@@ -55,6 +55,10 @@ public class MemberDepositWithdrawResp {
     private BigDecimal withdrawAmountBase;
     @ApiModelProperty(value = "取款金额转换后")
     private BigDecimal withdrawAmountExchange;
+    @ApiModelProperty(value = "预计支付金额基准")
+    private BigDecimal expectedAmountBase;
+    @ApiModelProperty(value = "实际支付金额转换后")
+    private BigDecimal expectedAmountExchange;
     @ApiModelProperty(value = "手续费")
     private BigDecimal fee;
 
