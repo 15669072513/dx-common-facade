@@ -3,6 +3,7 @@ package com.dx.facade.payment.enums;
 import com.dx.enums.ConstantEnums;
 import com.dx.exception.BizException;
 import com.dx.facade.common.OrderNoUtils;
+import com.dx.facade.enums.DepositOrderStatus;
 
 import java.util.Objects;
 
@@ -237,6 +238,17 @@ public class Payment {
         public static OrderDepositAppStatus getAppStatusByOrderCode (OrderDepositStatus orderDepositStatus) {
             switch (orderDepositStatus) {
                 case 待付款:
+                    return OrderDepositAppStatus.待处理;
+                case 成功:
+                    return OrderDepositAppStatus.成功;
+                default:
+                    return OrderDepositAppStatus.已取消;
+            }
+        }
+
+        public static OrderDepositAppStatus getAppStatusByOrderCode (DepositOrderStatus depositOrderStatus) {
+            switch (depositOrderStatus) {
+                case 待确认:
                     return OrderDepositAppStatus.待处理;
                 case 成功:
                     return OrderDepositAppStatus.成功;
@@ -572,8 +584,9 @@ public class Payment {
 
     public enum DepositBizType {
         会员存款(1, "会员存款"),
-        佣金存款(6, "佣金存款"),
-        额度存款(7, "额度存款"),
+        代理存款(17, "代理存款"),
+        //佣金存款(6, "佣金存款"),
+        //额度存款(7, "额度存款"),
         ;
         private Integer code;
         private String desc;
@@ -949,8 +962,8 @@ public class Payment {
      */
     public enum ObDepositOrderAppStatus {
         待处理(1, "待支付", 0),
-        成功(3, "成功", 1),
-        已取消(2, "失败", 2);
+        成功(3, "成功", 3),
+        已取消(2, "失败", 4);
         private Integer code;
         private String desc;
         private Integer thirdCode;

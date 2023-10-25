@@ -38,6 +38,9 @@ public class WithDrawOrderDto implements Serializable {
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long userId;
 
+	@ApiModelProperty(value = "会员名称")
+	private String userName;
+
 	@ApiModelProperty(value = "支付大类型")
 	private Integer payType;
 
@@ -57,7 +60,7 @@ public class WithDrawOrderDto implements Serializable {
 	@NotNull(message = "提款方式不能为空")
 	@ApiModelProperty(value = "提款方式(1=人民币取款 2=USDT取款)", required = true,example = "1")
 	@Min(value = 1, message = "提款方式最小值只能是1")
-	@Max(value = 2, message = "提款方式最大值只能是2")
+	@Max(value = 4, message = "提款方式最大值只能是4")
 	private Integer withdrawType;
 
 	@NotNull(message = "收款账户id不能为空")
@@ -85,5 +88,35 @@ public class WithDrawOrderDto implements Serializable {
 
 	@ApiModelProperty(value = "提款的虚拟账户信息，根据提款方式确认是否传参")
 	private CreateVirtualReqDTO virtualInfo;
+
+	@ApiModelProperty(value = "当前取款限制类型: 1-账单限制，2流水限制")
+	private Integer withdrawLimitType;
+
+	/**
+	 * 所需有效流水
+	 */
+	@ApiModelProperty(value = "所需有效流水")
+	private BigDecimal validBillAmount;
+
+	/**
+	 * 已完成有效流水
+	 */
+	@ApiModelProperty(value = "已完成有效流水")
+	private BigDecimal completeBillAmount;
+
+	/**
+	 * 剩余可提现金额
+	 */
+	@ApiModelProperty(value = "剩余可提现金额")
+	private BigDecimal withdrawRemainAmount;
+
+	@ApiModelProperty(value = "银行卡提现手续费", hidden = true)
+	private BigDecimal withdrawBankFee;
+
+	@ApiModelProperty(value = "trc20提现手续费", hidden = true)
+	private BigDecimal withdrawTrcFee;
+
+	@ApiModelProperty(value = "erc20提现手续费", hidden = true)
+	private BigDecimal withdrawErcFee;
 
 }

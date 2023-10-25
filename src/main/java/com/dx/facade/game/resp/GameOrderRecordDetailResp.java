@@ -5,7 +5,6 @@ import lombok.Data;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 /**
  * 注单详情查询结果对象
@@ -60,17 +59,17 @@ public class GameOrderRecordDetailResp implements Serializable {
      * 投注金额
      */
     @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount=BigDecimal.ZERO;
     /**
      * 有效投注（抽水金额）
      */
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
     /**
      *  盈亏的筹码
      */
     @ApiModelProperty("盈亏的金额")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
     /**
      * 玩家ip
      */
@@ -106,7 +105,7 @@ public class GameOrderRecordDetailResp implements Serializable {
     private Integer obBetStatus;
 
     @ApiModelProperty("该类游戏总输赢")
-    private BigDecimal netAmountSum;
+    private BigDecimal netAmountSum=BigDecimal.ZERO;
 
     @ApiModelProperty("上级代理id")
     private Long parentProxyId;
@@ -143,4 +142,10 @@ public class GameOrderRecordDetailResp implements Serializable {
 
     @ApiModelProperty("币种")
     private String memberCurrency;
+
+    @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+    private Integer betType;
+
+    @ApiModelProperty(value = "抽水贡献")
+    private BigDecimal pumpContribution;
 }

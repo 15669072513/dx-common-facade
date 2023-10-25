@@ -105,56 +105,65 @@ public class GameOrderRecordUserHandResp {
      * 开始筹码
      */
     @ApiModelProperty("开始筹码")
-    private BigDecimal beforeChip;
+    private BigDecimal beforeChip=BigDecimal.ZERO;
     /**
      * 中途带入筹码
      */
     @ApiModelProperty("中途带入筹码")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
     /**
      * 首次带入
      */
     @ApiModelProperty("首次带入")
-    private BigDecimal firstBringChip;
+    private BigDecimal firstBringChip=BigDecimal.ZERO;
 
     /**
      * 结束筹码
      */
     @ApiModelProperty("结束筹码")
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
     /**
      * 有效低池
      */
     @ApiModelProperty("有效低池")
-    private BigDecimal effectivePool;
+    private BigDecimal effectivePool=BigDecimal.ZERO;
     /**
      * 有效投注
      */
-    @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
+    @ApiModelProperty("俱乐部游戏有效投注")
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
     /**
      * 抽水占比
      */
     @ApiModelProperty("抽水占比")
-    private BigDecimal rakeProportion;
+    private BigDecimal rakeProportion=BigDecimal.ZERO;
     /**
      *  赢的筹码
      */
     @ApiModelProperty("赢的筹码")
-    private BigDecimal winAmount;
+    private BigDecimal winAmount=BigDecimal.ZERO;
     /**
      *  会员输赢
      */
     @ApiModelProperty("会员输赢")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
     /**
      * 投注金额
      */
-    @ApiModelProperty("投注金额")
-    private BigDecimal betAmount;
+    @ApiModelProperty("俱乐部游戏投注金额")
+    private BigDecimal betAmount=BigDecimal.ZERO;
     /**
      * 座位号
      */
     @ApiModelProperty("座位号")
     private Integer seatNum;
+
+    @ApiModelProperty("保险投注金额")
+    private BigDecimal insuranceBetAmount;
+
+    @ApiModelProperty("保险有效投注")
+    private BigDecimal insuranceValidBetAmount;
+
+    @ApiModelProperty("抽水贡献")
+    private BigDecimal pumpContribution;
 }

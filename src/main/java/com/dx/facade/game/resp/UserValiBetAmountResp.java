@@ -4,12 +4,11 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 @Data
 public class UserValiBetAmountResp {
     @ApiModelProperty("会员id")
     private Long userId;
     @ApiModelProperty("有效投注金额")
-    private BigDecimal validBetAmountSum;
+    private BigDecimal validBetAmountSum=BigDecimal.ZERO;
 }

@@ -1,14 +1,9 @@
 package com.dx.facade.texas.resp;
 
-import com.dx.facade.common.utils.DateToLongSerializer;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.Date;
 
 /**
  * <p>
@@ -78,10 +73,10 @@ public class DxGameConfigListResp implements Serializable {
     private String bbDefaultCarry;
 
     @ApiModelProperty("补码下限")
-    private Integer complementLowerLimit;
+    private Integer complementLowerLimit=0;
 
     @ApiModelProperty("补码上限")
-    private Integer complementUpperLimit;
+    private Integer complementUpperLimit=0;
 
     @ApiModelProperty("游戏时长（H）")
     private String gameTimes;
@@ -93,7 +88,7 @@ public class DxGameConfigListResp implements Serializable {
     private String autoStartNumbers;
 
     @ApiModelProperty("抽水比例")
-    private BigDecimal rake;
+    private BigDecimal rake=BigDecimal.ZERO;
 
     @ApiModelProperty("创建时间")
     private Long createAt;
@@ -111,5 +106,17 @@ public class DxGameConfigListResp implements Serializable {
     private Integer deleteFlag;
 
     @ApiModelProperty("单牌桌累计带入上限")
-    private Integer bringInLimit;
+    private Integer bringInLimit=0;
+
+    @ApiModelProperty("turn购买保险最低值，多个用逗号隔开，支持小数点2位")
+    private String insuranceTurn;
+
+    @ApiModelProperty("选张购买功能 false-不选张 true-选张，多个用逗号隔开，支持小数点2位")
+    private Boolean insuranceChoosSheet;
+
+    @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
+    private String insuranceMode;
+
+    @ApiModelProperty("保险出发下限")
+    private Integer insuranceLower=0;
 }

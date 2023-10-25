@@ -44,4 +44,6 @@ public class UpdateProxyContractInfoReqDTO implements Serializable {
 	@ApiModelProperty("强制契约生效标志 0-未生效 1-生效")
 	private Integer enforceContractStatus;
 	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
 }

@@ -22,7 +22,7 @@ public class GameTableInfoListEsResp implements Serializable {
     private String handCode;
 
     @ApiModelProperty("牌桌主键")
-    private String tableId;
+    private Long tableId;
 
     @ApiModelProperty("牌桌code")
     private String tableCode;
@@ -73,37 +73,37 @@ public class GameTableInfoListEsResp implements Serializable {
     private String userNames;
 
     @ApiModelProperty("局次")
-    private Integer handNum;
+    private Integer handNum=0;
 
     @ApiModelProperty("期初金额汇总")
-    private BigDecimal firstBringChip;
+    private BigDecimal firstBringChip=BigDecimal.ZERO;
 
     @ApiModelProperty("中途带入金额汇总")
-    private BigDecimal bringMidwayChip;
+    private BigDecimal bringMidwayChip=BigDecimal.ZERO;
 
     @ApiModelProperty("期末余额汇总")
-    private BigDecimal afterChip;
+    private BigDecimal afterChip=BigDecimal.ZERO;
 
     @ApiModelProperty("公牌信息")
     private String globalPokerCode;
 
     @ApiModelProperty("有效底池")
-    private BigDecimal effectivePool;
+    private BigDecimal effectivePool=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
-    @ApiModelProperty("0 进行中 1已结束")
+    @ApiModelProperty("1 进行中 2已结束")
     private Integer tableStatus;
 
     @ApiModelProperty("抽水金额")
-    private BigDecimal pumpAmount;
+    private BigDecimal pumpAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("会员输赢汇总")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount;
+    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("庄家位置")
     private Integer button;

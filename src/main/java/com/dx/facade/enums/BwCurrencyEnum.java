@@ -11,7 +11,7 @@ import java.util.Objects;
  */
 public enum BwCurrencyEnum {
     //CNY("CNY", "人民币", "¥"),
-    CNY(1, "CNY", "美元", "$"),
+    CNY(1, "CNY", "人民币", "¥"),
     VND(8,"VND", "越南盾", "₫"),
     THB(6,"THB", "泰铢", "฿"),
     USDT(4,"USDT", "美元", "$"),

@@ -3,6 +3,8 @@ package com.dx.facade.texas.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.es.req.GameTableInfoListReq;
+import com.dx.facade.es.resp.GameTableInfoListEsResp;
 import com.dx.facade.game.req.GameOrderClubSumReq;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
 import com.dx.facade.game.resp.GameOrderUserTableSumResp;
@@ -13,13 +15,7 @@ import com.dx.facade.texas.req.DxTableCountReq;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoLimitReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
-import com.dx.facade.texas.resp.DxTableBaseInfoResp;
-import com.dx.facade.texas.resp.DxTableClubInfoResp;
-import com.dx.facade.texas.resp.DxTableConfigRuleResp;
-import com.dx.facade.texas.resp.DxTableCountResp;
-import com.dx.facade.texas.resp.DxTableInfoListResp;
-import com.dx.facade.texas.resp.DxTableRobotResp;
-import com.dx.facade.texas.resp.DxTableSummaryResp;
+import com.dx.facade.texas.resp.*;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -57,7 +53,6 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
-
     /**
      * 根据牌桌ID获取牌桌配置信息
      * @param tableId
@@ -164,4 +159,11 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<List<GameOrderUserTableSumResp>> getTableRecordByClubId(Long clubId, Integer gameType, LocalDateTime startTime, LocalDateTime endTime);
+
+    /**
+     * 获取用户相关的牌桌列表
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<GameTableInfoListEsResp, Void>> getTableListPageByUser(GameTableInfoListReq req);
 }
