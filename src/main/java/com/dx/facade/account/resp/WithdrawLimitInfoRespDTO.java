@@ -76,5 +76,7 @@ public class WithdrawLimitInfoRespDTO implements Serializable {
      */
     @ApiModelProperty("手动调整总额")
     private BigDecimal totalAdjust;
+    @ApiModelProperty(value = "取款标记,0-不能取款，1-可以取款，该字段只有在是流水限制类型，且所需有效流水和已完成流水都是0时，才需要判断")
+    private Integer withdrawFlag = 0;
 
 }
