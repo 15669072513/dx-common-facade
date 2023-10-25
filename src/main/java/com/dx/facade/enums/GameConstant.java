@@ -85,4 +85,42 @@ public class GameConstant {
             return null;
         }
     }
+
+    /**
+     * 牌桌状态
+     */
+    public enum TableInfoStatus {
+        进行中(1, "进行中"),
+        已结束(2, "已结束"),
+        ;
+
+        private Integer code;
+        private String desc;
+
+        TableInfoStatus(Integer code, String desc) {
+            this.code = code;
+            this.desc = desc;
+        }
+
+        public Integer code() {
+            return code;
+        }
+
+        public String desc() {
+            return desc;
+        }
+
+        public String getDesc() {
+            return desc;
+        }
+
+        public static GameConstant.TableInfoStatus getType(Integer code) {
+            for (GameConstant.TableInfoStatus enums : values()) {
+                if (enums.code.equals(code)) {
+                    return enums;
+                }
+            }
+            return null;
+        }
+    }
 }

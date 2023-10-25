@@ -35,6 +35,8 @@ public enum ConfigKeyEnum {
     MESSAGE_BONUSRECEIVE_DAYS("message.bonusreceive.days", "1"),
     MESSAGE_BONUSUNRECEIVE_DAYS("message.bonusunreceive.days", "1"),
     PAYMENT_PAYPASSWORD_WRONG_TIMES("payment.paypassword.wrong.times", "1"),
+    PAYMENT_PROXY_PAYPASSWORD_WRONG_TIMES("payment.proxy.paypassword.wrong.times", "1"),
+    PAYMENT_MEMBER_PAYPASSWORD_WRONG_TIMES("payment.member.paypassword.wrong.times", "1"),
     PAYMENT_PAYPASSWORD_WRONG_TIMES_MEMBER("payment.paypassword.wrong.times.member", "1"),
     OVERFLOW_DATEDIFF_DAYS("overflow.datediff.days", "1"),
     OVERFLOW_APPLY_AGAIN_ONOFF("overflow.apply.again.onoff", "1"),

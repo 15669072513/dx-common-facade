@@ -22,6 +22,10 @@ public class UserBankCardOperationQureyParam extends PageRequest {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
 
+    @ApiModelProperty(value = "商户idList")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private List<Long> merchantIds;
+
     @ApiModelProperty("操作时间开始")
     @NotNull(message = "操作时间开始不能为空")
     private LocalDateTime eventTimeStart;

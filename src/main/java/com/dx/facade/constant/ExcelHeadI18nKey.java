@@ -201,6 +201,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_有效投注THB = "EXCEL_HEAD_I18N_KEY.REPORT_有效投注THB"; //
 
     String REPORT_游戏名称 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏名称"; //
+    String REPORT_游戏类型 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏类型"; //
     String REPORT_投注盈亏 = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏"; //
     String REPORT_投注盈亏CNY = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏CNY"; //
     String REPORT_投注盈亏VND = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏VND"; //
@@ -346,6 +347,26 @@ public interface ExcelHeadI18nKey {
     String REPORT_返佣金额 = "EXCEL_HEAD_I18N_KEY.REPORT_返佣金额"; //
     String REPORT_佣金比例 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金比例";
     String REPORT_会员总输赢 = "EXCEL_HEAD_I18N_KEY.REPORT_会员总输赢";
+
+    String REPORT_会员净输赢="EXCEL_HEAD_I18N_KEY.REPORT_会员净输赢";
+    String REPORT_会员返水金额="EXCEL_HEAD_I18N_KEY.REPORT_会员返水金额";
+    String REPORT_会员其他调整金额="EXCEL_HEAD_I18N_KEY.REPORT_会员其他调整金额";
+
+    String REPORT_直属投注额="EXCEL_HEAD_I18N_KEY.REPORT_直属投注额";
+    String REPORT_直属有效投注额="EXCEL_HEAD_I18N_KEY.REPORT_直属有效投注额";
+    String REPORT_直属输赢金额="EXCEL_HEAD_I18N_KEY.REPORT_直属输赢金额";
+
+    String REPORT_直属返水金额="EXCEL_HEAD_I18N_KEY.REPORT_直属返水金额";
+
+    String REPORT_直属会员净输赢="EXCEL_HEAD_I18N_KEY.REPORT_直属会员净输赢";
+
+    String REPORT_直属会员其他调整="EXCEL_HEAD_I18N_KEY.REPORT_直属会员其他调整";
+    String REPORT_代理其他调整="EXCEL_HEAD_I18N_KEY.REPORT_代理其他调整";
+
+    String REPORT_场馆费用="EXCEL_HEAD_I18N_KEY.REPORT_场馆费用";
+    String REPORT_上期结余="EXCEL_HEAD_I18N_KEY.REPORT_上期结余";
+    String REPORT_代理冲正输赢="EXCEL_HEAD_I18N_KEY.REPORT_代理冲正输赢";
+
 
 
     String	FUNDS_会员姓名 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员姓名";
