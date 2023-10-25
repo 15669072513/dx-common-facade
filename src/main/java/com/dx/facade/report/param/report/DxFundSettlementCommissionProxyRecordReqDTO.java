@@ -11,6 +11,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 /**
  * 代理资金记录-代理返佣记录查询
@@ -105,5 +106,10 @@ public class DxFundSettlementCommissionProxyRecordReqDTO {
      */
     @ApiModelProperty("客户端状态：已发放、已取消、无返佣。")
     private BigDecimal payoutStatus;
+    /**
+     * 客户端状态：已发放、已取消、无返佣。
+     */
+    @ApiModelProperty("客户端状态：已发放、已取消、无返佣。")
+    private List<Integer> payoutStatusList;
 
 }
