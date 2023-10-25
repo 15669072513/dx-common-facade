@@ -44,4 +44,5 @@ public interface GameOrderRPCManagerService {
 
     CommonResp<GameOrderTableListRespDto> gameOrderTableListByUserName(GameOrderUserNameReq req);
 
+    CommonResp<GameOrderTableListRespDto> gameOrderTableListByUserId(Long userId);
 }
