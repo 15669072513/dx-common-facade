@@ -28,7 +28,7 @@ public class RegisterParamDTO implements BaseParmDTO{
 
     @ApiModelProperty(value = "会员账号", required = true)
     @NotBlank(message = "用户名不能为空")
-    @Pattern(regexp = Constants.REG_4_11, message = "账号 4-11位 至少两个字母加数字组合，首位字母")
+    //@Pattern(regexp = Constants.REG_4_11, message = "账号 4-11位 至少两个字母加数字组合，首位字母")
     private String userName;
 
     @ApiModelProperty(value = "登录密码 明文密码做一次MD5大写", required = true)
