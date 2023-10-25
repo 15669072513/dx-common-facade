@@ -40,6 +40,12 @@ public class DxSettlementCommissionTopProxyRecordReqDTO {
      */
     @ApiModelProperty("代理id -> 总代id")
     private Long proxyId;
+    /**
+     *
+     * 总代账号
+     */
+    @ApiModelProperty("总代账号")
+    private String topProxyName;
 
 
 

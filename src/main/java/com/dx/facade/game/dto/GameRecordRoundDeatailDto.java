@@ -102,6 +102,9 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
+    @ApiModelProperty("是否投保 0否  1是")
+    private Integer isInsured;
+
     @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
 

@@ -31,12 +31,10 @@ public class MemberRebateAuditRespDTO {
     private String merchantName;
 
     @ApiModelProperty(value = "上级代理id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long parentProxyId;
 
-    @ApiModelProperty(value = "代理id")
-    @JsonFormat(shape = JsonFormat.Shape.STRING)
-    private Long proxyId;
+    @ApiModelProperty(value = "上级代理账号")
+    private String parentProxyName;
 
     @ApiModelProperty(value = "总代账号")
     private String topProxyName;
@@ -44,13 +42,17 @@ public class MemberRebateAuditRespDTO {
     @ApiModelProperty(value = "代理层级ID")
     private Integer proxyLevelId;
 
+    @ApiModelProperty(value = "会员id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long memberId;
+
     @ApiModelProperty(value = "会员账号")
     private String memberName;
 
-    @ApiModelProperty(value = "返水金额")
+    @ApiModelProperty(value = "个人返水金额")
     private BigDecimal rebateAmount;
 
-    @ApiModelProperty(value = "个人返水金额")
+//    @ApiModelProperty(value = "个人返水金额")
     private BigDecimal personRebateAmount;
 
     @ApiModelProperty(value = "审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 3-二审通过")
