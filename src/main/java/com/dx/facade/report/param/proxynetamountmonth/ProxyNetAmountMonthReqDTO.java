@@ -84,24 +84,15 @@ public class ProxyNetAmountMonthReqDTO {
     @ApiModelProperty(value = "投注最大金额")
     private BigDecimal maxBetAmount;
 
-
-//    @ApiModelProperty("最小净盈亏")
-//    private BigDecimal minBetAmount;
-//
-//    @ApiModelProperty("最大投注金额")
-//    private BigDecimal maxBetAmount;
-
-//    @ApiModelProperty("最小投注盈亏")
-//    private BigDecimal minNetAmount;
-//
-//    @ApiModelProperty("最大投注盈亏")
-//    private BigDecimal maxNetAmount;
-
-//    @ApiModelProperty("最小净盈亏")
-//    private BigDecimal minNetProfit;
-//
-//    @ApiModelProperty("最大净盈亏")
-//    private BigDecimal maxNetProfit;
-
+    @ApiModelProperty(
+            value = "排序列名，netAmount",
+            example = "netAmount"
+    )
+    private String orderKey;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
 
 }
