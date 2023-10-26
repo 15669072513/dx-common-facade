@@ -1,5 +1,6 @@
 package com.dx.facade.account.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -88,6 +89,13 @@ public class UpdateWithdrawConfigReq implements BaseParmDTO {
 
     @ApiModelProperty("操作人")
     private String operator;
+
+    @ApiModelProperty("虚拟币TRC20协议提现手续费")
+    private BigDecimal trcVirtualFee;
+    @ApiModelProperty("虚拟币ERC20协议提现手续费")
+    private BigDecimal ercVirtualFee;
+    @ApiModelProperty("银行卡提现手续费")
+    private BigDecimal bankCardFee;
 
     @Override
     public void check() {

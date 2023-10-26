@@ -76,4 +76,7 @@ public class WithdrawInfoRespDTO implements Serializable {
     @ApiModelProperty(value = "流水开始时间")
     private LocalDateTime billStartTime;
 
+    @ApiModelProperty(value = "取款标记,0-不能取款，1-可以取款，该字段只有在是流水限制类型，且所需有效流水和已完成流水都是0时，才需要判断")
+    private Integer withdrawFlat = 0;
+
 }
