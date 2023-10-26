@@ -17,7 +17,7 @@ public class TableUserBringInfoReq implements Serializable, BaseParmDTO {
   @ApiModelProperty("用户IDs")
   private Set<Long> userIds;
   @ApiModelProperty("牌桌ID")
-  private Integer tableId;
+  private Long tableId;
 
   @Override
   public void check() {
