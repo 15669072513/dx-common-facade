@@ -123,7 +123,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     虚拟币种不正确(300027, "虚拟币种不正确,暂不支持该币种，请填写正确的虚拟币种"),
     虚拟协议不正确(300028, "虚拟协议不正确,暂不支持该协议，请填写正确的虚拟协议"),
     NUMBER_OF_VIRTUAL_CARDS_EXCEEDS(300029, "最多绑定3张虚拟卡!"),
-    VIRTUAL_CARD_IS_BOUND(300030, "该虚拟币地址不能再次绑定"),
+    VIRTUAL_CARD_IS_BOUND(300030, "该地址已存在，请勿重复添加"),
     ADD_VIRTUAL_BANK_FAIL(300031, "添加虚拟卡失败"),
     存款金额不能超过10位数(300036, "存款金额不能超过10位数"),
     LOWER_MEMBER_LIST_ERROR(300037, "下级会员列表查询异常"),
