@@ -26,4 +26,5 @@ public class DxSettlementDetailDto implements Serializable {
     private String eventId;
     private Integer eventType;
     private Long eventTime;
+    private Integer roundNo;
 }

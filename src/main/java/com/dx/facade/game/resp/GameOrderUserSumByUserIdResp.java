@@ -24,4 +24,6 @@ public class GameOrderUserSumByUserIdResp extends BaseRequest {
     private BigDecimal pumpAmount;
     @ApiModelProperty("有效投注金额")
     private BigDecimal validBetAmount;
+    @ApiModelProperty("保险有效投注")
+    private BigDecimal insuranceValidBetAmount;
 }
