@@ -1,6 +1,7 @@
 package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.facade.texas.resp.HandStatusResp;
 
 /**
  * 手牌RPC
@@ -8,5 +9,5 @@ import com.dx.entity.CommonResp;
 public interface HandRpcService {
     CommonResp<Boolean> startHand(Long tableId,String handCode);
     CommonResp<Boolean> updateHandStatusToException(Long tableId,String handCode);
-    CommonResp<Integer> getLastHandStatusByTableId(Long tableId);
+    CommonResp<HandStatusResp> getLastHandStatusByTableId(Long tableId);
 }

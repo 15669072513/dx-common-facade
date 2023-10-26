@@ -7,7 +7,7 @@ import lombok.Data;
 public class SendMsgReq {
 
     /**
-     * 发送系统code(德州游戏：1000)
+     * 发送系统code(德州游戏：1000;场馆：2000；资金：3000)
      */
     private String systemCode;
 
