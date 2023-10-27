@@ -55,6 +55,8 @@ public interface ArtificialAccountAddRPCService {
     @ApiModelProperty("会员人工加额记录 查询请求")
     CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddRecordPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq, Boolean isFinish) throws BizException;
 
+    CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectByPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq);
+
     @ApiModelProperty("会员人工加额记录总计")
     CommonResp<AdjustAmountTotalRespDTO> selectArtificialAccountAddTotal(ArtificialAccountAddRecordPageParmDTO req, Boolean isFinish) throws BizException;
 

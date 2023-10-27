@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -37,7 +38,7 @@ public class UserWithdrawDepositStatRespDTO implements Serializable {
      */
     private BigDecimal depositFailAmount = BigDecimal.ZERO;
     /**
-     * 前台取款成功次数
+     * 前台取款成功次数（所有银行卡虚拟币成功取款次数，包含大额取款成功次数）
      */
     private Integer withdrawSuccessNum = 0;
     /**
@@ -69,4 +70,12 @@ public class UserWithdrawDepositStatRespDTO implements Serializable {
      * 后台取款成功总额度
      */
     private BigDecimal backDepositSuccessAmount;
+    /**
+     * 大额存款（银行卡虚拟币大额取款）
+     */
+    private Integer bigWithdrawNum;
+    /**
+     * 最后一笔存款usdt金额
+     */
+    private BigDecimal lastDepositAmount;
 }
