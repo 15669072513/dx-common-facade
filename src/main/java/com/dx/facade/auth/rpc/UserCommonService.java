@@ -289,5 +289,5 @@ public interface UserCommonService {
      *
      * @return
      */
-    CommonResp<Boolean> updateGoogleAuthCode(UserReqDTO userReq);
+    CommonResp<String> updateGoogleAuthCode(UserReqDTO userReq);
 }
