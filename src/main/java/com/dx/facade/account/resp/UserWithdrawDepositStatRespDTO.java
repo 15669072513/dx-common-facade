@@ -21,35 +21,52 @@ import java.util.List;
 public class UserWithdrawDepositStatRespDTO implements Serializable {
 
     /**
-     * 存款成功次数
+     * 前台存款成功次数
      */
     private Integer depositSuccessNum = 0;
     /**
-     * 存款成功总额
+     * 前台存款成功总额
      */
     private BigDecimal depositSuccessAmount = BigDecimal.ZERO;
     /**
-     * 存款失败次数
+     * 前台存款失败次数
      */
     private Integer depositFailNum = 0;
     /**
-     * 存款失败总额
+     * 前台存款失败总额
      */
     private BigDecimal depositFailAmount = BigDecimal.ZERO;
     /**
-     * 取款成功次数
+     * 前台取款成功次数
      */
     private Integer withdrawSuccessNum = 0;
     /**
-     * 取款成功总额
+     * 前提取款成功总额
      */
     private BigDecimal withdrawSuccessAmount = BigDecimal.ZERO;
     /**
-     * 取款成功总额
+     * 前台取款成功总额
      */
     private Integer withdrawFailNum = 0;
     /**
-     * 取款失败总额
+     * 前台取款失败总额
      */
     private BigDecimal withdrawFailAmount = BigDecimal.ZERO;
+    /**
+     * 后台取款成功总次数
+     */
+    private Integer backWithdrawSuccessNum;
+    /**
+     * 后台存款成功总额度
+     */
+    private BigDecimal backWithdrawSuccessAmount;
+
+    /**
+     * 后台取款成功总次数
+     */
+    private Integer backDepositSuccessNum;
+    /**
+     * 后台取款成功总额度
+     */
+    private BigDecimal backDepositSuccessAmount;
 }

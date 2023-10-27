@@ -129,7 +129,4 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
-
-
-
 }

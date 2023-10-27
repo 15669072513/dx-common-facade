@@ -83,4 +83,7 @@ public class ProxyLoanBillRespDTO {
     private Integer hasNext;
 
     private Long userId;
+
+    @ApiModelProperty("0-实际账单，1-参考计算账单")
+    private Integer applyType;
 }

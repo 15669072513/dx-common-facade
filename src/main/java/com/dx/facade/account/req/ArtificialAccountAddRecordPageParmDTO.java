@@ -28,6 +28,12 @@ public class ArtificialAccountAddRecordPageParmDTO implements BaseParmDTO, Seria
     @ApiModelProperty(value = "用户类型(0=会员 1=代理)",required = true, example = "1")
     private Integer userType;
 
+    @ApiModelProperty(value = "用户ID-代理或会员id")
+    private Long userId;
+
+    @ApiModelProperty(value = "用户ID集合-代理或会员id集合")
+    private List<Long> userIdList;
+
     @ApiModelProperty(value = "账号", example = "abc123456")
     private String userName;
 
@@ -36,6 +42,8 @@ public class ArtificialAccountAddRecordPageParmDTO implements BaseParmDTO, Seria
 
     @ApiModelProperty(value="调整类型（会员）：1-人工充值、2-会员返水、3-会员存款后台、4-其他调整;调整类型（代理）：1-活动奖励、2-佣金、3-红利、4-监管调整、5-代客代存",example = "1")
     private Integer adjustType;
+    @ApiModelProperty(value = "人工加额类型集合，参见MemberAdjustType和ProxyAdjustType")
+    private List<Integer> adjustTypeList;
 
     @ApiModelProperty(value="调整金额-最小值",example = "10")
     private BigDecimal adjustAmountMin;
@@ -60,6 +68,9 @@ public class ArtificialAccountAddRecordPageParmDTO implements BaseParmDTO, Seria
 
     @ApiModelProperty(value = "订单状态(3=审核拒绝,4=审核通过 默认为全部)")
     private Integer orderStatus;;
+
+    @ApiModelProperty(value = "订单状态集合(订单状态(1=待一审,2=一审审核,3=待二审,4=二审审核,5一审拒绝,6二审拒绝,7=二审通过))")
+    private List<Integer> orderStatusList;;
 
     @ApiModelProperty(value = "排序列:1-申请时间")
     private Integer orderKey;
