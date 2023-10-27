@@ -93,6 +93,6 @@ public class ProxyNetAmountMonthReqDTO {
             value = "排序方式(1)：desc-降序 asc-升序",
             example = "asc"
     )
-    private String sortType;
+    private String orderType;
 
 }
