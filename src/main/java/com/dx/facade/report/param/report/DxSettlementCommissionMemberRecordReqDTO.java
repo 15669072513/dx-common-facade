@@ -53,5 +53,16 @@ public class DxSettlementCommissionMemberRecordReqDTO {
     @ApiModelProperty("代理账号")
     private String proxyName;
 
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty("会员账号")
+    private String memberName;
+    /**
+     * 上级代理账号
+     */
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
+
 
 }
