@@ -26,6 +26,7 @@ import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.models.auth.In;
 
 public interface ProxyRPCService {
 
@@ -106,7 +107,15 @@ public interface ProxyRPCService {
     CommonResp proxyRpcInfoEdit(ProxyInfoRpcEditReqDTO param) throws BizException;
 
 
-    CommonResp<Boolean> createPayPassword(Long userId, String payPassword) throws BizException;
+    /**
+     * 校验支付密码
+     * @param userId
+     * @param payPassword
+     * @param uerType
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Boolean> createPayPassword(Long userId, String payPassword, Integer uerType) throws BizException;
 
     /**
      * 返回代理详情
