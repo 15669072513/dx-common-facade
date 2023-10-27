@@ -23,4 +23,9 @@ public class MerchantGameUrlRecordRespDTO {
     private String androidUrl;
     @ApiModelProperty("ios下载地址")
     private String iosUrl;
+
+    @ApiModelProperty("随机推广域名")
+    private String promoteDomainName;
+
+
 }
