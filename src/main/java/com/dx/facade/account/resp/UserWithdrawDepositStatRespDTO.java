@@ -52,4 +52,21 @@ public class UserWithdrawDepositStatRespDTO implements Serializable {
      * 取款失败总额
      */
     private BigDecimal withdrawFailAmount = BigDecimal.ZERO;
+    /**
+     * 后台取款成功总次数
+     */
+    private Integer backWithdrawSuccessNum;
+    /**
+     * 后台存款成功总额度
+     */
+    private BigDecimal backWithdrawSuccessAmount;
+
+    /**
+     * 后台取款成功总次数
+     */
+    private Integer backDepositSuccessNum;
+    /**
+     * 后台取款成功总额度
+     */
+    private BigDecimal backDepositSuccessAmount;
 }
