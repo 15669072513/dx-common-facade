@@ -18,5 +18,5 @@ public interface WindControlRecordRPCService {
     CommonResp<WindControlLevelResp>  selectControlLvelName(String windControlId);
     CommonResp<List<ListWindControlLevelRespDTO>> selectWindControlLive(WindControlLevelIdReqDTO windDto);
 
-    CommonResp<List<WindControlUserRpcDTO>> selectByWindControlIds(List<String> windControlId);
+    CommonResp<List<WindControlUserRpcDTO>> selectByWindControlIds(List<Long> merchantIds,List<String> windControlId);
 }
