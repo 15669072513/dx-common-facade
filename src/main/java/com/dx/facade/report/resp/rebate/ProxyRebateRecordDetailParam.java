@@ -26,6 +26,9 @@ public class ProxyRebateRecordDetailParam {
 
     @ApiModelProperty("金额调整备注")
     private String auditDesc;
+    @ApiModelProperty("操作人")
+    private String operateName;
+
 
 
 }

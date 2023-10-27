@@ -41,5 +41,16 @@ public class MemberRebateDReqDTO {
     private Integer payoutStatus;
 
     private List<Integer> payoutStatusList;
+
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty("会员账号")
+    private String memberName;
+    /**
+     * 上级代理账号
+     */
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
 }
 

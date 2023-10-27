@@ -128,4 +128,7 @@ public class DxHandInfoListResp implements Serializable {
 
     @ApiModelProperty("保险盈亏")
     private BigDecimal insuredNetAmount;
+
+    @ApiModelProperty("手牌盈亏")
+    private BigDecimal handNetAmount;
 }
