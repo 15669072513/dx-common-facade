@@ -15,7 +15,7 @@ public enum AccountI18nCodeEnum implements I18nEnum {
     BANK_CARD_IS_BOUND(11001),
     // USER_BANK_BLACK(10001,"该银行卡已被禁用，请更换其他银行卡"),
     USER_BANK_BLACK(11002),
-    // NUMBER_OF_BANK_CARDS_EXCEEDS(10001,"最多绑定3张银行卡!"),
+    // NUMBER_OF_BANK_CARDS_EXCEEDS(10001,"最多绑定5张银行卡!"),
     NUMBER_OF_BANK_CARDS_EXCEEDS(11003),
     // NO_PAY_CHANNEL(10001,"暂无可用支付通道"),
     /**
