@@ -129,4 +129,12 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
+
+    /**
+     * @author Dealer
+     * @description: 钱包页面需要展示取款中状态信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<Integer> getWithdrawStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
 }
