@@ -58,7 +58,7 @@ public class ProxyNetAmountDayRespDTO {
 
     /** memberNetWinAmount */
     @ApiModelProperty(value = "会员净输赢", example = "1500.00")
-    private BigDecimal memberNetWinAmount;
+    private BigDecimal memberNetwinAmount;
     /** rebateAmount */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal rebateAmount;

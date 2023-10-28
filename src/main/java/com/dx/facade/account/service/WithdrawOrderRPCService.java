@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Map;
 
 public interface WithdrawOrderRPCService {
 
@@ -129,4 +130,19 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
+
+    /**
+     * 查询批量会员或代理的取款统计
+     * @param param
+     * @return
+     */
+    CommonResp<Map<Long,BatchUserWithdrawDepositStatRespDTO>> getBatchUserWithdrawDepositStatInfo(BatchUserWithdrawDepositStatReqDTO param);
+
+    /**
+     * @author Dealer
+     * @description: 钱包页面需要展示取款中状态信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<Integer> getWithdrawStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
 }

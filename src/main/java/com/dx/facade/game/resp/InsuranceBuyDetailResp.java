@@ -36,4 +36,6 @@ public class InsuranceBuyDetailResp {
   private BigDecimal insuredRewards;
   @ApiModelProperty("保险投注额")
   private BigDecimal insuredAmount;
+  @ApiModelProperty(value = "手牌")
+  private String handCards;
 }

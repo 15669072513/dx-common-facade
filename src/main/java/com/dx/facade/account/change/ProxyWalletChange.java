@@ -252,24 +252,21 @@ public enum ProxyWalletChange implements IWalletChange {
                 '}';
     }
 
-    // TODO  这里需要更新吗？
     public static List<ProxyWalletChange> getDepositProxyWalletChangeList() {
         return Arrays.asList(
-                ProxyWalletChange.quota_deposit,
-                ProxyWalletChange.commission_deposit,
-                ProxyWalletChange.quota_deposit_add,
-                ProxyWalletChange.commission_deposit_add,
+                //代理存款
                 ProxyWalletChange.v2_1_deposit,
+                //代理存款-后台
                 ProxyWalletChange.v2_1_deposit_back
         );
     }
 
-    // TODO 这里需要更新吗
     public static List<ProxyWalletChange> getWithdrawProxyWalletChangeList() {
         return Arrays.asList(
-                ProxyWalletChange.commission_withdraw_success,
-                ProxyWalletChange.commission_withdraw_sub,
-                ProxyWalletChange.v2_1_withdraw_success
+                //代理群款
+                ProxyWalletChange.v2_1_withdraw_success,
+                //代理取款-后台
+                ProxyWalletChange.v2_1_withdraw_back
         );
     }
 
