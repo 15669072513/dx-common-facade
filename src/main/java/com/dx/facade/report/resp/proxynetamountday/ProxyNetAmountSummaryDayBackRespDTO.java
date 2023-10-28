@@ -50,7 +50,7 @@ public class ProxyNetAmountSummaryDayBackRespDTO {
 
 
     @ApiModelProperty("会员净输赢金额")
-    private BigDecimal memberNetWinAmount;
+    private BigDecimal memberNetwinAmount;
     @ApiModelProperty("会员返水金额")
     private BigDecimal memberRebateAmount;
 
