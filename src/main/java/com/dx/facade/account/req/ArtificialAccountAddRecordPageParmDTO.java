@@ -13,6 +13,8 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
 
+import static software.amazon.ion.impl.PrivateIonConstants.False;
+
 @Data
 @Builder
 @AllArgsConstructor
