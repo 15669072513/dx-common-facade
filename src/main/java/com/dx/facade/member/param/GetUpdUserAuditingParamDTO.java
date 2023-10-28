@@ -9,6 +9,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.util.Assert;
 
+import java.util.List;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -24,6 +26,9 @@ public class GetUpdUserAuditingParamDTO implements BaseParmDTO{
 
     @ApiModelProperty("用户ID")
     private Long userId;
+
+    @ApiModelProperty("用户ID")
+    private List<Long> userIdList;
 
     @ApiModelProperty("审核申请类型,可以不传")
     private Integer applyType;

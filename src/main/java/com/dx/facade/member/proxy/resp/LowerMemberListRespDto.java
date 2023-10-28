@@ -1,6 +1,5 @@
 package com.dx.facade.member.proxy.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -121,4 +120,7 @@ public class LowerMemberListRespDto {
 
 	@ApiModelProperty(value = "层级：1-非直属会员、2-直属会员")
 	private Integer proxyLevel;
+
+	@ApiModelProperty(value = "支付密码重置审核状态 0 未审核   1 审核中")
+	private Integer payPasswordAudit = 0;
 }

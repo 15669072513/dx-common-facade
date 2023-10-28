@@ -45,9 +45,10 @@ public interface UpdateUserAuditRPCService {
 
 
     /**
-     * 查询用户审核中的信息列表
+     * 查询用户审核中的信息列表, 使用更全面的 selectUpdateUserAuditList
      */
     @ApiModelProperty(value="查询用户审核中的信息列表")
+    @Deprecated
     List<UpdateUserAuditRespDTO> getAudittingList(GetUpdUserAuditingParamDTO paramDTO) throws BizException;
 
 
