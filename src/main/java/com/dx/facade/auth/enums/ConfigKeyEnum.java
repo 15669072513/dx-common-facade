@@ -63,6 +63,8 @@ public enum ConfigKeyEnum {
     RESOURCE_BANNER_INTERVAL_TIME("resource.banner.interval.time", "1"),
     BANK_LIMIT_CHECK_NUM_UID("bank.limit.check.num.uid", "1"),
     BANK_LIMIT_CHECK_NUM_IP("bank.limit.check.num.ip", "1"),
+    USDT_TRC20_ICON_URL("usdt.trc20.icon.url", "1"),
+    USDT_ERC20_ICON_URL("usdt.erc20.icon.url", "1"),
 
     //后台使用
     RECHARGE_ACTIVE_CONFIG("recharge.active.config", "2"),
