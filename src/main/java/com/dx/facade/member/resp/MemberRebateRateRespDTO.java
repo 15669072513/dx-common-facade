@@ -26,6 +26,8 @@ import lombok.NoArgsConstructor;
 public class MemberRebateRateRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    @ApiModelProperty("总代团队返点比例")
+    private MemberRebateRateResp topProxyRebateRateResp;
     
     @ApiModelProperty("上级代理团队返点比例")
     private List<MemberRebateRateResp> proxyRebateRateResp;
