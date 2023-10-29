@@ -7,6 +7,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+
 /**
  * <p>
  * 游戏个人信息
@@ -48,6 +49,9 @@ public class DxGamePersonalResp implements Serializable {
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
+
+    @ApiModelProperty("牌桌维度入池率")
+    private BigDecimal tableBringPoolRate=BigDecimal.ZERO;
 
     @ApiModelProperty("创建人")
     private String createdBy;
