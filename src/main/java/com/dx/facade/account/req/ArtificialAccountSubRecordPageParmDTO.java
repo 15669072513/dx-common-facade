@@ -68,6 +68,8 @@ public class ArtificialAccountSubRecordPageParmDTO extends PageRequest implement
 
 	private Long userId;
 
+	private List<Long> userIds;
+
 	@Override
 	public void check() {
 		Assert.hasLength(eventTimeStart, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("eventTimeStart"));

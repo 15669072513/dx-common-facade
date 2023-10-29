@@ -8,6 +8,7 @@ import com.dx.facade.account.param.TransferGameParam;
 import com.dx.facade.account.param.WalletDetailParamDTO;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
+import com.dx.facade.account.resp.ProxyRebateResponseData;
 import com.dx.facade.account.resp.WalletDetailRespDTO;
 import com.dx.facade.account.resp.WalletDetailSumDTO;
 import com.dx.facade.texas.req.TableBringInfoReq;
@@ -16,6 +17,14 @@ import com.dx.facade.texas.resp.DxGameBillResp;
 import java.util.List;
 
 public interface WalletDetailRPCService {
+
+    /**
+     * @author Dealer
+     * @description: 获取代理返佣信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<ProxyRebateResponseData> proxyRebateInfo(Long proxyId);
 
     /**
      * 会员/代理账变记录列表

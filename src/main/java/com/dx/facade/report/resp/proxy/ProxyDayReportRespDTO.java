@@ -379,4 +379,13 @@ public class ProxyDayReportRespDTO implements Serializable {
     @TableField("commission_adjust_amount")
     private BigDecimal commissionAdjustAmount;
 
+    @ApiModelProperty(value = "首存金额")
+    @TableField("first_deposit")
+    private BigDecimal firstDeposit;
+
+    @ApiModelProperty(value = "首存时间")
+    @TableField("first_deposit_datetime")
+    private String firstDepositDatetime;
+
+
 }

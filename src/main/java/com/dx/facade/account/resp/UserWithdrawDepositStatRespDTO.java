@@ -56,20 +56,20 @@ public class UserWithdrawDepositStatRespDTO implements Serializable {
     /**
      * 后台取款成功总次数
      */
-    private Integer backWithdrawSuccessNum;
+    private Integer backWithdrawSuccessNum = 0;
+    /**
+     * 后台取成功总额度
+     */
+    private BigDecimal backWithdrawSuccessAmount = BigDecimal.ZERO;
+
+    /**
+     * 后台存款成功总次数
+     */
+    private Integer backDepositSuccessNum = 0;
     /**
      * 后台存款成功总额度
      */
-    private BigDecimal backWithdrawSuccessAmount;
-
-    /**
-     * 后台取款成功总次数
-     */
-    private Integer backDepositSuccessNum;
-    /**
-     * 后台取款成功总额度
-     */
-    private BigDecimal backDepositSuccessAmount;
+    private BigDecimal backDepositSuccessAmount = BigDecimal.ZERO;
     /**
      * 大额存款（银行卡虚拟币大额取款）
      */
