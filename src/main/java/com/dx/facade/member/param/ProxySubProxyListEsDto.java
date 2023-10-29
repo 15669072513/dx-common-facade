@@ -110,5 +110,7 @@ public class ProxySubProxyListEsDto {
 
 	@ApiModelProperty(value="累计提款金额")
 	private BigDecimal totalWithdrawAmount;
-	
+
+	@ApiModelProperty(value = "支付密码重置审核状态 0 未审核   1 审核中")
+	private Integer payPasswordAudit = 0;
 }

@@ -52,5 +52,12 @@ public class MemberRebateDReqDTO {
      */
     @ApiModelProperty("上级代理账号")
     private String parentProxyName;
+
+    /**
+     * 代理id
+     */
+    @ApiModelProperty(value = "上级代理id")
+    private Long parentProxyId;
+
 }
 
