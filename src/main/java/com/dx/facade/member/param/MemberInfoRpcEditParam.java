@@ -129,6 +129,10 @@ public class MemberInfoRpcEditParam implements Serializable {
     @ApiModelProperty(value = "支付密码重置 修改后内容")
     private MemberInfoRpcResetPayPassword resetPayPasswordAfter;
 
+    /**
+     * 使用 applyName 作为当前操作人
+     */
+    @Deprecated
     @ApiModelProperty(value="当前操作人")
     private String currentUserName;
     
