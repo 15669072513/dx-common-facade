@@ -40,6 +40,9 @@ public class UserBankCardOperationQureyParam extends PageRequest {
     @ApiModelProperty(value = "银行名称")
     private String bankName;
 
+    @ApiModelProperty(value = "银行支行")
+    private String bankRegion;
+
     @ApiModelProperty(value = "会员账号")
     @Length(max = 15, message = "会员账号不能超过15个字符")
     private String userName;

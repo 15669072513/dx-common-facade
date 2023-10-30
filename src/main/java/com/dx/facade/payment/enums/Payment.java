@@ -810,6 +810,15 @@ public class Payment {
             }
             throw new BizException("没有这个VirtualProtocolTypeEnum");
         }
+
+        public static VirtualProtocolTypeEnum getTypeByDesc(String desc) throws BizException {
+            for (VirtualProtocolTypeEnum enums : values()) {
+                if (enums.desc.equals(desc)) {
+                    return enums;
+                }
+            }
+            throw new BizException("没有这个VirtualProtocolTypeEnum");
+        }
     }
 
     /**
