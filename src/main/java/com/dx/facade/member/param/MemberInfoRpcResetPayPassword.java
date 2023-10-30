@@ -24,7 +24,11 @@ import java.io.Serializable;
 public class MemberInfoRpcResetPayPassword implements Serializable {
     
     private static final long serialVersionUID = 1L;
-	
+
+	@ApiModelProperty(value = "重置的新支付密码")
+	private String newPassword;
+
 	@ApiModelProperty("提交备注")
 	private String resetPwdRemark;
+
 }
