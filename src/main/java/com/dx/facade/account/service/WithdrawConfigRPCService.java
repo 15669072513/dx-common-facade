@@ -27,7 +27,7 @@ public interface WithdrawConfigRPCService {
      * @param userType，用户类型，0-会员，1-代理
      * @return
      */
-    WithdrawConfigResp getByUserType(Integer userType);
+    WithdrawConfigResp getByUserType(Long merchantId, Integer userType);
 
 
 }
