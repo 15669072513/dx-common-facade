@@ -279,13 +279,13 @@ public class ProxyDayReportSummaryDTO {
     private BigDecimal depositAmount;
 
     @ApiModelProperty(value = "存款次数/会员存款次数")
-    private Integer depositTimes;
+    private Long depositTimes;
 
     @ApiModelProperty(value = "总取款/会员总取款")
     private BigDecimal withdrawAmount;
 
     @ApiModelProperty(value = "取款次数/会员取款次数")
-    private Integer withdrawTimes;
+    private Long withdrawTimes;
 
     @ApiModelProperty(value = "存取差/会员存取差")
     private BigDecimal depositWithdrawDifferAmount;
