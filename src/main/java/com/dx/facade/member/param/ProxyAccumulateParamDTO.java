@@ -30,6 +30,9 @@ public class ProxyAccumulateParamDTO implements Serializable {
 
     @ApiModelProperty("累计返点")
     private BigDecimal rebate;
+    
+    @ApiModelProperty("累计返佣")
+    private BigDecimal commission;
 
     @ApiModelProperty("中心钱包转信用钱包")
     private BigDecimal cashToCredit;
