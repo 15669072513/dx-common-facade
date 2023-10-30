@@ -3,6 +3,7 @@ package com.dx.facade.texas.req;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 /**
@@ -23,4 +24,6 @@ public class DxGamePersonalReq implements Serializable {
     @ApiModelProperty("牌桌类型 2001:德州局 2002:短牌局")
     private Long tableType;
 
+    @ApiModelProperty("牌桌ID")
+    private Long tableId;
 }
