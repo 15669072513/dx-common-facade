@@ -257,4 +257,37 @@ public class ProxyDayReportSummaryDTO {
     @TableField("other_adjust_amount")
     private BigDecimal otherAdjustAmount;
 
+
+    @ApiModelProperty(value = "返佣金额")
+    @TableField("commission_amount")
+    private BigDecimal commissionAmount;
+
+    @ApiModelProperty(value = "返佣其他调整")
+    @TableField("commission_adjust_amount")
+    private BigDecimal commissionAdjustAmount;
+
+    @ApiModelProperty(value = "首存金额")
+    @TableField("first_deposit")
+    private BigDecimal firstDeposit;
+
+    @ApiModelProperty(value = "首存时间")
+    @TableField("first_deposit_datetime")
+    private String firstDepositDatetime;
+
+
+    @ApiModelProperty(value = "总存款/会员总存款")
+    private BigDecimal depositAmount;
+
+    @ApiModelProperty(value = "存款次数/会员存款次数")
+    private Long depositTimes;
+
+    @ApiModelProperty(value = "总取款/会员总取款")
+    private BigDecimal withdrawAmount;
+
+    @ApiModelProperty(value = "取款次数/会员取款次数")
+    private Long withdrawTimes;
+
+    @ApiModelProperty(value = "存取差/会员存取差")
+    private BigDecimal depositWithdrawDifferAmount;
+
 }
