@@ -110,7 +110,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     PHONE_NUMBER_NOT_BOUND(300014, "尚未绑定手机号码，请先绑定手机号码!"),
     NUMBER_OF_BANK_CARDS_EXCEEDS(300015, "最多绑定5张银行卡!"),
     BANK_CARD_ALREADY_EXISTS(300016, "银行卡已存在"),
-    NAMES_ARE_NOT_CONSISTENT(300017, "账号真实姓名与银行卡不符"),
+    NAMES_ARE_NOT_CONSISTENT(300017, "持卡人必须与会员姓名一致"),
     BANK_CARD_IS_BOUND(300018, "当前银行卡已存在, 无法添加当前银行卡"),
     MOBILE_ARE_NOT_CONSISTENT(300019, "手机号码不符合"),
     开始时间不可大于结束时间(300020, "开始时间不可大于结束时间"),
