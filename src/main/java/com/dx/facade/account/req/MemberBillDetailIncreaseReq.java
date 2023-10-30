@@ -38,4 +38,8 @@ public class MemberBillDetailIncreaseReq implements Serializable {
      */
     @NotNull(message = "流水基数不能为空")
     private BigDecimal baseAmount;
+    /**
+     * 流水倍数
+     */
+    private BigDecimal multiple;
 }
