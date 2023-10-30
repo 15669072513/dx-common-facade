@@ -102,6 +102,12 @@ public class GameTableInfoListEsResp implements Serializable {
     @ApiModelProperty("会员输赢汇总")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
+    @ApiModelProperty("总保险盈亏")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
+    @ApiModelProperty("总牌桌盈亏")
+    private BigDecimal costTotal=BigDecimal.ZERO;
+
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount=BigDecimal.ZERO;
 
