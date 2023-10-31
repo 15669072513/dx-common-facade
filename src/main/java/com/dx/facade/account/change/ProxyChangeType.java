@@ -44,7 +44,7 @@ public enum ProxyChangeType implements IChangeType {
     commission_be_transfer_to_quota(34, "佣金转额度钱包", "41"),
 
     //-------------v2---------------
-    //中心钱包 13种账变类型
+    //现金钱包 13种账变类型
     v2_cash_deposit_by_official(76, "官方给代理充值上分", ProxyBizType.v2_deposit.code().toString()),
     v2_cash_deposit_by_parent_proxy(77, "代理被上级充值上分", ProxyBizType.v2_deposit.code().toString()),
     v2_cash_deposit_to_sub_proxy(78, "代理给下级充值上分", ProxyBizType.v2_deposit.code().toString()),

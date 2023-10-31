@@ -75,7 +75,7 @@ public enum MemberAppType implements IAppType {
      */
     public static List<Integer> getChangeTypeByAppChangeType(@NotNull Integer walletType, Integer appChangeType) {
         if (walletType.intValue() == WalletType.cash.code()) {
-            //若appChangeType为空，则返回中心钱包下所有服务端账变类型
+            //若appChangeType为空，则返回现金钱包下所有服务端账变类型
             if(appChangeType == null) {
                 return Arrays.asList(
                         MemberChangeType.v2_cash_up_score.code(),

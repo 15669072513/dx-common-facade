@@ -15,7 +15,7 @@ public enum ProxyAppType implements IAppType {
     transfer(5, "代理转账"),
     other(6, "其他"),
     withdraw(7, "取款"),
-    to_center(8, "佣金转回中心钱包"),
+    to_center(8, "佣金转回现金钱包"),
     commission(9, "佣金"),
     rebate(10, "返点"),
     transfer_with_banker(11, "代理划拨"),

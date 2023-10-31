@@ -52,7 +52,7 @@ public class MemberUpDownScoreDto {
 	private String payPassword;
 
 	/**
-	 * 钱包类型 1中心钱包，2信用钱包
+	 * 钱包类型 1现金钱包，2信用钱包
 	 */
 	private Integer walletType;
 

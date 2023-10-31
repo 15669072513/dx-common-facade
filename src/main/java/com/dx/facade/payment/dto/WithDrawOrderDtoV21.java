@@ -67,7 +67,7 @@ public class WithDrawOrderDtoV21 implements Serializable {
 	@ApiModelProperty(value = "支付密码,代理佣金提款时为必填参数")
 	private String payPassword;
 
-	@ApiModelProperty(value = "当前取款限制类型: 1-账单限制，2流水限制")
+	@ApiModelProperty(value = "取款类型: 1-账单限制，2流水限制")
 	private Integer withdrawLimitType;
 
 	/**

@@ -89,7 +89,7 @@ public class WithDrawOrderDto implements Serializable {
 	@ApiModelProperty(value = "提款的虚拟账户信息，根据提款方式确认是否传参")
 	private CreateVirtualReqDTO virtualInfo;
 
-	@ApiModelProperty(value = "当前取款限制类型: 1-账单限制，2流水限制")
+	@ApiModelProperty(value = "取款类型: 1-账单限制，2流水限制")
 	private Integer withdrawLimitType;
 
 	/**

@@ -43,7 +43,7 @@ public class ActivityEnums {
     }
 
     public static enum ActivityInviteRewardSendPosition {
-        中心钱包(1, "中心钱包"),
+        现金钱包(1, "现金钱包"),
         红利中心(2, "红利中心");
 
         private Integer code;
@@ -149,9 +149,9 @@ public class ActivityEnums {
 
     public static enum ActivityInviteNotificationType {
         邀请任务红利中心(1, "邀请任务红利中心"),
-        邀请任务中心钱包(2, "邀请任务中心钱包"),
+        邀请任务现金钱包(2, "邀请任务现金钱包"),
         投注任务红利中心(3, "投注任务红利中心"),
-        投注任务中心钱包(4, "投注任务中心钱包");
+        投注任务现金钱包(4, "投注任务现金钱包");
 
         private Integer code;
         private String desc;
@@ -746,7 +746,7 @@ public class ActivityEnums {
     }
 
     public static enum ActivityBonusAuditLocation {
-        中心钱包(1, "中心钱包"),
+        现金钱包(1, "现金钱包"),
         红利中心(2, "红利中心"),
         B端钱包(3, "场馆钱包");
 
