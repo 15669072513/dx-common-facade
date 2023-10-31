@@ -44,7 +44,7 @@ public class SubmitActivityBonusAuditParam implements Serializable {
     @NotNull(message = "操作类型不能为空")
     private Integer operationType;
 
-    @ApiModelProperty(value = "发放位置1 中心钱包 2 红利中心")
+    @ApiModelProperty(value = "发放位置1 现金钱包 2 红利中心")
     @NotNull(message = "发放位置不能为空")
     private Integer location;
 

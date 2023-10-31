@@ -68,10 +68,10 @@ public class GameTransferDto implements Serializable {
     @ApiModelProperty("转账类型 1-转入；2-转出")
     private Integer transferType;
 
-    @ApiModelProperty("转出钱包 中心钱包用center ")
+    @ApiModelProperty("转出钱包 现金钱包用center ")
     private String fromWallet;
 
-    @ApiModelProperty("转入钱包 中心钱包用center")
+    @ApiModelProperty("转入钱包 现金钱包用center")
     private String toWallet;
 
     @ApiModelProperty("转账状态 0：初始 1: 成功 2：失败")

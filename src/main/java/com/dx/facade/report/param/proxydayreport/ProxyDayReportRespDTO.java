@@ -72,10 +72,10 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "代理转账次数")
     private Integer proxyTransferTimes;
 
-    @ApiModelProperty(value = "转入中心钱包总额")
+    @ApiModelProperty(value = "转入现金钱包总额")
     private BigDecimal transferCenterWalletAmount;
 
-    @ApiModelProperty(value = "转入中心钱包次数")
+    @ApiModelProperty(value = "转入现金钱包次数")
     private Integer transferCenterWalletTimes;
 
 

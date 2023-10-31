@@ -13,7 +13,7 @@ public interface PaymentComponetRPCService {
 	
 	
 	/**
-	 * 额度转账，额度代存，佣金代存，佣金转帐，佣金转中心钱包字典配置校验
+	 * 额度转账，额度代存，佣金代存，佣金转帐，佣金转现金钱包字典配置校验
 	 * @param configKeyEnum  字典类型
 	 * @param proxyId 代理Id
 	 * @param amount 本次金额

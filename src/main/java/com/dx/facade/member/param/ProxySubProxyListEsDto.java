@@ -89,7 +89,7 @@ public class ProxySubProxyListEsDto {
     @ApiModelProperty("额度钱包余额")
     private BigDecimal quotaBalance;
     
-    @ApiModelProperty(value = "中心钱包余额")
+    @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
     
     @ApiModelProperty(value = "信用钱包余额")

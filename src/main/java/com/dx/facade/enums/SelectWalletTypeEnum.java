@@ -5,7 +5,7 @@ import java.util.Map;
 
 public enum SelectWalletTypeEnum {
 
-    中心钱包(1, "中心钱包"),
+    现金钱包(1, "现金钱包"),
     信用钱包(2, "信用钱包");
 
     private Integer code;

@@ -69,7 +69,7 @@ public interface TyPayOrderRpcService {
     CommonResp<PaymentWithdrawOrderRespDTO> saveWithDrawOrderV2(WithDrawOrderDtoV2 dto);
 
     /**
-     * 佣金提款到中心钱包
+     * 佣金提款到现金钱包
      * @param proxyTransferInnerDto
      * @param proxyPo
      * @param memberBO

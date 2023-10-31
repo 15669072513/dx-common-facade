@@ -71,7 +71,7 @@ public class DepositOrderParamDTO {
     @ApiModelProperty("会员/代理id")
     private String userId;
 
-    @ApiModelProperty("存款类型，会员中心钱包=1，代理佣金余额=6,代理额度余额=7")
+    @ApiModelProperty("存款类型，会员现金钱包=1，代理佣金余额=6,代理额度余额=7")
     private List<Integer> bizTypes;
 
     @ApiModelProperty("存款人姓名")

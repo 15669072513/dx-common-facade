@@ -19,7 +19,7 @@ public interface GameTransferRPCService {
     CommonResp transferToGame(TransferToGameParamDTO paramDTO) throws BizException;
 
     /**
-     * 上分 中心钱包转入到德州
+     * 上分 现金钱包转入到德州
      * @param dto
      * @return
      * @throws BizException
@@ -28,7 +28,7 @@ public interface GameTransferRPCService {
 
 
     /**
-     * 下分 德州转出到中心钱包
+     * 下分 德州转出到现金钱包
      * @param list
      * @return
      * @throws BizException
