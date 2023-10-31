@@ -96,10 +96,10 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "代存次数")
     private Integer insteadPlayerDepositTimes;
 
-    @ApiModelProperty(value = "转入中心钱包总额(佣金转回)")
+    @ApiModelProperty(value = "转入现金钱包总额(佣金转回)")
     private BigDecimal transferCenterWalletAmount;
 
-    @ApiModelProperty(value = "转入中心钱包次数(转回次数)")
+    @ApiModelProperty(value = "转入现金钱包次数(转回次数)")
     private Integer transferCenterWalletTimes;
 
     @ApiModelProperty(value = "上级转账金额")
@@ -191,7 +191,7 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "钱包余额")
     private BigDecimal walletBalance;
 
-    @ApiModelProperty(value = "信用余额")
+    @ApiModelProperty(value = "可用额度")
     private BigDecimal creditBalance;
 
     @ApiModelProperty(value = "授信额度")

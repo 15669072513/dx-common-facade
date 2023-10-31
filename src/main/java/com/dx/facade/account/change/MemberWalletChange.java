@@ -55,24 +55,24 @@ public enum MemberWalletChange implements IWalletChange {
 
 
     //*******************V2需求会员账变明细****************
-    //中心钱包 余额9个 + 冻结余额4个，共13个
-    //场景1.代理给会员上分，会员中心钱包余额加额度，对应代理的中心钱包余额减额度；
+    //现金钱包 余额9个 + 冻结余额4个，共13个
+    //场景1.代理给会员上分，会员现金余额加额度，对应代理的现金余额减额度；
     v2_cash_up_score(WalletType.cash, MemberBizType.up_score, MemberChangeType.v2_cash_up_score, MemberAppType.v2_cash_up_score, TransType.in, Constant.MEMBER),
-    //场景2.代理在代理后台直接给会员提现下分，会员中心钱包支出，对应的代理中心钱包余额加额
+    //场景2.代理在代理后台直接给会员提现下分，会员现金钱包支出，对应的代理现金余额加额
     v2_cash_down_score(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.out, Constant.MEMBER),
-    //场景3.会员通过app发起提现，最终代理审核通过，当代理审核通过时，会员的冻结额度扣减，对应的代理中心钱包余额进行加额
+    //场景3.会员通过app发起提现，最终代理审核通过，当代理审核通过时，会员的冻结额度扣减，对应的代理现金余额进行加额
     v2_cash_down_score_audit_passed_to_proxy(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_down_score, MemberAppType.v2_cash_down_score, TransType.out, Constant.MEMBER),
-    //场景4.会员通过app发起的提现订单，被平台或代理审核拒绝，需要将会员中心钱包冻结余额返还到中心钱包余额
+    //场景4.会员通过app发起的提现订单，被平台或代理审核拒绝，需要将会员现金钱包冻结余额返还到现金余额
     v2_cash_down_score_withdraw_refused(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_refused, MemberAppType.v2_withdraw_refused, TransType.in, Constant.MEMBER),
-    //场景5.会员通过app发起提现订单，会员中心钱包余额减额，对应的会员中心钱包冻结余额加额
+    //场景5.会员通过app发起提现订单，会员现金余额减额，对应的会员现金钱包冻结余额加额
     v2_cash_down_score_withdraw_frozen(WalletType.cash, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.out, Constant.MEMBER),
     //见场景5，提现冻结时，冻结额度加额
     v2_cash_lock_down_score_frozen(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
-    //见场景4，会员提现被拒绝，会员中心钱包冻结额度扣除，返回到中心钱包的余额。
+    //见场景4，会员提现被拒绝，会员现金钱包冻结额度扣除，返回到现金钱包的余额。
     V2_cash_lock_down_score_refused(WalletType.cash_lock, MemberBizType.down_score, MemberChangeType.v2_cash_withdraw_refused, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
-    //场景6.会员向B端场馆上分，会员中心钱包余额扣除额度，转入到对应场馆钱包
+    //场景6.会员向B端场馆上分，会员现金余额扣除额度，转入到对应场馆钱包
     v2_cash_center_to_B(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_center_to_B, MemberAppType.v2_transfer, TransType.out, Constant.MEMBER),
-    //场景7.会员从B端场馆下分，场馆钱包额度扣除，加给会员的中心钱包余额
+    //场景7.会员从B端场馆下分，场馆钱包额度扣除，加给会员的现金余额
     v2_B_to_center(WalletType.cash, MemberBizType.B_mutual_center, MemberChangeType.v2_cash_B_to_center, MemberAppType.transfer, TransType.in, Constant.MEMBER),
     //场景8.会员玩游戏产生有效投注，给平台给会员定时返水
     v2_rebate(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
@@ -80,9 +80,9 @@ public enum MemberWalletChange implements IWalletChange {
     v2_rebate_add(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
     //场景10.官方调整扣除会员返水，参见中控后台人工扣除调整功能
     v2_rebate_sub(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
-    //场景11.会员从信用钱包借钱，信用钱包余额减额，对应中心钱包的余额响应加额
+    //场景11.会员从信用钱包借钱，信用钱包余额减额，对应现金钱包的余额响应加额
     v2_cash_loan(WalletType.cash, MemberBizType.v2_loan, MemberChangeType.v2_cash_loan, MemberAppType.v2_loan, TransType.in, Constant.MEMBER),
-    //场景12.与场景11相反，会员借钱后进行还钱操作，从中心钱包余额扣除额度，对应的信用余额进行加额操作
+    //场景12.与场景11相反，会员借钱后进行还钱操作，从现金余额扣除额度，对应的可用额度进行加额操作
     v2_cash_repay(WalletType.cash, MemberBizType.v2_repay, MemberChangeType.v2_cash_repay, MemberAppType.v2_repay, TransType.out, Constant.MEMBER),
 
     //德州 2个
@@ -101,13 +101,13 @@ public enum MemberWalletChange implements IWalletChange {
     v2_center_to_e_sports(WalletType.e_sports, MemberBizType.B_mutual_center, MemberChangeType.v2_center_to_B, MemberAppType.v2_transfer, TransType.in, Constant.MEMBER),
     v2_e_sports_to_center(WalletType.e_sports, MemberBizType.B_mutual_center, MemberChangeType.v2_B_to_center, MemberAppType.v2_transfer, TransType.out, Constant.MEMBER),
     //信用钱包 4个
-    //信用上下分，涉及信用余额和信用总额
-    //场景:代理给会员进行信用上(下)分，代理信用钱包减(加)额，对应的会员信用余额和信用额度加(减)额
+    //信用上下分，涉及可用额度和信用总额
+    //场景:代理给会员进行信用上(下)分，代理信用钱包减(加)额，对应的会员可用额度和信用额度加(减)额
     v2_credit_up_score(WalletType.credit_available, MemberBizType.v2_credit_up_score, MemberChangeType.v2_credit_up_score, MemberAppType.v2_credit_up_score, TransType.in, Constant.MEMBER),
     v2_credit_total_up_score(WalletType.credit_total, MemberBizType.v2_credit_up_score, MemberChangeType.v2_credit_up_score, MemberAppType.v2_credit_up_score, TransType.in, Constant.MEMBER),
     v2_credit_down_score(WalletType.credit_available, MemberBizType.v2_credit_down_score, MemberChangeType.v2_credit_down_score, MemberAppType.v2_credit_down_score, TransType.out, Constant.MEMBER),
     v2_credit_total_down_score(WalletType.credit_total, MemberBizType.v2_credit_down_score, MemberChangeType.v2_credit_down_score, MemberAppType.v2_credit_down_score, TransType.out, Constant.MEMBER),
-    //场景:会员信用借(还)款,信用余额减(加)额，中心钱包余额加(减)额
+    //场景:会员信用借(还)款,可用额度减(加)额，现金余额加(减)额
     v2_credit_loan(WalletType.credit_available, MemberBizType.v2_loan, MemberChangeType.v2_credit_loan, MemberAppType.v2_loan, TransType.out, Constant.MEMBER),
     v2_credit_repay(WalletType.credit_available, MemberBizType.v2_repay, MemberChangeType.v2_credit_repay, MemberAppType.v2_repay, TransType.in, Constant.MEMBER),
 
@@ -124,9 +124,9 @@ public enum MemberWalletChange implements IWalletChange {
     //v2_1_deposit_discount_back(WalletType.cash, MemberBizType.v2_1_deposit, MemberChangeType.v2_1_deposit_discount_back, MemberAppType.v2_1_deposit_discount, TransType.in, Constant.MEMBER),
     //会员通过平台提供的取款渠道进行取款
     v2_1_withdraw(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
-    //会员主动申请取款，中心钱包的金额会先减少被冻结
+    //会员主动申请取款，现金钱包的金额会先减少被冻结
     v2_1_withdraw_frozen(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.out, Constant.MEMBER),
-    //会员申请取款被拒绝后，冻结的钱会返还回到中心钱包
+    //会员申请取款被拒绝后，冻结的钱会返还回到现金钱包
     v2_1_withdraw_fail(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.in, Constant.MEMBER),
     //运营在中控后台帮助用户人工减额下分
     v2_1_withdraw_back(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_back, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
@@ -229,9 +229,9 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(MemberWalletChange.v2_cash_down_score_withdraw_frozen);
         //1，提现拒绝
         list.add(MemberWalletChange.v2_cash_down_score_withdraw_refused);
-        //1，中心钱包转入
+        //1，现金钱包转入
         list.add(v2_cash_center_to_B);
-        //1，转出至中心钱包
+        //1，转出至现金钱包
         list.add(v2_B_to_center);
         //1，会员返水
         list.add(MemberWalletChange.v2_rebate);
@@ -257,21 +257,21 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(MemberWalletChange.v2_bring_to_table_texas);
         //11，带出牌桌
         list.add(MemberWalletChange.v2_bring_out_table_texas);
-        //12，中心钱包转入
+        //12，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_video);
-        //12，转出至中心钱包
+        //12，转出至现金钱包
         list.add(MemberWalletChange.v2_video_to_center);
-        //13，中心钱包转入
+        //13，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_sports);
-        //13，转出至中心钱包
+        //13，转出至现金钱包
         list.add(MemberWalletChange.v2_sports_to_center);
-        //14，中心钱包转入
+        //14，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_lottery);
-        //14，转出至中心钱包
+        //14，转出至现金钱包
         list.add(MemberWalletChange.v2_lottery_to_center);
-        //15，中心钱包转入
+        //15，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_poker);
-        //15，转出至中心钱包
+        //15，转出至现金钱包
         list.add(MemberWalletChange.v2_poker_to_center);
         list.add(MemberWalletChange.v2_center_to_e_sports);
         list.add(MemberWalletChange.v2_e_sports_to_center);

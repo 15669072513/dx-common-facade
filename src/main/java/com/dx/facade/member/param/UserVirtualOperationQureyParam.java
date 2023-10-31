@@ -43,7 +43,7 @@ public class UserVirtualOperationQureyParam extends PageRequest {
     private String virtualKind;
 
     @ApiModelProperty("usdt提款协议类型，1.omni，2.erc20, 3.trc20")
-    private Integer usdtType;
+    private Integer virtualProtocol;
 
     @ApiModelProperty(value = "会员账号")
     @Length(max = 15, message = "会员账号不能超过15个字符")

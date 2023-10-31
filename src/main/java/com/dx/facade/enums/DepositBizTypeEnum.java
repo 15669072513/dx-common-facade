@@ -9,7 +9,7 @@ public enum DepositBizTypeEnum {
 	会员存款(1, "会员存款"),
 	佣金充值(6, "代理佣金充值"),
 	额度充值(7, "代理额度充值"),
-	代理存款(17, "代理中心钱包存款");
+	代理存款(17, "代理现金钱包存款");
 
 	private Integer code;
 	private String desc;

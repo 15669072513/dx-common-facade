@@ -68,7 +68,7 @@ public interface GameRpcService {
     public CommonResp<GameQueryTransferResp> queryTransfer(GameQueryTransferDto queryTransferDto);
 
     /**
-     * 根据会员ID查询该会员在所有场馆中的账户余额（剔除德州-中心钱包）
+     * 根据会员ID查询该会员在所有场馆中的账户余额（剔除德州-现金钱包）
      *
      * @param memberId
      * @param merchantId

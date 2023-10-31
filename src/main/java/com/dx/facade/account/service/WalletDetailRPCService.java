@@ -51,7 +51,7 @@ public interface WalletDetailRPCService {
 //    CommonResp<List<GameAmountTotalRespDTO>> getDxGameTableIdAmount(List<Long> idsList);
 
     /**
-     * 中心钱包向馆钱包上分完成后，向资金发送上分过程中场馆钱包的加额账变信息
+     * 现金钱包向馆钱包上分完成后，向资金发送上分过程中场馆钱包的加额账变信息
      * @param param
      * @return
      * @throws BizException
@@ -59,7 +59,7 @@ public interface WalletDetailRPCService {
     CommonResp<Void> transferCenterToBDetail(TransferGameParam param) throws BizException;
 
     /**
-     * 场馆钱包中心钱包上分完成后，向资金发送上分过程中场馆钱包的减额账变信息
+     * 场馆钱包现金钱包上分完成后，向资金发送上分过程中场馆钱包的减额账变信息
      * @param param
      * @return
      * @throws BizException

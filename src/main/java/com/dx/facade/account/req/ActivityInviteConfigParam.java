@@ -112,7 +112,7 @@ public class ActivityInviteConfigParam implements Serializable {
     @NotNull(message = "红利计算方式不能为空")
     private Integer inviteRewardCountType;
 
-    @ApiModelProperty("红利发送位置: 1-中心钱包 2-红利中心")
+    @ApiModelProperty("红利发送位置: 1-现金钱包 2-红利中心")
     @NotNull(message = "红利发送位置不能为空")
     private Integer inviteRewardSendPosition;
 

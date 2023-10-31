@@ -36,11 +36,11 @@ public class RealtimeBillRespDTO implements Serializable {
      */
     private BigDecimal withdrawAmount;
     /**
-     * 中心钱包余额
+     * 现金余额
      */
     private BigDecimal cashAvailable;
     /**
-     * 信用余额
+     * 可用额度
      */
     private BigDecimal creditAvailable;
     /**

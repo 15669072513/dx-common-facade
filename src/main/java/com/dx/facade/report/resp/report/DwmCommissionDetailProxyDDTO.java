@@ -129,19 +129,19 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     * 代理净输赢=-(会员游戏盈亏场馆费会员返水会员返水其他调整)
     */
     @ApiModelProperty("代理净输赢=-(会员游戏盈亏场馆费会员返水会员返水其他调整)")
-    private Long proxyNetwinAmount;
+    private BigDecimal proxyNetwinAmount;
 
     /**
     * 直属会员返点金额
     */
     @ApiModelProperty("直属会员返点金额")
-    private Long memberNetwinAmount;
+    private BigDecimal memberNetwinAmount;
 
     /**
     * 会员游戏盈亏(平台)
     */
     @ApiModelProperty("会员游戏盈亏(平台)")
-    private Long platformNetAmount;
+    private BigDecimal platformNetAmount;
 
     /**
     * 场馆费用
@@ -153,7 +153,7 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     * 直属会员返点金额
     */
     @ApiModelProperty("直属会员返点金额")
-    private Long memberRebateAmount;
+    private BigDecimal memberRebateAmount;
 
     /**
     * 会员返点调整添加金额

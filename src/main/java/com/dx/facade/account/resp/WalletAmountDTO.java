@@ -20,13 +20,13 @@ public class WalletAmountDTO implements Serializable {
     @ApiModelProperty("用户id")
     private String userId;
 
-    @ApiModelProperty("中心钱包额度")
+    @ApiModelProperty("现金钱包额度")
     private BigDecimal cash;
 
     @ApiModelProperty("冻结额度")
     private BigDecimal frozen;
 
-    @ApiModelProperty("信用余额")
+    @ApiModelProperty("可用额度")
     private BigDecimal creditAvailable;
 
     @ApiModelProperty("信用总额")

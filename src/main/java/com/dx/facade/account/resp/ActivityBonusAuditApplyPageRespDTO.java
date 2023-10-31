@@ -46,7 +46,7 @@ public class ActivityBonusAuditApplyPageRespDTO {
     @ApiModelProperty(value = "操作类型 1 单会员发放 2 批量发放")
     private Integer operationType;
 
-    @ApiModelProperty(value = "发放位置1 中心钱包 2 红利中心 3 B端场馆")
+    @ApiModelProperty(value = "发放位置1 现金钱包 2 红利中心 3 B端场馆")
     private Integer location;
 
     @ApiModelProperty(value = "场馆code")

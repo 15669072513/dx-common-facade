@@ -1,7 +1,8 @@
 package com.dx.facade.member.param;
 
-import io.swagger.annotations.ApiModelProperty;
-import lombok.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
 import org.hibernate.validator.constraints.Length;
 import org.springframework.util.Assert;
 
@@ -9,9 +10,12 @@ import com.dx.facade.constant.Constants;
 import com.dx.facade.member.enums.ThirdPlatform;
 import com.dx.facade.member.exception.ErrorCode;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
-import java.util.Map;
+import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 /**
  * @author grayson
@@ -28,7 +32,7 @@ public class RegisterParamDTO implements BaseParmDTO{
 
     @ApiModelProperty(value = "会员账号", required = true)
     @NotBlank(message = "用户名不能为空")
-    @Pattern(regexp = Constants.REG_4_11, message = "账号 4-11位 至少两个字母加数字组合，首位字母")
+    @Pattern(regexp = Constants.REG_4_11, message = Constants.USER_NAME_ERROR_MSG)
     private String userName;
 
     @ApiModelProperty(value = "登录密码 明文密码做一次MD5大写", required = true)

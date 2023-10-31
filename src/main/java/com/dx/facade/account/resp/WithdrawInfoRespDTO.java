@@ -51,9 +51,9 @@ public class WithdrawInfoRespDTO implements Serializable {
     @ApiModelProperty(value = "今日可用提现额度")
     private BigDecimal withdrawAvailableToday;
     /**
-     * 当前取款限制类型
+     * 取款类型
      */
-    @ApiModelProperty(value = "当前取款限制类型: 1-账单限制，2流水限制")
+    @ApiModelProperty(value = "取款类型: 1-账单限制，2流水限制")
     private Integer withdrawLimitType;
     /**
      * 剩余可提现金额

@@ -46,7 +46,7 @@ public class MemberVipRewardRecordRpcPageRespDto implements Serializable {
 	@ApiModelProperty(value = "红利发放方式: 1-系统发放")
 	private Integer sendType;
 
-	@ApiModelProperty(value = "红利发送位置: 1-中心钱包 2-红利中心")
+	@ApiModelProperty(value = "红利发送位置: 1-现金钱包 2-红利中心")
 	private Integer sendPosition;
 
 	@ApiModelProperty(value = "领取状态（0待领取/1-已领取/2-已过期）")

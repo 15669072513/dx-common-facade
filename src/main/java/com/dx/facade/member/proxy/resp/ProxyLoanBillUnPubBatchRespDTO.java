@@ -34,10 +34,10 @@ public class ProxyLoanBillUnPubBatchRespDTO {
     @ApiModelProperty("可提现额")
     private BigDecimal withdrawable;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal walletBalance;
 
-    @ApiModelProperty("信用余额")
+    @ApiModelProperty("可用额度")
     private BigDecimal creditBalance;
 
     @ApiModelProperty("授信额度")

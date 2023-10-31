@@ -1,5 +1,6 @@
 package com.dx.facade.member.param;
 
+import com.dx.facade.constant.Constants;
 import com.dx.facade.constant.DXManagerConstant;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -60,7 +61,7 @@ public class MemberInfoEditParam implements Serializable {
 
     @ApiModelProperty(value = "会员账号",required = true,example = "abc123")
     @NotBlank(message = "账号不能为空")
-    @Pattern(regexp = DXManagerConstant.REG_4_11, message = "账号 4-11位，最少1个字母+数字组合，首位字母")
+    @Pattern(regexp = Constants.REG_4_11, message = Constants.USER_NAME_ERROR_MSG)
     private String userName;
 
     @ApiModelProperty(value = "商户id", example = "588326785867908888", required = true)

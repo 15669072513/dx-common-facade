@@ -55,7 +55,7 @@ public class LowerMemberListRespDto {
 	@JsonProperty("withdraw")
 	private BigDecimal totalWithdraw;
 	
-	@ApiModelProperty("中心钱包余额")
+	@ApiModelProperty("现金余额")
 	private BigDecimal balance;
 	
 	@ApiModelProperty(value="输赢&游戏盈亏")
@@ -103,13 +103,13 @@ public class LowerMemberListRespDto {
     @ApiModelProperty(value = "授信额度/信用额度")
     private BigDecimal creditBalance;
 
-//    @ApiModelProperty(value = "中心钱包-余额")
+//    @ApiModelProperty(value = "现金钱包-余额")
 //    private BigDecimal centerWalletBalance;
     
 //    @ApiModelProperty(value = "应收账款")
 //    private BigDecimal accountsReceivable;
 
-	@ApiModelProperty("信用余额")
+	@ApiModelProperty("可用额度")
 	private BigDecimal creditAvailable;
 
 	@ApiModelProperty("昵称")
