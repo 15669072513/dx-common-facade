@@ -400,6 +400,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注金额";
     String	FUNDS_输赢金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_输赢金额";
     String	FUNDS_会员输赢 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员输赢";
+    String  FUNDS_抽水贡献 = "EXCEL_HEAD_I18N_KEY.FUNDS_抽水贡献";
     String	FUNDS_有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注";
     String	FUNDS_返水比例 = "EXCEL_HEAD_I18N_KEY.FUNDS_返水比例";
     String	FUNDS_投注时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注时间";
