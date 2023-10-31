@@ -32,4 +32,7 @@ public class InsuranceInfoListReq extends BaseRequest {
 
   @ApiModelProperty("总代id")
   private Long topProxyId;
+
+  @ApiModelProperty("代理等级")
+  private Integer proxyLevel;
 }

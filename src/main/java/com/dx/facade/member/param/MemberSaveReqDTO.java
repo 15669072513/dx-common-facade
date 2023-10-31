@@ -48,7 +48,7 @@ public class MemberSaveReqDTO {
     /** 用户名 */
     @ApiModelProperty(value = "用户名",required = true,example = "qingfeng002")
     @NotBlank(message = "用户名不能为空")
-    @Pattern(regexp = Constants.REG_4_11, message = "账号 4-11位，最少1个字母+数字组合，首位字母")
+    @Pattern(regexp = Constants.REG_4_11, message = Constants.USER_NAME_ERROR_MSG)
     @JsonProperty("username")
     private String userName;
 
