@@ -190,6 +190,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_会员净盈亏VND = "EXCEL_HEAD_I18N_KEY.REPORT_会员净盈亏VND"; //
     String REPORT_会员净盈亏THB = "EXCEL_HEAD_I18N_KEY.REPORT_会员净盈亏THB"; //
     String REPORT_投注金额 = "EXCEL_HEAD_I18N_KEY.REPORT_投注金额"; //
+    String REPORT_注单类型 = "EXCEL_HEAD_I18N_KEY.REPORT_注单类型"; //
 
     String REPORT_投注金额CNY = "EXCEL_HEAD_I18N_KEY.REPORT_投注金额CNY"; //
     String REPORT_投注金额VND = "EXCEL_HEAD_I18N_KEY.REPORT_投注金额VND"; //
@@ -735,6 +736,7 @@ public interface ExcelHeadI18nKey {
     String INSURANCE_本底池游戏投注额 = "EXCEL_HEAD_I18N_KEY.INSURANCE_本底池游戏投注额";
     String INSURANCE_保险投注额 = "EXCEL_HEAD_I18N_KEY.INSURANCE_保险投注额";
     String INSURANCE_保险输赢 = "EXCEL_HEAD_I18N_KEY.INSURANCE_保险输赢";
+    String INSURANCE_会员输赢 = "EXCEL_HEAD_I18N_KEY.INSURANCE_会员输赢";
     String INSURANCE_爆牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_爆牌";
     String INSURANCE_玩家手牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_玩家手牌";
     String INSURANCE_公牌信息 = "EXCEL_HEAD_I18N_KEY.INSURANCE_公牌信息";

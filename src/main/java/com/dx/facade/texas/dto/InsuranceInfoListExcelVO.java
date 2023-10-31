@@ -77,8 +77,8 @@ public class InsuranceInfoListExcelVO implements Serializable {
     private BigDecimal insuredAmount;
 
     @ApiModelProperty(value = "会员输赢")
-    @ExcelProperty(value = "保险输赢", index = 13)
-    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_保险输赢)
+    @ExcelProperty(value = "会员输赢", index = 13)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_会员输赢)
     private BigDecimal insuredNetAmount;
 
     @ApiModelProperty(value = "投保赔付额(爆牌)")
