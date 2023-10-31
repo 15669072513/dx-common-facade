@@ -50,7 +50,7 @@ public class AddGeneralProxyReqDTO {
 	
 	@ApiModelProperty(value = "代理账号(20)", required = true, example = "abc123")
 	@NotBlank(message = "代理账号不能为空")
-	@Pattern(regexp = Constants.REG_4_11, message = "账号 4-11位，最少1个字母+数字组合，首位字母")
+	@Pattern(regexp = Constants.REG_4_11, message = Constants.USER_NAME_ERROR_MSG)
 	private String userName;
 	
 	@ApiModelProperty(value = "登录密码(32)", required = true, example = "abc132")

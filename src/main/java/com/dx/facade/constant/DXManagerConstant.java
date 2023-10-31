@@ -232,11 +232,8 @@ public class DXManagerConstant {
 	 * 0或者1的 数字
 	 */
 	public static final String REG_NUM_0_1 = "^[0-1]*$";
-    /**
-     * 账号 4-11位，最少1个字母+数字组合，首位字母
-     */
-    public static final String REG_4_11 = "^[A-Za-z]{1}(?=(.*[a-zA-Z]){0,})(?=(.*[0-9]){1,})[0-9A-Za-z]{3,10}$";
 
+	
     public static final String REG_EMAIL = "[\\w!#$%&'*+/=?^_`{|}~-]+(?:\\.[\\w!#$%&'*+/=?^_`{|}~-]+)*@(?:[\\w](?:[\\w-]*[\\w])?\\.)+[\\w](?:[\\w-]*[\\w])?";
 
     /**
