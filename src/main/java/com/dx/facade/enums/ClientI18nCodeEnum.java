@@ -178,7 +178,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     VIRTUALADDRESS_NOT_NULL(700012, "虚拟币账户不能为空"),
     PAYTYPE_NOT_NULL(700013, "支付类型不能为空!"),
     LOAN_EXCEED_LIMIT(700014, "借款金额超过限度"),
-    REPAY_EXCEED_LIMIT(700015, "还款金额超过限度"),
+    REPAY_EXCEED_LIMIT(700015, "现金金额不足"),
     WALLET_AMOUNT_VALID_FAIL(700017, "校验失败"),
     PAY_PASSWORD_NOT_SET(700018, "支付密码未设置"),
     DEPOSIT_AMOUNT_ERROR(800001, "充值金额必须大于0"),

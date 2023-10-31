@@ -34,7 +34,7 @@ public interface ProxyTransferInnerRecordRPCService {
 	//CommonResp<PageResp<ProxyTransferInnerRecordRpcPageRespDTO, CountDto>> getProxyTransferInnerRecordPage(PageReq<ProxyTransferInnerRecordRpcPageReqDto> pageReq) throws Exception;
 
 	/**
-	 * 代理当日转中心钱包总金额
+	 * 代理当日转现金钱包总金额
 	 * @param merchantId
 	 * @param proxyId
 	 * @return

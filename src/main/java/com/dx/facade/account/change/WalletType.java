@@ -14,7 +14,7 @@ public enum WalletType implements IWalletType {
     cash_lock(5, "会员现金钱包冻结余额"),
     commission(6, "佣金钱包"),
     quota(7, "额度钱包"),
-    agent_lock(8, "代理中心钱包冻结余额"),
+    agent_lock(8, "代理现金钱包冻结余额"),
     credit_available(9, "会员信用钱包"),
     credit_total(10, "会员信用额度"),
     texas(11, "德州场馆钱包"),

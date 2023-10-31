@@ -69,7 +69,7 @@ public class MemberVipRewardFlinkReqDTO implements Serializable {
     @ApiModelProperty(value = "红利发放类型: 1-系统发放")
     private Integer sendType;
 
-    @ApiModelProperty(value = "红利发送位置: 1-中心钱包 2-红利中心")
+    @ApiModelProperty(value = "红利发送位置: 1-现金钱包 2-红利中心")
     private Integer sendPosition;
 
     @ApiModelProperty(value = "发放状态（0待发放/1-已发放/2-发放失败）")

@@ -221,7 +221,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_给代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分次数"; //
     String REPORT_被代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分差值"; //
     String REPORT_被代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分次数"; //
-    String REPORT_佣金转中心钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转中心钱包总额"; //
+    String REPORT_佣金转现金钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转现金钱包总额"; //
     String REPORT_佣金转额度钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转额度钱包总额"; //
     String REPORT_返点调整 = "EXCEL_HEAD_I18N_KEY.REPORT_返点调整"; //
     String REPORT_佣金钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金钱包余额"; //
@@ -379,8 +379,8 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_邮箱 = "EXCEL_HEAD_I18N_KEY.FUNDS_邮箱";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
-    String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
-    String	FUNDS_信用余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用余额";
+    String	FUNDS_现金余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_现金余额";
+    String	FUNDS_可用额度 = "EXCEL_HEAD_I18N_KEY.FUNDS_可用额度";
     String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
     String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
     String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
@@ -400,6 +400,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注金额";
     String	FUNDS_输赢金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_输赢金额";
     String	FUNDS_会员输赢 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员输赢";
+    String  FUNDS_抽水贡献 = "EXCEL_HEAD_I18N_KEY.FUNDS_抽水贡献";
     String	FUNDS_有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注";
     String	FUNDS_返水比例 = "EXCEL_HEAD_I18N_KEY.FUNDS_返水比例";
     String	FUNDS_投注时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注时间";
@@ -409,7 +410,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注终端";
     String	FUNDS_会员转账记录 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员转账记录";
     String	FUNDS_游戏注单 = "EXCEL_HEAD_I18N_KEY.FUNDS_游戏注单";
-    String	FUNDS_中心钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包";
+    String	FUNDS_现金钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_现金钱包";
     String	FUNDS_未结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_未结算";
     String	FUNDS_已结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_已结算";
     String	FUNDS_已取消 = "EXCEL_HEAD_I18N_KEY.FUNDS_已取消";

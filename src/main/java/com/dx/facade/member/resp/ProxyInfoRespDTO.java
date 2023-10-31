@@ -282,7 +282,7 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty(value = "信用额度")
     private BigDecimal creditQuota;
 
-    @ApiModelProperty(value = "中心钱包余额")
+    @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
     
     @ApiModelProperty(value = "应收账款")

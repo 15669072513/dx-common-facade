@@ -67,7 +67,7 @@ public class ProxyLoanBillRespDTO {
     @ApiModelProperty("可提现额")
     private BigDecimal withdrawable;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal walletBalance;
 
     @ApiModelProperty("信用钱包余额")

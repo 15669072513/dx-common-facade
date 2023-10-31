@@ -263,7 +263,7 @@ public enum AccountI18nCodeEnum implements I18nEnum {
     ACQUIRE_MEMBER_BILL_LOCK_FAILED(30083),//获取会员分布式锁失败
     WITHDRAW_LIMIT_INFO_QUERY_FAILED(30084),//取款信息查询失败
     MEMBER_BILL_DETAIL_RECORD_NOT_EXIST(30085),//会员流水记录不存在
-    CASH_WALLET_NOT_EXIST(30086),//中心钱包不存在
+    CASH_WALLET_NOT_EXIST(30086),//现金钱包不存在
 //
 //    /**
 //     * 账户已被禁用，请更换其他虚拟币账户

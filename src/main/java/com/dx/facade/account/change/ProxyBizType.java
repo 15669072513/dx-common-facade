@@ -9,7 +9,7 @@ import java.util.Map;
 
 /**
  * 代理业务类型 6佣金钱包 7额度钱包
- * V2需求，代理只有中心钱包和信用钱包
+ * V2需求，代理只有现金钱包和信用钱包
  * @author Administrator
  */
 public enum ProxyBizType implements IBizType {
@@ -36,7 +36,7 @@ public enum ProxyBizType implements IBizType {
     transfer(5, "代理转账", "6,7"),
     other(6, "其他调整", "6,7"),
     withdraw(70, "代理取款", "6"),
-    to_center(8, "佣金转中心钱包", "6"),
+    to_center(8, "佣金转现金钱包", "6"),
     commission(9, "代理佣金", "6"),
     rebate(10, "代理返点", "6"),
     commission_to_quota(11, "佣金转额度钱包", "6"),

@@ -26,7 +26,7 @@ public class InsureIsOursRecordResp implements Serializable {
     /**
      * 第几手牌
      */
-    private Integer roundNo;
+    private Long roundNo;
     /**
      * 手牌圈层
      */
