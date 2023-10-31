@@ -1,6 +1,8 @@
 package com.dx.facade.member.resp;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 import com.google.common.collect.Lists;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -52,6 +54,18 @@ public class ProxyAndMemberTreeRespDTO {
 	
     @ApiModelProperty("代理层级名称")
     private String proxyLevelName;
+    
+    /** 注册开始时间 */
+    @ApiModelProperty("注册开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String createdAtStart;
+    
+    /** 注册结束时间 */
+    @ApiModelProperty("注册结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String createdAtEnd;
     
     public List<MemberTreeRespDTO> childMemberList;
 	
