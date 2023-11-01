@@ -719,7 +719,7 @@ public interface ExcelHeadI18nKey {
     String PROFIT_投注人数 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注人数";
     String PROFIT_注单量 = "EXCEL_HEAD_I18N_KEY.PROFIT_注单量";
     String PROFIT_投注金额 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注金额";
-    String PROFIT_有效投注 = "EXCEL_HEAD_I18N_KEY.PROFIT_有效投注";
+    String PROFIT_有效投注额 = "EXCEL_HEAD_I18N_KEY.PROFIT_有效投注额";
     String PROFIT_盈亏 = "EXCEL_HEAD_I18N_KEY.PROFIT_盈亏";
 
     /** 保险列表导出 */
