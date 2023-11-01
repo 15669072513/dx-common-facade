@@ -29,7 +29,7 @@ public interface ShutdownMaintenanceRpcService {
      * @return
      * @throws BizException
      */
-    void insertShutdownMaintenance(ShutdownMaintenanceDTO dto) throws BizException;
+    CommonResp<Void> insertShutdownMaintenance(ShutdownMaintenanceDTO dto) throws BizException;
 
     /**
      * 编辑
@@ -38,7 +38,7 @@ public interface ShutdownMaintenanceRpcService {
      * @return
      * @throws BizException
      */
-    void updateShutdownMaintenance(ShutdownMaintenanceDTO dto) throws BizException;
+    CommonResp<Void> updateShutdownMaintenance(ShutdownMaintenanceDTO dto) throws BizException;
 
     /**
      * 物理删除单条数据
@@ -47,7 +47,7 @@ public interface ShutdownMaintenanceRpcService {
      * @return
      * @throws BizException
      */
-    void deleteShutdownMaintenance(Long id) throws BizException;
+    CommonResp<Void> deleteShutdownMaintenance(Long id) throws BizException;
 
 
     /**
