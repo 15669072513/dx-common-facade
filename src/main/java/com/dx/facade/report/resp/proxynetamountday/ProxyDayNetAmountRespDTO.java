@@ -63,13 +63,13 @@ public class ProxyDayNetAmountRespDTO {
     private BigDecimal memberRebateAmount;
 
     @ApiModelProperty("会员其他调整金额")
-    private BigDecimal memberArtificalPathAmount;
+    private BigDecimal memberArtificialPatchAmount;
 
     /**
      * rebateAmount
      */
-    @ApiModelProperty(value = "代理返水", example = "1500.00")
-    private BigDecimal proxyRebateAmount;
+    @ApiModelProperty(value = "代理返点", example = "1500.00")
+    private BigDecimal proxyRebatePoint;
 
 
     /**
