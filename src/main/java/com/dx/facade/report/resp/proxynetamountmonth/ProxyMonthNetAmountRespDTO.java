@@ -69,8 +69,8 @@ public class ProxyMonthNetAmountRespDTO {
     /**
      * artificialPatchAmount
      */
-    @ApiModelProperty(value = "会员账户调整", example = "1500.00")
-    private BigDecimal memberArtificalPathAmount;
+    @ApiModelProperty(value = "会员其他调整", example = "1500.00")
+    private BigDecimal memberArtificialPatchAmount;
 
     /**
      * proxyNet
@@ -83,7 +83,7 @@ public class ProxyMonthNetAmountRespDTO {
      * proxyRebatePoint
      */
     @ApiModelProperty(value = "代理返点", example = "1500.00")
-    private BigDecimal proxyRebateAmount;
+    private BigDecimal proxyRebatePoint;
 
     /**
      * artificialPatchAmount
