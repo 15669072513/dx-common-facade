@@ -21,7 +21,7 @@ public class ShutdownMaintenanceResp implements Serializable {
     private Integer status;
 
     @ApiModelProperty("'停服时间'")
-    private Long shutdownTime;
+    private LocalDateTime shutdownTime;
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
