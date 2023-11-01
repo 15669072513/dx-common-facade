@@ -55,11 +55,10 @@ public interface WithdrawOrderRPCService {
 
     /**
      * 统计指定提现订单状态下该用户的锁单数量
-     * @param lockAccount           锁单账号
-     * @param orderStatusList       提现订单状态集合
+     * @param param           参数
      * @return
      */
-    Integer countLockedStatusWithdrawOrderNum(String lockAccount, List<Integer> orderStatusList);
+    Integer countLockedStatusWithdrawOrderNum(WithdrawOrderUpdateLockReqDTO param);
 
     /**
      * 代理待审核订单总数统计
