@@ -115,7 +115,7 @@ public class ProxyNetAmountDayBackRespDTO {
 
 
     @ApiModelProperty("会员其他调整金额")
-    private BigDecimal memberArtificalPathAmount;
+    private BigDecimal memberArtificialPatchAmount;
 
 
     @ApiModelProperty("直属投注人数")
