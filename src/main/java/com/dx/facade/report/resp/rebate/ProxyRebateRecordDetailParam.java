@@ -13,8 +13,15 @@ import java.math.BigDecimal;
 @Data
 public class ProxyRebateRecordDetailParam {
     @ApiModelProperty(value = "返点记录id", required = true)
-    @NotNull(message = "返点记录ID不能为空")
     private Long id;
+
+
+    @ApiModelProperty("代理id")
+    private Long proxyId;
+    @ApiModelProperty("周期起始日期")
+    private Integer cycleStartDate;
+    @ApiModelProperty("周期结束日期")
+    private Integer cycleEndDate;
 
 
     @ApiModelProperty(value = "审核结果(1=返佣增加 2=返佣减少)",  example = "1")

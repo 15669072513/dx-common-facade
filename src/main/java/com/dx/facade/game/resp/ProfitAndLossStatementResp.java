@@ -35,9 +35,9 @@ public class ProfitAndLossStatementResp  implements Serializable {
     @ApiModelProperty("投注金额")
     private BigDecimal betAmount;
 
-    @ExcelProperty(value = "有效投注", index = 4)
-    @I18nField(headI18nKey = ExcelHeadI18nKey.PROFIT_有效投注)
-    @ApiModelProperty("有效投注")
+    @ExcelProperty(value = "有效投注额", index = 4)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.PROFIT_有效投注额)
+    @ApiModelProperty("有效投注额")
     private BigDecimal validBetAmount;
 
     @ExcelProperty(value = "盈亏", index = 5)
