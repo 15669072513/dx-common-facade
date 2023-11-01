@@ -5,6 +5,7 @@ import com.dx.annotation.I18nField;
 import com.dx.facade.constant.ExcelHeadI18nKey;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -43,9 +44,10 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_手牌号)
     private Long roundNo;
 
+    @Getter
     @ExcelProperty(value = "轮次", index = 5)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_轮次)
-    private Integer roundCode;
+    private String roundCode;
 
     @ExcelProperty(value = "会员账号", index = 6)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_会员账号)
@@ -94,4 +96,19 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_公牌信息)
     private String publicCards;
 
+    public void setRoundCode(int roundCode) {
+        String roundCodeStr = "";
+        if(roundCode == 1) {
+            roundCodeStr = "Preflop轮";
+        } else if(roundCode == 2) {
+            roundCodeStr = "Flop轮";
+        } else if(roundCode == 3) {
+            roundCodeStr = "Turn轮";
+        } else if(roundCode == 4) {
+            roundCodeStr = "River轮";
+        } else if(roundCode == 5) {
+            roundCodeStr = "Showdown轮";
+        }
+        this.roundCode = roundCodeStr;
+    }
 }
