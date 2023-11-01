@@ -15,7 +15,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_DEPOSIT_CLIENT_STATUS = "EXCEL_HEAD_I18N_KEY.FUNDS_DEPOSIT_CLIENT_STATUS"; // 存款客户端状态
     String FUNDS_订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_订单号"; // 订单号
     String FUNDS_德州注单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_德州注单号";
-    String FUNDS_三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_三方订单号"; // 会员账号
+    String FUNDS_三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_三方订单号";
+    String FUNDS_关联三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_关联三方订单号";
     String FUNDS_会员账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员账号"; // 会员账号
 
     String FUNDS_账号类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_账号类型"; // 账号类型
@@ -105,6 +106,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_提款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款信息"; //
     String FUNDS_提款账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款账号"; //
     String FUNDS_是否大额 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否大额"; //
+    String FUNDS_是否大额取款 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否大额取款"; //
     String FUNDS_是否首提 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否首提"; //
     String FUNDS_提款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款金额"; //
     String FUNDS_出款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_出款时间"; //
