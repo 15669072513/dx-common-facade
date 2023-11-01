@@ -50,6 +50,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_备注"; //
     String FUNDS_支付类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付类型"; //
     String FUNDS_取款类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款类型"; //
+    String FUNDS_取款方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款方式"; //
     String FUNDS_取款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款信息"; //
     String FUNDS_取款账户 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款账户"; //
     String FUNDS_银行名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_银行名称"; //
