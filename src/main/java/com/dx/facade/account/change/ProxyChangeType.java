@@ -74,7 +74,7 @@ public enum ProxyChangeType implements IChangeType {
     v2_1_deposit(99, "代理存款", ProxyBizType.v2_1_deposit.code().toString()),
     v2_1_deposit_back(100, "代理存款（后台）", ProxyBizType.v2_1_deposit.code().toString()),
     v2_1_withdraw(101, "代理取款", ProxyBizType.v2_1_withdraw.code().toString()),
-    v2_1_withdraw_frozen(102, "取款", ProxyBizType.v2_1_withdraw.code().toString()),
+    v2_1_withdraw_frozen(102, "代理取款", ProxyBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_fail(103, "取款失败", ProxyBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_back(104, "代理取款（后台）", ProxyBizType.v2_1_withdraw.code().toString()),
 
