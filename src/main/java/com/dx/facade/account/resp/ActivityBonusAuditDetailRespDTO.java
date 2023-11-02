@@ -118,7 +118,7 @@ public class ActivityBonusAuditDetailRespDTO {
     @ApiModelProperty(value = "流水倍数")
     private Integer billMultiple;
 
-    @ApiModelProperty(value = "发放位置1 中心钱包 2 红利中心 3 B端场馆")
+    @ApiModelProperty(value = "发放位置1 现金钱包 2 红利中心 3 B端场馆")
     private Integer location;
 
     @ApiModelProperty(value = "场馆code")

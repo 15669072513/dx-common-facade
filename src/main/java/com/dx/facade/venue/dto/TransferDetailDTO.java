@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @Data
 public class TransferDetailDTO {
 
-    @ApiModelProperty(value = "中心钱包余额")
+    @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
 
     @ApiModelProperty(value = "场馆钱包余额")

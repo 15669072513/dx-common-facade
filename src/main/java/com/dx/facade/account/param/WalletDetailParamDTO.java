@@ -105,10 +105,10 @@ public class WalletDetailParamDTO {
     )
     private String sortType;
 
-    @ApiModelProperty("钱包类型 1:中心钱包, 9: 信用钱包")
+    @ApiModelProperty("钱包类型 1:现金钱包, 9: 信用钱包")
     private Integer walletType;
 
-    @ApiModelProperty("钱包类型 1:中心钱包, 9: 信用钱包")
+    @ApiModelProperty("钱包类型 1:现金钱包, 9: 信用钱包")
     private List<Integer> walletTypeList;
 
     @ApiModelProperty("用户名列表")

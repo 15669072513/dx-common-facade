@@ -107,7 +107,7 @@ public class ActivityInviteConfigRespDTO implements Serializable {
     @ApiModelProperty("红利计算方式: 1-固定金额 2-比例金额")
     private Integer inviteRewardCountType;
 
-    @ApiModelProperty("红利发送位置: 1-中心钱包 2-红利中心")
+    @ApiModelProperty("红利发送位置: 1-现金钱包 2-红利中心")
     private Integer inviteRewardSendPosition;
 
     @ApiModelProperty("被推荐人奖励标志：0-无奖励 1-有奖励")

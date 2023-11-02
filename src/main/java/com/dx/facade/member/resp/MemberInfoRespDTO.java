@@ -138,7 +138,7 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("首存时间")
     private LocalDateTime firstDepositDatetime;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal balance;
 
     @ApiModelProperty("注册终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP 6-后台）")
@@ -236,7 +236,7 @@ public class MemberInfoRespDTO {
 
     String merchantIdPath;
 
-    @ApiModelProperty("信用余额")
+    @ApiModelProperty("可用额度")
     private BigDecimal creditAvailable;
 
     @ApiModelProperty("信用额度")

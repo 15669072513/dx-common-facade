@@ -64,15 +64,15 @@ public class ProxyDayReportSummaryDTO {
     private Long proxyBeDifferTimes;
 
 
-    @ApiModelProperty(value = "转入中心钱包次数")
+    @ApiModelProperty(value = "转入现金钱包次数")
     private Integer transferCenterWalletTimes;
 
-    @ApiModelProperty(value = "转入中心钱包总额", required = true, example = "2343")
+    @ApiModelProperty(value = "转入现金钱包总额", required = true, example = "2343")
     private BigDecimal transferCenterWalletAmount;
 
     @ApiModelProperty(value = "佣金转额度钱包总额")
     private BigDecimal transferQuotaWalletAmount ;
-    @ApiModelProperty(value = "转入中心钱包次数")
+    @ApiModelProperty(value = "转入现金钱包次数")
     private Integer transferQuotaWalletTimes;
 
 
@@ -114,7 +114,7 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty(value = "钱包余额")
     private BigDecimal walletBalance;
 
-    @ApiModelProperty(value = "信用余额")
+    @ApiModelProperty(value = "可用额度")
     private BigDecimal creditBalance;
 
     @ApiModelProperty(value = "授信额度")

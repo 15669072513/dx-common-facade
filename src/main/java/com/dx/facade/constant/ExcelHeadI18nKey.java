@@ -15,7 +15,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_DEPOSIT_CLIENT_STATUS = "EXCEL_HEAD_I18N_KEY.FUNDS_DEPOSIT_CLIENT_STATUS"; // 存款客户端状态
     String FUNDS_订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_订单号"; // 订单号
     String FUNDS_德州注单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_德州注单号";
-    String FUNDS_三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_三方订单号"; // 会员账号
+    String FUNDS_三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_三方订单号";
+    String FUNDS_关联三方订单号 = "EXCEL_HEAD_I18N_KEY.FUNDS_关联三方订单号";
     String FUNDS_会员账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员账号"; // 会员账号
 
     String FUNDS_账号类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_账号类型"; // 账号类型
@@ -49,6 +50,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_备注 = "EXCEL_HEAD_I18N_KEY.FUNDS_备注"; //
     String FUNDS_支付类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_支付类型"; //
     String FUNDS_取款类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款类型"; //
+    String FUNDS_取款方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款方式"; //
     String FUNDS_取款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款信息"; //
     String FUNDS_取款账户 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款账户"; //
     String FUNDS_银行名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_银行名称"; //
@@ -105,6 +107,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_提款信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款信息"; //
     String FUNDS_提款账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款账号"; //
     String FUNDS_是否大额 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否大额"; //
+    String FUNDS_是否大额取款 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否大额取款"; //
     String FUNDS_是否首提 = "EXCEL_HEAD_I18N_KEY.FUNDS_是否首提"; //
     String FUNDS_提款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_提款金额"; //
     String FUNDS_出款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_出款时间"; //
@@ -221,7 +224,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_给代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_给代理上下分次数"; //
     String REPORT_被代理上下分差值 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分差值"; //
     String REPORT_被代理上下分次数 = "EXCEL_HEAD_I18N_KEY.REPORT_被代理上下分次数"; //
-    String REPORT_佣金转中心钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转中心钱包总额"; //
+    String REPORT_佣金转现金钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转现金钱包总额"; //
     String REPORT_佣金转额度钱包总额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金转额度钱包总额"; //
     String REPORT_返点调整 = "EXCEL_HEAD_I18N_KEY.REPORT_返点调整"; //
     String REPORT_佣金钱包余额 = "EXCEL_HEAD_I18N_KEY.REPORT_佣金钱包余额"; //
@@ -379,8 +382,8 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_手机号码 = "EXCEL_HEAD_I18N_KEY.FUNDS_手机号码";
     String	FUNDS_邮箱 = "EXCEL_HEAD_I18N_KEY.FUNDS_邮箱";
     String	FUNDS_会员标签 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员标签";
-    String	FUNDS_中心钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包余额";
-    String	FUNDS_信用余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用余额";
+    String	FUNDS_现金余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_现金余额";
+    String	FUNDS_可用额度 = "EXCEL_HEAD_I18N_KEY.FUNDS_可用额度";
     String	FUNDS_参与手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_参与手牌数";
     String	FUNDS_有效投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注金额";
     String	FUNDS_入局游戏 = "EXCEL_HEAD_I18N_KEY.FUNDS_入局游戏";
@@ -400,6 +403,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注金额";
     String	FUNDS_输赢金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_输赢金额";
     String	FUNDS_会员输赢 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员输赢";
+    String  FUNDS_抽水贡献 = "EXCEL_HEAD_I18N_KEY.FUNDS_抽水贡献";
     String	FUNDS_有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_有效投注";
     String	FUNDS_返水比例 = "EXCEL_HEAD_I18N_KEY.FUNDS_返水比例";
     String	FUNDS_投注时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注时间";
@@ -409,7 +413,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注终端";
     String	FUNDS_会员转账记录 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员转账记录";
     String	FUNDS_游戏注单 = "EXCEL_HEAD_I18N_KEY.FUNDS_游戏注单";
-    String	FUNDS_中心钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_中心钱包";
+    String	FUNDS_现金钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_现金钱包";
     String	FUNDS_未结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_未结算";
     String	FUNDS_已结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_已结算";
     String	FUNDS_已取消 = "EXCEL_HEAD_I18N_KEY.FUNDS_已取消";
@@ -718,7 +722,7 @@ public interface ExcelHeadI18nKey {
     String PROFIT_投注人数 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注人数";
     String PROFIT_注单量 = "EXCEL_HEAD_I18N_KEY.PROFIT_注单量";
     String PROFIT_投注金额 = "EXCEL_HEAD_I18N_KEY.PROFIT_投注金额";
-    String PROFIT_有效投注 = "EXCEL_HEAD_I18N_KEY.PROFIT_有效投注";
+    String PROFIT_有效投注额 = "EXCEL_HEAD_I18N_KEY.PROFIT_有效投注额";
     String PROFIT_盈亏 = "EXCEL_HEAD_I18N_KEY.PROFIT_盈亏";
 
     /** 保险列表导出 */

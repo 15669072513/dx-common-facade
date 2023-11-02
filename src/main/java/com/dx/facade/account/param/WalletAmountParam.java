@@ -44,7 +44,7 @@ public class WalletAmountParam implements BaseParmDTO, Serializable {
     @Setter
     private Integer userType;
 
-    @ApiModelProperty("用户类型：是否需要中心钱包")
+    @ApiModelProperty("用户类型：是否需要现金钱包")
     @Getter
     @Setter
     private Boolean needCash;

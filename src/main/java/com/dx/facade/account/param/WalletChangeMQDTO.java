@@ -22,7 +22,7 @@ public class WalletChangeMQDTO {
     @ApiModelProperty("0 : 会员，1 : 代理")
     private Integer userType;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal cash;
 
     @ApiModelProperty("信用钱包余额")

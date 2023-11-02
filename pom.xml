@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>dx-common-facades</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>test_1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -34,6 +34,7 @@
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
         </dependency>
+
 
         <dependency>
             <groupId>junit</groupId>

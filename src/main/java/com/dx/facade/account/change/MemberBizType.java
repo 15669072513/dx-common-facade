@@ -17,7 +17,7 @@ public enum MemberBizType implements IBizType {
     reward(7, "会员福利", "1"),
     activity(8, "会员活动", "1"),
     other(9, "其他调整", "1"),
-    to_center(10, "佣金转中心钱包", "1"),
+    to_center(10, "佣金转现金钱包", "1"),
     deposit_discount(11, "存款优惠", "1"),
     up_score(12, "充值上分", "1"),
     down_score(13, "提现下分", "1"),

@@ -44,10 +44,10 @@ public class WithdrawBillRecordRespDTO implements Serializable {
     @ApiModelProperty("账单净资产")
     private BigDecimal netAsset;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal cash;
 
-    @ApiModelProperty("信用余额")
+    @ApiModelProperty("可用额度")
     private BigDecimal creditAvailable;
 
     @ApiModelProperty("信用额度")

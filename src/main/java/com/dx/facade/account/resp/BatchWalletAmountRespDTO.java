@@ -23,11 +23,11 @@ public class BatchWalletAmountRespDTO implements Serializable {
      */
     private Long userId;
     /**
-     * 会员中心钱包余额
+     * 会员现金余额
      */
     private BigDecimal memberCash;
     /**
-     * 会员信用余额
+     * 会员可用额度
      */
     private BigDecimal memberCreditAvailable;
     /**
@@ -35,11 +35,11 @@ public class BatchWalletAmountRespDTO implements Serializable {
      */
     private BigDecimal memberCreditTotal;
     /**
-     * 代理中心钱包余额
+     * 代理现金余额
      */
     private BigDecimal proxyCash;
     /**
-     * 代理信用余额
+     * 代理可用额度
      */
     private BigDecimal proxyCreditAvailable;
     /**
