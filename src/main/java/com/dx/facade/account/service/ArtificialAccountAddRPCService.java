@@ -62,4 +62,15 @@ public interface ArtificialAccountAddRPCService {
 
     @ApiModelProperty(value = "待处理数量")
     Integer getPendingCount(List<Long> merchantIdLs, Integer userType);
+
+
+    /**
+     * 查询用户的最后一次成功后台存款信息
+     * @param userId
+     * @param userType
+     * @return
+     */
+    CommonResp<ArtificialAccountAddPageRespDTO> getLastSuccessBackDepositInfo(Long userId, Integer userType);
+
+
 }
