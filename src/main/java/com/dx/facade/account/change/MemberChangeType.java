@@ -56,7 +56,7 @@ public enum MemberChangeType implements IChangeType {
     v2_credit_down_score(41, "授信下分", MemberBizType.v2_credit_down_score.code().toString()),
     v2_credit_loan(42, "信用借款", MemberBizType.v2_loan.code().toString()),
     v2_credit_repay(43, "信用还款", MemberBizType.v2_repay.code().toString()),
-    v2_cash_withdraw_frozen(44, "提现", MemberBizType.down_score.code().toString()),
+    v2_cash_withdraw_frozen(44, "会员提现", MemberBizType.down_score.code().toString()),
     v2_cash_withdraw_refused(45, "提现拒绝", MemberBizType.down_score.code().toString()),
 
     v2_1_deposit(46, "会员存款", MemberBizType.v2_1_deposit.code().toString()),
@@ -66,7 +66,7 @@ public enum MemberChangeType implements IChangeType {
     //TODO 2.1不上，暂时去掉
     //v2_1_deposit_discount_back(49, "会员优惠（后台）", MemberBizType.v2_1_deposit.code().toString()),
     v2_1_withdraw(50, "会员取款", MemberBizType.v2_1_withdraw.code().toString()),
-    v2_1_withdraw_frozen(51, "取款", MemberBizType.v2_1_withdraw.code().toString()),
+    //v2_1_withdraw_frozen(51, "会员取款", MemberBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_fail(52, "取款失败", MemberBizType.v2_1_withdraw.code().toString()),
     v2_1_withdraw_back(53, "会员取款（后台）", MemberBizType.v2_1_withdraw.code().toString()),
 
