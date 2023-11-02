@@ -74,7 +74,7 @@ public enum ProxyAppType implements IAppType {
     v2_credit_down_score_to_sub_proxy(58, "代理给下级授信下分"),
     v2_credit_down_score_to_member(59, "代理给会员授信下分"),
 
-    v2_1_withdraw_frozen(60, "取款冻结"),
+    v2_1_withdraw_frozen(60, "取款"),
     v2_1_withdraw_refused(61, "取款失败"),
     v2_1_withdraw(62, "取款"),
     v2_1_deposit(63, "存款"),
