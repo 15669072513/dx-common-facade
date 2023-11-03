@@ -31,7 +31,12 @@ public enum DissolveTypeEnum {
     /**
      * 游戏端超时自动解散
      */
-    GAME_OVERTIME_DISSOLVE(4, "游戏端超时自动解散");
+    GAME_OVERTIME_DISSOLVE(4, "游戏端超时自动解散"),
+
+    /**
+     * 停机维护强制解散
+     */
+    SHUTDOWN_MAINTENANCE_DISSOLVE(5, "停机维护强制解散");
 
     public int getCode() {
         return code;
