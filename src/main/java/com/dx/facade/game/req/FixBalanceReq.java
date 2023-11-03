@@ -11,4 +11,5 @@ public class FixBalanceReq {
     private Long userId;
     private Long tableId;
     private BigDecimal balance;
+    private String token;
 }
