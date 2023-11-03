@@ -154,7 +154,7 @@ public enum ConfigKeyEnum {
     COMMISSION_LOTTERY_TICKET_REBATE_RATE_LIMIT("cp.member.rebate","1"),
     COMMISSION_CHESS_REBATE_RATE_LIMIT("qp.member.rebate","1"),
     COMMISSION_ESPORTS_REBATE_RATE_LIMIT("dj.member.rebate","1"),
-    COMMISSION_TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.member.rebate", "1"),
+    COMMISSION_TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.member.rebate", "1"),
 
     TEXAS_COMMISSION_RATE_LIMIT("texas.commission.rate.limit", "1"),
     TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.commission.rate.limit", "1"),
