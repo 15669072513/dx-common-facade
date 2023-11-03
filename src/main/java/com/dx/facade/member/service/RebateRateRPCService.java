@@ -96,5 +96,5 @@ public interface RebateRateRPCService {
 	 * 
 	 * @return
 	 */
-	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit();
+	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit(Integer commissionMode);
 }
