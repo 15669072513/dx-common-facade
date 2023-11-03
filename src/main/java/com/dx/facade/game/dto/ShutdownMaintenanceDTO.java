@@ -18,7 +18,7 @@ public class ShutdownMaintenanceDTO {
     @ApiModelProperty("id")
     private Long id;
 
-    @ApiModelProperty("状态：0待执行 1进行中 2已停服 3半开服 4已完成 5禁用")
+    @ApiModelProperty("状态：1待执行 2进行中 3半开服 4已完成,5已禁用")
     private Integer status;
 
     @ApiModelProperty("停服时间")
