@@ -59,6 +59,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_取款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款金额"; //
     String FUNDS_取款账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_取款账号"; //
     String FUNDS_手续费 = "EXCEL_HEAD_I18N_KEY.FUNDS_手续费"; //
+    String FUNDS_预计到账金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_预计到账金额"; //
     String FUNDS_存款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_存款时间"; //
     String FUNDS_调整类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_调整类型"; //
     String FUNDS_申请金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_申请金额";//
