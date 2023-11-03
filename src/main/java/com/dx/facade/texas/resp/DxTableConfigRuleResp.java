@@ -203,7 +203,7 @@ public class DxTableConfigRuleResp implements Serializable {
     private Integer sitDownLimit=0;
 
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
-    private Integer insuranceMode=0;
+    private Integer insuranceMode;
 
     @ApiModelProperty("保险模式中文描述 0-不开保险 1-经典保险")
     private String insuranceModeStr;
