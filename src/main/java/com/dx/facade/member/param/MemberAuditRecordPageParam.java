@@ -1,15 +1,15 @@
 package com.dx.facade.member.param;
 
+import java.util.List;
+
 import com.dx.facade.common.PageRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.NotNull;
-import java.util.List;
 
 @Data
 @Builder
@@ -53,7 +53,7 @@ public class MemberAuditRecordPageParam extends PageRequest {
     @ApiModelProperty(value = "锁单状态（0-未锁定 1-已锁定）",example = "1")
     private Integer lockStatus;
 
-    @ApiModelProperty("审核状态（0-待处理 1-处理中，2-审核通过，3-审核拒绝）")
+    @ApiModelProperty("审核状态（0-待处理 1-处理中，2-审核拒绝，3-审核通过）")
     private Integer auditStatus;
 
 //    @ApiModelProperty(value = "排序字段[1-审核状态：auditStatus, 2-申请时间：auditTime 3-审核时间：auditTime ]",example = "auditStatus")
