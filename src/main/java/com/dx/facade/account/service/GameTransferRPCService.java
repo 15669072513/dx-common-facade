@@ -42,6 +42,6 @@ public interface GameTransferRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp<Boolean> transferInTexas(String serialNo) throws BizException;
+    CommonResp<Boolean> upScoreReqSucceed(String serialNo) throws BizException;
 
 }
