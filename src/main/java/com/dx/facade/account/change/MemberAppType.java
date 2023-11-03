@@ -90,7 +90,16 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v2_cash_withdraw_frozen.code(),
                         MemberChangeType.v2_cash_withdraw_refused.code(),
                         MemberChangeType.bring_to_table.code(),
-                        MemberChangeType.bring_out_table.code()
+                        MemberChangeType.bring_out_table.code(),
+                        MemberChangeType.v2_1_club_rebate_sub.code(),
+                        MemberChangeType.v2_1_club_rebate_add.code(),
+                        MemberChangeType.v2_1_insure_rebate_sub.code(),
+                        MemberChangeType.v2_1_insure_rebate_add.code(),
+                        MemberChangeType.v2_1_deposit.code(),
+                        MemberChangeType.v2_1_deposit_back.code(),
+                        MemberChangeType.v2_1_withdraw.code(),
+                        MemberChangeType.v2_1_withdraw_fail.code(),
+                        MemberChangeType.v2_1_withdraw_back.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -120,10 +129,12 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.v2_cash_repay.code());
             }
             if (appChangeType.intValue() == v2_withdraw_frozen.code()) {
-                return Arrays.asList(MemberChangeType.v2_cash_withdraw_frozen.code(),MemberChangeType.v2_1_withdraw.code());
+                return Arrays.asList(MemberChangeType.v2_cash_withdraw_frozen.code(),
+                        MemberChangeType.v2_1_withdraw.code());
             }
             if (appChangeType.intValue() == v2_withdraw_refused.code()) {
-                return Arrays.asList(MemberChangeType.v2_cash_withdraw_refused.code(), MemberChangeType.v2_1_withdraw_fail.code());
+                return Arrays.asList(MemberChangeType.v2_cash_withdraw_refused.code(),
+                        MemberChangeType.v2_1_withdraw_fail.code());
             }
             if (appChangeType.intValue() == v2_bring_out_table.code()) {
                 return Arrays.asList(MemberChangeType.bring_out_table.code());
@@ -132,10 +143,12 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.bring_to_table.code());
             }
             if(appChangeType.intValue() == v2_1_withdraw.code) {
-                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),MemberChangeType.v2_1_withdraw_back.code());
+                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),
+                        MemberChangeType.v2_1_withdraw_back.code());
             }
             if(appChangeType.intValue() == v2_1_deposit.code()) {
-                return Arrays.asList(MemberChangeType.v2_1_deposit.code(), MemberChangeType.v2_1_deposit_back.code());
+                return Arrays.asList(MemberChangeType.v2_1_deposit.code(),
+                        MemberChangeType.v2_1_deposit_back.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
