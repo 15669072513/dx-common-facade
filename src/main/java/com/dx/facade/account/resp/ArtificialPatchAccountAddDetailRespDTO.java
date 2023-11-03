@@ -117,6 +117,9 @@ public class ArtificialPatchAccountAddDetailRespDTO {
     @ApiModelProperty(value="会员(真实)姓名")
     private String realName;
 
+    @ApiModelProperty("昵称")
+    private String nickName;
+
     /**
      * vip等级id
      */
