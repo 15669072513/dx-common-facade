@@ -28,4 +28,18 @@ public class UserAccountHiddenUtil {
             }
             return start + star + end;
     }
+
+    public static String hideIp(String source){
+        if(StringUtils.isBlank(source) || source.length() < 4) {
+            return source;
+        }
+        String start = source.substring(0,2);
+        String end = source.substring(source.length()-2,source.length());
+        int starCount = source.length() - 4;
+        StringBuilder star = new StringBuilder();
+        for (int i = 0; i < starCount; i++){
+            star.append("*");
+        }
+        return start + star + end;
+    }
 }
