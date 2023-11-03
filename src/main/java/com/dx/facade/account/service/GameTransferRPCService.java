@@ -35,4 +35,13 @@ public interface GameTransferRPCService {
      */
     CommonResp<Void> texasTransferOut(List<WalletBalanceDTO> list) throws BizException;
 
+
+    /**
+     * 检查上下分是否成功
+     * @param serialNo: 上下分流水号
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Boolean> transferInTexas(String serialNo) throws BizException;
+
 }
