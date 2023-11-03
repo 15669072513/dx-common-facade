@@ -101,6 +101,11 @@ public class DxSettlementCommissionTopProxyRecordRspDTO implements Serializable 
     @ApiModelProperty("投注额")
     private BigDecimal betAmount;
     /**
+     * 投注人数
+     */
+    @ApiModelProperty("投注人数")
+    private BigDecimal betMemberNum;
+    /**
      * 有效投注额
      */
     @ApiModelProperty("有效投注额")
