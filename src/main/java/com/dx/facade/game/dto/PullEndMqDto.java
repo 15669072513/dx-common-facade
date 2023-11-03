@@ -41,4 +41,8 @@ public class PullEndMqDto {
      */
     private Integer oddsValid;
 
+    /**
+     * 结束时间=当前注单被结算的时间
+     */
+    private Long netAt;
 }
