@@ -12,6 +12,7 @@ import com.dx.facade.account.resp.ArtificialAccountSubRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.math.BigDecimal;
+import java.net.InetAddress;
 
 /**
  * 人工[减]额记录表(会员/代理) RPC接口
@@ -42,4 +43,6 @@ public interface ArtificialAccountSubRPCService {
 
 	@ApiModelProperty("会员人工加额记录总计")
 	CommonResp<AdjustAmountTotalRespDTO> selectArtificialAccountSubTotal(ArtificialAccountSubRecordPageParmDTO param) throws BizException;
+
+	CommonResp<ArtificialAccountSubRespDTO> getLastSuccessBackWithdrawInfo(Long userId, Integer userType);
 }

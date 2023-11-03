@@ -125,13 +125,13 @@ public enum MemberWalletChange implements IWalletChange {
     //会员通过平台提供的取款渠道进行取款
     v2_1_withdraw(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
     //会员主动申请取款，现金钱包的金额会先减少被冻结
-    v2_1_withdraw_frozen(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.out, Constant.MEMBER),
+    v2_1_withdraw_frozen(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_withdraw_frozen, TransType.out, Constant.MEMBER),
     //会员申请取款被拒绝后，冻结的钱会返还回到现金钱包
     v2_1_withdraw_fail(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.in, Constant.MEMBER),
     //运营在中控后台帮助用户人工减额下分
     v2_1_withdraw_back(WalletType.cash, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_back, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
     //会员通过平台提供的存款渠道进行存款
-    v2_1_withdraw_frozen_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_frozen, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
+    v2_1_withdraw_frozen_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_withdraw_frozen, TransType.in, Constant.MEMBER),
     //会员通过平台提供的存款渠道进行存款，依据优惠规则额外的存款优惠
     v2_1_withdraw_fail_cash_lock(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw_fail, MemberAppType.v2_withdraw_refused, TransType.out, Constant.MEMBER),
     //会员取款成功

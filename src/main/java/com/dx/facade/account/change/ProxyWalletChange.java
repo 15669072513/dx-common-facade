@@ -146,11 +146,11 @@ public enum ProxyWalletChange implements IWalletChange {
     v2_credit_loan(WalletType.agent_credit_available, ProxyBizType.v2_loan, ProxyChangeType.v2_credit_loan, ProxyAppType.v2_loan, TransType.out),
 
     //代理主动申请取款，现金钱包的金额会先减少被冻结
-    v2_1_withdraw_frozen(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.out),
+    v2_1_withdraw_frozen(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw, ProxyAppType.v2_1_withdraw_frozen, TransType.out),
     //代理申请取款被拒绝后，冻结的钱会返还回到现金钱包
     v2_1_withdraw_fail(WalletType.agent_cash, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.in),
     //代理主动申请取款，现金钱包的金额会先减少被冻结
-    v2_1_withdraw_frozen_lock(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_frozen, ProxyAppType.v2_1_withdraw_frozen, TransType.in),
+    v2_1_withdraw_frozen_lock(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw, ProxyAppType.v2_1_withdraw_frozen, TransType.in),
     //代理申请取款被拒绝后，冻结的钱会返还回到现金钱包
     v2_1_withdraw_fail_lock(WalletType.agent_lock, ProxyBizType.v2_1_withdraw, ProxyChangeType.v2_1_withdraw_fail, ProxyAppType.v2_1_withdraw_refused, TransType.out),
     //代理通过平台提供的存款渠道进行自主存款
