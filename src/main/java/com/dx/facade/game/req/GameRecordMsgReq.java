@@ -9,6 +9,9 @@ import lombok.Data;
 @Data
 public class GameRecordMsgReq extends BaseRequest {
 
+    @ApiModelProperty(value = "链路Id(主键)")
+    private String linkId;
+
     @ApiModelProperty("牌桌id")
     private Long tableId;
 
