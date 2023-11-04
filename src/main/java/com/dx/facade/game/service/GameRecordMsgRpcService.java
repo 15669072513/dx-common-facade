@@ -26,4 +26,12 @@ public interface GameRecordMsgRpcService {
      * @return
      */
     CommonResp<PageResp<GameRecordMsgResp, ?>> queryGameRecordMsgPage(GameRecordMsgReq req);
+
+
+    /**
+     * 手动同步es消息
+     * @param req
+     * @return
+     */
+    CommonResp<Boolean> syncGameRecordMsgEs(GameRecordMsgReq req);
 }

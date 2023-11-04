@@ -5,18 +5,15 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.validation.constraints.NotNull;
-
-
 @ApiModel("牌局消息信息表请求类")
 @Data
 public class GameRecordMsgReq extends BaseRequest {
 
+    @ApiModelProperty(value = "链路Id(主键)")
+    private String linkId;
+
     @ApiModelProperty("牌桌id")
     private Long tableId;
-
-    @ApiModelProperty(value = "牌桌编码")
-    private String tableCode;
 
     @ApiModelProperty(value = "业务编码")
     private String businessCode;
