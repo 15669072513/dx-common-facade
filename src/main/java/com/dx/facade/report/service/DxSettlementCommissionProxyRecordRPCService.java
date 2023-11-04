@@ -96,4 +96,10 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      */
     CommonResp<PageResp<DxFundAdjustSettlementCommissionProxyRecordRspDTO, DxFundAdjustSettlementCommissionProxyRecordSumRspDTO>> listNotTopProxyFundAdjustmentCommissionRecordPage(DxFundAdjustSettlementCommissionProxyRecordReqDTO reqDTO);
 
+    /**
+     * 根据商户id集合查询待审核数量
+     * @param longs
+     * @return
+     */
+    Integer getPendingCount(List<Long> longs);
 }
