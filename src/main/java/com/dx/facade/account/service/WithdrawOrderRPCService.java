@@ -64,7 +64,9 @@ public interface WithdrawOrderRPCService {
      */
     Integer countWaitAuditByProxyOrderNum(List<Long> memberIds);
 
-    Integer countByQueryCondition(CountByConditionParamDTO param);
+    default Integer countByQueryCondition(CountByConditionParamDTO param) {
+        return 0;
+    }
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
