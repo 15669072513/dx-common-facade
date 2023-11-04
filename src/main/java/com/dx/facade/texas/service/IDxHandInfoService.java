@@ -49,7 +49,7 @@ public interface IDxHandInfoService {
      * @param handNum
      * @return
      */
-    CommonResp<DxHandDetailResp> getHandInfoById(Long  tableId,Integer handNum);
+    CommonResp<DxHandDetailResp> getHandInfo(Long  tableId,Integer handNum);
 
     /**
      * 根据手牌id获取手牌信息
