@@ -4,10 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.account.param.ChangeLockStatusParam;
-import com.dx.facade.account.param.PaymentLockStatusDTO;
-import com.dx.facade.account.param.WithdrawOrderParamDTO;
-import com.dx.facade.account.param.WithdrawOrderStatsParamDTO;
+import com.dx.facade.account.param.*;
 import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
 
@@ -66,6 +63,10 @@ public interface WithdrawOrderRPCService {
      * @return  待代理审核状态的订单数
      */
     Integer countWaitAuditByProxyOrderNum(List<Long> memberIds);
+
+    default Integer countByQueryCondition(CountByConditionParamDTO param) {
+        return 0;
+    }
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
