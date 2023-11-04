@@ -27,7 +27,7 @@ public interface CommissionRateRPCService {
      * 
      * @param request
      */
-    CommonResp<Boolean> AddCommissionRate(AddCommissionRateParamDTO request) throws BizException;
+    CommonResp<Boolean> addCommissionRate(AddCommissionRateParamDTO request) throws BizException;
 	
     /**
      * 校验返佣比例
