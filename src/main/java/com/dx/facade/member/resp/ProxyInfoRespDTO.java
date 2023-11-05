@@ -248,6 +248,18 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty("累计首存金额")
     private BigDecimal totalFirstDepositAmount;
 
+    @ApiModelProperty("累计存款金额")
+    private BigDecimal totalDeposit;
+
+    @ApiModelProperty("累计存款次数")
+    private Integer totalDepositNum;
+
+    @ApiModelProperty("累计提款金额")
+    private BigDecimal totalWithdraw;
+
+    @ApiModelProperty("累计普通提款次数")
+    private Integer totalWithdrawNum;
+
     @ApiModelProperty("备注")
     private String remark;
 
