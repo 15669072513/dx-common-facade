@@ -4,6 +4,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -247,6 +248,22 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("累计首存金额")
     private BigDecimal totalFirstDepositAmount;
+
+    @ApiModelProperty("累计存款金额")
+    @TableField("total_deposit")
+    private BigDecimal totalDeposit;
+
+    @ApiModelProperty("累计存款次数")
+    @TableField("total_deposit_num")
+    private Integer totalDepositNum;
+
+    @ApiModelProperty("累计提款金额")
+    @TableField("total_withdraw")
+    private BigDecimal totalWithdraw;
+
+    @ApiModelProperty("累计普通提款次数")
+    @TableField("total_withdraw_num")
+    private Integer totalWithdrawNum;
 
     @ApiModelProperty("备注")
     private String remark;
