@@ -42,6 +42,15 @@ public interface IDxHandInfoService {
      */
     CommonResp<DxHandDetailResp> getHandInfoById(String handId);
 
+
+    /**
+     * 根据牌桌Id和手牌号获取手牌信息
+     * @param tableId
+     * @param handNum
+     * @return
+     */
+    CommonResp<DxHandDetailResp> getHandInfo(Long  tableId,Integer handNum);
+
     /**
      * 根据手牌id获取手牌信息
      * @param handId
