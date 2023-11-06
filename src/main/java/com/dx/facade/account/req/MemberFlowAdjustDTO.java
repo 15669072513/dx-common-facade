@@ -37,6 +37,10 @@ public class MemberFlowAdjustDTO implements Serializable {
 	@NotNull(message = "备注不能为空")
 	private String remark;
 
+	@ApiModelProperty("谷歌校验码")
+	@NotNull(message = "谷歌校验码")
+	private String googleVerifyCode;
+
 	public BigDecimal validAmountAdj(){
 		return 1 == this.adjustType.intValue() ? amount.abs() : amount.abs().negate();
 	}
