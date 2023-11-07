@@ -93,7 +93,7 @@ public class GameTableInfoListEsResp implements Serializable {
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
-    @ApiModelProperty("0 进行中 1已结束")
+    @ApiModelProperty("1 进行中 2已结束")
     private Integer tableStatus;
 
     @ApiModelProperty("抽水金额")
