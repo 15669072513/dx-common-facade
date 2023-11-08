@@ -5,6 +5,8 @@ package com.dx.facade.member.enums;
  * @author bicycle
  */
 public enum CommissionRateStatusEnum {
+	/** 暂存 */
+	STAGING(-1,"暂存"),
 	
 	/** 未设置 */
 	UN_SET(0,"未设置"),
