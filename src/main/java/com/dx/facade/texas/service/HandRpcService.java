@@ -7,7 +7,7 @@ import com.dx.facade.texas.resp.HandStatusResp;
  * 手牌RPC
  */
 public interface HandRpcService {
-    CommonResp<Boolean> startHand(Long tableId,String handCode);
-    CommonResp<Boolean> updateHandStatusToException(Long tableId,String handCode);
+    CommonResp<Void> startHand(Long tableId,String handCode);
+    CommonResp<Void> updateHandStatusToException(Long tableId,String handCode);
     CommonResp<HandStatusResp> getLastHandStatusByTableId(Long tableId);
 }
