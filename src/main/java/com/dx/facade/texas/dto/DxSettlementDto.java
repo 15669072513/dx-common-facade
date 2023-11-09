@@ -16,4 +16,5 @@ public class DxSettlementDto implements Serializable {
     private Long eventTime;
     private Long tableId;
     private String tableCode;
+    private HandEndDto handEndDto;
 }
