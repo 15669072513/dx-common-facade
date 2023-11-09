@@ -4,5 +4,5 @@ import com.dx.entity.CommonResp;
 import com.dx.facade.texas.dto.DxSettlementDto;
 
 public interface SettlementRpcService {
- CommonResp<Boolean> settlement(DxSettlementDto dxSettlementDto);
+ CommonResp<Integer> settlement(DxSettlementDto dxSettlementDto);
 }
