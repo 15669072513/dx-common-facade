@@ -33,6 +33,4 @@ public class DxHandInfoStartReq implements Serializable {
 
     @ApiModelProperty("牌局开始时间")
     private Long handBeginTime;
-    @ApiModelProperty("本手牌参与玩家id列表")
-    private Set<Long> userIds;
 }
