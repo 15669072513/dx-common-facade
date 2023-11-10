@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 /**
  * <p>
@@ -32,4 +33,6 @@ public class DxHandInfoStartReq implements Serializable {
 
     @ApiModelProperty("牌局开始时间")
     private Long handBeginTime;
+    @ApiModelProperty("本手牌参与玩家id列表")
+    private List<Long> userIds;
 }
