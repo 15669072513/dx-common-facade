@@ -3,6 +3,7 @@ package com.dx.facade.game.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.es.req.GameTableInfoListReq;
+import com.dx.facade.es.resp.GameReviewDetailResp;
 import com.dx.facade.es.resp.GameTableInfoListEsResp;
 import com.dx.facade.game.dto.GameOrderRecordDto;
 import com.dx.facade.game.dto.game.GameOrderRecordHandUserRespDto;
@@ -135,5 +136,10 @@ public interface GameOrderRpcService {
      * @return
      */
     CommonResp<PageResp<GameTableInfoListEsResp, Void>> listPage(GameTableInfoListReq req);
+
+    /**
+     * 根据手牌code获取牌局回顾详情信息
+     */
+    CommonResp<List<GameReviewDetailResp>> getGameOrderDetailByHandCode(String handCode);
 
 }

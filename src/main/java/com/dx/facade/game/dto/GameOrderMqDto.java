@@ -11,9 +11,9 @@ import java.util.List;
 @Data
 public class GameOrderMqDto implements Serializable {
     /**
-     * 链路id
+     * 手牌id
      */
-    private String linkId;
+    private Long handId;
 
     /**
      *  注单记录
