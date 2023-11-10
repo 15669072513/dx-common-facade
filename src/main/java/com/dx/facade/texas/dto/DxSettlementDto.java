@@ -18,6 +18,7 @@ public class DxSettlementDto implements Serializable {
     private String tableName;
     private Long handId;
     private String handCode;
+    private Long handBeginTime;
     private Long handEndTime;
     private Integer walletType;
     private String currency;
