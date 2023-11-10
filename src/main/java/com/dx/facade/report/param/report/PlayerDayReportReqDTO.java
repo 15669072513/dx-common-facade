@@ -79,5 +79,16 @@ public class PlayerDayReportReqDTO extends LocalDatePageRequest {
     @ApiModelProperty("最大净盈亏")
     private BigDecimal maxValidBetAmount;
 
+    @ApiModelProperty(
+            value = "排序列名，merchantId",
+            example = "merchantId"
+    )
+    private String orderKey;
+
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String orderType;
 
 }
