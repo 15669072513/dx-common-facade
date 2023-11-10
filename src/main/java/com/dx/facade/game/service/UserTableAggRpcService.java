@@ -1,10 +1,13 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.facade.game.req.GameOrderUserTableSumReq;
 import com.dx.facade.game.req.RecordDetailReq;
 import com.dx.facade.game.req.UserTableReq;
+import com.dx.facade.game.resp.GameOrderUserTableSumResp;
 import com.dx.facade.game.resp.UserTableAggListResp;
+import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 import java.util.List;
 
@@ -23,12 +26,21 @@ public interface UserTableAggRpcService {
      * @param orderUserTableSumReq
      * @return
      */
-    CommonResp<List<UserTableAggListResp>> queryGameOrderUserTableSumList(GameOrderUserTableSumReq orderUserTableSumReq);
+    CommonResp<PageResp<GameOrderUserTableSumResp, ?>> queryGameOrderUserTableSumList(GameOrderUserTableSumReq orderUserTableSumReq);
+
+    /**
+     * 查询战绩详情聚合
+     * @param tableId
+     * @return
+     */
+    CommonResp<GameOrderRecordDetail.GameOrderRecordSummary> getGameOrderRecordSummary(Long tableId);
+
 
     /**
      * 查询战绩详情
-     * @param recordDetailReq
+     * @param tableId
      * @return
      */
-    CommonResp<List<Long>> recordDetailList(RecordDetailReq recordDetailReq);
+    CommonResp<List<GameOrderRecordDetail.GameOrderRecord>> getGameOrderPlayerRecords(Long tableId);
+
 }
