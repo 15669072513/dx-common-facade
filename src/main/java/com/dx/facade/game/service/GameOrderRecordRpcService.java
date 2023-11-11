@@ -6,8 +6,6 @@ import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
-import java.util.List;
-
 /**
  * 战绩
  * @author broadway
@@ -58,10 +56,4 @@ public interface GameOrderRecordRpcService {
      */
     CommonResp<PageResp<RecordDetailList, RecordDetailSummary>> recordDetailList(RecordDetailReq req);
 
-    /**
-     * 盈亏统计
-     * @param gameOrderAggReq
-     * @return
-     */
-    CommonResp<List<GameOrderRecordAggResp>> gameOrderRecordAgg(GameOrderAggReq gameOrderAggReq);
 }
