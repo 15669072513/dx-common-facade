@@ -15,6 +15,7 @@ public class DxSettlementDetailDto implements Serializable {
     private Long clubId;
     private Long merchantId;
     private String merchantName;
+    private BigDecimal netChip;
     private BigDecimal amount;
     private Integer eventType;
 }
