@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 public class DxHandInfoResp implements Serializable {
 
     @ApiModelProperty("手牌id")
-    private Long handId;
+    private String handId;
 
     @ApiModelProperty("手牌号")
     private String handCode;
