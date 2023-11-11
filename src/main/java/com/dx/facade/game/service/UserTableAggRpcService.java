@@ -36,14 +36,6 @@ public interface UserTableAggRpcService {
     CommonResp<PageResp<GameOrderUserTableSumResp, ?>> queryGameOrderUserTableSumList(GameOrderUserTableSumReq orderUserTableSumReq);
 
     /**
-     * 查询战绩详情聚合
-     * @param tableId
-     * @return
-     */
-    CommonResp<GameOrderRecordDetail.GameOrderRecordSummary> getGameOrderRecordSummary(Long tableId);
-
-
-    /**
      * 查询战绩详情
      * @param tableId
      * @return
