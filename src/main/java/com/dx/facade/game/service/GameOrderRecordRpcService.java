@@ -55,4 +55,5 @@ public interface GameOrderRecordRpcService {
      * @return
      */
     CommonResp<PageResp<RecordDetailList, RecordDetailSummary>> recordDetailList(RecordDetailReq req);
+
 }
