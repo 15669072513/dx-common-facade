@@ -70,4 +70,6 @@ public interface BankManageService {
      */
     @ApiModelProperty(value = "正在使用的银行卡下拉列表")
     CommonResp<List<BankNameRespDTO>> selectMerchantWithdrawBank(BankManageDownParamDTO dto);
+
+    String selectBankById(Long bankId);
 }

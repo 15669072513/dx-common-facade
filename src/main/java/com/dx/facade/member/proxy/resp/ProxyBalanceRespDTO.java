@@ -17,8 +17,11 @@ import lombok.NoArgsConstructor;
 public class ProxyBalanceRespDTO {
 
 
-    @ApiModelProperty("中心钱包余额对象")
+    @ApiModelProperty("现金余额对象")
     private WalletRespDTO centerWalletBalance;
+
+    @ApiModelProperty("现金钱包冻结余额对象")
+    private WalletRespDTO centerWalletLockBalance;
     
     @ApiModelProperty("信用钱包余额对象")
     private WalletRespDTO creditWalletBalance;

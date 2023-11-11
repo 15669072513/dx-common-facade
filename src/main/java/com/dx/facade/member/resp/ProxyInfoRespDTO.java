@@ -195,6 +195,12 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
     private Integer contractModel;
+    
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
+    
+    @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
+    private Integer commissionSettleCycle;
 
     @ApiModelProperty("欠款标志 0-无欠款 1-有欠款")
     private Integer debtStatus;
@@ -242,6 +248,18 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty("累计首存金额")
     private BigDecimal totalFirstDepositAmount;
 
+    @ApiModelProperty("累计存款金额")
+    private BigDecimal totalDeposit;
+
+    @ApiModelProperty("累计存款次数")
+    private Integer totalDepositNum;
+
+    @ApiModelProperty("累计提款金额")
+    private BigDecimal totalWithdraw;
+
+    @ApiModelProperty("累计普通提款次数")
+    private Integer totalWithdrawNum;
+
     @ApiModelProperty("备注")
     private String remark;
 
@@ -276,10 +294,13 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty(value = "信用额度")
     private BigDecimal creditQuota;
 
-    @ApiModelProperty(value = "中心钱包余额")
+    @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
     
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+
+    @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
     
 }

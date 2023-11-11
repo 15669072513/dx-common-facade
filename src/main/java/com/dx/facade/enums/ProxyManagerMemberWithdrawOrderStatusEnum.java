@@ -61,7 +61,7 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
                     WithdrawOrderStatus.二审拒绝.code(),
                     WithdrawOrderStatus.三审拒绝.code(),
                     WithdrawOrderStatus.已出款.code(),
-                    WithdrawOrderStatus.出款拒绝.code()
+                    WithdrawOrderStatus.出款失败.code()
             );
         }
         if (Objects.equals(clientOrderStatus, 待平台审核.code)) {//待平台审核
@@ -86,7 +86,7 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
         if (Objects.equals(clientOrderStatus, 代理审核拒绝.code)) {//代理审核拒绝
             return Arrays.asList(
                     WithdrawOrderStatus.三审拒绝.code(),
-                    WithdrawOrderStatus.出款拒绝.code()
+                    WithdrawOrderStatus.出款失败.code()
             );
         }
         if (Objects.equals(clientOrderStatus, 代理审核通过.code)) {//代理审核通过
@@ -117,7 +117,7 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
             return 待代理审核.code;
         }
         if (dbOrderStatus.equals(WithdrawOrderStatus.三审拒绝.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.出款拒绝.code())) {
+                || dbOrderStatus.equals(WithdrawOrderStatus.出款失败.code())) {
             return 代理审核拒绝.code;
         }
         if (dbOrderStatus.equals(WithdrawOrderStatus.已出款.code())) {

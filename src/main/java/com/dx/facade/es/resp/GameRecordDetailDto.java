@@ -179,4 +179,17 @@ import lombok.Data;
 
      @ApiModelProperty("牌桌名称")
      private String tableName;
+
+     //德州明细增加 抽水贡献 注单类型
+     /**
+      * 注单类型 1 俱乐部游戏 2保险
+      */
+     @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
+     private Integer betType;
+
+     /**
+      * 抽水贡献
+      */
+     @ApiModelProperty("抽水贡献")
+     private BigDecimal pumpContribution;
 }

@@ -4,7 +4,7 @@ public enum ErrorCode {
 
     MEMBER_SERVICE("10002"),
     MISSING_PARAM_EXCEPTION("缺少参数"),
-    PARAM_EXCEPTION("参数错误"),
+    PARAM_EXCEPTION("系统错误，请联系客服"),
     CHECK_PARAM_EXCEPTION("检查参数异常"),
 
     ORDER_NOT_EXISTS("订单不存在"),

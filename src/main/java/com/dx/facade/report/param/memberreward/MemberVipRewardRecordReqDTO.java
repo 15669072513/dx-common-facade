@@ -49,7 +49,7 @@ public class MemberVipRewardRecordReqDTO implements Serializable {
 	private Integer rewardType;
 
 	@NotNull
-	@ApiModelProperty(value = "红利发送位置: 1-中心钱包 2-红利中心 3-B端钱包")
+	@ApiModelProperty(value = "红利发送位置: 1-现金钱包 2-红利中心 3-B端钱包")
 	private Integer sendPosition;
 
 	@NotNull

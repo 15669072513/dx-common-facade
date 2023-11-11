@@ -11,6 +11,8 @@ import com.dx.facade.account.exception.ErrorCode;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.ProxyInfoRespDTO;
 
+import java.math.BigDecimal;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -26,7 +28,7 @@ public class SubmitPayParamDTO {
     @ApiModelProperty("所属商户id")
     private Long merchantId;
     @ApiModelProperty("充值金额")
-    private Integer orderAmount;
+    private BigDecimal orderAmount;
     @ApiModelProperty("支付通道配置id,从支付通道列表接口中返回的数据获取")
     private Long paymentChannelId;
     @ApiModelProperty("银行id")
@@ -68,7 +70,7 @@ public class SubmitPayParamDTO {
             Assert.notNull(memberBO, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("memberBO"));
         } else if (userType.intValue() == 1) {
             Assert.notNull(proxyBO, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("proxyBO"));
-            Assert.isTrue(bizType.intValue() == 6 || bizType.intValue() ==7, ErrorCode.CHECK_PARAM_EXCEPTION.messageAfter("bizType"));
+            Assert.isTrue(bizType.intValue() == 17, ErrorCode.CHECK_PARAM_EXCEPTION.messageAfter("bizType"));
         }
     }
 

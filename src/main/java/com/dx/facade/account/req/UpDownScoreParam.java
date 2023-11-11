@@ -28,8 +28,8 @@ public class UpDownScoreParam {
 	private String userName;
 
 	// 不同于walletType
-	@NotNull(message = "钱包类型(1=中心钱包,2=信用钱包)不能为空")
-	@ApiModelProperty(value = "调整钱包类型(1=中心钱包，2=信用钱包)", required = true)
+	@NotNull(message = "钱包类型(1=现金钱包,2=信用钱包)不能为空")
+	@ApiModelProperty(value = "调整钱包类型(1=现金钱包，2=信用钱包)", required = true)
 	private Integer walletType;
 
 	// 不同于bizType

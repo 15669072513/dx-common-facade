@@ -127,10 +127,10 @@ public class ProxyFinanceParamDTO implements Serializable {
     @ApiModelProperty(value="累计额度钱包转账次数")
     private Integer totalQuotawltTransferNum;
     
-	@ApiModelProperty(value="统计代理转中心钱包总额")
+	@ApiModelProperty(value="统计代理转现金钱包总额")
 	private BigDecimal totalBrokerageTransCenterAmount;
 	
-	@ApiModelProperty(value="统计代理转中心钱包次数")
+	@ApiModelProperty(value="统计代理转现金钱包次数")
 	private Integer totalBrokerageTransCenterNum;
     
     @ApiModelProperty(value="上次存款时间")

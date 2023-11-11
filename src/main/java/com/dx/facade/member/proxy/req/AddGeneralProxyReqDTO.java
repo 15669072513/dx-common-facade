@@ -1,24 +1,25 @@
 package com.dx.facade.member.proxy.req;
 
+import java.math.BigDecimal;
+import java.util.List;
+
+import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import com.baomidou.mybatisplus.annotation.TableField;
+import javax.validation.constraints.Pattern;
+
 import com.dx.facade.constant.Constants;
-import com.dx.facade.member.param.BaseRebateRateParamDTO;
-import com.dx.facade.member.resp.BaseRebateRateRespDTO;
+import com.dx.facade.member.param.BaseCommissionRateParamDTO;
 import com.dx.facade.merchant.req.ProxyContractAddReqDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import javax.validation.constraints.DecimalMin;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Pattern;
-
-import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * 代理 实体类
@@ -57,8 +58,10 @@ public class AddGeneralProxyReqDTO {
 	private String password;
 	
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约", required = true)
-	//@NotNull(message = "契约模式不能为空")
 	private Integer contractModel;
+	
+	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
+	private Integer commissionModel;
 	
 	@ApiModelProperty(value = "代理线层级上限", required = true)
 	@NotNull(message = "代理线层级上限不能为空")
@@ -103,6 +106,11 @@ public class AddGeneralProxyReqDTO {
     @DecimalMin(value = "0.000000", message = "德州返点比例不能小于0.0000")
     @NotNull(message = "德州返点比例不能为空")
     private BigDecimal texasRebate;
+	
+	@ApiModelProperty("德州保险返点比例")
+    @DecimalMin(value = "0.0000", message = "德州保险返点比例不能小于0.0000")
+    @NotNull(message = "德州保险返点比例不能为空")
+    private BigDecimal texasInsuranceRebate;
     
     @ApiModelProperty("真人返点比例")
     @NotNull(message = "真人返点比例不能为空")
@@ -128,7 +136,15 @@ public class AddGeneralProxyReqDTO {
     @NotNull(message = "电竞返点比例不能为空")
     @DecimalMin(value = "0.0000", message = "电竞返点比例不能小于0.0000")
     private BigDecimal esportsRebate;
-	
+    
+    @ApiModelProperty("返佣比例列表")
+    private List<BaseCommissionRateParamDTO> commissionRateList;
+
+	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
+	@NotNull(message = "取款限制类型 不能为空")
+	@TableField("withdraw_limit_type")
+	private Integer withdrawLimitType;
+
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		
 		return ProxyContractAddReqDTO.builder()

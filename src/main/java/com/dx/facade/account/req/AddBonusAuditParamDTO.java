@@ -56,7 +56,7 @@ public class AddBonusAuditParamDTO implements BaseParmDTO {
     @ApiModelProperty(value = "活动名称")
     private String activityName;
 
-    @ApiModelProperty(value = "发放位置1 中心钱包 2 红利中心 3 B端钱包，详见ActivityEnums.ActivityBonusAuditLocation")
+    @ApiModelProperty(value = "发放位置1 现金钱包 2 红利中心 3 B端钱包，详见ActivityEnums.ActivityBonusAuditLocation")
     private Integer location;
 
     @ApiModelProperty(value = "场馆code")

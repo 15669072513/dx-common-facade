@@ -3,6 +3,7 @@ package com.dx.facade.payment.enums;
 import com.dx.enums.ConstantEnums;
 import com.dx.exception.BizException;
 import com.dx.facade.common.OrderNoUtils;
+import com.dx.facade.enums.DepositOrderStatus;
 
 import java.util.Objects;
 
@@ -237,6 +238,17 @@ public class Payment {
         public static OrderDepositAppStatus getAppStatusByOrderCode (OrderDepositStatus orderDepositStatus) {
             switch (orderDepositStatus) {
                 case 待付款:
+                    return OrderDepositAppStatus.待处理;
+                case 成功:
+                    return OrderDepositAppStatus.成功;
+                default:
+                    return OrderDepositAppStatus.已取消;
+            }
+        }
+
+        public static OrderDepositAppStatus getAppStatusByOrderCode (DepositOrderStatus depositOrderStatus) {
+            switch (depositOrderStatus) {
+                case 待确认:
                     return OrderDepositAppStatus.待处理;
                 case 成功:
                     return OrderDepositAppStatus.成功;
@@ -572,8 +584,9 @@ public class Payment {
 
     public enum DepositBizType {
         会员存款(1, "会员存款"),
-        佣金存款(6, "佣金存款"),
-        额度存款(7, "额度存款"),
+        代理存款(17, "代理存款"),
+        //佣金存款(6, "佣金存款"),
+        //额度存款(7, "额度存款"),
         ;
         private Integer code;
         private String desc;
@@ -654,13 +667,13 @@ public class Payment {
         额度出金私庄(9, "额度出金私庄", 3),
         佣金收金私庄(10,"佣金收金私庄", 4),
 
-        中心钱包代存(11,"中心钱包代存", 5),
+        现金钱包代存(11,"现金钱包代存", 5),
         信用钱包代存(12,"信用钱包代存", 5),
-        信用余额代存(13,"信用余额代存", 5),
+        可用额度代存(13,"可用额度代存", 5),
 
-        中心钱包转账(14,"中心钱包转账", 6),
+        现金钱包转账(14,"现金钱包转账", 6),
         信用额度转账(15,"信用额度转账", 6),
-        信用余额转账(16,"信用余额转账", 6),
+        可用额度转账(16,"可用额度转账", 6),
         信用借款(17,"信用借款", 6),
         信用还款(18,"信用还款", 6),
 
@@ -792,6 +805,15 @@ public class Payment {
         public static VirtualProtocolTypeEnum getType(Integer code) throws BizException {
             for (VirtualProtocolTypeEnum enums : values()) {
                 if (enums.code.equals(code)) {
+                    return enums;
+                }
+            }
+            throw new BizException("没有这个VirtualProtocolTypeEnum");
+        }
+
+        public static VirtualProtocolTypeEnum getTypeByDesc(String desc) throws BizException {
+            for (VirtualProtocolTypeEnum enums : values()) {
+                if (enums.desc.equals(desc)) {
                     return enums;
                 }
             }
@@ -949,8 +971,8 @@ public class Payment {
      */
     public enum ObDepositOrderAppStatus {
         待处理(1, "待支付", 0),
-        成功(3, "成功", 1),
-        已取消(2, "失败", 2);
+        成功(3, "成功", 3),
+        已取消(2, "失败", 4);
         private Integer code;
         private String desc;
         private Integer thirdCode;

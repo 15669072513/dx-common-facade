@@ -35,6 +35,9 @@ public enum ConfigKeyEnum {
     MESSAGE_BONUSRECEIVE_DAYS("message.bonusreceive.days", "1"),
     MESSAGE_BONUSUNRECEIVE_DAYS("message.bonusunreceive.days", "1"),
     PAYMENT_PAYPASSWORD_WRONG_TIMES("payment.paypassword.wrong.times", "1"),
+    PAYMENT_PROXY_PAYPASSWORD_WRONG_TIMES("payment.proxy.paypassword.wrong.times", "1"),
+    PAYMENT_MEMBER_PAYPASSWORD_WRONG_TIMES("payment.member.paypassword.wrong.times", "1"),
+    PAYMENT_PAYPASSWORD_WRONG_TIMES_MEMBER("payment.paypassword.wrong.times.member", "1"),
     OVERFLOW_DATEDIFF_DAYS("overflow.datediff.days", "1"),
     OVERFLOW_APPLY_AGAIN_ONOFF("overflow.apply.again.onoff", "1"),
     SURROGATE_AMOUNT_SINGLE_CONFIG("surrogate.amount.single.config", "1"),
@@ -60,6 +63,8 @@ public enum ConfigKeyEnum {
     RESOURCE_BANNER_INTERVAL_TIME("resource.banner.interval.time", "1"),
     BANK_LIMIT_CHECK_NUM_UID("bank.limit.check.num.uid", "1"),
     BANK_LIMIT_CHECK_NUM_IP("bank.limit.check.num.ip", "1"),
+    USDT_TRC20_ICON_URL("usdt.trc20.icon.url", "1"),
+    USDT_ERC20_ICON_URL("usdt.erc20.icon.url", "1"),
 
     //后台使用
     RECHARGE_ACTIVE_CONFIG("recharge.active.config", "2"),
@@ -134,14 +139,26 @@ public enum ConfigKeyEnum {
     PROXY_DY_RATE("proxy.dy.rate", "1"),
     PROXY_CP_RATE("proxy.cp.rate", "1"),
     PROXY_BY_RATE("proxy.by.rate", "1"),
-    
-    TEXAS_REBATE_RATE_LIMIT("texas.rebate.rate.limit","1"),
-    ACTUAL_PERSON_REBATE_RATE_LIMIT("actual.person.rebate.rate.limit","1"),
-    SPORTS_REBATE_RATE_LIMIT("sports.rebate.rate.limit","1"),
-    LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit","1"),
-    CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit","1"),
-    ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit","1"),
 
+    TEXAS_REBATE_RATE_LIMIT("texas.rebate.rate.limit", "1"),
+    TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.rebate.rate.limit", "1"),
+    ACTUAL_PERSON_REBATE_RATE_LIMIT("actual.person.rebate.rate.limit", "1"),
+    SPORTS_REBATE_RATE_LIMIT("sports.rebate.rate.limit", "1"),
+    LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit", "1"),
+    CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit", "1"),
+    ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit", "1"),
+    
+    COMMISSION_TEXAS_REBATE_RATE_LIMIT("texas.club.member.rebate","1"),
+    COMMISSION_ACTUAL_PERSON_REBATE_RATE_LIMIT("zr.member.rebate","1"),
+    COMMISSION_SPORTS_REBATE_RATE_LIMIT("ty.member.rebate","1"),
+    COMMISSION_LOTTERY_TICKET_REBATE_RATE_LIMIT("cp.member.rebate","1"),
+    COMMISSION_CHESS_REBATE_RATE_LIMIT("qp.member.rebate","1"),
+    COMMISSION_ESPORTS_REBATE_RATE_LIMIT("dj.member.rebate","1"),
+    COMMISSION_TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.member.rebate", "1"),
+
+    TEXAS_COMMISSION_RATE_LIMIT("texas.commission.rate.limit", "1"),
+    TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.commission.rate.limit", "1"),
+    OTHER_COMMISSION_RATE_LIMIT("other.commission.rate.limit", "1"),
     ////// OB旗舰精简优化
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBDJ("deposit.usdt.protocol.address.obdj", "1"),
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBQJ("deposit.usdt.protocol.address.obqj", "1"),
@@ -159,7 +176,7 @@ public enum ConfigKeyEnum {
     GAMEPLATFORM_OPERATE_SHARE_CARD_ID("gameplatform.operate.share.card.id", "2"),
     GAMEPLATFORM_OPERATE_PENDING("gameplatform.operate.pending", "2"),
     GAMEPLATFORM_OPERATE_TELEGRAM_WEB("gameplatform.operate.telegram.web", "2"),
-	GAMEPLATFORM_COMMON_EXPORT_WAIT_TIME("gameplatform.common.export.wait.time", "2"),
+    GAMEPLATFORM_COMMON_EXPORT_WAIT_TIME("gameplatform.common.export.wait.time", "2"),
 
     // OB包网项目字典枚举
     DEPOSIT_AGENT_PENDING_TIMES("deposit.agent.pending.times", "1"),
@@ -199,6 +216,16 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_ACTIVITY_BONUS("message.member.activity.bonus", "1"),
     MESSAGE_MEMBER_DEPOSIT_BONUS("message.member.deposit.bonus", "1"),
 
+    //v2.1存取款消息模板
+    MESSAGE_MEMBER_WITHDRAW_SUCCESS_V21("message.member.withdraw.success.v21", "1"),
+    MESSAGE_MEMBER_WITHDRAW_FAIL_V21("message.member.withdraw.fail.v21", "1"),
+    MESSAGE_MEMBER_DEPOSIT_SUCCESS_V21("message.member.deposit.success.v21", "1"),
+    MESSAGE_MEMBER_DEPOSIT_FAIL_V21("message.member.deposit.fail.v21", "1"),
+    MESSAGE_PROXY_DEPOSIT_SUCCESS_V21("message.proxy.deposit.success.v21", "1"),
+    MESSAGE_PROXY_DEPOSIT_FAIL_V21("message.proxy.deposit.fail.v21", "1"),
+    MESSAGE_PROXY_WITHDRAW_SUCCESS_V21("message.proxy.withdraw.success.v21", "1"),
+    MESSAGE_PROXY_WITHDRAW_FAIL_V21("message.proxy.withdraw.fail.v21", "1"),
+
     //系统消息code 代理
     MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),//合营伙伴
     MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
@@ -216,18 +243,24 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_CLUB_SUCCESS("message.proxy.club.success", "1"), // 俱乐部审核通过
     MESSAGE_PROXY_CLUB_FAIL("message.proxy.club.fail", "1"), //俱乐部审核拒绝
 
-	
-	//后台登录IP白名单功能开关（0=关闭  1=开启）
-	LOGIN_IP_WHITELIST_SWITCH("login.ip.whitelist.switch", "2"),
+
+    //后台登录IP白名单功能开关（0=关闭  1=开启）
+    LOGIN_IP_WHITELIST_SWITCH("login.ip.whitelist.switch", "2"),
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
     MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
-    /** 币种 */
-    DX_CURRENCY("dx.currency","1"),
-    /** 会员默认头像 */
-    MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url","1"),
-    /** App端会员默认头像 */
-    APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url","1"),
+    /**
+     * 币种
+     */
+    DX_CURRENCY("dx.currency", "1"),
+    /**
+     * 会员默认头像
+     */
+    MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url", "1"),
+    /**
+     * App会员默认头像
+     */
+    APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url", "1"),
     //*****************************账单模块配置,其它模块请注意自己的位置哈*************************************
     PROXY_LOAN_BILL_PERIOD_DAYOFWEEK("proxy.loan.bill.period.dayofweek", "1"),
     PROXY_LOAN_BILL_PERIOD_HOUR("proxy.loan.bill.period.hour", "1"),
@@ -236,6 +269,16 @@ public enum ConfigKeyEnum {
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_DAILY_MAX_COUNT("account.withdraw.member.dailyMxCount", "1"),
     //资资金>账单相关设置 会员单笔可提现最大额度
     ACCOUNT_MEMBER_WITHDRAW_REQUEST_MAX_AMOUNT("account.withdraw.member.maxAmount", "1"),
+    //会员取款RMB/USDT汇率边界值「6.5，7.5」
+    ACCOUNT_MEMBER_WITHDRAW_DEPOSIT_USDT_RATE("account.member.withdraw.deposit.usdt.rate", "1"),
+    //会员取款RMB/USDT汇率边界值「6.5，7.5」
+    ACCOUNT_PROXY_WITHDRAW_DEPOSIT_USDT_RATE("account.proxy.withdraw.deposit.usdt.rate", "1"),
+    //会员取款时是否需要输入支付密码校验：0-无需校验；1-需要校验
+    ACCOUNT_MEMBER_WITHDRAW_PAY_PASSWORD_CHECK("account.member.withdraw.pay.password.check", "1"),
+    //代理取款时是否需要输入支付密码校验：0-无需校验；1-需要校验
+    ACCOUNT_PROXY_WITHDRAW_PAY_PASSWORD_CHECK("account.proxy.withdraw.pay.password.check", "1"),
+
+
     //******************************资金模块配置,其它模块请注意自己的位置哈************************************
     /** 同时开牌桌上限 */
     CLUB_MAXIMUM_NUMBER("club.maximum.number","1"),
@@ -249,7 +292,14 @@ public enum ConfigKeyEnum {
     TEXAS_UPPER_LIMIT("texas.upper.limit","1"),
     /** 短牌单牌桌累计带入上限（倍Ante） */
     SHOORT_UPPER_LIMIT("short.upper.limit","1"),
+
+    //******************************短信验证相关
+    /** 短信验证码有效时长*/
+    CMS_VALID_TIME("cms.valid.time","1"),
+    /** 短信验证码默认过期时间*/
+    CMS_DEFAULT_COUNTDOWN("cms.default.countdown","1"),
     
+    PROXY_LEVEL_LIMIT("proxy.level.limit","1"),
 	;
 
     //code转换

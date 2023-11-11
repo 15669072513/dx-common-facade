@@ -4,20 +4,15 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.account.param.ChangeLockStatusParam;
-import com.dx.facade.account.param.PaymentLockStatusDTO;
-import com.dx.facade.account.param.WithdrawOrderParamDTO;
-import com.dx.facade.account.param.WithdrawOrderStatsParamDTO;
-import com.dx.facade.account.req.OrderListByIpOrDeviceNoParamDTO;
-import com.dx.facade.account.req.WithdrawOrderAuditParamDTO;
-import com.dx.facade.account.req.WithdrawOrderUpdateReqDTO;
-import com.dx.facade.account.req.WithdrawTodayTotalReqDTO;
+import com.dx.facade.account.param.*;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.*;
 
 import io.swagger.annotations.ApiModelProperty;
 
 import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Map;
 
 public interface WithdrawOrderRPCService {
 
@@ -28,12 +23,21 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<PageResp<WithdrawOrderRespDTO, WithdrawOrderSumDTO>> getWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
 
+
     /**
-     * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
-     * @param dto           更新DTO
-     * @param operationDesc 操作说明
+     * 代理添加银行卡/虚拟币时提款记录列表
+     * @param pageReq
      * @return
      */
+    CommonResp<PageResp<WithdrawOrderRespDTO, ?>> getProxyWithdrawOrderList(PageReq<WithdrawOrderParamDTO> pageReq);
+
+
+        /**
+         * 提现订单状态更新（订单状态，审核信息等,如果提现有拒绝，需要处理提现资金回退）
+         * @param dto           更新DTO
+         * @param operationDesc 操作说明
+         * @return
+         */
     Boolean updateWithdrawOrderStatusById(WithdrawOrderUpdateReqDTO dto, String operationDesc);
 
     /**
@@ -48,11 +52,10 @@ public interface WithdrawOrderRPCService {
 
     /**
      * 统计指定提现订单状态下该用户的锁单数量
-     * @param lockAccount           锁单账号
-     * @param orderStatusList       提现订单状态集合
+     * @param param           参数
      * @return
      */
-    Integer countLockedStatusWithdrawOrderNum(String lockAccount, List<Integer> orderStatusList);
+    Integer countLockedStatusWithdrawOrderNum(WithdrawOrderUpdateLockReqDTO param);
 
     /**
      * 代理待审核订单总数统计
@@ -60,6 +63,10 @@ public interface WithdrawOrderRPCService {
      * @return  待代理审核状态的订单数
      */
     Integer countWaitAuditByProxyOrderNum(List<Long> memberIds);
+
+    default Integer countByQueryCondition(CountByConditionParamDTO param) {
+        return 0;
+    }
 
 
     CommonResp changeLockStatusWithdrawOrderById(ChangeLockStatusParam param) throws BizException;
@@ -72,10 +79,20 @@ public interface WithdrawOrderRPCService {
      */
     CommonResp<WithdrawTodayTotalRespDTO> memberTodayWithdraw(WithdrawTodayTotalReqDTO param);
 
+    CommonResp<GetTodayWithdrawStaRespDTO> getTodayWithdrawStat(Integer userType, Long userId);
+
     List<OrderListByIpOrDeviceNoRespDTO> getOrderListByIpOrDeviceNo(OrderListByIpOrDeviceNoParamDTO param);
 
 
     CommonResp auditWithdrawOrder(WithdrawOrderAuditParamDTO param) throws BizException;
+
+    /**
+     * 发起第三方提现操作
+     * @param eventId
+     * @return
+     * @throws BizException
+     */
+    CommonResp confirmCreateWithdraw(String eventId);
 
     /**
      * 通过订单号获取订单详情
@@ -106,4 +123,26 @@ public interface WithdrawOrderRPCService {
      * @return
      */
     WithdrawOrderStatsRespDTO getWithdrawStats(WithdrawOrderStatsParamDTO paramDTO);
+
+    /**
+     * 查询会员或代理存取款统计信息
+     * @param paramDTO
+     * @return
+     */
+    UserWithdrawDepositStatRespDTO getUserWithdrawDepositStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
+
+    /**
+     * 查询批量会员或代理的取款统计
+     * @param param
+     * @return
+     */
+    CommonResp<Map<Long,BatchUserWithdrawDepositStatRespDTO>> getBatchUserWithdrawDepositStatInfo(BatchUserWithdrawDepositStatReqDTO param);
+
+    /**
+     * @author Dealer
+     * @description: 钱包页面需要展示取款中状态信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<Integer> getWithdrawStatInfo(UserWithdrawDepositStatReqDTO paramDTO);
 }

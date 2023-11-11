@@ -38,6 +38,9 @@ public class ArtificialAccountSubRecordPageParmDTO extends PageRequest implement
 	@ApiModelProperty(value = "调整类型：1=人工充值  2=存款优惠  3=其他", example = "1")
 	private Integer adjustType;
 
+	@ApiModelProperty(value = "调整类型集合：1=人工充值  2=存款优惠  3=其他", example = "1")
+	private List<Integer> adjustTypeList;
+
 	@ApiModelProperty(value = "钱包类型，详见walletType字典", example = "6")
 	private Integer walletType;
 
@@ -64,6 +67,8 @@ public class ArtificialAccountSubRecordPageParmDTO extends PageRequest implement
 
 
 	private Long userId;
+
+	private List<Long> userIds;
 
 	@Override
 	public void check() {

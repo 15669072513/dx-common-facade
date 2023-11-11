@@ -15,13 +15,7 @@ import com.dx.facade.texas.req.DxTableCountReq;
 import com.dx.facade.texas.req.DxTableInfoAddReq;
 import com.dx.facade.texas.req.DxTableInfoLimitReq;
 import com.dx.facade.texas.req.DxTableInfoListReq;
-import com.dx.facade.texas.resp.DxTableBaseInfoResp;
-import com.dx.facade.texas.resp.DxTableClubInfoResp;
-import com.dx.facade.texas.resp.DxTableConfigRuleResp;
-import com.dx.facade.texas.resp.DxTableCountResp;
-import com.dx.facade.texas.resp.DxTableInfoListResp;
-import com.dx.facade.texas.resp.DxTableRobotResp;
-import com.dx.facade.texas.resp.DxTableSummaryResp;
+import com.dx.facade.texas.resp.*;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -107,4 +107,16 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("单牌桌累计带入上限")
     private Integer bringInLimit=0;
+
+    @ApiModelProperty("turn购买保险最低值，多个用逗号隔开，支持小数点2位")
+    private String insuranceTurn;
+
+    @ApiModelProperty("选张购买功能 false-不选张 true-选张，多个用逗号隔开，支持小数点2位")
+    private Boolean insuranceChoosSheet;
+
+    @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
+    private String insuranceMode;
+
+    @ApiModelProperty("保险出发下限")
+    private Integer insuranceLower=0;
 }

@@ -37,9 +37,9 @@ public class PlayerBalanceDetailResp implements Serializable {
     private String currency;
 
     /**
-     * 中心钱包余额
+     * 现金余额
      */
-    @ApiModelProperty(value = "中心钱包余额", example = "100.00")
+    @ApiModelProperty(value = "现金余额", example = "100.00")
     private BigDecimal centerWalletBalance;
 
     /**

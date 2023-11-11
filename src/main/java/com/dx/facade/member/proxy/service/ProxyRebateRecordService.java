@@ -31,6 +31,8 @@ public interface ProxyRebateRecordService {
      * 功能菜单红点显示数量
      */
     Integer countToAuditRecordByMerchantId(Long merchantId);
+
+    Integer countToMemberAuditRecordByMerchantId(Long merchantId);
     /**
      * 返点详情页
      */

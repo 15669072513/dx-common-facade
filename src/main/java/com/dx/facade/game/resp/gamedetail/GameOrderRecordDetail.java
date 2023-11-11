@@ -1,8 +1,10 @@
 package com.dx.facade.game.resp.gamedetail;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -79,6 +81,8 @@ public class GameOrderRecordDetail implements Serializable {
     }
     @Data
     @Builder
+    @AllArgsConstructor
+    @NoArgsConstructor
     public static class GameOrderRecord {
 
         @ApiModelProperty("用户id")

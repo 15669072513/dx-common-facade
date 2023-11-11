@@ -88,11 +88,10 @@ public class ClubAuditRecordResp {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @ApiModelProperty(value="审核完成时间")
     private LocalDateTime auditDatetime;
-    
+
     /** 审核备注 */
     @ApiModelProperty(value="审核备注")
     private String auditRemark;
-
 
 
 //    @ApiModelProperty(value="审核环节（0-已结束 1-一审审核 2-二审审核）")

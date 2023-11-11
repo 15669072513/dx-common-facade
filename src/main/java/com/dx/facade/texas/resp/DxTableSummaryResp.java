@@ -22,6 +22,18 @@ public class DxTableSummaryResp implements Serializable {
     @ApiModelProperty("总牌桌抽水")
     private BigDecimal pumpAmountSum = BigDecimal.ZERO;
 
+    @ApiModelProperty("盈亏金额")
+    private BigDecimal netAmount=BigDecimal.ZERO;
+
+    @ApiModelProperty("总保险盈亏")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
     @ApiModelProperty("总牌桌费用")
     private BigDecimal costSum = BigDecimal.ZERO;
+
+    @ApiModelProperty("总牌桌抽水百分比")
+    private String pumpAmountRate;
+
+    @ApiModelProperty("保险盈亏百分比")
+    private String insuredNetAmountRate;
 }

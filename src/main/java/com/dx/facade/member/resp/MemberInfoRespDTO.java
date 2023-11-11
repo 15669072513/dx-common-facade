@@ -60,6 +60,9 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("会员密码")
     private String password;
 
+    @ApiModelProperty("会员支付密码")
+    private String payPassword;
+
     @ApiModelProperty("会员真实姓名")
     private String realName;
 
@@ -135,7 +138,7 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("首存时间")
     private LocalDateTime firstDepositDatetime;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal balance;
 
     @ApiModelProperty("注册终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP 6-后台）")
@@ -233,7 +236,7 @@ public class MemberInfoRespDTO {
 
     String merchantIdPath;
 
-    @ApiModelProperty("信用余额")
+    @ApiModelProperty("可用额度")
     private BigDecimal creditAvailable;
 
     @ApiModelProperty("信用额度")
@@ -244,4 +247,10 @@ public class MemberInfoRespDTO {
     
     @ApiModelProperty("代理登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer proxyLoginLockStatus;
+    
+    @ApiModelProperty("是否设置支付密码标识 true 已设置 false 未设置")
+    private boolean payPasswordFlag;
+
+    @ApiModelProperty(value = "取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
 }

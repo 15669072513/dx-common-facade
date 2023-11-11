@@ -68,7 +68,7 @@ public class MemberVipRewardRecordRespDTO implements Serializable {
 	@ApiModelProperty(value = "福利类型 1-会员VIP奖励 2-好友邀请")
 	private Integer rewardType;
 
-	@ApiModelProperty(value = "红利发送位置: 1-中心钱包 2-红利中心 3-B端钱包")
+	@ApiModelProperty(value = "红利发送位置: 1-现金钱包 2-红利中心 3-B端钱包")
 	private Integer sendPosition;
 
 	@ApiModelProperty(value = "发放金额")

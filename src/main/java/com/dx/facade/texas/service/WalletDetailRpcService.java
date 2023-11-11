@@ -13,6 +13,7 @@ import com.dx.facade.texas.req.DxTableBringInfoReq;
 import com.dx.facade.texas.req.TableBringInfoReq;
 import com.dx.facade.texas.req.TableUserBringInfoReq;
 import com.dx.facade.texas.req.WalletDetailPageRequest;
+import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
 
@@ -52,4 +53,12 @@ public interface WalletDetailRpcService {
    * @return
    */
   CommonResp<List<GameAmountTotalRespDTO>> getTablesBringInfo(DxTableBringInfoReq req);
+
+  /**
+   * 实时账单
+   * @param req
+   * @return
+   * @throws BizException
+   */
+  CommonResp<List<DxGameBillResp>> getCurrentTableBill(TableBringInfoReq req) throws BizException;
 }

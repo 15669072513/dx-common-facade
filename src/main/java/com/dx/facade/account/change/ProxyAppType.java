@@ -15,7 +15,7 @@ public enum ProxyAppType implements IAppType {
     transfer(5, "代理转账"),
     other(6, "其他"),
     withdraw(7, "取款"),
-    to_center(8, "佣金转回中心钱包"),
+    to_center(8, "佣金转回现金钱包"),
     commission(9, "佣金"),
     rebate(10, "返点"),
     transfer_with_banker(11, "代理划拨"),
@@ -74,6 +74,11 @@ public enum ProxyAppType implements IAppType {
     v2_credit_down_score_to_sub_proxy(58, "代理给下级授信下分"),
     v2_credit_down_score_to_member(59, "代理给会员授信下分"),
 
+    v2_1_withdraw_frozen(60, "取款"),
+    v2_1_withdraw_refused(61, "取款失败"),
+    v2_1_withdraw(62, "取款"),
+    v2_1_deposit(63, "存款"),
+    v2_1_negative_benefit_commission(64,"负盈利返佣金")
     ;
 
     private Integer code;

@@ -1,6 +1,7 @@
 package com.dx.facade.auth.rpc;
 
 import com.dx.entity.CommonResp;
+import com.dx.exception.BizException;
 import com.dx.facade.auth.domain.*;
 
 import java.time.LocalDateTime;
@@ -282,4 +283,11 @@ public interface UserCommonService {
      * @return
      */
     Boolean hasMerchantAdmin(Long merchantId);
+    
+    /**
+     * 更新谷歌验证码的密钥
+     *
+     * @return
+     */
+    CommonResp<String> updateGoogleAuthCode(UserReqDTO userReq);
 }

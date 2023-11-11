@@ -25,10 +25,10 @@ public class GetTransferReq extends PageRequest {
     @ApiModelProperty("会员名")
     private String realName;
 
-    @ApiModelProperty("转出钱包 中心钱包用center 全部传空")
+    @ApiModelProperty("转出钱包 现金钱包用center 全部传空")
     private String fromWallet;
 
-    @ApiModelProperty("转入钱包 中心钱包用center 全部传空")
+    @ApiModelProperty("转入钱包 现金钱包用center 全部传空")
     private String toWallet;
 
     @ApiModelProperty("转账状态 0：初始 1：转账中 2: 成功 3：失败")

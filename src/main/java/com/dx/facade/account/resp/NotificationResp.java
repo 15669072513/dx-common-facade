@@ -14,7 +14,7 @@ public class NotificationResp {
     @ApiModelProperty(value = "未读消息数量")
     private Integer number;
 
-    @ApiModelProperty(value = "红利发送位置: 1-中心钱包 2-红利中心")
+    @ApiModelProperty(value = "红利发送位置: 1-现金钱包 2-红利中心")
     private Integer rewardSendPosition;
 
 }

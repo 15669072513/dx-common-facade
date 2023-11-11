@@ -12,14 +12,11 @@ public class OrderListByIpOrDeviceNoRespDTO {
 
     @ApiModelProperty("会员&代理账号")
     private String userName;
-    @ApiModelProperty("充值金额")
+    @ApiModelProperty("存款金额")
     private BigDecimal depositAmount;
     @ApiModelProperty("提款金额")
     private BigDecimal withdrawAmount;
-    @JsonFormat(
-            pattern = "yyyy-MM-dd HH:mm:ss",
-            timezone = "GMT+8"
-    )
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     @ApiModelProperty("注册时间")
     private LocalDateTime createDt;
     @ApiModelProperty("注册ip")

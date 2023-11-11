@@ -98,7 +98,9 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
 	
 	@ApiModelProperty(value = "私庄模式,1:吃单模式 2:坐庄模式", example = "2")
 	private Integer bankerMode;
-	
+
+    @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
+    private Integer withdrawLimitType;
 
     @ApiModelProperty(value = "账号状态 修改后内容")
     private ProxyInfoRpcEditAccountStatusReqDTO accountStatusAfter;
@@ -118,4 +120,6 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
     private ProxyInfoRpcEditMaxLevels maxLevelsAfter;
     @ApiModelProperty(value = "重置密码以及备注")
     private ProxyInfoRpcEditResetPwd resetPwdAfter;
+    @ApiModelProperty(value = "取款限制类型")
+    private ProxyInfoRpcEditWithdrawLimitType editWithdrawLimitType;
 }

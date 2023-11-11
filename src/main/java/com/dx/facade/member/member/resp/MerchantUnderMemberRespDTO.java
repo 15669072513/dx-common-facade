@@ -79,7 +79,7 @@ public class MerchantUnderMemberRespDTO {
 	private LocalDateTime lastLoginDatetime;
 
 
-	@ApiModelProperty("信用余额")
+	@ApiModelProperty("可用额度")
 	private BigDecimal creditAvailable;
 
 	@ApiModelProperty("信用额度")
