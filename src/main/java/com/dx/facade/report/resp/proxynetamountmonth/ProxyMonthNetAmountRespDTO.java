@@ -71,7 +71,7 @@ public class ProxyMonthNetAmountRespDTO {
 
     /** proxyNet */
     @ApiModelProperty(value = "代净输赢", example = "1500.00")
-    private BigDecimal proxyNet;
+    private BigDecimal proxyNetwinAmount;
 
     /** lastMonthBalance */
     @ApiModelProperty(value = "上月结余", example = "1500.00")
@@ -79,7 +79,7 @@ public class ProxyMonthNetAmountRespDTO {
 
     /** rushNet */
     @ApiModelProperty(value = "冲正后净输赢", example = "1500.00")
-    private BigDecimal rushNet;
+    private BigDecimal proxyRushNet;
 
     @ApiModelProperty("是否存在下级")
     private Boolean isAllSub;
