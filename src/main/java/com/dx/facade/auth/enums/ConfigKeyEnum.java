@@ -258,6 +258,14 @@ public enum ConfigKeyEnum {
      */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url", "1"),
     /**
+     * 会员默认信用等级
+     */
+    MEMBER_DEFAULT_CREDIT_LEVEL("member.default.credit.level", "1"),
+    /**
+     * 代理默认信用等级
+     */
+    PROXY_DEFAULT_CREDIT_LEVEL("proxy.default.credit.level", "1"),
+    /**
      * App会员默认头像
      */
     APP_MEMBER_DEFAULT_TOP_IMAGE_URL("app.member.default.top.image.url", "1"),
