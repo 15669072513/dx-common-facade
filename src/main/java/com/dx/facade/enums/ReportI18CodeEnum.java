@@ -40,7 +40,7 @@ public enum ReportI18CodeEnum implements I18nEnum {
     一审(3110013),
     二审(3110014),
     至(3110015),
-    ;
+    待发放佣金不能小于等于0(310065);
 
     private int code;
 

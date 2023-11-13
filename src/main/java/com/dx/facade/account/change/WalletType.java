@@ -10,22 +10,23 @@ import java.util.Map;
  * 钱包类型
  */
 public enum WalletType implements IWalletType {
-    cash(1, "会员中心钱包"),
-    cash_lock(5, "会员中心钱包冻结余额"),
+    //不带agent的都是会员的；带agent的都是代理的
+    cash(1, "现金钱包"),
+    cash_lock(5, "现金钱包冻结余额"),
     commission(6, "佣金钱包"),
     quota(7, "额度钱包"),
-    agent_lock(8, "代理中心钱包冻结余额"),
-    credit_available(9, "会员信用钱包"),
-    credit_total(10, "会员信用额度"),
+    agent_lock(8, "现金钱包冻结余额"),
+    credit_available(9, "信用钱包"),
+    credit_total(10, "信用额度"),
     texas(11, "德州场馆钱包"),
     video(12, "真人场馆钱包"),
     sports(13, "体育场馆钱包"),
     lottery(14, "彩票场馆钱包"),
     poker(15, "棋牌场馆钱包"),
     e_sports(16, "电竞场馆钱包"),
-    agent_cash(17, "代理中心钱包"),
-    agent_credit_available(18, "代理信用钱包"),
-    agent_credit_total(19, "代理信用额度"),
+    agent_cash(17, "现金钱包"),
+    agent_credit_available(18, "信用钱包"),
+    agent_credit_total(19, "信用额度"),
 
     illegal_type(-1, "未知的类型")
     ;

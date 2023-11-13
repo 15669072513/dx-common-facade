@@ -90,6 +90,9 @@ public class GameRecordDto {
     @ApiModelProperty("结算时间")
     private Long netAt;
 
+    @ApiModelProperty("赛事名称")
+    private String matchInfo;
+
     @ApiModelProperty("赛事ID")
     private String matchId;
 
@@ -112,4 +115,16 @@ public class GameRecordDto {
 
     @ApiModelProperty("场馆名称(如ob真人,ag捕鱼)")
     private String venueName;
+
+    /**
+     * 注单类型 1 俱乐部游戏 2保险
+     */
+    @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
+    private Integer betType;
+
+    /**
+     * 抽水贡献
+     */
+    @ApiModelProperty("抽水贡献")
+    private BigDecimal pumpContribution;
 }

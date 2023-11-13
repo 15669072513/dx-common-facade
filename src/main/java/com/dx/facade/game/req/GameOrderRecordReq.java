@@ -46,6 +46,9 @@ public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty("牌桌Code")
     private String tableCode;
 
+    @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+    private Integer betType;
+
     @ApiModelProperty(value = "投注开始时间 yyyy-MM-dd HH:mm:ss")
     private String betStartTime;
 

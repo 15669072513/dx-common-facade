@@ -135,6 +135,7 @@ public enum MerchantI18nCodeEnum implements I18nEnum {
     SAME_WIND_NAME_DESC(200141), // 风控层级已存在!
     WIND_CONTROL_RECORD_NULL(42024), // 该笔风控层级记录不存在
     WIND_CONTROL_NO_UPDATE(200008), // 未找到风控相关详细信息，不能进行修改!
+    WIND_CONTROL_BOUNDED_ERROR(200123),
     WIND_EDIT_SAME(42072), // 编辑前后信息一致，请重新选择
     BANK_CARD_NOT_EXIST(42158), // 银行卡号不存在
     VIRTURAL_ADDR_NOT_EXIST(42157), // 虚拟币账号不存在

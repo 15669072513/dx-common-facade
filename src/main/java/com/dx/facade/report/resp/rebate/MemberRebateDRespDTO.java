@@ -1,0 +1,127 @@
+package com.dx.facade.report.resp.rebate;
+
+import io.swagger.annotations.ApiModelProperty;
+import lombok.Data;
+
+import java.math.BigDecimal;
+
+@Data
+public class MemberRebateDRespDTO {
+
+    /**
+     * 返水id
+     */
+    @ApiModelProperty(value = "返水id")
+    private Long id;
+
+    /**
+     * 报表日期
+     */
+    @ApiModelProperty(value = "报表日期")
+    private String reportDate;
+
+    /**
+     * 团队总流水
+     */
+    @ApiModelProperty(value = "团队总流水")
+    private BigDecimal totalBetAmount;
+
+    /**
+     * 活跃用户
+     */
+    @ApiModelProperty(value = "活跃人数")
+    private Integer activeNum;
+
+    /**
+     * 有效活跃用户
+     */
+    @ApiModelProperty(value = "有效活跃人数")
+    private Integer effecactiveActiveNum;
+
+
+    @ApiModelProperty(value = "币种")
+    private String currency;
+
+    /**
+     * 契约ID
+     */
+    @ApiModelProperty(value = "契约ID")
+    private Long contractId;
+
+    /**
+     * 等级序号
+     */
+    @ApiModelProperty(value = "等级序号")
+    private Integer contractLevel;
+
+    /**
+     * 流水纠正
+     */
+    @ApiModelProperty(value = "流水纠正")
+    private BigDecimal totalAdjustBetAmount;
+
+    /**
+     * 实际总流水
+     */
+    @ApiModelProperty(value = "实际总流水")
+    private BigDecimal totalRealBetAmount;
+
+    /**
+     * 返点比例
+     */
+    @ApiModelProperty(value = "返点比例")
+    private BigDecimal rebateRate;
+
+    /**
+     * 团队返点
+     */
+    @ApiModelProperty(value = "团队返点")
+    private BigDecimal rebateAmount;
+
+    /**
+     * 下级返点
+     */
+    @ApiModelProperty(value = "下级返点")
+    private BigDecimal childRebateAmount;
+
+
+    @ApiModelProperty(value = "代理账号")
+    private String proxyName;
+
+    @ApiModelProperty(value = "代理ID")
+    private Long proxyId;
+
+    /**
+     * 返点比例
+     */
+    @ApiModelProperty(value = "会员返点比例")
+    private BigDecimal memberRebateAmount;
+
+
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty(value = "会员id")
+    private Long memberId;
+    /**
+     * 会员账号
+     */
+    @ApiModelProperty(value = "会员账号")
+    private String memberName;
+
+    /**
+     * 直属上级账号
+     */
+    @ApiModelProperty(value = "直属上级账号")
+    private String parentProxyName;
+
+    @ApiModelProperty(value = "派发状态 (0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
+    private Integer payoutStatus;
+
+    /**
+     * 个人返点
+     */
+    @ApiModelProperty(value = "个人返点")
+    private BigDecimal personRebateAmount;
+
+}

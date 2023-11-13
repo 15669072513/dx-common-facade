@@ -152,7 +152,7 @@ public class MemberRewardConstant {
     public enum SendPosition implements IConstantDef {
 
         /**
-         * 中心钱包
+         * 现金钱包
          */
         CENTER_WALLET,
         /**

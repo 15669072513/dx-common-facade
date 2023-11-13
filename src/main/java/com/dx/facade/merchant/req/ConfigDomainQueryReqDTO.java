@@ -38,7 +38,6 @@ public class ConfigDomainQueryReqDTO extends PageRequest implements Serializable
     private String domain;
 
     @Min(value = 1, message = "域名类型不能小于1")
-    @Max(value = 4, message = "域名类型不能大于4")
     @ApiModelProperty(value = "域名类型：[1-activity，2-member，3-launch，4-其他]", position = 2)
     private Integer domainType;
 

@@ -36,7 +36,7 @@ public class ProxyDayReportDetailDTO implements Serializable {
     @ApiModelProperty(value = "代理转账总额", example = "100.00")
     private BigDecimal transferToPlayerAmount;
 
-    /** 转入中心钱包总额 */
-    @ApiModelProperty(value = "转入中心钱包总额", example = "100.00")
+    /** 转入现金钱包总额 */
+    @ApiModelProperty(value = "转入现金钱包总额", example = "100.00")
     private BigDecimal transferCenterWalletAmount;
 }

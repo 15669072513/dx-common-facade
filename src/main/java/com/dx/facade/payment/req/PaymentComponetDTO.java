@@ -21,6 +21,15 @@ public class PaymentComponetDTO {
 	@ApiModelProperty(value = "当日剩余额度", hidden = true)
 	private BigDecimal remainingAmount;
 
+	@ApiModelProperty(value = "银行卡提现手续费", hidden = true)
+	private BigDecimal withdrawBankFee;
+
+	@ApiModelProperty(value = "trc20提现手续费", hidden = true)
+	private BigDecimal withdrawTrcFee;
+
+	@ApiModelProperty(value = "erc20提现手续费", hidden = true)
+	private BigDecimal withdrawErcFee;
+
 	@ApiModelProperty(value = "用户id", hidden = true)
 	private Integer remainingNum;
 

@@ -28,9 +28,32 @@ public class WithdrawOrderParamDTO implements Serializable {
 
     @ApiModelProperty("用户id")
     private Long userId;
+    @ApiModelProperty("银行卡号")
+    private String bankCardNo;
+    @ApiModelProperty("上级代理名称")
+    private String parentAgentName;
+    @ApiModelProperty("操作人")
+    private String operatorName;
+    @ApiModelProperty("操作类型（0-解绑 1-绑定 2-下架 3-启用 4-禁用）")
+    private String operateType;
+    @ApiModelProperty(value = "账号类型（1-正式，2-测试，3-合作）")
+    private Integer accountType;
+    @ApiModelProperty("银行名称")
+    private String bankName;
+
+    @ApiModelProperty("虚拟币种类")
+    private String virtualKind;
+    @ApiModelProperty("虚拟币账号地址")
+    private String usdtAddress;
+    @ApiModelProperty("usdt提款协议类型，1.omni，2.erc20, 3.trc20")
+    private Integer usdtType;
+
 
     @ApiModelProperty("多个用户ID")
     private List<Long> userIds;
+
+    @ApiModelProperty("上级代理ID")
+    private Long parentProxyId;
 
     @ApiModelProperty("申请时间开始")
     private LocalDateTime eventTimeStart;
@@ -53,8 +76,11 @@ public class WithdrawOrderParamDTO implements Serializable {
     @ApiModelProperty("客户端状态,WithdrawClientStatus")
     private Integer clientStatus;
 
-    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币")
+    @ApiModelProperty("提款类型，1.银行卡，2.虚拟币，3代理线下支付(通过代理提款)")
     private Integer withdrawType;
+
+    @ApiModelProperty("提款类型")
+    private List<Integer> withdrawTypes;
 
     @ApiModelProperty("通道名称")
     private String channelName;
@@ -109,6 +135,10 @@ public class WithdrawOrderParamDTO implements Serializable {
 
     @ApiModelProperty(value = "支付厂商")
     private String payMerchantName;
+
+    private String currency;
+    //取款银行卡账号或虚拟币账号风控层级名称
+    private List<String> accountWindControls;
 
     @ApiModelProperty("锁单状态是否要排序，默认：否")
     private Boolean isOrderByLockStatus = false;

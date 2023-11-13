@@ -20,7 +20,6 @@ public class UserBankAndVirtualUpdateBindStatusReqDTO {
     private Long id;
 
     @ApiModelProperty(value = "备注", required = true, example = "备注")
-    @NotNull(message = "备注不能为空")
     private String remark;
 
     @ApiModelProperty(value = "商户id",hidden = true)

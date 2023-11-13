@@ -67,13 +67,13 @@ public class ProxyDayReportRespDTO implements Serializable {
     private BigDecimal depositAmount;
 
     @ApiModelProperty(value = "存款次数/会员存款次数")
-    private Integer depositTimes;
+    private Long depositTimes;
 
     @ApiModelProperty(value = "总取款/会员总取款")
     private BigDecimal withdrawAmount;
 
     @ApiModelProperty(value = "取款次数/会员取款次数")
-    private Integer withdrawTimes;
+    private Long withdrawTimes;
 
     @ApiModelProperty(value = "大额取款次数")
     private Integer bigWithdrawTimes;
@@ -96,10 +96,10 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "代存次数")
     private Integer insteadPlayerDepositTimes;
 
-    @ApiModelProperty(value = "转入中心钱包总额(佣金转回)")
+    @ApiModelProperty(value = "转入现金钱包总额(佣金转回)")
     private BigDecimal transferCenterWalletAmount;
 
-    @ApiModelProperty(value = "转入中心钱包次数(转回次数)")
+    @ApiModelProperty(value = "转入现金钱包次数(转回次数)")
     private Integer transferCenterWalletTimes;
 
     @ApiModelProperty(value = "上级转账金额")
@@ -191,7 +191,7 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "钱包余额")
     private BigDecimal walletBalance;
 
-    @ApiModelProperty(value = "信用余额")
+    @ApiModelProperty(value = "可用额度")
     private BigDecimal creditBalance;
 
     @ApiModelProperty(value = "授信额度")
@@ -370,4 +370,22 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "其他调整")
     @TableField("other_adjust_amount")
     private BigDecimal otherAdjustAmount;
+
+    @ApiModelProperty(value = "返佣金额")
+    @TableField("commission_amount")
+    private BigDecimal commissionAmount;
+
+    @ApiModelProperty(value = "返佣其他调整")
+    @TableField("commission_adjust_amount")
+    private BigDecimal commissionAdjustAmount;
+
+    @ApiModelProperty(value = "首存金额")
+    @TableField("first_deposit")
+    private BigDecimal firstDeposit;
+
+    @ApiModelProperty(value = "首存时间")
+    @TableField("first_deposit_datetime")
+    private String firstDepositDatetime;
+
+
 }

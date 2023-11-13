@@ -34,8 +34,10 @@ public class WithdrawTodayTotalRespDTO {
     /**
      * 单日最大申请提现次数
      */
-    @ApiModelProperty("单日最大申请提下次数")
+    @ApiModelProperty("单日最大申请提现次数")
     private Integer dailyMaxCount;
-
-
+    /**
+     * 每日累计提款额度
+     */
+    private BigDecimal dailyWithdrawMaxAmount;
 }

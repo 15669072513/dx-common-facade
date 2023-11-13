@@ -50,7 +50,7 @@ public interface VirtualAccountRPCService {
      * @throws BizException
      */
     @ApiModelProperty(value = "添加虚拟币")
-    CommonResp bindVirtual(VirtualAccountParmDTO virtualAccountParams) throws BizException;
+    CommonResp<VirtualAccountRespDTO> bindVirtual(VirtualAccountParmDTO virtualAccountParams);
 
     /**
      * 修改会员取款时间
@@ -74,7 +74,7 @@ public interface VirtualAccountRPCService {
      * @return
      */
     @ApiModelProperty(value = "查询会员 虚拟币账户信息")
-    PageResp<VirtualAccountRespDTO, ?> selectVirtualAccount(MemberUserBankAndVirtualParam param);
+    CommonResp<PageResp<VirtualAccountRespDTO, ?>> selectVirtualAccount(MemberUserBankAndVirtualParam param);
 
     /**
      * 后台 虚拟币账户解绑操作

@@ -106,7 +106,7 @@ public class DepositOrderRespDTO implements Serializable {
     @ApiModelProperty("通道名称")
     private String channelName;
 
-    @ApiModelProperty("充值类型,1:会员充值，6 代理佣金充值，7 代理额度充值")
+    @ApiModelProperty("充值类型,1:会员充值，17: 代理现金钱包")
     @TableField("biz_type")
     private Integer bizType;
 
@@ -153,9 +153,42 @@ public class DepositOrderRespDTO implements Serializable {
     @ApiModelProperty("银行id")
     private Long bankId;
 
+    @ApiModelProperty("银行名称")
+    private String bankName;
+
     @ApiModelProperty("虚拟币协议")
     private String virtualProtocol;
 
     @ApiModelProperty("厂商名称")
     private String payMerchantName;
+
+    @ApiModelProperty("USDT人民币汇率")
+    private BigDecimal usdtRate;
+
+    @ApiModelProperty("usdt协议类型，1.omni，2.erc20, 3.trc20")
+    @TableField("receive_usdt_type")
+    private Integer receiveUsdtType;
+
+    @ApiModelProperty("收款方usdt地址")
+    @TableField("receive_usdt_address")
+    private String receiveUsdtAddress;
+
+    @ApiModelProperty("收款方银行名称")
+    @TableField("receive_bank_name")
+    private String receiveBankName;
+
+    @ApiModelProperty("收款方真实姓名")
+    @TableField("receive_real_name")
+    private String receiveRealName;
+
+    @ApiModelProperty("收款方银行账号")
+    @TableField("receive_bankcard_no")
+    private String receiveBankcardNo;
+
+    @ApiModelProperty(value = "收款方银行支行地址")
+    @TableField("receive_bank_address")
+    private String receiveBankAddress;
+
+    @ApiModelProperty(value = "通道id")
+    private Long channelId;
 }

@@ -28,7 +28,7 @@ public class ProxyLoanBillSumRespDTO {
     @ApiModelProperty("可提现额小计")
     private BigDecimal subWithdrawable;
 
-    @ApiModelProperty("中心钱包余额小计")
+    @ApiModelProperty("现金余额小计")
     private BigDecimal subWalletBalance;
 
     @ApiModelProperty("信用钱包余额小计")
@@ -55,7 +55,7 @@ public class ProxyLoanBillSumRespDTO {
     @ApiModelProperty("可提现额总计")
     private BigDecimal totalWithdrawable;
 
-    @ApiModelProperty("中心钱包余额总计")
+    @ApiModelProperty("现金余额总计")
     private BigDecimal totalWalletBalance;
 
     @ApiModelProperty("信用钱包余额总计")

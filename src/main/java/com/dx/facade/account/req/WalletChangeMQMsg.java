@@ -20,6 +20,6 @@ public class WalletChangeMQMsg {
     @ApiModelProperty("本次金额")
     private BigDecimal currentAmount;
 
-    @ApiModelProperty("中心钱包余额")
+    @ApiModelProperty("现金余额")
     private BigDecimal cash;
 }

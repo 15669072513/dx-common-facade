@@ -43,6 +43,9 @@ public class MerchantVenueInfoResp {
     @ApiModelProperty(value = "场馆费率")
     private BigDecimal venueFeeRate;
 
+    @ApiModelProperty(value = "保险费率")
+    private BigDecimal insureFeeRate;
+
     @ApiModelProperty(value = "场馆组维护的B端信息(如商户号,md5,aes,url等)")
     private String venueConfig;
 }

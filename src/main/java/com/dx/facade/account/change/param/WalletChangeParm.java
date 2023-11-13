@@ -38,6 +38,15 @@ public abstract class WalletChangeParm implements IWalletChangeParm {
     @ApiModelProperty(value="账变业务")
     private IWalletChange walletChange;
 
+    @ApiModelProperty("通用扩展字段A")
+    private String extensionA;
+
+    @ApiModelProperty("通用扩展字段B")
+    private String extensionB;
+
+    @ApiModelProperty("通用扩展字段C")
+    private BigDecimal extensionC;
+
     @Override
     public void check(){
         //公共参数简单校验

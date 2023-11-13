@@ -15,7 +15,7 @@ public enum AccountI18nCodeEnum implements I18nEnum {
     BANK_CARD_IS_BOUND(11001),
     // USER_BANK_BLACK(10001,"该银行卡已被禁用，请更换其他银行卡"),
     USER_BANK_BLACK(11002),
-    // NUMBER_OF_BANK_CARDS_EXCEEDS(10001,"最多绑定3张银行卡!"),
+    // NUMBER_OF_BANK_CARDS_EXCEEDS(10001,"最多绑定5张银行卡!"),
     NUMBER_OF_BANK_CARDS_EXCEEDS(11003),
     // NO_PAY_CHANNEL(10001,"暂无可用支付通道"),
     /**
@@ -260,6 +260,10 @@ public enum AccountI18nCodeEnum implements I18nEnum {
     ONLY_LOCK_ONE_ORDER(300080),//你有锁定的订单未处理，锁单失败
     加额审核已经锁定(300081),//加额审核已经锁定
     FRIEND_INVITATION_DATA_ABNORMAL(300082),//好友邀请主配置数据异常！
+    ACQUIRE_MEMBER_BILL_LOCK_FAILED(30083),//获取会员分布式锁失败
+    WITHDRAW_LIMIT_INFO_QUERY_FAILED(30084),//取款信息查询失败
+    MEMBER_BILL_DETAIL_RECORD_NOT_EXIST(30085),//会员流水记录不存在
+    CASH_WALLET_NOT_EXIST(30086),//现金钱包不存在
 //
 //    /**
 //     * 账户已被禁用，请更换其他虚拟币账户

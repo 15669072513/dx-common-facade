@@ -1,6 +1,5 @@
 package com.dx.facade.member.proxy.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -56,7 +55,7 @@ public class LowerMemberListRespDto {
 	@JsonProperty("withdraw")
 	private BigDecimal totalWithdraw;
 	
-	@ApiModelProperty("中心钱包余额")
+	@ApiModelProperty("现金余额")
 	private BigDecimal balance;
 	
 	@ApiModelProperty(value="输赢&游戏盈亏")
@@ -93,6 +92,8 @@ public class LowerMemberListRespDto {
 	private Long handCount;
 	@ApiModelProperty("有效投注金额")
 	private BigDecimal validBetAmount;
+	@ApiModelProperty("保险有效投注金额")
+	private BigDecimal insuranceValidBetAmount;
 	@ApiModelProperty
 	private String identity;
 	
@@ -102,7 +103,13 @@ public class LowerMemberListRespDto {
     @ApiModelProperty(value = "授信额度/信用额度")
     private BigDecimal creditBalance;
 
-	@ApiModelProperty("信用余额")
+//    @ApiModelProperty(value = "现金钱包-余额")
+//    private BigDecimal centerWalletBalance;
+    
+//    @ApiModelProperty(value = "应收账款")
+//    private BigDecimal accountsReceivable;
+
+	@ApiModelProperty("可用额度")
 	private BigDecimal creditAvailable;
 
 	@ApiModelProperty("昵称")
@@ -113,4 +120,7 @@ public class LowerMemberListRespDto {
 
 	@ApiModelProperty(value = "层级：1-非直属会员、2-直属会员")
 	private Integer proxyLevel;
+
+	@ApiModelProperty(value = "支付密码重置审核状态 0 未审核   1 审核中")
+	private Integer payPasswordAudit = 0;
 }

@@ -55,9 +55,22 @@ public interface ArtificialAccountAddRPCService {
     @ApiModelProperty("会员人工加额记录 查询请求")
     CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectArtificialAccountAddRecordPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq, Boolean isFinish) throws BizException;
 
+    CommonResp<PageResp<ArtificialAccountAddPageRespDTO, ?>> selectByPage(PageReq<ArtificialAccountAddRecordPageParmDTO> pageReq);
+
     @ApiModelProperty("会员人工加额记录总计")
     CommonResp<AdjustAmountTotalRespDTO> selectArtificialAccountAddTotal(ArtificialAccountAddRecordPageParmDTO req, Boolean isFinish) throws BizException;
 
     @ApiModelProperty(value = "待处理数量")
     Integer getPendingCount(List<Long> merchantIdLs, Integer userType);
+
+
+    /**
+     * 查询用户的最后一次成功后台存款信息
+     * @param userId
+     * @param userType
+     * @return
+     */
+    CommonResp<ArtificialAccountAddPageRespDTO> getLastSuccessBackDepositInfo(Long userId, Integer userType);
+
+
 }
