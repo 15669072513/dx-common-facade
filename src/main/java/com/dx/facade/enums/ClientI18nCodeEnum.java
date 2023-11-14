@@ -138,6 +138,7 @@ public enum ClientI18nCodeEnum implements I18nEnum {
     BIND_PHONE_BANKCARD(300043, "请先绑定手机号和银行卡再领取红利"),
     INVITATION_CODE_NOT_EXIST(300044, "合营码无效，请确认后重新提交"),
     PHONE_NUMBER_NOT_FOUND(300045, "当前手机号未绑定任何账号"),
+    WITHDRAW_ORDER_NOT_EXIST(300046,"提现订单不存在"),
     NICK_NAME_EXIST(300101, "昵称已存在，请重新输入！"),
     CLUB_NAME_EXIST(300102, "俱乐部名称已存在，请重新输入！"),
     CLUB_PROXY_EXIST(300103, "代理已经创建过俱乐部，请重新输入！"),

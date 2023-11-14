@@ -60,10 +60,12 @@ public class MemberNetAmountReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty("最大净盈亏")
     private BigDecimal maxNetProfit;
+    private Integer orderKey;
 
-
-
-
-
+    /**
+     * orderType
+     */
+    @ApiModelProperty(value = "排序方式：升序：asc/降序：desc", example = "desc")
+    private String orderType = "asc";
 
 }
