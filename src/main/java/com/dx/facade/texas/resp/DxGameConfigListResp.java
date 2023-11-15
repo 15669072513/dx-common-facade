@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import java.io.Serializable;
@@ -119,4 +120,7 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("保险出发下限")
     private Integer insuranceLower=0;
+
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
+    private Integer showOutsWinn;
 }
