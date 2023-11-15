@@ -89,5 +89,4 @@ public interface IDxHandInfoService {
      */
     public CommonResp<PageResp<DxHandInfoResp, Void>> getProxyHandListPage(DxHandInfoListReq dxHandInfoListReq);
 
-    public CommonResp<Void> updateHandByHandCode(DxHandInfoAddReq req) throws BizException;
 }
