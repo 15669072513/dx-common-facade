@@ -105,11 +105,13 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("投注状态,参考枚举: GameBetStatusEnum")
     private Integer betStatus;
-    /**
-     * 盈亏筹码
-     */
-    @ApiModelProperty("盈亏筹码")
-    private BigDecimal netAmount;
+
+
+    @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+    private BigDecimal totalNetAmount= BigDecimal.ZERO;
+
+    @ApiModelProperty("打牌输赢")
+    private BigDecimal netAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
