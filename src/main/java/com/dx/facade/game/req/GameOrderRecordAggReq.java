@@ -1,15 +1,13 @@
 package com.dx.facade.game.req;
 
-import com.dx.facade.report.param.base.BaseRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import java.math.BigDecimal;
 import java.util.Date;
 
 @Data
-public class GameOrderRecordAggReq extends BaseRequest {
+public class GameOrderRecordAggReq {
 
     @ApiModelProperty("注单id")
     private Long id;
