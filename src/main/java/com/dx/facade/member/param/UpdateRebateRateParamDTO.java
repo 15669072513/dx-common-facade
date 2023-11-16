@@ -27,12 +27,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(value = "更新返点比例请求Param", description = "更新返点比例请求Param")
-public class UpdateRebateRateParamDTO implements BaseParmDTO, Serializable {
+public class UpdateRebateRateParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
-    @ApiModelProperty("ID")
-    private Long id;
     
     @ApiModelProperty("商户Id")
     private Long merchantId;
@@ -71,9 +68,4 @@ public class UpdateRebateRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("是否更新所以下级")
     private boolean isAllSub;
     
-	@Override
-	public void check() {
-		 Assert.notNull(id, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("id"));
-	}
-
 }
