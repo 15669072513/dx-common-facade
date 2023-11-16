@@ -60,7 +60,8 @@ public class ReportRebateReqDTO implements Serializable, MultiplyMerchantAble {
     private Integer payoutStatus;
 
 
-    private Integer orderKey;
+
+    private String orderKey;
 
     /**
      * orderType
