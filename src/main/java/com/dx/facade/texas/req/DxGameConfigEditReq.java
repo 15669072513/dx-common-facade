@@ -112,4 +112,7 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("保险出发下限")
     private Integer insuranceLower;
+
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
+    private Integer showOutsWinn;
 }
