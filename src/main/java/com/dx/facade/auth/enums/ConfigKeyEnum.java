@@ -148,6 +148,14 @@ public enum ConfigKeyEnum {
     CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit", "1"),
     ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit", "1"),
     
+    PLATFORM_TEXAS_REBATE_RATE_LIMIT("platfrom.texas.rebate.rate.limit", "1"),
+    PLATFORM_TEXAS_INSURANCE_REBATE_RATE_LIMIT("platfrom.texas.insurance.rebate.rate.limit", "1"),
+    PLATFORM_ACTUAL_PERSON_REBATE_RATE_LIMIT("platfrom.actual.person.rebate.rate.limit", "1"),
+    PLATFORM_SPORTS_REBATE_RATE_LIMIT("platfrom.sports.rebate.rate.limit", "1"),
+    PLATFORM_LOTTERY_TICKET_REBATE_RATE_LIMIT("platfrom.lottery.ticket.rebate.rate.limit", "1"),
+    PLATFORM_CHESS_REBATE_RATE_LIMIT("platfrom.chess.rebate.rate.limit", "1"),
+    PLATFORM_ESPORTS_REBATE_RATE_LIMIT("platfrom.esports.rebate.rate.limit", "1"),
+    
     COMMISSION_TEXAS_REBATE_RATE_LIMIT("texas.club.member.rebate","1"),
     COMMISSION_ACTUAL_PERSON_REBATE_RATE_LIMIT("zr.member.rebate","1"),
     COMMISSION_SPORTS_REBATE_RATE_LIMIT("ty.member.rebate","1"),

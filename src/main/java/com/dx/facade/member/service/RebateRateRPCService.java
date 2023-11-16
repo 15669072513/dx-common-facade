@@ -9,6 +9,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddRebateRateParamDTO;
 import com.dx.facade.member.param.BaseRebateRateParamDTO;
 import com.dx.facade.member.param.QueryEffectRebateRateParamDTO;
+import com.dx.facade.member.param.QueryRebateRateLimitParamDTO;
 import com.dx.facade.member.param.QueryRebateRateParamDTO;
 import com.dx.facade.member.param.UpdateRebateRateParamDTO;
 import com.dx.facade.member.resp.BaseRebateRateRespDTO;
@@ -50,7 +51,7 @@ public interface RebateRateRPCService {
 	 * @param request
 	 * @return
 	 */
-    CommonResp<List<RebateRateRespDTO>> getReRebateRate(QueryRebateRateParamDTO request);
+    CommonResp<List<RebateRateRespDTO>> getRebateRate(QueryRebateRateParamDTO request);
     
 	/**
 	 * 获取生效中的返点比例
@@ -58,7 +59,7 @@ public interface RebateRateRPCService {
 	 * @param request
 	 * @return
 	 */
-    CommonResp<RebateRateRespDTO> getEffectiveReRebateRate(QueryEffectRebateRateParamDTO request);
+    CommonResp<List<RebateRateRespDTO>> getEffectiveRebateRate(QueryEffectRebateRateParamDTO request);
 
     /**
      * 更新返点比例
@@ -75,6 +76,14 @@ public interface RebateRateRPCService {
      */
     CommonResp<PageResp<RebateRateRespDTO, ?>> selectRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
     
+    /**
+     * 会员返水比例分页查询
+     * 
+     * @param pageReq
+     * @return
+     */
+    CommonResp<PageResp<RebateRateRespDTO, ?>> selectMemberRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
+    
 	/**
 	 * 查询下级最大的返点比例
 	 * 
@@ -89,12 +98,12 @@ public interface RebateRateRPCService {
      * @param pageReq
      * @return
      */
-	CommonResp<PageResp<MemberRebateRateRespDTO, ?>> selectMemberRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
+	CommonResp<PageResp<MemberRebateRateRespDTO, ?>> selectPersonRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
 	
 	/**
 	 * 查询返点比例设置上限
 	 * 
 	 * @return
 	 */
-	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit(Integer commissionMode);
+	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit(QueryRebateRateLimitParamDTO request);
 }

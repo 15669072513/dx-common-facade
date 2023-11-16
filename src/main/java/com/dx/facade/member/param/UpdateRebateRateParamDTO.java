@@ -45,6 +45,9 @@ public class UpdateRebateRateParamDTO extends BaseRebateRateParamDTO  implements
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime effectDt;
+    
+    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或平台调整")
+    private Integer status;
 
     /** 契约失效时间 */
     @ApiModelProperty("失效时间")
@@ -57,6 +60,9 @@ public class UpdateRebateRateParamDTO extends BaseRebateRateParamDTO  implements
     
     @ApiModelProperty("remark")
     private String remark;
+    
+    @ApiModelProperty("是否更新所以下级")
+    private boolean isAllSub;
     
 	@Override
 	public void check() {
