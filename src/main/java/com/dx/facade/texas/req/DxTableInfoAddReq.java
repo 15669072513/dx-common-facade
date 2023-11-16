@@ -159,4 +159,7 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("保险盈亏")
     private BigDecimal insuredNetAmount;
+
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
+    private Integer showOutsWinn;
 }
