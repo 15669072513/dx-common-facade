@@ -90,7 +90,7 @@ public interface RebateRateRPCService {
 	 * @param request
 	 * @return
 	 */
-    CommonResp<RebateRateRespDTO> getSubMaxReRebateRate(QueryRebateRateParamDTO request);
+    CommonResp<RebateRateRespDTO> getSubMaxRebateRate(QueryRebateRateParamDTO request);
     
     /**
      * 查询会员返点比例

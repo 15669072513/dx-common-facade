@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 
+import com.dx.facade.constant.Constants;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -26,28 +28,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "RebateRateDTO父类", description = "返点比例DTO父类")
-public class BaseRebateRateParamDTO implements Serializable {
+public class RebateRateDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
-    @ApiModelProperty("商户Id")
-    private Long merchantId;
-    
-    @ApiModelProperty("用户类型 0：会员 1：代理")
-    @NotNull(message = "用户类型不能为空")
-    private Integer userType;
-    
-    @ApiModelProperty("用户Id")
-    private Long userId;
-
-    @ApiModelProperty("用户名称")
-    private String userName;
-    
-    @ApiModelProperty("上级代理Id")
-    private Long parentProxyId;
-
-    @ApiModelProperty("上级代理名称")
-    private String parentProxyName;
     
     @ApiModelProperty("德州俱乐部返点比例")
     @DecimalMin(value = "0.000", message = "德州俱乐部返点比例不能小于0.000")
