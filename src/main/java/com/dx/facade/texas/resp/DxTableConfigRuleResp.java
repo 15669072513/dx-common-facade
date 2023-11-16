@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -214,4 +215,7 @@ public class DxTableConfigRuleResp implements Serializable {
     private Boolean insuranceChooseSheet;
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
+
+    @TableField("show_outs_winn")
+    private Integer showOutsWinn;
 }
