@@ -228,15 +228,20 @@ public enum ConfigKeyEnum {
 
     //系统消息code 代理
     MESSAGE_PROXY_JOINT_VENTURE_PARTNER("message.proxy.joint.venture.partner", "1"),//合营伙伴
-    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_SUB_CONTRACT("message.proxy.sub.contract", "1"),
     MESSAGE_PROXY_CONTRACT_SUCCESS("message.proxy.contract.success", "1"),
     MESSAGE_PROXY_SUB_CONTRACT_ACCEPT("message.proxy.sub.contract.accept", "1"),
-    MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),
     MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),//新增下级会员通知
-    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"), // 返点奖励
-    MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"),
+
+    MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"), //团队返佣比例调整通知
+    MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),//团队返佣比例已配置通知
+    MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),//返佣奖励发放通知
+
+    MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
+    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
     MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),//返点比例失效
+    MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"), // 返点奖励
+
     MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),//开通总代
     MESSAGE_PROXY_PLATFORM_PROXY("message.proxy.platform.proxy", "1"),//开通代理通知
 
@@ -247,8 +252,6 @@ public enum ConfigKeyEnum {
     //后台登录IP白名单功能开关（0=关闭  1=开启）
     LOGIN_IP_WHITELIST_SWITCH("login.ip.whitelist.switch", "2"),
     MESSAGE_PROXY_COMMISSION_CONTRACT_LOSE("message.proxy.commission.contract.lose", "1"),
-    MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),
-    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
     /**
      * 币种
      */
@@ -257,6 +260,14 @@ public enum ConfigKeyEnum {
      * 会员默认头像
      */
     MEMBER_DEFAULT_TOP_IMAGE_URL("member.default.top.image.url", "1"),
+    /**
+     * 会员默认信用等级
+     */
+    MEMBER_DEFAULT_CREDIT_LEVEL("member.default.credit.level", "1"),
+    /**
+     * 代理默认信用等级
+     */
+    PROXY_DEFAULT_CREDIT_LEVEL("proxy.default.credit.level", "1"),
     /**
      * App会员默认头像
      */

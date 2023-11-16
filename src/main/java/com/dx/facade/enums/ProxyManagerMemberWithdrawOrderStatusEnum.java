@@ -68,7 +68,8 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
             return Arrays.asList(
                     WithdrawOrderStatus.待一审.code(),
                     WithdrawOrderStatus.一审审核.code(),
-                    WithdrawOrderStatus.待二审.code()
+                    WithdrawOrderStatus.待二审.code(),
+                    WithdrawOrderStatus.二审审核.code()
             );
         }
         if (Objects.equals(clientOrderStatus, 平台审核拒绝.code)) {//平台拒绝
@@ -79,7 +80,6 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
         }
         if (Objects.equals(clientOrderStatus, 待代理审核.code)) {//待代理审核
             return Arrays.asList(
-                    WithdrawOrderStatus.二审审核.code(),
                     WithdrawOrderStatus.待三审.code()
             );
         }
@@ -91,7 +91,6 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
         }
         if (Objects.equals(clientOrderStatus, 代理审核通过.code)) {//代理审核通过
             return Arrays.asList(
-                    WithdrawOrderStatus.三审审核.code(),
                     WithdrawOrderStatus.已出款.code()
             );
         }
@@ -106,23 +105,22 @@ public enum ProxyManagerMemberWithdrawOrderStatusEnum {
     public static Integer getClientStatusByDbOrderStatus(Integer dbOrderStatus) {
         if (dbOrderStatus.equals(WithdrawOrderStatus.待一审.code())
                 || dbOrderStatus.equals(WithdrawOrderStatus.一审审核.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.待二审.code())) {
+                || dbOrderStatus.equals(WithdrawOrderStatus.待二审.code())
+                || dbOrderStatus.equals(WithdrawOrderStatus.二审审核.code())) {
             return 待平台审核.code;
         }
         if (dbOrderStatus.equals(WithdrawOrderStatus.一审拒绝.code())
                 || dbOrderStatus.equals(WithdrawOrderStatus.二审拒绝.code())) {
             return 平台审核拒绝.code;
         }
-        if (dbOrderStatus.equals(WithdrawOrderStatus.二审审核.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.待三审.code())) {
+        if (dbOrderStatus.equals(WithdrawOrderStatus.待三审.code())) {
             return 待代理审核.code;
         }
         if (dbOrderStatus.equals(WithdrawOrderStatus.三审拒绝.code())
                 || dbOrderStatus.equals(WithdrawOrderStatus.出款失败.code())) {
             return 代理审核拒绝.code;
         }
-        if (dbOrderStatus.equals(WithdrawOrderStatus.三审审核.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.已出款.code())) {
+        if (dbOrderStatus.equals(WithdrawOrderStatus.已出款.code())) {
             return 代理审核通过.code;
         }
         throw new IllegalArgumentException("clientOrderStatus参数异常：" + dbOrderStatus);

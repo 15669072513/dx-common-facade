@@ -48,5 +48,12 @@ public interface GameOrderRecordRpcService {
      */
     CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 
+    /**
+     * 战绩详情
+     *
+     * @param req
+     * @return
+     */
     CommonResp<PageResp<RecordDetailList, RecordDetailSummary>> recordDetailList(RecordDetailReq req);
+
 }

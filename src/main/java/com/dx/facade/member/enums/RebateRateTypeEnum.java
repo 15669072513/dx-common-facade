@@ -7,7 +7,7 @@ package com.dx.facade.member.enums;
 public enum RebateRateTypeEnum {
 	
 	/** 德州 */
-	TEXAS(1, "德州"),
+	TEXAS(1, "德州俱乐部"),
 	/** 德州保险 */
 	TEXAS_INSURANCE(2, "德州保险"),
 	/** 德州 */

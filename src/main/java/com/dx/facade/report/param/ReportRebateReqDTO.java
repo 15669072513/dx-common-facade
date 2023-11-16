@@ -58,4 +58,14 @@ public class ReportRebateReqDTO implements Serializable, MultiplyMerchantAble {
     
     @ApiModelProperty(value = "返点状态",example = "20220301")
     private Integer payoutStatus;
+
+
+
+    private String orderKey;
+
+    /**
+     * orderType
+     */
+    @ApiModelProperty(value = "排序方式：升序：asc/降序：desc", example = "desc")
+    private String orderType = "asc";
 }
