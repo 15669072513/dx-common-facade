@@ -16,4 +16,5 @@ public class QrCodeParseReqDTO extends MemberLoginParamDTO implements Serializab
     @ApiModelProperty(value="短码")
     private String sc;
 
+
 }
