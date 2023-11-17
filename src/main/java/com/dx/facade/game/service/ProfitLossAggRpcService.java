@@ -1,14 +1,12 @@
-package com.dx.facade.texas.service;
+package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.facade.game.req.ProfitAndLossStatementReq;
 import com.dx.facade.game.resp.ProfitAndLossStatementResp;
-import com.dx.facade.texas.req.DxGamePersonalReq;
-import com.dx.facade.texas.resp.DxGamePersonalResp;
 
 import java.util.List;
 
-public interface IDxGameRecordReportStatisticsRpcService {
+public interface ProfitLossAggRpcService {
     /**
      * 盈亏表
      * @param req

@@ -12,4 +12,6 @@ public interface UpScoreRpc {
      * @return
      */
     CommonResp<ChangeAfterAmountDto> getChangeAfterAmount(ChangeAfterAmountReq req);
+
+    CommonResp<Void> revertUpScore(String eventId);
 }

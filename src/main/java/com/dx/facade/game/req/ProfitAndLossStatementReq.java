@@ -1,6 +1,5 @@
 package com.dx.facade.game.req;
 
-import com.dx.facade.report.param.base.BaseRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
