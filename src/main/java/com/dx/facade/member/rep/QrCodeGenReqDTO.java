@@ -13,6 +13,9 @@ public class QrCodeGenReqDTO implements Serializable {
     @ApiModelProperty(value="二维码类型：1-用户码，2-用户牌桌码，3-牌桌码")
     private Integer type;
 
+    @ApiModelProperty(value="代理ID")
+    private Long proxyId;
+
     @ApiModelProperty(value="用户ID")
     private Long userId;
 
