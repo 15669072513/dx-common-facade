@@ -102,14 +102,37 @@ public class DxTableInfoDto implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
     private Integer insuranceMode;
+
     @ApiModelProperty("turn购买保险最低值,整数类型")
     private BigDecimal insuranceTurn;
+
     @ApiModelProperty("选张购买功能 0-不选张 1-选张")
     private Boolean insuranceChooseSheet;
+
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit;
+
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount;
+
+    @ApiModelProperty("允许主动带出0-关闭 1-开启")
+    private Integer showOutsWinn;
+
+    @ApiModelProperty("允许主动带出0-关闭 1-开启")
+    private Integer isActiveTakeout;
+
+    @ApiModelProperty("必要保留筹码（倍大盲）")
+    private Integer needKeepChips;
+
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    private Integer serviceChargeType;
+
+    @ApiModelProperty("每手收费上限（倍大盲）")
+    private Integer handChargeUpperLimit;
+
+    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
+    private Integer isHiddenDecimal;
 }
