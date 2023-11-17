@@ -3,8 +3,7 @@ package com.dx.facade.member.rep;
 import com.dx.facade.member.param.MemberLoginParamDTO;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.*;
 
 import java.io.Serializable;
 

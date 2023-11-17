@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 public class QrCodeGenRespDTO implements Serializable {
 
-    @ApiModelProperty(value = "二维码内容：https://integrative-web-fat.ak12.cc/#/home?sc=7G1835C1")
+    @ApiModelProperty(value = "二维码内容：https://integrative-web-fat.ak12.cc/#/home?i_code=9340752&sc=R99Ua2Px")
     private String qrCodeUrl;
 
 }
