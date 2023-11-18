@@ -89,18 +89,6 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
     private BigDecimal memberRebateAdjustAmount;
 
     /**
-     * 代理返点
-     */
-    @ApiModelProperty("代理返点")
-    private BigDecimal proxyRebateAmount;
-
-    /**
-     * 代理返点调整金额
-     */
-    @ApiModelProperty("代理返点调整金额")
-    private BigDecimal proxyRebateAdjustAmount;
-
-    /**
      * 代理净输赢
      */
     @ApiModelProperty("代理净输赢")
