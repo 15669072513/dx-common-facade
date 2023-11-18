@@ -50,7 +50,7 @@ public class UpdateRebateRateParamDTO implements Serializable {
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
-    @ApiModelProperty("返佣比例列表")
+    @ApiModelProperty("返点比例列表")
     private List<RebateRateDTO> rebateRateList;
 
     @ApiModelProperty("最后操作人")
