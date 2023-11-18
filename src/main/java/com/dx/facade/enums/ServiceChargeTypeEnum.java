@@ -23,7 +23,7 @@ public enum ServiceChargeTypeEnum {
      * @param type 服务类型
      * @return
      */
-    public static ServiceChargeTypeEnum getByCode(int type) {
+    public static ServiceChargeTypeEnum getByType(int type) {
         return Arrays.stream(ServiceChargeTypeEnum.values()).filter(s -> s.getType() == type).findAny()
                 .orElse(null);
     }
