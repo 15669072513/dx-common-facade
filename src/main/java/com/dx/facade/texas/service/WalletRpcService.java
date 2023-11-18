@@ -1,6 +1,7 @@
 package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.facade.game.req.DownScoreReq;
 import com.dx.facade.game.req.UpScoreReq;
 import com.dx.facade.texas.dto.WalletDto;
 import com.dx.facade.texas.req.WalletRequest;
@@ -19,7 +20,7 @@ public interface WalletRpcService {
    * 下分
    * @return
    */
-  CommonResp<Void> downScore(Long tableId, Long userId, BigDecimal amount);
+  CommonResp<Void> downScore(DownScoreReq downScoreReq);
   /**
    * 上分
    * @return
