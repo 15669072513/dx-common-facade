@@ -7,7 +7,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
-@ApiModel(value = "com-ob-resp-report-ProxyDayReportDTO", description = "代理报表对象")
+@ApiModel(value = "ProxyDayReportReq", description = "代理报表请求对象")
 public class ProxyDayReportReq extends PageRequest {
 
 
