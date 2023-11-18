@@ -39,10 +39,10 @@ public class ProxyMemberNetRespDTO {
     @ApiModelProperty("会员优惠")
     private BigDecimal discountAmount;
 
-    @ApiModelProperty("账户调整")
+    @ApiModelProperty("返水调整")
     private BigDecimal artificialPatchAmount;
 
-    @ApiModelProperty("总盈亏")
+    @ApiModelProperty("实际盈亏")
     private BigDecimal totalNetAmount;
 
     //parent_proxy_name
