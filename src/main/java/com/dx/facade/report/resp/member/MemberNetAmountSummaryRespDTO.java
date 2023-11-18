@@ -54,6 +54,13 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("返水金额")
     private BigDecimal rebateAmount = BigDecimal.ZERO;
 
+
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy;
+
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat;
     @ApiModelProperty("其他调整")
     private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
 

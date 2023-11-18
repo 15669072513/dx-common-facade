@@ -26,7 +26,9 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "币种", example = "CNY")
     private String currency;
 
-    /** staticsDate */
+    /**
+     * staticsDate
+     */
     @ApiModelProperty(value = "月维度", example = "202109")
     private String staticsDate;
 
@@ -132,20 +134,32 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "会员总输赢", example = "1500.00")
     private BigDecimal netAmount;
 
-    /** proxyRebatePoint */
+    /**
+     * proxyRebatePoint
+     */
     @ApiModelProperty(value = "代理返点", example = "1500.00")
     private BigDecimal proxyRebatePoint;
 
-    /** proxyRebatePoint */
+    /**
+     * proxyRebatePoint
+     */
     @ApiModelProperty(value = "代理返点其他调整", example = "1500.00")
     private BigDecimal proxyArtificialPatchAmount;
-
+    @Deprecated
     /** rebateAmount */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal memberRebateAmount;
 
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy;
 
-    /** artificialPatchAmount */
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat;
+
+    /**
+     * artificialPatchAmount
+     */
     @ApiModelProperty(value = "会员账户调整", example = "1500.00")
     private BigDecimal memberArtificialPatchAmount;
 
@@ -163,7 +177,6 @@ public class ProxyNetAmountMonthRespDTO {
     private BigDecimal proxyRushNet;
 
 
-
     @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
     private BigDecimal directBetAmount;
 
@@ -173,10 +186,16 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty(value = "直属会员总输赢/投注盈亏", example = "1500.00")
     private BigDecimal directNetAmount;
 
-
+    @Deprecated
     @ApiModelProperty("直属返水金额=会员返水")
     private BigDecimal directRebateAmount;
 
+    @ApiModelProperty("直属会员代理发放会员返水")
+    private BigDecimal directRebateAmountByProxy;
+
+
+    @ApiModelProperty("直属会员平台发放会员返水")
+    private BigDecimal directRebateAmountByPlat;
     @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
     private BigDecimal directArtificialPatchAmount;
 
