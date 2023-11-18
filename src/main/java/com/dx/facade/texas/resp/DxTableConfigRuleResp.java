@@ -233,4 +233,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
     private Integer isHiddenDecimal;
+
+    @ApiModelProperty("收费比例")
+    private BigDecimal chargeScale;
 }
