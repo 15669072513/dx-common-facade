@@ -48,4 +48,10 @@ public class ProxyMemberNetRespDTO {
     //parent_proxy_name
     @ApiModelProperty("代理账号")
     private String parentProxyName;
+
+    @ApiModelProperty("平台返水金额")
+    private BigDecimal platformRebateAmount;
+
+    @ApiModelProperty("代理返水金额")
+    private BigDecimal proxyRebateAmount;
 }
