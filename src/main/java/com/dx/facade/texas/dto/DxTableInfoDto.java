@@ -118,7 +118,7 @@ public class DxTableInfoDto implements Serializable {
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount;
 
-    @ApiModelProperty("允许主动带出0-关闭 1-开启")
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
     private Integer showOutsWinn;
 
     @ApiModelProperty("允许主动带出0-关闭 1-开启")

@@ -141,4 +141,7 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("收费上限 多个用逗号隔开 支持小数 -1代表无上限")
     private String feeCap;
+
+    @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
+    private Integer hideDecimals;
 }

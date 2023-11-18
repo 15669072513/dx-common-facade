@@ -162,4 +162,19 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
     private Integer showOutsWinn;
+
+    @ApiModelProperty("允许主动带出0-关闭 1-开启")
+    private Integer isActiveTakeout;
+
+    @ApiModelProperty("必要保留筹码（倍大盲）")
+    private Integer needKeepChips;
+
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    private Integer serviceChargeType;
+
+    @ApiModelProperty("每手收费上限（倍大盲）")
+    private Integer handChargeUpperLimit;
+
+    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
+    private Integer isHiddenDecimal;
 }
