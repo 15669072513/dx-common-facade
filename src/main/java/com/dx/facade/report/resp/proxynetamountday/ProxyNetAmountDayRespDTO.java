@@ -59,9 +59,18 @@ public class ProxyNetAmountDayRespDTO {
     /** memberNetWinAmount */
     @ApiModelProperty(value = "会员净输赢", example = "1500.00")
     private BigDecimal memberNetwinAmount;
+    @Deprecated
     /** rebateAmount */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal rebateAmount;
+
+
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy;
+
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat;
 
     /** discountAmount */
     @ApiModelProperty(value = "会员优惠", example = "1500.00")
