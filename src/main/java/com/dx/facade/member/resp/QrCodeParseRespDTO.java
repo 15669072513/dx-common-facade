@@ -6,10 +6,9 @@ import lombok.*;
 
 import java.io.Serializable;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @ApiModel("会员扫码成功")
-public class QrCodeParseRespDTO extends MemberVO implements Serializable {
+public class QrCodeParseRespDTO implements Serializable {
 
     @ApiModelProperty(value="二维码类型：1-用户码，2-用户牌桌码，3-牌桌码")
     private Integer type;
@@ -19,4 +18,10 @@ public class QrCodeParseRespDTO extends MemberVO implements Serializable {
 
     @ApiModelProperty(value = "代理合营码")
     private String joinCode;
+
+    @ApiModelProperty(value = "会员信息")
+    private MemberInfoRespDTO memberInfo;
+
+    @ApiModelProperty(value = "token")
+    private String token;
 }
