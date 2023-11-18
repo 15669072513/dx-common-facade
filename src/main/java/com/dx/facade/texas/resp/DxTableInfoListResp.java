@@ -156,6 +156,6 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("抽水方式 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
 }
