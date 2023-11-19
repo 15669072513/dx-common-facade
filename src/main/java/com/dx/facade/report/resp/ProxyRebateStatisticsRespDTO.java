@@ -36,6 +36,12 @@ public class ProxyRebateStatisticsRespDTO{
     @ApiModelProperty(value = "周期名称")
     private String cycleName;
 
+    @ApiModelProperty(value = "返点状态")
+    private Integer payoutStatus;
+    @ApiModelProperty(value = "返点状态描述")
+    private String payoutStatusStr;
+
+
     @ApiModelProperty(value = "周期起始日期")
     private Integer cycleStatrtDate;
 
