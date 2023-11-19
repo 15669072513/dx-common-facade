@@ -51,5 +51,7 @@ public interface ProxyDayReportRPCService {
     CommonResp<PageResp<ProxyDayReportDetailRespDTO, ?>> detailListPage(PageReq<ProxyDayReportReqDTO> requestDto) throws BizException;
 
 
-
+    //代理报表V2
+    CommonResp<PageResp<ProxyDayReportRespDTO, ProxyDayReportSummaryDTO>> getProxyReportPage(PageReq<ProxyDayReportReqDTO> reqDTO) throws BizException;
+    CommonResp<ProxyDayReportSummaryDTO> getProxyReportSummary(ProxyDayReportReqDTO reqDTO) throws BizException;
 }
