@@ -4,13 +4,13 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.member.member.param.ProxyPaymentDTO;
-import com.dx.facade.member.proxy.po.DwmProxyRebateRecordPO;
 import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
-import com.dx.facade.report.param.agent.AgentRebateReqDTO;
+import com.dx.facade.report.param.rebate.ProxyRebateRecordReqDTO;
 import com.dx.facade.report.param.rebate.RebateDayListReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.resp.ProxyRebateStatisticsRespDTO;
+import com.dx.facade.report.resp.ProxyRebateStatisticsTotalRespDTO;
 import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
@@ -118,4 +118,13 @@ public interface ProxyRebateRecordService {
      */
     CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
 
+
+    /**
+     * 代理返点统计查询
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<ProxyRebateStatisticsRespDTO, ?>> queryRebateStatisticsList(ProxyRebateRecordReqDTO req);
+
+    CommonResp<ProxyRebateStatisticsTotalRespDTO> queryRebateStatisticsTotal(ProxyRebateRecordReqDTO req);
 }

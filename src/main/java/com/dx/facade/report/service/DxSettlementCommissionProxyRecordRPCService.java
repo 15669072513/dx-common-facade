@@ -102,4 +102,12 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     Integer getPendingCount(List<Long> longs);
+
+    /**
+     * 统计-返佣统计
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspV2DTO, Object>> commissionStatisticsList(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
+
 }
