@@ -82,6 +82,10 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("返点金额")
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy= BigDecimal.ZERO;
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat= BigDecimal.ZERO;
     @ApiModelProperty("代理充值上分金额")
     protected BigDecimal proxyCashUpAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理充值上分次数")
@@ -90,22 +94,4 @@ public class DwdMemberStaticInfoSummaryResp {
     protected BigDecimal proxyCashDownAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理提现下分金额")
     protected Long proxyCashDownTimes = 0L;
-
-
-
-    /**
-     * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额
-     *
-     * @return
-     */
-//    public BigDecimal getNetProfit() {
-//        if (Objects.isNull(netAmount)
-//                || Objects.isNull(returnWaterAmount)
-//                || Objects.isNull(discountAmount)
-//                || Objects.isNull(otherAdjustAmount)) {
-//            return null;
-//        }
-//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
-//    }
-
 }
