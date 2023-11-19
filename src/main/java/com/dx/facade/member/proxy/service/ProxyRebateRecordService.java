@@ -14,6 +14,7 @@ import com.dx.facade.report.resp.ProxyRebateStatisticsTotalRespDTO;
 import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamRespV2;
 
 import java.util.List;
 
@@ -127,4 +128,7 @@ public interface ProxyRebateRecordService {
     CommonResp<PageResp<ProxyRebateStatisticsRespDTO, ?>> queryRebateStatisticsList(ProxyRebateRecordReqDTO req);
 
     CommonResp<ProxyRebateStatisticsTotalRespDTO> queryRebateStatisticsTotal(ProxyRebateRecordReqDTO req);
+
+    CommonResp<List<ProxyRebateTeamRespV2>> getMemberTeamRebateV2(Long id, Integer reportDate);
+
 }
