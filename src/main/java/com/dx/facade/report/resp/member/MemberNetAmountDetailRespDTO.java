@@ -42,6 +42,8 @@ public class MemberNetAmountDetailRespDTO {
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
+    @ApiModelProperty("返水金额")
+    private BigDecimal rebateAmount=BigDecimal.ZERO;
     @ApiModelProperty("代理发放会员返水")
     private BigDecimal memberRebateAmountByProxy;
 
