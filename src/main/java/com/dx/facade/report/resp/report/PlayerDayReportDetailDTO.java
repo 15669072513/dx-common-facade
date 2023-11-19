@@ -47,6 +47,7 @@ public class PlayerDayReportDetailDTO implements Serializable {
     private BigDecimal validBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("投注盈亏")
     private BigDecimal netAmount = BigDecimal.ZERO;
+    @Deprecated
     @ApiModelProperty("返水金额")
     private BigDecimal returnWaterAmount = BigDecimal.ZERO;
 
