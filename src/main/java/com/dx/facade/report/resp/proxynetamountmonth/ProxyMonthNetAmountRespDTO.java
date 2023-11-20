@@ -66,6 +66,13 @@ public class ProxyMonthNetAmountRespDTO {
     private BigDecimal memberRebateAmount;
 
 
+
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy=BigDecimal.ZERO;
+
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat=BigDecimal.ZERO;
     /**
      * artificialPatchAmount
      */
@@ -133,6 +140,12 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "直属会员返水", example = "1500.00")
     private BigDecimal directRebateAmount;
 
+    @ApiModelProperty("代理发放直属会员返水")
+    private BigDecimal directMemberRebateAmountByProxy;
+
+
+    @ApiModelProperty("平台发放直属会员返水")
+    private BigDecimal directMemberRebateAmountByPlat;
     @ApiModelProperty("直属会员净盈亏 = 直属会员投注盈亏+  直属会员返水（新的）+直属会员其他调整")
     private BigDecimal directNetwinAmount;
 
