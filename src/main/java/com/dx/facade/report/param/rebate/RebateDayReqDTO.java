@@ -19,7 +19,7 @@ public class RebateDayReqDTO {
     @ApiModelProperty(value = "会员ID")
     private Long memberId;
 
-    @ApiModelProperty(value = "平台标识： 0-非平台 1-平台")
+    @ApiModelProperty(value = "平台标识： 0-非平台 1-平台，2-全部（聚合）")
     private Integer platFormFlag;
 
 }
