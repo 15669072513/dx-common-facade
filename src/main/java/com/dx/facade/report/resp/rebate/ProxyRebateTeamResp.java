@@ -8,7 +8,11 @@ import java.math.BigDecimal;
 @Data
 public class ProxyRebateTeamResp {
 
-
+    /**
+     * 返水类型
+     */
+    @ApiModelProperty(value = "返水类型（1：代理，2平台）")
+    private String platformFlag;
 
     @ApiModelProperty(value = "项目")
     private String venueName;
