@@ -49,6 +49,9 @@ public class BaseRebateRateParamDTO implements Serializable {
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
     
+    @ApiModelProperty("总代Id")
+    private Long topProxyId;
+    
     @ApiModelProperty("德州俱乐部返点比例")
     @DecimalMin(value = "0.000", message = "德州俱乐部返点比例不能小于0.000")
     @NotNull(message = "德州俱乐部返点比例不能为空")

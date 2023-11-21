@@ -61,6 +61,9 @@ public class UpdateRebateRateParamDTO implements Serializable {
     @ApiModelProperty("是否为平台调整")
     private boolean isPlatformAdjustment;
     
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
+    
     @ApiModelProperty("remark")
     private String remark;
     
