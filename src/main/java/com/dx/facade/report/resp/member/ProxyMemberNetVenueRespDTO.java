@@ -24,6 +24,9 @@ public class ProxyMemberNetVenueRespDTO {
     @ApiModelProperty("场馆")
     private String venueName;
 
+    private String venueType;
+    private Integer betType;
+
     @ApiModelProperty("总投")
     private BigDecimal betAmount;
 
