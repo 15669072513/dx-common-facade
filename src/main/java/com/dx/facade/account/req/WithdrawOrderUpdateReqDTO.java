@@ -147,4 +147,10 @@ public class WithdrawOrderUpdateReqDTO implements Serializable {
 
     @ApiModelProperty("确认/取消出款操作人id")
     private Long confirmAccountId;
+
+    @ApiModelProperty("操作人")
+    private String operator;
+
+    @ApiModelProperty("操作人IP地址")
+    private String ipAddr;
 }
