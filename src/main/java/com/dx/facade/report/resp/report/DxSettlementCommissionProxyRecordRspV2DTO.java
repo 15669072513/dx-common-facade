@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "团队返佣数据-1.30", description = "团队返佣数据-1.30")
+@ApiModel(value = "团队返佣数据", description = "团队返佣数据")
 public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
     @ApiModelProperty("返佣状态(0-未结算 1=已结算（数据不会在进行统计变动） 2-待发放  3-已发放 ,4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消)")
     private Integer payoutStatus;
     @ApiModelProperty("返佣状态")
-    private Integer payoutStatusStr;
+    private String payoutStatusStr;
 
     /**
      * 周期名称 - 结算期数
@@ -111,9 +111,5 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
      */
     @ApiModelProperty("返佣调整")
     private BigDecimal commissionAdjustAmount;
-
-
-
-
 
 }

@@ -73,7 +73,7 @@ public class ProxyDayNetAmountReqDTO extends PageRequest {
      * orderKey
      */
     @ApiModelProperty(value = "排序列: 1-总投注,2-总有效投注,3-游戏盈亏,4-会员返水,5-会员优惠,6-会员调整", example = "1")
-    private Integer orderKey;
+    private String orderKey;
 
     /**
      * orderType
