@@ -42,4 +42,7 @@ public class UserBankAndVirtualUpdateBindStatusReqDTO {
     @ApiModelProperty(value = "操作人", hidden = true)
     private String operator;
 
+    @ApiModelProperty(value = "ip", hidden = true)
+    private String ip;
+
 }
