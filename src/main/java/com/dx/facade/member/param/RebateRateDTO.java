@@ -68,6 +68,9 @@ public class RebateRateDTO implements Serializable {
     @DecimalMin(value = "0.000", message = "电竞返点比例不能小于0.000")
     private BigDecimal esportsRebate;
     
+    @ApiModelProperty("用户类型 0：会员 1：代理")
+    private Integer userType;
+    
     @ApiModelProperty("平台标识： 0-非平台 1-平台")
     private Integer platformFlag;
 

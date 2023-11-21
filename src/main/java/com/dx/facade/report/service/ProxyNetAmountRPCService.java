@@ -74,7 +74,7 @@ public interface ProxyNetAmountRPCService {
     public CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayNetAmountRespDTO>> queryProxyDayNetAmountList_v2(PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
     /**
      * bwjk
-     * 代理月盈亏详情 - 当月日盈亏列表
+     * 代理月盈亏详情 - 当月日盈亏明细列表
      *
      * @author focus
      * @since 2021年9月17日 下午4:40:02
@@ -82,8 +82,8 @@ public interface ProxyNetAmountRPCService {
      * @return CommonResp
      * @throws BizException
      */
-    CommonResp<PageResp<ProxyNetAmountDayRespDTO, ProxyNetAmountDayRespSummaryDTO>> queryProxyNetAmountMonthDetail_v1(
-            PageReq<ProxyNetAmountDayReqDTO> reqDTO) throws Exception;
+    CommonResp<PageResp<ProxyDayNetAmountRespDTO, Void>> queryProxyNetAmountMonthDetail_v1(
+            PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
 
     /**  代理盈亏日维度 中控后台**/
 

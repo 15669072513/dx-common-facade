@@ -17,4 +17,7 @@ public class BankManageUpdateStatusParamDTO {
     
     @ApiModelProperty(value = "最后操作人", hidden = true)
     private String updatedBy;
+
+    @ApiModelProperty(value = "ip", hidden = true)
+    private String ip;
 }
