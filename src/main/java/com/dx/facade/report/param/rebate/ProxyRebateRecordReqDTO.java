@@ -50,7 +50,7 @@ public class ProxyRebateRecordReqDTO{
     /**
      * 代理id
      */
-    @ApiModelProperty(value = "代理id")
+    //内部字段，不暴露
     private Long proxyId;
 
 
