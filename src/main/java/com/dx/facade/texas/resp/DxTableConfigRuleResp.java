@@ -229,7 +229,7 @@ public class DxTableConfigRuleResp implements Serializable {
     private Integer serviceChargeType = 1;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
-    private Integer handChargeUpperLimit = 0;
+    private BigDecimal handChargeUpperLimit = BigDecimal.ZERO;
 
     @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
     private Integer isHiddenDecimal = 0;
