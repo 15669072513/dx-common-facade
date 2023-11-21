@@ -12,14 +12,14 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * @description 团队返佣统计
+ * @description 返佣统计列表DTO
  * 数据来源：dx_settlement_commission_proxy_record
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "团队返佣数据", description = "团队返佣数据")
+@ApiModel(value = "返佣统计列表DTO", description = "返佣统计列表DTO")
 public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
