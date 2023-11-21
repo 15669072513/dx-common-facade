@@ -154,20 +154,8 @@ public class DxGameTableConfigResp implements Serializable {
     @ApiModelProperty("时长（小时）")
     private BigDecimal hourTimeCount=BigDecimal.ZERO;
 
-    @ApiModelProperty("单牌桌累计带入上限（倍数）")
-    private Integer bringInLimit=0;
-
-    @ApiModelProperty("单牌桌累计带入上限（金额）")
-    private BigDecimal bringInLimitChipScore=BigDecimal.ZERO;
-
-    @ApiModelProperty("单牌桌可坐下人数上限")
-    private Integer sitDownLimit=0;
-
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
     private Integer insuranceMode;
-
-    @ApiModelProperty("保险模式中文描述 0-不开保险 1-经典保险")
-    private String insuranceModeStr;
 
     @ApiModelProperty("turn购买保险最低值,整数类型")
     private BigDecimal insuranceTurn=BigDecimal.ZERO;
