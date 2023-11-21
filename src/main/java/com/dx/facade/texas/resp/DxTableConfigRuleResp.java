@@ -217,20 +217,23 @@ public class DxTableConfigRuleResp implements Serializable {
     private Integer insuranceLowerLimit=0;
 
     @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
-    private Integer showOutsWinn;
+    private Integer showOutsWinn = 0;
 
     @ApiModelProperty("允许主动带出0-关闭 1-开启")
-    private Integer isActiveTakeout;
+    private Integer isActiveTakeout = 0;
 
     @ApiModelProperty("必要保留筹码（倍大盲）")
-    private Integer needKeepChips;
+    private Integer needKeepChips = 0;
 
     @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
-    private Integer serviceChargeType;
+    private Integer serviceChargeType = 1;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
-    private Integer handChargeUpperLimit;
+    private Integer handChargeUpperLimit = 0;
 
     @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
-    private Integer isHiddenDecimal;
+    private Integer isHiddenDecimal = 0;
+
+    @ApiModelProperty("收费比例")
+    private BigDecimal chargeScale = BigDecimal.ZERO;
 }
