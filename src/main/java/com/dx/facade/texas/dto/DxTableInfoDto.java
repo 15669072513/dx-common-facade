@@ -131,7 +131,7 @@ public class DxTableInfoDto implements Serializable {
     private Integer serviceChargeType;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
-    private Integer handChargeUpperLimit;
+    private BigDecimal handChargeUpperLimit;
 
     @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
     private Integer isHiddenDecimal;

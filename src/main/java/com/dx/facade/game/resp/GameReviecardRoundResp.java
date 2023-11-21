@@ -48,6 +48,9 @@ public class GameReviecardRoundResp {
     @ApiModelProperty("公共牌信息")
     private List<Integer> publicCards =new ArrayList<>();
 
+    @ApiModelProperty("是否购买保险")
+    private boolean buyInsured;
+
     @ApiModelProperty("手牌号")
     private Integer roundNo;
 
