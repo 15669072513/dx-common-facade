@@ -6,6 +6,7 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.proxy.ProxyDayReportReqDTO;
+import com.dx.facade.report.param.proxydayreport.ProxyDayReportReq;
 import com.dx.facade.report.resp.proxy.ProxyDayReportDetailRespDTO;
 import com.dx.facade.report.resp.proxy.ProxyDayReportRespDTO;
 import com.dx.facade.report.resp.proxy.ProxyDayReportSummaryDTO;
@@ -51,5 +52,7 @@ public interface ProxyDayReportRPCService {
     CommonResp<PageResp<ProxyDayReportDetailRespDTO, ?>> detailListPage(PageReq<ProxyDayReportReqDTO> requestDto) throws BizException;
 
 
-
+    //代理报表V2
+    CommonResp<PageResp<ProxyDayReportRespDTO, ProxyDayReportSummaryDTO>> getProxyReportPage(ProxyDayReportReq req) throws BizException;
+    CommonResp<ProxyDayReportSummaryDTO> getProxyReportSummary(ProxyDayReportReq req) throws BizException;
 }

@@ -33,5 +33,8 @@ public class UpdateBankManageParamDTO {
     @ApiModelProperty(value = "创建人")
     private String createdBy;
 
+    @ApiModelProperty(value = "ip")
+    private String ip;
+
 
 }

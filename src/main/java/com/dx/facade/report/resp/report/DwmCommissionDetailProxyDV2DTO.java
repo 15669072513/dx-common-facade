@@ -12,14 +12,14 @@ import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 /**
- * @description 代理返佣结算表
+ * @description 返佣统计明细dto
  * @date 2023-09-26
  */
 @Data
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "代理返佣明细表", description = "代理返佣明细表")
+@ApiModel(value = "返佣统计明细dto", description = "返佣统计明细dto")
 public class DwmCommissionDetailProxyDV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

@@ -55,7 +55,13 @@ public class DxSettlementCommissionProxyRecordReqV2DTO {
     @ApiModelProperty("数据角度（1：下级，2：自己和下级，3：自己）")
     private Integer dataAngle;
 
-    @ApiModelProperty("返佣状态(0-未结算 1=已结算（数据不会在进行统计变动） 2-待发放  3-已发放 ,4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消)")
+    /**
+     * 看下级-数据角度
+     */
+    @ApiModelProperty("看下级-数据角度（1：全部，2：直属下级）")
+    private Integer dataAngleSubordinate;
+
+    @ApiModelProperty("2-待发放  3-已发放 ,4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消)")
     private Integer payoutStatus;
 
     private List<Integer> payoutStatusList;
