@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.Range;
 
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Data
 public class ProxyRebateRecordReqDTO{
@@ -41,7 +42,7 @@ public class ProxyRebateRecordReqDTO{
      */
     @ApiModelProperty(value = "返点状态(0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
     private Integer payoutStatus;
-
+    private List<Integer> payoutStatusList;
     /**
      * 代理账号
      */
@@ -50,7 +51,7 @@ public class ProxyRebateRecordReqDTO{
     /**
      * 代理id
      */
-    @ApiModelProperty(value = "代理id")
+    //内部字段，不暴露
     private Long proxyId;
 
 

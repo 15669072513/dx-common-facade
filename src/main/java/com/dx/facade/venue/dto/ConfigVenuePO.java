@@ -139,4 +139,8 @@ public class ConfigVenuePO implements Serializable {
     @TableField("status_updated_at")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime statusUpdatedAt;
+
+    @ApiModelProperty("请求IP")
+    @TableField("ip_addr")
+    private String ipAddr;
 }
