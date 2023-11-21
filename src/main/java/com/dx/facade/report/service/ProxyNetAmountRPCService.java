@@ -83,7 +83,7 @@ public interface ProxyNetAmountRPCService {
      * @throws BizException
      */
     CommonResp<PageResp<ProxyNetAmountDayRespDTO, Void>> queryProxyNetAmountMonthDetail_v1(
-            PageReq<ProxyNetAmountDayReqDTO> reqDTO) throws Exception;
+            PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
 
     /**  代理盈亏日维度 中控后台**/
 
