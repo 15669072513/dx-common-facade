@@ -23,6 +23,7 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty(value = "日期", example = "20210901")
     private Integer staticsDate;
 
+    private String venueName;
     @ApiModelProperty(value = "总注单笔数", example = "1500.00")
     private Integer betCount;
     /** betAmount */
