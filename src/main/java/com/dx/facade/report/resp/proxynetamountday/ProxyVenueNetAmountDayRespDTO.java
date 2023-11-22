@@ -25,7 +25,7 @@ public class ProxyVenueNetAmountDayRespDTO {
 
     private String venueName;
     @ApiModelProperty(value = "总注单笔数", example = "1500.00")
-    private Integer betCount;
+    private Long betCount;
     /** betAmount */
     @ApiModelProperty(value = "总投注金额", example = "1500.00")
     private BigDecimal betAmount;
@@ -55,4 +55,33 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty(value = "会员账户调整", example = "1500.00")
     private BigDecimal memberArtificialPatchAmount;
 
+    @ApiModelProperty("直属注单数")
+    //@TableField("bet_count")
+    private Long directBetCount;
+
+    @ApiModelProperty("直属会员投注额")
+    //@TableField("bet_amount")
+    private BigDecimal directBetAmount;
+
+    @ApiModelProperty("直属会员有效投注额")
+    //@TableField("valid_bet_amount")
+    private BigDecimal directValidBetAmount;
+
+    @ApiModelProperty("直属会员总输赢金额")
+    //@TableField("net_amount")
+    private BigDecimal directNetAmount;
+
+    @ApiModelProperty("直属会员净输赢金额")
+    private BigDecimal directMemberNetwinAmount;
+
+    @ApiModelProperty("直属会员代理发放会员返水")
+    private BigDecimal directMemberRebateAmountByProxy;
+
+
+    @ApiModelProperty("直属会员平台发放会员返水")
+    private BigDecimal directMemberRebateAmountByPlat;
+
+
+    @ApiModelProperty("直属会员返水其他调整金额")
+    private BigDecimal directMemberArtificialPatchAmount;
 }

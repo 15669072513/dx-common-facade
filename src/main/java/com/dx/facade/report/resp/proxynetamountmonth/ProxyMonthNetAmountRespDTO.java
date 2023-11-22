@@ -30,6 +30,8 @@ public class ProxyMonthNetAmountRespDTO {
     @ApiModelProperty(value = "代理id", example = "10001")
     private Long proxyId;
 
+    @ApiModelProperty(value = "总注单笔数", example = "1500.00")
+    private Long betCount;
     /**
      * proxyName
      */
