@@ -4,7 +4,6 @@ import com.dx.facade.common.PageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 @Data
 @ApiModel(value = "ProxyDayReportReq", description = "代理报表请求对象")
@@ -12,10 +11,10 @@ public class ProxyDayReportReq extends PageRequest {
 
 
     @ApiModelProperty(value = "统计开始时间",  example = "20210617")
-    private Integer reportStartTime;
+    private String reportStartTe;
 
     @ApiModelProperty(value = "统计结束时间",  example = "20210617")
-    private Integer reportEndTime;
+    private String reportEndTe;
 
     @ApiModelProperty(value = "代理id")
     private Long proxyId;
