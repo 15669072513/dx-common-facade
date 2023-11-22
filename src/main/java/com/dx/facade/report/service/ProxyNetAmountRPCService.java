@@ -87,7 +87,7 @@ public interface ProxyNetAmountRPCService {
      * @author focus
      * @since 2021年9月17日 下午4:40:02
      */
-    CommonResp<PageResp<ProxyDayNetAmountRespDTO, Void>> queryProxyNetAmountMonthDetail_v1(
+    CommonResp<PageResp<ProxyDayNetAmountRespDTO, ProxyDayNetAmountRespDTO>> queryProxyNetAmountMonthDetail_v1(
             PageReq<ProxyDayNetAmountReqDTO> reqDTO) throws Exception;
 
     /**  代理盈亏日维度 中控后台**/
