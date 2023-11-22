@@ -13,11 +13,11 @@ public class ProxyDayReportReq extends PageRequest {
 
     @ApiModelProperty(value = "统计开始时间", required = true, example = "20210617")
     @DateTimeFormat(pattern = "yyyyMMdd")
-    private Integer startTime;
+    private String startTime;
 
     @ApiModelProperty(value = "统计结束时间", required = true, example = "20210617")
     @DateTimeFormat(pattern="yyyyMMdd")
-    private Integer endTime;
+    private String endTime;
 
     @ApiModelProperty(value = "代理id")
     private Long proxyId;
