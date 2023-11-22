@@ -28,4 +28,15 @@ public class ProxyDayReportReq extends PageRequest {
     @ApiModelProperty(value = "类型：1全部 2直属")
     private Integer proxyType;
 
+    @ApiModelProperty(
+            value = "排序列名，receiveTime",
+            example = "receiveTime"
+    )
+    private String orderKey;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
+
 }
