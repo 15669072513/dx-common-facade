@@ -98,4 +98,10 @@ public class DwdMemberStaticInfoSummaryResp {
     protected Long proxyCashDownTimes = 0L;
     @ApiModelProperty("冲提差")
     private BigDecimal proxyCashDifferAmount;
+    @ApiModelProperty("注册数")
+    private BigDecimal registerCount;
+    @ApiModelProperty("活跃数")
+    private BigDecimal activeCount;
+    @ApiModelProperty("有效新增人数")
+    private BigDecimal validUserCount;
 }
