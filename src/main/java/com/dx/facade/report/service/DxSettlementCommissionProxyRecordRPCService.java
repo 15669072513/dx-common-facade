@@ -121,5 +121,5 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @param proxyId
      * @return
      */
-    CommonResp<List<String>> getNewSettlementData(Long proxyId);
+    CommonResp<List<ProxyNewSettlementDataDTO>> getNewSettlementData(Long proxyId);
 }

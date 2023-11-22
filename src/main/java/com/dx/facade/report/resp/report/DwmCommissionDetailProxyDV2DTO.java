@@ -24,6 +24,11 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 结算类型
+     */
+    @ApiModelProperty("结算类型")
+    private String settlementCode;
 
     /**
     * 周期起始日期
@@ -56,9 +61,9 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
     @ApiModelProperty("团队返佣")
     private BigDecimal commissionAmount;
     /**
-     * 会员游戏盈亏(平台)
+     * 会员游戏盈亏/抽水贡献
      */
-    @ApiModelProperty("会员游戏盈亏(平台)")
+    @ApiModelProperty("会员游戏盈亏/抽水贡献")
     private BigDecimal platformNetAmount;
 
     /**
@@ -94,6 +99,12 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
      */
     @ApiModelProperty("冲正净输赢")
     private BigDecimal rushAmount;
+    /**
+     * 返佣比例
+     */
+    @ApiModelProperty("返佣比例")
+    private BigDecimal commissionRate;
+
 
 
 }
