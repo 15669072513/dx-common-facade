@@ -50,7 +50,8 @@ public class ProxyDayNetAmountRespDTO {
      */
     @ApiModelProperty(value = "有效投注", example = "1500.00")
     private BigDecimal validBetAmount;
-
+    @ApiModelProperty(value = "注单笔数", example = "1500.00")
+    private Long betCount;
     /**
      * netAmount
      */
