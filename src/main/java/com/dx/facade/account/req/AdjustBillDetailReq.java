@@ -47,4 +47,9 @@ public class AdjustBillDetailReq implements Serializable {
      * 调整时间
      */
     private LocalDateTime adjustTime;
+
+    /**
+     * 调整人IP
+     */
+    private String ipAddr;
 }

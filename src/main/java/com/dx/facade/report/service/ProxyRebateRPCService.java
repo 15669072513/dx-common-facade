@@ -64,4 +64,5 @@ public interface ProxyRebateRPCService {
      * @since 2022年10月19日 下午18:18:52
      */
     CommonResp<Integer> proxyRebateUnReceiveCount(ProxyRebateUnReceiveReqDTO reqDTO) throws BizException;
+
 }

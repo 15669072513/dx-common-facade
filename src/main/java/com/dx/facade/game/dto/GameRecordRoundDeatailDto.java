@@ -91,13 +91,19 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("眼睛标识")
     private boolean showFlag;
 
+    @ApiModelProperty("玩家手牌亮牌")
+    private List<Map<Integer,Boolean>> lightCards =new ArrayList<>();
+
     @ApiModelProperty("玩家牌型显示是否置灰标识")
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private List<Map<Integer,Boolean>> showCards =new ArrayList<>();
 
+    @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+    private BigDecimal totalNetAmount= BigDecimal.ZERO;
+
     @ApiModelProperty("打牌输赢")
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    private BigDecimal netAmount;
+    private BigDecimal netAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
