@@ -116,4 +116,10 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      */
     CommonResp<DxSettlementCommissionProxyTotalRspV2DTO> commissionStatisticsListTotal(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
 
+    /**
+     * 获取当前登录代理最近期数数据
+     * @param proxyId
+     * @return
+     */
+    CommonResp<List<String>> getNewSettlementData(Long proxyId);
 }
