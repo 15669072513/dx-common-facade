@@ -18,7 +18,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "返佣统计列表-汇总DTO", description = "返佣统计列表-汇总DTO")
+@ApiModel(value = "返佣统计列表汇总数据DTO", description = "返佣统计列表汇总数据DTO")
 public class DxSettlementCommissionProxyTotalRspV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
