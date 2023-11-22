@@ -24,6 +24,11 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    /**
+     * 结算类型
+     */
+    @ApiModelProperty("结算类型")
+    private String settlementCode;
 
     /**
     * 周期起始日期
