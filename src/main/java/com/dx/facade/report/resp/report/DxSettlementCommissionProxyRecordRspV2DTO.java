@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 /**
  * @description 返佣统计列表DTO
@@ -69,18 +68,17 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
      * 抽水贡献
      */
     @ApiModelProperty("抽水贡献")
-    private BigDecimal commissionContribute;
+    private BigDecimal platformNetAmount;
     /**
      * 场馆费
      */
     @ApiModelProperty("场馆费")
-    private BigDecimal commissionVenueFee;
-
+    private BigDecimal venueAmount;
     /**
      * 会员返水
      */
     @ApiModelProperty("会员返水")
-    private Long memberRebateAmount;
+    private BigDecimal memberRebateAmount;
 
     /**
      * 会员返水调整金额
