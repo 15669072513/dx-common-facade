@@ -109,5 +109,11 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     CommonResp<PageResp<DxSettlementCommissionProxyRecordRspV2DTO, Object>> commissionStatisticsList(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
+    /**
+     * 统计-返佣统计汇总
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<DxSettlementCommissionProxyTotalRspV2DTO> commissionStatisticsListTotal(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
 
 }
