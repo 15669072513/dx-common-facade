@@ -5,16 +5,18 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
 @ApiModel(value = "ProxyDayReportReq", description = "代理报表请求对象")
-public class ProxyDayReportReq extends PageRequest {
+public class ProxyDayReportReq extends PageRequest implements Serializable {
 
 
     @ApiModelProperty(value = "统计开始时间",  example = "20210617")
-    private String reportStartTe;
+    private String reportStartTime;
 
     @ApiModelProperty(value = "统计结束时间",  example = "20210617")
-    private String reportEndTe;
+    private String reportEndTime;
 
     @ApiModelProperty(value = "代理id")
     private Long proxyId;
