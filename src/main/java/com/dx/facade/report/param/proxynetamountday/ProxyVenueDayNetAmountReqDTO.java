@@ -27,15 +27,12 @@ public class ProxyVenueDayNetAmountReqDTO  {
     @ApiModelProperty("商户id")
     private Long merchantId;
     @ApiModelProperty(value = "开始日期", required = true, example = "20210601")
-    @NotNull(message = "开始月份参数不能为空")
     private Integer startDate;
 
     @ApiModelProperty(value = "结束日期", required = true, example = "20210602")
-    @NotNull(message = "结束月份参数不能为空")
     private Integer endDate;
 
     @ApiModelProperty(value = "结束日期", required = true, example = "20210602")
-    @NotNull(message = "结束月份参数不能为空")
     private Integer staticDate;
     /**
      * proxyName
