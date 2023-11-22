@@ -79,6 +79,8 @@ public class DwdMemberStaticInfoSummaryResp {
     protected BigDecimal proxyCreditDownDmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信下分次数")
     protected Long proxyCreditDownTimes = 0L;
+    @ApiModelProperty("授信差")
+    private BigDecimal proxyCreditDifferAmount;
     @ApiModelProperty("返点金额")
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
 
@@ -94,4 +96,6 @@ public class DwdMemberStaticInfoSummaryResp {
     protected BigDecimal proxyCashDownAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理提现下分金额")
     protected Long proxyCashDownTimes = 0L;
+    @ApiModelProperty("冲提差")
+    private BigDecimal proxyCashDifferAmount;
 }
