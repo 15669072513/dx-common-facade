@@ -115,9 +115,6 @@ public class VirtualAccountParmDTO implements Serializable {
     @ApiModelProperty(value = "备注")
     private String remark;
 
-    @ApiModelProperty(value = "ip")
-    private String ip;
-
     private static final long serialVersionUID = 1L;
 
 }
