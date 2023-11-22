@@ -79,6 +79,6 @@ public class DxSettlementCommissionProxyTotalRspV2DTO implements Serializable {
      * 返佣调整
      */
     @ApiModelProperty("返佣调整")
-    private BigDecimal commissionAdjustAmount;
+    private BigDecimal commissionAdjustAmount =BigDecimal.ZERO;
 
 }
