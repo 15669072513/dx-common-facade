@@ -1,5 +1,7 @@
 package com.dx.facade.report.resp.proxynetamountday;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -29,7 +31,8 @@ public class ProxyDayNetAmountRespDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     @ApiModelProperty(value = "代理id", example = "10001")
     private Long proxyId;
-
+    @ApiModelProperty("日期，比如20210531")
+    private Integer staticsDate;
     /**
      * proxyName
      */
