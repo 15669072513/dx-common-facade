@@ -115,6 +115,4 @@ public class BankCardBindParmDTO {
     private Long vipId;
     @ApiModelProperty(value = "vip等级序号")
     private String vipLevel;
-    @ApiModelProperty(value = "ip")
-    private String ip;
 }
