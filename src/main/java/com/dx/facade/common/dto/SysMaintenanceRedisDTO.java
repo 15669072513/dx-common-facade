@@ -23,6 +23,10 @@ public class SysMaintenanceRedisDTO  implements Serializable {
     @ApiModelProperty("维护标题")
     private String title;
 
+    //维护内容
+    @ApiModelProperty("维护内容")
+    private String content;
+
     //开始时间
     @ApiModelProperty("开始时间")
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")

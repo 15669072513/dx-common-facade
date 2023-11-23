@@ -22,7 +22,7 @@ public class ProxyMemberNetVenueListReqDTO {
     private Integer endDate;
 
     @ApiModelProperty(value = "会员ID", required = true)
-    private Long memberId;
+    private String memberId;
 
 //    @ApiModelProperty(value = "f", required = true)
     private Long parentProxyId;
