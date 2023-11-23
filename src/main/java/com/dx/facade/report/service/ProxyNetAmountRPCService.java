@@ -148,8 +148,13 @@ public interface ProxyNetAmountRPCService {
     CommonResp<PageResp<ProxyNetAmountDayRespDTO, ?>> queryProxyNetAmountMonthDetail(ProxyNetAmountDayReqDTO reqDTO) throws Exception;
 
 
-     CommonResp<List<ProxyVenueNetAmountDayRespDTO>> queryProxyVenueNetAmountDetail(
+    CommonResp<List<ProxyVenueNetAmountDayRespDTO>> queryProxyVenueNetAmountDetail(
             ProxyVenueDayNetAmountReqDTO reqDTO);
-     CommonResp<ProxyVenueNetAmountDayRespDTO> queryProxyVenueNetAmountTotal(
+
+    CommonResp<ProxyVenueNetAmountDayRespDTO> queryProxyVenueNetAmountTotal(
             ProxyVenueDayNetAmountReqDTO reqDTO);
+
+    CommonResp<ProxyMonthNetAmountRespDTO> queryProxyMonthNetAmountSummary(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
+
+    CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmountSummary(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
 }

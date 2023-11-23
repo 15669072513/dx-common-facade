@@ -13,10 +13,10 @@ public class ProxyDayReportReq extends PageRequest implements Serializable {
 
 
     @ApiModelProperty(value = "统计开始时间",  example = "20210617")
-    private String reportStartTe;
+    private String startTime;
 
     @ApiModelProperty(value = "统计结束时间",  example = "20210617")
-    private String reportEndTe;
+    private String endTime;
 
     @ApiModelProperty(value = "代理id")
     private Long proxyId;

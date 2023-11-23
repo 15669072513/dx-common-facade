@@ -62,7 +62,6 @@ public enum MerchantMemberWithdrawOrderStatusEnum {
         }
         if(merchantOrderStatus.equals(审核通过.code)) {//审核通过
             return Arrays.asList(
-                    WithdrawOrderStatus.二审审核.code(),
                     WithdrawOrderStatus.待三审.code()
             );
         }
@@ -73,10 +72,10 @@ public enum MerchantMemberWithdrawOrderStatusEnum {
             return Arrays.asList(WithdrawOrderStatus.二审拒绝.code());
         }
         if(merchantOrderStatus.equals(代理通过.code)) {
-            return Arrays.asList(WithdrawOrderStatus.三审审核.code(), WithdrawOrderStatus.已出款.code(), WithdrawOrderStatus.出款失败.code());
+            return Arrays.asList(WithdrawOrderStatus.已出款.code());
         }
         if(merchantOrderStatus.equals(代理拒绝.code)) {
-            return Arrays.asList(WithdrawOrderStatus.三审拒绝.code());
+            return Arrays.asList(WithdrawOrderStatus.三审拒绝.code(), WithdrawOrderStatus.出款失败.code());
         }
         throw new IllegalArgumentException("clientOrderStatus参数非法:" + merchantOrderStatus);
     }
@@ -90,8 +89,7 @@ public enum MerchantMemberWithdrawOrderStatusEnum {
         if(dbOrderStatus == null) {
             throw new IllegalArgumentException("会员提现审核记录查询，db中存在dbOrderStatus为null");
         }
-        if(dbOrderStatus.equals(WithdrawOrderStatus.二审审核.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.待三审.code())) {
+        if(dbOrderStatus.equals(WithdrawOrderStatus.待三审.code())) {
             return 审核通过.code;
         }
         if(dbOrderStatus.equals(WithdrawOrderStatus.一审拒绝.code())) {
@@ -100,12 +98,11 @@ public enum MerchantMemberWithdrawOrderStatusEnum {
         if(dbOrderStatus.equals(WithdrawOrderStatus.二审拒绝.code())) {
             return 二审拒绝.code;
         }
-        if(dbOrderStatus.equals(WithdrawOrderStatus.三审审核.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.已出款.code())
-                || dbOrderStatus.equals(WithdrawOrderStatus.出款失败.code())) {
+        if(dbOrderStatus.equals(WithdrawOrderStatus.已出款.code())) {
             return 代理通过.code;
         }
-        if(dbOrderStatus.equals(WithdrawOrderStatus.三审拒绝.code())) {
+        if(dbOrderStatus.equals(WithdrawOrderStatus.三审拒绝.code())
+                || dbOrderStatus.equals(WithdrawOrderStatus.出款失败.code())) {
             return 代理拒绝.code;
         }
         throw new IllegalArgumentException("会员提现审核记录查询，db中存在非法dbOrderStatus:" + dbOrderStatus);
