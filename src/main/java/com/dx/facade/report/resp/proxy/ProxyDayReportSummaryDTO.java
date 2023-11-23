@@ -19,7 +19,8 @@ import java.math.BigDecimal;
 @ApiModel(value = "com-ob-resp-report-ProxyDayReportSummaryDTO", description = "会员报表总计对象")
 public class ProxyDayReportSummaryDTO {
 
-
+    @ApiModelProperty("代理层级路径")
+    private String proxyPathUsername;
 
 
 
