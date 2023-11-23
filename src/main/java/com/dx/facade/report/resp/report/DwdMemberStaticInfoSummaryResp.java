@@ -99,9 +99,9 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("冲提差")
     private BigDecimal proxyCashDifferAmount;
     @ApiModelProperty("注册数")
-    private BigDecimal registerCount;
+    private Integer registerCount;
     @ApiModelProperty("活跃数")
-    private BigDecimal activeCount;
+    private Integer activeCount;
     @ApiModelProperty("有效新增人数")
-    private BigDecimal validUserCount;
+    private Integer validUserCount;
 }
