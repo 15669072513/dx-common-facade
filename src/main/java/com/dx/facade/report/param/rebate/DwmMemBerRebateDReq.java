@@ -17,11 +17,11 @@ public class DwmMemBerRebateDReq extends LocalDatePageRequest {
     private String payoutEndTime;
 
 
-    @ApiModelProperty(value = "派发开始时间", required = true, example = "20210617")
+    @ApiModelProperty(value = "派发开始时间", required = false, example = "20210617")
     @DateTimeFormat(pattern = "yyyyMMdd")
     private Integer reportStartTime;
 
-    @ApiModelProperty(value = "派发结束时间", required = true, example = "20210617")
+    @ApiModelProperty(value = "派发结束时间", required = false, example = "20210617")
     @DateTimeFormat(pattern="yyyyMMdd")
     private Integer reportEndTime;
 

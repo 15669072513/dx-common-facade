@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -158,4 +159,13 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("抽水方式 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
+
+    @ApiModelProperty("每手收费上限（倍大盲）")
+    private BigDecimal handChargeUpperLimit;
+
+    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
+    private Integer isHiddenDecimal;
+
+    @ApiModelProperty("收费比例")
+    private BigDecimal chargeScale;
 }

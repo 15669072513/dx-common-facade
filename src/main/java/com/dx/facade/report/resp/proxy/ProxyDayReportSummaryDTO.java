@@ -19,11 +19,13 @@ import java.math.BigDecimal;
 @ApiModel(value = "com-ob-resp-report-ProxyDayReportSummaryDTO", description = "会员报表总计对象")
 public class ProxyDayReportSummaryDTO {
 
+    @ApiModelProperty("代理层级路径")
+    private String proxyPathUsername;
 
+    @ApiModelProperty("标签")
+    private Boolean flag;
+    
 
-
-
-    //
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
     private BigDecimal totalReceiveRebate;
 
