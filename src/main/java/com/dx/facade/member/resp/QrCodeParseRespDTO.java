@@ -24,4 +24,8 @@ public class QrCodeParseRespDTO implements Serializable {
 
     @ApiModelProperty(value = "token")
     private String token;
+
+    @ApiModelProperty(value="password")
+    private String password;
+
 }

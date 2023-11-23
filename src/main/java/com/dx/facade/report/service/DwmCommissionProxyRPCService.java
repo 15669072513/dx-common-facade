@@ -1,10 +1,14 @@
 package com.dx.facade.report.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.report.DwmCommissionProxyDReqDTO;
 import com.dx.facade.report.resp.report.DwmCommissionDetailProxyDV2DTO;
 import com.dx.facade.report.resp.report.DwmCommissionProxyDDTO;
+import com.dx.facade.report.resp.report.DxSettlementCommissionProxyRecordRspV2DTO;
+import com.dx.facade.report.resp.report.DxSettlementCommissionProxyTotalRspV2DTO;
+
 import java.util.List;
 
 /**
@@ -27,5 +31,5 @@ public interface DwmCommissionProxyRPCService {
      * @param reqDTO
      * @return
      */
-    CommonResp<List<DwmCommissionDetailProxyDV2DTO>> commissionStatisticsDetail(DwmCommissionProxyDReqDTO reqDTO);
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspV2DTO, DxSettlementCommissionProxyTotalRspV2DTO>> commissionStatisticsDetail(DwmCommissionProxyDReqDTO reqDTO);
 }

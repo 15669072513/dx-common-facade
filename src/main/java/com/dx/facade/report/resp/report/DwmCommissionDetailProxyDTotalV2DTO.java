@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 /**
  * @description 返佣统计明细dto
@@ -19,29 +18,10 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "返佣统计明细dto", description = "返佣统计明细dto")
-public class DwmCommissionDetailProxyDV2DTO implements Serializable {
+@ApiModel(value = "返佣统计明细小计dto", description = "返佣统计明细小计dto")
+public class DwmCommissionDetailProxyDTotalV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    /**
-     * 结算类型
-     */
-    @ApiModelProperty("结算类型")
-    private String settlementCode;
-
-    /**
-    * 周期起始日期
-    */
-    @ApiModelProperty("周期起始日期")
-    private Integer cycleStartDate;
-
-    /**
-    * 周期结束日期
-    */
-    @ApiModelProperty("周期结束日期")
-    private Integer cycleEndDate;
-
 
     /**
     * 币种
@@ -50,58 +30,49 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
     private String currency;
 
     /**
-     * 结算类型名称
-     */
-    @ApiModelProperty("结算类型名称")
-    private String settlementName;
-
-    /**
     * 团队返佣
     */
     @ApiModelProperty("团队返佣")
-    private BigDecimal commissionAmount;
+    private BigDecimal commissionAmount = BigDecimal.ZERO;
     /**
      * 会员游戏盈亏/抽水贡献
      */
     @ApiModelProperty("会员游戏盈亏/抽水贡献")
-    private BigDecimal platformNetAmount;
+    private BigDecimal platformNetAmount= BigDecimal.ZERO;
 
     /**
      * 场馆费用
      */
     @ApiModelProperty("场馆费用")
-    private BigDecimal venueAmount;
+    private BigDecimal venueAmount= BigDecimal.ZERO;
     /**
      * 直属会员返水金额
      */
     @ApiModelProperty("直属会员返水金额")
-    private BigDecimal memberRebateAmount;
+    private BigDecimal memberRebateAmount= BigDecimal.ZERO;
 
     /**
      * 直属会员返水调整金额
      */
     @ApiModelProperty("直属会员返水调整金额")
-    private BigDecimal memberRebateAdjustAmount;
+    private BigDecimal memberRebateAdjustAmount= BigDecimal.ZERO;
 
     /**
      * 代理净输赢
      */
     @ApiModelProperty("代理净输赢")
-    private BigDecimal proxyNetwinAmount;
+    private BigDecimal proxyNetwinAmount= BigDecimal.ZERO;
 
     /**
     * 上月结余
     */
     @ApiModelProperty("上月结余")
-    private BigDecimal commissionLastAmount;
+    private BigDecimal commissionLastAmount= BigDecimal.ZERO;
     /**
      * 冲正净输赢
      */
     @ApiModelProperty("冲正净输赢")
-    private BigDecimal rushAmount;
-    /**
-     * 返佣比例
-     */
-    @ApiModelProperty("返佣比例")
-    private BigDecimal commissionRate;
+    private BigDecimal rushAmount= BigDecimal.ZERO;
+
+
 }
