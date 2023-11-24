@@ -103,6 +103,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     @ApiModelProperty("备注")
     private String remark;
     
+    @ApiModelProperty("版本号")
+    private Integer version;
+    
 	@ApiModelProperty(value = "代理层级路径(代理账号)")
 	private List<String> proxyPathUsername;
 
