@@ -9,11 +9,13 @@ import com.dx.facade.member.proxy.resp.*;
 import com.dx.facade.report.param.rebate.ProxyRebateRecordReqDTO;
 import com.dx.facade.report.param.rebate.RebateDayListReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.req.report.MemberRebateRecordDetailReportParam;
 import com.dx.facade.report.resp.ProxyRebateStatisticsRespDTO;
 import com.dx.facade.report.resp.ProxyRebateStatisticsTotalRespDTO;
 import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamRespSumV2;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamRespV2;
 
 import java.util.List;
@@ -131,4 +133,5 @@ public interface ProxyRebateRecordService {
 
     CommonResp<List<ProxyRebateTeamRespV2>> getMemberTeamRebateV2(Long id, Integer reportDate);
 
+    CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getMemberTeamRebateV2DetailSum(MemberRebateRecordDetailReportParam param);
 }
