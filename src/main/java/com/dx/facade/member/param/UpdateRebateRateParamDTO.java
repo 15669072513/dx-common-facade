@@ -4,12 +4,6 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import javax.validation.constraints.NotNull;
-
-import org.springframework.util.Assert;
-
-import com.dx.facade.member.exception.ErrorCode;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -34,7 +28,7 @@ public class UpdateRebateRateParamDTO implements Serializable {
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 0：会员 1：代理")
+    @ApiModelProperty("用户类型 0：会员 1：代理 2：平台")
     private Integer userType;
     
     @ApiModelProperty("用户Id")
@@ -68,6 +62,6 @@ public class UpdateRebateRateParamDTO implements Serializable {
     private String remark;
     
     @ApiModelProperty("是否更新所以下级")
-    private boolean isAllSub;
+    private Boolean isAllSub;
     
 }
