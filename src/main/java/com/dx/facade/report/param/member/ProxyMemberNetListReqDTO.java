@@ -42,10 +42,8 @@ public class ProxyMemberNetListReqDTO {
     /**
      * orderKey
      */
-    @Min(value = 1, message = "排序序号最小为1")
-    @Max(value = 7, message = "排序序号最大为7")
-    @ApiModelProperty(value = "排序列: 1-总投注,2-总有效投注,3-游戏盈亏,4-会员返水,5-会员优惠,6-账户调整,7-总盈亏", example = "1")
-    private Integer orderKey;
+    @ApiModelProperty(value = "", example = "betAmount")
+    private String orderKey;
 
     @ApiModelProperty(value = "排序方式：升序：asc/降序：desc", example = "desc")
     private String orderType = "desc";
