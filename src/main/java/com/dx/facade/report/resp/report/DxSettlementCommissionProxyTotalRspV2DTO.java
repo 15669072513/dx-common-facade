@@ -22,11 +22,6 @@ import java.math.BigDecimal;
 public class DxSettlementCommissionProxyTotalRspV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    /**
-     * 代理id
-     */
-    @ApiModelProperty("代理id")
-    private Long proxyId;
 
     /**
      * 团队返佣金额
