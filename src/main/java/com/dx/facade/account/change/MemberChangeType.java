@@ -75,6 +75,10 @@ public enum MemberChangeType implements IChangeType {
     v2_1_club_rebate_sub(108, "俱乐部返水扣除调整", MemberBizType.rebate.code().toString()),
     v2_1_insure_rebate_sub(109, "保险返水扣除调整", MemberBizType.rebate.code().toString()),
 
+    //v3_cash_deposit_by_official(110, "官方给会员充值上分", MemberBizType.up_score.code().toString()),
+    //v3_cash_withdraw_by_official(111, "官方给会员提现下分", MemberBizType.down_score.code().toString()),
+    v3_proxy_help_credit_repay(112, "代理帮信用还款", MemberBizType.v2_repay.code().toString()),
+
     illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;

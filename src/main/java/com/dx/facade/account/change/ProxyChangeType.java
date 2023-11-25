@@ -86,6 +86,14 @@ public enum ProxyChangeType implements IChangeType {
     v2_1_negate_benefit_commission_dispatch(112, "负盈利返佣发放", ProxyBizType.v2_1_proxy_commission.code().toString()),
     v2_1_proxy_commission_add(113, "代理返佣增加调整", ProxyBizType.v2_1_proxy_commission.code().toString()),
     v2_1_proxy_commission_sub(114, "代理返佣扣除调整", ProxyBizType.v2_1_proxy_commission.code().toString()),
+
+
+    //v3信用钱包
+    v3_official_help_proxy_credit_repay(115, "官方帮代理信用还款", ProxyBizType.v2_repay.code().toString()),
+    v3_parent_proxy_help_proxy_credit_repay(116, "上级帮代理信用还款", ProxyBizType.v2_repay.code().toString()),
+    v3_proxy_help_sub_proxy_credit_repay(117, "代理帮下级信用还款", ProxyBizType.v2_repay.code().toString()),
+    v3_proxy_help_sub_member_credit_repay(128, "代理帮会员信用还款", ProxyBizType.v2_repay.code().toString()),
+
     illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 
     private Integer code;
