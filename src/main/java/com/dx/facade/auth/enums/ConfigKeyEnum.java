@@ -85,6 +85,9 @@ public enum ConfigKeyEnum {
     TRANSFER_COMMISSION_AMOUNT("transfer.commission.amount", "2"),//佣金转账
     SURROGATE_SETTLE_NOTRECEIVE_TIMEOUTS("surrogate.settle.notreceive.timeouts", "1"),//代理返点结算后未领1取超时作废天数
     LIMIT_REGION_COUNTRY_IP("limit.region.country.ip", "1"),
+    ZR_LIMIT_GAME_VENUES_IP("zr.limit.game.venues.ip", "1"),
+    CP_LIMIT_GAME_VENUES_IP("cp.limit.game.venues.ip", "1"),
+    TY_LIMIT_GAME_VENUES_IP("ty.limit.game.venues.ip", "1"),
     REGISTER_DEFAULT_VENTURE_CODE("register.default.venture.code ", "1"),//默认代理合营码
     DEPOSIT_DEFAULT_APPID_MODEL("deposit.default.appid.model", "1"),//存取款新增通道切换参数
     CLIENT_GEETEST_SWITCH("client.geetest.switch", "1"),//app端极验开关

@@ -40,7 +40,7 @@ public class ProxyRebateRecordReqDTO{
     /**
      * 返点状态
      */
-    @ApiModelProperty(value = "返点状态(0-未结算 1-待审核 2=待领取 3-领取成功 4-超时未领取 5-无返点 6-已取消)")
+    @ApiModelProperty(value = "返点状态(待发放 = 1，已发放= 3，无返点=5，已取消=6")
     private Integer payoutStatus;
     private List<Integer> payoutStatusList;
     /**

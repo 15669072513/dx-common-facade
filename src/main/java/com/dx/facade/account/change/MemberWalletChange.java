@@ -147,7 +147,13 @@ public enum MemberWalletChange implements IWalletChange {
     //中控后台可以在返水上给会员扣减金额
     v2_1_insure_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
     //中控后台可以在返水上给会员扣减金额
-    v2_1_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER)
+    v2_1_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+
+    //v3_cash_deposit_by_official(WalletType.cash, MemberBizType.up_score, MemberChangeType.v3_cash_deposit_by_official, MemberAppType.v2_cash_up_score, TransType.in, Constant.MEMBER),
+    //v3_cash_withdraw_by_official(WalletType.cash, MemberBizType.down_score, MemberChangeType.v3_cash_withdraw_by_official, MemberAppType.v2_cash_down_score, TransType.out, Constant.MEMBER),
+
+    //代理通过代理后台/APP帮会员信用还款
+    v3_proxy_help_credit_repay(WalletType.credit_available, MemberBizType.v2_repay, MemberChangeType.v3_proxy_help_credit_repay, MemberAppType.v2_repay, TransType.in, Constant.MEMBER)
     ;
 
     private IWalletType walletType;
