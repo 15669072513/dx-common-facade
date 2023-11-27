@@ -23,8 +23,8 @@ public enum ProxyWalletChange implements IWalletChange {
     quota_activity_add(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_add, ProxyAppType.activity, TransType.in),
     quota_activity_sub(WalletType.quota, ProxyBizType.activity, ProxyChangeType.activity_sub, ProxyAppType.activity, TransType.out),
 
-//    quota_add(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_add, ProxyAppType.quota, TransType.income),
-//    quota_sub(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_sub, ProxyAppType.quota, TransType.outlay),
+    //quota_add(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_add, ProxyAppType.quota, TransType.income),
+    //quota_sub(WalletType.quota, ProxyBizType.quota, ProxyChangeType.quota_sub, ProxyAppType.quota, TransType.outlay),
 
     quota_transfer_out(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_out, ProxyAppType.transfer, TransType.out),
     quota_transfer_in(WalletType.quota, ProxyBizType.transfer, ProxyChangeType.transfer_in, ProxyAppType.transfer, TransType.in),
@@ -84,8 +84,8 @@ public enum ProxyWalletChange implements IWalletChange {
     commission_rebate_adjustment_add(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_add, ProxyAppType.commission_rebate_add, TransType.in),
     commission_rebate_adjustment_sub(WalletType.agent_cash, ProxyBizType.rebate, ProxyChangeType.rebate_sub, ProxyAppType.commission_rebate_sub, TransType.out),
 
-    //    commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
-//    commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
+    //commission_transfer_to_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_transfer_to_banker, ProxyAppType.transfer_with_banker, TransType.outlay),
+    //commission_receive_from_banker(WalletType.commission, ProxyBizType.transfer_with_banker, ProxyChangeType.commission_receive_from_banker, ProxyAppType.transfer_with_banker, TransType.income),
     //--------------------v2需求代理全部账变类型------------
     //现金钱包 13种
     //场景1：官方通过中控后台给代理人工加额，代理的现金余额增加
@@ -191,15 +191,13 @@ public enum ProxyWalletChange implements IWalletChange {
     v3_proxy_help_sub_member_credit_repay(WalletType.agent_cash, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
 
     //官方在中控后台给代理信用还款（目前暂定总代）
-    v3_official_help_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_official_help_proxy_credit_repay, ProxyAppType.v3_official_help_proxy_credit_repay, TransType.in),
+    v3_official_help_proxy_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_official_help_proxy_credit_repay, ProxyAppType.v3_official_help_proxy_credit_repay, TransType.in),
     //每一级代理可以给自己直属代理信用还款，总代可以对任意代理信用还款
-    v3_parent_proxy_help_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_parent_proxy_help_proxy_credit_repay, ProxyAppType.v3_parent_proxy_help_proxy_credit_repay, TransType.in),
+    v3_parent_proxy_help_proxy_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_parent_proxy_help_proxy_credit_repay, ProxyAppType.v3_parent_proxy_help_proxy_credit_repay, TransType.in),
     //每一级代理可以给自己直属代理信用还款，总代可以对任意代理信用还款
-    v3_credit_proxy_help_sub_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_proxy_credit_repay, ProxyAppType.v3_proxy_help_sub_proxy_credit_repay, TransType.out),
+    v3_credit_proxy_help_sub_proxy_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_proxy_credit_repay, ProxyAppType.v3_proxy_help_sub_proxy_credit_repay, TransType.out),
     //每一级代理可以对自己直属会员信用还款
-    v3_credit_proxy_help_sub_member_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
-
-
+    v3_credit_proxy_help_sub_member_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
 
 
     ;
@@ -351,4 +349,12 @@ public enum ProxyWalletChange implements IWalletChange {
 
         return list;
     }
+
+    public static ProxyWalletChange getBy(Integer walletType, Integer bizType, Integer changeType) {
+        return ProxyWalletChange.v2List().stream().filter(w ->
+                w.walletType().code().equals(walletType)
+                        && w.bizType.code().equals(bizType)
+                        && w.changeType.code().equals(changeType)).findFirst().orElse(null);
+    }
+
 }

@@ -3,29 +3,18 @@ package com.dx.facade.account.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
-import com.dx.exception.BizException;
-import com.dx.facade.account.param.MemberUserBankAndVirtualParam;
-import com.dx.facade.account.param.UpdateBankCardParmDTO;
-import com.dx.facade.account.param.UpdateWithdrawalParam;
-import com.dx.facade.account.req.*;
-import com.dx.facade.account.resp.BankCardRespDTO;
-import com.dx.facade.account.resp.UserBankAndVirtualUpdateBindStatusReqDTO;
-import com.dx.facade.member.param.UserBankCardOperationQureyParam;
-import com.dx.facade.member.param.UserBankCardQureyParam;
-import com.dx.facade.member.param.UserVirtualOperationQureyParam;
-import com.dx.facade.member.resp.MemberBankCardOperationResp;
-import com.dx.facade.member.resp.MemberVirtualOperationResp;
-import com.dx.facade.member.resp.UserBankCardResp;
-import com.dx.facade.payment.req.BankCardParmDTO;
-import io.swagger.annotations.ApiModelProperty;
+import com.dx.facade.account.param.HelpCreditRepayRecordParam;
+import com.dx.facade.account.req.HelpCreditRepayRecordDTO;
+import com.dx.facade.account.req.HelpCreditRepayRecordReq;
 
-import java.util.List;
-
-/**
- * @author agan
- */
 public interface HelpCreditRepayRecordService {
 
+    /**
+     * @author Dealer
+     * @description: 插入帮款款记录
+     * @date 2023/11/27
+     * @copyright
+     */
     CommonResp<Long> saveRecord(HelpCreditRepayRecordDTO repayRecordDTO);
 
     /**
@@ -34,4 +23,12 @@ public interface HelpCreditRepayRecordService {
      * @return
      */
     CommonResp<PageResp<HelpCreditRepayRecordDTO, String>> pageList(PageReq<HelpCreditRepayRecordReq> pageReq);
+
+    /**
+     * @author Dealer
+     * @description: 帮信用还款
+     * @date 2023/11/27
+     * @copyright
+     */
+    CommonResp<Long> creditRepay(HelpCreditRepayRecordParam param, Boolean insertRecord);
 }

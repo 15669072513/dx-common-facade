@@ -17,7 +17,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberBaseInfoRespDTO {
+public class MemberBaseInfoRespDTO extends ProxyInfoRespDTO {
 
     @ApiModelProperty("ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
