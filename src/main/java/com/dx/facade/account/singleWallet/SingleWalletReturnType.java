@@ -17,4 +17,11 @@ public enum SingleWalletReturnType {
         this.code = code;
         this.desc = desc;
     }
+    public int code() {
+        return code;
+    }
+
+    public String desc() {
+        return desc;
+    }
 }
