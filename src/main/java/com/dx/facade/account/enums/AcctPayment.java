@@ -538,6 +538,7 @@ public class AcctPayment {
         //信用钱包
         官方给代理授信上分(19, "官方给代理授信上分"),
         官方给代理授信下分(20, "官方给代理授信下分"),
+        官方帮代理信用还款(21, "官方帮代理信用还款"),
         ;
         private Integer code;
         private String desc;
