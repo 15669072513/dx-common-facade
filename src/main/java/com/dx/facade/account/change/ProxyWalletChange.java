@@ -340,6 +340,14 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(ProxyWalletChange.v2_1_negate_benefit_commission_dispatch);
         list.add(ProxyWalletChange.v2_1_proxy_commission_add);
         list.add(ProxyWalletChange.v2_1_proxy_commission_sub);
+        //帮信用还款，现金钱包
+        list.add(v3_proxy_help_sub_member_credit_repay);
+        list.add(v3_proxy_help_sub_proxy_credit_repay);
+        //帮信用还款，信用钱包
+        list.add(v3_credit_proxy_help_sub_member_credit_repay);
+        list.add(v3_credit_proxy_help_sub_proxy_credit_repay);
+        list.add(v3_parent_proxy_help_proxy_credit_repay);
+        list.add(v3_official_help_proxy_credit_repay);
 
         return list;
     }
