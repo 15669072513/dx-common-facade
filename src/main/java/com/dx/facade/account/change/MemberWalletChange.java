@@ -311,6 +311,8 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v2_1_club_rebate_sub);
         list.add(v2_1_insure_rebate_sub);
         list.add(v2_1_rebate_sub);
+        //帮信用还款
+        list.add(v3_proxy_help_credit_repay);
         return list;
     }
 

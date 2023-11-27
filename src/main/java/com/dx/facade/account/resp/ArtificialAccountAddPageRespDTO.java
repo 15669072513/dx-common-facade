@@ -54,7 +54,8 @@ public class ArtificialAccountAddPageRespDTO implements Serializable {
 	@ApiModelProperty("vip等级")
 	private Integer vipLevel;
 
-	@ApiModelProperty("调整类型 会员(1-会员存款(后台),2-代客充值,3-会员活动,4-会员返水,5-会员福利,6-存款优惠 7-其他调整) 详见枚举)")
+	//参见枚举common-facades中ProxyAdjustType
+	@ApiModelProperty("调整类型 会员(1-会员存款(后台),2-代客充值,3-会员活动,4-会员返水,5-会员福利,6-存款优惠 7-其他调整,19-官方给代理授信上分,21-官方帮代理信用还款)")
 	private Integer adjustType;
 
 	@ApiModelProperty("币种")
