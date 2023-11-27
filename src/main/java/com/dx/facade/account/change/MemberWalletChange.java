@@ -227,77 +227,42 @@ public enum MemberWalletChange implements IWalletChange {
         //list.add(rebate);
         //list.add(rebate_add);
         //list.add(rebate_sub);
-        //1，充值上分
         list.add(MemberWalletChange.v2_cash_up_score);
-        //1，提现下分
         list.add(MemberWalletChange.v2_cash_down_score);
-        //1，提现冻结
         list.add(MemberWalletChange.v2_cash_down_score_withdraw_frozen);
-        //1，提现拒绝
         list.add(MemberWalletChange.v2_cash_down_score_withdraw_refused);
-        //1，现金钱包转入
         list.add(v2_cash_center_to_B);
-        //1，转出至现金钱包
         list.add(v2_B_to_center);
-        //1，会员返水
         list.add(MemberWalletChange.v2_rebate);
-        //1，会员返水增加调整
         list.add(MemberWalletChange.v2_rebate_add);
-        //1，会员返水扣除调整
         list.add(MemberWalletChange.v2_rebate_sub);
-        //1，信用借款
         list.add(MemberWalletChange.v2_cash_loan);
-        //1，信用还款
         list.add(MemberWalletChange.v2_cash_repay);
-        //1，带入牌桌
         list.add(MemberWalletChange.bring_to_table);
-        //1，带出牌桌
         list.add(MemberWalletChange.bring_out_table);
-        //5，提现下分
         list.add(MemberWalletChange.v2_cash_down_score_audit_passed_to_proxy);
-        //5，提现冻结
         list.add(MemberWalletChange.v2_cash_lock_down_score_frozen);
-        //5，提现拒绝
         list.add(MemberWalletChange.V2_cash_lock_down_score_refused);
-        //11，带入牌桌
         list.add(MemberWalletChange.v2_bring_to_table_texas);
-        //11，带出牌桌
         list.add(MemberWalletChange.v2_bring_out_table_texas);
-        //12，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_video);
-        //12，转出至现金钱包
         list.add(MemberWalletChange.v2_video_to_center);
-        //13，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_sports);
-        //13，转出至现金钱包
         list.add(MemberWalletChange.v2_sports_to_center);
-        //14，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_lottery);
-        //14，转出至现金钱包
         list.add(MemberWalletChange.v2_lottery_to_center);
-        //15，现金钱包转入
         list.add(MemberWalletChange.v2_center_to_poker);
-        //15，转出至现金钱包
         list.add(MemberWalletChange.v2_poker_to_center);
         list.add(MemberWalletChange.v2_center_to_e_sports);
         list.add(MemberWalletChange.v2_e_sports_to_center);
-        //9，授信上分
         list.add(MemberWalletChange.v2_credit_up_score);
-        //10，授信上分
         list.add(MemberWalletChange.v2_credit_total_up_score);
-        //9，授信下分
         list.add(MemberWalletChange.v2_credit_down_score);
-        //10，授信下分
         list.add(MemberWalletChange.v2_credit_total_down_score);
-        //9，信用还款
         list.add(MemberWalletChange.v2_credit_repay);
-        //9，信用借款
         list.add(MemberWalletChange.v2_credit_loan);
         list.add(v2_1_deposit);
-        //TODO 2.1去掉优惠了
-        //list.add(v2_1_deposit_discount);
         list.add(v2_1_deposit_back);
-        //list.add(v2_1_deposit_discount_back);
         list.add(v2_1_withdraw);
         list.add(v2_1_withdraw_frozen);
         list.add(v2_1_withdraw_fail);
@@ -311,8 +276,15 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v2_1_club_rebate_sub);
         list.add(v2_1_insure_rebate_sub);
         list.add(v2_1_rebate_sub);
+        list.add(v3_proxy_help_credit_repay);
         return list;
     }
 
+    public static MemberWalletChange getBy(Integer walletType, Integer bizType, Integer changeType) {
+        return MemberWalletChange.v2List().stream().filter(w ->
+                w.walletType().code().equals(walletType)
+                        && w.bizType.code().equals(bizType)
+                        && w.changeType.code().equals(changeType)).findFirst().orElse(null);
+    }
 
 }

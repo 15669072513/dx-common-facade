@@ -515,6 +515,7 @@ public interface ExcelHeadI18nKey {
     String FILE_NAME_会员取款记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员取款记录";
     String FILE_NAME_会员账变记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_会员账变记录";
     String FILE_NAME_代理存款记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理存款记录";
+    String FILE_NAME_代理帮信用还款记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理帮信用还款记录";
     String FILE_NAME_代理取款记录 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_代理取款记录";
     String FILE_NAME_红利发放导入模板 = "EXCEL_HEAD_I18N_KEY.FILE_NAME_红利发放导入模板";
 
