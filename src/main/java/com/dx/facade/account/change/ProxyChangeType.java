@@ -190,7 +190,12 @@ public enum ProxyChangeType implements IChangeType {
                 v2_1_negate_benefit_commission_income,
                 v2_1_negate_benefit_commission_dispatch,
                 v2_1_proxy_commission_add,
-                v2_1_proxy_commission_sub
+                v2_1_proxy_commission_sub,
+                //v3-帮信用还款
+                v3_proxy_help_sub_member_credit_repay,
+                v3_proxy_help_sub_proxy_credit_repay,
+                v3_parent_proxy_help_proxy_credit_repay,
+                v3_official_help_proxy_credit_repay
                 /*
                 officer_proxy_up_score,
                 proxy_be_up_score,
