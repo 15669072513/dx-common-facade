@@ -1,15 +1,13 @@
 package com.dx.facade.account.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.param.MemberUserBankAndVirtualParam;
 import com.dx.facade.account.param.UpdateBankCardParmDTO;
 import com.dx.facade.account.param.UpdateWithdrawalParam;
-import com.dx.facade.account.req.BankCardBindParmDTO;
-import com.dx.facade.account.req.BankCardMerchantIdsParmDTO;
-import com.dx.facade.account.req.GetBankCardParmDTO;
-import com.dx.facade.account.req.UserBankAndVirtualUpdateStatusReqDTO;
+import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.BankCardRespDTO;
 import com.dx.facade.account.resp.UserBankAndVirtualUpdateBindStatusReqDTO;
 import com.dx.facade.member.param.UserBankCardOperationQureyParam;
@@ -28,4 +26,12 @@ import java.util.List;
  */
 public interface HelpCreditRepayRecordService {
 
+    CommonResp<Long> saveRecord(HelpCreditRepayRecordDTO repayRecordDTO);
+
+    /**
+     * 帮还款列表查询
+     * @param pageReq
+     * @return
+     */
+    CommonResp<PageResp<HelpCreditRepayRecordDTO, String>> pageList(PageReq<HelpCreditRepayRecordReq> pageReq);
 }
