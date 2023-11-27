@@ -31,7 +31,11 @@ public enum MemberBizType implements IBizType {
     v2_1_withdraw(20, "会员取款", "1,5"),
 
     illegal_type(-1, "未知的类型", "-1"),
-
+    //***************单一钱包账变类***************start*********
+    cp_single_wallet(21, "彩票单一钱包", "1"),
+    zr_single_wallet(22, "真人单一钱包", "1"),
+    ty_single_wallet(23, "体育单一钱包", "1"),
+    //***************单一钱包账变类***************end*********
     ;
 
     private Integer code;

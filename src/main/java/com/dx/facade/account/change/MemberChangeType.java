@@ -75,7 +75,46 @@ public enum MemberChangeType implements IChangeType {
     v2_1_club_rebate_sub(108, "俱乐部返水扣除调整", MemberBizType.rebate.code().toString()),
     v2_1_insure_rebate_sub(109, "保险返水扣除调整", MemberBizType.rebate.code().toString()),
 
-    illegal_type(-1, "未知的类型", "-1")
+    illegal_type(-1, "未知的类型", "-1"),
+
+    //***************单一钱包账变类***************start*****************************************************
+
+    //***************彩票单一钱包账变类************start*********
+    cp_touzhu(110, "彩票投注", MemberBizType.cp_single_wallet.code().toString()),
+    cp_chedan(111, "彩票撤单", MemberBizType.cp_single_wallet.code().toString()),
+    cp_paijiang(112, "彩票派奖", MemberBizType.cp_single_wallet.code().toString()),
+    cp_chehuipaijiang(113, "彩票撤回派奖", MemberBizType.cp_single_wallet.code().toString()),
+    cp_ercipaijiang(114, "彩票二次派奖", MemberBizType.cp_single_wallet.code().toString()),
+    //***************彩票单一钱包账变类************end*********
+
+    //***************真人单一钱包账变类************start*********
+    zr_touzhu(115, "真人投注", MemberBizType.zr_single_wallet.code().toString()),
+    zr_chedan(116, "真人撤单", MemberBizType.zr_single_wallet.code().toString()),
+    zr_paicai_add(117, "真人派彩增加", MemberBizType.zr_single_wallet.code().toString()),
+    zr_paicai_sub(118, "真人派彩减少", MemberBizType.zr_single_wallet.code().toString()),
+    zr_activity_add(119, "真人活动增加", MemberBizType.zr_single_wallet.code().toString()),
+    zr_activity_sub(120, "真人活动减少", MemberBizType.zr_single_wallet.code().toString()),
+    zr_fee_rollback(121, "真人费用回滚", MemberBizType.zr_single_wallet.code().toString()),
+    //***************真人单一钱包账变类************end*********
+
+    //***************体育单一钱包账变类************start*********
+    ty_touzhu(122, "体育投注", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang(123, "体育结算派彩", MemberBizType.ty_single_wallet.code().toString()),
+    ty_chedan(124, "体育注单取消", MemberBizType.ty_single_wallet.code().toString()),
+    ty_chedan_cancel(125, "体育注单取消回滚", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang_cancel(126, "体育结算回滚", MemberBizType.ty_single_wallet.code().toString()),
+    ty_judan(127, "体育拒单", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang_advance_part(128, "体育提前部分结算", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang_advance_all(129, "体育提前全额结算", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang_advance_quxiao(130, "体育提前结算取消", MemberBizType.ty_single_wallet.code().toString()),
+    ty_paijiang_advance_quxiao_cancel(131, "体育提前结算取消回滚", MemberBizType.ty_single_wallet.code().toString()),
+    ty_artificial_add(132, "体育人工加款", MemberBizType.ty_single_wallet.code().toString()),
+    ty_artificial_sub(133, "体育人工扣款", MemberBizType.ty_single_wallet.code().toString()),
+    ty_appointment_touzhu(134, "体育用户预约下注", MemberBizType.ty_single_wallet.code().toString()),
+    ty_appointment_touzhu_cancel(135, "体育用户预约投注取消", MemberBizType.ty_single_wallet.code().toString()),
+    //***************体育单一钱包账变类************end*********
+
+    //***************单一钱包账变类***************end**************************************************************
     ;
     private Integer code;
     private String desc;
