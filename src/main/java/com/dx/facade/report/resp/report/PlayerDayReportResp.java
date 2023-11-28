@@ -85,6 +85,15 @@ public class PlayerDayReportResp implements Serializable {
     private BigDecimal netAmount;
     @ApiModelProperty("返水金额")
     private BigDecimal returnWaterAmount;
+
+
+
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy;
+
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat;
     @ApiModelProperty("优惠总额")
     private BigDecimal discountAmount;
     @ApiModelProperty("其他调整")

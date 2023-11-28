@@ -18,5 +18,6 @@ public class RebateDayListReqDTO  extends LocalDatePageRequest {
     //@NotBlank(message = "[会员ID]不能为空")
     private Long memberId;
 
-
+    @ApiModelProperty("平台标识： 0-非平台 1-平台")
+    private Integer platformFlag;
 }

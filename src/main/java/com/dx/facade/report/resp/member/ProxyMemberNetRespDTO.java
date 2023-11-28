@@ -24,7 +24,7 @@ public class ProxyMemberNetRespDTO {
     @ApiModelProperty("统计日期")
     private String staticsDate;
 
-    @ApiModelProperty("总投")
+    @ApiModelProperty("投注金额")
     private BigDecimal betAmount;
 
     @ApiModelProperty("有效投注")
@@ -39,13 +39,19 @@ public class ProxyMemberNetRespDTO {
     @ApiModelProperty("会员优惠")
     private BigDecimal discountAmount;
 
-    @ApiModelProperty("账户调整")
+    @ApiModelProperty("会员返水调整")
     private BigDecimal artificialPatchAmount;
 
-    @ApiModelProperty("总盈亏")
+    @ApiModelProperty("实际盈亏")
     private BigDecimal totalNetAmount;
 
     //parent_proxy_name
     @ApiModelProperty("代理账号")
     private String parentProxyName;
+
+    @ApiModelProperty("平台返水金额")
+    private BigDecimal platformRebateAmount;
+
+    @ApiModelProperty("代理返水金额")
+    private BigDecimal proxyRebateAmount;
 }

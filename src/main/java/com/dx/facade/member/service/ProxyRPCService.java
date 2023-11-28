@@ -26,7 +26,6 @@ import com.dx.facade.member.resp.ProxyInfoRespDTO;
 import com.dx.facade.member.resp.ProxyTreeRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
-import io.swagger.models.auth.In;
 
 public interface ProxyRPCService {
 

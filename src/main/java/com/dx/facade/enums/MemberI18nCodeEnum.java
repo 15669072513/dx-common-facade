@@ -42,6 +42,7 @@ public enum MemberI18nCodeEnum implements I18nEnum {
     PHONE_REPEAT_ERROR(100014), // PHONE_REPEAT_ERROR(100014,"手机号已注册会员"),
     邮箱已被绑定(300089), // 邮箱已被绑定(300089, "邮箱已被绑定"),
     DATA_NOT_EXISTS(200006), // DATA_NOT_EXISTS(200006, "无相关数据"),
+    EXPORT_LIMITED(200027), // DATA_NOT_EXISTS(200027, "当前数据超过10000条上限，无法导出"),
     OPERATION_TYPE_ERROR(18004), // OPERATION_TYPE_ERROR(18004, "游戏操作类型错误参数（0,1）"),
     GAME_ID_NOT_NULL(18003), // GAME_ID_NOT_NULL(18003, "游戏id不能为空"),
     MEMBER_ID_NOT_NULL(10002), // MEMBER_ID_NOT_NULL(10002, "会员ID不能为空"),

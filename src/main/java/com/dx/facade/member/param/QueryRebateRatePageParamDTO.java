@@ -165,6 +165,9 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
+    
+    @ApiModelProperty("佣金结算模式： 1-返点模式 2-返佣模式")
+    private Integer commissionMode;
 
 	@Override
 	public void check() {

@@ -102,4 +102,24 @@ public interface DxSettlementCommissionProxyRecordRPCService {
      * @return
      */
     Integer getPendingCount(List<Long> longs);
+
+    /**
+     * 统计-返佣统计
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<DxSettlementCommissionProxyRecordRspV2DTO, DxSettlementCommissionProxyTotalRspV2DTO>> commissionStatisticsList(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
+    /**
+     * 统计-返佣统计汇总
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<DxSettlementCommissionProxyTotalRspV2DTO> commissionStatisticsListTotal(DxSettlementCommissionProxyRecordReqV2DTO reqDTO);
+
+    /**
+     * 获取当前登录代理最近期数数据
+     * @param proxyId
+     * @return
+     */
+    CommonResp<List<ProxyNewSettlementDataDTO>> getNewSettlementData(Long proxyId);
 }
