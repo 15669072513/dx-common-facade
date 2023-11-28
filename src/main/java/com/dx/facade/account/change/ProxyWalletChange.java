@@ -184,6 +184,23 @@ public enum ProxyWalletChange implements IWalletChange {
     //官方可以在给代理的返佣上扣减金额
     v2_1_proxy_commission_sub(WalletType.agent_cash, ProxyBizType.v2_1_proxy_commission, ProxyChangeType.v2_1_proxy_commission_sub, ProxyAppType.v2_1_negative_benefit_commission, TransType.out),
 
+    //V3 帮信用还款
+    //每一级代理可以给自己直属代理信用还款，总代可以对任意代理信用还款
+    v3_proxy_help_sub_proxy_credit_repay(WalletType.agent_cash, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_proxy_credit_repay, ProxyAppType.v3_proxy_help_sub_proxy_credit_repay, TransType.out),
+    //每一级代理可以对自己直属会员信用还款
+    v3_proxy_help_sub_member_credit_repay(WalletType.agent_cash, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
+
+    //官方在中控后台给代理信用还款（目前暂定总代）
+    v3_official_help_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_official_help_proxy_credit_repay, ProxyAppType.v3_official_help_proxy_credit_repay, TransType.in),
+    //每一级代理可以给自己直属代理信用还款，总代可以对任意代理信用还款
+    v3_parent_proxy_help_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_parent_proxy_help_proxy_credit_repay, ProxyAppType.v3_parent_proxy_help_proxy_credit_repay, TransType.in),
+    //每一级代理可以给自己直属代理信用还款，总代可以对任意代理信用还款
+    v3_credit_proxy_help_sub_proxy_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_proxy_credit_repay, ProxyAppType.v3_proxy_help_sub_proxy_credit_repay, TransType.out),
+    //每一级代理可以对自己直属会员信用还款
+    v3_credit_proxy_help_sub_member_credit_repay(WalletType.credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
+
+
+
 
     ;
 
@@ -323,6 +340,14 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(ProxyWalletChange.v2_1_negate_benefit_commission_dispatch);
         list.add(ProxyWalletChange.v2_1_proxy_commission_add);
         list.add(ProxyWalletChange.v2_1_proxy_commission_sub);
+        //帮信用还款，现金钱包
+        list.add(v3_proxy_help_sub_member_credit_repay);
+        list.add(v3_proxy_help_sub_proxy_credit_repay);
+        //帮信用还款，信用钱包
+        list.add(v3_credit_proxy_help_sub_member_credit_repay);
+        list.add(v3_credit_proxy_help_sub_proxy_credit_repay);
+        list.add(v3_parent_proxy_help_proxy_credit_repay);
+        list.add(v3_official_help_proxy_credit_repay);
 
         return list;
     }

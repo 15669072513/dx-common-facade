@@ -166,7 +166,8 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v2_credit_up_score.code(),
                         MemberChangeType.v2_credit_down_score.code(),
                         MemberChangeType.v2_credit_loan.code(),
-                        MemberChangeType.v2_credit_repay.code()
+                        MemberChangeType.v2_credit_repay.code(),
+                        MemberChangeType.v3_proxy_help_credit_repay.code()
                 );
             }
             if (appChangeType.intValue() == v2_credit_up_score.code())
@@ -174,7 +175,10 @@ public enum MemberAppType implements IAppType {
             if (appChangeType.intValue() == v2_credit_down_score.code())
                 return Arrays.asList(MemberChangeType.v2_credit_down_score.code());
             if (appChangeType.intValue() == v2_loan.code()) return Arrays.asList(MemberChangeType.v2_credit_loan.code());
-            if (appChangeType.intValue() == v2_repay.code()) return Arrays.asList(MemberChangeType.v2_credit_repay.code());
+            if (appChangeType.intValue() == v2_repay.code()) return Arrays.asList(
+                    MemberChangeType.v2_credit_repay.code(),
+                    MemberChangeType.v3_proxy_help_credit_repay.code()
+            );
         }
         //若是场馆钱包,则返回场馆钱包下的转入转出
         if (Arrays.asList(WalletType.video.code(), WalletType.sports.code(), WalletType.poker.code(), WalletType.lottery.code(), WalletType.e_sports.code()).contains(walletType)) {
@@ -280,6 +284,9 @@ public enum MemberAppType implements IAppType {
                 return v2_loan.code();
             }
             if(serverChangeType.intValue() == MemberChangeType.v2_credit_repay.code()) {
+                return v2_repay.code();
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v3_proxy_help_credit_repay.code()) {
                 return v2_repay.code();
             }
         }
