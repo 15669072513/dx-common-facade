@@ -61,7 +61,7 @@ public class HelpCreditRepayRecordReq implements Serializable {
 
     @ApiModelProperty("调整时间-开始")
     @NotNull(message = "调整时间(开始)-不能为空")
-    private Long createdAtBegin;
+    private LocalDateTime createdAtBegin;
 
     @ApiModelProperty("调整时间-结束")
     @NotNull(message = "调整时间(结束)-不能为空")
