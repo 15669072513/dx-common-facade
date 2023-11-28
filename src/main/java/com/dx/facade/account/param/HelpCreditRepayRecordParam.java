@@ -66,7 +66,7 @@ public class HelpCreditRepayRecordParam implements Serializable {
     @NotNull(message = "操作代理业务类型不能为空")
     private Integer operatorBizType;
 
-    @ApiModelProperty("操作代理账变类型 - 117:代理帮下级信用还款,128:代理帮会员信用还款")
+    @ApiModelProperty("操作代理账变类型 - 117:代理帮下级信用还款,118:代理帮会员信用还款")
     @NotNull(message = "操作代理账变类型不能为空")
     private Integer operatorChangeType;
 
