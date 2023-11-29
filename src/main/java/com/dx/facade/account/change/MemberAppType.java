@@ -41,9 +41,9 @@ public enum MemberAppType implements IAppType {
     v2_1_deposit(23, "存款"),
     v2_1_deposit_discount(24, "存款优惠"),
     //***************单一钱包账变类***************start*********
-    bet_single_wallet(1001, "投注"),
-    cancel_single_wallet(1002, "撤单"),
-    end_single_wallet(1003, "结算");
+    bet_single_wallet(101, "投注"),
+    cancel_single_wallet(102, "撤单"),
+    end_single_wallet(103, "结算");
     //***************单一钱包账变类***************end*********
 
     private Integer code;

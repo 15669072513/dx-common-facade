@@ -80,38 +80,38 @@ public enum MemberChangeType implements IChangeType {
     //***************单一钱包账变类***************start*****************************************************
 
     //***************彩票单一钱包账变类************start*********
-    cp_touzhu(1001, "彩票投注", MemberBizType.cp_touzhu.code().toString()),
-    cp_chedan(1002, "彩票撤单", MemberBizType.cp_chedan.code().toString()),
-    cp_paijiang(1003, "彩票派奖", MemberBizType.cp_paijiang.code().toString()),
-    cp_chehuipaijiang(1004, "彩票撤回派奖", MemberBizType.cp_chehuipaijiang.code().toString()),
-    cp_ercipaijiang(1005, "彩票二次派奖", MemberBizType.cp_ercipaijiang.code().toString()),
+    cp_touzhu(113, "彩票投注", MemberBizType.cp_touzhu.code().toString()),
+    cp_chedan(114, "彩票撤单", MemberBizType.cp_chedan.code().toString()),
+    cp_paijiang(115, "彩票派奖", MemberBizType.cp_paijiang.code().toString()),
+    cp_chehuipaijiang(116, "彩票撤回派奖", MemberBizType.cp_chehuipaijiang.code().toString()),
+    cp_ercipaijiang(117, "彩票二次派奖", MemberBizType.cp_ercipaijiang.code().toString()),
     //***************彩票单一钱包账变类************end*********
 
     //***************真人单一钱包账变类************start*********
-    zr_touzhu(1006, "真人投注", MemberBizType.zr_touzhu.code().toString()),
-    zr_chedan(1007, "真人撤单", MemberBizType.zr_chedan.code().toString()),
-    zr_paicai_add(1008, "真人派彩增加", MemberBizType.zr_paicai_add.code().toString()),
-    zr_paicai_sub(1009, "真人派彩减少", MemberBizType.zr_paicai_sub.code().toString()),
-    zr_activity_add(1010, "真人活动增加", MemberBizType.zr_activity_add.code().toString()),
-    zr_activity_sub(1011, "真人活动减少", MemberBizType.zr_activity_sub.code().toString()),
-    zr_fee_rollback(1012, "真人费用回滚", MemberBizType.zr_fee_rollback.code().toString()),
+    zr_touzhu(118, "真人投注", MemberBizType.zr_touzhu.code().toString()),
+    zr_chedan(119, "真人撤单", MemberBizType.zr_chedan.code().toString()),
+    zr_paicai_add(120, "真人派彩增加", MemberBizType.zr_paicai_add.code().toString()),
+    zr_paicai_sub(121, "真人派彩减少", MemberBizType.zr_paicai_sub.code().toString()),
+    zr_activity_add(122, "真人活动增加", MemberBizType.zr_activity_add.code().toString()),
+    zr_activity_sub(123, "真人活动减少", MemberBizType.zr_activity_sub.code().toString()),
+    zr_fee_rollback(124, "真人费用回滚", MemberBizType.zr_fee_rollback.code().toString()),
     //***************真人单一钱包账变类************end*********
 
     //***************体育单一钱包账变类************start*********
-    ty_touzhu(1013, "体育投注", MemberBizType.ty_touzhu.code().toString()),
-    ty_paijiang(1014, "体育结算派彩", MemberBizType.ty_paijiang.code().toString()),
-    ty_chedan(1015, "体育注单取消", MemberBizType.ty_chedan.code().toString()),
-    ty_chedan_cancel(1016, "体育注单取消回滚", MemberBizType.ty_chedan_cancel.code().toString()),
-    ty_paijiang_cancel(1017, "体育结算回滚", MemberBizType.ty_paijiang_cancel.code().toString()),
-    ty_judan(1018, "体育拒单", MemberBizType.ty_judan.code().toString()),
-    ty_paijiang_advance_part(1019, "体育提前部分结算", MemberBizType.ty_paijiang_advance_part.code().toString()),
-    ty_paijiang_advance_all(1020, "体育提前全额结算", MemberBizType.ty_paijiang_advance_all.code().toString()),
-    ty_paijiang_advance_quxiao(1021, "体育提前结算取消", MemberBizType.ty_paijiang_advance_quxiao.code().toString()),
-    ty_paijiang_advance_quxiao_cancel(1022, "体育提前结算取消回滚", MemberBizType.ty_paijiang_advance_quxiao_cancel.code().toString()),
-    ty_artificial_add(1023, "体育人工加款", MemberBizType.ty_artificial_add.code().toString()),
-    ty_artificial_sub(1024, "体育人工扣款", MemberBizType.ty_artificial_sub.code().toString()),
-    ty_appointment_touzhu(1025, "体育用户预约下注", MemberBizType.ty_appointment_touzhu.code().toString()),
-    ty_appointment_touzhu_cancel(1026, "体育用户预约投注取消", MemberBizType.ty_appointment_touzhu_cancel.code().toString()),
+    ty_touzhu(125, "体育投注", MemberBizType.ty_touzhu.code().toString()),
+    ty_paijiang(126, "体育结算派彩", MemberBizType.ty_paijiang.code().toString()),
+    ty_chedan(127, "体育注单取消", MemberBizType.ty_chedan.code().toString()),
+    ty_chedan_cancel(128, "体育注单取消回滚", MemberBizType.ty_chedan_cancel.code().toString()),
+    ty_paijiang_cancel(129, "体育结算回滚", MemberBizType.ty_paijiang_cancel.code().toString()),
+    ty_judan(130, "体育拒单", MemberBizType.ty_judan.code().toString()),
+    ty_paijiang_advance_part(131, "体育提前部分结算", MemberBizType.ty_paijiang_advance_part.code().toString()),
+    ty_paijiang_advance_all(132, "体育提前全额结算", MemberBizType.ty_paijiang_advance_all.code().toString()),
+    ty_paijiang_advance_quxiao(133, "体育提前结算取消", MemberBizType.ty_paijiang_advance_quxiao.code().toString()),
+    ty_paijiang_advance_quxiao_cancel(134, "体育提前结算取消回滚", MemberBizType.ty_paijiang_advance_quxiao_cancel.code().toString()),
+    ty_artificial_add(135, "体育人工加款", MemberBizType.ty_artificial_add.code().toString()),
+    ty_artificial_sub(136, "体育人工扣款", MemberBizType.ty_artificial_sub.code().toString()),
+    ty_appointment_touzhu(137, "体育用户预约下注", MemberBizType.ty_appointment_touzhu.code().toString()),
+    ty_appointment_touzhu_cancel(138, "体育用户预约投注取消", MemberBizType.ty_appointment_touzhu_cancel.code().toString()),
     //***************体育单一钱包账变类************end*********
 
     //***************单一钱包账变类***************end**************************************************************
