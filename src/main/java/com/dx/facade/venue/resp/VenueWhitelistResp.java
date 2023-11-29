@@ -32,6 +32,6 @@ public class VenueWhitelistResp {
     private String url;
 
     @ApiModelProperty("修改人")
-    private String createdBy;
+    private String updatedBy;
 
 }
