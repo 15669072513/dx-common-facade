@@ -104,4 +104,16 @@ public class DwmCommissionDetailProxyDV2DTO implements Serializable {
      */
     @ApiModelProperty("返佣比例")
     private BigDecimal commissionRate;
+
+    /**
+     * 活跃用户
+     */
+    @ApiModelProperty("活跃用户")
+    private Long activeMemberNum;
+
+    /**
+     * 有效新增用户
+     */
+    @ApiModelProperty("有效新增用户")
+    private Long newActiveMemberNum;
 }

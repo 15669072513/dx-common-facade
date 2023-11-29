@@ -1,11 +1,8 @@
 package com.dx.facade.member.param;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.dx.facade.common.PageRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -17,7 +14,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 /**
- * 返点比例请求参数DTO
+ * 返点比例配置请求参数DTO
  * 
  * @author bicycle
  *
@@ -26,9 +23,8 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@ApiModel(value = "返点比例请求Param", description = "返点比例请求Param")
-public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParmDTO, Serializable {
-
+@ApiModel(value = "返点比例配置请求Param", description = "返点比例配置请求Param")
+public class QueryRebateRateConfigParamDTO implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -38,8 +34,8 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 1：会员 2：代理")
-    private Integer userType;
+    @ApiModelProperty("类型 1-直属代理团队返点比例 2-默认平台返点比例")
+    private Integer type;
     
     @ApiModelProperty("用户Id")
     private Long userId;
@@ -47,65 +43,19 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("用户名称")
     private String userName;
     
-    @ApiModelProperty("上级代理Id")
-    private Long parentProxyId;
-
-    @ApiModelProperty("上级代理名称")
-    private String parentProxyName;
-    
-    @ApiModelProperty("所属总代名称")
-    private String topProxyName;
-    
-    @ApiModelProperty("德州返点比例")
-    private BigDecimal texasRebate;
-    
-    @ApiModelProperty("德州保险返点比例")
-    private BigDecimal texasInsuranceRebate;
-    
-    @ApiModelProperty("真人返点比例")
-    @TableField("actual_person_rebate")
-    private BigDecimal actualPersonRebate;
-    
-    @ApiModelProperty("体育返点比例")
-    @TableField("sports_rebate")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    private BigDecimal esportsRebate;
-    
-    @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或者平台调整")
+    @ApiModelProperty("状态:状态:0-未设置 1-已生效 2-已失效")
     private Integer status;
     
-    /** 生效时间 */
     @ApiModelProperty("生效时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime effectDt;
 
-    /** 契约失效时间 */
     @ApiModelProperty("失效时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime lostEffectDt;
 
-    @ApiModelProperty("创建人")
-    private String createdBy;
-
-    @ApiModelProperty("创建时间")
-    private LocalDateTime createdAt;
-
-    @ApiModelProperty("最后操作人")
-    private String updatedBy;
-
-    @ApiModelProperty("最后操作时间")
-    private LocalDateTime updatedAt;
-    
     /** 生效开始时间 */
     @ApiModelProperty("生效开始时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -154,20 +104,14 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String createdAtEnd;
     
-    @ApiModelProperty("上级代理等级")
-    private Integer parentProxyLevel;
-    
-    @ApiModelProperty("查询所以代理下级")
-    private Boolean isAllSub;
-    
-    @ApiModelProperty("排序列 1：修改时间 2：账号")
+    @ApiModelProperty("排序列 1：修改时间 2：账号 3：失效时间")
     private Integer orderKey;
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
     
-    @ApiModelProperty("佣金结算模式： 1-返点模式 2-返佣模式")
-    private Integer commissionMode;
+    @ApiModelProperty("版本号")
+    private Integer version;
 
 	@Override
 	public void check() {
