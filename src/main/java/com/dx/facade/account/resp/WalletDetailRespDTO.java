@@ -172,6 +172,10 @@ public class WalletDetailRespDTO {
     @TableField("table_code")
     private String tableCode;
 
+    @ApiModelProperty("场馆code,dz:德州,zr:真人,ty:体育,cp:彩票,qp:棋牌,dj:电竞")
+    @TableField("venue_code")
+    private String venueCode;
+
     @ApiModelProperty("通用扩展字段A")
     @TableField("extension_a")
     private String extensionA;
