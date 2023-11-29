@@ -765,4 +765,11 @@ public interface ExcelHeadI18nKey {
     String INSURANCE_爆牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_爆牌";
     String INSURANCE_玩家手牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_玩家手牌";
     String INSURANCE_公牌信息 = "EXCEL_HEAD_I18N_KEY.INSURANCE_公牌信息";
+    String FUNDS_信用还款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用还款时间";
+    String FUNDS_借款还款订单 = "EXCEL_HEAD_I18N_KEY.FUNDS_借款还款订单";
+    String FUNDS_被操作人账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_被操作人账号";
+    String FUNDS_被操作人类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_被操作人类型";
+    String FUNDS_帮还款账号类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_帮还款账号类型";
+    String FUNDS_还款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_还款金额";
+    String FUNDS_操作人账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作人账号";
 }
