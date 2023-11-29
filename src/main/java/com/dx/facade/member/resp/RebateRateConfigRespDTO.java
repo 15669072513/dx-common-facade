@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRate响应DTO对象", description = "返点比例响应DTO")
+@ApiModel(value = "RebateRateConfig响应DTO对象", description = "返点比例响应DTO")
 public class RebateRateConfigRespDTO extends BaseRebateRateConfigRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;

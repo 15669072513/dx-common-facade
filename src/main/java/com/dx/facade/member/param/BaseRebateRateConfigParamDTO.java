@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRateConfigDTO父类", description = "返点比例备注DTO父类")
+@ApiModel(value = "RebateRateConfigDTO父类", description = "返点比例配置DTO父类")
 public class BaseRebateRateConfigParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
