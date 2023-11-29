@@ -31,4 +31,7 @@ public class VenueWhitelistResp {
     @ApiModelProperty("支持的接口URL,逗号隔开")
     private String url;
 
+    @ApiModelProperty("修改人")
+    private String createdBy;
+
 }
