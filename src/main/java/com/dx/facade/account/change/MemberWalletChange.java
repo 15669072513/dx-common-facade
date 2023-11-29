@@ -152,38 +152,38 @@ public enum MemberWalletChange implements IWalletChange {
     //***************单一钱包账变类***************start*****************************************************
 
     //***************彩票单一钱包账变类************start*********
-    cp_touzhu(WalletType.cash, MemberBizType.cp_single_wallet, MemberChangeType.cp_touzhu, MemberAppType.cp_single_wallet, TransType.out, Constant.MEMBER),
-    cp_chedan(WalletType.cash, MemberBizType.cp_single_wallet, MemberChangeType.cp_chedan, MemberAppType.cp_single_wallet, TransType.in, Constant.MEMBER),
-    cp_paijiang(WalletType.cash, MemberBizType.cp_single_wallet, MemberChangeType.cp_paijiang, MemberAppType.cp_single_wallet, TransType.in, Constant.MEMBER),
-    cp_chehuipaijiang(WalletType.cash, MemberBizType.cp_single_wallet, MemberChangeType.cp_chehuipaijiang, MemberAppType.cp_single_wallet, TransType.out, Constant.MEMBER),
-    cp_ercipaijiang(WalletType.cash, MemberBizType.cp_single_wallet, MemberChangeType.cp_ercipaijiang, MemberAppType.cp_single_wallet, TransType.in, Constant.MEMBER),
+    cp_touzhu(WalletType.cash, MemberBizType.cp_touzhu, MemberChangeType.cp_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    cp_chedan(WalletType.cash, MemberBizType.cp_chedan, MemberChangeType.cp_chedan, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
+    cp_paijiang(WalletType.cash, MemberBizType.cp_paijiang, MemberChangeType.cp_paijiang, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    cp_chehuipaijiang(WalletType.cash, MemberBizType.cp_chehuipaijiang, MemberChangeType.cp_chehuipaijiang, MemberAppType.cancel_single_wallet, TransType.out, Constant.MEMBER),
+    cp_ercipaijiang(WalletType.cash, MemberBizType.cp_ercipaijiang, MemberChangeType.cp_ercipaijiang, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
     //***************彩票单一钱包账变类************end*********
 
     //***************真人单一钱包账变类************start*********
-    zr_touzhu(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_touzhu, MemberAppType.zr_single_wallet, TransType.out, Constant.MEMBER),
-    zr_chedan(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_chedan, MemberAppType.zr_single_wallet, TransType.in, Constant.MEMBER),
-    zr_paicai_add(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_paicai_add, MemberAppType.zr_single_wallet, TransType.in, Constant.MEMBER),
-    zr_paicai_sub(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_paicai_sub, MemberAppType.zr_single_wallet, TransType.out, Constant.MEMBER),
-    zr_activity_add(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_activity_add, MemberAppType.zr_single_wallet, TransType.in, Constant.MEMBER),
-    zr_activity_sub(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_activity_sub, MemberAppType.zr_single_wallet, TransType.out, Constant.MEMBER),
-    zr_fee_rollback(WalletType.cash, MemberBizType.zr_single_wallet, MemberChangeType.zr_fee_rollback, MemberAppType.zr_single_wallet, TransType.in, Constant.MEMBER),
+    zr_touzhu(WalletType.cash, MemberBizType.zr_touzhu, MemberChangeType.zr_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    zr_chedan(WalletType.cash, MemberBizType.zr_chedan, MemberChangeType.zr_chedan, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
+    zr_paicai_add(WalletType.cash, MemberBizType.zr_paicai_add, MemberChangeType.zr_paicai_add, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    zr_paicai_sub(WalletType.cash, MemberBizType.zr_paicai_sub, MemberChangeType.zr_paicai_sub, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    zr_activity_add(WalletType.cash, MemberBizType.zr_activity_add, MemberChangeType.zr_activity_add, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    zr_activity_sub(WalletType.cash, MemberBizType.zr_activity_sub, MemberChangeType.zr_activity_sub, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    zr_fee_rollback(WalletType.cash, MemberBizType.zr_fee_rollback, MemberChangeType.zr_fee_rollback, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
     //***************真人单一钱包账变类************end*********
 
     //***************体育单一钱包账变类************start*********
-    ty_touzhu(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_touzhu, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_paijiang(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_chedan(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_chedan, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_chedan_cancel(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_chedan_cancel, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_paijiang_cancel(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang_cancel, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_judan(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_judan, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_paijiang_advance_part(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang_advance_part, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_paijiang_advance_all(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang_advance_all, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_paijiang_advance_quxiao(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang_advance_quxiao, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_paijiang_advance_quxiao_cancel(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_paijiang_advance_quxiao_cancel, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_artificial_add(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_artificial_add, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
-    ty_artificial_sub(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_artificial_sub, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_appointment_touzhu(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_appointment_touzhu, MemberAppType.ty_single_wallet, TransType.out, Constant.MEMBER),
-    ty_appointment_touzhu_cancel(WalletType.cash, MemberBizType.ty_single_wallet, MemberChangeType.ty_appointment_touzhu_cancel, MemberAppType.ty_single_wallet, TransType.in, Constant.MEMBER),
+    ty_touzhu(WalletType.cash, MemberBizType.ty_touzhu, MemberChangeType.ty_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    ty_paijiang(WalletType.cash, MemberBizType.ty_paijiang, MemberChangeType.ty_paijiang, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    ty_chedan(WalletType.cash, MemberBizType.ty_chedan, MemberChangeType.ty_chedan, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
+    ty_chedan_cancel(WalletType.cash, MemberBizType.ty_chedan_cancel, MemberChangeType.ty_chedan_cancel, MemberAppType.cancel_single_wallet, TransType.out, Constant.MEMBER),
+    ty_paijiang_cancel(WalletType.cash, MemberBizType.ty_paijiang_cancel, MemberChangeType.ty_paijiang_cancel, MemberAppType.cancel_single_wallet, TransType.out, Constant.MEMBER),
+    ty_judan(WalletType.cash, MemberBizType.ty_judan, MemberChangeType.ty_judan, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
+    ty_paijiang_advance_part(WalletType.cash, MemberBizType.ty_paijiang_advance_part, MemberChangeType.ty_paijiang_advance_part, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    ty_paijiang_advance_all(WalletType.cash, MemberBizType.ty_paijiang_advance_all, MemberChangeType.ty_paijiang_advance_all, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    ty_paijiang_advance_quxiao(WalletType.cash, MemberBizType.ty_paijiang_advance_quxiao, MemberChangeType.ty_paijiang_advance_quxiao, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    ty_paijiang_advance_quxiao_cancel(WalletType.cash, MemberBizType.ty_paijiang_advance_quxiao_cancel, MemberChangeType.ty_paijiang_advance_quxiao_cancel, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    ty_artificial_add(WalletType.cash, MemberBizType.ty_artificial_add, MemberChangeType.ty_artificial_add, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    ty_artificial_sub(WalletType.cash, MemberBizType.ty_artificial_sub, MemberChangeType.ty_artificial_sub, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    ty_appointment_touzhu(WalletType.cash, MemberBizType.ty_appointment_touzhu, MemberChangeType.ty_appointment_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    ty_appointment_touzhu_cancel(WalletType.cash, MemberBizType.ty_appointment_touzhu_cancel, MemberChangeType.ty_appointment_touzhu_cancel, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
     //***************体育单一钱包账变类************end*********
 
     //***************单一钱包账变类***************end**************************************************************
