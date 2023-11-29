@@ -21,7 +21,6 @@ public class UpdateUserAuditEnums {
         昵称(8, "昵称", "nickname", "tên", "ชื่อ"),
         头像(9, "头像", "top images", "", ""),
         重置支付密码(10, "重置支付密码", " reset payment password", "重置支付密码", "重置支付密码"),
-        状态更新(11,"状态更新","状态更新","状态更新","状态更新"),
         ;
         public Integer code;
         public String desc;
