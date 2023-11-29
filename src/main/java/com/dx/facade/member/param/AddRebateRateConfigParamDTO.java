@@ -28,5 +28,8 @@ public class AddRebateRateConfigParamDTO extends BaseRebateRateConfigParamDTO im
 
     @ApiModelProperty("创建时间")
     private LocalDateTime createdAt;
+    
+    @ApiModelProperty("创建时间")
+    private String remark;
 
 }
