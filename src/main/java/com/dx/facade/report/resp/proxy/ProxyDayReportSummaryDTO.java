@@ -292,4 +292,14 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty(value = "存取差/会员存取差")
     private BigDecimal depositWithdrawDifferAmount;
 
+
+    @ApiModelProperty("平台充值上分")
+    @TableField("deposit_back_amount")
+    private BigDecimal depositBackAmount;
+
+
+    @ApiModelProperty("平台提现下分")
+    @TableField("withdraw_back_amount")
+    private BigDecimal withdrawBackAmount;
+
 }
