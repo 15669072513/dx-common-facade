@@ -7,7 +7,8 @@ public enum SingleWalletReturnType {
     fail(1, "失败"),
     not_found(2, "订单不存在"),
     repeat_success(3, "相关业务已处理"),
-    insufficient_balance(4, "余额不足");
+    insufficient_balance(4, "余额不足"),
+    amount_error(5, "金额需要大于0");
 
     private int code;
 
