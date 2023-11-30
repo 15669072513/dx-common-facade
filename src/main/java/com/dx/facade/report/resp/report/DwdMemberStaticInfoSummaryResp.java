@@ -91,6 +91,11 @@ public class DwdMemberStaticInfoSummaryResp {
     @ApiModelProperty("代理提现下分金额")
     protected Long proxyCashDownTimes = 0L;
 
+    // 代还
+    @ApiModelProperty("代理帮信用还款总额")
+    protected BigDecimal proxyHelpCreditRepayAmount = BigDecimal.ZERO;
+    @ApiModelProperty("代理帮信用还款次数")
+    protected Long proxyHelpCreditRepayTimes = 0L;
 
 
     /**
