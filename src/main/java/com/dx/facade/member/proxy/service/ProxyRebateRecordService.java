@@ -136,4 +136,8 @@ public interface ProxyRebateRecordService {
     CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getMemberTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
 
     CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getProxyTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
+
+    CommonResp<PageResp<ProxyAnticipateRebateRecordResp,ProxyAnticipateRebateRecordTotalResp>> selectProxyAnticipateRebate(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
+
+    CommonResp<ProxyAnticipateRebateRecordTotalResp> selectProxyAnticipateRebateTotal(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
 }
