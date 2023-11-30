@@ -344,6 +344,33 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v2_1_club_rebate_sub);
         list.add(v2_1_insure_rebate_sub);
         list.add(v2_1_rebate_sub);
+        //单一钱包
+        list.add(cp_touzhu);
+        list.add(cp_chedan);
+        list.add(cp_paijiang);
+        list.add(cp_chehuipaijiang);
+        list.add(cp_ercipaijiang);
+        list.add(zr_touzhu);
+        list.add(zr_chedan);
+        list.add(zr_paicai_add);
+        list.add(zr_paicai_sub);
+        list.add(zr_activity_add);
+        list.add(zr_activity_sub);
+        list.add(zr_fee_rollback);
+        list.add(ty_touzhu);
+        list.add(ty_paijiang);
+        list.add(ty_chedan);
+        list.add(ty_chedan_cancel);
+        list.add(ty_paijiang_cancel);
+        list.add(ty_judan);
+        list.add(ty_paijiang_advance_part);
+        list.add(ty_paijiang_advance_all);
+        list.add(ty_paijiang_advance_quxiao);
+        list.add(ty_paijiang_advance_quxiao_cancel);
+        list.add(ty_artificial_add);
+        list.add(ty_artificial_sub);
+        list.add(ty_appointment_touzhu);
+        list.add(ty_appointment_touzhu_cancel);
         return list;
     }
 
