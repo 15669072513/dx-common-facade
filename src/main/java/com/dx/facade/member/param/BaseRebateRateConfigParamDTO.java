@@ -33,6 +33,9 @@ public class BaseRebateRateConfigParamDTO implements Serializable {
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
+    @ApiModelProperty("商户名称")
+    private String merchantName;
+    
     @ApiModelProperty("类型 1-直属代理团队返点比例 2-默认平台返点比例")
     private Integer type;
     
