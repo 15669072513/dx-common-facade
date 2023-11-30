@@ -36,11 +36,11 @@ public class MemberPasswordEditParam {
     @NotBlank(message = "登录密码不能为空")
     private String loginPassword;
     @JsonIgnore
-    Long merchantId ;
+    private Long merchantId ;
     @JsonIgnore
-    String merchantCode;
+    private String merchantCode;
     @JsonIgnore
-    String merchantName;
+    private String merchantName;
     @JsonIgnore
-    Long headerUserId;
+    private Long headerUserId;
 }
