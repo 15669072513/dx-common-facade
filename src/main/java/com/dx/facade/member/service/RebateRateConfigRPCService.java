@@ -52,5 +52,5 @@ public interface RebateRateConfigRPCService {
 	 * 
 	 * @return
 	 */
-	CommonResp<BaseRebateRateConfigRespDTO> getRebateRateConfigLimit();
+	CommonResp<BaseRebateRateConfigRespDTO> getRebateRateConfigLimit(Integer type);
 }

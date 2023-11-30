@@ -34,4 +34,7 @@ public class UpdateRebateRateConfigParamDTO extends BaseRebateRateConfigParamDTO
     @ApiModelProperty("最后操作时间")
     private LocalDateTime updatedAt;
     
+    @ApiModelProperty("创建时间")
+    private String remark;
+    
 }

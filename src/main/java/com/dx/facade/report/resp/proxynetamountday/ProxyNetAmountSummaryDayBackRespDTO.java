@@ -92,7 +92,7 @@ public class ProxyNetAmountSummaryDayBackRespDTO {
     private BigDecimal directRebateAmount;
 
     @ApiModelProperty("直属会员代理发放会员返水")
-    private BigDecimal directRebateAmountByProxy;
+    private BigDecimal directMemberRebateAmountByProxy;
 
 
     @ApiModelProperty("直属会员平台发放会员返水")
@@ -101,7 +101,7 @@ public class ProxyNetAmountSummaryDayBackRespDTO {
 
     @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
     //@TableField("direct_artificial_patch_amount")
-    private BigDecimal directMemberRebateAmountByProxy;
+    private BigDecimal directArtificialPatchAmount;
 
     @ApiModelProperty("直属会员净输赢")
     private BigDecimal directNetwinAmount;
