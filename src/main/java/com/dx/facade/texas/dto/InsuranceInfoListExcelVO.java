@@ -62,43 +62,45 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_购买类型)
     private String buyType;
 
-    @ExcelProperty(value = "俱乐部游戏注单号", index = 9)
+    @ExcelProperty(value = "购保时间", index = 9)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_购保时间)
+    private String createTime;
+
+    @ExcelProperty(value = "俱乐部游戏注单号", index = 10)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_俱乐部游戏注单号)
     private String orderId;
 
-    @ExcelProperty(value = "底池", index = 10)
+    @ExcelProperty(value = "底池", index = 11)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_底池)
     private BigDecimal potAmount;
 
-    @ExcelProperty(value = "本底池游戏投注额", index = 11)
+    @ExcelProperty(value = "本底池游戏投注额", index = 12)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_本底池游戏投注额)
     private BigDecimal betAmount;
 
-    @ExcelProperty(value = "保险投注额", index = 12)
+    @ExcelProperty(value = "保险投注额", index = 13)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_保险投注额)
     private BigDecimal insuredAmount;
 
     @ApiModelProperty(value = "会员输赢")
-    @ExcelProperty(value = "会员输赢", index = 13)
+    @ExcelProperty(value = "会员输赢", index = 14)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_会员输赢)
     private BigDecimal insuredNetAmount;
 
     @ApiModelProperty(value = "投保赔付额(爆牌)")
-    @ExcelProperty(value = "爆牌", index = 14)
+    @ExcelProperty(value = "爆牌", index = 15)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_爆牌)
     private BigDecimal insuredRewards;
 
-    @ExcelProperty(value = "玩家手牌", index = 15)
+    @ExcelProperty(value = "玩家手牌", index = 16)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_玩家手牌)
     private String handCards;
 
-    @ExcelProperty(value = "公牌信息", index = 16)
+    @ExcelProperty(value = "公牌信息", index = 17)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_公牌信息)
     private String publicCards;
 
-    @ExcelProperty(value = "购保时间", index = 17)
-    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_购保时间)
-    private String createTime;
+
 
     public void setRoundCode(int roundCode) {
         String roundCodeStr = "";
