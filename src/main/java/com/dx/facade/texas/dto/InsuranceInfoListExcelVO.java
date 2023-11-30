@@ -96,6 +96,10 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_公牌信息)
     private String publicCards;
 
+    @ExcelProperty(value = "购保时间", index = 17)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_购保时间)
+    private String createTime;
+
     public void setRoundCode(int roundCode) {
         String roundCodeStr = "";
         if(roundCode == 1) {

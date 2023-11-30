@@ -766,6 +766,7 @@ public interface ExcelHeadI18nKey {
     String INSURANCE_爆牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_爆牌";
     String INSURANCE_玩家手牌 = "EXCEL_HEAD_I18N_KEY.INSURANCE_玩家手牌";
     String INSURANCE_公牌信息 = "EXCEL_HEAD_I18N_KEY.INSURANCE_公牌信息";
+    String INSURANCE_购保时间 = "EXCEL_HEAD_I18N_KEY.INSURANCE_购保时间";
     String FUNDS_信用还款时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用还款时间";
     String FUNDS_借款还款订单 = "EXCEL_HEAD_I18N_KEY.FUNDS_借款还款订单";
     String FUNDS_被操作人账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_被操作人账号";
