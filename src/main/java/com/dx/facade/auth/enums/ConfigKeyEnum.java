@@ -215,6 +215,8 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_WITHDRAW_FAIL_V2("message.member.withdraw.fail.v2", "1"),
     // 新账单通知
     MESSAGE_MEMBER_NEW_BILL("message.member.new.bill", "1"),
+    // 代理帮信用还款成功通知
+    MESSAGE_MEMBER_HELP_CREDIT_PAY("message.member.help.credit.repay.v26", "1"),
     MESSAGE_MEMBER_PHONE_INFO("message.member.phone.info", "1"), // 个人资料修改通知
     MESSAGE_MEMBER_ACTIVITY_AWARD("message.member.activity.award", "1"),
     MESSAGE_MEMBER_ADD_ACTIVITY("message.member.add.activity", "1"),
@@ -227,11 +229,14 @@ public enum ConfigKeyEnum {
     MESSAGE_MEMBER_ACTIVITY_BONUS("message.member.activity.bonus", "1"),
     MESSAGE_MEMBER_DEPOSIT_BONUS("message.member.deposit.bonus", "1"),
 
+
+
     //v2.1存取款消息模板
     MESSAGE_MEMBER_WITHDRAW_SUCCESS_V21("message.member.withdraw.success.v21", "1"),
     MESSAGE_MEMBER_WITHDRAW_FAIL_V21("message.member.withdraw.fail.v21", "1"),
     MESSAGE_MEMBER_DEPOSIT_SUCCESS_V21("message.member.deposit.success.v21", "1"),
     MESSAGE_MEMBER_DEPOSIT_FAIL_V21("message.member.deposit.fail.v21", "1"),
+
     MESSAGE_PROXY_DEPOSIT_SUCCESS_V21("message.proxy.deposit.success.v21", "1"),
     MESSAGE_PROXY_DEPOSIT_FAIL_V21("message.proxy.deposit.fail.v21", "1"),
     MESSAGE_PROXY_WITHDRAW_SUCCESS_V21("message.proxy.withdraw.success.v21", "1"),
