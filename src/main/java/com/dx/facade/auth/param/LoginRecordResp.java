@@ -38,4 +38,18 @@ public class LoginRecordResp {
     private String loginRegion;
 
     private Integer loginStatus;
+
+    /**
+     * 主机名称
+     */
+    private String hostName;
+    /**
+     * MAC地址
+     */
+    private String macAddress;
+    /**
+     * 主板号
+     */
+    private String baseBoardId;
+
 }
