@@ -113,4 +113,9 @@ public interface MemberRebateRecordService {
      */
     CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
 
+    /**
+     * 会员自动审核
+     * @param reportDate
+     */
+    void memberRebateAutoAudit(Integer reportDate);
 }
