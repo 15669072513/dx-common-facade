@@ -13,6 +13,8 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class ProxyMemberNetSummaryRespDTO {
 
+    @ApiModelProperty("总投笔数")
+    private Long betCount;
     @ApiModelProperty("总投")
     private BigDecimal betAmount;
 
