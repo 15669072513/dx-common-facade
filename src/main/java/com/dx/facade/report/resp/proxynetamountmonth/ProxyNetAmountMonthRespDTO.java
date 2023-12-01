@@ -199,6 +199,12 @@ public class ProxyNetAmountMonthRespDTO {
     @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
     private BigDecimal directArtificialPatchAmount;
 
+
+
+    @ApiModelProperty("直属会员代理发放会员返水--总控后台")
+    private BigDecimal directMemberRebateAmountByProxy;
+    @ApiModelProperty("直属会员平台发放会员返水--总控后台")
+    private BigDecimal directMemberRebateAmountByPlat;
     @ApiModelProperty("直属会员净盈亏 = 直属会员投注盈亏+  直属会员返水（新的）+直属会员其他调整")
     private BigDecimal directNetwinAmount;
 
