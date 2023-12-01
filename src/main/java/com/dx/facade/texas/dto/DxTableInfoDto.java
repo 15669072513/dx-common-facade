@@ -118,10 +118,10 @@ public class DxTableInfoDto implements Serializable {
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount;
 
-    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启 2-关闭隐藏")
     private Integer showOutsWinn;
 
-    @ApiModelProperty("允许主动带出0-关闭 1-开启")
+    @ApiModelProperty("允许主动带出0-关闭 1-开启 2-关闭隐藏")
     private Integer isActiveTakeout;
 
     @ApiModelProperty("必要保留筹码（倍大盲）")
@@ -133,7 +133,7 @@ public class DxTableInfoDto implements Serializable {
     @ApiModelProperty("每手收费上限（倍大盲）")
     private BigDecimal handChargeUpperLimit;
 
-    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
+    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启 2-关闭隐藏")
     private Integer isHiddenDecimal;
 
     @ApiModelProperty("收费比例")
