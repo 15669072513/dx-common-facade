@@ -14,6 +14,8 @@ public class SingleWalletRespDTO {
 
     private BigDecimal balance;
 
+    private BigDecimal badAmount;
+
     private int code;
 
 
@@ -27,6 +29,14 @@ public class SingleWalletRespDTO {
 
     public BigDecimal getAmount() {
         return amount;
+    }
+
+    public void setBadAmount(BigDecimal badAmount) {
+        this.badAmount = badAmount;
+    }
+
+    public BigDecimal getBadAmount() {
+        return badAmount;
     }
 
     public void setAmount(BigDecimal amount) {
