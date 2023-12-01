@@ -19,6 +19,9 @@ public class RedisKey {
     public static String GAME_RECORD_DETAIL_LIST = "GAME:ORDER:RECORD:DETAIL:LIST:";
     public static String GAME_RECORD_DETAIL_SUMMARY = "GAME:ORDER:RECORD:DETAIL:SUMMARY:";
 
+    public final static String SYSTEM_MAINTENANCE = "SYSTEM:MAINTENANCE";
+    public final static String SYSTEM_MAINTENANCE_WHITE = "SYSTEM:MAINTENANCE_WHITE";
+
     /**
      * 资金--提现KEY前缀
      */
