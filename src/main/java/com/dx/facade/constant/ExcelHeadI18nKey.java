@@ -755,6 +755,7 @@ public interface ExcelHeadI18nKey {
     String INSURANCE_会员账号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_会员账号";
     String INSURANCE_保险注单号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_保险注单号";
     String INSURANCE_购买类型 = "EXCEL_HEAD_I18N_KEY.INSURANCE_购买类型";
+    String INSURANCE_购保时间 = "EXCEL_HEAD_I18N_KEY.INSURANCE_购保时间";
     String INSURANCE_俱乐部游戏注单号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_俱乐部游戏注单号";
     String INSURANCE_底池 = "EXCEL_HEAD_I18N_KEY.INSURANCE_底池";
     String INSURANCE_本底池游戏投注额 = "EXCEL_HEAD_I18N_KEY.INSURANCE_本底池游戏投注额";
