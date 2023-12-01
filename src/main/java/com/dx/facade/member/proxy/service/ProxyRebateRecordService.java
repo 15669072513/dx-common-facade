@@ -118,4 +118,9 @@ public interface ProxyRebateRecordService {
      */
     CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
 
+    /**
+     * 代理返点自动审核
+     * @param reportDate 账单时间
+     */
+    void proxyRebateAutoAudit(Integer reportDate);
 }
