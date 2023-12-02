@@ -39,8 +39,12 @@ public enum MemberAppType implements IAppType {
 
     v2_1_withdraw(22, "取款"),
     v2_1_deposit(23, "存款"),
-    v2_1_deposit_discount(24, "存款优惠")
-    ;
+    v2_1_deposit_discount(24, "存款优惠"),
+    //***************单一钱包账变类***************start*********
+    bet_single_wallet(101, "投注"),
+    cancel_single_wallet(102, "撤单"),
+    end_single_wallet(103, "结算");
+    //***************单一钱包账变类***************end*********
 
     private Integer code;
     private String desc;
@@ -99,7 +103,33 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v2_1_deposit_back.code(),
                         MemberChangeType.v2_1_withdraw.code(),
                         MemberChangeType.v2_1_withdraw_fail.code(),
-                        MemberChangeType.v2_1_withdraw_back.code()
+                        MemberChangeType.v2_1_withdraw_back.code(),
+                        MemberChangeType.cp_touzhu.code(),
+                        MemberChangeType.zr_touzhu.code(),
+                        MemberChangeType.ty_touzhu.code(),
+                        MemberChangeType.ty_appointment_touzhu.code(),
+                        MemberChangeType.cp_chedan.code(),
+                        MemberChangeType.cp_chehuipaijiang.code(),
+                        MemberChangeType.zr_chedan.code(),
+                        MemberChangeType.ty_chedan.code(),
+                        MemberChangeType.ty_chedan_cancel.code(),
+                        MemberChangeType.ty_paijiang_cancel.code(),
+                        MemberChangeType.ty_judan.code(),
+                        MemberChangeType.ty_appointment_touzhu_cancel.code(),
+                        MemberChangeType.cp_paijiang.code(),
+                        MemberChangeType.cp_ercipaijiang.code(),
+                        MemberChangeType.zr_paicai_add.code(),
+                        MemberChangeType.zr_paicai_sub.code(),
+                        MemberChangeType.zr_activity_add.code(),
+                        MemberChangeType.zr_activity_sub.code(),
+                        MemberChangeType.zr_fee_rollback.code(),
+                        MemberChangeType.ty_paijiang.code(),
+                        MemberChangeType.ty_paijiang_advance_part.code(),
+                        MemberChangeType.ty_paijiang_advance_all.code(),
+                        MemberChangeType.ty_paijiang_advance_quxiao.code(),
+                        MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
+                        MemberChangeType.ty_artificial_add.code(),
+                        MemberChangeType.ty_artificial_sub.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -149,6 +179,38 @@ public enum MemberAppType implements IAppType {
             if(appChangeType.intValue() == v2_1_deposit.code()) {
                 return Arrays.asList(MemberChangeType.v2_1_deposit.code(),
                         MemberChangeType.v2_1_deposit_back.code());
+            }
+            if(appChangeType.intValue() == bet_single_wallet.code()) {
+                return Arrays.asList(MemberChangeType.cp_touzhu.code(),
+                        MemberChangeType.zr_touzhu.code(),
+                        MemberChangeType.ty_touzhu.code(),
+                        MemberChangeType.ty_appointment_touzhu.code());
+            }
+            if(appChangeType.intValue() == cancel_single_wallet.code()) {
+                return Arrays.asList(MemberChangeType.cp_chedan.code(),
+                        MemberChangeType.cp_chehuipaijiang.code(),
+                        MemberChangeType.zr_chedan.code(),
+                        MemberChangeType.ty_chedan.code(),
+                        MemberChangeType.ty_chedan_cancel.code(),
+                        MemberChangeType.ty_paijiang_cancel.code(),
+                        MemberChangeType.ty_judan.code(),
+                        MemberChangeType.ty_appointment_touzhu_cancel.code());
+            }
+            if(appChangeType.intValue() == end_single_wallet.code()) {
+                return Arrays.asList(MemberChangeType.cp_paijiang.code(),
+                        MemberChangeType.cp_ercipaijiang.code(),
+                        MemberChangeType.zr_paicai_add.code(),
+                        MemberChangeType.zr_paicai_sub.code(),
+                        MemberChangeType.zr_activity_add.code(),
+                        MemberChangeType.zr_activity_sub.code(),
+                        MemberChangeType.zr_fee_rollback.code(),
+                        MemberChangeType.ty_paijiang.code(),
+                        MemberChangeType.ty_paijiang_advance_part.code(),
+                        MemberChangeType.ty_paijiang_advance_all.code(),
+                        MemberChangeType.ty_paijiang_advance_quxiao.code(),
+                        MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
+                        MemberChangeType.ty_artificial_add.code(),
+                        MemberChangeType.ty_artificial_sub.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
@@ -264,6 +326,41 @@ public enum MemberAppType implements IAppType {
             }
             if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_back.code()) {
                 return v2_1_deposit.code;
+            }
+            /**
+             * 单一钱包
+             */
+            if(serverChangeType.intValue() == MemberChangeType.cp_touzhu.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_touzhu.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_touzhu.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_appointment_touzhu.code()) {
+                return bet_single_wallet.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.cp_chedan.code() ||
+                    serverChangeType.intValue() == MemberChangeType.cp_chehuipaijiang.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_chedan.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_chedan.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_chedan_cancel.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang_cancel.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_judan.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_appointment_touzhu_cancel.code()) {
+                return cancel_single_wallet.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.cp_paijiang.code() ||
+                    serverChangeType.intValue() == MemberChangeType.cp_ercipaijiang.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_paicai_add.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_paicai_sub.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_activity_add.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_activity_sub.code() ||
+                    serverChangeType.intValue() == MemberChangeType.zr_fee_rollback.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang_advance_part.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang_advance_all.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang_advance_quxiao.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_paijiang_advance_quxiao_cancel.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_artificial_add.code() ||
+                    serverChangeType.intValue() == MemberChangeType.ty_artificial_sub.code()) {
+                return end_single_wallet.code;
             }
             /*if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
                 return v2_1_deposit_discount.code;

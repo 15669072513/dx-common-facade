@@ -140,4 +140,9 @@ public interface ProxyRebateRecordService {
     CommonResp<PageResp<ProxyAnticipateRebateRecordResp,ProxyAnticipateRebateRecordTotalResp>> selectProxyAnticipateRebate(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
 
     CommonResp<ProxyAnticipateRebateRecordTotalResp> selectProxyAnticipateRebateTotal(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
+    /**
+     * 代理返点自动审核
+     * @param reportDate 账单时间
+     */
+    void proxyRebateAutoAudit(Integer reportDate);
 }

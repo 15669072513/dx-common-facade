@@ -6,11 +6,15 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
+import com.dx.facade.report.param.member.MemberExpectRebateReqDTO;
 import com.dx.facade.report.param.rebate.RebateDayListReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.resp.member.MemberExpectRebateRespDTO;
+import com.dx.facade.report.resp.member.MemberExpectRebateSummaryRespDTO;
 import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 
@@ -24,10 +28,12 @@ import java.util.List;
  */
 public interface MemberRebateRecordService {
     //--------返点审核开始---------
+
     /**
      * 功能菜单红点显示数量
      */
     Integer countToAuditRecordByMerchantId(Long merchantId);
+
     /**
      * 返点详情页
      */
@@ -37,14 +43,17 @@ public interface MemberRebateRecordService {
      * 待审页代理返点分页一审查询
      */
     CommonResp<PageResp<MemberRebateAuditRespDTO, ?>> queryMemberRebateAuditPage(PageReq<MemberRebateAuditReqDTO> reqDTO);
+
     /**
      * 待审页代理返点待审 批量锁单接口
      */
-    CommonResp batchEditMemberRebateLockStatus(List<Long> idList, Long currentUserMerchantId,  Long currentUserId, String currentUser, Integer lockStatus, Integer lockType);
+    CommonResp batchEditMemberRebateLockStatus(List<Long> idList, Long currentUserMerchantId, Long currentUserId, String currentUser, Integer lockStatus, Integer lockType);
+
     /**
      * 批量审核通过
      */
     CommonResp<List<MemberRebateAuditResultRespDTO>> memberRebateRecordAuditBatchPass(MemberRebateDealAuditReqDTO reqDTO) throws BizException;
+
     /**
      * 批量审核拒绝
      */
@@ -76,6 +85,7 @@ public interface MemberRebateRecordService {
 
     /**
      * 代理PC-代理返点-领取返点
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -84,13 +94,16 @@ public interface MemberRebateRecordService {
 
     /**
      * 代理PC-返回代理会员返点报表
-     * @param proxyId  reportDate
+     *
+     * @param proxyId reportDate
      * @return
      * @throws BizException
      */
     CommonResp<List<ProxyRebateTeamResp>> getMemberTeamRebate(Long proxyId, Integer reportDate) throws BizException;
+
     /**
      * 代理PC-返回代理列表
+     *
      * @param proxyId
      * @return
      * @throws BizException
@@ -99,18 +112,43 @@ public interface MemberRebateRecordService {
 
     /**
      * 会员返点列表
+     *
      * @param req
      * @return
      * @throws BizException
      */
-    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTotalRebate(RebateDayListReqDTO req) throws BizException ;
+    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTotalRebate(RebateDayListReqDTO req) throws BizException;
 
     /**
      * 历史会员返点列表
+     *
      * @param req
      * @return
      * @throws BizException
      */
-    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
+    CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException;
+
+    /**
+     * 会员自动审核
+     * @param reportDate
+     */
+    void memberRebateAutoAudit(Integer reportDate);
+
+    /**
+     * 中控后台，会员预期返水列表
+     *
+     * @param param
+     * @return
+     */
+    CommonResp<PageResp<MemberExpectRebateRespDTO, MemberExpectRebateSummaryRespDTO>> expectRebatePage(MemberExpectRebateReqDTO param);
+
+    /**
+     * 中控后台，会员预期返水合计
+     * @param param
+     * @return
+     */
+    CommonResp<MemberExpectRebateSummaryRespDTO> expectRebatePageSummary(MemberExpectRebateReqDTO param);
+
+
 
 }

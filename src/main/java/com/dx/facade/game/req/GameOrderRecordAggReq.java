@@ -23,4 +23,8 @@ public class GameOrderRecordAggReq {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
     private LocalDateTime endTime;
+
+    private Long startTimestamp;
+
+    private Long endTimestamp;
 }

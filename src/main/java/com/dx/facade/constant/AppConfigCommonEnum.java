@@ -227,6 +227,7 @@ public class AppConfigCommonEnum {
     DJ("dj","电竞"),
     DY("qp","棋牌"),
     QP("cp","彩票"),
+    DZ("dz","德州"),
     TY("by","捕鱼"),
     ZR("dy","电子"),
     QKL("qkl","区块链");

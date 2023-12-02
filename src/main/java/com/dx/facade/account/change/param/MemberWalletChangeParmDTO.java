@@ -46,6 +46,9 @@ public class MemberWalletChangeParmDTO extends WalletChangeParm implements IBWWa
     @ApiModelProperty("场馆code名称")
     private String venueCode;
 
+    @ApiModelProperty("场馆用户名称")
+    private String venueUsername;
+
     @Override
     public void check(){
         super.check();
