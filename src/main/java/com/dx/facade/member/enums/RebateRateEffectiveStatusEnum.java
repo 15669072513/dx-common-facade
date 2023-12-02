@@ -12,6 +12,9 @@ public enum RebateRateEffectiveStatusEnum {
 	/** 已生效 */
 	EFFECTIVE(1,"已生效"),
 	
+	/** 不是生效 */
+	PART_EFFECTIVE(3,"部分生效"),
+	
 	;
 	
     private Integer code;
