@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDateTime;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -31,4 +33,9 @@ public class VenueWhitelistResp {
     @ApiModelProperty("支持的接口URL,逗号隔开")
     private String url;
 
+    @ApiModelProperty("修改人")
+    private String updatedBy;
+
+    @ApiModelProperty("修改时间")
+    private LocalDateTime updatedAt;
 }
