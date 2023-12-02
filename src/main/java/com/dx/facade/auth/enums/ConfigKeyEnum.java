@@ -85,6 +85,9 @@ public enum ConfigKeyEnum {
     TRANSFER_COMMISSION_AMOUNT("transfer.commission.amount", "2"),//佣金转账
     SURROGATE_SETTLE_NOTRECEIVE_TIMEOUTS("surrogate.settle.notreceive.timeouts", "1"),//代理返点结算后未领1取超时作废天数
     LIMIT_REGION_COUNTRY_IP("limit.region.country.ip", "1"),
+    ZR_LIMIT_GAME_VENUES_IP("zr.limit.game.venues.ip", "1"),
+    CP_LIMIT_GAME_VENUES_IP("cp.limit.game.venues.ip", "1"),
+    TY_LIMIT_GAME_VENUES_IP("ty.limit.game.venues.ip", "1"),
     REGISTER_DEFAULT_VENTURE_CODE("register.default.venture.code ", "1"),//默认代理合营码
     DEPOSIT_DEFAULT_APPID_MODEL("deposit.default.appid.model", "1"),//存取款新增通道切换参数
     CLIENT_GEETEST_SWITCH("client.geetest.switch", "1"),//app端极验开关
@@ -147,6 +150,14 @@ public enum ConfigKeyEnum {
     LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit", "1"),
     CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit", "1"),
     ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit", "1"),
+    
+    PLATFORM_TEXAS_REBATE_RATE_LIMIT("platform.texas.rebate.rate.limit", "1"),
+    PLATFORM_TEXAS_INSURANCE_REBATE_RATE_LIMIT("platform.texas.insurance.rebate.rate.limit", "1"),
+    PLATFORM_ACTUAL_PERSON_REBATE_RATE_LIMIT("platform.actual.person.rebate.rate.limit", "1"),
+    PLATFORM_SPORTS_REBATE_RATE_LIMIT("platform.sports.rebate.rate.limit", "1"),
+    PLATFORM_LOTTERY_TICKET_REBATE_RATE_LIMIT("platform.lottery.ticket.rebate.rate.limit", "1"),
+    PLATFORM_CHESS_REBATE_RATE_LIMIT("platform.chess.rebate.rate.limit", "1"),
+    PLATFORM_ESPORTS_REBATE_RATE_LIMIT("platform.esports.rebate.rate.limit", "1"),
     
     COMMISSION_TEXAS_REBATE_RATE_LIMIT("texas.club.member.rebate","1"),
     COMMISSION_ACTUAL_PERSON_REBATE_RATE_LIMIT("zr.member.rebate","1"),

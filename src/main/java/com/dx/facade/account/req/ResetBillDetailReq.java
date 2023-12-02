@@ -33,4 +33,9 @@ public class ResetBillDetailReq implements Serializable {
      */
     private String operator;
 
+    /**
+     * 流水重置操作人IP
+     */
+    private String ipAddr;
+
 }

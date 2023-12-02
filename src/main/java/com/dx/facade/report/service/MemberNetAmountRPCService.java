@@ -8,6 +8,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.MemberNetAmountDetailReqDTO;
 import com.dx.facade.member.param.MemberNetAmountReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetListReqDTO;
+import com.dx.facade.report.param.member.ProxyMemberNetVenueListReqDTO;
 import com.dx.facade.report.resp.member.*;
 
 import java.util.List;
@@ -53,5 +54,12 @@ public interface MemberNetAmountRPCService {
      * @return
      */
     CommonResp<PageResp<ProxyMemberNetRespDTO, ProxyMemberNetSummaryRespDTO>> queryProxyMemberNetList(PageReq<ProxyMemberNetListReqDTO> reqDTO);
+
+    /**
+     * 代理web 会员盈亏-场馆明细
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<PageResp<ProxyMemberNetVenueRespDTO, ProxyMemberNetVenueSummaryRespDTO>> queryProxyMemberNetVenueList(PageReq<ProxyMemberNetVenueListReqDTO> reqDTO);
 
 }

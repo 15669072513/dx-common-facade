@@ -68,4 +68,11 @@ public interface RegisterLoginRPCService {
      * @return
      */
 	CommonResp<MemberVO> fastLogin(FastLoginParamDTO dto) throws Exception;
+
+    /**
+     * 检查用户名是否存在
+     * @param paramDTO
+     * @return
+     */
+    CommonResp<MemberVO> verifyUserName(RegisterParamDTO paramDTO);
 }

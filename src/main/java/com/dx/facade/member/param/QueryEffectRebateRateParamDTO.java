@@ -37,6 +37,9 @@ public class QueryEffectRebateRateParamDTO implements BaseParmDTO, Serializable 
     
     @ApiModelProperty("用户Id")
     private Long userId;
+    
+    @ApiModelProperty("平台标识： 0-非平台 1-平台")
+    private Integer platformFlag;
 
 
 	@Override

@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberInfoRespDTO {
+public class MemberInfoRespDTO{
 
     @ApiModelProperty("ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
