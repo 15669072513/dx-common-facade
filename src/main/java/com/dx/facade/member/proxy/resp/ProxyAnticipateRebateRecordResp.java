@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -16,6 +17,13 @@ public class ProxyAnticipateRebateRecordResp {
     @ApiModelProperty(value = "代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long proxyId;
+
+
+    /**
+     * 商户id
+     */
+    @ApiModelProperty(value = "商户id")
+    private Long merchantId;
 
     /**
      * 周期名称
