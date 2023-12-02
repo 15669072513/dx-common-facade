@@ -141,7 +141,7 @@ public interface IDxTableInfoService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
+    CommonResp<GameOrderClubSumResp> gameOrderClubContributeList(GameOrderClubSumReq req);
 
     /**
      * 获取牌桌概况
