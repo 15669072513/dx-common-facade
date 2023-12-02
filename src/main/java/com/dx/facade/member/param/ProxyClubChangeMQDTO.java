@@ -16,10 +16,15 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ProxyClubChangeMQDTO implements Serializable {
-
+    /**
+     *  修改俱乐部信息， 俱乐部新增会员时 有值
+     */
     @ApiModelProperty("俱乐部ID")
     private Long clubId;
 
+    /**
+     *  俱乐部审核成功或拒绝时 有值
+     */
     @ApiModelProperty("用户ID")
     private Long userId;
 
