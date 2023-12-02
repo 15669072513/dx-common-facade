@@ -78,7 +78,7 @@ public enum MemberChangeType implements IChangeType {
     //v3_cash_deposit_by_official(110, "官方给会员充值上分", MemberBizType.up_score.code().toString()),
     //v3_cash_withdraw_by_official(111, "官方给会员提现下分", MemberBizType.down_score.code().toString()),
     v3_proxy_help_credit_repay(112, "代理帮信用还款", MemberBizType.v2_repay.code().toString()),
-    illegal_type(-1, "未知的类型", "-1"),
+
 
     //***************单一钱包账变类***************start*****************************************************
 
@@ -118,6 +118,8 @@ public enum MemberChangeType implements IChangeType {
     //***************体育单一钱包账变类************end*********
 
     //***************单一钱包账变类***************end**************************************************************
+
+    illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;
     private String desc;
