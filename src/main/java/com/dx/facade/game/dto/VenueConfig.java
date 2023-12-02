@@ -46,5 +46,6 @@ public class VenueConfig {
     //商户货币类型，非数据库中json 字段
     private String venueCurrency;
 
-
+    //单一钱包需求额外的单一钱包KEY
+    private String md5Key2;
 }
