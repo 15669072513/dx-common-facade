@@ -6,7 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
-@ApiModel(value="中控代理预期返水列表查询param", description="中控代理预期返水列表")
+@ApiModel(value="中控代理预期返点列表查询param", description="中控代理预期返点列表")
 public class ProxyAnticipateReBateRecordPageReqDTO extends PageRequest {
     @ApiModelProperty(value="代理账号")
     private String proxyAccount;
@@ -16,4 +16,9 @@ public class ProxyAnticipateReBateRecordPageReqDTO extends PageRequest {
 
     @ApiModelProperty(value = "所属商户Id")
     private String merchantId;
+
+    /**
+     * 账期时间-》内部字段
+     */
+    private Integer reportDate;
 }
