@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 public class MemberExpectRebateReqDTO extends PageRequest {
 
     @ApiModelProperty("会员账号名")
-    private String memberName;
+    private String memberAccount;
 
     /**
      * proxyName
