@@ -25,13 +25,16 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRateConfigDTO父类", description = "返点比例备注DTO父类")
+@ApiModel(value = "RebateRateConfigDTO父类", description = "返点比例配置DTO父类")
 public class BaseRebateRateConfigParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
     @ApiModelProperty("商户Id")
     private Long merchantId;
+    
+    @ApiModelProperty("商户名称")
+    private String merchantName;
     
     @ApiModelProperty("类型 1-直属代理团队返点比例 2-默认平台返点比例")
     private Integer type;
@@ -49,7 +52,6 @@ public class BaseRebateRateConfigParamDTO implements Serializable {
     
     @ApiModelProperty("德州保险返点比例")
     @DecimalMin(value = "0.000", message = "德州保险返点比例不能小于0.000")
-    @NotNull(message = "德州保险返点比例不能为空")
     private BigDecimal texasInsuranceRebate;
     
     @ApiModelProperty("真人返点比例")

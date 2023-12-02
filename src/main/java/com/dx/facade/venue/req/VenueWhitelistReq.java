@@ -18,4 +18,7 @@ public class VenueWhitelistReq {
     @ApiModelProperty("场馆白名单URL,逗号分割")
     private String url;
 
+    @ApiModelProperty(value = "当前登录用户", hidden = true)
+    private String currentUser;
+
 }

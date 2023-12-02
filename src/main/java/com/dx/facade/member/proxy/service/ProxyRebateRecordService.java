@@ -136,4 +136,13 @@ public interface ProxyRebateRecordService {
     CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getMemberTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
 
     CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getProxyTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
+
+    CommonResp<PageResp<ProxyAnticipateRebateRecordResp,ProxyAnticipateRebateRecordTotalResp>> selectProxyAnticipateRebate(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
+
+    CommonResp<ProxyAnticipateRebateRecordTotalResp> selectProxyAnticipateRebateTotal(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
+    /**
+     * 代理返点自动审核
+     * @param reportDate 账单时间
+     */
+    void proxyRebateAutoAudit(Integer reportDate);
 }

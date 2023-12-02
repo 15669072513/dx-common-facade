@@ -23,6 +23,8 @@ public class ProxyMemberNetRespDTO {
 
     @ApiModelProperty("统计日期")
     private String staticsDate;
+    @ApiModelProperty("投注笔数")
+    private Long betCount;
 
     @ApiModelProperty("投注金额")
     private BigDecimal betAmount;

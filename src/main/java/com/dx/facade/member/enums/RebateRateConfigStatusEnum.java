@@ -1,27 +1,26 @@
 package com.dx.facade.member.enums;
 /**
- * 返点比例生效状态枚举
+ * 返点比例状态枚举
  * 
  * @author bicycle
  */
-public enum RebateRateEffectiveStatusEnum {
+public enum RebateRateConfigStatusEnum {
 	
-	/** 未生效 */
-	UN_EFFECTIVE(0,"未生效"),
+	/** 未设置 */
+	UN_SET(0,"未设置"),
 	
 	/** 已生效 */
-	EFFECTIVE(1,"已生效"),
+	EFFECTIVE(1,"生效中"),
 	
-	/** 不是生效 */
-	PART_EFFECTIVE(3,"部分生效"),
-	
+	/** 已失效 */
+	EXPIRED(2,"已失效"),
 	;
 	
     private Integer code;
     
     private String desc;
 
-    RebateRateEffectiveStatusEnum(Integer code, String desc) {
+    RebateRateConfigStatusEnum(Integer code, String desc) {
         this.code = code;
         this.desc = desc;
     }
@@ -34,8 +33,8 @@ public enum RebateRateEffectiveStatusEnum {
         return desc;
     }
 
-    public static RebateRateEffectiveStatusEnum getType(Integer code) {
-        for (RebateRateEffectiveStatusEnum enums : values()) {
+    public static RebateRateConfigStatusEnum getType(Integer code) {
+        for (RebateRateConfigStatusEnum enums : values()) {
             if (enums.code.equals(code)) {
                 return enums;
             }
