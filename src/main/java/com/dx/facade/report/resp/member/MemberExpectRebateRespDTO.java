@@ -27,8 +27,10 @@ public class MemberExpectRebateRespDTO {
     @ApiModelProperty("结算周期")
     private Integer staticsDate;
     @ApiModelProperty(value = "代理id")
-    private String proxyId;
+    private Long proxyId;
+    @ApiModelProperty(value = "商户")
 
+    private Long merchantId;
     @ApiModelProperty(value = "直属代理账号")
     private String proxyAccount;
 
