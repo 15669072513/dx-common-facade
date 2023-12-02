@@ -45,7 +45,7 @@ public class LoanRepayRecordParam implements BaseParmDTO {
     @Getter
     @Setter
     @ApiModelProperty(value = "借还款订单号")
-    private Long recordId;
+    private String recordId;
 
     @Getter
     @Setter
