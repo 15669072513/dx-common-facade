@@ -35,4 +35,10 @@ public class InsuranceInfoListReq extends BaseRequest {
 
   @ApiModelProperty("代理等级")
   private Integer proxyLevel;
+
+  @ApiModelProperty("购保时间区间开始")
+  private String createStartTime;
+
+  @ApiModelProperty("购保时间区间结束")
+  private String createEndTime;
 }

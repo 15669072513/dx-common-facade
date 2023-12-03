@@ -24,7 +24,7 @@ public class LoanRepayRecordRespDTO {
     private LocalDateTime operateTime;
 
     @ApiModelProperty(value = "借还款id")
-    private Long recordId;
+    private String recordId;
 
     @ApiModelProperty(value = "借还款记录类型：1借款记录,2还款记录")
     private Integer recordType;
