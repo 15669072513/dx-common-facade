@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 /**
- * 统计-会员返水统计
+ * 统计-代理返点统计
  */
 @Data
 @NoArgsConstructor
@@ -19,6 +19,10 @@ public class ProxyRebateStatisticsRespDTO{
     @ApiModelProperty(value = "上级代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long parentProxyId;
+
+
+    @ApiModelProperty(value = "商户id")
+    private Long merchantId;
 
     @ApiModelProperty(value = "代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)

@@ -1,5 +1,6 @@
 package com.dx.facade.report.resp.report;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -28,6 +29,9 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
      */
     @ApiModelProperty("id")
     private Long id;
+
+    @ApiModelProperty(value = "商户id")
+    private Long merchantId;
 
     /**
      * 代理id
