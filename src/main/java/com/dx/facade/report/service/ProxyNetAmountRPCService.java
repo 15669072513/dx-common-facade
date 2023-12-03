@@ -161,6 +161,17 @@ public interface ProxyNetAmountRPCService {
 
     CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmountSummary(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
 
+
+
+
+    /**
+     * 代理返点模式 代理盈亏详情我的团队
+     * @param req
+     * @return
+     * @throws Exception
+     */
+    CommonResp<ProxyRebatePointNetAmountResp> queryProxyRebatePointNetAmountOne(ProxyRebatePointNetAmountReq req) throws Exception;
+
     /**
      * 代理返点模式 代理盈亏列表总计
      * @param req
@@ -176,4 +187,12 @@ public interface ProxyNetAmountRPCService {
      * @throws Exception
      */
     CommonResp<PageResp<ProxyRebatePointNetAmountResp, ProxyRebatePointNetAmountSummaryResp>> queryProxyRebatePointNetAmountPage(ProxyRebatePointNetAmountReq req) throws Exception;
+
+    /**
+     * 代理返点模式 代理盈亏每日明细
+     * @param req
+     * @return
+     * @throws Exception
+     */
+    public CommonResp<PageResp<ProxyRebatePointNetAmountResp, ProxyRebatePointNetAmountSummaryResp>> proxyRebatePointNetAmountDetailByDay(ProxyRebatePointNetAmountReq req) throws Exception;
 }
