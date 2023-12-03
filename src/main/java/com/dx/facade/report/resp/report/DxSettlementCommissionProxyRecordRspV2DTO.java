@@ -49,6 +49,11 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
      */
     @ApiModelProperty("代理账号")
     private String proxyName;
+    /**
+     * 上级代理名称
+     */
+    @ApiModelProperty("上级代理名称")
+    private String parentProxyName;
 
 
     @ApiModelProperty("返佣状态(0-未结算 1=已结算（数据不会在进行统计变动） 2-待发放  3-已发放 ,4，已过期(返佣废弃当前状态)，5：无返佣 6-已取消)")
