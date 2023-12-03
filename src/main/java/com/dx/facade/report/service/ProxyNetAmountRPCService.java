@@ -195,4 +195,14 @@ public interface ProxyNetAmountRPCService {
      * @throws Exception
      */
     public CommonResp<PageResp<ProxyRebatePointNetAmountResp, ProxyRebatePointNetAmountSummaryResp>> proxyRebatePointNetAmountDetailByDay(ProxyRebatePointNetAmountReq req) throws Exception;
+
+
+    /**
+     * 代理返点模式 每日明细总计
+     * @param req
+     * @return
+     * @throws Exception
+     */
+    CommonResp<ProxyRebatePointNetAmountSummaryResp> queryProxyRebatePointNetAmountDetailSummary(ProxyRebatePointNetAmountReq req) throws Exception;
+
 }
