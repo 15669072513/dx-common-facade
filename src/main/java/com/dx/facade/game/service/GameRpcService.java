@@ -88,5 +88,5 @@ public interface GameRpcService {
     CommonResp dzLoginVenue(Long merchantId, Long memberId);
 
 
-
+    CommonResp<GameWithdrawResp> withdrawByConfig(GameWithdrawDto withdrawDto,VenueConfig venueConfig);
 }
