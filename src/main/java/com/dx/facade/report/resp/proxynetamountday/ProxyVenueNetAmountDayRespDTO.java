@@ -84,6 +84,9 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty("直属会员返水其他调整金额")
     private BigDecimal directMemberArtificialPatchAmount;
 
+    @ApiModelProperty(value = "代理名称")
+    private String proxyName;
+
     @ApiModelProperty(value = "场馆")
     private String venueName;
 
