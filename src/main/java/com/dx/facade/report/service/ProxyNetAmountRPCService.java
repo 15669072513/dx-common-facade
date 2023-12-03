@@ -10,8 +10,11 @@ import com.dx.facade.report.param.proxynetamountday.ProxyNetAmountDayReqDTO;
 import com.dx.facade.report.param.proxynetamountday.ProxyVenueDayNetAmountReqDTO;
 import com.dx.facade.report.param.proxynetamountmonth.ProxyMonthNetAmountReqDTO;
 import com.dx.facade.report.param.proxynetamountmonth.ProxyNetAmountMonthReqDTO;
+import com.dx.facade.report.req.report.proxy.ProxyRebatePointNetAmountReq;
 import com.dx.facade.report.resp.proxynetamountday.*;
 import com.dx.facade.report.resp.proxynetamountmonth.*;
+import com.dx.facade.report.resp.report.proxy.ProxyRebatePointNetAmountResp;
+import com.dx.facade.report.resp.report.proxy.ProxyRebatePointNetAmountSummaryResp;
 
 import java.util.List;
 
@@ -157,4 +160,20 @@ public interface ProxyNetAmountRPCService {
     CommonResp<ProxyMonthNetAmountRespDTO> queryProxyMonthNetAmountSummary(ProxyMonthNetAmountReqDTO reqDTO) throws Exception;
 
     CommonResp<ProxyDayNetAmountRespDTO> queryProxyDayNetAmountSummary(ProxyDayNetAmountReqDTO reqDTO) throws Exception;
+
+    /**
+     * 代理返点模式 代理盈亏列表总计
+     * @param req
+     * @return
+     * @throws Exception
+     */
+    CommonResp<ProxyRebatePointNetAmountSummaryResp> queryProxyRebatePointNetAmountSummary(ProxyRebatePointNetAmountReq req) throws Exception;
+
+    /**
+     * 代理返点模式 代理盈亏分页列表
+     * @param req
+     * @return
+     * @throws Exception
+     */
+    CommonResp<PageResp<ProxyRebatePointNetAmountResp, ProxyRebatePointNetAmountSummaryResp>> queryProxyRebatePointNetAmountPage(ProxyRebatePointNetAmountReq req) throws Exception;
 }
