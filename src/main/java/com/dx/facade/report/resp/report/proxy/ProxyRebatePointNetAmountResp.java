@@ -36,4 +36,6 @@ public class ProxyRebatePointNetAmountResp extends ProxyRebatePointNetAmountSumm
 
     @ApiModelProperty("代理层级路径（代理账号）/我得团队/aaa/bbb")
     private String proxyPathUsername;
+    @ApiModelProperty("是否有下级代理 ture:有，false:无")
+    private Boolean isAllSub;
 }
