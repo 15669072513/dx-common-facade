@@ -27,4 +27,13 @@ public class ProxyRebateStatisticsTotalRespDTO {
     private BigDecimal childRebateAmount  =BigDecimal.ZERO;;
 
 
+    @ApiModelProperty(value = "抽水贡献")
+    private BigDecimal pumpContribution = BigDecimal.ZERO;
+    @ApiModelProperty(value = "会员总盈亏(游戏盈亏)")
+    private BigDecimal totalNetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "有效投注")
+    private BigDecimal totalValidBetAmount = BigDecimal.ZERO;
+
+
 }

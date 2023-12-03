@@ -85,7 +85,7 @@ public class DxSettlementCommissionProxyRecordRspV2DTO implements Serializable {
     /**
      * 抽水贡献
      */
-    @ApiModelProperty("抽水贡献")
+    @ApiModelProperty("抽水贡献/游戏盈亏")
     private BigDecimal platformNetAmount;
     /**
      * 场馆费
