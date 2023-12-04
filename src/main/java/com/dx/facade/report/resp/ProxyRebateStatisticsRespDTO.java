@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 /**
- * 统计-会员返水统计
+ * 统计-代理返点统计
  */
 @Data
 @NoArgsConstructor
@@ -19,6 +19,10 @@ public class ProxyRebateStatisticsRespDTO{
     @ApiModelProperty(value = "上级代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long parentProxyId;
+
+
+    @ApiModelProperty(value = "商户id")
+    private Long merchantId;
 
     @ApiModelProperty(value = "代理id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -50,13 +54,16 @@ public class ProxyRebateStatisticsRespDTO{
 
     @ApiModelProperty(value = "个人返点金额")
     private BigDecimal personRebateAmount;
-
+    @ApiModelProperty(value = "抽水贡献")
+    private BigDecimal totalPumpContribution;
+    @ApiModelProperty(value = "会员总盈亏(游戏盈亏)")
+    private BigDecimal totalNetAmount;
     @ApiModelProperty(value = "团队返点")
     private BigDecimal rebateAmount;
 
     @ApiModelProperty(value = "下级返点")
     private BigDecimal childRebateAmount;
-    @ApiModelProperty(value = "抽水贡献/有效投注")
+    @ApiModelProperty(value = "有效投注")
     private BigDecimal totalValidBetAmount;
 
 

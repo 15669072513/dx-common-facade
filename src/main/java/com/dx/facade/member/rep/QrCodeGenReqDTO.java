@@ -31,6 +31,9 @@ public class QrCodeGenReqDTO implements BaseParmDTO,Serializable {
     @ApiModelProperty(value="游戏类型id")
     private String gameTypeId;
 
+    @ApiModelProperty(value="俱乐部ID")
+    private String clubId;
+
     @Override
     public void check() {
         Assert.notNull(type, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("type"));

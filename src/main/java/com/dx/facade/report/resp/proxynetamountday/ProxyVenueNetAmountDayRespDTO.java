@@ -23,7 +23,6 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty(value = "日期", example = "20210901")
     private Integer staticsDate;
 
-    private String venueName;
     @ApiModelProperty(value = "总注单笔数", example = "1500.00")
     private Long betCount;
     /** betAmount */
@@ -84,4 +83,22 @@ public class ProxyVenueNetAmountDayRespDTO {
 
     @ApiModelProperty("直属会员返水其他调整金额")
     private BigDecimal directMemberArtificialPatchAmount;
+
+    @ApiModelProperty(value = "代理名称")
+    private String proxyName;
+
+    @ApiModelProperty(value = "场馆")
+    private String venueName;
+
+    @ApiModelProperty(value = "团队返点金额")
+    private BigDecimal rebateAmount;
+
+    @ApiModelProperty(value = "个人返点金额")
+    private BigDecimal personRebateAmount;
+
+    @ApiModelProperty(value = "下级返点金额")
+    private BigDecimal childRebateAmount;
+
+    @ApiModelProperty(value = "代理返点其他调整", example = "1500.00")
+    private BigDecimal proxyArtificialPatchAmount;
 }
