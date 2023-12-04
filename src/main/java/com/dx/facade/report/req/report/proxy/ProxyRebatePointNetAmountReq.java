@@ -35,7 +35,6 @@ public class ProxyRebatePointNetAmountReq extends PageRequest {
     private Integer endDate;
 
     @ApiModelProperty(value = "结束日期", required = true, example = "20210602")
-    @NotNull(message = "结束月份参数不能为空")
     private Integer staticDate;
     /**
      * proxyName
