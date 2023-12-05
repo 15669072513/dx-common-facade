@@ -13,4 +13,9 @@ public class QrCodeGenRespDTO implements Serializable {
     @ApiModelProperty(value = "二维码内容：https://integrative-web-fat.ak12.cc/#/home?i_code=9340752&sc=R99Ua2Px")
     private String qrCodeUrl;
 
+    @ApiModelProperty(value ="过期时长")
+    private String duration;
+
+    @ApiModelProperty(value ="过期时间")
+    private Long expireTime;
 }
