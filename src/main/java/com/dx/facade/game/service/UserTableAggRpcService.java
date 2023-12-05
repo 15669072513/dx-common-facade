@@ -44,12 +44,16 @@ public interface UserTableAggRpcService {
      */
     CommonResp<List<GameOrderRecordDetail.GameOrderRecord>> getGameOrderPlayerRecords(Long tableId);
 
+
     /**
      * 查询战绩详情分页
+     * @param pageNum
+     * @param pageSize
      * @param tableId
      * @return
      */
-    CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord,?>> getGameOrderPlayerRecordPage(Long tableId);
+    CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord,?>> getGameOrderPlayerRecordPage(Long pageNum,Long pageSize,
+        Long tableId);
 
     /**
      * 条件查询用户牌桌统计表
