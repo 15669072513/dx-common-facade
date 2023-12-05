@@ -14,7 +14,7 @@ public class QrCodeGenRespDTO implements Serializable {
     private String qrCodeUrl;
 
     @ApiModelProperty(value ="过期时长")
-    private String duration;
+    private Integer duration;
 
     @ApiModelProperty(value ="过期时间")
     private Long expireTime;
