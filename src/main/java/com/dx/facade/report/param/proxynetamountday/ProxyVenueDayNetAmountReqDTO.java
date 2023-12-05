@@ -22,6 +22,7 @@ public class ProxyVenueDayNetAmountReqDTO  {
      * proxyId
      */
     @ApiModelProperty("代理账号")
+    @NotNull(message = "代理账号不能为空")
     private Long proxyId;
 
     @ApiModelProperty("商户id")
