@@ -28,7 +28,7 @@ public class ProxyRebateStatisticsTotalRespDTO {
 
 
     @ApiModelProperty(value = "抽水贡献")
-    private BigDecimal pumpContribution = BigDecimal.ZERO;
+    private BigDecimal totalPumpContribution = BigDecimal.ZERO;
     @ApiModelProperty(value = "会员总盈亏(游戏盈亏)")
     private BigDecimal totalNetAmount = BigDecimal.ZERO;
 
