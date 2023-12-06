@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * @description 返佣统计列表-汇总DTO
@@ -23,6 +24,12 @@ public class DxSettlementCommissionProxyTotalRspV2DTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+
+    /**
+     * 代理层级名称
+     */
+    @ApiModelProperty("代理层级名称-查询条件有proxyName时返回数据")
+    private List<String> proxyPathName ;
     /**
      * 团队返佣金额
      */

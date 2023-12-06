@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * 统计-会员返水统计
@@ -16,6 +17,11 @@ import java.math.BigDecimal;
 public class ProxyRebateStatisticsTotalRespDTO {
 
 
+    /**
+     * 代理层级名称
+     */
+    @ApiModelProperty("代理层级名称-查询条件有proxyName时返回数据")
+    private List<String> proxyPathName ;
 
     @ApiModelProperty(value = "个人返点金额")
     private BigDecimal personRebateAmount =BigDecimal.ZERO;
