@@ -19,6 +19,10 @@ public enum ProxyAppType implements IAppType {
     commission(9, "佣金"),
     rebate(10, "返点"),
     transfer_with_banker(11, "代理划拨"),
+    v3_official_help_proxy_credit_repay(12, "官方帮代理信用还款"),
+    v3_parent_proxy_help_proxy_credit_repay(13, "上级帮代理信用还款"),
+    v3_proxy_help_sub_proxy_credit_repay(14, "代理帮下级信用还款"),
+    v3_proxy_help_sub_member_credit_repay(15, "代理帮会员信用还款"),
 
 //    //私庄钱包
 //    banker_deposit(12, "入金"),
