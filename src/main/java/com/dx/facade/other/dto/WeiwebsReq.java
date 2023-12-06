@@ -3,7 +3,6 @@ package com.dx.facade.other.dto;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Map;
 
 /**
  * @author ahead
@@ -11,9 +10,7 @@ import java.util.Map;
  */
 @Data
 public class WeiwebsReq implements Serializable {
-
     private String mobile;
     private String msg;
-
 
 }
