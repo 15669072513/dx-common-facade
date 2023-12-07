@@ -7,6 +7,8 @@ import com.dx.facade.game.req.GameOrderRecordReq;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
 import com.dx.facade.game.resp.GameOrderRecordResp;
 
+import java.util.List;
+
 /**
  * es 注单 相关接口
  */
@@ -27,5 +29,5 @@ public interface GameOrderRecordEsRpcService {
      * @param req
      * @return
      */
-    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubSum(GameOrderClubSumReq req);
+    CommonResp<List<GameOrderClubSumResp>> gameOrderClubSum(GameOrderClubSumReq req);
 }
