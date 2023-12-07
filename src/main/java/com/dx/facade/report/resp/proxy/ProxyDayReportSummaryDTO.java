@@ -24,7 +24,7 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty("标签")
     private Boolean flag;
-    
+
 
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
     private BigDecimal totalReceiveRebate;
@@ -291,6 +291,34 @@ public class ProxyDayReportSummaryDTO {
 
     @ApiModelProperty(value = "存取差/会员存取差")
     private BigDecimal depositWithdrawDifferAmount;
+
+    @ApiModelProperty("官方帮代理信用还款总额")
+    @TableField("official_help_proxy_credit_repay_amount")
+    private BigDecimal officialHelpProxyCreditRepayAmount;
+    @ApiModelProperty("官方帮代理信用还款次数")
+    @TableField("official_help_proxy_credit_repay_times")
+    private Long officialHelpProxyCreditRepayTimes;
+
+    @ApiModelProperty("上级帮代理信用还款总额")
+    @TableField("parent_proxy_help_proxy_credit_repay_amount")
+    private BigDecimal parentProxyHelpProxyCreditRepayAmount;
+    @ApiModelProperty("上级帮代理信用还款次数")
+    @TableField("parent_proxy_help_proxy_credit_repay_times")
+    private Long parentProxyHelpProxyCreditRepayTimes;
+
+    @ApiModelProperty("代理帮下级信用还款总额")
+    @TableField("proxy_help_sub_proxy_credit_repay_amount")
+    private BigDecimal proxyHelpSubProxyCreditRepayAmount;
+    @ApiModelProperty("代理帮下级信用还款次数")
+    @TableField("proxy_help_sub_proxy_credit_repay_times")
+    private Long proxyHelpSubProxyCreditRepayTimes;
+
+    @ApiModelProperty("代理帮会员信用还款总额")
+    @TableField("proxy_help_sub_member_credit_repay_amount")
+    private BigDecimal proxyHelpSubMemberCreditRepayAmount;
+    @ApiModelProperty("代理帮会员信用还款次数")
+    @TableField("proxy_help_sub_member_credit_repay_times")
+    private Long proxyHelpSubMemberCreditRepayTimes;
 
 
     @ApiModelProperty("平台充值上分")

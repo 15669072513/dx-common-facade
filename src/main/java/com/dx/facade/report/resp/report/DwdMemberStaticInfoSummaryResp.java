@@ -96,6 +96,29 @@ public class DwdMemberStaticInfoSummaryResp {
     protected BigDecimal proxyCashDownAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理提现下分金额")
     protected Long proxyCashDownTimes = 0L;
+
+    // 代还
+    @ApiModelProperty("代理帮信用还款总额")
+    protected BigDecimal proxyHelpCreditRepayAmount = BigDecimal.ZERO;
+    @ApiModelProperty("代理帮信用还款次数")
+    protected Long proxyHelpCreditRepayTimes = 0L;
+
+
+    /**
+     * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额
+     *
+     * @return
+     */
+//    public BigDecimal getNetProfit() {
+//        if (Objects.isNull(netAmount)
+//                || Objects.isNull(returnWaterAmount)
+//                || Objects.isNull(discountAmount)
+//                || Objects.isNull(otherAdjustAmount)) {
+//            return null;
+//        }
+//        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
+//    }
+
     @ApiModelProperty("冲提差")
     private BigDecimal proxyCashDifferAmount;
     @ApiModelProperty("注册数")
