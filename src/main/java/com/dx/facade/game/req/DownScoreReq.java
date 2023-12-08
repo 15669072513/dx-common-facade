@@ -11,4 +11,5 @@ public class DownScoreReq {
     private Long userId;
     private BigDecimal amount;
     private String eventId;
+    private Long eventTime;
 }
