@@ -78,6 +78,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_转入代理账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_转入代理账号"; //
 
 
+    String FUNDS_场馆信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_场馆信息"; //
     String FUNDS_钱包类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_钱包类型"; //
 
     String FUNDS_业务类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_业务类型"; //
