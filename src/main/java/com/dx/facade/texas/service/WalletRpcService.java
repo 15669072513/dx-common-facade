@@ -31,5 +31,5 @@ public interface WalletRpcService {
    * 退还筹码
    * @return
    */
-  CommonResp<Void> revertUpScore(String eventId);
+  CommonResp<Void> revertUpScore(String eventId,Long eventTime);
 }
