@@ -30,4 +30,12 @@ public interface GameOrderRecordEsRpcService {
      * @return
      */
     CommonResp<List<GameOrderClubSumResp>> gameOrderClubSum(GameOrderClubSumReq req);
+
+
+    /**
+     * 获取游戏订单俱乐部贡献列表。
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
 }
