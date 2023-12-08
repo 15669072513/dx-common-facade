@@ -127,4 +127,6 @@ public class DwdMemberStaticInfoSummaryResp {
     private Integer activeCount;
     @ApiModelProperty("有效新增人数")
     private Integer validUserCount;
+    @ApiModelProperty("投注人数")
+    private Integer betUserCount;
 }
