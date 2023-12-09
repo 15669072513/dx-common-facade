@@ -5,6 +5,7 @@ import com.dx.entity.PageResp;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.*;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
+import java.util.List;
 
 /**
  * 战绩
@@ -47,6 +48,14 @@ public interface GameOrderRecordRpcService {
      * @return
      */
     CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
+
+
+    /**
+     * 获取当前牌桌的注单记录用户手牌列表
+     * @param tableId
+     * @return
+     */
+    CommonResp<List<GameRecordUserHandResp>> getGameRecordUserHandListByTableId(Long tableId);
 
     /**
      * 战绩详情
