@@ -9,7 +9,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class DxWalletDetailBringOutDto {
-  private Long userId;
   private BigDecimal bringOutAmount;
   private Integer bringOutCount;
 }
