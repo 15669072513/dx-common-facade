@@ -55,7 +55,7 @@ public interface GameOrderRecordRpcService {
      * @param tableId
      * @return
      */
-    CommonResp<GameRecordUserHandResp> getGameRecordUserHandListByTableId(Long tableId);
+    CommonResp<List<GameRecordUserHandResp>> getGameRecordUserHandListByTableId(Long tableId);
 
     /**
      * 战绩详情
