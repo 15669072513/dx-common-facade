@@ -3,6 +3,7 @@ package com.dx.facade.auth.rpc;
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.auth.domain.*;
+import com.dx.facade.auth.pojo.resp.ValidationResp;
 
 import java.util.List;
 
@@ -76,5 +77,5 @@ public interface AuthService {
      */
     CommonResp<Boolean> checkGoogleAuthCode(CheckGoogleAuthCodeReqDTO req) throws BizException;
 
-
+    CommonResp<ValidationResp> getVerifyCodeType() throws BizException;
 }
