@@ -220,7 +220,7 @@
             <groupId>eu.bitwalker</groupId>
             <artifactId>UserAgentUtils</artifactId>
         </dependency>
-
+        <!--common包-->
         <dependency>
             <groupId>com.dx</groupId>
             <artifactId>dx-common-tools</artifactId>

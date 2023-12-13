@@ -4,16 +4,19 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.member.member.param.ProxyPaymentDTO;
-import com.dx.facade.member.proxy.po.DwmProxyRebateRecordPO;
 import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
-import com.dx.facade.report.param.agent.AgentRebateReqDTO;
+import com.dx.facade.report.param.rebate.ProxyRebateRecordReqDTO;
 import com.dx.facade.report.param.rebate.RebateDayListReqDTO;
 import com.dx.facade.report.req.proxyrebate.ProxyRebateTackReq;
+import com.dx.facade.report.req.report.RebateRecordDetailReportParam;
+import com.dx.facade.report.resp.ProxyRebateStatisticsRespDTO;
+import com.dx.facade.report.resp.ProxyRebateStatisticsTotalRespDTO;
 import com.dx.facade.report.resp.member.MemberNetAmountRebateRespDTO;
 import com.dx.facade.report.resp.rebate.ProxyRebateProxyMemberListResp;
 import com.dx.facade.report.resp.rebate.ProxyRebateTeamResp;
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamRespSumV2;
+import com.dx.facade.report.resp.rebate.ProxyRebateTeamRespV2;
 
 import java.util.List;
 
@@ -93,7 +96,7 @@ public interface ProxyRebateRecordService {
      * @return
      * @throws BizException
      */
-    CommonResp<List<ProxyRebateTeamResp>> getProxyTeamRebate(Long proxyId, Integer reportDate,Integer reportType) throws BizException;
+    CommonResp<List<ProxyRebateTeamResp>> getProxyTeamRebate(Long proxyId, Integer reportDate,Integer reportType,Integer platformFlag) throws BizException;
     /**
      * 代理PC-返回代理列表
      * @param proxyId
@@ -118,6 +121,25 @@ public interface ProxyRebateRecordService {
      */
     CommonResp<PageResp<MemberNetAmountRebateRespDTO, ?>> getMemberTeamRebateList(RebateDayListReqDTO req) throws BizException ;
 
+
+    /**
+     * 代理返点统计查询
+     * @param req
+     * @return
+     */
+    CommonResp<PageResp<ProxyRebateStatisticsRespDTO, ?>> queryRebateStatisticsList(ProxyRebateRecordReqDTO req);
+
+    CommonResp<ProxyRebateStatisticsTotalRespDTO> queryRebateStatisticsTotal(ProxyRebateRecordReqDTO req);
+
+    CommonResp<List<ProxyRebateTeamRespV2>> getMemberTeamRebateV2(Long id, Integer reportDate);
+
+    CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getMemberTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
+
+    CommonResp<PageResp<ProxyRebateTeamRespV2, ProxyRebateTeamRespSumV2>> getProxyTeamRebateV2DetailSum(RebateRecordDetailReportParam param);
+
+    CommonResp<PageResp<ProxyAnticipateRebateRecordResp,ProxyAnticipateRebateRecordTotalResp>> selectProxyAnticipateRebate(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
+
+    CommonResp<ProxyAnticipateRebateRecordTotalResp> selectProxyAnticipateRebateTotal(ProxyAnticipateReBateRecordPageReqDTO reqDTO);
     /**
      * 代理返点自动审核
      * @param reportDate 账单时间

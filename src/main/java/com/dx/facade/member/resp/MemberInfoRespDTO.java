@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MemberInfoRespDTO {
+public class MemberInfoRespDTO{
 
     @ApiModelProperty("ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -54,14 +54,14 @@ public class MemberInfoRespDTO {
     @ApiModelProperty("会员账号")
     private String userName;
 
-    @ApiModelProperty("盐")
-    private String salt;
+//    @ApiModelProperty("盐")
+//    private String salt;
 
-    @ApiModelProperty("会员密码")
-    private String password;
-
-    @ApiModelProperty("会员支付密码")
-    private String payPassword;
+//    @ApiModelProperty("会员密码")
+//    private String password;
+//
+//    @ApiModelProperty("会员支付密码")
+//    private String payPassword;
 
     @ApiModelProperty("会员真实姓名")
     private String realName;

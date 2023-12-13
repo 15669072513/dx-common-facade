@@ -106,7 +106,7 @@ public class MemberRebateAuditRespDTO {
     private Integer reportDate;
 
     @ApiModelProperty(value = "报表创建时间")
-    private LocalDateTime createdTime;
+    private LocalDateTime createdAt;
 
     @ApiModelProperty(value = "审核账号")
     private String audit1Operator;

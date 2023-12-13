@@ -5,6 +5,10 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
+import com.dx.facade.game.dto.BringInDto;
+import com.dx.facade.game.dto.BringOutDto;
+import com.dx.facade.game.dto.DxWalletDetailBringOutDto;
+import com.dx.facade.game.dto.DxWalletDetailDto;
 import com.dx.facade.texas.dto.TableBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringListDto;
@@ -16,6 +20,7 @@ import com.dx.facade.texas.req.WalletDetailPageRequest;
 import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WalletDetailRpcService {
 
@@ -61,4 +66,10 @@ public interface WalletDetailRpcService {
    * @throws BizException
    */
   CommonResp<List<DxGameBillResp>> getCurrentTableBill(TableBringInfoReq req) throws BizException;
+
+  CommonResp<Map<Long, BringInDto>> getBringInByTableId(Long tableId);
+  CommonResp<Map<Long, BringOutDto>> getBringOutByTableId(Long tableId);
+  CommonResp<DxWalletDetailDto> getBringInByTableIdAndUserId(Long tableId,Long userId);
+  CommonResp<DxWalletDetailBringOutDto> getBringOutByTableIdAndUserId(Long tableId,Long userId);
+
 }

@@ -22,17 +22,17 @@ public class GameOrderClubSumResp {
     private BigDecimal netAmount= new BigDecimal(0);
 
     @ApiModelProperty("有效金额")
-    private BigDecimal insuranceNetAmount;
+    private BigDecimal insuranceNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("累计俱乐部游戏有效投注")
     private BigDecimal validBetAmount=  new BigDecimal(0);;
 
     @ApiModelProperty("累计保险有效投注")
-    private BigDecimal insuranceValidBetAmount;
+    private BigDecimal insuranceValidBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("累计抽水总额")
     private BigDecimal pumpingAmount= new BigDecimal(0);
 
     @ApiModelProperty("累计抽水贡献")
-    private BigDecimal pumpContribution;
+    private BigDecimal pumpContribution=BigDecimal.ZERO;
 }

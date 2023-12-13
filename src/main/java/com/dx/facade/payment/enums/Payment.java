@@ -1,6 +1,5 @@
 package com.dx.facade.payment.enums;
 
-import com.dx.enums.ConstantEnums;
 import com.dx.exception.BizException;
 import com.dx.facade.common.OrderNoUtils;
 import com.dx.facade.enums.DepositOrderStatus;
@@ -367,7 +366,7 @@ public class Payment {
      */
     public enum MemberAdjustType {
         会员存款后台(1, "会员存款(后台)"),
-        会员提款后台(2, "会员提款(后台)"),
+        会员取款后台(2, "会员取款(后台)"),
         会员活动(3, "会员活动"),
         会员返水(4, "会员返水增加调整"),
         会员VIP福利(5, "会员福利"),

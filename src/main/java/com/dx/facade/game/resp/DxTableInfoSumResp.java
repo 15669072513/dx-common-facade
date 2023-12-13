@@ -42,6 +42,9 @@ public class DxTableInfoSumResp implements Serializable {
     @ApiModelProperty("保险盈亏")
     private BigDecimal insuredNetAmount;
 
+    @ApiModelProperty("用户集合")
+    private String userIds;
+
     @ApiModelProperty("牌桌总费用")
     private BigDecimal costTotal=BigDecimal.ZERO;
 }

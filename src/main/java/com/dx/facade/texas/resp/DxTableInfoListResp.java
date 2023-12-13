@@ -1,5 +1,6 @@
 package com.dx.facade.texas.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -143,12 +144,28 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("超时（min）自动解散房间")
     private Integer gameOvertime;
+
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
     private Integer insuranceMode;
+
     @ApiModelProperty("turn购买保险最低值,整数类型")
     private BigDecimal insuranceTurn=BigDecimal.ZERO;
+
     @ApiModelProperty("选张购买功能 0-不选张 1-选张")
     private Boolean insuranceChooseSheet;
+
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
+
+    @ApiModelProperty("抽水方式 1-按底池比例 2-按盈利比例")
+    private Integer serviceChargeType;
+
+    @ApiModelProperty("每手收费上限（倍大盲）")
+    private BigDecimal handChargeUpperLimit;
+
+    @ApiModelProperty("隐藏小数开关 0-关闭 1-开启")
+    private Integer isHiddenDecimal;
+
+    @ApiModelProperty("收费比例")
+    private BigDecimal chargeScale;
 }

@@ -73,6 +73,9 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("手牌信息")
     private List<Integer> handCards =new ArrayList<>();
 
+    @ApiModelProperty("玩家手牌亮牌")
+    private List<Map<Integer,Boolean>> lightCards =new ArrayList<>();
+
     /***
      * 玩家牌型展示是否置亏标识
      */
@@ -105,11 +108,13 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("投注状态,参考枚举: GameBetStatusEnum")
     private Integer betStatus;
-    /**
-     * 盈亏筹码
-     */
-    @ApiModelProperty("盈亏筹码")
-    private BigDecimal netAmount;
+
+
+    @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+    private BigDecimal totalNetAmount= BigDecimal.ZERO;
+
+    @ApiModelProperty("打牌输赢")
+    private BigDecimal netAmount= BigDecimal.ZERO;
 
     @ApiModelProperty("保险输赢")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;

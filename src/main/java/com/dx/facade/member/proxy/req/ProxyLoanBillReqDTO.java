@@ -12,6 +12,8 @@ import java.util.List;
 @Data
 public class ProxyLoanBillReqDTO extends LocalDatePageRequest {
 
+    @ApiModelProperty("商户id")
+    private Long merchantId;
     @ApiModelProperty(value = "账单结束日期", required = true, example = "20210602")
     @NotNull(message = "账单结束日期参数不能为空")
     private Integer billEndDate;

@@ -79,9 +79,15 @@ public class DwdMemberStaticInfoSummaryResp {
     protected BigDecimal proxyCreditDownDmount = BigDecimal.ZERO;
     @ApiModelProperty("代理授信下分次数")
     protected Long proxyCreditDownTimes = 0L;
+    @ApiModelProperty("授信差")
+    private BigDecimal proxyCreditDifferAmount;
     @ApiModelProperty("返点金额")
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy= BigDecimal.ZERO;
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat= BigDecimal.ZERO;
     @ApiModelProperty("代理充值上分金额")
     protected BigDecimal proxyCashUpAmount = BigDecimal.ZERO;
     @ApiModelProperty("代理充值上分次数")
@@ -113,4 +119,14 @@ public class DwdMemberStaticInfoSummaryResp {
 //        return netAmount.add(returnWaterAmount).add(discountAmount).add(otherAdjustAmount);
 //    }
 
+    @ApiModelProperty("冲提差")
+    private BigDecimal proxyCashDifferAmount;
+    @ApiModelProperty("注册数")
+    private Integer registerCount;
+    @ApiModelProperty("活跃数")
+    private Integer activeCount;
+    @ApiModelProperty("有效新增人数")
+    private Integer validUserCount;
+    @ApiModelProperty("投注人数")
+    private Integer betUserCount;
 }

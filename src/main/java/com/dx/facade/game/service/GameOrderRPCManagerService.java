@@ -21,10 +21,6 @@ public interface GameOrderRPCManagerService {
      */
     CommonResp<GameOrderRecordUserHandRespDto> gameOrderRecordUserHandList(GameOrderRecordUserHandReq req);
 
-    /**
-     * 综合后天-俱乐部 金额相关汇总
-     */
-    CommonResp<GameOrderClubSumRespDto> gameOrderClubSumList(GameOrderClubSumReq req);
 
     /**
      *  俱乐部贡献

@@ -48,6 +48,18 @@ public class DxGameBillResp implements Serializable {
      */
     private BigDecimal profitLossAmount = BigDecimal.ZERO;
 
+    /**
+     *  游戏盈亏
+     *
+     */
+    private BigDecimal gameNetChip = BigDecimal.ZERO;
+
+    /**
+     *  保险盈亏
+     *
+     */
+    private BigDecimal insureNetChip = BigDecimal.ZERO;
+
     /***
      * 默认币种：USDT
      */

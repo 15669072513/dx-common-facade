@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -69,6 +70,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
     
+    @ApiModelProperty("平台标识： 0-非平台 1-平台")
+    private Integer platformFlag;
+    
     /** 生效时间 */
     @ApiModelProperty("生效时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -98,6 +102,9 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
     @ApiModelProperty("备注")
     private String remark;
+    
+    @ApiModelProperty("版本号")
+    private Integer version;
     
 	@ApiModelProperty(value = "代理层级路径(代理账号)")
 	private List<String> proxyPathUsername;

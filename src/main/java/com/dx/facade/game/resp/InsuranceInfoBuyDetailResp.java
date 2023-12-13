@@ -25,6 +25,8 @@ public class InsuranceInfoBuyDetailResp {
   private BigDecimal maxInsuredAmount;
   @ApiModelProperty("玩家投注额")
   private BigDecimal betAmount;
+  @ApiModelProperty("奖励分配")
+  private BigDecimal rewardShareAmount;
   @ApiModelProperty("保险购买详情集合")
   private List<InsuranceBuyDetailResp> insuranceBuyDetailList;
 }

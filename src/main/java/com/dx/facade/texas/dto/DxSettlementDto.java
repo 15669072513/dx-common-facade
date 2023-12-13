@@ -4,7 +4,6 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.util.List;
 
 @Getter
@@ -16,4 +15,12 @@ public class DxSettlementDto implements Serializable {
     private Long eventTime;
     private Long tableId;
     private String tableCode;
+    private String tableName;
+    private Long handId;
+    private String handCode;
+    private Long handBeginTime;
+    private Long handEndTime;
+    private Integer walletType;
+    private String currency;
+    private Integer roundNo;
 }

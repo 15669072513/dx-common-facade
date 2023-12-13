@@ -91,4 +91,6 @@ public class PlayerDayReportReqDTO extends LocalDatePageRequest {
     )
     private String orderType;
 
+    private Long proxyId;
+
 }
