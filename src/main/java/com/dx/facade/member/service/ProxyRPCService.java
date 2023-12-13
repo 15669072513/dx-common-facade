@@ -133,6 +133,16 @@ public interface ProxyRPCService {
 
     /**
      * 校验代理支付密码
+     * @param merchantId  商户ID
+     * @param userId    代理用户id
+     * @param payPassword 支付密码
+     * @param checkDepositWithdraw  是否校验重提状态
+     * @return 校验成功返回true
+     * @throws BizException 业务异常
+     */
+    CommonResp<Boolean> validatePayPasswordCustom(Long merchantId, Long userId, String payPassword, Integer userType, Boolean checkDepositWithdraw);
+    /**
+     * 校验代理支付密码
      *
      * @param merchantId  商户ID
      * @param userId    代理用户id
