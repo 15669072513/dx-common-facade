@@ -42,13 +42,10 @@ public interface WithdrawOrderRPCService {
 
     /**
      * 更新提现订单ID更新锁单状态
-     * @param id                提现订单ID
-     * @param newLockStatus     新的锁单状态
-     * @param lockAccountId     锁单人ID
-     * @param lockAccount       锁单人
+     * @param paramDTO          参数DTO
      * @return  true：锁单解锁成功；false：失败
      */
-    Boolean updateLockStatusById(@NotNull Long id, @NotNull Integer newLockStatus, Long lockAccountId, String lockAccount);
+    Boolean updateLockStatusById(UpdateWithdrawOrderLockStatusParamDTO paramDTO);
 
     /**
      * 统计指定提现订单状态下该用户的锁单数量

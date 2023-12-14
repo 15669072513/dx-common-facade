@@ -387,6 +387,14 @@ public class ProxyDayReportRespDTO implements Serializable {
     @TableField("first_deposit_datetime")
     private String firstDepositDatetime;
 
+    @ApiModelProperty("平台充值上分")
+    @TableField("deposit_back_amount")
+    private BigDecimal depositBackAmount;
+
+
+    @ApiModelProperty("平台提现下分")
+    @TableField("withdraw_back_amount")
+    private BigDecimal withdrawBackAmount;
 
     @ApiModelProperty("官方帮代理信用还款总额")
     @TableField("official_help_proxy_credit_repay_amount")

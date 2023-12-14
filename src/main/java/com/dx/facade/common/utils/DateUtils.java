@@ -1,5 +1,6 @@
 package com.dx.facade.common.utils;
 
+import com.dx.util.DateUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 
@@ -306,5 +307,7 @@ public class DateUtils {
                 + "-"
                 + staticsDate.substring(6, 8);
     }
-
+    public static Long localDateTimeToTimestamp999(LocalDateTime timestamp) {
+        return DateUtil.localDateTimeToTimestamp(timestamp) + 999;
+    }
 }

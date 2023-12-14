@@ -90,7 +90,7 @@ public class DxHandInfoListExcelVO implements Serializable {
 
     @ExcelProperty(value = "手牌盈亏", index = 15)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌盈亏)
-    private BigDecimal netAmount;
+    private BigDecimal handNetAmount;
 
     @ExcelProperty(value = "公牌信息", index = 16)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_公牌信息)

@@ -19,11 +19,13 @@ import java.math.BigDecimal;
 @ApiModel(value = "com-ob-resp-report-ProxyDayReportSummaryDTO", description = "会员报表总计对象")
 public class ProxyDayReportSummaryDTO {
 
+    @ApiModelProperty("代理层级路径")
+    private String proxyPathUsername;
+
+    @ApiModelProperty("标签")
+    private Boolean flag;
 
 
-
-
-    //
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
     private BigDecimal totalReceiveRebate;
 
@@ -317,5 +319,15 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty("代理帮会员信用还款次数")
     @TableField("proxy_help_sub_member_credit_repay_times")
     private Long proxyHelpSubMemberCreditRepayTimes;
+
+
+    @ApiModelProperty("平台充值上分")
+    @TableField("deposit_back_amount")
+    private BigDecimal depositBackAmount;
+
+
+    @ApiModelProperty("平台提现下分")
+    @TableField("withdraw_back_amount")
+    private BigDecimal withdrawBackAmount;
 
 }

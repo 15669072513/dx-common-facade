@@ -42,4 +42,13 @@ public class MemberBillDetailIncreaseReq implements Serializable {
      * 流水倍数
      */
     private BigDecimal multiple;
+
+    /**
+     * 操作人
+     */
+    private String operator;
+    /**
+     * 操作人ip
+     */
+    private String ipAddr;
 }

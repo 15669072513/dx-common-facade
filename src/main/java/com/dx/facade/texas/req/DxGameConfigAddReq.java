@@ -121,4 +121,28 @@ public class DxGameConfigAddReq implements Serializable {
 
     @ApiModelProperty("保险出发下限")
     private Integer insuranceLower;
+
+    @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
+    private Integer showOutsWinn;
+
+    @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
+    private Integer activeBringOut;
+
+    @ApiModelProperty("必要保留筹码 多个用逗号隔开 不支持小数")
+    private String mustKeepChip;
+
+    @ApiModelProperty("每手服务费，0-关闭 1-按底池比例 2-按盈利比例 3-都选择")
+    private Integer serviceCharge;
+
+    @ApiModelProperty("按底池比例收费 多个用逗号隔开 支持小数")
+    private String bottomPoolFee;
+
+    @ApiModelProperty("按盈利比例收费 多个用逗号隔开  支持小数")
+    private String profitFee;
+
+    @ApiModelProperty("收费上限 多个用逗号隔开 支持小数 -1代表无上限")
+    private String feeCap;
+
+    @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
+    private Integer hideDecimals;
 }

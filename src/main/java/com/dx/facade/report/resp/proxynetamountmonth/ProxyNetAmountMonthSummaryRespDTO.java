@@ -22,40 +22,62 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class ProxyNetAmountMonthSummaryRespDTO {
 
-    /** betAmount */
+    /**
+     * betAmount
+     */
     @ApiModelProperty(value = "总投注", example = "1500.00")
     private BigDecimal betAmount;
 
-    /** validBetAmount */
+    /**
+     * validBetAmount
+     */
     @ApiModelProperty(value = "总有效投注", example = "1500.00")
     private BigDecimal validBetAmount;
 
-    /** memberCount */
+    /**
+     * memberCount
+     */
     @ApiModelProperty(value = "投注人数", example = "100")
     private Long memberCount;
 
-    /** betCount */
+    /**
+     * betCount
+     */
     @ApiModelProperty(value = "注单量", example = "200")
     private Long betCount;
 
-    /** netAmount */
+    /**
+     * netAmount
+     */
     @ApiModelProperty(value = "会员总输赢", example = "1500.00")
     private BigDecimal netAmount;
 
-    /** proxyRebatePoint */
+    /**
+     * proxyRebatePoint
+     */
     @ApiModelProperty(value = "代理返点", example = "1500.00")
     private BigDecimal proxyRebatePoint;
 
-    /** proxyRebatePoint */
+    /**
+     * proxyRebatePoint
+     */
     @ApiModelProperty(value = "代理返点其他调整", example = "1500.00")
     private BigDecimal proxyArtificialPatchAmount;
-
+    @Deprecated
     /** rebateAmount */
     @ApiModelProperty(value = "会员返水", example = "1500.00")
     private BigDecimal memberRebateAmount;
 
+    @ApiModelProperty("代理发放会员返水")
+    private BigDecimal memberRebateAmountByProxy;
 
-    /** artificialPatchAmount */
+
+    @ApiModelProperty("平台发放会员返水")
+    private BigDecimal memberRebateAmountByPlat;
+
+    /**
+     * artificialPatchAmount
+     */
     @ApiModelProperty(value = "会员账户调整", example = "1500.00")
     private BigDecimal memberArtificialPatchAmount;
 
@@ -73,7 +95,6 @@ public class ProxyNetAmountMonthSummaryRespDTO {
     private BigDecimal proxyRushNet;
 
 
-
     @ApiModelProperty(value = "直属会员总投注", example = "1500.00")
     private BigDecimal directBetAmount;
 
@@ -83,10 +104,16 @@ public class ProxyNetAmountMonthSummaryRespDTO {
     @ApiModelProperty(value = "直属会员总输赢/投注盈亏", example = "1500.00")
     private BigDecimal directNetAmount;
 
-
+    @Deprecated
     @ApiModelProperty("直属返水金额=会员返水")
     private BigDecimal directRebateAmount;
 
+    @ApiModelProperty("直属会员代理发放会员返水")
+    private BigDecimal directMemberRebateAmountByProxy;
+
+
+    @ApiModelProperty("直属会员平台发放会员返水")
+    private BigDecimal directMemberRebateAmountByPlat;
     @ApiModelProperty("直属其他调整=人工加减额中的其他调整额")
     private BigDecimal directArtificialPatchAmount;
 
