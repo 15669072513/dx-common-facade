@@ -22,8 +22,8 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty("代理层级路径")
     private String proxyPathUsername;
 
-    @ApiModelProperty("标签")
-    private Boolean flag;
+    @ApiModelProperty("标签,0总代,1非总代,2最底层代理")
+    private Integer flag;
 
 
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
@@ -329,8 +329,5 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty("平台提现下分")
     @TableField("withdraw_back_amount")
     private BigDecimal withdrawBackAmount;
-
-    @ApiModelProperty("判断是否总代,0总代,1非总代,2最底层代理")
-    private Integer isFlag;
 
 }
