@@ -330,4 +330,7 @@ public class ProxyDayReportSummaryDTO {
     @TableField("withdraw_back_amount")
     private BigDecimal withdrawBackAmount;
 
+    @ApiModelProperty("判断是否总代,0总代,1非总代,2最底层代理")
+    private Integer isFlag;
+
 }
