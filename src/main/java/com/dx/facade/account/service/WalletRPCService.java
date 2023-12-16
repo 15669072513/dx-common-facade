@@ -14,6 +14,7 @@ import com.dx.facade.account.resp.WalletSimpleParam;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Map;
 
 public interface WalletRPCService {
 
@@ -134,5 +135,19 @@ public interface WalletRPCService {
     CommonResp<Integer> getWithdrawLimitType(Long userId, Integer userType);
 
 
+    /**
+     * @author Dealer
+     * @description: 批量获取代理团队信用额度信息
+     * @date 2023/12/16
+     * @copyright
+     */
+    CommonResp<Map<Long, BigDecimal>> teamCreditAmount(List<Long> proxyId, Integer proxyWalletType);
 
+    /**
+     * @author Dealer
+     * @description: 获取代理团队额度信息
+     * @date 2023/12/16
+     * @copyright
+     */
+    CommonResp<BigDecimal> teamCreditAmount(Long proxyId, Integer proxyWalletType);
 }
