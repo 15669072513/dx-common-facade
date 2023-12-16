@@ -48,6 +48,13 @@ public class ProxyRebateRecordReqDTO{
      */
     @ApiModelProperty(value = "代理账号")
     private String proxyName;
+
+
+    /**
+     * 代理账号
+     */
+    @ApiModelProperty(value = "当前的登录代理账号")
+    private String currentPoxyName;
     /**
      * 代理id
      */
