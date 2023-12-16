@@ -117,6 +117,9 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     @ApiModelProperty(value = "信用额度")
     private BigDecimal creditQuota;
 
+    @ApiModelProperty(value = "信用总额")
+    private BigDecimal teamCreditTotal;
+
     @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
     
