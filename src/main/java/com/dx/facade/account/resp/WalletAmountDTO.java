@@ -32,6 +32,9 @@ public class WalletAmountDTO implements Serializable {
     @ApiModelProperty("信用总额")
     private BigDecimal creditTotal;
 
+    @ApiModelProperty("团队授信总额")
+    private BigDecimal teamCreditTotal;
+
     @ApiModelProperty("币种")
     private String currency;
 }
