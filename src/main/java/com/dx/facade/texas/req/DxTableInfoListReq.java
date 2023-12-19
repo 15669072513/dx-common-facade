@@ -77,7 +77,7 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("牌桌结束时间-结束")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss.999", timezone = "GMT+8")
     private LocalDateTime tableEndTimeTo;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
