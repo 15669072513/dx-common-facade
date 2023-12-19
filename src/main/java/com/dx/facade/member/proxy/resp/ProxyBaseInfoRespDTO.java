@@ -126,6 +126,9 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
     
+    @ApiModelProperty(value = "当前借款")
+    private BigDecimal accountsLoan;
+    
     @ApiModelProperty("代理层级")
     private Integer proxyLevel;
 
