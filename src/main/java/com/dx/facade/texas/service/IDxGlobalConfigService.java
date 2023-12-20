@@ -5,6 +5,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
 import com.dx.facade.texas.resp.DxGlobalConfigListResp;
+import com.dx.facade.texas.resp.DxGlobalConfigRaiseListAppResp;
 import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseListAppResp;
 
 import java.util.List;
@@ -92,5 +93,5 @@ public interface IDxGlobalConfigService {
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigListResp>> getRaiseConfigListForApp();
+    CommonResp<List<DxGlobalConfigRaiseListAppResp>> getRaiseConfigListForApp();
 }
