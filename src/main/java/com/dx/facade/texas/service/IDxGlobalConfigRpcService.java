@@ -40,7 +40,7 @@ public interface IDxGlobalConfigRpcService {
      * @return
      * @throws BizException
      */
-    CommonResp<Void> updateConfigVal(DxGlobalConfigValUpdateReq req) throws BizException;
+    CommonResp<Void> updateJsonConfigVal(DxGlobalConfigValUpdateReq req) throws BizException;
 
     /**
      * 根据类型查询配置信息
@@ -65,7 +65,7 @@ public interface IDxGlobalConfigRpcService {
      * @return
      * @throws BizException
      */
-    CommonResp<Void> updateSwitch(DxGlobalConfigValUpdateReq req) throws BizException;
+    CommonResp<Void> updateToggleOnOff(DxGlobalConfigValUpdateReq req) throws BizException;
 
     /**
      * 获取聊天短语列表(返回全部信息)
