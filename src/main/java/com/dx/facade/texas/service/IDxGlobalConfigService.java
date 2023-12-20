@@ -5,6 +5,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
 import com.dx.facade.texas.resp.DxGlobalConfigListResp;
+import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseListAppResp;
 
 import java.util.List;
 
@@ -66,9 +67,30 @@ public interface IDxGlobalConfigService {
     CommonResp<Void> updateSwitch(DxGlobalConfigValUpdateReq req) throws BizException;
 
     /**
-     * 获取聊天短语列表
+     * 获取聊天短语列表(返回全部信息)
      *
      * @return
      */
     CommonResp<List<DxGlobalConfigListResp>> getChatPhrasesList();
+
+    /**
+     * 获取加注配置（返回全部信息）
+     *
+     * @return
+     */
+    CommonResp<List<DxGlobalConfigListResp>> getRaiseConfigList();
+
+    /**
+     * 游戏端获取短语配置(只返回生效的，内容信息)
+     *
+     * @return
+     */
+    CommonResp<List<DxGlobalConfigShortPhraseListAppResp>> getChatPhrasesListForApp();
+
+    /**
+     * 游戏端获取加注配置(只返回生效的，内容信息)
+     *
+     * @return
+     */
+    CommonResp<List<DxGlobalConfigListResp>> getRaiseConfigListForApp();
 }
