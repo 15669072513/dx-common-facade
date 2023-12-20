@@ -4,7 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
-import com.dx.facade.texas.resp.DxGameConfigListResp;
+import com.dx.facade.texas.resp.DxGlobalConfigListResp;
 
 import java.util.List;
 
@@ -46,7 +46,7 @@ public interface IDxGlobalConfigService {
      * @param type
      * @return
      */
-    CommonResp<List<DxGameConfigListResp>> getConfigListByType(Integer type);
+    CommonResp<List<DxGlobalConfigListResp>> getConfigListByType(Integer type);
 
     /**
      * 根据配置类型列表查询配置信息
@@ -54,7 +54,7 @@ public interface IDxGlobalConfigService {
      * @param types
      * @return
      */
-    CommonResp<List<DxGameConfigListResp>> getConfigListByTypes(List<Integer> types);
+    CommonResp<List<DxGlobalConfigListResp>> getConfigListByTypes(List<Integer> types);
 
     /**
      * 更新开关类配置
@@ -70,5 +70,5 @@ public interface IDxGlobalConfigService {
      *
      * @return
      */
-    CommonResp<List<DxGameConfigListResp>> getChatPhrasesList();
+    CommonResp<List<DxGlobalConfigListResp>> getChatPhrasesList();
 }
