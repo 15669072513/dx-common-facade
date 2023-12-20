@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * 全局配置信息
  */
-public interface IDxGlobalConfigService {
+public interface IDxGlobalConfigRpcService {
 
     /**
      * 新增全局配置
