@@ -35,4 +35,11 @@ public interface ProxyLoanBillService {
     CommonResp<PageResp<ProxyLoanBillRespDTO, ProxyLoanBillSumRespDTO>> queryBillPage(ProxyLoanBillReqDTO reqDTO);
 
     CommonResp<PageResp<ProxyLoanBillPeriodRespDTO, ?>> queryBillPeriod(ProxyLoanBillPeriodReqDTO reqDTO);
+
+    /**
+     * 查询当前账期
+     * @param reqDTO reqDTO
+     * @return ProxyLoanBillPeriodRespDTO
+     */
+    CommonResp<ProxyLoanBillPeriodRespDTO> queryCurBillPeriod(ProxyLoanBillPeriodReqDTO reqDTO);
 }
