@@ -12,4 +12,5 @@ public class DownScoreReq {
     private BigDecimal amount;
     private String eventId;
     private Long eventTime;
+    private BigDecimal freezeAmount;
 }
