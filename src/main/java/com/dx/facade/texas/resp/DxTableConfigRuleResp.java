@@ -236,4 +236,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("收费比例")
     private BigDecimal chargeScale = BigDecimal.ZERO;
+
+    @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
+    private Integer preflopDelay;
 }
