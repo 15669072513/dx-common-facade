@@ -35,6 +35,15 @@ public interface IDxGlobalConfigRpcService {
      */
     CommonResp<Void> updateConfig(DxGlobalConfigReq req) throws BizException;
 
+
+    /**
+     * 新增或者更新配置
+     *
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Void> saveOrUpdateConfig(DxGlobalConfigReq req) throws BizException;
     /**
      * 更新配置值
      *
