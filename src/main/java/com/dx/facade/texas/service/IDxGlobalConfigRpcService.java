@@ -5,10 +5,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigToggleUpdateReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
-import com.dx.facade.texas.resp.DxGlobalConfigListResp;
-import com.dx.facade.texas.resp.DxGlobalConfigRaiseAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigValueAddedResp;
+import com.dx.facade.texas.resp.*;
 
 import java.util.List;
 
@@ -83,7 +80,7 @@ public interface IDxGlobalConfigRpcService {
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigListResp>> getChatPhrasesList();
+    CommonResp<List<DxGlobalConfigShortPhraseResp>> getChatPhrasesList();
 
     /**
      * 获取加注配置（返回全部信息）
