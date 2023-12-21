@@ -7,6 +7,7 @@ import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
 import com.dx.facade.texas.resp.DxGlobalConfigListResp;
 import com.dx.facade.texas.resp.DxGlobalConfigRaiseListAppResp;
 import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseListAppResp;
+import com.dx.facade.texas.resp.DxGlobalConfigValueAddedListResp;
 
 import java.util.List;
 
@@ -94,4 +95,11 @@ public interface IDxGlobalConfigRpcService {
      * @return
      */
     CommonResp<List<DxGlobalConfigRaiseListAppResp>> getRaiseConfigListForApp();
+
+    /**
+     * 游戏端获取加注配置(只返回生效的，内容信息)
+     *
+     * @return
+     */
+    CommonResp<List<DxGlobalConfigValueAddedListResp>> getValueAddedConfigList();
 }
