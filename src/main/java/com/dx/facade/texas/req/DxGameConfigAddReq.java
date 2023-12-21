@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -145,4 +146,8 @@ public class DxGameConfigAddReq implements Serializable {
 
     @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
     private Integer hideDecimals;
+
+    @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
+    private Integer preflopDelay;
+
 }

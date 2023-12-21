@@ -269,4 +269,24 @@ public class GameRecordUserHandResp {
      * 带入次数
      */
     private Long bringCount=0L;
+
+    /**
+     * 主动入池次数
+     */
+    private Long activeBringPoolNumber = 0L;
+
+    /**
+     * Walks手牌数
+     */
+    private Long walksHandNumber = 0L;
+
+    /**
+     * 翻牌前加注次数
+     */
+    private Long preFlopRaiseNumber = 0L;
+
+    /**
+     * 翻牌前的游戏手数
+     */
+    private Long preFlopHandNumber = 0L;
 }
