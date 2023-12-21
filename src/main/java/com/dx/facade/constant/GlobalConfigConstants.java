@@ -3,7 +3,7 @@ package com.dx.facade.constant;
 /**
  * 全局配置通用，固定字段
  */
-public class GlobalConfigConstants {
+public interface GlobalConfigConstants {
 
     interface CommonField {
         String TOGGLE_ON_OFF = "toggle";
