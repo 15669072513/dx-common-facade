@@ -10,8 +10,14 @@ public class GlobalConfigConstants {
     }
 
     interface CommonValue {
-        String TOGGLE_ON = "1";
-        String TOGGLE_OFF = "0";
+        Integer TOGGLE_ON = 1;
+        Integer TOGGLE_OFF = 0;
+    }
+
+    interface State {
+        Integer ENABLE = 1;//启用
+        Integer DISABLE = 0;//禁用
+        Integer LOGIC_DEL = 2;//逻辑删除
     }
 
 }
