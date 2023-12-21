@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 
 /**
- * 全局开关类配置新增
+ * 全局配置--聊天短语新增req
  */
 @Data
 public class DxGlobalConfigChatPhrasesAddReq implements Serializable {

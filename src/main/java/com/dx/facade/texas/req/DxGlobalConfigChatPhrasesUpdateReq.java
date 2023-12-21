@@ -7,11 +7,13 @@ import java.io.Serializable;
 
 
 /**
- * 全局开关类配置新增
+ * 全局配置--聊天短语更新req
  */
 @Data
 public class DxGlobalConfigChatPhrasesUpdateReq implements Serializable {
     private static final long serialVersionUID = 1L;
+    @ApiModelProperty("主键")
+    private Long id;
     @ApiModelProperty("短语排序")
     private Integer sort;
     @ApiModelProperty("短语状态")
