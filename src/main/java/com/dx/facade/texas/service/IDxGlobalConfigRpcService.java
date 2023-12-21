@@ -3,6 +3,7 @@ package com.dx.facade.texas.service;
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
+import com.dx.facade.texas.req.DxGlobalConfigToggleUpdateReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
 import com.dx.facade.texas.resp.DxGlobalConfigListResp;
 import com.dx.facade.texas.resp.DxGlobalConfigRaiseAppResp;
@@ -66,7 +67,7 @@ public interface IDxGlobalConfigRpcService {
      * @return
      * @throws BizException
      */
-    CommonResp<Void> updateToggleOnOff(DxGlobalConfigValUpdateReq req) throws BizException;
+    CommonResp<Void> updateToggleOnOff(DxGlobalConfigToggleUpdateReq req) throws BizException;
 
     /**
      * 获取聊天短语列表(返回全部信息)
