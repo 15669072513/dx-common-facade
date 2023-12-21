@@ -5,9 +5,9 @@ import com.dx.exception.BizException;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
 import com.dx.facade.texas.resp.DxGlobalConfigListResp;
-import com.dx.facade.texas.resp.DxGlobalConfigRaiseListAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseListAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigValueAddedListResp;
+import com.dx.facade.texas.resp.DxGlobalConfigRaiseAppResp;
+import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseAppResp;
+import com.dx.facade.texas.resp.DxGlobalConfigValueAddedResp;
 
 import java.util.List;
 
@@ -87,19 +87,26 @@ public interface IDxGlobalConfigRpcService {
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigShortPhraseListAppResp>> getChatPhrasesListForApp();
+    CommonResp<List<DxGlobalConfigShortPhraseAppResp>> getChatPhrasesListForApp();
 
     /**
      * 游戏端获取加注配置(只返回生效的，内容信息)
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigRaiseListAppResp>> getRaiseConfigListForApp();
+    CommonResp<List<DxGlobalConfigRaiseAppResp>> getRaiseConfigListForApp();
 
     /**
-     * 游戏端获取加注配置(只返回生效的，内容信息)
+     * 游戏端获取增值服务配置(只返回生效的)
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigValueAddedListResp>> getValueAddedConfigList();
+    CommonResp<List<DxGlobalConfigValueAddedResp>> getValueAddedConfigList();
+
+    /**
+     * 游戏端获取增值服务配置 (根据类型获取配置信息）
+     *
+     * @return
+     */
+    CommonResp<DxGlobalConfigValueAddedResp> getValueAddedConfigByType(Integer type);
 }

@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 全局配置返回信息 --- 加注(app 返回值）
  */
 @Data
-public class DxGlobalConfigRaiseListAppResp implements Serializable {
+public class DxGlobalConfigRaiseAppResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
