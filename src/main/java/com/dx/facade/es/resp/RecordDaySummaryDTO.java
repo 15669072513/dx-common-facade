@@ -24,5 +24,5 @@ public class RecordDaySummaryDTO {
     private long totalCount;
 
     @ApiModelProperty("注单列表")
-    List<GameRecordDto> list;
+    List<GameRecordGeneralDTO> list;
 }
