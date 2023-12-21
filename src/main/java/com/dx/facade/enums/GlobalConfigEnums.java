@@ -40,6 +40,21 @@ public enum GlobalConfigEnums {
         return desc;
     }
 
+    public String getBizTypeName() {
+        return bizTypeName;
+    }
+
+    public String getGameName() {
+        return gameName;
+    }
+
+    public Integer getGameType() {
+        return gameType;
+    }
+
+    public Integer getGroup() {
+        return group;
+    }
 
     public static GlobalConfigEnums getByBizType(Integer bizType) {
         for (GlobalConfigEnums configEnum : values()) {
@@ -52,7 +67,7 @@ public enum GlobalConfigEnums {
 
     public static GlobalConfigEnums getByDbType(Integer dbType) {
         for (GlobalConfigEnums configEnum : values()) {
-            if (configEnum.getBizType().equals(dbType)) {
+            if (configEnum.getDbType().equals(dbType)) {
                 return configEnum;
             }
         }
