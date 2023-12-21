@@ -6,7 +6,7 @@ public enum GlobalConfigEnums {
     CHAT_EMOJ(3, 302, null, 1, "表情", "德州扑克/短牌", "表情"),
     CHAT_VOICE(4, 303, null, 1, "聊天语音", "德州扑克/短牌", "聊天语音"),
     VIEW_UNREVEALED_CARD(5, 304, null, 1, "查看未发布公牌", "德州扑克/短牌", "查看未发布公牌"),
-    CHAT_BARRAGE_CONTENT(10, 305, null, 3, "聊天短语内容", "德州扑克/短牌", "聊天短语内容配置"),
+    CHAT_PHRASES_CONTENT(10, 305, null, 3, "聊天短语内容", "德州扑克/短牌", "聊天短语内容配置"),
     TEXAS_RAISE(6, 100, TexasGameTypeEnum.TEXAS.code(), 2, "倍数加注", "德州扑克", "德州倍数加注"),
     TEXAS_POT_RAISE(7, 101, TexasGameTypeEnum.TEXAS.code(), 2, "底池加注", "德州扑克", "德州底池加注"),
     SHORT_DECK_RAISE(8, 200, TexasGameTypeEnum.SHORT_CARD.code(), 2, "倍数加注", "短牌", "短牌倍数加注"),
