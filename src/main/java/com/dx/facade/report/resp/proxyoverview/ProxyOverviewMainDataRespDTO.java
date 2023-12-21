@@ -18,8 +18,10 @@ import java.time.LocalDateTime;
  */
 @Data
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @ApiModel(value = "ProxyOverviewMainDataRespDTO", description = "代理账单主显示")
-public class ProxyOverviewMainDataRespDTO implements Serializable {
+public class ProxyOverviewMainDataRespDTO {
 
     @ApiModelProperty(value = "id")
     private Long id;
