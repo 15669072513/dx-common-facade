@@ -20,10 +20,10 @@ public class DxGlobalConfigRaiseAppResp implements Serializable {
     private String gameName;
 
     @ApiModelProperty("牌局类型")
-    private String gameType;
+    private Integer gameType;
 
     @ApiModelProperty("加注类型")
-    private String raiseType;
+    private Integer raiseType;
 
     @ApiModelProperty("配置value")
     private String val;
