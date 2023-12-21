@@ -11,7 +11,9 @@ public interface GlobalConfigConstants {
 
     interface CommonValue {
         Integer TOGGLE_ON = 1;
+        String TOGGLE_ON_NAME = "on";
         Integer TOGGLE_OFF = 0;
+        String TOGGLE_OFF_NAME = "off";
     }
 
     interface State {
