@@ -12,11 +12,15 @@ import java.io.Serializable;
 public class DxGlobalConfigRaiseListAppResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
     @ApiModelProperty("主键")
     private Long id;
 
     @ApiModelProperty("牌局名称")
     private String gameName;
+
+    @ApiModelProperty("牌局类型")
+    private String gameType;
 
     @ApiModelProperty("加注类型")
     private String raiseType;
