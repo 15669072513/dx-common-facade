@@ -80,14 +80,14 @@ public interface IDxGlobalConfigRpcService {
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigListResp>> getChatPhrasesList();
+    CommonResp<List<DxGlobalConfigShortPhraseResp>> getChatPhrasesList();
 
     /**
      * 获取加注配置（返回全部信息）
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigShortPhraseResp>> getRaiseConfigList();
+    CommonResp<List<DxGlobalConfigListResp>> getRaiseConfigList();
 
     /**
      * 游戏端获取短语配置(只返回生效的，内容信息)
