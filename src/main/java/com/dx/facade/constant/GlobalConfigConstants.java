@@ -22,4 +22,9 @@ public interface GlobalConfigConstants {
         Integer LOGIC_DEL = 2;//逻辑删除
     }
 
+    interface ChatPhrasesConfigField {
+        String CONTENT = "content";
+        String SORT = "sort";
+    }
+
 }
