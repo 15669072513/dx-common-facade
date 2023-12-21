@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 全局配置返回信息 --- 增值服务开关类配置(app 返回值）
  */
 @Data
-public class DxGlobalConfigValueAddedListResp implements Serializable {
+public class DxGlobalConfigValueAddedResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("主键")

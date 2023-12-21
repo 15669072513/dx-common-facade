@@ -9,7 +9,7 @@ import java.io.Serializable;
  * 全局配置返回信息 --- 聊天短语（app返回值）
  */
 @Data
-public class DxGlobalConfigShortPhraseListAppResp implements Serializable {
+public class DxGlobalConfigShortPhraseAppResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("排序字段")
