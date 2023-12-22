@@ -18,8 +18,8 @@ public class DxGlobalConfigMultipleValUpdateReq implements Serializable {
     private Long id;
     @ApiModelProperty("配置的key")
     private String keyword;
-    @ApiModelProperty("val pair")
-    private Map vals;
+    @ApiModelProperty("val-pair")
+    private String vals;
     @ApiModelProperty("配置类型")
     private Integer type;
     @ApiModelProperty("配置类型")
