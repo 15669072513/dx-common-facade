@@ -6,16 +6,15 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.validation.constraints.NotNull;
+
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
-@ApiModel("代理账单主显示请求参数")
 public class ProxyOverviewMainReq {
 
-    @ApiModelProperty(value = "本期账单开始日期", required = true, example = "20231213")
+    @ApiModelProperty(value = "本期账单开始日期", example = "20231213")
     private Integer cycleStartDate;
 
-    @ApiModelProperty(value = "本期账单结束日期", required = true, example = "20231221")
+    @ApiModelProperty(value = "本期账单结束日期", example = "20231221")
     private Integer cycleEndDate;
 
     @ApiModelProperty(value = "代理id")

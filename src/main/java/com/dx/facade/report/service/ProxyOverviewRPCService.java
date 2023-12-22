@@ -20,5 +20,5 @@ public interface ProxyOverviewRPCService {
 
     ProxyOverviewSubordinateMemberRespDTO querySubordinateMember(Long var1, Long var2);
 
-    ProxyOverviewMainDataRespDTO queryMainData(Long proxyId, Long merchantId, ProxyOverviewMainReq param);
+    ProxyOverviewMainDataRespDTO queryMainData(Long var1, Long var2, ProxyOverviewMainReq var3);
 }
