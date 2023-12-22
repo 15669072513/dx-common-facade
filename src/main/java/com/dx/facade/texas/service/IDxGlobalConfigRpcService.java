@@ -2,6 +2,7 @@ package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
+import com.dx.facade.texas.req.DxGlobalConfigMultipleValUpdateReq;
 import com.dx.facade.texas.req.DxGlobalConfigReq;
 import com.dx.facade.texas.req.DxGlobalConfigToggleUpdateReq;
 import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
@@ -41,6 +42,7 @@ public interface IDxGlobalConfigRpcService {
      * @throws BizException
      */
     CommonResp<Void> saveOrUpdateConfig(DxGlobalConfigReq req) throws BizException;
+
     /**
      * 更新配置值
      *
@@ -49,6 +51,16 @@ public interface IDxGlobalConfigRpcService {
      * @throws BizException
      */
     CommonResp<Void> updateJsonConfigVal(DxGlobalConfigValUpdateReq req) throws BizException;
+
+    /**
+     * 更新配置值
+     *
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Void> updateJsonConfigMultipleVal(DxGlobalConfigMultipleValUpdateReq req) throws BizException;
+
 
     /**
      * 根据类型查询配置信息
