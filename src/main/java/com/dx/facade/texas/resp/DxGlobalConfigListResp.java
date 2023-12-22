@@ -31,8 +31,17 @@ public class DxGlobalConfigListResp implements Serializable {
     @ApiModelProperty("配置修改时间")
     private String updateAt;
 
-    @ApiModelProperty("配置修改人")
-    private String opName;
+
+    @ApiModelProperty(
+            value = "创建人"
+    )
+    private String createdBy;
+
+
+    @ApiModelProperty(
+            value = "修改人"
+    )
+    private String updatedBy;
 
     @ApiModelProperty("配置类型")
     private Integer type;
