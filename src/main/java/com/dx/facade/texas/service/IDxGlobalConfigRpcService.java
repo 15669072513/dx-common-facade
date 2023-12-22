@@ -1,14 +1,10 @@
 package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.texas.req.DxGlobalConfigReq;
-import com.dx.facade.texas.req.DxGlobalConfigToggleUpdateReq;
-import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
-import com.dx.facade.texas.resp.DxGlobalConfigListResp;
-import com.dx.facade.texas.resp.DxGlobalConfigRaiseAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigShortPhraseAppResp;
-import com.dx.facade.texas.resp.DxGlobalConfigValueAddedResp;
+import com.dx.facade.texas.req.*;
+import com.dx.facade.texas.resp.*;
 
 import java.util.List;
 
@@ -35,6 +31,16 @@ public interface IDxGlobalConfigRpcService {
      */
     CommonResp<Void> updateConfig(DxGlobalConfigReq req) throws BizException;
 
+
+    /**
+     * 新增或者更新配置
+     *
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Void> saveOrUpdateConfig(DxGlobalConfigReq req) throws BizException;
+
     /**
      * 更新配置值
      *
@@ -43,6 +49,16 @@ public interface IDxGlobalConfigRpcService {
      * @throws BizException
      */
     CommonResp<Void> updateJsonConfigVal(DxGlobalConfigValUpdateReq req) throws BizException;
+
+    /**
+     * 更新配置值
+     *
+     * @param req
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Void> updateJsonConfigMultipleVal(DxGlobalConfigMultipleValUpdateReq req) throws BizException;
+
 
     /**
      * 根据类型查询配置信息
@@ -74,7 +90,14 @@ public interface IDxGlobalConfigRpcService {
      *
      * @return
      */
-    CommonResp<List<DxGlobalConfigListResp>> getChatPhrasesList();
+    CommonResp<List<DxGlobalConfigShortPhraseResp>> getChatPhrasesList();
+
+    /**
+     * 获取聊天短语列表(分页查询)
+     *
+     * @return
+     */
+    CommonResp<PageResp<DxGlobalConfigShortPhraseResp, Void>> getChatPhrasesPageList(DxGlobalConfigChatPhrasesListReq req);
 
     /**
      * 获取加注配置（返回全部信息）

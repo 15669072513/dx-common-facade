@@ -48,4 +48,7 @@ public class ProxyLoanBillAppRespDTO {
 
     @ApiModelProperty("读取状态,0-未读,1-已读")
     private Integer readStatus;
+
+    @ApiModelProperty("版本,0-旧版,1-1.34")
+    private Integer version;
 }

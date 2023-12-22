@@ -26,4 +26,7 @@ public class DxGamePersonalReq implements Serializable {
 
     @ApiModelProperty("牌桌ID")
     private Long tableId;
+
+    @ApiModelProperty("重跑标记：0 按注单 1 按行为数据")
+    private Integer isRecord = 0;
 }

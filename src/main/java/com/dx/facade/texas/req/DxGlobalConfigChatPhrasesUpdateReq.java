@@ -18,7 +18,17 @@ public class DxGlobalConfigChatPhrasesUpdateReq implements Serializable {
     private Integer sort;
     @ApiModelProperty("短语状态")
     private Integer state;
-    @ApiModelProperty("操作人id")
-    private String opId;
+    @ApiModelProperty(
+            value = "创建人",
+            hidden = true
+    )
+    private String createdBy;
+
+
+    @ApiModelProperty(
+            value = "修改人",
+            hidden = true
+    )
+    private String updatedBy;
 
 }
