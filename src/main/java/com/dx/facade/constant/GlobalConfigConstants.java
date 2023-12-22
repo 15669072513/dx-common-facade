@@ -7,6 +7,8 @@ public interface GlobalConfigConstants {
 
     interface CommonField {
         String TOGGLE_ON_OFF = "toggle";
+
+        String ENABLE_FLAG = "enableFlag";
     }
 
     interface CommonValue {
