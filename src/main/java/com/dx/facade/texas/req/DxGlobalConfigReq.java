@@ -29,5 +29,18 @@ public class DxGlobalConfigReq implements Serializable {
     @ApiModelProperty("配置类型")
     private Integer type;
 
+    @ApiModelProperty(
+            value = "创建人",
+            hidden = true
+    )
+    private String createdBy;
+
+
+    @ApiModelProperty(
+            value = "修改人",
+            hidden = true
+    )
+    private String updatedBy;
+
 
 }
