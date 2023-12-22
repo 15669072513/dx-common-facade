@@ -17,8 +17,6 @@ public class DxGlobalConfigToggleUpdateReq implements Serializable {
     private Long id;
     @ApiModelProperty("开关值")
     private Integer toggleVal;
-    @ApiModelProperty("操作人id")
-    private String opId;
     @ApiModelProperty(
             value = "创建人",
             hidden = true

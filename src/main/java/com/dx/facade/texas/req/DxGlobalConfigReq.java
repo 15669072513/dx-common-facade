@@ -23,9 +23,6 @@ public class DxGlobalConfigReq implements Serializable {
     @ApiModelProperty("配置的val")
     private String val;
 
-    @ApiModelProperty("操作人id")
-    private String opId;
-
     @ApiModelProperty("配置类型")
     private Integer type;
 
