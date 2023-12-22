@@ -107,15 +107,15 @@ public class ProxyLoanBillRespDTO {
     private BigDecimal netAmount;
     @ApiModelProperty(value = "直属会员总输赢")
     private BigDecimal directlyMemberNetAmount;
-    @ApiModelProperty(value = "会员总返水")
+    @ApiModelProperty(value = "全部会员总返水")
     private BigDecimal memberRebateAmount;
-    @ApiModelProperty(value = "会员总存款")
+    @ApiModelProperty(value = "全部会员总存款")
     private BigDecimal memberDepositTimes;
-    @ApiModelProperty(value = "会员总取款")
+    @ApiModelProperty(value = "全部会员总取款")
     private BigDecimal memberWithdrawAmount;
-    @ApiModelProperty(value = "会员借款")
+    @ApiModelProperty(value = "全部会员借款")
     private BigDecimal memberLoan;
-    @ApiModelProperty(value = "会员还款")
+    @ApiModelProperty(value = "全部会员还款")
     private BigDecimal memberRepayment;
     @ApiModelProperty(value = "外放额度")
     private BigDecimal outsideAmount;
