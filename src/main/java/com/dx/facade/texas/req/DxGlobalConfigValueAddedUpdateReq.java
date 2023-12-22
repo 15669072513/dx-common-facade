@@ -1,10 +1,12 @@
 package com.dx.facade.texas.req;
 
+import com.alibaba.fastjson.JSONObject;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import org.apache.commons.lang3.StringUtils;
 
 import java.io.Serializable;
-import java.util.List;
+import java.util.Arrays;
 
 
 /**
@@ -19,28 +21,28 @@ public class DxGlobalConfigValueAddedUpdateReq implements Serializable {
     @ApiModelProperty("配置的key")
     private String keyword;
     @ApiModelProperty("val-pair")
-    private ValueAddedField vals;
+    private String vals;
     @ApiModelProperty("配置类型")
     private Integer type;
     @ApiModelProperty("配置类型")
     private Integer state;
     @ApiModelProperty(value = "创建人", hidden = true)
     private String createdBy;
-
     @ApiModelProperty(value = "修改人", hidden = true)
     private String updatedBy;
 
 
-    @Data
-    public class ValueAddedField implements Serializable {
-        @ApiModelProperty("配置主键")
-        private Integer chatContentType;
-        @ApiModelProperty("配置的key")
-        private Integer enableFlag;
-        @ApiModelProperty("配置主键")
-        private Integer recordTotalTime;
-        @ApiModelProperty("配置的key")
-        private Integer sendMessageInterval;
+    public JSONObject parseVals() {
+        if (StringUtils.isEmpty(this.vals)) {
+            return null;
+        }
+        String[] items = this.vals.split(",");
+        JSONObject obj = new JSONObject();
+        Arrays.stream(items).forEach(itm -> {
+            String[] kv = itm.split("_");
+            obj.put(kv[0], kv[1]);
+        });
+        return obj;
     }
 
 }
