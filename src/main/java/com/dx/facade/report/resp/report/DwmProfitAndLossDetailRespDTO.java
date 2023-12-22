@@ -16,6 +16,9 @@ import java.math.BigDecimal;
 @ApiModel(value = "AppProfitAndLossDetailDTO", description = "信用盘APP-个人中心-盈亏详情")
 public class DwmProfitAndLossDetailRespDTO {
 
+    @ApiModelProperty("报表日期")
+    private Integer reportDate;
+
     @ApiModelProperty("盈亏")
     private BigDecimal totalNetAmount;
 

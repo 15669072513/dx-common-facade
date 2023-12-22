@@ -1,11 +1,9 @@
 package com.dx.facade.texas.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.texas.req.DxGlobalConfigMultipleValUpdateReq;
-import com.dx.facade.texas.req.DxGlobalConfigReq;
-import com.dx.facade.texas.req.DxGlobalConfigToggleUpdateReq;
-import com.dx.facade.texas.req.DxGlobalConfigValUpdateReq;
+import com.dx.facade.texas.req.*;
 import com.dx.facade.texas.resp.*;
 
 import java.util.List;
@@ -93,6 +91,13 @@ public interface IDxGlobalConfigRpcService {
      * @return
      */
     CommonResp<List<DxGlobalConfigShortPhraseResp>> getChatPhrasesList();
+
+    /**
+     * 获取聊天短语列表(分页查询)
+     *
+     * @return
+     */
+    CommonResp<PageResp<DxGlobalConfigShortPhraseResp, Void>> getChatPhrasesPageList(DxGlobalConfigChatPhrasesListReq req);
 
     /**
      * 获取加注配置（返回全部信息）
