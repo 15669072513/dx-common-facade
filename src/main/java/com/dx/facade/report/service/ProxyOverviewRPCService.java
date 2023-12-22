@@ -5,6 +5,8 @@ import com.dx.facade.common.chart.Option;
 import com.dx.facade.report.param.proxyoverview.ProxyOverviewCompareDataReqDTO;
 import com.dx.facade.report.param.proxyoverview.ProxyOverviewCompareNewDataReqDTO;
 import com.dx.facade.report.param.proxyoverview.ProxyOverviewMainReq;
+import com.dx.facade.report.param.proxyoverview.ProxyReturnLoanReqDTO;
+import com.dx.facade.report.resp.proxy.ProxyReturnLoanRespDTO;
 import com.dx.facade.report.resp.proxyoverview.*;
 
 public interface ProxyOverviewRPCService {
@@ -21,4 +23,6 @@ public interface ProxyOverviewRPCService {
     ProxyOverviewSubordinateMemberRespDTO querySubordinateMember(Long var1, Long var2);
 
     ProxyOverviewMainDataRespDTO queryMainData(Long proxyId, Long merchantId, ProxyOverviewMainReq param);
+
+    ProxyReturnLoanRespDTO queryReturnLoan(Long proxyId, Long merchantId, ProxyReturnLoanReqDTO proxyReturnLoanReqDTO);
 }
