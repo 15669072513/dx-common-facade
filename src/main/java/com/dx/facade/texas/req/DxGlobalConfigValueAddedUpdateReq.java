@@ -4,6 +4,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.io.Serializable;
+import java.util.List;
 
 
 /**
@@ -31,7 +32,7 @@ public class DxGlobalConfigValueAddedUpdateReq implements Serializable {
 
 
     @Data
-    public class ValueAddedField {
+    public class ValueAddedField implements Serializable {
         @ApiModelProperty("配置主键")
         private Integer chatContentType;
         @ApiModelProperty("配置的key")
