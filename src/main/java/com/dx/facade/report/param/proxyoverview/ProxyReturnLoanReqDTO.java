@@ -14,11 +14,11 @@ import javax.validation.constraints.NotNull;
 @Data
 public class ProxyReturnLoanReqDTO {
 
-    @ApiModelProperty(value = "本期结束时间", required = true, example = "20221216")
+    @ApiModelProperty(value = "本期结束时间", required = true, example = "20231206")
     @NotNull(message = "查询时间不能为空")
     private Integer queryDateStart;
 
-    @ApiModelProperty(value = "本期开始时间", required = true, example = "20221210")
+    @ApiModelProperty(value = "本期开始时间", required = true, example = "20231209")
     @NotNull(message = "查询时间不能为空")
     private Integer queryDateEnd;
 
