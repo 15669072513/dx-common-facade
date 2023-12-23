@@ -137,4 +137,7 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
     private Integer hideDecimals;
+
+    @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
+    private Integer preflopDelay;
 }

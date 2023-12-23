@@ -180,4 +180,7 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("收费比例")
     private BigDecimal chargeScale;
+
+    @ApiModelProperty("preflop看牌 0-配置没开启  1-关 2-开 默认为0")
+    private Integer preflopDelay;
 }
