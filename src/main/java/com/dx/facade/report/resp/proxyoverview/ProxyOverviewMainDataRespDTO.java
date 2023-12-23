@@ -88,4 +88,22 @@ public class ProxyOverviewMainDataRespDTO {
 
     @ApiModelProperty(value = "数据修改时间")
     private LocalDateTime updatedAt;
+
+    @ApiModelProperty(value= "代理人数")
+    private int proxyNum;
+
+    @ApiModelProperty(value = "会员人数")
+    private int memberNum;
+
+    @ApiModelProperty(value = "非活跃会员")
+    private int noActiveMemberNum;
+
+    @ApiModelProperty(value = "本期返点")
+    private BigDecimal personRebateAmount;
+
+    @ApiModelProperty(value = "应还账款")
+    private BigDecimal returnLoan;
+
+    @ApiModelProperty(value = "可提现额")
+    private BigDecimal withdrawable;
 }
