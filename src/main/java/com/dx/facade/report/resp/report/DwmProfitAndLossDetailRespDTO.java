@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "AppProfitAndLossDetailDTO", description = "信用盘APP-个人中心-盈亏详情")
+@ApiModel(value = "DwmProfitAndLossDetailRespDTO", description = "信用盘APP-个人中心-盈亏详情")
 public class DwmProfitAndLossDetailRespDTO {
 
     @ApiModelProperty("报表日期")
