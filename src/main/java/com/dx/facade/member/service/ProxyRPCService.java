@@ -8,7 +8,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.GetProxyPathByUserNameParamDTO;
 import com.dx.facade.member.param.JoinCodeIsRepeatParamDTO;
-import com.dx.facade.member.param.ProxyBindMobileOrEmailDTO;
+import com.dx.facade.member.param.UserBindMobileOrEmailDTO;
 import com.dx.facade.member.param.ProxyInfoParamDTO;
 import com.dx.facade.member.param.ProxyInfoRpcEditReqDTO;
 import com.dx.facade.member.param.ProxyListPageParamDTO;
@@ -249,7 +249,7 @@ public interface ProxyRPCService {
 	 * @return
 	 * @throws BizException
 	 */
-	CommonResp<Boolean> bindMobileOrEmail(ProxyBindMobileOrEmailDTO params) throws BizException;
+	CommonResp<Boolean> bindMobileOrEmail(UserBindMobileOrEmailDTO params) throws BizException;
     
 
 }
