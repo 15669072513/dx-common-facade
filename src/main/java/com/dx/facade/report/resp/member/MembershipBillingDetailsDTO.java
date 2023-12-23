@@ -93,7 +93,7 @@ public class MembershipBillingDetailsDTO {
     private BigDecimal memberRebateAmount;
 
     @ApiModelProperty(value = "会员总存款")
-    private BigDecimal memberDepositTimes;
+    private BigDecimal memberDepositAmount;
 
     @ApiModelProperty(value = "会员总取款")
     private BigDecimal memberWithdrawAmount;
@@ -120,7 +120,7 @@ public class MembershipBillingDetailsDTO {
     private BigDecimal directlyMemberRebateAmount;
 
     @ApiModelProperty(value = "直属会员总存款")
-    private BigDecimal directlyMemberDepositTimes;
+    private BigDecimal directlyMemberDepositAmount;
 
     @ApiModelProperty(value = "直属会员总取款")
     private BigDecimal directlyMemberWithdrawAmount;
