@@ -16,10 +16,12 @@ import lombok.Setter;
 public class MembershipBillingDetailsReqDTO {
     @ApiModelProperty("账单号")
     private String billNo;
-    @ApiModelProperty("比较上期账单")
+    @ApiModelProperty("是否比较上期账单")
     private Boolean isCompareLastBill;
     @JsonIgnore
     private Long userId;
     @JsonIgnore
     private Long merchantId;
+    @JsonIgnore
+    private Integer reportDate;
 }
