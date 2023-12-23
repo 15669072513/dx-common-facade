@@ -38,5 +38,4 @@ public class VenueWhitelistResp {
 
     @ApiModelProperty("修改时间")
     private LocalDateTime updatedAt;
-
 }
