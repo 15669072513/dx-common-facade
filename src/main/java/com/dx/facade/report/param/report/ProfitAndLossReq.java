@@ -1,8 +1,5 @@
 package com.dx.facade.report.param.report;
 
-import com.dx.facade.enums.BwVenueTypeEnum;
-import com.dx.facade.report.enums.ProfitAndLossTypeEnum;
-import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.models.auth.In;
@@ -11,6 +8,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * @author jackpot
+ */
 @Data
 @Builder
 @NoArgsConstructor
