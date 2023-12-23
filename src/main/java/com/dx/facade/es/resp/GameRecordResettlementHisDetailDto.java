@@ -158,4 +158,7 @@
 
      @ApiModelProperty(value = "重算次数")
      private Integer obSettleCount;
+
+     @ApiModelProperty(value = "历史结算注单ID", hidden = true)
+     private String betOrderId;
 }
