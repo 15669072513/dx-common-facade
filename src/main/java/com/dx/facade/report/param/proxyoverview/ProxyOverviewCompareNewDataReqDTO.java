@@ -15,21 +15,19 @@ import java.util.Objects;
 @Data
 public class ProxyOverviewCompareNewDataReqDTO {
 
-    @ApiModelProperty(value = "本期结束时间", required = true, example = "20221216")
+    @ApiModelProperty(value = "本期结束时间", required = true, example = "20231206")
     @NotNull(message = "查询时间不能为空")
     private Integer queryDateStart;
 
-    @ApiModelProperty(value = "本期开始时间", required = true, example = "20221210")
+    @ApiModelProperty(value = "本期开始时间", required = true, example = "20231209")
     @NotNull(message = "查询时间不能为空")
     private Integer queryDateEnd;
 
     @ApiModelProperty(value = "数据类型:\n" +
-            "1=新注册存款金额\n" +
-            "2=老用户存款金额\n" +
-            "3=首存金额\n" +
             "4=总存款金额\n" +
-            "5=投注金额\n" +
+            "16=总取款额\n" +
             "6=有效投注\n" +
+            "17=总返点\n" +
             "7=游戏盈亏\n" +
             "8=新注册人数\n" +
             "9=老用户存款人数\n" +
