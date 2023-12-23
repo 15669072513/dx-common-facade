@@ -19,9 +19,9 @@ import lombok.NoArgsConstructor;
 public class ProfitAndLossReq {
 
     @ApiModelProperty(value = "本期账单开始日期", example = "20231213")
-    private Integer periodStDate;
+    private Long periodStDate;
     @ApiModelProperty(value = "本期账单结束日期", example = "20231221")
-    private Integer periodEnDate;
+    private Long periodEnDate;
     @ApiModelProperty(value = "会员id")
     private Long memberId;
 

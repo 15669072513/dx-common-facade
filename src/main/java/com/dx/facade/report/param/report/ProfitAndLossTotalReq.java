@@ -15,9 +15,9 @@ import lombok.NoArgsConstructor;
 public class ProfitAndLossTotalReq {
 
     @ApiModelProperty(value = "本期账单开始日期", example = "20231213")
-    private Integer periodStDate;
+    private Long periodStDate;
     @ApiModelProperty(value = "本期账单结束日期", example = "20231221")
-    private Integer periodEnDate;
+    private Long periodEnDate;
     @ApiModelProperty(value = "数据类型:ty=体育,zr=真人,dj=电竞,qp=棋牌,cp=彩票,DZ_CARD=德州")
     private String bwVenueType;
     @ApiModelProperty(value = "会员id")

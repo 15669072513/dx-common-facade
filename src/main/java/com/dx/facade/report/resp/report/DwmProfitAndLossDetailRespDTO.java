@@ -35,21 +35,21 @@ public class DwmProfitAndLossDetailRespDTO {
     private BigDecimal netAmount;
 
     @ApiModelProperty("德州")
-    private String texasAmount;
+    private BigDecimal texasAmount;
 
     @ApiModelProperty("真人")
-    private String actualAmount;
+    private BigDecimal actualAmount;
 
     @ApiModelProperty("体育")
-    private String sportsAmount;
+    private BigDecimal sportsAmount;
 
     @ApiModelProperty("彩票")
-    private String lotteryTicketAmount;
+    private BigDecimal lotteryTicketAmount;
 
     @ApiModelProperty("电竞")
-    private String esportsAmount;
+    private BigDecimal esportsAmount;
 
     @ApiModelProperty("棋牌")
-    private String chessAmount;
+    private BigDecimal chessAmount;
 
 }
