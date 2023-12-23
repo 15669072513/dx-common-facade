@@ -84,5 +84,8 @@ public class GameRecordParam extends PageRequest {
     @ApiModelProperty(value = "会员输赢-最大值")
     private BigDecimal netAmountMax;
 
+    @ApiModelProperty(value = "重算次数")
+    private Integer obSettleCount;
+
 }
 
