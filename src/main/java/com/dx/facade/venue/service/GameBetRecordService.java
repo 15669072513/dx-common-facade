@@ -8,6 +8,8 @@ import com.dx.facade.es.resp.GameRecordResettlementHisDetailDto;
 import com.dx.facade.venue.req.BettingRecordReq;
 import com.dx.facade.venue.req.ReSettleRecordReq;
 
+import java.util.List;
+
 /**
  * 游戏注单服务
  */
@@ -43,5 +45,5 @@ public interface GameBetRecordService {
      * @return
      * @throws BizException
      */
-    PageResp<GameRecordResettlementHisDetailDto, Void> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
+    List<GameRecordResettlementHisDetailDto> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
 }
