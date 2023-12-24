@@ -45,5 +45,5 @@ public interface GameBetRecordService {
      * @return
      * @throws BizException
      */
-    List<GameRecordResettlementHisDetailDto> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
+    List<GameRecordDto> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
 }
