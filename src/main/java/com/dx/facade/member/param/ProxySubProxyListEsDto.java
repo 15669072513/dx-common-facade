@@ -97,12 +97,18 @@ public class ProxySubProxyListEsDto {
 
     @ApiModelProperty(value = "信用额度")
     private BigDecimal creditQuota;
-    
-    @ApiModelProperty(value = "团队信用额度")
-    private BigDecimal teamCreditTotal;
-    
+
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+
+	@ApiModelProperty(value = "应还借款" )
+	private BigDecimal borrowAmount;
+
+	@ApiModelProperty(value = "外放额度" )
+	private BigDecimal dispatchAmount;
+
+	@ApiModelProperty(value = "授信总额" )
+	private BigDecimal teamCreditTotal;
     
     @ApiModelProperty("备注")
     private String remark;
