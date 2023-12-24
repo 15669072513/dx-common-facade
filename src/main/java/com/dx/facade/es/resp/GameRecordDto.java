@@ -130,4 +130,7 @@ public class GameRecordDto {
 
     @ApiModelProperty(value = "重算次数")
     private Integer obSettleCount;
+
+    @ApiModelProperty(value = "注单id")
+    private String betOrderId;
 }
