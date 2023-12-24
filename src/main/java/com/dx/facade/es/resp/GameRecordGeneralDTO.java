@@ -139,6 +139,8 @@ public class GameRecordGeneralDTO {
     private String judgeResult;
     @ApiModelProperty("局号")
     private String roundNo;
+    @ApiModelProperty("投注项名称,注意LIST中也有此字段")
+    private String playOptionName;
     /**
      * 彩票注单详情：
      * a. 模式

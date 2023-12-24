@@ -50,13 +50,15 @@ public class GameRecordDjAndTyDetailDto {
     private String matchName;
     @ApiModelProperty("投注类型1 ：早盘赛事 ，2： 滚球盘赛事，3： 冠军盘赛事，4： 虚拟赛事，5： 电竞赛事")
     private Integer matchType;
-    @ApiModelProperty("让球值")
-    private String handicap;
-    @ApiModelProperty("电竞团队名称")
+    @ApiModelProperty("盘口值(数字类型,包含让球和全场进球数)")
+    private BigDecimal handicap;
+    @ApiModelProperty("游戏名称")
     private String sportName;
     @ApiModelProperty("基准分")
     private String scoreBenchmark;
     @ApiModelProperty("投注项名称")
     private String playOptionName;
+    @ApiModelProperty("真人战队名称")
+    private String teamName;
 
 }
