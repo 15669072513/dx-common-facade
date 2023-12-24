@@ -18,8 +18,8 @@ public class ProfitAndLossTotalReq {
     private Long periodStDate;
     @ApiModelProperty(value = "本期账单结束日期", example = "20231221")
     private Long periodEnDate;
-    @ApiModelProperty(value = "数据类型:ty=体育,zr=真人,dj=电竞,qp=棋牌,cp=彩票,DZ_CARD=德州")
-    private String bwVenueType;
+    @ApiModelProperty(value = "数据类型:all=全部,net=输赢,bet=注单,valid=投注额,rebate=返水,total=盈亏")
+    private String amountType;
     @ApiModelProperty(value = "会员id")
     private Long memberId;
 }
