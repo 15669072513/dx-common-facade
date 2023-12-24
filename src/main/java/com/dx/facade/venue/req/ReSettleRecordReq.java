@@ -1,6 +1,5 @@
 package com.dx.facade.venue.req;
 
-import com.dx.facade.common.PageRequest;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
