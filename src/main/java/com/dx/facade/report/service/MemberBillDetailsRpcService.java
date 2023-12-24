@@ -22,4 +22,6 @@ public interface MemberBillDetailsRpcService {
      * @return
      */
     CommonResp<MembershipBillingDetailsDTO> getLastMemberBillDetails(MembershipBillingDetailsReqDTO reqDTO);
+
+    CommonResp<MembershipBillingDetailsDTO> getCurrentMemberBillDetails(Long userId,Long headerMerchantId);
 }

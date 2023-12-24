@@ -99,6 +99,10 @@ public class ProxyLoanBillRespDTO {
     private BigDecimal betAmount;
     @ApiModelProperty(value = "直属会员总投注")
     private BigDecimal directlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注")
+    private BigDecimal validBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注")
+    private BigDecimal directlyMemberValidBetAmount;
     @ApiModelProperty(value = "全部会员注单量")
     private BigDecimal betCount;
     @ApiModelProperty(value = "直属会员注单量")

@@ -19,23 +19,23 @@ import lombok.NoArgsConstructor;
  * @date 2021/04/29
  */
 @Data
-@ApiModel(value = "代理绑定手机号码邮箱参数", description = "代理绑定手机号码邮箱参数")
+@ApiModel(value = "用户绑定手机号码邮箱参数", description = "用户绑定手机号码邮箱参数")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProxyBindMobileOrEmailDTO implements BaseParmDTO {
+public class UserBindMobileOrEmailDTO implements BaseParmDTO {
     
 	@ApiModelProperty(value = "商户id (20)")
 	private Long merchantId;
 
-	@ApiModelProperty(value = "代理id")
-	@NotNull(message = "代理id不能为空")
+	@ApiModelProperty(value = "用户id")
+	@NotNull(message = "用户id不能为空")
 	private Long userId;
 
-    @ApiModelProperty(value = "代理手机号码,邮箱允许其中一个为空")
+    @ApiModelProperty(value = "用户手机号码,邮箱允许其中一个为空")
     private String userPhone;
 
-	@ApiModelProperty(value = "代理手机号码,邮箱允许其中一个为空")
+	@ApiModelProperty(value = "用户手机号码,邮箱允许其中一个为空")
 	private String userEmail;
 
 	@ApiModelProperty(value = "验证码")
