@@ -96,14 +96,17 @@ public class RecordDetailList implements Serializable {
 
     @JsonInclude(value= JsonInclude.Include.NON_NULL)
     @ApiModelProperty("带入钱最多的展示为土豪的用户id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long bringChipSumMaxId;
 
     @JsonInclude(value= JsonInclude.Include.NON_NULL)
     @ApiModelProperty("赢钱最多的展示为MVP的用户id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long netAmountMaxId;
 
     @JsonInclude(value= JsonInclude.Include.NON_NULL)
     @ApiModelProperty("输钱最多的展示为大鱼的用户id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long NetAmountMinId;
 
     public static RecordDetailList covert(GameOrderRecordDetail.GameOrderRecord resp) {
