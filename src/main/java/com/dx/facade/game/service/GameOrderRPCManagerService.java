@@ -25,7 +25,7 @@ public interface GameOrderRPCManagerService {
     /**
      *  俱乐部贡献
      */
-    CommonResp<PageResp<GameOrderClubSumResp, Void>> gameOrderClubContributeList(GameOrderClubSumReq req);
+    CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
     /**
      *  查询手牌id
      */
