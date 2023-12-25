@@ -41,4 +41,7 @@ public class ProxyLoanBillAppReqDTO {
 
     @ApiModelProperty(value = "账单类型", notes = "0-未出账单,1-已出账单")
     private Integer billType;
+
+    @ApiModelProperty(value = "")
+    private Integer filterFlag;
 }
