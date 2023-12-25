@@ -18,6 +18,7 @@ public class InsuranceInfoResp {
   private Long id;
 
   @ApiModelProperty(value = "牌桌id")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long tableId;
 
   @ApiModelProperty(value = "牌桌编码")
@@ -30,12 +31,14 @@ public class InsuranceInfoResp {
   private Long tableType;
 
   @ApiModelProperty(value = "俱乐部id")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long clubId;
 
   @ApiModelProperty(value = "俱乐部名称")
   private String clubName;
 
   @ApiModelProperty(value = "手牌号")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long handId;
 
   @ApiModelProperty(value = "手牌编码")
@@ -48,9 +51,11 @@ public class InsuranceInfoResp {
   private String eventId;
 
   @ApiModelProperty(value = "游戏类型注单id（关联注单表bw_game_record_dx主键id）")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long orderId;
 
   @ApiModelProperty(value = "保险类型注单id（关联注单表bw_game_record_dx主键id，保险注单类型id可以为空，没有购买就为空）")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long insuredOrderId;
 
   @ApiModelProperty(value = "购买类型 0放弃购买 1主动购买 2强制购买")
@@ -60,6 +65,7 @@ public class InsuranceInfoResp {
   private Integer roundCode;
 
   @ApiModelProperty(value = "玩家ID")
+  @JsonSerialize(using = ToStringSerializer.class)
   private Long userId;
 
   @ApiModelProperty(value = "玩家账号")

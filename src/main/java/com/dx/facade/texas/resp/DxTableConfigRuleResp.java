@@ -1,6 +1,8 @@
 package com.dx.facade.texas.resp;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import io.swagger.annotations.ApiOperation;
 import lombok.Data;
@@ -17,6 +19,7 @@ public class DxTableConfigRuleResp implements Serializable {
      * 房主id
      */
     @ApiModelProperty("房主id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long holderId;
 
     /***
@@ -29,6 +32,7 @@ public class DxTableConfigRuleResp implements Serializable {
      * 牌桌id
      */
     @ApiModelProperty("牌桌id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long tableId;
 
     /***
@@ -41,6 +45,7 @@ public class DxTableConfigRuleResp implements Serializable {
      * 俱乐部id
      */
     @ApiModelProperty("俱乐部id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long clubId;
 
     /***

@@ -1,5 +1,6 @@
 package com.dx.facade.member.param;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -75,4 +76,8 @@ public class MemberListParamDTO {
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
+
+    @ApiModelProperty("上级代理名称")
+    @TableField("parent_proxy_name")
+    private String parentProxyName;
 }
