@@ -127,4 +127,10 @@ public class GameRecordDto {
      */
     @ApiModelProperty("抽水贡献")
     private BigDecimal pumpContribution;
+
+    @ApiModelProperty(value = "重算次数")
+    private Integer obSettleCount;
+
+    @ApiModelProperty(value = "注单id")
+    private String betOrderId;
 }
