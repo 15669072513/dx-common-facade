@@ -27,8 +27,17 @@ public class ProxyLoanBillAppReqDTO {
     @ApiModelProperty(value = "结束日期", example = "20231226")
     private Integer endDate;
 
-    @ApiModelProperty(value = "过滤标志", notes = "0:不过滤，1：应还账款 2：可提现额，默认是0")
-    private Integer filterFlag = 0;
+    @ApiModelProperty(value = "应还账款最小值")
+    private Integer minShouldRepayAmount;
+
+    @ApiModelProperty(value = "应还账款最大值")
+    private Integer maxShouldRepayAmount;
+
+    @ApiModelProperty(value = "可提现金额最小值")
+    private Integer minWithdrawAvailable;
+
+    @ApiModelProperty(value = "可提现金额最大值")
+    private Integer maxWithdrawAvailable;
 
     @ApiModelProperty(value = "账单类型", notes = "0-未出账单,1-已出账单")
     private Integer billType;
