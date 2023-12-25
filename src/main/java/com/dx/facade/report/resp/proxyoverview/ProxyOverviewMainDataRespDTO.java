@@ -106,4 +106,13 @@ public class ProxyOverviewMainDataRespDTO {
 
     @ApiModelProperty(value = "可提现额")
     private BigDecimal withdrawable;
+
+    @ApiModelProperty(value = "下级本期返点")
+    private BigDecimal underRebateAmount;
+
+    @ApiModelProperty(value = "下级应还账款")
+    private BigDecimal underReturnLoan;
+
+    @ApiModelProperty(value = "下级可提现额")
+    private BigDecimal underWithdrawable;
 }
