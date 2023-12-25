@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface InsuranceInfoRpcService {
 
-  CommonResp<PageResp<InsuranceInfoResp, ?>> getInsuranceInfoList(InsuranceInfoListReq req);
+  CommonResp<PageResp<InsuranceInfoResp, Void>> getInsuranceInfoList(InsuranceInfoListReq req);
 
   CommonResp<List<InsureIsOursRecordResp>> getInsuranceInfoByTableId(Long tableId);
 
