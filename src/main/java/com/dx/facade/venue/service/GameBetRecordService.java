@@ -2,10 +2,7 @@ package com.dx.facade.venue.service;
 
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.es.resp.GameRecordBetAmountAggregation;
-import com.dx.facade.es.resp.GameRecordDto;
-import com.dx.facade.es.resp.GameRecordResettlementHisDetailDto;
-import com.dx.facade.es.resp.RecordDaySummaryDTO;
+import com.dx.facade.es.resp.*;
 import com.dx.facade.venue.req.BettingRecordReq;
 import com.dx.facade.venue.req.ReSettleRecordReq;
 
@@ -46,5 +43,5 @@ public interface GameBetRecordService {
      * @return
      * @throws BizException
      */
-    List<GameRecordDto> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
+    List<GameRecordGeneralDTO> betReSettleRecordList(ReSettleRecordReq req) throws BizException;
 }
