@@ -51,4 +51,7 @@ public class ProxyLoanBillAppRespDTO {
 
     @ApiModelProperty("版本,0-旧版,1-1.34")
     private Integer version;
+
+    @ApiModelProperty("账单用户名")
+    private Integer userName;
 }
