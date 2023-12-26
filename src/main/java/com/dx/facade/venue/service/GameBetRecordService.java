@@ -5,6 +5,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.es.resp.GameRecordBetAmountAggregation;
 import com.dx.facade.es.resp.GameRecordDto;
 import com.dx.facade.es.resp.GameRecordResettlementHisDetailDto;
+import com.dx.facade.es.resp.RecordDaySummaryDTO;
 import com.dx.facade.venue.req.BettingRecordReq;
 import com.dx.facade.venue.req.ReSettleRecordReq;
 
@@ -27,7 +28,7 @@ public interface GameBetRecordService {
      * @return
      * @throws BizException
      */
-    PageResp<GameRecordDto, Void> betRecordList(BettingRecordReq req) throws BizException;
+    PageResp<RecordDaySummaryDTO, Void> betRecordList(BettingRecordReq req) throws BizException;
 
     /**
      * 代理中心-会员管理-查询直属会员游戏记录
