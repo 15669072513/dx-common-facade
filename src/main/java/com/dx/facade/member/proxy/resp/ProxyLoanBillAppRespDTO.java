@@ -53,5 +53,5 @@ public class ProxyLoanBillAppRespDTO {
     private Integer version;
 
     @ApiModelProperty("账单用户名")
-    private Integer userName;
+    private String userName;
 }
