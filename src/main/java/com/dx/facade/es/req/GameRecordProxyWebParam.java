@@ -27,6 +27,9 @@ public class GameRecordProxyWebParam extends PageRequest implements BaseParmDTO 
 	
 	@ApiModelProperty(value = "场馆code,见BwVenueEnum")
 	private String venueCode;
+
+	@ApiModelProperty(value = "是否重算, 0-是，1-否")
+	private Integer settlementType;
 	
 	@ApiModelProperty(value = "会员账号")
 	private String memberName;
