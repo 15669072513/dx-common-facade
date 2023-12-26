@@ -43,6 +43,9 @@ public class WalletBalanceDTO implements BaseParmDTO {
     @ApiModelProperty("牌桌编码")
     private String tableCode;
 
+    @ApiModelProperty("德州局服务费-冻结到牌桌")
+    private BigDecimal freezeAmount;
+
     @Override
     public void check() {
         Assert.notNull(this.serialNo, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("serialNo"));

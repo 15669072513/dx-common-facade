@@ -175,4 +175,9 @@ public class GameRecordGeneralDTO {
     @ApiModelProperty("牌局Id")
     private String roundId;
 
+    @ApiModelProperty("重算次数")
+    private Integer obSettleCount;
+    @ApiModelProperty(value = "注单id(重算注单用)")
+    private String betOrderId;
+
 }

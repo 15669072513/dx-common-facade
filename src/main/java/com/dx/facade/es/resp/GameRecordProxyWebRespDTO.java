@@ -28,6 +28,9 @@ public class GameRecordProxyWebRespDTO {
 
     @ApiModelProperty("注单状态 0-未结算 1已结算 2-不结算 ")
     private Integer obBetStatus;
+
+    @ApiModelProperty("注单重算次数标识0-未重算 大于0表示重算次数")
+    private Integer obSettleCount;
 	
 	@ApiModelProperty("游戏名称")
 	private String gameTypeName;
