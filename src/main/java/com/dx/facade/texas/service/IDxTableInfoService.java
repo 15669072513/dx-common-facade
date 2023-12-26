@@ -93,8 +93,9 @@ public interface IDxTableInfoService {
      * 游戏牌桌解散（综合后台强制解散）
      *
      * @param tableId 牌桌id
+*      @param isZk 1：中控 2：代理
      */
-    CommonResp<Void> gameDissolve(Long tableId);
+    CommonResp<Void> gameDissolve(Long tableId, Integer isZk);
 
     /**
      * 游戏牌桌解散（游戏房间内房主解散）
