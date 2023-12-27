@@ -13,4 +13,5 @@ public class DownScoreReq {
     private String eventId;
     private Long eventTime;
     private BigDecimal freezeAmount;
+    private Integer downScoreType;//下分类型
 }

@@ -13,11 +13,8 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "DwmProfitAndLossDetailRespDTO", description = "盈亏详情")
-public class DwmProfitAndLossDetailRespDTO {
-
-    @ApiModelProperty("报表日期")
-    private Integer reportDate;
+@ApiModel(value = "DwmProfitAndLossPersonalCenterDetailResp", description = "个人中心-盈亏详情")
+public class DwmProfitAndLossPersonalCenterDetailResp {
 
     @ApiModelProperty("盈亏")
     private BigDecimal totalNetAmount;
@@ -33,23 +30,4 @@ public class DwmProfitAndLossDetailRespDTO {
 
     @ApiModelProperty("输赢")
     private BigDecimal netAmount;
-
-    @ApiModelProperty("德州")
-    private BigDecimal texasAmount;
-
-    @ApiModelProperty("真人")
-    private BigDecimal actualAmount;
-
-    @ApiModelProperty("体育")
-    private BigDecimal sportsAmount;
-
-    @ApiModelProperty("彩票")
-    private BigDecimal lotteryTicketAmount;
-
-    @ApiModelProperty("电竞")
-    private BigDecimal esportsAmount;
-
-    @ApiModelProperty("棋牌")
-    private BigDecimal chessAmount;
-
 }

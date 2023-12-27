@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 
 import com.dx.exception.BizException;
 import com.dx.facade.es.resp.GameRecordDetailDto;
+import com.dx.facade.es.resp.GameRecordResettlementDetailDto;
 
 /**
  * ES注单相关的rpc
@@ -52,4 +53,13 @@ public interface GameRecordRpcService {
      * @throws BizException
      */
     GameRecordDetailDto getGameRecordDetail(String id) throws BizException;
+
+    /**
+     * 查询重结算注单详情
+     *
+     * @param id
+     * @return
+     * @throws BizException
+     */
+    GameRecordResettlementDetailDto getGameRecordResettlementDetail(String id) throws BizException;
 }

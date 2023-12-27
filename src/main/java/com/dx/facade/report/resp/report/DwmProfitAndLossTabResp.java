@@ -13,26 +13,11 @@ import java.math.BigDecimal;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "DwmProfitAndLossDetailRespDTO", description = "盈亏详情")
-public class DwmProfitAndLossDetailRespDTO {
+@ApiModel(value = "DwmProfitAndLossTabResp", description = "盈亏详情")
+public class DwmProfitAndLossTabResp {
 
     @ApiModelProperty("报表日期")
     private Integer reportDate;
-
-    @ApiModelProperty("盈亏")
-    private BigDecimal totalNetAmount;
-
-    @ApiModelProperty("返水")
-    private BigDecimal rebateAmount;
-
-    @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount;
-
-    @ApiModelProperty("注单")
-    private BigDecimal betCount;
-
-    @ApiModelProperty("输赢")
-    private BigDecimal netAmount;
 
     @ApiModelProperty("德州")
     private BigDecimal texasAmount;
@@ -51,5 +36,8 @@ public class DwmProfitAndLossDetailRespDTO {
 
     @ApiModelProperty("棋牌")
     private BigDecimal chessAmount;
+
+    @ApiModelProperty("总计")
+    private BigDecimal totalAmount;
 
 }

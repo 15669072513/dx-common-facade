@@ -116,6 +116,8 @@ public class GameRecordGeneralDTO {
     private List<GameRecordDjAndTyDetailDto> betDetails;
     @ApiModelProperty("串关值：例如3串1")
     private String seriesName;
+    @ApiModelProperty("单关或串关值：例如3串1")
+    private String seriesValue;
     @ApiModelProperty(value = "体育、电竞注单详情", hidden = true)
     private String details;
     @ApiModelProperty("俱乐部id")
@@ -139,6 +141,8 @@ public class GameRecordGeneralDTO {
     private String judgeResult;
     @ApiModelProperty("局号")
     private String roundNo;
+    @ApiModelProperty("投注项名称,注意LIST中也有此字段")
+    private String playOptionName;
     /**
      * 彩票注单详情：
      * a. 模式
@@ -172,5 +176,10 @@ public class GameRecordGeneralDTO {
     private String platformName;
     @ApiModelProperty("牌局Id")
     private String roundId;
+
+    @ApiModelProperty("重算次数")
+    private Integer obSettleCount;
+    @ApiModelProperty(value = "注单id(重算注单用)")
+    private String betOrderId;
 
 }

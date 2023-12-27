@@ -76,6 +76,10 @@ public class ProxyLoanBillSumRespDTO {
     private BigDecimal subBetAmount;
     @ApiModelProperty(value = "直属会员总投注小计")
     private BigDecimal subDirectlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注小计")
+    private BigDecimal subValidBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注小计")
+    private BigDecimal subDirectlyMemberValidBetAmount;
     @ApiModelProperty(value = "全部会员注单量小计")
     private BigDecimal subBetCount;
     @ApiModelProperty(value = "直属会员注单量小计")
@@ -113,6 +117,10 @@ public class ProxyLoanBillSumRespDTO {
     private BigDecimal totalBetAmount;
     @ApiModelProperty(value = "直属会员总投注总计")
     private BigDecimal totalDirectlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注总计")
+    private BigDecimal totalValidBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注总计")
+    private BigDecimal totalDirectlyMemberValidBetAmount;
     @ApiModelProperty(value = "全部会员注单量总计")
     private BigDecimal totalBetCount;
     @ApiModelProperty(value = "直属会员注单量总计")
