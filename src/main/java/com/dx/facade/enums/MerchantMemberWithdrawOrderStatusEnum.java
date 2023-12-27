@@ -53,7 +53,8 @@ public enum MerchantMemberWithdrawOrderStatusEnum {
                     WithdrawOrderStatus.一审拒绝.code(),
                     WithdrawOrderStatus.二审拒绝.code(),
                     WithdrawOrderStatus.三审拒绝.code(),
-                    WithdrawOrderStatus.二审审核.code(),
+                    //DXZK-2346,订单状态去掉二审审核
+                    //WithdrawOrderStatus.二审审核.code(),
                     WithdrawOrderStatus.待三审.code(),
                     WithdrawOrderStatus.三审审核.code(),
                     WithdrawOrderStatus.已出款.code(),
