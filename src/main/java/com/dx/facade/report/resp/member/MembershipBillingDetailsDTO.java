@@ -148,4 +148,8 @@ public class MembershipBillingDetailsDTO {
 
     @ApiModelProperty(value = "版本")
     private Integer version;
+    @ApiModelProperty("开始时间-格式化秒")
+    private String reportStDateStr;
+    @ApiModelProperty("开始时间-格式化秒")
+    private String reportEdDateStr;
 }
