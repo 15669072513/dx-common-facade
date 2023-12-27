@@ -97,6 +97,14 @@ public interface IDxTableInfoService {
     CommonResp<Void> gameDissolve(Long tableId);
 
     /**
+     * 游戏牌桌解散（代理后台强制解散）
+     *
+     * @param tableId 牌桌id
+     * @param isSure 是否确认
+     */
+    CommonResp<Void> proxyGameDissolve(Long tableId, boolean isSure);
+
+    /**
      * 游戏牌桌解散（游戏房间内房主解散）
      *
      * @param tableId 牌桌id

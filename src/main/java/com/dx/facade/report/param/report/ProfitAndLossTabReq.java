@@ -20,7 +20,7 @@ public class ProfitAndLossTabReq {
     private Long periodStDate;
     @ApiModelProperty(value = "本期账单结束日期", example = "20231221")
     private Long periodEnDate;
-    @ApiModelProperty(value = "数据类型:ty=体育,zr=真人,dj=电竞,qp=棋牌,cp=彩票,DZ_CARD=德州")
+    @ApiModelProperty(value = "数据类型: all=全部,ty=体育,zr=真人,dj=电竞,qp=棋牌,cp=彩票,DZ_CARD=德州")
     private String bwVenueType;
     @ApiModelProperty(value = "数据类型: 1=场馆盈亏，2=返水盈利，3=有效投注",required = true, example = "1")
     private Integer profitLossTab;

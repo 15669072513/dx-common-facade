@@ -13,7 +13,7 @@ public class DxGlobalConfigShortPhraseAppResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("排序字段")
-    private Integer sort;
+    private Long sort;
     @ApiModelProperty("短语内容")
     private String content;
 

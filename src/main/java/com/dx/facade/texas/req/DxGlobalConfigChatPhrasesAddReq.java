@@ -15,7 +15,7 @@ public class DxGlobalConfigChatPhrasesAddReq implements Serializable {
     @ApiModelProperty("短语内容")
     private String content;
     @ApiModelProperty("短语排序")
-    private Integer sort;
+    private Long sort;
     @ApiModelProperty(
             value = "创建人",
             hidden = true

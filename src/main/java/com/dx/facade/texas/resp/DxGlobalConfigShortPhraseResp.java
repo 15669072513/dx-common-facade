@@ -17,7 +17,7 @@ public class DxGlobalConfigShortPhraseResp implements Serializable {
     private Long id;
 
     @ApiModelProperty("排序字段")
-    private Integer sort;
+    private Long sort;
 
     @ApiModelProperty("短语内容")
     private String content;

@@ -39,7 +39,7 @@ public class DepositWithdrawSummaryDTO implements Serializable {
     @ApiModelProperty("取款总额")
     private BigDecimal withdrawTotal;
 
-    @ApiModelProperty("取款次数")
+    @ApiModelProperty("总取款次数 = 大额取款次数 + 普通取款次数")
     private Integer withdrawTimes;
 
     @ApiModelProperty("最近一笔取款")
