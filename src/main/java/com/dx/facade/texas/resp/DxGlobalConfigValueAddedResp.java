@@ -19,8 +19,8 @@ public class DxGlobalConfigValueAddedResp implements Serializable {
     @ApiModelProperty("是否开启标记")
     private Integer enableFlag;
     @ApiModelProperty("发送消息间隔")
-    private Integer sendMessageInterval;
+    private Long sendMessageInterval;
     @ApiModelProperty("录音总时长")
-    private Integer recordTotalTime;
+    private Long recordTotalTime;
 
 }
