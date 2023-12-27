@@ -34,7 +34,6 @@ public class BaseRebateRateParamDTO implements Serializable {
     private Long merchantId;
     
     @ApiModelProperty("用户类型 0：会员 1：代理")
-    @NotNull(message = "用户类型不能为空")
     private Integer userType;
     
     @ApiModelProperty("用户Id")
