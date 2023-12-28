@@ -21,4 +21,12 @@ public class ProxyLoanBillPeriodRespDTO {
 
     @ApiModelProperty("账单结束时间 格式HHmmss")
     private String periodEnTime;
+
+    @ApiModelProperty("账单开始时间戳")
+    private Long periodStTimeMillis;
+
+    @ApiModelProperty("账单结束时间戳")
+    private Long periodEnTimeMillis;
+
+
 }
