@@ -54,4 +54,7 @@ public class ProxyLoanBillAppRespDTO {
 
     @ApiModelProperty("账单用户名")
     private String userName;
+
+    @ApiModelProperty("账单日期时间")
+    private Integer reportDateTime;
 }
