@@ -116,6 +116,8 @@ public class GameRecordGeneralDTO {
     private List<GameRecordDjAndTyDetailDto> betDetails;
     @ApiModelProperty("串关值：例如3串1")
     private String seriesName;
+    @ApiModelProperty("单关或串关值：例如3串1")
+    private String seriesValue;
     @ApiModelProperty(value = "体育、电竞注单详情", hidden = true)
     private String details;
     @ApiModelProperty("俱乐部id")
