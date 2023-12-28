@@ -31,6 +31,6 @@ public interface GameRecordEsRpcService {
      * @param req
      * @return
      */
-    public CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
+    CommonResp<GameOrderRecordDetailResp> queryGameOrderDetailList(GameOrderRecordDetailReq req);
 
 }
