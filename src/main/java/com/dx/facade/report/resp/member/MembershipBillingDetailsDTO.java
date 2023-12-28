@@ -1,5 +1,7 @@
 package com.dx.facade.report.resp.member;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -148,8 +150,14 @@ public class MembershipBillingDetailsDTO {
 
     @ApiModelProperty(value = "版本")
     private Integer version;
-    @ApiModelProperty("开始时间-格式化秒")
+    @ApiModelProperty("开始时间-格式化")
     private String reportStDateStr;
-    @ApiModelProperty("开始时间-格式化秒")
+    @ApiModelProperty("开始时间-格式化")
     private String reportEdDateStr;
+    @ApiModelProperty("开始时间-格式化时间戳")
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long  reportStDateTimestamp;
+    @ApiModelProperty("开始时间-格式化时间戳")
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long reportEnDateTimestamp;
 }
