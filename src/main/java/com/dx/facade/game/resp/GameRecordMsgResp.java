@@ -1,5 +1,7 @@
 package com.dx.facade.game.resp;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -19,6 +21,7 @@ public class GameRecordMsgResp implements Serializable {
     private Long id;
 
     @ApiModelProperty(value = "牌桌主键")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long tableId;
 
     @ApiModelProperty(value = "牌桌编码")

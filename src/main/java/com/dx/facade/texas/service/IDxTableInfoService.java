@@ -102,7 +102,7 @@ public interface IDxTableInfoService {
      * @param tableId 牌桌id
      * @param isSure 是否确认
      */
-    CommonResp<Void> proxyGameDissolve(Long tableId, boolean isSure);
+    CommonResp<Void> proxyGameDissolve(Long tableId, String isSure);
 
     /**
      * 游戏牌桌解散（游戏房间内房主解散）
