@@ -24,4 +24,6 @@ public class MembershipBillingDetailsReqDTO {
     private Long merchantId;
     @JsonIgnore
     private Integer reportDate;
+    @JsonIgnore
+    private Integer acctType;
 }
