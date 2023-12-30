@@ -37,5 +37,10 @@ public class ResetPassWordReqDto implements BaseParmDTO {
         Assert.isTrue(!passWord.equals(confirmPassWord), "密码和确认密码不一致");
 
     }
+
+	@Override
+	public String toString() {
+		return "ResetPassWordReqDto [username=" + username + "]";
+	}
     
 }
