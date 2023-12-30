@@ -86,4 +86,45 @@ public class ProxyLoanBillRespDTO {
 
     @ApiModelProperty("0-实际账单，1-参考计算账单")
     private Integer applyType;
+
+    @ApiModelProperty("团队授信总额")
+    private BigDecimal teamCreditTotal;
+    @ApiModelProperty(value = "团队返点")
+    private BigDecimal rebateAmount;
+    @ApiModelProperty(value = "代理个人返点")
+    private BigDecimal personRebateAmount;
+    @ApiModelProperty(value = "代理个人取款")
+    private BigDecimal totalWithdrawAmount;
+    @ApiModelProperty(value = "全部会员总投注")
+    private BigDecimal betAmount;
+    @ApiModelProperty(value = "直属会员总投注")
+    private BigDecimal directlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注")
+    private BigDecimal validBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注")
+    private BigDecimal directlyMemberValidBetAmount;
+    @ApiModelProperty(value = "全部会员注单量")
+    private BigDecimal betCount;
+    @ApiModelProperty(value = "直属会员注单量")
+    private BigDecimal directlyMemberBetCount;
+    @ApiModelProperty(value = "全部会员总输赢")
+    private BigDecimal netAmount;
+    @ApiModelProperty(value = "直属会员总输赢")
+    private BigDecimal directlyMemberNetAmount;
+    @ApiModelProperty(value = "全部会员总返水")
+    private BigDecimal memberRebateAmount;
+    @ApiModelProperty(value = "全部会员总存款")
+    private BigDecimal memberDepositAmount;
+    @ApiModelProperty(value = "全部会员总取款")
+    private BigDecimal memberWithdrawAmount;
+    @ApiModelProperty(value = "全部会员借款")
+    private BigDecimal memberLoan;
+    @ApiModelProperty(value = "全部会员还款")
+    private BigDecimal memberRepayment;
+    @ApiModelProperty(value = "外放额度")
+    private BigDecimal outsideAmount;
+    @ApiModelProperty(value = "授信总额")
+    private BigDecimal totalCreditAmount;
+    @ApiModelProperty("应还借款")
+    private BigDecimal shouldRepay;
 }

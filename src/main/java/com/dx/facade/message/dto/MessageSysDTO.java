@@ -36,6 +36,9 @@ import lombok.Data;
      @ApiModelProperty("替换参数")
      private List<MessageSysParamsDTO> params;
 
+    @ApiModelProperty("附加数据,如账单消息跳转详情的id")
+    private MessageNoticeExtraDTO extraData;
+
      public void check() {
          Assert.notNull(merchantId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("merchantId"));
          Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));

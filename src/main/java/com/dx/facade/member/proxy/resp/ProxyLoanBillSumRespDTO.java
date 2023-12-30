@@ -63,4 +63,86 @@ public class ProxyLoanBillSumRespDTO {
 
     @ApiModelProperty("授信额度总计")
     private BigDecimal totalCreditQuota;
+
+    @ApiModelProperty("团队授信总额小计")
+    private BigDecimal subTeamCreditTotal;
+    @ApiModelProperty(value = "团队返点小计")
+    private BigDecimal subRebateAmount;
+    @ApiModelProperty(value = "代理个人返点小计")
+    private BigDecimal subPersonRebateAmount;
+    @ApiModelProperty(value = "代理个人取款小计")
+    private BigDecimal subTotalWithdrawAmount;
+    @ApiModelProperty(value = "全部会员总投注小计")
+    private BigDecimal subBetAmount;
+    @ApiModelProperty(value = "直属会员总投注小计")
+    private BigDecimal subDirectlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注小计")
+    private BigDecimal subValidBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注小计")
+    private BigDecimal subDirectlyMemberValidBetAmount;
+    @ApiModelProperty(value = "全部会员注单量小计")
+    private BigDecimal subBetCount;
+    @ApiModelProperty(value = "直属会员注单量小计")
+    private BigDecimal subDirectlyMemberBetCount;
+    @ApiModelProperty(value = "全部会员总输赢小计")
+    private BigDecimal subNetAmount;
+    @ApiModelProperty(value = "直属会员总输赢小计")
+    private BigDecimal subDirectlyMemberNetAmount;
+    @ApiModelProperty(value = "会员总返水小计")
+    private BigDecimal subMemberRebateAmount;
+    @ApiModelProperty(value = "会员总存款小计")
+    private BigDecimal subMemberDepositAmount;
+    @ApiModelProperty(value = "会员总取款小计")
+    private BigDecimal subMemberWithdrawAmount;
+    @ApiModelProperty(value = "会员借款小计")
+    private BigDecimal subMemberLoan;
+    @ApiModelProperty(value = "会员还款小计")
+    private BigDecimal subMemberRepayment;
+    @ApiModelProperty(value = "外放额度小计")
+    private BigDecimal subOutsideAmount;
+    @ApiModelProperty(value = "授信总额小计")
+    private BigDecimal subTotalCreditAmount;
+    @ApiModelProperty("应还借款小计")
+    private BigDecimal subShouldRepay;
+
+    @ApiModelProperty("团队授信总额总计")
+    private BigDecimal totalTeamCreditTotal;
+    @ApiModelProperty(value = "团队返点总计")
+    private BigDecimal totalRebateAmount;
+    @ApiModelProperty(value = "代理个人返点总计")
+    private BigDecimal totalPersonRebateAmount;
+    @ApiModelProperty(value = "代理个人取款总计")
+    private BigDecimal totalTotalWithdrawAmount;
+    @ApiModelProperty(value = "全部会员总投注总计")
+    private BigDecimal totalBetAmount;
+    @ApiModelProperty(value = "直属会员总投注总计")
+    private BigDecimal totalDirectlyMemberBetAmount;
+    @ApiModelProperty(value = "全部会员总有效投注总计")
+    private BigDecimal totalValidBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注总计")
+    private BigDecimal totalDirectlyMemberValidBetAmount;
+    @ApiModelProperty(value = "全部会员注单量总计")
+    private BigDecimal totalBetCount;
+    @ApiModelProperty(value = "直属会员注单量总计")
+    private BigDecimal totalDirectlyMemberBetCount;
+    @ApiModelProperty(value = "全部会员总输赢总计")
+    private BigDecimal totalNetAmount;
+    @ApiModelProperty(value = "直属会员总输赢总计")
+    private BigDecimal totalDirectlyMemberNetAmount;
+    @ApiModelProperty(value = "会员总返水总计")
+    private BigDecimal totalMemberRebateAmount;
+    @ApiModelProperty(value = "会员总存款总计")
+    private BigDecimal totalMemberDepositAmount;
+    @ApiModelProperty(value = "会员总取款总计")
+    private BigDecimal totalMemberWithdrawAmount;
+    @ApiModelProperty(value = "会员借款总计")
+    private BigDecimal totalMemberLoan;
+    @ApiModelProperty(value = "会员还款总计")
+    private BigDecimal totalMemberRepayment;
+    @ApiModelProperty(value = "外放额度总计")
+    private BigDecimal totalOutsideAmount;
+    @ApiModelProperty(value = "授信总额总计")
+    private BigDecimal totalTotalCreditAmount;
+    @ApiModelProperty("应还借款总计")
+    private BigDecimal totalShouldRepay;
 }

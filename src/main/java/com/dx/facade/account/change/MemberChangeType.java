@@ -79,7 +79,6 @@ public enum MemberChangeType implements IChangeType {
     //v3_cash_withdraw_by_official(111, "官方给会员提现下分", MemberBizType.down_score.code().toString()),
     v3_proxy_help_credit_repay(112, "代理帮信用还款", MemberBizType.v2_repay.code().toString()),
 
-
     //***************单一钱包账变类***************start*****************************************************
 
     //***************彩票单一钱包账变类************start*********

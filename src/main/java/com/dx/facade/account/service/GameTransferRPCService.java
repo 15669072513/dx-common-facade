@@ -29,6 +29,15 @@ public interface GameTransferRPCService {
 
     /**
      * 下分 德州转出到现金钱包
+     * @param walletBalanceDTO
+     * @return
+     * @throws BizException
+     */
+    CommonResp<Void> texasTransferOutSync(WalletBalanceDTO walletBalanceDTO) throws BizException;
+
+
+    /**
+     * 下分 德州转出到现金钱包 批量下分接口
      * @param list
      * @return
      * @throws BizException
