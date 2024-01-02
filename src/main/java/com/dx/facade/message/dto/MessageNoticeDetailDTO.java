@@ -96,4 +96,7 @@ public class MessageNoticeDetailDTO implements Serializable {
 
     @ApiModelProperty("消息类别:0会员消息,1代理消息")
     private Integer noticeCategory;
+
+    @ApiModelProperty("附加数据,如账单消息跳转详情的id")
+    private MessageNoticeExtraDTO extraData;
 }

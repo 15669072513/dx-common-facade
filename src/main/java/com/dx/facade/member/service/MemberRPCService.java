@@ -230,4 +230,10 @@ public interface MemberRPCService {
 	 */
 	CommonResp<List<Long>> getMemberIdsByTopProxyId(Long topProxyId);
 
+	/**
+	 * 根据代理名称和代理商户查询代理下属全部会员信息
+	 * @return
+	 */
+	CommonResp<List<MemberInfoRespDTO>> memberListByParentProxy(MemberListParamDTO paramDTO);
+
 }

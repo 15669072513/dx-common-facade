@@ -61,7 +61,6 @@ public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty(value = "结算结束时间 yyyy-MM-dd HH:mm:ss")
     private String settlementEndTime;
 
-
     @ApiModelProperty(value = "牌桌开始时间 yyyy-MM-dd HH:mm:ss")
     private String tableStartTime;
 

@@ -4,6 +4,8 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.member.proxy.req.ProxyLoanBillPeriodReqDTO;
+import com.dx.facade.member.proxy.resp.ProxyLoanBillPeriodRespDTO;
 import com.dx.facade.report.param.proxynetamountday.ProxyDayNetAmountReqDTO;
 import com.dx.facade.report.param.proxynetamountday.ProxyNetAmountDayBackReqDTO;
 import com.dx.facade.report.param.proxynetamountday.ProxyNetAmountDayReqDTO;
@@ -125,4 +127,11 @@ public interface ProxyLoanBillRPCService {
      * @throws BizException
      */
     CommonResp<PageResp<ProxyNetAmountDayRespDTO,?>> queryProxyNetAmountMonthDetail(ProxyNetAmountDayReqDTO reqDTO) throws Exception;
+
+    /**
+     * 查询当前账期
+     * @param reqDTO reqDTO
+     * @return ProxyLoanBillPeriodRespDTO
+     */
+    CommonResp<ProxyLoanBillPeriodRespDTO> queryCurBillPeriod(ProxyLoanBillPeriodReqDTO reqDTO);
 }

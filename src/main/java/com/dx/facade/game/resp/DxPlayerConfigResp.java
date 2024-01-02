@@ -2,6 +2,7 @@ package com.dx.facade.game.resp;
 
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -29,9 +30,9 @@ public class DxPlayerConfigResp implements Serializable {
 
 
   @ApiModelProperty("倍数加注List")
-  private List<String> multipleRaiseList;
+  private List<String> multipleRaiseList=new ArrayList<>();
 
   @ApiModelProperty("底池加注List")
-  private List<String> potRaiseList;
+  private List<String> potRaiseList=new ArrayList<>();
 
 }
