@@ -1,5 +1,7 @@
 package com.dx.facade.report.resp.member;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
@@ -148,4 +150,20 @@ public class MembershipBillingDetailsDTO {
 
     @ApiModelProperty(value = "版本")
     private Integer version;
+    @ApiModelProperty("开始时间-格式化")
+    private String reportStDateStr;
+    @ApiModelProperty("开始时间-格式化")
+    private String reportEdDateStr;
+    @ApiModelProperty("开始时间-格式化时间戳")
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long  reportStDateTimestamp;
+    @ApiModelProperty("开始时间-格式化时间戳")
+    @JsonSerialize(using = ToStringSerializer.class)
+    private Long reportEnDateTimestamp;
+    @ApiModelProperty(value = "全部会员总有效投注")
+    private BigDecimal validBetAmount;
+    @ApiModelProperty(value = "直属会员总有效投注")
+    private BigDecimal directlyMemberValidBetAmount;
+    @ApiModelProperty(value = "净资产，现金余额+冻结金额-应还借款 ")
+    private BigDecimal netAssetsNew;
 }

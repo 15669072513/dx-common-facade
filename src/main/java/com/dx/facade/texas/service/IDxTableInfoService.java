@@ -32,14 +32,6 @@ public interface IDxTableInfoService {
     CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPage(DxTableInfoListReq req);
 
     /**
-     * 根据条件查询牌桌列表信息-翻页（APP使用）
-     *
-     * @param req
-     * @return
-     */
-    CommonResp<PageResp<DxTableInfoListResp, DxTableSummaryResp>> listPageApp(DxTableInfoListReq req);
-
-    /**
      * 查询牌桌总抽水
      * @param req
      * @return
@@ -102,7 +94,7 @@ public interface IDxTableInfoService {
      * @param tableId 牌桌id
      * @param isSure 是否确认
      */
-    CommonResp<Void> proxyGameDissolve(Long tableId, boolean isSure);
+    CommonResp<Void> proxyGameDissolve(Long tableId, String isSure);
 
     /**
      * 游戏牌桌解散（游戏房间内房主解散）

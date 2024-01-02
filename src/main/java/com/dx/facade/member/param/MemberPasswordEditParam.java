@@ -43,4 +43,10 @@ public class MemberPasswordEditParam {
     private String merchantName;
     @JsonIgnore
     private Long headerUserId;
+	@Override
+	public String toString() {
+		return "MemberPasswordEditParam [resetUserName=" + resetUserName + ", merchantId=" + merchantId
+				+ ", merchantCode=" + merchantCode + ", merchantName=" + merchantName + ", headerUserId=" + headerUserId
+				+ "]";
+	}
 }

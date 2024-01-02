@@ -20,6 +20,9 @@ public class DwmProfitAndLossPersonalCenterDetailRespDTO {
     @ApiModelProperty("本账期盈亏")
     private DwmProfitAndLossPersonalCenterDetailResp accountPeriod;
 
+    @ApiModelProperty("未读账单数")
+    private Boolean unreadBill;
+
     @ApiModelProperty("本账期时间")
     private String accountPeriodTime;
 }

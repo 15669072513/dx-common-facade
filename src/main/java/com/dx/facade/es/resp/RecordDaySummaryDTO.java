@@ -14,6 +14,9 @@ public class RecordDaySummaryDTO {
     @ApiModelProperty("注单日期yyyy-MM-dd")
     private String betDate;
 
+    @ApiModelProperty("本页是否包含当天所有数据")
+    private boolean includeAllFalg = true;
+
     @ApiModelProperty("有效投注金额汇总")
     private BigDecimal validBetAmountSum;
 

@@ -33,7 +33,7 @@ public interface GameTransferRPCService {
      * @return
      * @throws BizException
      */
-    CommonResp<Void> texasTransferOut(WalletBalanceDTO walletBalanceDTO) throws BizException;
+    CommonResp<Void> texasTransferOutSync(WalletBalanceDTO walletBalanceDTO) throws BizException;
 
 
     /**
