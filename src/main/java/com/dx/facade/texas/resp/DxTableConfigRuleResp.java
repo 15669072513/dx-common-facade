@@ -244,4 +244,7 @@ public class DxTableConfigRuleResp implements Serializable {
 
     @ApiModelProperty("preflop看牌 0-配置没开启  1-关 2-开 默认为0")
     private Integer preflopDelay;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
 }
