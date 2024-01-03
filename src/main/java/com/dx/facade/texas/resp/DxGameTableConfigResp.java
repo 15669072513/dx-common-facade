@@ -186,4 +186,7 @@ public class DxGameTableConfigResp implements Serializable {
 
     @ApiModelProperty("收费比例")
     private BigDecimal chargeScale = BigDecimal.ZERO;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
 }
