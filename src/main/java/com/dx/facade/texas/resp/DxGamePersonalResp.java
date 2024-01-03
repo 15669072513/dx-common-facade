@@ -33,7 +33,7 @@ public class DxGamePersonalResp implements Serializable {
     private Long handNumberTotal=0L;
 
     @ApiModelProperty("百手盈利")
-    private BigDecimal hundredHandProfit=BigDecimal.ZERO.ZERO.setScale(1);
+    private BigDecimal hundredHandProfit=BigDecimal.ZERO.setScale(1);
 
     @ApiModelProperty("主动入池次数")
     private Long activeBringPoolNumber=0L;
