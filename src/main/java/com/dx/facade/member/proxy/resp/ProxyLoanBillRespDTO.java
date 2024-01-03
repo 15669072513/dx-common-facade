@@ -15,10 +15,10 @@ public class ProxyLoanBillRespDTO {
     private Integer version;
 
     @ApiModelProperty(value = "账单开始日期")
-    private LocalDateTime periodStDate;
+    private Integer stDate;
 
     @ApiModelProperty(value = "账单结束日期")
-    private LocalDateTime periodEndDate;
+    private Integer endDate;
 
 
     @ApiModelProperty("账单ID")
