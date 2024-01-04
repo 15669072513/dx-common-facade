@@ -15,6 +15,8 @@ public class DxGlobalConfigCommonValueAddedResp implements Serializable {
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("主键")
     private Long id;
+    @ApiModelProperty("类型")
+    private Integer type;
     @ApiModelProperty("增值信息")
     private JSONObject vals;
 
