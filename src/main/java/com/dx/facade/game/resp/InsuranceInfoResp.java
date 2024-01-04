@@ -119,6 +119,6 @@ public class InsuranceInfoResp {
   @ApiModelProperty(value = "上级代理账号")
   private String parentProxyName;
 
-  @ApiModelProperty(value = "总代账号")
-  private String topProxyName;
+//  @ApiModelProperty(value = "总代账号")
+//  private String topProxyName;
 }
