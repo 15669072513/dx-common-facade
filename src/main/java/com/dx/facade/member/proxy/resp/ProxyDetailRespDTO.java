@@ -247,4 +247,7 @@ public class ProxyDetailRespDTO {
 
 	@ApiModelProperty(value = "总代银行通道状态 - 0或null:开启，1:关闭")
 	private Integer bankChannelStatus;
+
+	@ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
+	private Integer crossOptLevel;
 }
