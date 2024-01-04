@@ -53,6 +53,18 @@ public class InsuranceInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_会员账号)
     private String userName;
 
+
+    @ExcelProperty(value = "会员账号", index = 6)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_上级代理)
+    private String parentProxyName;
+
+
+    @ExcelProperty(value = "会员账号", index = 6)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_总代账号)
+    private String topProxyName;
+
+
+
     @ExcelProperty(value = "保险注单号", index = 7)
     @I18nField(headI18nKey = ExcelHeadI18nKey.INSURANCE_保险注单号)
     private String insuredOrderId;

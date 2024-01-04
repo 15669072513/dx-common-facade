@@ -115,4 +115,10 @@ public class InsuranceInfoResp {
 
   @ApiModelProperty(value = "修改人")
   private String updateBy;
+
+  @ApiModelProperty(value = "上级代理账号")
+  private String parentProxyName;
+
+  @ApiModelProperty(value = "总代账号")
+  private String topProxyName;
 }
