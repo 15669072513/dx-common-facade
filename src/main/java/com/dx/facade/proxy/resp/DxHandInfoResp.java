@@ -66,4 +66,10 @@ public class DxHandInfoResp implements Serializable {
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
+
+    @ApiModelProperty("前注功能 0-关 1-开 默认为0")
+    private Integer anteSwitch = 0;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
 }
