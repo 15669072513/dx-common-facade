@@ -141,7 +141,7 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
     private Integer preflopDelay;
 
-    @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
+    @ApiModelProperty("前注功能 0-关闭 1-开启")
     private Integer anteSwitch;
 
     @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
