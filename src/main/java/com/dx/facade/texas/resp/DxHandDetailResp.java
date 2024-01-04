@@ -131,4 +131,10 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("前注")
     private BigDecimal anteScore;
+
+    @ApiModelProperty("小盲注")
+    private BigDecimal sbBlindScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("大盲注")
+    private BigDecimal bbBlindScore = BigDecimal.ZERO;
 }
