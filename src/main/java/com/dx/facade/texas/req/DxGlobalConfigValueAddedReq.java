@@ -15,6 +15,6 @@ public class DxGlobalConfigValueAddedReq implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("配置主键")
-    private List<Long> types;
+    private List<Integer> types;
 
 }
