@@ -39,6 +39,9 @@ public class GameReviecardRoundResp {
     @ApiModelProperty("玩家牌局数量")
     private Long userHandCount=0L;
 
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore=BigDecimal.ZERO;
+
     @ApiModelProperty("小盲注")
     private BigDecimal sbBlindScore;
 
