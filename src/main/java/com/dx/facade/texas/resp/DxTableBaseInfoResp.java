@@ -158,4 +158,10 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
+
+    @ApiModelProperty("前注功能 0-关 1-开 默认为0")
+    private Integer anteSwitch = 0;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
 }
