@@ -99,7 +99,7 @@ public class RecordDetailSummary implements Serializable {
     @ApiModelProperty("输钱最多的展示为大鱼的用户")
     private UserSummary NetAmountMinUser;
 
-    @ApiModelProperty("前注功能 0-关 1-开 默认为0")
+    @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
     private Integer anteSwitch = 0;
 
     @ApiModelProperty("前注实际金额")
