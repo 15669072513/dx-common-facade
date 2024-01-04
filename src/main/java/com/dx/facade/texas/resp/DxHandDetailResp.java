@@ -125,4 +125,10 @@ public class DxHandDetailResp implements Serializable {
 
     @ApiModelProperty("手牌盈亏（打牌抽水+保险盈亏）")
     private BigDecimal handNetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("前注功能 0-关 1-开 默认为0")
+    private Integer anteSwitch;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore;
 }
