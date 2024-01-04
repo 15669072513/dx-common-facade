@@ -302,5 +302,8 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
     private Integer withdrawLimitType;
+
+    @ApiModelProperty(value = "总代银行通道状态 - 0或null:开启，1:关闭")
+    private Integer bankChannelStatus;
     
 }

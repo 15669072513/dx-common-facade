@@ -543,7 +543,10 @@ public class MemberAndProxyDto {
 
 	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
 	private Integer withdrawLimitType;
-	
+
+	@ApiModelProperty(value = "总代银行通道状态 - 0或null:开启，1:关闭")
+	private Integer bankChannelStatus;
+
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
 			return null;
