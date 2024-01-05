@@ -3,13 +3,16 @@ package com.dx.facade.game.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.game.dto.game.GameOrderRecordUserNetChipSumReqDto;
+import com.dx.facade.game.dto.game.GameOrderUserSumByUserIdRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
+import com.dx.facade.game.resp.GameOrderUserSumByUserIdResp;
 import com.dx.facade.game.resp.GameOrderUserTableSumResp;
 import com.dx.facade.game.resp.UserTableAggListResp;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserTableAggRpcService {
 
@@ -67,4 +70,11 @@ public interface UserTableAggRpcService {
      * @return
      */
     CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
+
+    /**
+     * 根据用户id集合获取统计注单信息
+     * @param userSumByUserIdReq
+     * @return
+     */
+    CommonResp<GameOrderUserSumByUserIdRespDto> getGameOrderUserSumList(GameOrderUserSumByUserIdReq userSumByUserIdReq);
 }
