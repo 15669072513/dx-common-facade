@@ -9,14 +9,14 @@ import com.dx.facade.common.PageRequest;
 @ApiModel(value="查询德州操作记录入参", description="查询德州操作记录入参")
 public class DzCardLogParamReqDTO extends PageRequest {
 
-    @ApiModelProperty(value = "商户ID")
-    private Long merchantId;
+    @ApiModelProperty(value = "商户编号")
+    private String merchantCode;
 
-    @ApiModelProperty(value = "查询起始时间")
-    private String startTime;
+    @ApiModelProperty(value = "查询起始时间,13位时间戳")
+    private Long startTime;
 
-    @ApiModelProperty(value = "查询结束时间")
-    private String endTime;
+    @ApiModelProperty(value = "查询结束时间,13位时间戳")
+    private Long endTime;
 
     @ApiModelProperty(value = "操作栏目1游戏管理2俱乐部管理")
     private Integer operationMenu;
@@ -25,7 +25,7 @@ public class DzCardLogParamReqDTO extends PageRequest {
     private Integer operationPage;
 
     @ApiModelProperty(value = "操作人")
-    private String operatorId;
+    private String operator;
 
     @ApiModelProperty(value = "操作IP")
     private String ip;
