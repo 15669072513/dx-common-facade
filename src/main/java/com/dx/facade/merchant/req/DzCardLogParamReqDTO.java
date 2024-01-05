@@ -3,10 +3,11 @@ package com.dx.facade.merchant.req;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import com.dx.facade.common.PageRequest;
 
 @Data
 @ApiModel(value="查询德州操作记录入参", description="查询德州操作记录入参")
-public class DzCardLogParamReqDTO {
+public class DzCardLogParamReqDTO extends PageRequest {
 
     @ApiModelProperty(value = "商户ID")
     private Long merchantId;
