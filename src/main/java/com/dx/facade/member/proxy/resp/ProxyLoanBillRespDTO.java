@@ -11,6 +11,18 @@ import java.time.LocalDateTime;
 @Data
 public class ProxyLoanBillRespDTO {
 
+    @ApiModelProperty(value = "账单类型", notes = "0-未出账单,1-已出账单")
+    private Integer billType;
+
+    @ApiModelProperty("版本,0-旧版,1-1.34")
+    private Integer version;
+
+    @ApiModelProperty(value = "账单开始日期")
+    private Integer stDate;
+
+    @ApiModelProperty(value = "账单结束日期")
+    private Integer endDate;
+
 
     @ApiModelProperty("账单ID")
     @JsonFormat(shape = JsonFormat.Shape.STRING)

@@ -23,8 +23,10 @@ public class GameOrderRecordDetail implements Serializable {
 
     @Data
     public static class GameOrderRecordSummary {
+
         @ApiModelProperty("第一名用户id")
         private Long userId;
+
         @ApiModelProperty("牌桌id")
         private Long tableId;
 
@@ -41,27 +43,28 @@ public class GameOrderRecordDetail implements Serializable {
          * 时长
          */
         @ApiModelProperty("时长")
-        private Long duration=0L;
+        private Long duration = 0L;
 
         /**
          * 牌桌手数
          */
         @ApiModelProperty("全部手数")
-        private Long handCount=0L;
+        private Long handCount = 0L;
         /**
          * 牌桌流水
          */
         @ApiModelProperty("全部流水")
-        private BigDecimal betAmountSum=BigDecimal.ZERO;;
+        private BigDecimal betAmountSum = BigDecimal.ZERO;
+        ;
 
         /**
-         *  牌桌带入
+         * 牌桌带入
          */
         @ApiModelProperty("全部带入")
-        private BigDecimal bringChipSum=BigDecimal.ZERO;
+        private BigDecimal bringChipSum = BigDecimal.ZERO;
 
         /**
-         *  最大底池
+         * 最大底池
          */
         @ApiModelProperty("最大底池")
         private BigDecimal maxPot;
@@ -70,15 +73,16 @@ public class GameOrderRecordDetail implements Serializable {
          * 小盲注
          */
         @ApiModelProperty("小盲注")
-        private BigDecimal sbBlindScore=BigDecimal.ZERO;
+        private BigDecimal sbBlindScore = BigDecimal.ZERO;
 
         /***
          * 大盲注
          */
         @ApiModelProperty("大盲注")
-        private BigDecimal bbBlindScore=BigDecimal.ZERO;
+        private BigDecimal bbBlindScore = BigDecimal.ZERO;
 
     }
+
     @Data
     @Builder
     @AllArgsConstructor
@@ -89,21 +93,27 @@ public class GameOrderRecordDetail implements Serializable {
         private Long userId;
 
         /**
-         *  牌桌带入
+         * 玩家昵称
          */
-        @ApiModelProperty("总带入")
-        private BigDecimal bringChipSum=BigDecimal.ZERO;
+        @ApiModelProperty("玩家昵称")
+        private String nickName;
 
         /**
-         *  盈亏筹码
+         * 牌桌带入
+         */
+        @ApiModelProperty("总带入")
+        private BigDecimal bringChipSum = BigDecimal.ZERO;
+
+        /**
+         * 盈亏筹码
          */
         @ApiModelProperty("当前盈亏")
-        private BigDecimal netAmountSum=BigDecimal.ZERO;
+        private BigDecimal netAmountSum = BigDecimal.ZERO;
 
         /**
          * 手牌数
          */
-        private int handCount=0;
+        private int handCount = 0;
     }
 
 }
