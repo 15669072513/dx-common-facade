@@ -61,17 +61,15 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("玩家昵称")
     private String nickName;
 
-    /**
-     * 公牌 有为空数据
-     */
+
     @ApiModelProperty("公共牌信息")
     private List<Integer> publicCards =new ArrayList<>();
 
-    /***
-     * 手牌 有为空数据
-     */
     @ApiModelProperty("手牌信息")
-    private List<Integer> handCards =new ArrayList<>();
+    private List<Integer> handCards = new ArrayList();
+
+    @ApiModelProperty("主动查看未发公牌")
+    private List<Integer> activeLookPublicCards =new ArrayList<>();
 
     @ApiModelProperty("玩家手牌亮牌")
     private List<Map<Integer,Boolean>> lightCards =new ArrayList<>();

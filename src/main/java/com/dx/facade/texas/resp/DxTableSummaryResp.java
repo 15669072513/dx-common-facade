@@ -36,4 +36,16 @@ public class DxTableSummaryResp implements Serializable {
 
     @ApiModelProperty("保险盈亏百分比")
     private String insuredNetAmountRate;
+
+    @ApiModelProperty("牌桌手牌数")
+    private Integer tableHandNumber = 0;
+
+    @ApiModelProperty("玩家总带入")
+    private BigDecimal bringInChipScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("玩家总带出")
+    private BigDecimal bringOutChipScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("总牌桌盈亏")
+    private BigDecimal costTotal = BigDecimal.ZERO;
 }

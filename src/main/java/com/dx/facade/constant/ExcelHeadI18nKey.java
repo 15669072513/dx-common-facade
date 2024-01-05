@@ -454,6 +454,9 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_信用钱包余额 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用钱包余额";
     String	FUNDS_信用额度 = "EXCEL_HEAD_I18N_KEY.FUNDS_信用额度";
     String	FUNDS_应收账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应收账款";
+    String	FUNDS_应还借款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应还借款";
+    String	FUNDS_外放额度 = "EXCEL_HEAD_I18N_KEY.FUNDS_外放额度";
+    String	FUNDS_授信总额 = "EXCEL_HEAD_I18N_KEY.FUNDS_授信总额";
     String	FUNDS_应还账款 = "EXCEL_HEAD_I18N_KEY.FUNDS_应还账款";
     
     String	FUNDS_俱乐部数量 = "EXCEL_HEAD_I18N_KEY.FUNDS_俱乐部数量";
@@ -756,6 +759,8 @@ public interface ExcelHeadI18nKey {
     String INSURANCE_手牌号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_手牌号";
     String INSURANCE_轮次 = "EXCEL_HEAD_I18N_KEY.INSURANCE_轮次";
     String INSURANCE_会员账号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_会员账号";
+    String INSURANCE_上级代理 = "EXCEL_HEAD_I18N_KEY.INSURANCE_上级代理";
+    String INSURANCE_总代账号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_总代账号";
     String INSURANCE_保险注单号 = "EXCEL_HEAD_I18N_KEY.INSURANCE_保险注单号";
     String INSURANCE_购买类型 = "EXCEL_HEAD_I18N_KEY.INSURANCE_购买类型";
     String INSURANCE_购保时间 = "EXCEL_HEAD_I18N_KEY.INSURANCE_购保时间";

@@ -132,6 +132,13 @@ public interface IDxGlobalConfigRpcService {
      *
      * @return
      */
+    CommonResp<List<DxGlobalConfigCommonValueAddedResp>> getCommonValueAddedConfigList();
+
+    /**
+     * 游戏端获取增值服务配置(只返回生效的)
+     *
+     * @return
+     */
     CommonResp<List<DxGlobalConfigValueAddedResp>> getValueAddedConfigList(List<Integer> bizTypes);
 
     /**
@@ -140,4 +147,19 @@ public interface IDxGlobalConfigRpcService {
      * @return
      */
     CommonResp<DxGlobalConfigValueAddedResp> getValueAddedConfigByType(Integer type);
+
+
+    /**
+     * 游戏端获取增值服务配置(只返回生效的)
+     *
+     * @return
+     */
+    CommonResp<List<DxGlobalConfigCommonValueAddedResp>> getCommonValueAddedConfigList(List<Integer> bizTypes);
+
+    /**
+     * 游戏端获取增值服务配置 (根据类型获取配置信息）
+     *
+     * @return
+     */
+    CommonResp<DxGlobalConfigCommonValueAddedResp> getCommonValueAddedConfigByType(Integer type);
 }
