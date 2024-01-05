@@ -55,20 +55,20 @@ public interface VenueNetAmountDayRPCService {
     CommonResp<PageResp<VenueNetAmountDayDetailRespDTO, ?>> queryVenueNetAmountDayDetail(VenueNetAmountDayDetailReqDTO requestDto) throws BizException;
 
 
-    /**
-     * 场馆盈亏列表和本页合计接口
-     *
-     * @param requestDto
-     * @return
-     */
-    CommonResp<PageResp<NewVenueNetAmountRespDTO, List<VenueNetAmountDayRespDTO>>> newQueryVenueNetAmountDayList(VenueNetAmountDayReqDTO requestDto) throws BizException;
-
-    /**
-     * 场馆盈亏全部合计接口
-     *
-     * @param requestDto
-     * @return
-     */
-    CommonResp<List<VenueNetAmountDayRespDTO>> newQueryVenueNetAmountDayTotal(VenueNetAmountDayReqDTO requestDto) throws BizException;
+//    /**
+//     * 场馆盈亏列表和本页合计接口
+//     *
+//     * @param requestDto
+//     * @return
+//     */
+//    CommonResp<PageResp<NewVenueNetAmountRespDTO, List<VenueNetAmountDayRespDTO>>> newQueryVenueNetAmountDayList(VenueNetAmountDayReqDTO requestDto) throws BizException;
+//
+//    /**
+//     * 场馆盈亏全部合计接口
+//     *
+//     * @param requestDto
+//     * @return
+//     */
+//    CommonResp<List<VenueNetAmountDayRespDTO>> newQueryVenueNetAmountDayTotal(VenueNetAmountDayReqDTO requestDto) throws BizException;
 
 }
