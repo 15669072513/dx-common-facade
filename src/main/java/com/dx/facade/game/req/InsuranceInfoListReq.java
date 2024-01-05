@@ -51,6 +51,12 @@ public class InsuranceInfoListReq extends BaseRequest {
     @ApiModelProperty("购保时间区间结束")
     private String createEndTime;
 
+    @ApiModelProperty("购保时间区间开始时间戳")
+    private Long createStartTs;
+
+    @ApiModelProperty("购保时间区间结束时间戳")
+    private Long createEndTs;
+
     @ApiModelProperty("查询类型")
     private Integer queryType; // 1 列表查询，导出查询
 
