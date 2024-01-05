@@ -31,4 +31,7 @@ public class VenueNetAmountDayRespDTO extends VenueNetAmountDaySummaryRespDTO {
     @ApiModelProperty("场馆类型名称")
     private String venueTypeName;
 
+    @ApiModelProperty("日期")
+    private String staticsDate;
+
 }
