@@ -1,6 +1,8 @@
 package com.dx.facade.texas.req;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.annotation.ValueConvert;
+import com.dx.facade.game.convert.InsuranceModeRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -109,6 +111,7 @@ public class DxGameConfigEditReq implements Serializable {
     private Boolean insuranceChoosSheet;
 
     @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
+    @ValueConvert(renderers = InsuranceModeRender.class)
     private String insuranceMode;
 
     @ApiModelProperty("保险出发下限")
