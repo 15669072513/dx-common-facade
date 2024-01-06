@@ -24,7 +24,7 @@ public class ProxyInfoRpcPermissionReqDTO implements Serializable {
     
     private static final long serialVersionUID = 1L;
     
-    @ApiModelProperty(value = "提交审核备注(100)", required = true)
+    @ApiModelProperty(value = "开通直属会员代理权限", required = true)
     private Integer playerToProxyAble;
     @ApiModelProperty(value = "开通跨代理操作权限")
     private Integer crossOptLevel;
