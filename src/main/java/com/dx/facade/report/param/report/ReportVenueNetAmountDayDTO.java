@@ -15,7 +15,7 @@ import java.math.BigDecimal;
  */
 @Data
 @ApiModel(value = "ReportVenueNetAmountDayDTO", description = "数据对比-有效投注额/场馆输赢返回")
-public class ReportVenueNetAmountDayDTO extends PageRequest {
+public class ReportVenueNetAmountDayDTO  {
 
     @ApiModelProperty("场馆名")
     private String venueName;
