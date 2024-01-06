@@ -54,6 +54,11 @@ public interface VenueConfigService {
     ConfigVenuePO getVenueByVenueCode(String venueCode);
 
     /**
+     * 根据场馆ID,得到场馆对象
+     */
+    ConfigVenuePO getVenueById(Long venueId);
+
+    /**
      * 获取所有场馆
      */
     List<ConfigVenuePO> getVenues();
