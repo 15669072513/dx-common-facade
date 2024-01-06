@@ -16,7 +16,7 @@ import java.util.Date;
  */
 @Data
 @ApiModel(value = "ReportDateCompareDTO", description = "中控后台-数据日报列表返回")
-public class ReportDateCompareDTO extends PageRequest {
+public class ReportDateCompareDTO  {
 
     @ApiModelProperty(value = "开始日期")
     private Integer reportDate;
