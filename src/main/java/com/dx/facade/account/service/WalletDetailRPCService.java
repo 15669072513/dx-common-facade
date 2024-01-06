@@ -32,7 +32,7 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
-    CommonResp<PageResp<WalletDetailRespDTO, String>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+    CommonResp<PageResp<WalletDetailRespDTO, WalletDetailRespDTO>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
     /**
      * 根据牌桌查询代入带出
