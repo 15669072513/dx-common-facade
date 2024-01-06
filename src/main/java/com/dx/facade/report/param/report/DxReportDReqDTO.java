@@ -15,5 +15,6 @@ import java.time.LocalDate;
 public class DxReportDReqDTO {
     @ApiModelProperty("日报期数")
     private LocalDate report;
-
+    @ApiModelProperty("商户ID")
+    private Long merchantId;
 }

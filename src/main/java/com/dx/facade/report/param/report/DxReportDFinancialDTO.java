@@ -19,5 +19,6 @@ public class DxReportDFinancialDTO {
     private String payType;
     @ApiModelProperty("日报期数")
     private LocalDate report;
-
+    @ApiModelProperty("商户ID")
+    private Long merchantId;
 }
