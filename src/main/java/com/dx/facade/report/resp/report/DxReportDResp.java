@@ -17,10 +17,11 @@ import java.time.LocalDateTime;
 @Getter
 @EqualsAndHashCode(callSuper = false)
 @ApiModel(value="德信数据日报对象", description="德信日报")
-public class DwmDxReportDResp implements Serializable {
+public class DxReportDResp implements Serializable {
 
     private static final long serialVersionUID = 1L;
-
+    @ApiModelProperty("类别：0-官方，1-代理")
+    private String dataType;
     @ApiModelProperty(value = "日期,比如20210531")
     private Integer reportDate;
 
