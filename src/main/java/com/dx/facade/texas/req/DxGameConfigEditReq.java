@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.dx.facade.annotation.FieldOperate;
 import com.dx.facade.annotation.ValueConvert;
 import com.dx.facade.game.convert.GameStatusRender;
 import com.dx.facade.game.convert.InsuranceModeRender;
@@ -25,6 +26,7 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("游戏类型id")
     @ValueConvert(renderers = GameStatusRender.class)
+    @FieldOperate(fieldName ="游戏类型")
     private Long gameTypeId;
 
     @ApiModelProperty("游戏名称")
@@ -59,6 +61,7 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
     @ValueConvert(renderers = GameStatusRender.class)
+    @FieldOperate(fieldName ="游戏开关状态")
     private Integer status;
 
     @ApiModelProperty("超时（min）自动解散房间")
