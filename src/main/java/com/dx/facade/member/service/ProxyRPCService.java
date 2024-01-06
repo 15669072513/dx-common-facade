@@ -1,5 +1,6 @@
 package com.dx.facade.member.service;
 
+import com.dx.facade.member.param.UpdateProxyBankChannelStatusParamDTO;
 import java.util.List;
 
 import com.dx.entity.CommonResp;
@@ -181,9 +182,15 @@ public interface ProxyRPCService {
      * @throws Exception 
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
-	
-	
-	/**
+
+  /**
+   *
+   * @param updateProxyLockStatusParma
+   * @return
+   */
+  CommonResp<Boolean> updateProxyBankChannelStatus(
+      UpdateProxyBankChannelStatusParamDTO updateProxyBankChannelStatusParamDTO);
+  /**
 	 * 校验userName是否已存在
 	 * 
 	 * @param paramDTO

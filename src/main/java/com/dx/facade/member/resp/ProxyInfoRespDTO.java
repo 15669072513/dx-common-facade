@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -51,7 +50,7 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("币种")
     private String currency;
-    
+
     @ApiModelProperty("币种符号")
     private String currencySymbol;
 
@@ -196,10 +195,10 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty("契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
     private Integer contractModel;
-    
+
     @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
     private Integer commissionMode;
-    
+
     @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
     private Integer commissionSettleCycle;
 
@@ -276,19 +275,19 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty(value="已有契约 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约")
     private Integer newContractModel;
-    
+
     @ApiModelProperty("开局权限（0-关闭 1-开启）")
     private Integer openLockStatus;
-    
+
     @ApiModelProperty("俱乐部管理权限（0-关闭 1-开启）")
     private Integer manageClubLockStatus;
-    
+
     @ApiModelProperty("是否存在待签约的返点契约标志 0-不存在 1-存在")
     private Integer rebateSignStatus;
-    
+
     @ApiModelProperty("是否存在待签约的佣金契约标志 0-不存在 1-存在")
     private Integer commissionSignStatus;
-    
+
     @ApiModelProperty(value = "信用钱包余额")
     private BigDecimal creditWalletBalance;
 
@@ -297,7 +296,7 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty(value = "现金余额")
     private BigDecimal centerWalletBalance;
-    
+
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
 
@@ -309,5 +308,9 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
     private Integer crossOptLevel;
-    
+
+
+    @ApiModelProperty(value = "会员转代开关 - 0或null:开启，1:关闭")
+    private Integer playerToProxy;
+
 }
