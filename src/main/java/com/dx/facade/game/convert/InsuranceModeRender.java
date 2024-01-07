@@ -1,20 +1,17 @@
 package com.dx.facade.game.convert;
 
 import com.dx.facade.annotation.ValueRenderer;
+import java.util.Objects;
 
 public class InsuranceModeRender implements ValueRenderer {
 
   @Override
-  public Object render(Object value, Object data) {
-    if (value instanceof String) {
-      String flag = (String) value;
-      if ("0".equals(flag)) {
-        return "不开保险";
-      }
-      else if ("1".equals(flag)) {
-        return "经典保险";
-      }
-      return "";
+  public Object render(Object value) {
+    if (Objects.equals(value,0)) {
+      return "不开保险";
+    }
+    else if (Objects.equals(value,1)) {
+      return "经典保险";
     }
     return value;
   }

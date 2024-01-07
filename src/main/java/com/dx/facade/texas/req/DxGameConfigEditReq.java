@@ -25,8 +25,6 @@ public class DxGameConfigEditReq implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("游戏类型id")
-    @ValueConvert(renderers = GameStatusRender.class)
-    @FieldOperate(fieldName ="游戏类型")
     private Long gameTypeId;
 
     @ApiModelProperty("游戏名称")
@@ -60,8 +58,6 @@ public class DxGameConfigEditReq implements Serializable {
     private String description;
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
-    @ValueConvert(renderers = GameStatusRender.class)
-    @FieldOperate(fieldName ="游戏开关状态")
     private Integer status;
 
     @ApiModelProperty("超时（min）自动解散房间")

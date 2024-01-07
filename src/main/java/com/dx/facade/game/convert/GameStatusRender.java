@@ -6,20 +6,16 @@ import java.util.Objects;
 public class GameStatusRender implements ValueRenderer {
 
   @Override
-  public Object render(Object value, Object data) {
-    if (value instanceof String) {
-      Integer status = (Integer) value;
-      if (Objects.equals(status,0)) {
-        return "已禁用";
-      }
-      else if (Objects.equals(status,1)) {
-        return "开启中";
-      }
-      else if (Objects.equals(status,2)) {
-        return "维护中";
-      }
-      return "";
+  public Object render(Object value) {
+    if (Objects.equals(value,0)) {
+      return "已禁用";
     }
-    return value;
+    else if (Objects.equals(value,1)) {
+      return "开启中";
+    }
+    else if (Objects.equals(value,2)) {
+      return "维护中";
+    }
+    return "";
   }
 }
