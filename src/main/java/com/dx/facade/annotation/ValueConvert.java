@@ -11,5 +11,5 @@ import java.lang.annotation.Target;
 @Documented
 public @interface ValueConvert {
 
-  Class<? extends ValueRenderer>[] renderers() default {};
+  Class<? extends ValueRenderer> renderers();
 }
