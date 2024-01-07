@@ -28,4 +28,11 @@ public enum OptTypeEnum {
         }
         return null;
     }
+
+    public Integer code() {
+        return this.code;
+    }
+    public String desc() {
+        return this.desc;
+    }
 }

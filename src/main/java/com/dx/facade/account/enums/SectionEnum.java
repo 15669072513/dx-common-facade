@@ -8,7 +8,7 @@ import java.util.Objects;
 public enum SectionEnum {
 
     BILL_MANAGER(1,"结算账单管理"),
-    ACCOUNT_ADJUST(1,"资金调整"),
+    ACCOUNT_ADJUST(2,"资金调整"),
     ACCOUNT_AUDIT(3,"资金审核"),
     IN_OUT_CONFIG(4,"出入款配置"),
     EXCHANGE_RATE_CONFIG(5,"汇率配置"),
