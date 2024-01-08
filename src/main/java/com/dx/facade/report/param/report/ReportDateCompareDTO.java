@@ -1,18 +1,14 @@
 package com.dx.facade.report.param.report;
 
-import com.dx.facade.common.PageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-
-import javax.validation.constraints.NotNull;
-import java.util.Date;
 
 /**
  * 代理日盈亏查询返回
  *
  * @author flash
- * @since 2024月6日 下午18:00:05
+ * @since 2024年1月6日 下午18:00:05
  */
 @Data
 @ApiModel(value = "ReportDateCompareDTO", description = "中控后台-数据日报列表返回")
