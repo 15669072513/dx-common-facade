@@ -1,6 +1,7 @@
 package com.dx.facade.report.req.report;
 
 import com.dx.facade.common.PageRequest;
+import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -17,19 +18,23 @@ import java.util.List;
  */
 @Data
 @ApiModel(value = "ReportDateCompareParam", description = "中控后台-数据日报列表查询")
-public class ReportDateCompareParam extends PageRequest {
+public class ReportDateCompareParam extends LocalDatePageRequest {
 
-    @ApiModelProperty(value = "开始日期", required = true, example = "20210601")
-    @NotNull(message = "开始日期参数不能为空")
-    private Integer startDate;
+    @ApiModelProperty("商户Id")
+    private String merchantId;
 
-    @ApiModelProperty(value = "结束日期", required = true, example = "20210602")
-    @NotNull(message = "结束日期参数不能为空")
-    private Integer endDate;
+    @ApiModelProperty(
+            value = "排序列名，merchantId",
+            example = "merchantId"
+    )
+    private String orderKey;
 
-    @ApiModelProperty("所属商户")
-    @NotNull(message = "结束日期参数不能为空")
-    private String merchantName;
+    @ApiModelProperty(
+            value = "排序方式(1)：desc-降序 asc-升序",
+            example = "asc"
+    )
+    private String sortType;
+
 
 
 }
