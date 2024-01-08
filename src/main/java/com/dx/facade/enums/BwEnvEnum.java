@@ -16,6 +16,10 @@ public enum BwEnvEnum {
     PROD(4,"prod"),
 
     DEV1(5,"dev1"), // dev1环境
+
+    TEST1(6, "test1"), // test1环境
+
+    TEST1_NAME(7, "test1k"), // test1环境取尾部k座位test1的用户名前缀
     ;
 
     /**
