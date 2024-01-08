@@ -59,9 +59,6 @@ public class MemberInfoEditParam implements Serializable {
     @ApiModelProperty(value = "支付密码重置 修改后内容")
     private MemberInfoRpcResetPayPassword resetPayPasswordAfter;
 
-    @ApiModelProperty(value = "开启代理权限 1开启 ")
-    private Integer entryAuthorityOpen;
-
     @ApiModelProperty(value = "会员账号",required = true,example = "abc123")
     @NotBlank(message = "账号不能为空")
     @Pattern(regexp = Constants.REG_4_11, message = Constants.USER_NAME_ERROR_MSG)
