@@ -37,13 +37,13 @@ public class MemberNetTopReq {
     private Long memberId;
 
     @ApiModelProperty(value = "会员账号")
-    private Long memberName;
+    private String memberName;
 
     @ApiModelProperty(value = "总代理id")
     private Long topProxyId;
 
     @ApiModelProperty(value = "总代理账号")
-    private Long topProxyName;
+    private String topProxyName;
 
     @ApiModelProperty(value = "商户id")
     private Long merchantId;

@@ -1,5 +1,7 @@
 package com.dx.facade.member.service;
 
+import com.dx.facade.member.param.MemberToProxyParam;
+import com.dx.facade.member.resp.MemberInfoSummaryRespDTO;
 import java.util.List;
 
 import com.dx.entity.CommonResp;
@@ -36,7 +38,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 public interface MemberRPCService {
 
-    CommonResp<PageResp<MemberInfoRespDTO, ?>> selectMemberListPage(PageReq<MemberListParamDTO> pageReq);
+    CommonResp<PageResp<MemberInfoRespDTO, List<MemberInfoSummaryRespDTO>>> selectMemberListPage(PageReq<MemberListParamDTO> pageReq);
 
     CommonResp<MemberInfoRespDTO> selectMemberByUserName(Long merchantId, String userName);
 
@@ -236,4 +238,5 @@ public interface MemberRPCService {
 	 */
 	CommonResp<List<MemberInfoRespDTO>> memberListByParentProxy(MemberListParamDTO paramDTO);
 
+	CommonResp entryAuthorityOpen(MemberToProxyParam param) throws BizException;
 }

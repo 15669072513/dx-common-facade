@@ -38,7 +38,7 @@ public class ProxyTeamTopReq {
     private Long topProxyId;
 
     @ApiModelProperty(value = "总代理账号")
-    private Long topProxyName;
+    private String topProxyName;
 
     @ApiModelProperty(value = "商户id")
     private Long merchantId;
