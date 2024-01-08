@@ -7,10 +7,10 @@ public class GameTypeIdRender implements ValueRenderer {
 
   @Override
   public Object render(Object value) {
-    if (Objects.equals(value,1)) {
+    if (Objects.equals(value,1L)) {
       return "德州扑克";
     }
-    else if (Objects.equals(value,2)) {
+    else if (Objects.equals(value,2L)) {
       return "短牌";
     }
     return value;
