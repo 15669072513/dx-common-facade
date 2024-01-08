@@ -2,6 +2,7 @@ package com.dx.facade.report.param.report;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import io.swagger.models.auth.In;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -27,7 +28,7 @@ public class ProxyTeamTopReq {
     private Long reportEdDate;
 
     @ApiModelProperty(value = "查询数据数量", example = "3")
-    private String top;
+    private Integer top;
 
     @ApiModelProperty(value = "类型：1=团队应还账款,2=团队可提现额",required = true, example = "1")
     @NotNull(message = "类型不能为空")
@@ -35,6 +36,9 @@ public class ProxyTeamTopReq {
 
     @ApiModelProperty(value = "总代理id")
     private Long topProxyId;
+
+    @ApiModelProperty(value = "总代理账号")
+    private Long topProxyName;
 
     @ApiModelProperty(value = "商户id")
     private Long merchantId;
