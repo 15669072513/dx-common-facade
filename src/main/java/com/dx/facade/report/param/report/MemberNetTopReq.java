@@ -19,15 +19,18 @@ import javax.validation.constraints.NotNull;
 public class MemberNetTopReq {
 
     @ApiModelProperty(value = "报表查询开始日期", example = "20231213")
+    @NotNull(message = "查询时间不能为空")
     private Long reportStDate;
 
     @ApiModelProperty(value = "报表查询结束日期", example = "20231221")
+    @NotNull(message = "查询时间不能为空")
     private Long reportEdDate;
 
     @ApiModelProperty(value = "查询数据数量", example = "3")
     private String top;
 
-    @ApiModelProperty(value = "数据类型: 1=今日盈利最高, 2=今日亏损最高",required = true, example = "1")
+    @ApiModelProperty(value = "类型: 1=今日盈利最高, 2=今日亏损最高)",required = true, example = "1")
+    @NotNull(message = "类型不能为空")
     private Integer netType;
 
     @ApiModelProperty(value = "会员id")
