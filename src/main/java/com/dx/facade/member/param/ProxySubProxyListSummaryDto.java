@@ -27,15 +27,15 @@ public class ProxySubProxyListSummaryDto {
 
 
   @ApiModelProperty(value = "现金余额")
-  private BigDecimal centerWalletBalance;
+  private BigDecimal centerWalletBalance=BigDecimal.ZERO;
 
   @ApiModelProperty(value = "信用钱包余额")
-  private BigDecimal creditWalletBalance;
+  private BigDecimal creditWalletBalance=BigDecimal.ZERO;
 
   @ApiModelProperty(value = "信用额度")
-  private BigDecimal creditQuota;
+  private BigDecimal creditQuota=BigDecimal.ZERO;
 
   @ApiModelProperty(value = "应还借款")
-  private BigDecimal borrowAmount;
+  private BigDecimal borrowAmount=BigDecimal.ZERO;
 
 }
