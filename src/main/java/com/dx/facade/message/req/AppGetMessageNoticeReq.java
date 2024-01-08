@@ -13,14 +13,13 @@ public class AppGetMessageNoticeReq extends PageRequest {
 
     private Long merchantId;
 
-    private int noticeType;
+    @ApiModelProperty("1=通知 2=站内信消息  3=公告  4=通知栏")
+    private Integer noticeType;
 
     private Integer deviceType;
 
     @ApiModelProperty("消息类别:0会员消息,1代理消息")
     private Integer noticeCategory;
-
-
 
     @ApiModelProperty("消息标题")
     private String title;

@@ -87,5 +87,8 @@ public class GameRecordParam extends PageRequest {
     @ApiModelProperty(value = "重算次数;未重算=0/重算1次=1/重算过2次=2/重算大于2次=3")
     private Integer obSettleCount;
 
+    @ApiModelProperty("仅德州使用，注单类型:1俱乐部游戏;2保险")
+    private Integer betType;
+
 }
 

@@ -1,6 +1,7 @@
 package com.dx.facade.texas.resp;
-
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.annotation.FieldOperate;
+import com.dx.facade.annotation.ValueConvert;
+import com.dx.facade.game.convert.GameStatusRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 import java.io.Serializable;
@@ -20,6 +21,8 @@ public class DxGameConfigListResp implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty("游戏类型id")
+    @ValueConvert(renderers = GameStatusRender.class)
+    @FieldOperate(fieldName ="游戏类型")
     private Long gameTypeId;
 
     @ApiModelProperty("场馆类型(如by,ty,zr,qkl)")
@@ -62,6 +65,8 @@ public class DxGameConfigListResp implements Serializable {
     private String description;
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
+    @ValueConvert(renderers = GameStatusRender.class)
+    @FieldOperate(fieldName ="游戏开关状态")
     private Integer status;
 
     @ApiModelProperty("超时（min）自动解散房间")
