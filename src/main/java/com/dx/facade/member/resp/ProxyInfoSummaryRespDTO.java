@@ -19,52 +19,52 @@ public class ProxyInfoSummaryRespDTO {
 
 
     @ApiModelProperty("累计返佣")
-    private BigDecimal accumulatedCommission;
+    private BigDecimal accumulatedCommission=BigDecimal.ZERO;
 
     @ApiModelProperty("累计返点")
-    private BigDecimal accumulatedRebate;
+    private BigDecimal accumulatedRebate=BigDecimal.ZERO;
 
     @ApiModelProperty("佣金钱包余额")
-    private BigDecimal commissionBalance;
+    private BigDecimal commissionBalance=BigDecimal.ZERO;
 
     @ApiModelProperty("额度钱包余额")
-    private BigDecimal quotaBalance;
+    private BigDecimal quotaBalance=BigDecimal.ZERO;
 
     @ApiModelProperty("下级代理人数")
-    private Integer underProxyNum;
+    private Integer underProxyNum=BigDecimal.ZERO.intValue();
 
     @ApiModelProperty("直属下级代理人数")
-    private Integer directlyUnderProxyNum;
+    private Integer directlyUnderProxyNum=BigDecimal.ZERO.intValue();
 
     @ApiModelProperty("下级会员人数")
-    private Integer underMemberNum;
+    private Integer underMemberNum=BigDecimal.ZERO.intValue();
 
     @ApiModelProperty("直属下级会员人数")
-    private Integer directlyUnderMemberNum;
+    private Integer directlyUnderMemberNum=BigDecimal.ZERO.intValue();
 
     @ApiModelProperty("累计存款金额")
-    private BigDecimal totalDeposit;
+    private BigDecimal totalDeposit=BigDecimal.ZERO;
 
     @ApiModelProperty("累计存款次数")
-    private Integer totalDepositNum;
+    private Integer totalDepositNum=BigDecimal.ZERO.intValue();
 
     @ApiModelProperty("累计提款金额")
-    private BigDecimal totalWithdraw;
+    private BigDecimal totalWithdraw=BigDecimal.ZERO;
 
     @ApiModelProperty("累计普通提款次数")
-    private Integer totalWithdrawNum;
+    private Integer totalWithdrawNum=BigDecimal.ZERO.intValue();
 
 
     @ApiModelProperty(value = "信用钱包余额")
-    private BigDecimal creditWalletBalance;
+    private BigDecimal creditWalletBalance=BigDecimal.ZERO;
 
     @ApiModelProperty(value = "信用额度")
-    private BigDecimal creditQuota;
+    private BigDecimal creditQuota=BigDecimal.ZERO;
 
     @ApiModelProperty(value = "现金余额")
-    private BigDecimal centerWalletBalance;
+    private BigDecimal centerWalletBalance=BigDecimal.ZERO;
 
     @ApiModelProperty(value = "应收账款")
-    private BigDecimal accountsReceivable;
+    private BigDecimal accountsReceivable=BigDecimal.ZERO;
 
 }
