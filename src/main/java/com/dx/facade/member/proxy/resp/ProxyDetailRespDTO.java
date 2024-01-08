@@ -250,4 +250,7 @@ public class ProxyDetailRespDTO {
 
 	@ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
 	private Integer crossOptLevel;
+
+	@ApiModelProperty(value = "会员转代开关 - 0或null:开启，1:关闭")
+	private Integer playerToProxy;
 }
