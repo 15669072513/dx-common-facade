@@ -113,7 +113,26 @@ public class GameOrderRecordDetail implements Serializable {
         /**
          * 手牌数
          */
+        @ApiModelProperty("手牌数")
         private int handCount = 0;
+
+        /**
+         * 主动入池次数
+         */
+        @ApiModelProperty("主动入池次数")
+        private Long activeBringPoolNumber = 0L;
+
+        /**
+         * Walks手牌数
+         */
+        @ApiModelProperty("Walks手牌数")
+        private Long walksHandNumber = 0L;
+
+        /**
+         * 总手数
+         */
+        @ApiModelProperty("总手数")
+        private Long handNumberTotal = 0L;
     }
 
 }
