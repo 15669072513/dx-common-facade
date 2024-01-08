@@ -31,49 +31,49 @@ public class DxReportDResp implements Serializable {
     @ApiModelProperty(value = "更新时间")
     private LocalDateTime updatedAt;
 
-    @ApiModelProperty(value = "授信额度")
+    @ApiModelProperty(value = "授信额度(万)")
     private BigDecimal creditQuota;
 
-    @ApiModelProperty(value = "新增授信额度")
+    @ApiModelProperty(value = "新增授信额度(万)")
     private BigDecimal newCreditQuota;
 
-    @ApiModelProperty(value = "提款总额")
+    @ApiModelProperty(value = "提款金额(万)")
     private BigDecimal withdrawAmount;
 
-    @ApiModelProperty(value = "充值总额")
+    @ApiModelProperty(value = "充值金额(万)")
     private BigDecimal depositAmount;
 
-    @ApiModelProperty(value = "借款总额")
+    @ApiModelProperty(value = "总借款额度(万)")
     private BigDecimal loanAmount;
 
-    @ApiModelProperty(value = "新增借款总额")
+    @ApiModelProperty(value = "新增借款额度(万)")
     private BigDecimal newLoanAmount;
 
-    @ApiModelProperty(value = "应收账款")
+    @ApiModelProperty(value = "应收账款(万)")
     private BigDecimal shouldRepaymentAmount;
 
-    @ApiModelProperty(value = "应付账款")
+    @ApiModelProperty(value = "应付账款(万)")
     private BigDecimal shouldPaymentAmount;
 
-    @ApiModelProperty(value = "新增有效用户数")
+    @ApiModelProperty(value = "新增有效用户数(个)")
     private Integer newEffectiveNum;
 
-    @ApiModelProperty(value = "活跃用户数")
+    @ApiModelProperty(value = "活跃用户数(个)")
     private Integer activeNum;
 
-    @ApiModelProperty(value = "有效投注额")
+    @ApiModelProperty(value = "总有效投注额(万)")
     private BigDecimal validBetAmount;
 
-    @ApiModelProperty(value = "输赢金额")
+    @ApiModelProperty(value = "场馆输赢金额(万)")
     private BigDecimal netAmount;
 
-    @ApiModelProperty(value = "会员返水")
+    @ApiModelProperty(value = "会员返水(万)")
     private BigDecimal memberRebateAmount;
 
-    @ApiModelProperty(value = "代理返点")
+    @ApiModelProperty(value = "代理返点(万)")
     private BigDecimal proxyRebateAmount;
 
-    @ApiModelProperty(value = "平台收入")
+    @ApiModelProperty(value = "平台收入(万)")
     private BigDecimal platformIncomeAmount;
 
 }

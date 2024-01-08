@@ -126,4 +126,13 @@ public class WalletDetailParamDTO {
     @ApiModelProperty("true-表示不需要汇总信息")
     private Boolean excludeSummary = false;
 
+    @ApiModelProperty("通用扩展字段A")
+    private String extensionA;
+
+    @ApiModelProperty("场馆注单号")
+    private String extensionB;
+
+    @ApiModelProperty("通用扩展字段C")
+    private BigDecimal extensionC;
+
 }

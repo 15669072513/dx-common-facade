@@ -180,7 +180,7 @@ public class WalletDetailRespDTO {
     @TableField("extension_a")
     private String extensionA;
 
-    @ApiModelProperty("通用扩展字段B")
+    @ApiModelProperty("场馆注单号")
     @TableField("extension_b")
     private String extensionB;
 
