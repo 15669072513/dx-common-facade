@@ -1,9 +1,5 @@
 package com.dx.facade.texas.req;
 
-import com.dx.facade.annotation.FieldOperate;
-import com.dx.facade.annotation.ValueConvert;
-import com.dx.facade.game.convert.GameStatusRender;
-import com.dx.facade.game.convert.InsuranceModeRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -88,15 +84,15 @@ public class DxGameConfigEditReq implements Serializable {
     private BigDecimal rake;
 
     @ApiModelProperty(
-            value = "创建人",
-            hidden = true
+        value = "创建人",
+        hidden = true
     )
     private String createdBy;
 
 
     @ApiModelProperty(
-            value = "修改人",
-            hidden = true
+        value = "修改人",
+        hidden = true
     )
     private String updatedBy;
 
@@ -112,10 +108,9 @@ public class DxGameConfigEditReq implements Serializable {
     private Boolean insuranceChoosSheet;
 
     @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
-    @ValueConvert(renderers = InsuranceModeRender.class)
     private String insuranceMode;
 
-    @ApiModelProperty("保险出发下限")
+    @ApiModelProperty("保险触发下限")
     private Integer insuranceLower;
 
     @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
@@ -144,4 +139,10 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
     private Integer preflopDelay;
+
+    @ApiModelProperty("前注功能 0-关闭 1-开启")
+    private Integer anteSwitch;
+
+    @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
+    private String anteLimits;
 }
