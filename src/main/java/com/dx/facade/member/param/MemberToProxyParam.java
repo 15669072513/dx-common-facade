@@ -32,7 +32,7 @@ public class MemberToProxyParam implements Serializable {
     private String userName;
 
     @ApiModelProperty(value = "商户id", example = "588326785867908888", required = true)
-    @NotNull(message = "商户id不能为空")
+//    @NotNull(message = "商户id不能为空")
     private Long merchantId;
 
     @ApiModelProperty(value = "当前登录用户id", hidden = true)

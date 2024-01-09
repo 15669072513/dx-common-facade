@@ -1,7 +1,6 @@
 package com.dx.facade.member.service;
 
 import com.dx.facade.member.param.UpdateProxyBankChannelStatusParamDTO;
-import com.dx.facade.member.resp.ProxyInfoSummaryRespDTO;
 import java.util.List;
 
 import com.dx.entity.CommonResp;
@@ -78,7 +77,7 @@ public interface ProxyRPCService {
     CommonResp<List<ProxyTreeRespDTO>> getProxyTreeLinkByUserName(GetProxyPathByUserNameParamDTO paramDTO) throws BizException;
 
     @ApiModelProperty("代理列表分页查询")
-    CommonResp<PageResp<ProxyInfoRespDTO, List<ProxyInfoSummaryRespDTO>>> selectProxyListPage(PageReq<ProxyListPageParamDTO> pageReq) throws BizException;
+    CommonResp<PageResp<ProxyInfoRespDTO, ?>> selectProxyListPage(PageReq<ProxyListPageParamDTO> pageReq) throws BizException;
 
     /**
      * 获取代理线数据
