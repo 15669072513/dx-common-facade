@@ -19,8 +19,6 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class ProxyBaseInfoReqDTO implements Serializable {
 	
-	private static final long serialVersionUID = 1L;
-
 	@ApiModelProperty(value = "代理ID")
 	private Long proxyId;
 	
@@ -29,8 +27,5 @@ public class ProxyBaseInfoReqDTO implements Serializable {
 	
 	@ApiModelProperty(value = "商户id")
 	private Long merchantId;
-	
-    @ApiModelProperty("合营码")
-    private String joinCode;
 	
 }

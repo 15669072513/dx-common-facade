@@ -5,11 +5,6 @@ package com.dx.facade.member.enums;
  * @author bicycle
  */
 public enum RebateRateStatusEnum {
-    /**
-     * 更新返点 -> 发送返点调整通知
-     * 平台调整  ->  发送返点失效通知
-     * 已失效记录 -> 不发送通知
-     */
 	/** 暂存 */
 	STAGING(-1,"暂存"),
 	

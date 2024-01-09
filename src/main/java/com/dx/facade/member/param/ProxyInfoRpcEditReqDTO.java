@@ -122,7 +122,4 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
     private ProxyInfoRpcEditResetPwd resetPwdAfter;
     @ApiModelProperty(value = "取款限制类型")
     private ProxyInfoRpcEditWithdrawLimitType editWithdrawLimitType;
-
-    @ApiModelProperty(value = "权限管理")
-    private ProxyInfoRpcPermissionReqDTO proxyInfoRpcPermissionReqDTO;
 }

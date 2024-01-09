@@ -45,7 +45,5 @@ public interface SingleWalletRPCService {
 
     CommonResp<List<SingleWalletRespDTO>> cpBet(MultipleWalletChangeParmDTO param);
 
-    CommonResp<List<SingleWalletRespDTO>> tyBet(MultipleWalletChangeParmDTO param);
-
     CommonResp<TotalSingleWalletRespDTO> zrBetOrCancel(MultipleWalletChangeParmDTO param);
 }

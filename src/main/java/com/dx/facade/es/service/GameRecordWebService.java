@@ -4,7 +4,6 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.es.req.GameRecordProxyWebParam;
-import com.dx.facade.es.resp.GameRecordBetAmountAggregation;
 import com.dx.facade.es.resp.GameRecordProxyWebRespDTO;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -25,6 +24,6 @@ public interface GameRecordWebService {
 	 * @throws BizException 业务异常
 	 */
 	@ApiModelProperty("代理web 获取下级会员游戏记录")
-	CommonResp<PageResp<GameRecordProxyWebRespDTO, GameRecordBetAmountAggregation>> gameRecordListProxyWeb(GameRecordProxyWebParam param) throws BizException;
+	CommonResp<PageResp<GameRecordProxyWebRespDTO, Void>> gameRecordListProxyWeb(GameRecordProxyWebParam param) throws BizException;
 
 }

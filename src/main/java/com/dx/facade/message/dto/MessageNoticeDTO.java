@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 
 /**
  * <p>
- * 通知、站内信消息配置表
+ * 通知、活动消息配置表
  * </p>
  *
  * @author dereck
@@ -24,7 +24,7 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "BwMessageNoticePO对象", description = "通知、站内信消息配置表")
+@ApiModel(value = "BwMessageNoticePO对象", description = "通知、活动消息配置表")
 public class MessageNoticeDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -77,7 +77,7 @@ public class MessageNoticeDTO implements Serializable {
 
     private String objDetail;
 
-    @ApiModelProperty("类型：1、通知 2、站内信消息")
+    @ApiModelProperty("类型：1、通知 2、活动消息")
     private Integer noticeType;
 
     @ApiModelProperty("撤回 [1-撤回 2-正常]")

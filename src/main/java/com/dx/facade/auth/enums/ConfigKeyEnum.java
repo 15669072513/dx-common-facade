@@ -256,7 +256,6 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
     MESSAGE_PROXY_REBATE_CONTRACT("message.proxy.rebate.contract", "1"),//返点比例失效
-    MESSAGE_PROXY_REBATE_CONTRACT_ADJUST_BAR("message.proxy.rebate.contract.adjust.bar", "1"),//返点比例调整 通知栏
     MESSAGE_PROXY_REBATE_BONUS("message.proxy.rebate.bonus", "1"), // 返点奖励
 
     MESSAGE_PROXY_PLATFORM_GENERAL("message.proxy.platform.general", "1"),//开通总代

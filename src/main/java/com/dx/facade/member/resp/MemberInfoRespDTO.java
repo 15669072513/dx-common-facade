@@ -208,9 +208,6 @@ public class MemberInfoRespDTO{
 
     @ApiModelProperty("是否需要修改密码：0不需要，1需要修改密码")
     private Integer needChgPwd;
-    
-    @ApiModelProperty("是否需要修改昵称：0不需要，1需要修改")
-    private Integer needChgNickname;
 
     @ApiModelProperty("备注")
     private String remark;

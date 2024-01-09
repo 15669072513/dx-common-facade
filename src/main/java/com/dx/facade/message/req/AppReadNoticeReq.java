@@ -1,6 +1,5 @@
 package com.dx.facade.message.req;
 
-import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import java.util.List;
@@ -19,6 +18,5 @@ public class AppReadNoticeReq {
 
     private Integer noticeCategory;
 
-    @ApiModelProperty("1=通知 2=站内信消息  3=公告  4=通知栏")
     private Integer noticeType;
 }

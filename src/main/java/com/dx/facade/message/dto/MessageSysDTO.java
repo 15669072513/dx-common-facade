@@ -24,7 +24,7 @@ import lombok.Data;
      @ApiModelProperty("用户id")
      private Long userId;
      
-     @ApiModelProperty("类型:1通知,2站内信消息,4通知栏")
+     @ApiModelProperty("类型:1通知,2活动")
      private Integer noticeType;
 
     @ApiModelProperty("消息类别:0会员消息,1代理消息")

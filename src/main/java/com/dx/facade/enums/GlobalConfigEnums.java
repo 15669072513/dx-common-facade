@@ -1,7 +1,6 @@
 package com.dx.facade.enums;
 
 public enum GlobalConfigEnums {
-
     CHAT_BARRAGE(1, 300, null, 1, "聊天弹幕", "德州扑克/短牌", "聊天弹幕"),
     CHAT_PHRASES(2, 301, null, 1, "聊天短语", "德州扑克/短牌", "聊天短语"),
     CHAT_EMOJ(3, 302, null, 1, "表情", "德州扑克/短牌", "表情"),
@@ -11,8 +10,7 @@ public enum GlobalConfigEnums {
     TEXAS_RAISE(6, 100, TexasGameTypeEnum.TEXAS.code(), 2, "倍数加注", "德州扑克", "德州倍数加注"),
     TEXAS_POT_RAISE(7, 101, TexasGameTypeEnum.TEXAS.code(), 2, "底池加注", "德州扑克", "德州底池加注"),
     SHORT_DECK_RAISE(8, 200, TexasGameTypeEnum.SHORT_CARD.code(), 2, "倍数加注", "短牌", "短牌倍数加注"),
-    SHORT_DECK_POT_RAISE(9, 201, TexasGameTypeEnum.SHORT_CARD.code(), 2, "底池加注", "短牌", "短牌底池加注"),
-    MOVE_DELAY(11, 306, null, 1, "行动延迟", "德州扑克/短牌", "行动延迟");
+    SHORT_DECK_POT_RAISE(9, 201, TexasGameTypeEnum.SHORT_CARD.code(), 2, "底池加注", "短牌", "短牌底池加注");
 
     private Integer bizType;
     private Integer dbType;
