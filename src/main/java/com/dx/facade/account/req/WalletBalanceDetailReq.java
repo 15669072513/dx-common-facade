@@ -103,5 +103,7 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("通用扩展字段C")
     private BigDecimal extensionC;
 
+    @ApiModelProperty("是否计算汇总信息")
+    private Boolean needSummary;
 
 }
