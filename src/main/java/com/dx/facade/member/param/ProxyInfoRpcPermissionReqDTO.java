@@ -23,9 +23,11 @@ import lombok.NoArgsConstructor;
 public class ProxyInfoRpcPermissionReqDTO implements Serializable {
     
     private static final long serialVersionUID = 1L;
-    
-    @ApiModelProperty(value = "开通直属会员代理权限", required = true)
-    private Integer playerToProxyAble;
-    @ApiModelProperty(value = "开通跨代理操作权限")
+
+    @ApiModelProperty(value = "代理跨级操作权限 - 1:开启，0:关闭")
     private Integer crossOptLevel;
+
+    @ApiModelProperty(value = "会员转代开关 - 1:开启，0:关闭")
+    private Integer playerToProxy;
+
 }
