@@ -7,7 +7,6 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.LowerMemberListReqDto;
 import com.dx.facade.member.param.ProxySubProxyListEsDto;
 import com.dx.facade.member.param.ProxySubProxyListEsParam;
-import com.dx.facade.member.param.ProxySubProxyListSummaryDto;
 import com.dx.facade.member.proxy.req.*;
 import com.dx.facade.member.proxy.resp.*;
 import com.dx.facade.member.resp.CountMemberListRespDto;
@@ -108,7 +107,7 @@ public interface ProxyDetailsInfoRpcService {
 	 * @return
 	 * @throws BizException
 	 */
-	PageResp<ProxySubProxyListEsDto, List<ProxySubProxyListSummaryDto>> selectUnderProxyListEsPage(PageReq<ProxySubProxyListEsParam> pageReq) throws BizException;
+	PageResp<ProxySubProxyListEsDto, ProxySubProxyListEsDto> selectUnderProxyListEsPage(PageReq<ProxySubProxyListEsParam> pageReq) throws BizException;
 
 	/**
 	 * 代理pc-获取下级会员列表
