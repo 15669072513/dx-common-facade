@@ -1,9 +1,8 @@
 package com.dx.facade.game.util;
 
-import java.util.Objects;
-
 import com.dx.facade.enums.BwEnvEnum;
-import com.dx.util.StringUtil;
+
+import java.util.Objects;
 
 public class GameUsernameUtil {
 
@@ -30,6 +29,9 @@ public class GameUsernameUtil {
 
     private static String getPlayerNamePrefix(BwEnvEnum envEnum, Long merchantId) {
         String prefix = "";
+        if (envEnum.getName().equalsIgnoreCase(BwEnvEnum.TEST1.getName())) {
+            envEnum = BwEnvEnum.TEST1_NAME;
+        }
         prefix = envEnum.getName().substring(envEnum.getName().length() - 1, envEnum.getName().length());
         return prefix + merchantId % 10000;
     }

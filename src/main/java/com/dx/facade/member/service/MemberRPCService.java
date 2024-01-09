@@ -1,5 +1,6 @@
 package com.dx.facade.member.service;
 
+import com.dx.facade.member.param.MemberToProxyParam;
 import com.dx.facade.member.resp.MemberInfoSummaryRespDTO;
 import java.util.List;
 
@@ -237,4 +238,5 @@ public interface MemberRPCService {
 	 */
 	CommonResp<List<MemberInfoRespDTO>> memberListByParentProxy(MemberListParamDTO paramDTO);
 
+	CommonResp entryAuthorityOpen(MemberToProxyParam param) throws BizException;
 }

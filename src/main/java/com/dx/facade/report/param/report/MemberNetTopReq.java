@@ -27,7 +27,7 @@ public class MemberNetTopReq {
     private Long reportEdDate;
 
     @ApiModelProperty(value = "查询数据数量", example = "3")
-    private String top;
+    private Integer top;
 
     @ApiModelProperty(value = "类型: 1=今日盈利最高, 2=今日亏损最高)",required = true, example = "1")
     @NotNull(message = "类型不能为空")
@@ -36,8 +36,14 @@ public class MemberNetTopReq {
     @ApiModelProperty(value = "会员id")
     private Long memberId;
 
+    @ApiModelProperty(value = "会员账号")
+    private String memberName;
+
     @ApiModelProperty(value = "总代理id")
     private Long topProxyId;
+
+    @ApiModelProperty(value = "总代理账号")
+    private String topProxyName;
 
     @ApiModelProperty(value = "商户id")
     private Long merchantId;
