@@ -1,12 +1,5 @@
 package com.dx.facade.texas.req;
 
-import com.dx.facade.annotation.FieldOperate;
-import com.dx.facade.annotation.ValueConvert;
-import com.dx.facade.game.convert.GameStatusRender;
-import com.dx.facade.game.convert.InsuranceChooseSheetRender;
-import com.dx.facade.game.convert.InsuranceModeRender;
-import com.dx.facade.game.convert.ServiceChargeRender;
-import com.dx.facade.game.convert.UniversalCloseOpenRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -31,7 +24,6 @@ public class DxGameConfigEditReq implements Serializable {
     private Long gameTypeId;
 
     @ApiModelProperty("游戏名称")
-    @FieldOperate(fieldName ="游戏名称")
     private String gameName;
 
     @ApiModelProperty("游戏中文名")
@@ -59,55 +51,42 @@ public class DxGameConfigEditReq implements Serializable {
     private String iconUrl;
 
     @ApiModelProperty("游戏描述")
-    @FieldOperate(fieldName ="游戏描述")
     private String description;
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
-    @FieldOperate(fieldName ="状态")
-    @ValueConvert(renderers = GameStatusRender.class)
     private Integer status;
 
     @ApiModelProperty("超时（min）自动解散房间")
-    @FieldOperate(fieldName ="超时（min）自动解散房间")
     private Integer gameOvertime;
 
     @ApiModelProperty("大盲BB设置")
-    @FieldOperate(fieldName ="大盲BB设置")
     private String bbSetting;
 
     @ApiModelProperty("默认带入值（BB）")
-    @FieldOperate(fieldName ="默认带入值（BB）")
     private String bbDefaultCarry;
 
     @ApiModelProperty("补码下限")
-    @FieldOperate(fieldName ="补码下限")
     private Integer complementLowerLimit;
 
     @ApiModelProperty("补码上限")
-    @FieldOperate(fieldName ="补码上限")
     private Integer complementUpperLimit;
 
     @ApiModelProperty("游戏时长（H）")
-    @FieldOperate(fieldName ="游戏时长（H）")
     private String gameTimes;
 
     @ApiModelProperty("游戏人数")
-    @FieldOperate(fieldName ="游戏人数")
     private String gamePeopleNumbers;
 
     @ApiModelProperty("自动开始人数")
-    @FieldOperate(fieldName ="自动开始人数")
     private String autoStartNumbers;
 
     @ApiModelProperty("抽水比例")
-    @FieldOperate(fieldName ="抽水比例")
     private BigDecimal rake;
 
     @ApiModelProperty(
         value = "创建人",
         hidden = true
     )
-    @FieldOperate(fieldName ="创建人")
     private String createdBy;
 
 
@@ -115,7 +94,6 @@ public class DxGameConfigEditReq implements Serializable {
         value = "修改人",
         hidden = true
     )
-    @FieldOperate(fieldName ="修改人")
     private String updatedBy;
 
     /** google验证码 */
@@ -124,70 +102,47 @@ public class DxGameConfigEditReq implements Serializable {
     private String googleVerifyCode;
 
     @ApiModelProperty("turn购买保险最低值，多个用逗号隔开，支持小数点2位")
-    @FieldOperate(fieldName ="turn购买保险最低值")
     private String insuranceTurn;
 
     @ApiModelProperty("选张购买功能 false-不选张 true-选张，多个用逗号隔开，支持小数点2位")
-    @ValueConvert(renderers = InsuranceChooseSheetRender.class)
-    @FieldOperate(fieldName ="选张购买功能")
     private Boolean insuranceChoosSheet;
 
     @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
-    @ValueConvert(renderers = InsuranceModeRender.class)
-    @FieldOperate(fieldName ="保险模式")
     private String insuranceMode;
 
     @ApiModelProperty("保险触发下限")
-    @FieldOperate(fieldName ="保险触发下限")
     private Integer insuranceLower;
 
     @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
-    @ValueConvert(renderers = UniversalCloseOpenRender.class)
-    @FieldOperate(fieldName ="ALLIN展示OUTS与胜率")
     private Integer showOutsWinn;
 
     @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
-    @ValueConvert(renderers = UniversalCloseOpenRender.class)
-    @FieldOperate(fieldName ="允许主动带出")
     private Integer activeBringOut;
 
     @ApiModelProperty("必要保留筹码 多个用逗号隔开 不支持小数")
-    @FieldOperate(fieldName ="必要保留筹码")
     private String mustKeepChip;
 
     @ApiModelProperty("每手服务费，0-关闭 1-按底池比例 2-按盈利比例 3-都选择")
-    @ValueConvert(renderers = ServiceChargeRender.class)
-    @FieldOperate(fieldName ="每手服务费")
     private Integer serviceCharge;
 
     @ApiModelProperty("按底池比例收费 多个用逗号隔开 支持小数")
-    @FieldOperate(fieldName ="按底池比例收费")
     private String bottomPoolFee;
 
     @ApiModelProperty("按盈利比例收费 多个用逗号隔开  支持小数")
-    @FieldOperate(fieldName ="按盈利比例收费")
     private String profitFee;
 
     @ApiModelProperty("收费上限 多个用逗号隔开 支持小数 -1代表无上限")
-    @FieldOperate(fieldName ="收费上限")
     private String feeCap;
 
     @ApiModelProperty("允许主动带出 0-关闭 1-开启 默认关闭")
-    @ValueConvert(renderers = UniversalCloseOpenRender.class)
-    @FieldOperate(fieldName ="允许主动带出")
     private Integer hideDecimals;
 
     @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
-    @ValueConvert(renderers = UniversalCloseOpenRender.class)
-    @FieldOperate(fieldName ="preflop看牌")
     private Integer preflopDelay;
 
     @ApiModelProperty("前注功能 0-关闭 1-开启")
-    @ValueConvert(renderers = UniversalCloseOpenRender.class)
-    @FieldOperate(fieldName ="前注功能")
     private Integer anteSwitch;
 
     @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
-    @FieldOperate(fieldName ="前注（倍BB）")
     private String anteLimits;
 }
