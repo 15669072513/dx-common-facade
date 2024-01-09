@@ -67,7 +67,6 @@ public class DxGameConfigListResp implements Serializable {
     private String iconUrl;
 
     @ApiModelProperty("游戏描述")
-    @FieldOperate(fieldName ="游戏描述")
     private String description;
 
     @ApiModelProperty("状态(0已禁用,1开启中,2维护中)")
