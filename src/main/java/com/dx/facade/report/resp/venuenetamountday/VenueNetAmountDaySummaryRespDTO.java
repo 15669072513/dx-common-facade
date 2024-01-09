@@ -50,4 +50,22 @@ public class VenueNetAmountDaySummaryRespDTO {
     protected BigDecimal netAmountVND = BigDecimal.ZERO;
     @ApiModelProperty("投注盈亏THB")
     protected BigDecimal netAmountTHB = BigDecimal.ZERO;
+
+    @ApiModelProperty("会员抽水分成")
+    protected BigDecimal memberPumpPercentageAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("代理抽水分成")
+    protected BigDecimal proxyPumpPercentageAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("公司抽水分成")
+    protected BigDecimal companyPumpPercentageAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("会员保险盈亏")
+    private BigDecimal memberInsuredNetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("代理保险盈亏")
+    private BigDecimal proxyInsuredNetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("公司保险盈亏")
+    private BigDecimal companyInsuredNetAmount = BigDecimal.ZERO;
 }
