@@ -20,7 +20,7 @@ import java.util.List;
 public class ReportVenueNetAmountDayParam extends LocalDatePageRequest {
 
     @ApiModelProperty("商户Id")
-    private String merchantId;
+    private Long merchantId;
 
     @ApiModelProperty(value = "场馆Code")
     private List<String> venueCodes;

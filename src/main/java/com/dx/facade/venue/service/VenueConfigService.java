@@ -5,6 +5,7 @@ import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.es.resp.VenueAggregation;
+import com.dx.facade.es.resp.VenueConnectAggregation;
 import com.dx.facade.texas.dto.DxGameConfigListDto;
 import com.dx.facade.venue.dto.ConfigGamePO;
 import com.dx.facade.venue.dto.ConfigVenuePO;
@@ -27,7 +28,7 @@ public interface VenueConfigService {
 
     void editVenue(VenueEditReq req);
 
-    PageResp<VenueConnectResp, Void> listConnectPage(VenueConnectListReq req);
+    PageResp<VenueConnectResp, VenueConnectAggregation> listConnectPage(VenueConnectListReq req);
 
     void editVenueConnect(VenueConnectEditReq req) throws BizException;
 

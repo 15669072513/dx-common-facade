@@ -21,7 +21,7 @@ import java.util.List;
 public class ReportDateCompareParam extends LocalDatePageRequest {
 
     @ApiModelProperty("商户Id")
-    private String merchantId;
+    private Long merchantId;
 
     @ApiModelProperty(
             value = "排序列名，merchantId",

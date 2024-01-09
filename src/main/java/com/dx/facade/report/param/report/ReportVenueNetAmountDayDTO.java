@@ -21,11 +21,11 @@ public class ReportVenueNetAmountDayDTO  {
 
 
     @ApiModelProperty("投注额")
-    private Double betAmount;
+    private BigDecimal betAmount;
 
 
     @ApiModelProperty("有效投注")
-    private Double validBetAmount;
+    private BigDecimal validBetAmount;
 
 
     @ApiModelProperty("投注人数")
