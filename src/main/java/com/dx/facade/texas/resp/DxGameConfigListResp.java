@@ -27,7 +27,6 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("游戏类型id")
     @ValueConvert(renderers = GameTypeIdRender.class)
-    @FieldOperate(fieldName ="游戏类型")
     private Long gameTypeId;
 
     @ApiModelProperty("场馆类型(如by,ty,zr,qkl)")
@@ -40,7 +39,6 @@ public class DxGameConfigListResp implements Serializable {
     private String venueName;
 
     @ApiModelProperty("游戏名称")
-    @FieldOperate(fieldName ="游戏名称")
     private String gameName;
 
     @ApiModelProperty("游戏中文名")
