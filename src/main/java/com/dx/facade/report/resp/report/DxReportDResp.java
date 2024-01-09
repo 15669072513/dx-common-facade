@@ -6,7 +6,6 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 /**
  * @author rebuy
@@ -22,15 +21,6 @@ public class DxReportDResp implements Serializable {
     private static final long serialVersionUID = 1L;
     @ApiModelProperty("类别：0-官方，1-代理,3-总结")
     private String dataType;
-    @ApiModelProperty(value = "日期,比如20210531")
-    private Integer reportDate;
-
-    @ApiModelProperty(value = "创建时间")
-    private LocalDateTime createdAt;
-
-    @ApiModelProperty(value = "更新时间")
-    private LocalDateTime updatedAt;
-
     @ApiModelProperty(value = "授信额度(万)")
     private BigDecimal creditQuota;
 
