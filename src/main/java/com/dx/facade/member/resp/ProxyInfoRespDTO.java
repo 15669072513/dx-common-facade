@@ -299,6 +299,15 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty(value = "应收账款")
     private BigDecimal accountsReceivable;
+    
+	@ApiModelProperty(value = "应还借款", position = 3)
+	private BigDecimal borrowAmount;
+
+	@ApiModelProperty(value = "外放额度", position = 4)
+	private BigDecimal dispatchAmount;
+
+	@ApiModelProperty(value = "授信总额", position = 5)
+	private BigDecimal teamCreditTotal;
 
     @ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
     private Integer withdrawLimitType;

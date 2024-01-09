@@ -20,33 +20,33 @@ public class DwmProxyTeamTopRspDTO {
     @ApiModelProperty("id")
     private Long id;
     @ApiModelProperty("报表日期")
-    private Integer reportDate = 0;
+    protected Integer reportDate = 0;
     @ApiModelProperty("排名(序号)")
     private Integer topProxyRank;
     @ApiModelProperty("类型(1.团队应还账款2.团队可提现额)")
-    private Integer teamType = 0;
+    protected Integer teamType = 0;
     @ApiModelProperty("总代理ID")
-    private Long topProxyId = 0L;
+    protected Long topProxyId = 0L;
     @ApiModelProperty("总代理账号")
-    private String topProxyName = "";
+    protected String topProxyName = "";
     @ApiModelProperty("商户ID")
-    private Long merchantId = 0L;
+    protected Long merchantId = 0L;
     @ApiModelProperty("商户名称")
-    private String merchantName = "";
+    protected String merchantName = "";
     @ApiModelProperty("团队可提现额")
-    private BigDecimal teamWithdrawable = BigDecimal.ZERO;
+    protected BigDecimal teamWithdrawable = BigDecimal.ZERO;
     @ApiModelProperty("团队应还账款")
-    private BigDecimal teamReturnLoan= BigDecimal.ZERO;
+    protected BigDecimal teamReturnLoan= BigDecimal.ZERO;
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount= BigDecimal.ZERO;
+    protected BigDecimal validBetAmount= BigDecimal.ZERO;
     @ApiModelProperty("直属会员有效投注")
-    private BigDecimal directlyMemberValidBetAmount= BigDecimal.ZERO;
+    protected BigDecimal directlyMemberValidBetAmount= BigDecimal.ZERO;
     @ApiModelProperty("团队返点")
-    private BigDecimal teamRebateAmount = BigDecimal.ZERO;
+    protected BigDecimal teamRebateAmount = BigDecimal.ZERO;
     @ApiModelProperty("投注盈亏")
-    private BigDecimal netAmount = BigDecimal.ZERO;
+    protected BigDecimal netAmount = BigDecimal.ZERO;
     @ApiModelProperty("总授信额度")
-    private BigDecimal creditQuota = BigDecimal.ZERO;
+    protected BigDecimal creditQuota = BigDecimal.ZERO;
     @ApiModelProperty("可用额度")
-    private BigDecimal creditBalance = BigDecimal.ZERO;
+    protected BigDecimal creditBalance = BigDecimal.ZERO;
 }

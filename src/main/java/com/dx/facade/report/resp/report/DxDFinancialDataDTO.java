@@ -28,4 +28,6 @@ public class DxDFinancialDataDTO {
     private String successfulRate;
     @ApiModelProperty("金额")
     private BigDecimal amount;
+    @ApiModelProperty("出入金参数：payIn-充值，payOut-提现")
+    private String payType;
 }
