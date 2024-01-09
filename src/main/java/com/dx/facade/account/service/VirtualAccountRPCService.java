@@ -9,6 +9,7 @@ import com.dx.facade.account.req.VirtualAccountMerchantIdsParmDTO;
 import com.dx.facade.account.resp.UserBankAndVirtualUpdateBindStatusReqDTO;
 import com.dx.facade.account.resp.VirtualAccountRespDTO;
 
+import com.dx.facade.account.resp.VirtualAccountSumRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 import java.util.List;
@@ -74,7 +75,7 @@ public interface VirtualAccountRPCService {
      * @return
      */
     @ApiModelProperty(value = "查询会员 虚拟币账户信息")
-    CommonResp<PageResp<VirtualAccountRespDTO, ?>> selectVirtualAccount(MemberUserBankAndVirtualParam param);
+    CommonResp<PageResp<VirtualAccountRespDTO, VirtualAccountSumRespDTO>> selectVirtualAccount(MemberUserBankAndVirtualParam param);
 
     /**
      * 后台 虚拟币账户解绑操作

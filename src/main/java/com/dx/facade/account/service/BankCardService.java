@@ -11,6 +11,7 @@ import com.dx.facade.account.req.BankCardMerchantIdsParmDTO;
 import com.dx.facade.account.req.GetBankCardParmDTO;
 import com.dx.facade.account.req.UserBankAndVirtualUpdateStatusReqDTO;
 import com.dx.facade.account.resp.BankCardRespDTO;
+import com.dx.facade.account.resp.BankCardSumRespDTO;
 import com.dx.facade.account.resp.UserBankAndVirtualUpdateBindStatusReqDTO;
 import com.dx.facade.member.param.UserBankCardOperationQureyParam;
 import com.dx.facade.member.param.UserBankCardQureyParam;
@@ -50,7 +51,7 @@ public interface BankCardService {
      * @return
      */
     @ApiModelProperty(value = "管理后台查询银行卡信息")
-    PageResp<BankCardRespDTO, ?> selectBankCard(MemberUserBankAndVirtualParam param);
+    PageResp<BankCardRespDTO, BankCardSumRespDTO> selectBankCard(MemberUserBankAndVirtualParam param);
 
     /**
      * 会员修改提款时间

@@ -1,5 +1,6 @@
 package com.dx.facade.member.param;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -71,4 +72,7 @@ public class ProxyListPageParamDTO {
 
     @ApiModelProperty("排序方式(1)：desc-降序 asc-升序")
     private String orderType;
+    
+    @ApiModelProperty("合营码")
+    private String joinCode;
 }
