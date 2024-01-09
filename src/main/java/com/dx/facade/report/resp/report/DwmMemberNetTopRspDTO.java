@@ -37,7 +37,7 @@ public class DwmMemberNetTopRspDTO {
     @ApiModelProperty("今日借款")
     private BigDecimal loanAmount = BigDecimal.ZERO;
     @ApiModelProperty("游戏场馆")
-    private String venueName = "";
+    private String venueName = "德州";
     @ApiModelProperty("有效投注")
     private BigDecimal validBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("单笔最大投注")
