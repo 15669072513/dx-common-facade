@@ -19,33 +19,33 @@ public class DwmMemberNetTopRspDTO {
     @ApiModelProperty("id")
     private Long id;
     @ApiModelProperty("报表日期")
-    private Integer reportDate = 0;
+    protected Integer reportDate = 0;
     @ApiModelProperty("排名(序号)")
     private Integer memberRank;
     @ApiModelProperty("盈亏类型(1.今日盈利最高2.今日亏损最高)")
-    private Integer netType = 0;
+    protected Integer netType = 0;
     @ApiModelProperty("会员ID")
-    private Long memberId = 0L;
+    protected Long memberId = 0L;
     @ApiModelProperty("会员账号")
-    private String memberName = "";
+    protected String memberName = "";
     @ApiModelProperty("总代理ID")
     private Long topProxyId = 0L;
     @ApiModelProperty("总代理账号")
     private String topProxyName = "";
     @ApiModelProperty("授信额度")
-    private BigDecimal creditQuota = BigDecimal.ZERO;
+    protected BigDecimal creditQuota = BigDecimal.ZERO;
     @ApiModelProperty("今日借款")
-    private BigDecimal loanAmount = BigDecimal.ZERO;
+    protected BigDecimal loanAmount = BigDecimal.ZERO;
     @ApiModelProperty("游戏场馆")
-    private String venueName = "德州";
+    protected String venueName = "德州";
     @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount = BigDecimal.ZERO;
+    protected BigDecimal validBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("单笔最大投注")
-    private BigDecimal maxBetAmount = BigDecimal.ZERO;
+    protected BigDecimal maxBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("历史返水")
-    private BigDecimal hisRebateAmount = BigDecimal.ZERO;
+    protected BigDecimal hisRebateAmount = BigDecimal.ZERO;
     @ApiModelProperty("当日输赢")
-    private BigDecimal netAmount = BigDecimal.ZERO;
+    protected BigDecimal netAmount = BigDecimal.ZERO;
     @ApiModelProperty("历史输赢")
-    private BigDecimal hisNetAmount = BigDecimal.ZERO;
+    protected BigDecimal hisNetAmount = BigDecimal.ZERO;
 }
