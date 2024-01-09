@@ -32,12 +32,8 @@ public class DxSysOperateLogListReq extends BaseRequest {
     private String operateUserName;
 
     @ApiModelProperty("操作开始时间")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private LocalDateTime operateStartTime;
+    private Long operateStartTime;
 
     @ApiModelProperty("操作结束时间")
-    @JsonSerialize(using = LocalDateTimeSerializer.class)
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
-    private LocalDateTime operateEndTime;
+    private Long operateEndTime;
 }
