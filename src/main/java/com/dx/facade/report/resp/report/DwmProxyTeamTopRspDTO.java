@@ -22,7 +22,7 @@ public class DwmProxyTeamTopRspDTO {
     @ApiModelProperty("报表日期")
     protected Integer reportDate = 0;
     @ApiModelProperty("排名(序号)")
-    private Integer topProxyRank;
+    private String topProxyRank;
     @ApiModelProperty("类型(1.团队应还账款2.团队可提现额)")
     protected Integer teamType = 0;
     @ApiModelProperty("总代理ID")
