@@ -21,7 +21,7 @@ public class DwmMemberNetTopRspDTO {
     @ApiModelProperty("报表日期")
     protected Integer reportDate = 0;
     @ApiModelProperty("排名(序号)")
-    private Integer memberRank;
+    private String memberRank;
     @ApiModelProperty("盈亏类型(1.今日盈利最高2.今日亏损最高)")
     protected Integer netType = 0;
     @ApiModelProperty("会员ID")
