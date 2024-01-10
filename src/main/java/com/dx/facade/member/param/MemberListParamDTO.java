@@ -78,6 +78,5 @@ public class MemberListParamDTO {
     private String orderType;
 
     @ApiModelProperty("上级代理名称")
-    @TableField("parent_proxy_name")
     private String parentProxyName;
 }
