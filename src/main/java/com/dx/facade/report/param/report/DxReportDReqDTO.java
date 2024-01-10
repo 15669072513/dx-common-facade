@@ -17,6 +17,6 @@ public class DxReportDReqDTO {
     private Long merchantId;
     @ApiModelProperty("日报期数-开始时间")
     private Integer startDate;
-    @ApiModelProperty("日报期数")
+    @ApiModelProperty("日报期数-结束时间")
     private Integer endTime;
 }

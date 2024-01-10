@@ -69,7 +69,7 @@ public class DxSysOperateLogResp {
   @ApiModelProperty(value = "操作用户账号")
   private String operateUserName;
 
-  @ApiModelProperty(value = "操作用户类型枚举AccountTypeEnum（1正式 2商务 3置换 4试玩）")
+  @ApiModelProperty(value = "操作用户类型（1总控超管 2总控管理员 3总控职员 4商户超管 5商户管理员 6商户职员）")
   private Integer accountType;
 
   @ApiModelProperty(value = "备注")
@@ -81,11 +81,8 @@ public class DxSysOperateLogResp {
   @ApiModelProperty(value = "所属商户名称")
   private String merchantName;
 
-  @ApiModelProperty(value = "主商户id")
-  private Long topMerchantId;
-
-  @ApiModelProperty(value = "主商户名称")
-  private String topMerchantName;
+  @ApiModelProperty(value = "操作对象(商户名称)")
+  private String operateObject;
 
   @ApiModelProperty(value = "创建时间")
   private LocalDateTime createdAt;
