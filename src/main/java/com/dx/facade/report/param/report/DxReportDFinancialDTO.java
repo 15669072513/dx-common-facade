@@ -21,4 +21,8 @@ public class DxReportDFinancialDTO {
     private LocalDate report;
     @ApiModelProperty("商户ID")
     private Long merchantId;
+    @ApiModelProperty("日报期数-开始时间")
+    private Integer startDate;
+    @ApiModelProperty("日报期数-结束时间")
+    private Integer endTime;
 }
