@@ -21,7 +21,7 @@ public class DxDFinancialDataDTO {
     @ApiModelProperty("通道名称")
     private String channelName;
     @ApiModelProperty("下单人数")
-    private BigDecimal placedOrders;
+    private Long placedOrders;
     @ApiModelProperty("总单量")
     private BigDecimal totalOrders;
     @ApiModelProperty("成功单数")
