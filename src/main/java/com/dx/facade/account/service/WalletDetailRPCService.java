@@ -13,6 +13,7 @@ import com.dx.facade.texas.req.TableBringInfoReq;
 import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WalletDetailRPCService {
 
@@ -23,6 +24,14 @@ public interface WalletDetailRPCService {
      * @copyright
      */
     CommonResp<ProxyRebateResponseData> proxyRebateInfo(Long proxyId);
+
+    /**
+     * @author Dealer
+     * @description: 批量获取代理返佣信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<List<ProxyRebateResponseData>> proxyRebateInfoBatch(List<Long> proxyIds);
 
     /**
      * 会员/代理账变记录列表

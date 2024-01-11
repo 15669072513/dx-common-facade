@@ -1,8 +1,10 @@
 package com.dx.facade.account.resp;
 
 import io.swagger.annotations.ApiModelProperty;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -15,7 +17,12 @@ import java.math.BigDecimal;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ProxyRebateResponseData implements Serializable {
+
+    @ApiModelProperty(value = "代理id")
+    private Long proxyId;
 
     @ApiModelProperty(value = "个人返点")
     private BigDecimal rebate;
