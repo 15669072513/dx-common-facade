@@ -48,6 +48,9 @@ public class MemberBaseInfoUpdDTO implements BaseParmDTO {
 
 	@ApiModelProperty("昵称")
 	private String nickName;
+	
+    @ApiModelProperty(value = "修改来源 1：个人中心 2：德州 默认 1")
+    private Integer source = 1;
 
 
 	@Override
