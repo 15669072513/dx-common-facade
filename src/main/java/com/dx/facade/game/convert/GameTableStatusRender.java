@@ -15,6 +15,8 @@ public class GameTableStatusRender implements ValueRenderer {
     }
     else if (Objects.equals(value,2)) {
       return "已结束";
+    }else if (Objects.equals(value,3)) {
+      return "已通知解散";
     }
     return value;
   }
