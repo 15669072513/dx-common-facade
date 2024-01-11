@@ -33,8 +33,8 @@ public class InsuranceInfoListReq extends BaseRequest {
     @ApiModelProperty("总代id")
     private Long topProxyId;
 
-//  @ApiModelProperty("上级代理id")
-//  private Long parentProxyId;
+    @ApiModelProperty("代理id")
+    private Long proxyId;
 
     @ApiModelProperty(value = "上级代理账号")
     private String parentProxyName;
