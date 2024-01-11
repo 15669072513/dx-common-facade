@@ -6,8 +6,6 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,7 +16,7 @@ public class DxReportDFinancialDTO {
     @ApiModelProperty("出入金参数：payIn-充值，payOut-提现")
     private String payType;
     @ApiModelProperty("日报期数")
-    private LocalDate report;
+    private Integer report;
     @ApiModelProperty("商户ID")
     private Long merchantId;
     @ApiModelProperty("日报期数-开始时间")
