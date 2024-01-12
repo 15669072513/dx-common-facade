@@ -137,6 +137,7 @@ public class MemberOperationEnums {
 	    RESET_PASSWORD(10, "登录密码重置"),
 	    CREDI_LEVEL(11, "信用等级"),
 	    RESET_PAY_PASSWORD(12, "支付密码重置"),
+	    REAK_NAME(13, "姓名"),
 	    ;
 		
 		public Integer code;

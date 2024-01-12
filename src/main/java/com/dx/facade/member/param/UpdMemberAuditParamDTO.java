@@ -1,10 +1,11 @@
 package com.dx.facade.member.param;
 
+import org.springframework.util.Assert;
+
 import com.dx.facade.member.exception.ErrorCode;
-import com.fasterxml.jackson.annotation.JsonFormat;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.util.Assert;
 
 /**
  * 会员审核请求DTO
@@ -37,6 +38,18 @@ public class UpdMemberAuditParamDTO implements BaseParmDTO{
     /** 备注 */
     @ApiModelProperty(value = "备注")
     private String remark;
+    
+    /** ip */
+    private String ip;
+    
+    /** 审核人账号类型 */
+    private String accountType;
+    
+    /** 审核人的商户id */
+    private Long merchantId;
+    
+    /** 审核人的商户名 */
+    private String merchantName;
 
     @Override
     public void check() {
