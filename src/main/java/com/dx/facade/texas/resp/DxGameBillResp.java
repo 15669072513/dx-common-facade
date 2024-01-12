@@ -69,4 +69,15 @@ public class DxGameBillResp implements Serializable {
      * 用户局次统计
      */
     private int userRoundNo = 0;
+
+
+    /**
+     * 玩家总带出
+     */
+    private BigDecimal bringOutChipScore;
+
+    /**
+     * 入池率
+     */
+    private BigDecimal bringPoolRate=BigDecimal.ZERO.setScale(1);
 }
