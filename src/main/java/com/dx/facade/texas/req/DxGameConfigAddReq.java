@@ -161,4 +161,7 @@ public class DxGameConfigAddReq implements Serializable {
 
     @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
     private Integer tableEntryPasswordSwitch;
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
 }
