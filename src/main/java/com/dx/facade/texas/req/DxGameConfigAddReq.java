@@ -155,4 +155,10 @@ public class DxGameConfigAddReq implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
     private String anteLimits;
+
+    @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    private Integer voiceChatSwitch;
+
+    @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    private Integer tableEntryPasswordSwitch;
 }
