@@ -17,17 +17,17 @@ import java.math.BigDecimal;
 public class DwmMemberNetTopTotalRsp {
 
     @ApiModelProperty("合计授信额度")
-    protected BigDecimal totalCreditQuota = BigDecimal.ZERO;
+    protected BigDecimal creditQuota = BigDecimal.ZERO;
     @ApiModelProperty("合计今日借款")
-    protected BigDecimal totalLoanAmount = BigDecimal.ZERO;
+    protected BigDecimal loanAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计有效投注")
-    protected BigDecimal totalValidBetAmount = BigDecimal.ZERO;
+    protected BigDecimal validBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计单笔最大投注")
-    protected BigDecimal totalMaxBetAmount = BigDecimal.ZERO;
+    protected BigDecimal maxBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计历史返水")
-    protected BigDecimal totalHisRebateAmount = BigDecimal.ZERO;
+    protected BigDecimal hisRebateAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计当日输赢")
-    protected BigDecimal totalNetAmount = BigDecimal.ZERO;
+    protected BigDecimal netAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计历史输赢")
-    protected BigDecimal totalHisNetAmount = BigDecimal.ZERO;
+    protected BigDecimal hisNetAmount = BigDecimal.ZERO;
 }

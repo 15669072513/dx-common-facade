@@ -17,19 +17,19 @@ import java.math.BigDecimal;
 public class DwmProxyTeamTopTotalRsp {
 
     @ApiModelProperty("合计团队可提现额")
-    protected BigDecimal totalTeamWithdrawable = BigDecimal.ZERO;
+    protected BigDecimal teamWithdrawable = BigDecimal.ZERO;
     @ApiModelProperty("合计团队应还账款")
-    protected BigDecimal totalTeamReturnLoan = BigDecimal.ZERO;
+    protected BigDecimal teamReturnLoan = BigDecimal.ZERO;
     @ApiModelProperty("合计有效投注")
-    protected BigDecimal totalValidBetAmount = BigDecimal.ZERO;
+    protected BigDecimal validBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计直属会员有效投注")
-    protected BigDecimal totalDirectlyMemberValidBetAmount = BigDecimal.ZERO;
+    protected BigDecimal directlyMemberValidBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计团队返点")
-    protected BigDecimal totalTeamRebateAmount = BigDecimal.ZERO;
+    protected BigDecimal teamRebateAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计投注盈亏")
-    protected BigDecimal totalNetAmount = BigDecimal.ZERO;
+    protected BigDecimal netAmount = BigDecimal.ZERO;
     @ApiModelProperty("合计总授信额度")
-    protected BigDecimal totalCreditQuota = BigDecimal.ZERO;
+    protected BigDecimal creditQuota = BigDecimal.ZERO;
     @ApiModelProperty("合计可用额度")
-    protected BigDecimal totalCreditBalance = BigDecimal.ZERO;
+    protected BigDecimal creditBalance = BigDecimal.ZERO;
 }
