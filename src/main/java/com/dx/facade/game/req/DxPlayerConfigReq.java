@@ -31,4 +31,7 @@ public class DxPlayerConfigReq {
 
   @ApiModelProperty("底池加注选项列表")
   private List<String> potRaiseList;
+
+  @ApiModelProperty("加注拉杆确认 0-关闭 1-开启")
+  private Integer betPullSwitch=0;
 }

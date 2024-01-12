@@ -16,7 +16,7 @@ import java.io.Serializable;
 @Builder
 public class AccountOptLogSaveReqDTO implements Serializable {
     /**
-     * 栏目code，参见SectionEnum
+     * 栏目code，参见 SectionEnum
      */
     private Integer sectionCode;
 
@@ -26,7 +26,7 @@ public class AccountOptLogSaveReqDTO implements Serializable {
     private Integer pageCode;
 
     /**
-     * 操作类型，参见OptTypeEnum
+     * 操作类型，参见 OptTypeEnum
      */
     private Integer optType;
 

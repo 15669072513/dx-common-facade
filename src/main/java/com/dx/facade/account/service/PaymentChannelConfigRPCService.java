@@ -1,14 +1,13 @@
 package com.dx.facade.account.service;
 
+import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.facade.account.req.*;
 import com.dx.facade.account.resp.PaymentChannelConfigRespDTO;
-import com.dx.facade.account.resp.PaymentChannelRespDTO;
 import com.dx.facade.account.resp.PaymentMerchantConfigResp;
 
 import java.util.List;
-import java.util.Set;
 
 public interface PaymentChannelConfigRPCService {
 
@@ -24,4 +23,12 @@ public interface PaymentChannelConfigRPCService {
      * @return
      */
     List<PaymentMerchantConfigResp> getPaymentChannelListByUser(ClientPaymentChannelParamDTO param);
+
+    /**
+     * 根据id查询
+     *
+     * @param id
+     * @return
+     */
+    CommonResp<PaymentChannelConfigRespDTO> getById(Long id);
 }

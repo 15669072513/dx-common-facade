@@ -2,8 +2,7 @@ package com.dx.facade.report.resp.report;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.math.BigDecimal;
 
@@ -12,6 +11,9 @@ import java.math.BigDecimal;
  */
 @Setter
 @Getter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @ApiModel(value="德信数据日报-财务通道数据", description="德信日报-财务通道数据")
 public class DxDFinancialDataDTO {
     @ApiModelProperty("类别")
@@ -19,7 +21,7 @@ public class DxDFinancialDataDTO {
     @ApiModelProperty("通道名称")
     private String channelName;
     @ApiModelProperty("下单人数")
-    private BigDecimal placedOrders;
+    private Long placedOrders;
     @ApiModelProperty("总单量")
     private BigDecimal totalOrders;
     @ApiModelProperty("成功单数")

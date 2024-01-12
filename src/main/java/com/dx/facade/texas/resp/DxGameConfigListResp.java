@@ -195,4 +195,10 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
     @FieldOperate(fieldName ="前注（倍BB）")
     private String anteLimits;
+
+    @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    private Integer voiceChatSwitch;
+
+    @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    private Integer tableEntryPasswordSwitch;
 }
