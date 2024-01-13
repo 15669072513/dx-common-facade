@@ -33,6 +33,12 @@ public class RebateRateTryCaclParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("用户类型 0：会员 1：代理")
     private Integer userType;
     
+    @ApiModelProperty("用户Id")
+    private Long userId;
+
+    @ApiModelProperty("用户名称")
+    private String userName;
+    
     @ApiModelProperty("上级代理Id")
     private Long parentProxyId;
 
