@@ -253,4 +253,7 @@ public class MemberInfoRespDTO{
 
     @ApiModelProperty(value = "取款限制类型：1-账单限制，2-流水限制")
     private Integer withdrawLimitType;
+
+    @ApiModelProperty(value = "仅能看见直属上级牌桌：true-是，false-否")
+    private boolean onlyParentTable;
 }
