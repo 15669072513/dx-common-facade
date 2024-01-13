@@ -56,4 +56,10 @@ public class InsuranceInfoListReq extends BaseRequest {
 
   @ApiModelProperty("下级代理id")
   private List<Long> subProxyIds;
+
+  @ApiModelProperty("查询类型")
+  private Integer queryType; // 1 列表查询，导出查询
+
+  @ApiModelProperty("查询来源")
+  private Integer querySource;//1 中控后台，2 代理后台
 }
