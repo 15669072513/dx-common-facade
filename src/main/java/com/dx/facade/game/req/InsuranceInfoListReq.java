@@ -54,6 +54,13 @@ public class InsuranceInfoListReq extends BaseRequest {
   private String createEndTime;
 
 
+  @ApiModelProperty("购保时间区间开始时间戳")
+  private Long createStartTs;
+
+  @ApiModelProperty("购保时间区间结束时间戳")
+  private Long createEndTs;
+
+
   @ApiModelProperty("下级代理id")
   private List<Long> subProxyIds;
 
