@@ -80,4 +80,9 @@ public class DxGameBillResp implements Serializable {
      * 入池率
      */
     private BigDecimal bringPoolRate=BigDecimal.ZERO.setScale(1);
+
+    /**
+     * 主动入池次数
+     */
+    private Long activeBringPoolNumber;
 }
