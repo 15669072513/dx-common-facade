@@ -168,14 +168,4 @@ public interface IDxTableInfoService {
     CommonResp<PageResp<GameTableInfoListEsResp, Void>> getTableListPageByUser(GameTableInfoListReq req);
 
 
-    /**
-     * 校验牌桌密码
-     *
-     * @param userId
-     * @param tableId
-     * @param password
-     * @return
-     * @throws Exception
-     */
-    CommonResp<Boolean> checkTablePassword(Long userId, Long tableId, String password) throws Exception;
 }
