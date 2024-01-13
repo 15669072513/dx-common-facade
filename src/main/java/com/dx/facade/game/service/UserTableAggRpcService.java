@@ -71,10 +71,4 @@ public interface UserTableAggRpcService {
      */
     CommonResp<PageResp<GameOrderClubSumResp, ?>> gameOrderClubContributeList(GameOrderClubSumReq req);
 
-    /**
-     * 根据用户id集合获取统计注单信息
-     * @param userSumByUserIdReq
-     * @return
-     */
-    CommonResp<GameOrderUserSumByUserIdRespDto> getGameOrderUserSumList(GameOrderUserSumByUserIdReq userSumByUserIdReq);
 }
