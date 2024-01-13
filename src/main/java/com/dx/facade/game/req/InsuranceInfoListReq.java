@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.List;
+
 @ApiModel("保险列表请求实体")
 @Data
 public class InsuranceInfoListReq extends BaseRequest {
@@ -62,4 +64,6 @@ public class InsuranceInfoListReq extends BaseRequest {
 
     @ApiModelProperty("查询来源")
     private Integer querySource;//1 中控后台，2 代理后台
+
+
 }
