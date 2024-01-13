@@ -28,6 +28,8 @@ public class VenueNetAmountDaySummaryRespDTO {
     @ApiModelProperty("投注盈亏")
     protected BigDecimal netAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("盈利率(使用时直接加%即可)")
+    private BigDecimal netRate = BigDecimal.ZERO;
 
 
     @ApiModelProperty("投注金额CNY")
@@ -68,4 +70,5 @@ public class VenueNetAmountDaySummaryRespDTO {
 
     @ApiModelProperty("公司保险盈亏")
     private BigDecimal companyInsuredNetAmount = BigDecimal.ZERO;
+
 }
