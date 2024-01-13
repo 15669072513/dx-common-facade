@@ -254,10 +254,10 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit = BigDecimal.ZERO;
 
-    @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    @ApiModelProperty("语音聊天功能 0-关闭 1-开启 2-关闭隐藏")
     private Integer voiceChatSwitch;
 
-    @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    @ApiModelProperty("入桌密码功能 0-关闭 1-开启 2-关闭隐藏")
     private Integer tableEntryPasswordSwitch;
 
     @ApiModelProperty("入桌密码")
