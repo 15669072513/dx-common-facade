@@ -141,6 +141,6 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("preflop看牌 0-关 1-开 默认为0")
     private Integer preflopDelay;
 
-    @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
-    private Integer onlyDirectMember;
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
 }
