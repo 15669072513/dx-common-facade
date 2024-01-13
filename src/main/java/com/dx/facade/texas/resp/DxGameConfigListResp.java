@@ -82,8 +82,8 @@ public class DxGameConfigListResp implements Serializable {
     @FieldOperate(fieldName ="大盲BB设置")
     private String bbSetting;
 
-    @ApiModelProperty("默认带入值（BB）")
-    @FieldOperate(fieldName ="默认带入值（BB）")
+    @ApiModelProperty("补码上下限（BB）")
+    @FieldOperate(fieldName ="补码上下限（BB）")
     private String bbDefaultCarry;
 
     @ApiModelProperty("补码下限")
