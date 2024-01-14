@@ -40,7 +40,7 @@ public class RebateRateTemplateMappingRespDTO implements Serializable {
     private Long userId;
     
     @ApiModelProperty("用户类型 0：会员  1：代理")
-    private Long userType;
+    private Integer userType;
     
     @ApiModelProperty("总代Id")
     private Long topProxyId;

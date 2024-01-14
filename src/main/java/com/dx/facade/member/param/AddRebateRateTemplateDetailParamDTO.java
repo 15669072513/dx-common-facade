@@ -1,7 +1,7 @@
 package com.dx.facade.member.param;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,31 +25,14 @@ public class AddRebateRateTemplateDetailParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty("商户Id")
+    private Long merchantId;
+    
     @ApiModelProperty("模板Id")
     private Long templateId;
     
-    @ApiModelProperty("比率等级")
-    private Integer level;
+    @ApiModelProperty("返点比率模板明细列表")
+    private List<RebateRateTemplateDetailDTO> list;
     
-    @ApiModelProperty("德州返点比例")
-    private BigDecimal texasRebate;
-    
-    @ApiModelProperty("德州保险返点比例")
-    private BigDecimal texasInsuranceRebate;
-    
-    @ApiModelProperty("真人返点比例")
-    private BigDecimal actualPersonRebate;
-    
-    @ApiModelProperty("体育返点比例")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    private BigDecimal esportsRebate;
 
 }
