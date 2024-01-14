@@ -3,6 +3,8 @@ package com.dx.facade.member.service;
 import java.util.List;
 
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageReq;
+import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddRebateRateTemplateParamDTO;
 import com.dx.facade.member.param.QueryRebateRateTemplateParamDTO;
@@ -45,4 +47,12 @@ public interface RebateRateTemplateRPCService {
      * @param request
      */
     CommonResp<Boolean> updateRebateRateTemplate(UpdateRebateRateTemplateParamDTO request) throws BizException;
+
+    /**
+     * 分页查询
+     * 
+     * @param pageReq
+     * @return
+     */
+	CommonResp<PageResp<RebateRateTemplateRespDTO, ?>> selectRebateRateTemplateListPage(PageReq<QueryRebateRateTemplateParamDTO> pageReq);
 }

@@ -55,4 +55,11 @@ public class AddRebateRateTemplateParamDTO implements Serializable {
     @TableField("created_at")
     private LocalDateTime createdAt;
 
+	@Override
+	public String toString() {
+		return "AddRebateRateTemplateParamDTO [merchantId=" + merchantId + ", merchantName=" + merchantName
+				+ ", templateType=" + templateType + ", templateName=" + templateName + ", description=" + description
+				+ ", createdBy=" + createdBy + ", createdAt=" + createdAt + "]";
+	}
+
 }

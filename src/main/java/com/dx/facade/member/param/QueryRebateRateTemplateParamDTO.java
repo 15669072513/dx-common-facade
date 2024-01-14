@@ -55,4 +55,11 @@ public class QueryRebateRateTemplateParamDTO implements BaseParmDTO, Serializabl
 	public void check() {
 	}
 
+	@Override
+	public String toString() {
+		return "QueryRebateRateTemplateParamDTO [id=" + id + ", merchantId=" + merchantId + ", templateType="
+				+ templateType + ", templateName=" + templateName + ", createdAtStart=" + createdAtStart
+				+ ", createdAtEnd=" + createdAtEnd + "]";
+	}
+
 }
