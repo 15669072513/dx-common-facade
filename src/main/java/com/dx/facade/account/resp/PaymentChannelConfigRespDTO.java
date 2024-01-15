@@ -3,6 +3,7 @@ package com.dx.facade.account.resp;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.annotation.I18nField;
 import com.dx.facade.account.enums.Payment;
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -54,7 +55,6 @@ public class PaymentChannelConfigRespDTO {
     @ApiModelProperty("综合权重")
     private BigDecimal weight;
 
-
     private String ext1;
 
     @ApiModelProperty("通道支持的银行卡")
@@ -63,4 +63,9 @@ public class PaymentChannelConfigRespDTO {
     @ApiModelProperty("通道支持的虚拟币协议种类")
     private String virtualProtocol;
 
+    @ApiModelProperty("用户类型 （0-会员 1-代理）")
+    private Integer userType;
+
+    @ApiModelProperty("支付商类型，1：充值商户，2：提款商户")
+    private Integer paymentMerchantType;
 }

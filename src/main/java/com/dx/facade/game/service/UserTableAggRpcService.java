@@ -6,11 +6,13 @@ import com.dx.facade.game.dto.game.GameOrderRecordUserNetChipSumReqDto;
 import com.dx.facade.game.dto.game.GameOrderUserSumByUserIdRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
+import com.dx.facade.game.resp.GameOrderUserSumByUserIdResp;
 import com.dx.facade.game.resp.GameOrderUserTableSumResp;
 import com.dx.facade.game.resp.UserTableAggListResp;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 import java.util.List;
+import org.apache.ibatis.annotations.Param;
 
 public interface UserTableAggRpcService {
 

@@ -192,4 +192,19 @@ public class DxTableInfoAddReq implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit;
+
+    @ApiModelProperty("语音聊天功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer voiceChatSwitch;
+
+    @ApiModelProperty("入桌密码功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer tableEntryPasswordSwitch;
+
+    @ApiModelProperty("入桌密码")
+    private String tableEntryPassword;
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
+    private Integer onlyDirectMember;
 }

@@ -39,6 +39,7 @@ public class DxGameConfigListResp implements Serializable {
     private String venueName;
 
     @ApiModelProperty("游戏名称")
+    @FieldOperate(fieldName ="游戏名称")
     private String gameName;
 
     @ApiModelProperty("游戏中文名")
@@ -81,8 +82,8 @@ public class DxGameConfigListResp implements Serializable {
     @FieldOperate(fieldName ="大盲BB设置")
     private String bbSetting;
 
-    @ApiModelProperty("默认带入值（BB）")
-    @FieldOperate(fieldName ="默认带入值（BB）")
+    @ApiModelProperty("补码上下限（BB）")
+    @FieldOperate(fieldName ="补码上下限（BB）")
     private String bbDefaultCarry;
 
     @ApiModelProperty("补码下限")
@@ -194,4 +195,13 @@ public class DxGameConfigListResp implements Serializable {
     @ApiModelProperty("前注（倍BB）,多个用逗号隔开")
     @FieldOperate(fieldName ="前注（倍BB）")
     private String anteLimits;
+
+    @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    private Integer voiceChatSwitch;
+
+    @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    private Integer tableEntryPasswordSwitch;
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
 }

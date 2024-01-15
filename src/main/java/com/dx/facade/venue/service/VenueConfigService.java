@@ -4,6 +4,8 @@ package com.dx.facade.venue.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.es.resp.VenueAggregation;
+import com.dx.facade.es.resp.VenueConnectAggregation;
 import com.dx.facade.texas.dto.DxGameConfigListDto;
 import com.dx.facade.venue.dto.ConfigGamePO;
 import com.dx.facade.venue.dto.ConfigVenuePO;
@@ -22,11 +24,11 @@ public interface VenueConfigService {
 
     void setStatus(VenueStatusReq req);
 
-    PageResp<VenueListResp, Void> listPage(VenueListReq req);
+    PageResp<VenueListResp, VenueAggregation> listPage(VenueListReq req);
 
     void editVenue(VenueEditReq req);
 
-    PageResp<VenueConnectResp, Void> listConnectPage(VenueConnectListReq req);
+    PageResp<VenueConnectResp, VenueConnectAggregation> listConnectPage(VenueConnectListReq req);
 
     void editVenueConnect(VenueConnectEditReq req) throws BizException;
 
@@ -51,6 +53,11 @@ public interface VenueConfigService {
      * 根据场馆code,得到场馆对象
      */
     ConfigVenuePO getVenueByVenueCode(String venueCode);
+
+    /**
+     * 根据场馆ID,得到场馆对象
+     */
+    ConfigVenuePO getVenueById(Long venueId);
 
     /**
      * 获取所有场馆

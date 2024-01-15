@@ -166,4 +166,6 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<PageResp<GameTableInfoListEsResp, Void>> getTableListPageByUser(GameTableInfoListReq req);
+
+
 }
