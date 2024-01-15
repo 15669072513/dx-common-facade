@@ -5,6 +5,8 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.util.List;
+
 @ApiModel("保险列表请求实体")
 @Data
 public class InsuranceInfoListReq extends BaseRequest {
@@ -33,6 +35,15 @@ public class InsuranceInfoListReq extends BaseRequest {
   @ApiModelProperty("总代id")
   private Long topProxyId;
 
+  @ApiModelProperty("代理id")
+  private Long proxyId;
+
+  @ApiModelProperty(value = "上级代理账号")
+  private String parentProxyName;
+
+  @ApiModelProperty(value = "总代账号")
+  private String topProxyName;
+
   @ApiModelProperty("代理等级")
   private Integer proxyLevel;
 
@@ -41,4 +52,7 @@ public class InsuranceInfoListReq extends BaseRequest {
 
   @ApiModelProperty("购保时间区间结束")
   private String createEndTime;
+
+  @ApiModelProperty("下级代理id")
+  private List<Long> subProxyIds;
 }
