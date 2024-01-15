@@ -10,7 +10,8 @@ public enum GlobalConfigEnums {
     TEXAS_RAISE(6, 100, TexasGameTypeEnum.TEXAS.code(), 2, "倍数加注", "德州扑克", "德州倍数加注"),
     TEXAS_POT_RAISE(7, 101, TexasGameTypeEnum.TEXAS.code(), 2, "底池加注", "德州扑克", "德州底池加注"),
     SHORT_DECK_RAISE(8, 200, TexasGameTypeEnum.SHORT_CARD.code(), 2, "倍数加注", "短牌", "短牌倍数加注"),
-    SHORT_DECK_POT_RAISE(9, 201, TexasGameTypeEnum.SHORT_CARD.code(), 2, "底池加注", "短牌", "短牌底池加注");
+    SHORT_DECK_POT_RAISE(9, 201, TexasGameTypeEnum.SHORT_CARD.code(), 2, "底池加注", "短牌", "短牌底池加注"),
+    MOVE_DELAY(11, 306, null, 1, "行动延迟", "德州扑克/短牌", "行动延迟");
 
     private Integer bizType;
     private Integer dbType;
