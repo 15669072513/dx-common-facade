@@ -1,6 +1,5 @@
 package com.dx.facade.texas.req;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -85,15 +84,15 @@ public class DxGameConfigEditReq implements Serializable {
     private BigDecimal rake;
 
     @ApiModelProperty(
-            value = "创建人",
-            hidden = true
+        value = "创建人",
+        hidden = true
     )
     private String createdBy;
 
 
     @ApiModelProperty(
-            value = "修改人",
-            hidden = true
+        value = "修改人",
+        hidden = true
     )
     private String updatedBy;
 
@@ -111,7 +110,7 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("保险模式 可多选，多个用逗号隔开 0-不开保险 1-经典保险")
     private String insuranceMode;
 
-    @ApiModelProperty("保险出发下限")
+    @ApiModelProperty("保险触发下限")
     private Integer insuranceLower;
 
     @ApiModelProperty("ALLIN展示OUTS与胜率 0-关闭 1-开启")
