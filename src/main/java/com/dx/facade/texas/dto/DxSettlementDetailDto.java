@@ -17,4 +17,5 @@ public class DxSettlementDetailDto implements Serializable {
     private String merchantName;
     private BigDecimal amount;
     private Integer eventType;
+    private Long eventTime;
 }
