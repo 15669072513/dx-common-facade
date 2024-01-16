@@ -258,5 +258,5 @@ public class MemberInfoRespDTO{
     private Integer withdrawLimitType;
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
-    private Integer onlyDirectMemberSwitch;
+    private Integer onlyDirectMemberSwitch = 0;
 }
