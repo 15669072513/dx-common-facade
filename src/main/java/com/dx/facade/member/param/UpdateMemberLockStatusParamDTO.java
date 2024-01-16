@@ -43,6 +43,9 @@ public class UpdateMemberLockStatusParamDTO implements BaseParmDTO{
     @ApiModelProperty(value = "操作人")
     private String operateBy;
 
+	@ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+	private Integer onlyDirectMemberSwitch;
+
 	@Override
 	public void check() {
 		Assert.notNull(userId, ErrorCode.MISSING_PARAM_EXCEPTION.messageAfter("userId"));
