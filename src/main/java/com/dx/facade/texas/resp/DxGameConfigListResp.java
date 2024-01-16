@@ -1,6 +1,7 @@
 package com.dx.facade.texas.resp;
 import com.dx.facade.annotation.FieldOperate;
 import com.dx.facade.annotation.ValueConvert;
+import com.dx.facade.game.convert.FeeCapRender;
 import com.dx.facade.game.convert.GameStatusRender;
 import com.dx.facade.game.convert.GameTypeIdRender;
 import com.dx.facade.game.convert.InsuranceChooseSheetRender;
@@ -174,6 +175,7 @@ public class DxGameConfigListResp implements Serializable {
     private String profitFee;
 
     @ApiModelProperty("收费上限 多个用逗号隔开 支持小数 -1代表无上限")
+    @ValueConvert(renderers = FeeCapRender.class)
     @FieldOperate(fieldName ="收费上限")
     private String feeCap;
 
