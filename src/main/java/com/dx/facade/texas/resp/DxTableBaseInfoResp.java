@@ -158,4 +158,10 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
+
+    @ApiModelProperty("中控后台仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
+    private Integer onlyDirectMember;
 }
