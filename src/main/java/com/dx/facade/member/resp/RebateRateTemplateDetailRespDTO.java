@@ -38,6 +38,9 @@ public class RebateRateTemplateDetailRespDTO implements Serializable {
     @ApiModelProperty("比率等级")
     private Integer level;
     
+    @ApiModelProperty("模板名称")
+    private String templateName;
+    
     @ApiModelProperty("德州返点比例")
     private BigDecimal texasRebate;
     
