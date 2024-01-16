@@ -342,6 +342,9 @@ public class AddLowerProxyReqDTO {
     
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
     
     @ApiModelProperty("返佣比例列表")
     private List<BaseCommissionRateParamDTO> commissionRateList;

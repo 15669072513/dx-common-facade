@@ -2,6 +2,7 @@ package com.dx.facade.member.param;
 
 import java.io.Serializable;
 
+import com.dx.facade.common.PageRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -23,7 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(value = "返点比例模板请求Param", description = "返点比例模板请求Param")
-public class QueryRebateRateTemplateParamDTO implements BaseParmDTO, Serializable {
+public class QueryRebateRateTemplateParamDTO extends PageRequest implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = 1L;
 
