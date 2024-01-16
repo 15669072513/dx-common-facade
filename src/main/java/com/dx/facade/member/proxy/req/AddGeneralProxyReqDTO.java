@@ -58,9 +58,15 @@ public class AddGeneralProxyReqDTO {
 	
 	@ApiModelProperty(value = "契约模式 0-无契约 1-佣金契约 2-返点契约 3-佣金+返点契约", required = true)
 	private Integer contractModel;
-	
+
 	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
 	private Integer commissionModel;
+	
+    @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
+    private Integer rebateAllotMode;
+    
+    @ApiModelProperty(value = "返点比率模板ID，当返点比率分配模式为2时需要传")
+    private Long rebateRateTemplateId;
 	
 	@ApiModelProperty(value = "代理线层级上限", required = true)
 	@NotNull(message = "代理线层级上限不能为空")
