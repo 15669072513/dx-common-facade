@@ -10,7 +10,6 @@ public enum DxAccountFreezeTypeEnum {
     private Integer code;
     //是否需要改变主表账户余额，有些冻结只需要记录流水
     private Boolean needChangeAccount;
-
     private String desc;
 
     public Integer code() {
