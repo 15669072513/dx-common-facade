@@ -33,6 +33,9 @@ public class RebateRateTemplateMappingRespDTO implements Serializable {
     @ApiModelProperty("模板Id")
     private Long templateId;
     
+    @ApiModelProperty("模板明细Id")
+    private Long templateDetailId;
+    
     @ApiModelProperty("比率等级")
     private Integer level;
     
