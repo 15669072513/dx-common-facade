@@ -34,6 +34,14 @@ public interface RebateRateTemplateRPCService {
     CommonResp<RebateRateTemplateRespDTO> getRebateRateTemplateById(Long id);
     
 	/**
+	 * 删除返点比例模板
+	 * 
+	 * @param id
+	 * @return
+	 */
+    CommonResp<Boolean> deleteRebateRateTemplateById(Long id);
+    
+	/**
 	 * 根据条件查询返点比例模板
 	 * 
 	 * @param request
