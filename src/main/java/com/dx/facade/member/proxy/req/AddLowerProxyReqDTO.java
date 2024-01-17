@@ -351,4 +351,7 @@ public class AddLowerProxyReqDTO {
 
   @ApiModelProperty("返佣比例列表")
   private List<BaseCommissionRateParamDTO> commissionRateList;
+  
+  @ApiModelProperty(value = "返点比率模板等级")
+  private Integer rebateRateLevel;
 }
