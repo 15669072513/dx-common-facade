@@ -8,7 +8,8 @@ import java.util.Arrays;
  * RPC 接口版本相关
  */
 public enum RpcVersionEnums {
-    V1(1, "V1");
+    V1(1, "V1"),
+    V2(2, "V2");
 
     private Integer code;
     //是否需要改变主表账户余额，有些冻结只需要记录流水
@@ -35,5 +36,16 @@ public enum RpcVersionEnums {
     public String getDesc() {
         return desc;
     }
+
+
+    public static RpcVersionEnums of(Integer code) {
+        for (RpcVersionEnums versionEnums : values()) {
+            if (versionEnums.getCode().equals(code)) {
+                return versionEnums;
+            }
+        }
+        return RpcVersionEnums.V1;
+    }
+
 
 }
