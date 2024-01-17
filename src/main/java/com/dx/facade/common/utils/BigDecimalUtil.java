@@ -1,6 +1,9 @@
 package com.dx.facade.common.utils;
 
+import com.dx.facade.enums.BwCurrencyEnum;
+
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BigDecimalUtil {
 
@@ -34,5 +37,38 @@ public class BigDecimalUtil {
             return symbol + 0;
         }
         return symbol + plusObj;
+    }
+
+
+    /**
+     * 截断4位，BigDecimal.ZERO
+     * @param pureAssetAmount
+     * @return
+     */
+    public static BigDecimal validScale(BigDecimal pureAssetAmount) {
+        return pureAssetAmount == null ? BigDecimal.ZERO.setScale(4)
+                : pureAssetAmount.setScale(4, RoundingMode.DOWN);
+    }
+
+    public static String validScaleStr(BigDecimal pureAssetAmount, int digits) {
+        return validScale(pureAssetAmount, digits).toPlainString();
+    }
+
+    public static String validScaleAndFormat(String currency, BigDecimal pureAssetAmount, int digits) {
+        return BwCurrencyEnum.getSymbolAmount(currency, validScale(pureAssetAmount, digits));
+    }
+
+    public static BigDecimal validScale(BigDecimal pureAssetAmount, int digits) {
+        return pureAssetAmount == null ? BigDecimal.ZERO.setScale(digits).stripTrailingZeros()
+                : pureAssetAmount.setScale(digits, RoundingMode.DOWN).stripTrailingZeros();
+    }
+
+    /**
+     * null转为BigDecimal.ZERO
+     * @param balanceAmt
+     * @return
+     */
+    public static BigDecimal validBigDecimal(BigDecimal balanceAmt) {
+        return balanceAmt == null ? BigDecimal.ZERO : balanceAmt;
     }
 }

@@ -68,7 +68,9 @@ public interface MemberRPCService {
 
     CommonResp memberRpcInfoEdit(MemberInfoRpcEditParam param) throws BizException;
 
-	CommonResp batchInfoEdit(BatchMemberInfoEditParam param) throws BizException;
+	default CommonResp batchInfoEdit(BatchMemberInfoEditParam param) throws BizException{
+		return  CommonResp.fail();
+	};
 
     CommonResp<Boolean> insertMemberAndProxy(MemberAndProxyDto memberAndProxyDto) throws BizException;
 

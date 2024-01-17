@@ -119,9 +119,6 @@ public class AddGeneralProxyReqDTO {
 	private Integer withdrawLimitType;
 
 
-	@ApiModelProperty(value = "是否可创建牌桌开桌,0-不允许（默认），1-允许")
-	private Integer dxTableCreatable;
-
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		
 		return ProxyContractAddReqDTO.builder()
