@@ -641,6 +641,7 @@ public class MemberAndProxyDto {
 		result.setOpenLockStatus(item.getOpenLockStatus());
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
+		result.setBusinessModel(item.getBusinessModel());
 		return result;
 	}
 	
