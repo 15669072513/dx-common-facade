@@ -167,6 +167,9 @@ public class AddLowerProxyReqDTO {
 
   @ApiModelProperty(value = "佣金模式 1：返点模式 2：返佣模式")
   private Integer commissionMode;
+  
+  @ApiModelProperty(value = "返点分配模式 1：自由模式 2：模板模式")
+  private Integer rebateAllotMode;
 
   @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
   private Integer commissionSettleCycle;

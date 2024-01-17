@@ -38,7 +38,7 @@ public class AddRebateRateTemplateMappingParamDTO implements Serializable {
     private Integer userType;
     
     @ApiModelProperty("总代Id")
-    private Integer topProxyId;
+    private Long topProxyId;
     
     @ApiModelProperty("创建人")
     private String createdBy;
