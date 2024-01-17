@@ -7,14 +7,13 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.param.TransferGameParam;
 import com.dx.facade.account.param.WalletDetailParamDTO;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
-import com.dx.facade.account.resp.GameAmountTotalRespDTO;
-import com.dx.facade.account.resp.ProxyRebateResponseData;
-import com.dx.facade.account.resp.WalletDetailRespDTO;
-import com.dx.facade.account.resp.WalletDetailSumDTO;
+import com.dx.facade.account.req.WalletDetailBatchQueryDTO;
+import com.dx.facade.account.resp.*;
 import com.dx.facade.texas.req.TableBringInfoReq;
 import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
+import java.util.Map;
 
 public interface WalletDetailRPCService {
 
@@ -27,6 +26,14 @@ public interface WalletDetailRPCService {
     CommonResp<ProxyRebateResponseData> proxyRebateInfo(Long proxyId);
 
     /**
+     * @author Dealer
+     * @description: 批量获取代理返佣信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<List<ProxyRebateResponseData>> proxyRebateInfoBatch(List<Long> proxyIds);
+
+    /**
      * 会员/代理账变记录列表
      * @param pageReq
      * @return
@@ -34,7 +41,7 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
-    CommonResp<PageResp<WalletDetailRespDTO, String>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+    CommonResp<PageResp<WalletDetailRespDTO, WalletDetailRespDTO>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
     /**
      * 根据牌桌查询代入带出
@@ -65,5 +72,13 @@ public interface WalletDetailRPCService {
      * @throws BizException
      */
     CommonResp<Void> transferBToCenterDetail(TransferGameParam param) throws BizException;
+
+
+    /**
+     * 批量检查账变数据是否存在
+     * @param queryRespDTO
+     * @return
+     */
+    CommonResp<WalletDetailBatchQueryRespDTO> batchCheckDetailExists(WalletDetailBatchQueryDTO queryRespDTO);
 
 }

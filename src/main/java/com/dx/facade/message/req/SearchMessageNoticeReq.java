@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 public class SearchMessageNoticeReq extends PageRequest {
 
-    @ApiModelProperty("类型：1、通知 2、活动消息")
+    @ApiModelProperty("类型：1、通知 2、站内信消息")
     private Integer noticeType = 1;
 
     @ApiModelProperty("商户Id")

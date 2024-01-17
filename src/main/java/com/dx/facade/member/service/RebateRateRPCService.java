@@ -11,10 +11,12 @@ import com.dx.facade.member.param.BaseRebateRateParamDTO;
 import com.dx.facade.member.param.QueryEffectRebateRateParamDTO;
 import com.dx.facade.member.param.QueryRebateRateLimitParamDTO;
 import com.dx.facade.member.param.QueryRebateRateParamDTO;
+import com.dx.facade.member.param.RebateRateTryCaclParamDTO;
 import com.dx.facade.member.param.UpdateRebateRateParamDTO;
 import com.dx.facade.member.resp.BaseRebateRateRespDTO;
 import com.dx.facade.member.resp.MemberRebateRateRespDTO;
 import com.dx.facade.member.resp.RebateRateRespDTO;
+import com.dx.facade.member.resp.RebateRateTryCaclRespDTO;
 /**
  * 返点比例RPC服务
  * 
@@ -106,4 +108,11 @@ public interface RebateRateRPCService {
 	 * @return
 	 */
 	CommonResp<BaseRebateRateRespDTO> getRebateRateLimit(QueryRebateRateLimitParamDTO request);
+	/**
+	 * 返点比率平台调整试算
+	 * 
+	 * @param param
+	 * @return
+	 */
+	CommonResp<List<RebateRateTryCaclRespDTO>> platformAdjustmentTryCacl(RebateRateTryCaclParamDTO param);
 }

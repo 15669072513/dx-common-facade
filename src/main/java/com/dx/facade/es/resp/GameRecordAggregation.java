@@ -3,6 +3,8 @@ package com.dx.facade.es.resp;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
+import java.math.BigDecimal;
+
 @Data
 public class GameRecordAggregation {
     @ApiModelProperty("已结算")
@@ -22,4 +24,13 @@ public class GameRecordAggregation {
 
     @ApiModelProperty("输赢金额")
     private CurrencyAndSum netAmount = new CurrencyAndSum();
+
+    @ApiModelProperty("本页投注金额合计")
+    private BigDecimal currPageBetAmount;
+
+    @ApiModelProperty("本页有效投注金额合计")
+    private BigDecimal currPageValidBetAmount;
+
+    @ApiModelProperty("本页输赢金额合计")
+    private BigDecimal currPageNetAmount;
 }

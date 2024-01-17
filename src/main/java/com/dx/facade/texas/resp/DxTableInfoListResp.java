@@ -171,4 +171,19 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("preflop看牌 0-配置没开启  1-关 2-开 默认为0")
     private Integer preflopDelay;
+
+    @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer anteSwitch = 0;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("前注（倍BB）,支持小数点1位")
+    private BigDecimal anteLimit;
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
+    private Integer onlyDirectMember;
 }

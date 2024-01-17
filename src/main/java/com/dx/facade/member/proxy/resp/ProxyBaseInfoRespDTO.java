@@ -161,4 +161,14 @@ public class ProxyBaseInfoRespDTO implements Serializable {
     
     @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
     private Integer commissionSettleCycle;
+
+
+    @ApiModelProperty(value = "总代银行通道状态 - 1:开启，0:关闭")
+    private Integer bankChannelStatus;
+
+    @ApiModelProperty(value = "代理跨级操作权限 - 1:开启，0:关闭")
+    private Integer crossOptLevel;
+
+    @ApiModelProperty(value = "会员转代开关 - 1:开启，0:关闭")
+    private Integer playerToProxy;
 }
