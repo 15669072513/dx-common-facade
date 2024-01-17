@@ -174,4 +174,10 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit = BigDecimal.ZERO;
+
+    @ApiModelProperty("中控后台仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
+    private Integer onlyDirectMember;
 }
