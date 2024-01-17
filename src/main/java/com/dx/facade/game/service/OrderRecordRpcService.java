@@ -22,4 +22,14 @@ public interface OrderRecordRpcService {
    * @return
    */
   CommonResp<GameOrderResp> getGameOrder(Long id);
+
+
+  /**
+   * 订单记录唯一流水号
+   * @param serialNo
+   * @return
+   */
+  CommonResp<Boolean> isTransactionExist(String serialNo);
+
+
 }
