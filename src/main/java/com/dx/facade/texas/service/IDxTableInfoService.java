@@ -33,6 +33,7 @@ public interface IDxTableInfoService {
 
     /**
      * 查询牌桌总抽水
+     *
      * @param req
      * @return
      */
@@ -45,8 +46,10 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<DxTableListDto> listAll(DxTableInfoListReq req);
+
     /**
      * 根据牌桌ID获取牌桌配置信息
+     *
      * @param tableId
      * @return
      */
@@ -54,6 +57,7 @@ public interface IDxTableInfoService {
 
     /**
      * 根据多个牌桌ID获取牌桌配置信息
+     *
      * @param tableId
      * @return
      */
@@ -61,6 +65,7 @@ public interface IDxTableInfoService {
 
     /**
      * 新增牌桌
+     *
      * @param req
      */
     CommonResp<DxTableInfoDto> addTable(DxTableInfoAddReq req);
@@ -92,7 +97,7 @@ public interface IDxTableInfoService {
      * 游戏牌桌解散（代理后台强制解散）
      *
      * @param tableId 牌桌id
-     * @param isSure 是否确认
+     * @param isSure  是否确认
      */
     CommonResp<Void> proxyGameDissolve(Long tableId, String isSure);
 
@@ -129,6 +134,7 @@ public interface IDxTableInfoService {
 
     /**
      * 获取牌桌机器人信息
+     *
      * @param tableId
      * @return
      */
@@ -138,6 +144,7 @@ public interface IDxTableInfoService {
 
     /**
      * 获取俱乐部纬度的统计数据
+     *
      * @param req
      * @return
      */
@@ -145,6 +152,7 @@ public interface IDxTableInfoService {
 
     /**
      * 获取牌桌概况
+     *
      * @param tableId 牌桌ID
      * @return
      */
@@ -152,6 +160,7 @@ public interface IDxTableInfoService {
 
     /**
      * 根据俱乐部id合游戏类型获取牌桌记录
+     *
      * @param clubId
      * @param gameType
      * @param startTime
@@ -162,10 +171,22 @@ public interface IDxTableInfoService {
 
     /**
      * 获取用户相关的牌桌列表
+     *
      * @param req
      * @return
      */
     CommonResp<PageResp<GameTableInfoListEsResp, Void>> getTableListPageByUser(GameTableInfoListReq req);
 
 
+    /**
+     * 校验牌桌密码(放在游戏内部校验了）
+     *
+     * @param userId
+     * @param tableId
+     * @param password
+     * @return
+     * @throws Exception
+     */
+    @Deprecated
+    CommonResp<Boolean> checkTablePassword(Long userId, Long tableId, String password) throws Exception;
 }
