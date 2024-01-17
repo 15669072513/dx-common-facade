@@ -168,4 +168,9 @@ public class UserTableAggListResp implements Serializable {
      * 总代ID
      */
     private Long topProxyId;
+
+    /**
+     * 入池率
+     */
+    private BigDecimal bringPoolRate;
 }

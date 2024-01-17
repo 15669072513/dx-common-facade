@@ -106,17 +106,18 @@ public class AddGeneralProxyReqDTO {
 	
 	@ApiModelProperty(value = "佣金契约ID", hidden = true)
 	private Long commissionContractId;
-	
-    @ApiModelProperty("返佣比例列表")
-    private List<BaseCommissionRateParamDTO> commissionRateList;
-    
-    @ApiModelProperty("返点比例列表")
-    private List<BaseRebateRateParamDTO> rebateRateList;
+
+	@ApiModelProperty("返佣比例列表")
+	private List<BaseCommissionRateParamDTO> commissionRateList;
+
+	@ApiModelProperty("返点比例列表")
+	private List<BaseRebateRateParamDTO> rebateRateList;
 
 	@ApiModelProperty(value = "取款限制类型 1账单限制  2流水限制")
 	@NotNull(message = "取款限制类型 不能为空")
 	@TableField("withdraw_limit_type")
 	private Integer withdrawLimitType;
+
 
 	public static ProxyContractAddReqDTO convert(AddGeneralProxyReqDTO reqDTO) {
 		

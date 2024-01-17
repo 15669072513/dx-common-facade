@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -33,6 +34,9 @@ public class RebateRateTemplateMappingRespDTO implements Serializable {
     @ApiModelProperty("模板Id")
     private Long templateId;
     
+    @ApiModelProperty("模板明细Id")
+    private Long templateDetailId;
+    
     @ApiModelProperty("比率等级")
     private Integer level;
     
@@ -50,11 +54,13 @@ public class RebateRateTemplateMappingRespDTO implements Serializable {
     private String createdBy;
 
     @ApiModelProperty("创建时间")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createdAt;
 
     @ApiModelProperty("最后操作人")
     private String updatedBy;
 
     @ApiModelProperty("最后操作时间")
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updatedAt;
 }

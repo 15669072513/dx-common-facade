@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -240,7 +241,22 @@ public class ProxyDetailRespDTO {
 
 	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
 	private Integer commissionModel;
+	
+	@ApiModelProperty(value = "返点分配模式 1：自由模式 2：模板模式")
+	private Integer rebateAllotMode;
 
 	@ApiModelProperty("取款限制类型：1-账单限制，2-流水限制")
 	private Integer withdrawLimitType;
+
+	@ApiModelProperty(value = "总代银行通道状态 - 0或null:开启，1:关闭")
+	private Integer bankChannelStatus;
+
+	@ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
+	private Integer crossOptLevel;
+
+	@ApiModelProperty(value = "会员转代开关 - 0或null:开启，1:关闭")
+	private Integer playerToProxy;
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
 }

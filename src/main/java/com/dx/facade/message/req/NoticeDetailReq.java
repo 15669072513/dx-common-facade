@@ -20,7 +20,7 @@ public class NoticeDetailReq extends PageRequest {
     @Length(max = 20,message = "活动通知id长度不能大于20")
     private String noticeId;
 
-    @ApiModelProperty(value = "类型：1、通知 2、活动消息", required = true)
+    @ApiModelProperty(value = "类型：1、通知 2、站内信消息", required = true)
     @NotNull(message = "类型不能为空")
     @Max(value = 9,message = "类型不能大于9")
     @Min(value = 0,message = "类型不能小于0")

@@ -3,9 +3,13 @@ package com.dx.facade.report.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
+import com.dx.facade.report.param.report.ReportDateCompareDTO;
+import com.dx.facade.report.param.report.ReportVenueNetAmountDayDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNameReqDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNetAmountDayDetailReqDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNetAmountDayReqDTO;
+import com.dx.facade.report.req.report.ReportDateCompareParam;
+import com.dx.facade.report.req.report.ReportVenueNetAmountDayParam;
 import com.dx.facade.report.resp.venuenetamountday.*;
 
 import java.util.List;
@@ -71,4 +75,14 @@ public interface VenueNetAmountDayRPCService {
      */
     CommonResp<List<VenueNetAmountDayRespDTO>> newQueryVenueNetAmountDayTotal(VenueNetAmountDayReqDTO requestDto) throws BizException;
 
+    /**
+     * 首页场馆盈亏,有效投注额
+     * @param reqDTO
+     * @return
+     */
+    CommonResp<List<ReportVenueNetAmountDayDTO>> queryVenueNetAmountList(ReportVenueNetAmountDayParam reqDTO);
+
+    CommonResp<PageResp<ReportDateCompareDTO, ReportDateCompareDTO>> dataCompareDayList(ReportDateCompareParam reqDTO);
+
+    CommonResp<ReportDateCompareDTO> dataCompareDaySummary(ReportDateCompareParam reqDTO);
 }

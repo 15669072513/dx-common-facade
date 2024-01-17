@@ -78,6 +78,9 @@ public class MemberListParamDTO {
     private String orderType;
 
     @ApiModelProperty("上级代理名称")
-    @TableField("parent_proxy_name")
     private String parentProxyName;
+
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 }

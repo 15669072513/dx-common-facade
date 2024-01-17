@@ -34,5 +34,6 @@ public class AddRebateRateTemplateDetailParamDTO implements Serializable {
     @ApiModelProperty("返点比率模板明细列表")
     private List<RebateRateTemplateDetailDTO> list;
     
-
+	@ApiModelProperty("创建人")
+    private String createdBy;
 }

@@ -1,6 +1,10 @@
 package com.dx.facade.texas.resp;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.annotation.FieldOperate;
+import com.dx.facade.annotation.ValueConvert;
+import com.dx.facade.game.convert.GameStatusRender;
+import com.dx.facade.game.convert.GameTableStatusRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
@@ -51,6 +55,8 @@ public class DxTableBaseInfoResp implements Serializable {
     private String clubName;
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
+    @ValueConvert(renderers = GameTableStatusRender.class)
+    @FieldOperate(fieldName ="牌桌状态")
     private Integer status;
 
     @ApiModelProperty("累计参与者")
@@ -97,6 +103,7 @@ public class DxTableBaseInfoResp implements Serializable {
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("机器人数量")
+    @FieldOperate(fieldName ="机器人数量")
     private Integer robotNum=0;
 
     @ApiModelProperty("人员上限")
@@ -158,4 +165,13 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
+
+    @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer anteSwitch = 0;
+
+    @ApiModelProperty("前注")
+    private BigDecimal anteScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("前注（倍BB）,支持小数点1位")
+    private BigDecimal anteLimit = BigDecimal.ZERO;
 }

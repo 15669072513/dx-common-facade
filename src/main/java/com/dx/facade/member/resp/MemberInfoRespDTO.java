@@ -208,6 +208,9 @@ public class MemberInfoRespDTO{
 
     @ApiModelProperty("是否需要修改密码：0不需要，1需要修改密码")
     private Integer needChgPwd;
+    
+    @ApiModelProperty("是否需要修改昵称：0不需要，1需要修改")
+    private Integer needChgNickname;
 
     @ApiModelProperty("备注")
     private String remark;
@@ -255,5 +258,8 @@ public class MemberInfoRespDTO{
     private Integer withdrawLimitType;
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
-    private Integer onlyDirectMemberSwitch;
+    private Integer onlyDirectMemberSwitch = 0;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 }

@@ -17,4 +17,13 @@ public class GameRecordBetAmountAggregation {
     @ApiModelProperty("输赢金额")
     private BigDecimal netAmountSum = new BigDecimal(0);
 
+    @ApiModelProperty("本页投注金额合计")
+    private BigDecimal currPageBetAmount;
+
+    @ApiModelProperty("本页有效投注金额合计")
+    private BigDecimal currPageValidBetAmount;
+
+    @ApiModelProperty("本页输赢金额合计")
+    private BigDecimal currPageNetAmount;
+
 }

@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -63,5 +65,11 @@ public class UpdateRebateRateParamDTO implements Serializable {
     
     @ApiModelProperty("是否更新所以下级")
     private Boolean isAllSub;
+    
+    @ApiModelProperty("调整类型 1：全部失效 2：等差递减 3：向上持平")
+    private Integer adjustmentType;
+    
+    @ApiModelProperty("比率等级")
+    private Integer rebateRateLevel;
     
 }
