@@ -43,6 +43,7 @@ public interface IDxGlobalConfigRpcService {
 
     /**
      * 批量新增或者更新配置
+     *
      * @param reqs
      * @return
      * @throws BizException

@@ -70,6 +70,7 @@ public class DxGameBillResp implements Serializable {
      */
     private int userRoundNo = 0;
 
+
     /**
      * 玩家总带出
      */
