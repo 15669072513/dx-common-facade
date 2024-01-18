@@ -27,10 +27,13 @@ public class GameOrderUserSettlementDetailByProxyResp {
     @ApiModelProperty("结束时间")
     private Long handEndDate;
 
-    @ApiModelProperty("打牌输赢")
+    @ApiModelProperty("打牌输赢(扣除手牌服务费)")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
-    @ApiModelProperty("保险输赢")
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee=BigDecimal.ZERO;
+
+    @ApiModelProperty("经典保险")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("总输赢")

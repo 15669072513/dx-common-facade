@@ -96,10 +96,10 @@ public class DxTableBaseInfoResp implements Serializable {
     private BigDecimal costTotal=BigDecimal.ZERO;
 
 
-    @ApiModelProperty("牌桌抽水")
+    @ApiModelProperty("手牌服务费")
     private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
-    @ApiModelProperty("总保险盈亏")
+    @ApiModelProperty("经典保险")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("机器人数量")
@@ -163,7 +163,7 @@ public class DxTableBaseInfoResp implements Serializable {
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("手牌服务费收取方式 0-无 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
 
     @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
@@ -174,4 +174,15 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit = BigDecimal.ZERO;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch=0;
+
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee= BigDecimal.ZERO;
+
+    @ApiModelProperty("局服务费比例")
+    private BigDecimal tableFeeScale= BigDecimal.ZERO;
+
+
 }
