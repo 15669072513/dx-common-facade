@@ -40,6 +40,9 @@ public class QueryRebateRateTemplateParamDTO extends PageRequest implements Base
     @ApiModelProperty("模板名称")
     private String templateName;
     
+    @ApiModelProperty("创建人")
+    private String createdBy;
+    
     /** 创建开始时间 */
     @ApiModelProperty("创建开始时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
@@ -52,6 +55,19 @@ public class QueryRebateRateTemplateParamDTO extends PageRequest implements Base
     @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
     private String createdAtEnd;
     
+    
+    /** 最后修改开始时间 */
+    @ApiModelProperty("最后修改开始时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtStart;
+    
+    /** 最后修改结束时间 */
+    @ApiModelProperty("最后修改结束时间")
+    @JsonSerialize(using = LocalDateTimeSerializer.class)
+    @JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss")
+    private String updatedAtEnd;
+    
 	@Override
 	public void check() {
 	}
@@ -60,7 +76,8 @@ public class QueryRebateRateTemplateParamDTO extends PageRequest implements Base
 	public String toString() {
 		return "QueryRebateRateTemplateParamDTO [id=" + id + ", merchantId=" + merchantId + ", templateType="
 				+ templateType + ", templateName=" + templateName + ", createdAtStart=" + createdAtStart
-				+ ", createdAtEnd=" + createdAtEnd + "]";
+				+ ", createdAtEnd=" + createdAtEnd + ", updatedAtStart=" + updatedAtStart + ", updatedAtEnd="
+				+ updatedAtEnd + "]";
 	}
 
 }
