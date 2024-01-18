@@ -198,7 +198,8 @@ public enum ProxyWalletChange implements IWalletChange {
     v3_credit_proxy_help_sub_proxy_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_proxy_credit_repay, ProxyAppType.v3_proxy_help_sub_proxy_credit_repay, TransType.out),
     //每一级代理可以对自己直属会员信用还款
     v3_credit_proxy_help_sub_member_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
-
+    //代理占成亏损分摊
+    v1_50_proxy_to_loss_sharing_sub(WalletType.agent_cash, ProxyBizType.v1_50_proxy_divination, ProxyChangeType.v1_50_proxy_loss_sharing_sub, ProxyAppType.v1_50_proxy_loss_sharing, TransType.out),
 
     ;
 
