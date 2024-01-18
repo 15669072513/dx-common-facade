@@ -51,7 +51,7 @@ public class GameOrderResp  implements Serializable {
   private String nickName;
 
   @ApiModelProperty("终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP）")
-  private Long obDeviceType;
+  private Integer obDeviceType;
 
   @ApiModelProperty(value = "下单ip")
   private String orderIp;
@@ -71,7 +71,7 @@ public class GameOrderResp  implements Serializable {
   @ApiModelProperty(value = "订单金额")
   private BigDecimal orderAmount=BigDecimal.ZERO;
 
-  @ApiModelProperty(value = "0 未结算 1已结算")
+  @ApiModelProperty(value = "订单状态 0 未结算 1已结算")
   private Integer orderStatus=0;
 
   @ApiModelProperty(value = "优惠金额")

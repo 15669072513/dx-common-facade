@@ -588,6 +588,7 @@ public interface ExcelHeadI18nKey {
     String HAND_NAME = "EXCEL_HEAD_I18N_KEY.CLUB_手牌名称";
     
     String TABLE_ID = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌ID";
+
     String TABLE_NAME = "EXCEL_HEAD_I18N_KEY.TABLE_牌桌名称";
     
     String CLUB_ID = "EXCEL_HEAD_I18N_KEY.CLUB_俱乐部ID";
@@ -789,4 +790,25 @@ public interface ExcelHeadI18nKey {
     String FUNDS_帮还款账号类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_帮还款账号类型";
     String FUNDS_还款金额 = "EXCEL_HEAD_I18N_KEY.FUNDS_还款金额";
     String FUNDS_操作人账号 = "EXCEL_HEAD_I18N_KEY.FUNDS_操作人账号";
+
+    //订单列表导出
+    String ORDER_序号 = "EXCEL_HEAD_I18N_KEY.ORDER_序号";
+    String ORDER_ID = "EXCEL_HEAD_I18N_KEY.ORDER_订单号";
+    String ORDER_NO = "EXCEL_HEAD_I18N_KEY.ORDER_三方订单号";
+    String ORDER_游戏账号 = "EXCEL_HEAD_I18N_KEY.ORDER_游戏账号";
+    String ORDER_CLUB_ID = "EXCEL_HEAD_I18N_KEY.ORDER_俱乐部ID";
+    String ORDER_牌桌ID = "EXCEL_HEAD_I18N_KEY.ORDER_牌桌ID";
+    String ORDER_牌桌名称 = "EXCEL_HEAD_I18N_KEY.ORDER_牌桌名称";
+    String ORDER_游戏名称 = "EXCEL_HEAD_I18N_KEY.ORDER_游戏名称";
+    String ORDER_订单类型 = "EXCEL_HEAD_I18N_KEY.ORDER_订单类型";
+    String ORDER_订单子类 = "EXCEL_HEAD_I18N_KEY.ORDER_订单子类";
+    String ORDER_订单金额 = "EXCEL_HEAD_I18N_KEY.ORDER_订单金额";
+    String ORDER_优惠金额 = "EXCEL_HEAD_I18N_KEY.ORDER_优惠金额";
+    String ORDER_实付金额 = "EXCEL_HEAD_I18N_KEY.ORDER_实付金额";
+    String ORDER_服务费贡献 = "EXCEL_HEAD_I18N_KEY.ORDER_服务费贡献";
+    String ORDER_下单ip = "EXCEL_HEAD_I18N_KEY.ORDER_下单ip";
+    String ORDER_下单时间 = "EXCEL_HEAD_I18N_KEY.ORDER_下单时间";
+    String ORDER_下单终端 = "EXCEL_HEAD_I18N_KEY.ORDER_下单终端";
+    String ORDER_订单状态 = "EXCEL_HEAD_I18N_KEY.ORDER_订单状态";
+    String ORDER_结算时间 = "EXCEL_HEAD_I18N_KEY.ORDER_结算时间";
 }
