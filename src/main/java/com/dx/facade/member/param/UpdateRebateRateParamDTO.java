@@ -70,7 +70,7 @@ public class UpdateRebateRateParamDTO implements Serializable {
     private Integer adjustmentType;
     
     @ApiModelProperty("返点比率模板Id")
-    private Long rebateTemplateId;
+    private Long rebateRateTemplateId;
     
     @ApiModelProperty("比率等级")
     private Integer rebateRateLevel;
