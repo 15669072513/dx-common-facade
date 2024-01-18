@@ -1,6 +1,7 @@
 package com.dx.facade.game.service;
 
 import com.dx.entity.CommonResp;
+import com.dx.facade.game.req.OrderRecordLogReq;
 
 
 /**
@@ -15,4 +16,11 @@ public interface OrderRecordLogRpcService {
    * @return
    */
   CommonResp<Boolean> deleteOrderRecordLog(String serialNo);
+
+  /**
+   * 删除订单记录日志表信息
+   * @param orderRecordLogReq
+   * @return
+   */
+  CommonResp<Boolean> deleteOrderRecordLog(OrderRecordLogReq orderRecordLogReq);
 }
