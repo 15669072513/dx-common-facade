@@ -6,6 +6,7 @@ import com.dx.facade.game.convert.GameTypeIdRender;
 import com.dx.facade.game.convert.InsuranceChooseSheetRender;
 import com.dx.facade.game.convert.InsuranceModeRender;
 import com.dx.facade.game.convert.ServiceChargeRender;
+import com.dx.facade.game.convert.TableFeeSwitchRender;
 import com.dx.facade.game.convert.UniversalCloseOpenRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -204,4 +205,13 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
     private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    @FieldOperate(fieldName ="前注（倍BB）")
+    @ValueConvert(renderers = TableFeeSwitchRender.class)
+    private Integer tableFeeSwitch;
+
+    @ApiModelProperty("局服务费比例,多个用逗号隔开")
+    @FieldOperate(fieldName ="局服务费比例")
+    private String tableFeeScale;
 }
