@@ -118,4 +118,7 @@ public class LowerMemberListRespDto {
 
   @ApiModelProperty(value = "支付密码重置审核状态 0 未审核   1 审核中")
   private Integer payPasswordAudit = 0;
+
+  @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+  private Integer businessModel;
 }
