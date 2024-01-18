@@ -14,6 +14,7 @@ public class DownScoreReq {
     private BigDecimal amount;
     private String eventId;
     private Long eventTime;
+    @Deprecated
     private BigDecimal freezeAmount;
     private Integer downScoreType;//下分类型
     //V1.5.X 局抽相关
