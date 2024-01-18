@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import lombok.Data;
 
-@ApiModel("游戏对象查询对象")
+@ApiModel("订单记录查询对象")
 @Data
 public class GameOrderReq  extends BaseRequest {
 
@@ -53,11 +53,12 @@ public class GameOrderReq  extends BaseRequest {
   @ApiModelProperty(value = "下单ip")
   private String orderIp;
 
-  @ApiModelProperty(value = "订单类型 对应枚举GameRecordTypeEnum,全部传空")
+  @ApiModelProperty(value = "订单类型 全部则为空 对应枚举GameRecordTypeEnum")
   private Integer parentOrderType;
 
 
-  @ApiModelProperty(value = "订单类型 对应枚举GameRecordTypeEnum")
+  @ApiModelProperty(value = "订单子类(如果父类选全部，子类如果是全部则为空，"
+      + "如果选择了父类，子类全部则传所有的子类) 对应枚举GameRecordTypeEnum")
   private List<Integer> subOrderTypeList;
 
   @ApiModelProperty(value = "0 未结算 1已结算")
