@@ -17,6 +17,7 @@ public class DownScoreReq {
     private BigDecimal freezeAmount;
     private Integer downScoreType;//下分类型
     //V1.5.X 局抽相关
-    private Integer feeType;
+    private Integer feeType;//手续费类型，目前只有局服务费
+    private BigDecimal fee;//手续费
     private Integer rpcVersion = RpcVersionEnums.V1.code();//默认为1
 }
