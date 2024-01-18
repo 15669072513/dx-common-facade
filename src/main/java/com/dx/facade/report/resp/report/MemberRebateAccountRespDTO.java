@@ -37,8 +37,8 @@ public class MemberRebateAccountRespDTO {
 
     @ApiModelProperty("所属商户")
     private String merchantName;
-    @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
-    private Integer betType;
+    @ApiModelProperty("注单类型:俱乐部游戏;保险")
+    private String betType;
     @ApiModelProperty("投注金额")
     private BigDecimal betAmount;
     @ApiModelProperty("有效投注/抽水贡献")
@@ -46,16 +46,16 @@ public class MemberRebateAccountRespDTO {
     @ApiModelProperty("会员输赢")
     private BigDecimal memberNetAmount;
     @ApiModelProperty("平台发放返水比例")
-    private BigDecimal platformRebateRatio;
+    private BigDecimal platformRebateRate;
     @ApiModelProperty("代理发放返水比例")
-    private BigDecimal proxyRebateRatio;
+    private BigDecimal proxyRebateRate;
     @ApiModelProperty("返水金额")
     private BigDecimal rebateAmount;
 
     @ApiModelProperty("(实际）平台发放返水比例")
-    private BigDecimal realPlatformRebateRatio;
+    private BigDecimal realPlatformRebateRate;
     @ApiModelProperty("(实际）代理发放返水比例")
-    private BigDecimal realProxyRebateRatio;
+    private BigDecimal realProxyRebateRate;
     @ApiModelProperty("(实际）返水金额")
     private BigDecimal realRebateAmount;
 
