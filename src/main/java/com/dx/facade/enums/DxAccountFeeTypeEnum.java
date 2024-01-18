@@ -1,7 +1,7 @@
 package com.dx.facade.enums;
 
 /**
- * 账户冻结类型
+ * 账户手续费类型
  */
 public enum DxAccountFeeTypeEnum {
 
