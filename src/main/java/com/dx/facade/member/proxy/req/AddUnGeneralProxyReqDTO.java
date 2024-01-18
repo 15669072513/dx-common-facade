@@ -71,7 +71,9 @@ public class AddUnGeneralProxyReqDTO implements Serializable {
 	
 	@ApiModelProperty(value = "申请人", hidden = true)
 	private String applyName;
-	
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
 	
 	public static MemberAndProxyDto convertMemberAndProxyDto(AddUnGeneralProxyReqDTO item) {
 		return MemberAndProxyDto.builder()

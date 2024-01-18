@@ -145,6 +145,7 @@ public class AddGeneralProxyReqDTO {
 				.commissionContractId(reqDTO.getCommissionContractId())
 				.sginType(1)
 				.createAccount(reqDTO.getApplyName())
+
 				.build();
 	}
 }
