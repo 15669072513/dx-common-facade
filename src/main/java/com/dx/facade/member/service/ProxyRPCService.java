@@ -257,6 +257,12 @@ public interface ProxyRPCService {
 	 * @throws BizException
 	 */
 	CommonResp<Boolean> bindMobileOrEmail(UserBindMobileOrEmailDTO params) throws BizException;
-    
 
+    /**
+     * @author Dealer
+     * @description: 根据合营码查代理信息
+     * @date 2023/9/18
+     * @copyright
+     */
+    CommonResp<ProxyInfoRespDTO> getProxyByJoinCode(Long merchantId, String joinCode);
 }
