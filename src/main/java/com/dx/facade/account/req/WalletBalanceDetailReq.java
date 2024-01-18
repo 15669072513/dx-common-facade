@@ -106,4 +106,8 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("是否计算汇总信息")
     private Boolean needSummary;
 
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
+
+
 }
