@@ -60,21 +60,4 @@ public interface MemberRebateRPCService {
      * @throws Exception
      */
     CommonResp<MemberRebateReportDetailSummaryRpcRespDTO> rebateReportDetailSummary(MemberRebateReportDetailRpcReqDto detailRpcReqDto) throws Exception;
-
-    /**
-     * 会员返水对账列表
-     * @param rebateAccountReqDTO
-     * @return
-     * @throws Exception
-     */
-    CommonResp<PageResp<MemberRebateAccountRespDTO, MemberRebateAccountRespDTO>> rebateAccountList(MemberRebateAccountReqDTO rebateAccountReqDTO) throws Exception;
-
-    /**
-     * 会员返水对账总计
-     * @param rebateAccountReqDTO
-     * @return
-     * @throws Exception
-     */
-    CommonResp<MemberRebateAccountRespDTO> rebateAccountSummary(MemberRebateAccountReqDTO rebateAccountReqDTO) throws Exception;
-
 }
