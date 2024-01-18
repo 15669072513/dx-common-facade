@@ -3,7 +3,7 @@ package com.dx.facade.enums;
 /**
  * 账户冻结类型
  */
-public enum DxAccountFreezeTypeEnum {
+public enum DxAccountFeeTypeEnum {
 
     TABLE_FEE_FREEZE(1, false, "局服务费冻结");
 
@@ -21,9 +21,10 @@ public enum DxAccountFreezeTypeEnum {
     }
 
 
-    private DxAccountFreezeTypeEnum(Integer code, Boolean needChangeAccount, String desc) {
+    private DxAccountFeeTypeEnum(Integer code, Boolean needChangeAccount, String desc) {
         this.code = code;
         this.desc = desc;
+        this.needChangeAccount = needChangeAccount;
     }
 
     public Integer getCode() {
@@ -39,8 +40,8 @@ public enum DxAccountFreezeTypeEnum {
     }
 
 
-    public static DxAccountFreezeTypeEnum of(Integer code) {
-        for (DxAccountFreezeTypeEnum freezeTypeEnum : values()) {
+    public static DxAccountFeeTypeEnum of(Integer code) {
+        for (DxAccountFeeTypeEnum freezeTypeEnum : values()) {
             if (freezeTypeEnum.getCode().equals(code)) {
                 return freezeTypeEnum;
             }
