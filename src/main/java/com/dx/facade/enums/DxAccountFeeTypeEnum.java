@@ -1,5 +1,7 @@
 package com.dx.facade.enums;
 
+import java.util.Optional;
+
 /**
  * 账户手续费类型
  */
@@ -40,13 +42,13 @@ public enum DxAccountFeeTypeEnum {
     }
 
 
-    public static DxAccountFeeTypeEnum of(Integer code) {
+    public static Optional<DxAccountFeeTypeEnum> of(Integer code) {
         for (DxAccountFeeTypeEnum freezeTypeEnum : values()) {
             if (freezeTypeEnum.getCode().equals(code)) {
-                return freezeTypeEnum;
+                return Optional.of(freezeTypeEnum);
             }
         }
-        return null;
+        return Optional.empty();
     }
 
 }
