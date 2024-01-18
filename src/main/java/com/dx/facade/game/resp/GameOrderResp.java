@@ -50,6 +50,21 @@ public class GameOrderResp  implements Serializable {
   @ApiModelProperty(value = "会员昵称")
   private String nickName;
 
+  @ApiModelProperty(value = "商户id")
+  private Long merchantId;
+
+  @ApiModelProperty(value = "商户名称")
+  private String merchantName;
+
+  @ApiModelProperty(value = "上级代理id")
+  private Long parentProxyId;
+
+  @ApiModelProperty(value = "上级代理账号")
+  private String parentProxyName;
+
+  @ApiModelProperty(value = "上级代理路径")
+  private String parentProxyPath;
+
   @ApiModelProperty("终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP）")
   private Integer obDeviceType;
 

@@ -86,4 +86,10 @@ public class GameOrderReq  extends BaseRequest {
 
   @ApiModelProperty("查询来源 1 中控后台，2 代理后台")
   private Integer querySource;
+
+  @ApiModelProperty("代理id")
+  private Long proxyId;
+
+  @ApiModelProperty("下级代理id")
+  private List<Long> subProxyIds;
 }
