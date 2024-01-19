@@ -5,10 +5,7 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.resp.GameAmountTotalRespDTO;
-import com.dx.facade.game.dto.BringInDto;
-import com.dx.facade.game.dto.BringOutDto;
-import com.dx.facade.game.dto.DxWalletDetailBringOutDto;
-import com.dx.facade.game.dto.DxWalletDetailDto;
+import com.dx.facade.game.dto.*;
 import com.dx.facade.texas.dto.TableBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringInfoDto;
 import com.dx.facade.texas.dto.TableUserBringListDto;
@@ -71,5 +68,6 @@ public interface WalletDetailRpcService {
   CommonResp<Map<Long, BringOutDto>> getBringOutByTableId(Long tableId);
   CommonResp<DxWalletDetailDto> getBringInByTableIdAndUserId(Long tableId,Long userId);
   CommonResp<DxWalletDetailBringOutDto> getBringOutByTableIdAndUserId(Long tableId,Long userId);
+  CommonResp<DxWalletDetailBringInOutDto> getBringInOutByTableIdAndUserId(Long tableId, Long userId);
 
 }
