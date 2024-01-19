@@ -16,19 +16,19 @@ import java.util.stream.Collectors;
  * @since 2024-01-16
  */
 public enum GameRecordTypeEnum {
-  DX_CLUB_ORDER(10,0,"俱乐部服务费",1,true),
-  DX_INSURE_ORDER(20,0,"保险",2,true),
-  DX_INCREMENT_ORDER(30,0,"增值",3,false),
-  DX_SERVICE_CHARGE(1,10,"手牌服务费",1,true),
-  DX_JINDIAN_INSURE(2,20,"经典保险",1,true),
-  DX_SERVICE_JUCHOU(3,10,"局服务费",2,true),
-  DX_BRING_IN(4,10,"带入费",3,false),
-  DX_SEND_BARRAGE(5,30,"发弹幕",1,false),
-  DX_SEND_EMOTE(6,30,"发表情",2,false),
-  DX_SEND_PURASE(7,30,"发短语",3,false),
-  DX_SEND_VOICE(8,30,"发语音",4,false),
-  DX_LOOK_PUBLIC_CARD(9,30,"看公牌",5,false),
-  DX_ACTION_DELAY(10,30,"行动延时",6,false),
+  DX_CLUB_ORDER(101,0,"俱乐部服务费",1,true),
+  DX_INSURE_ORDER(102,0,"保险",2,true),
+  DX_INCREMENT_ORDER(103,0,"增值",3,false),
+  DX_SERVICE_CHARGE(1,101,"手牌服务费",1,true),
+  DX_JINDIAN_INSURE(2,102,"经典保险",1,true),
+  DX_SERVICE_JUCHOU(3,101,"局服务费",2,true),
+  DX_BRING_IN(4,101,"带入费",3,false),
+  DX_SEND_BARRAGE(5,103,"发弹幕",1,false),
+  DX_SEND_EMOTE(6,103,"发表情",2,false),
+  DX_SEND_PURASE(7,103,"发短语",3,false),
+  DX_SEND_VOICE(8,103,"发语音",4,false),
+  DX_LOOK_PUBLIC_CARD(9,103,"看公牌",5,false),
+  DX_ACTION_DELAY(10,103,"行动延时",6,false),
   ;
 
   private int type;
