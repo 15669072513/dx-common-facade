@@ -1,6 +1,7 @@
 package com.dx.facade.game.req;
 
 import com.dx.facade.enums.RpcVersionEnums;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,4 +22,6 @@ public class DownScoreReq {
     private Integer feeType;//手续费类型，目前只有局服务费
     private BigDecimal fee;//手续费
     private Integer rpcVersion = RpcVersionEnums.V1.code();//默认为1
+    private Long obDeviceType;
+    private String ip;
 }

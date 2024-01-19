@@ -26,7 +26,16 @@ public class UpScoreReq{
     private BigDecimal amount;
     @ApiModelProperty("牌桌code")
     private String tableCode;
-
+    /**
+     * 设备类型 EnumDeviceType
+     */
+    @ApiModelProperty("设备类型")
+    private Long obDeviceType;
+    /**
+     * 用户ip
+     */
+    @ApiModelProperty("用户ip")
+    private String ip;
     /**
      * 账号名
      */
