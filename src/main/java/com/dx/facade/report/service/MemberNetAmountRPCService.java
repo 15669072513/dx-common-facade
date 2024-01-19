@@ -73,5 +73,5 @@ public interface MemberNetAmountRPCService {
      * @param memberNetAmountReqDTO
      * @return
      */
-    CommonResp<PageResp<MemberVenueReqDTO, ?>> queryVenueDetails(MemberNetAmountReqDTO memberNetAmountReqDTO);
+    CommonResp<PageResp<MemberVenueReqDTO, MemberVenueSummaryRespDTO>> queryVenueDetails(MemberNetAmountReqDTO memberNetAmountReqDTO);
 }
