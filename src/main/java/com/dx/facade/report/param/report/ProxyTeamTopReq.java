@@ -43,6 +43,12 @@ public class ProxyTeamTopReq {
     @ApiModelProperty(value = "商户id")
     private Long merchantId;
 
+    @ApiModelProperty(value = "排序类型")
+    private String orderType;
+
+    @ApiModelProperty(value = "排序字段")
+    private String orderKey;
+
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
     @Min(value = 1, message = "当前页最小值不能小于1")
     protected Long pageNum = 1L;
