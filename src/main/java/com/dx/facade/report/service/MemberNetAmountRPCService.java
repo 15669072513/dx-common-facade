@@ -10,7 +10,6 @@ import com.dx.facade.member.param.MemberNetAmountReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetListReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetVenueListReqDTO;
 import com.dx.facade.report.resp.member.*;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
 
@@ -63,10 +62,4 @@ public interface MemberNetAmountRPCService {
      */
     CommonResp<PageResp<ProxyMemberNetVenueRespDTO, ProxyMemberNetVenueSummaryRespDTO>> queryProxyMemberNetVenueList(PageReq<ProxyMemberNetVenueListReqDTO> reqDTO);
 
-    /**
-     * 会员场馆盈亏明细
-     * @param memberNetAmountReqDTO
-     * @return
-     */
-    CommonResp<MemberVenueReqDTO> queryVenueDetails(MemberNetAmountReqDTO memberNetAmountReqDTO);
 }
