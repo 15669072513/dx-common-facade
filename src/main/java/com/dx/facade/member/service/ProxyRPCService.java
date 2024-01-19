@@ -257,6 +257,7 @@ public interface ProxyRPCService {
 	 * @throws BizException
 	 */
 	CommonResp<Boolean> bindMobileOrEmail(UserBindMobileOrEmailDTO params) throws BizException;
-    
 
+
+    CommonResp<ProxyInfoRespDTO> getProxyByJoinCode(Long merchantId, String joinCode);
 }
