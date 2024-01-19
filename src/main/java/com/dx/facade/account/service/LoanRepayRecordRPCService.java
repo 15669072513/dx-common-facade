@@ -3,6 +3,7 @@ package com.dx.facade.account.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
+import com.dx.enums.I18nEnum;
 import com.dx.facade.account.param.DepositWithDrawRecordParam;
 import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
@@ -36,9 +37,11 @@ public interface LoanRepayRecordRPCService {
 
     /**
      * 校验借还款金额是否合法
+     *
+     * @param prefix
      * @param loanRepayParam
      * @return
      */
-    boolean checkAmount(LoanRepayParam loanRepayParam);
+    CommonResp<String> checkAmount(String prefix, LoanRepayParam loanRepayParam);
 
 }
