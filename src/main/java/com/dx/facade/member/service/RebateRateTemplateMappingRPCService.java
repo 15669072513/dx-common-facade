@@ -45,4 +45,12 @@ public interface RebateRateTemplateMappingRPCService {
      * @param request
      */
     CommonResp<Boolean> updateRebateRateTemplateMapping(UpdateRebateRateTemplateMappingParamDTO request) throws BizException;
+
+    /**
+     * 根据模板获取关联总代id列表
+     * 
+     * @param templateId
+     * @return
+     */
+	CommonResp<List<Long>> getMappingTopProxyIdList(Long templateId);
 }
