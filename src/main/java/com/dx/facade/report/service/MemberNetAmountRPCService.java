@@ -74,4 +74,11 @@ public interface MemberNetAmountRPCService {
      * @return
      */
     CommonResp<PageResp<MemberVenueReqDTO, MemberVenueSummaryRespDTO>> queryVenueDetails(MemberNetAmountReqDTO memberNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏总计
+     * @param memberNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueSummaryRespDTO> queryVenueSumamry(MemberNetAmountReqDTO memberNetAmountReqDTO);
 }
