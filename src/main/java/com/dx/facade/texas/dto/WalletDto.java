@@ -3,12 +3,14 @@ package com.dx.facade.texas.dto;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @ApiModel("用户钱包信息")
 @Data
+@EqualsAndHashCode
 public class WalletDto {
 
     /**
@@ -73,6 +75,9 @@ public class WalletDto {
 
     @ApiModelProperty("牌局保留的局服务费")
     private BigDecimal freezeFee = BigDecimal.ZERO;
+
+
+
 
 
 }
