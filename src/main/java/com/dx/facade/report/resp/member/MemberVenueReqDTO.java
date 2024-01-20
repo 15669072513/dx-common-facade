@@ -19,7 +19,11 @@ public class MemberVenueReqDTO {
     @ApiModelProperty("场馆/项目 -id")
     private Long venueId;
     @ApiModelProperty("场馆/项目 名称")
-    private Long venueName;
+    private String venueName;
+    @ApiModelProperty("场馆/项目 类型")
+    private String venueType;
+    @ApiModelProperty("游戏/订单 类型")
+    private String betType;
     @ApiModelProperty("注单量")
     private BigDecimal betCount;
     @ApiModelProperty("投注金额")
