@@ -7,23 +7,10 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 
-/**
- * @author rebuy
- */
 @Setter
 @Getter
-@ApiModel("会员场馆明细")
-public class MemberVenueReqDTO {
-    @ApiModelProperty("日期")
-    private String dateTime;
-    @ApiModelProperty("场馆/项目 -id")
-    private Long venueId;
-    @ApiModelProperty("场馆/项目 名称")
-    private String venueName;
-    @ApiModelProperty("场馆/项目 类型")
-    private String venueType;
-    @ApiModelProperty("游戏/订单 类型")
-    private String betType;
+@ApiModel("会员场馆总计")
+public class MemberVenueSummaryRespDTO {
     @ApiModelProperty("注单量")
     private BigDecimal betCount;
     @ApiModelProperty("投注金额")
