@@ -7,7 +7,7 @@ import java.util.Optional;
  */
 public enum DxAccountFeeTypeEnum {
 
-    TABLE_FEE_FREEZE(1, false, GameRecordTypeEnum.DX_CLUB_ORDER.getType(),"局服务费冻结");
+    TABLE_FEE_FREEZE(1, false, GameRecordTypeEnum.DX_SERVICE_JUCHOU.getType(),"局服务费冻结");
 
     private Integer code;
     //是否需要改变主表账户余额，有些冻结只需要记录流水
