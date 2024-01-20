@@ -31,11 +31,11 @@ public class MemberInfoRpcEditAccountStatus implements Serializable {
 	@ApiModelProperty(value = "账号锁定状态 0-未锁定 1-充提锁定")
 	private Integer paymentLockStatus;
 	
-//	@ApiModelProperty(value = "游戏锁定状态 0-未锁定 1-游戏锁定")
-//	private Integer gameLockStatus;
-//
-//    @ApiModelProperty(value = "账号状态修改后名称", hidden = true)
-//    private String afterModifyName;
+	@ApiModelProperty(value = "游戏锁定状态 0-未锁定 1-游戏锁定")
+	private Integer gameLockStatus;
+
+    @ApiModelProperty(value = "账号状态修改后名称", hidden = true)
+    private String afterModifyName;
 
     @ApiModelProperty(value = "提交审核备注(100)")
     private String remark;
