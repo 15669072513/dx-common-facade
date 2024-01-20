@@ -20,7 +20,7 @@ public class DownScoreReq {
     //V1.5.X 局抽相关
     private Integer feeType;//手续费类型，目前只有局服务费
     private BigDecimal fee;//手续费
-    private Integer rpcVersion = RpcVersionEnums.V1.code();//默认为1
+    private Integer rpcVersion = RpcVersionEnums.V1.getCode();//默认为1
     private Integer obDeviceType;
     private String ip;
 }

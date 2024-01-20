@@ -4,9 +4,10 @@ import com.dx.entity.CommonResp;
 import com.dx.facade.game.req.DownScoreReq;
 import com.dx.facade.game.req.UpScoreReq;
 import com.dx.facade.texas.dto.WalletDto;
+import com.dx.facade.texas.req.BatchTableIdWalletRequest;
 import com.dx.facade.texas.req.WalletRequest;
 
-import java.math.BigDecimal;
+import java.util.List;
 
 public interface WalletRpcService {
 
@@ -16,6 +17,7 @@ public interface WalletRpcService {
    * @return
    */
   CommonResp<WalletDto> getUserWallet(WalletRequest request);
+  CommonResp<List<WalletDto>> getUserWallet(BatchTableIdWalletRequest request);
   /**
    * 下分
    * @return
