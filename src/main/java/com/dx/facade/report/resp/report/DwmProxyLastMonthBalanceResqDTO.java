@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @ApiModel("上月清理结余返回对象")
 public class DwmProxyLastMonthBalanceResqDTO {
     @ApiModelProperty(value = "待清理结余")
-    private BigDecimal balanceToCleared;
+    private BigDecimal balanceToCleared = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "备注")
     protected String remark = "";
