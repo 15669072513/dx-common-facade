@@ -14,10 +14,10 @@ import javax.validation.constraints.NotNull;
 @ApiModel("上月清理结余请求参数")
 public class DwmProxyLastMonthBalanceReq {
 
-    @ApiModelProperty(value = "商户id(20)",required = true,example = "587597733479145474")
-    private Long merchantId;
-
     @ApiModelProperty(value = "代理id(20)",required = true,example = "587597733479145474")
     @NotNull(message = "代理id不能为空")
     private Long proxyId;
+
+    @ApiModelProperty(value = "备注(2000)",required = true)
+    private String remake;
 }
