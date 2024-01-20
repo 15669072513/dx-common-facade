@@ -30,7 +30,7 @@ public class UpScoreReq{
      * 设备类型 EnumDeviceType
      */
     @ApiModelProperty("设备类型")
-    private Long obDeviceType;
+    private Integer obDeviceType;
     /**
      * 用户ip
      */

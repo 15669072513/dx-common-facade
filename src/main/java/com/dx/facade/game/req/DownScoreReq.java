@@ -21,6 +21,6 @@ public class DownScoreReq {
     private Integer feeType;//手续费类型，目前只有局服务费
     private BigDecimal fee;//手续费
     private Integer rpcVersion = RpcVersionEnums.V1.code();//默认为1
-    private Long obDeviceType;
+    private Integer obDeviceType;
     private String ip;
 }
