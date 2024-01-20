@@ -2,7 +2,9 @@ package com.dx.facade.member.service;
 
 import java.util.List;
 
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.dx.entity.CommonResp;
+import com.dx.entity.PageReq;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddRebateRateTemplateMappingParamDTO;
 import com.dx.facade.member.param.QueryRebateRateTemplateMappingParamDTO;
@@ -52,5 +54,5 @@ public interface RebateRateTemplateMappingRPCService {
      * @param templateId
      * @return
      */
-	CommonResp<List<Long>> getMappingTopProxyIdList(Long templateId);
+	CommonResp<Page<Long>> getMappingTopProxyIdList(PageReq<QueryRebateRateTemplateMappingParamDTO> pageReq);
 }
