@@ -6,6 +6,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.param.TransferGameParam;
 import com.dx.facade.account.param.WalletDetailParamDTO;
+import com.dx.facade.account.req.MemberRebateReq;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.req.WalletDetailBatchQueryDTO;
 import com.dx.facade.account.resp.*;
@@ -32,6 +33,15 @@ public interface WalletDetailRPCService {
      * @copyright
      */
     CommonResp<List<ProxyRebateResponseData>> proxyRebateInfoBatch(List<Long> proxyIds);
+
+
+    /**
+     * @author Dealer
+     * @description: 批量获取会员的返点信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<List<ProxyRebateResponseData>> memberRebateInfoBatch(MemberRebateReq rebateReq);
 
     /**
      * 会员/代理账变记录列表

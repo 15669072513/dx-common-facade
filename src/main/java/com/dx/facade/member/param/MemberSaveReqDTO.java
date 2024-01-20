@@ -124,6 +124,5 @@ public class MemberSaveReqDTO {
     private String registerDeviceNo;
 
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
-    @NotBlank(message = "业务模式不能为空")
     private Integer businessModel;
 }

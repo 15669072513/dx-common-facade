@@ -59,6 +59,12 @@ public class ProxyRebatePageRespDTO {
     @ApiModelProperty(value = "上级代理账号")
     private String parentProxyAccount;
 
+    /**
+     * 上级理账号
+     */
+    @ApiModelProperty(value = "总代账号")
+    private String topProxyAccount;
+
     @ApiModelProperty(value = "所属商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;

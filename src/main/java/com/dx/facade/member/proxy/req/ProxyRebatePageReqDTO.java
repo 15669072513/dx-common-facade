@@ -34,6 +34,12 @@ public class ProxyRebatePageReqDTO extends MultiplyMerchantLocalDateReq {
     @ApiModelProperty(value = "代理账号")
     private String proxyAccount;
 
+    @ApiModelProperty(value="总代账号")
+    private String topProxyAccount;
+
+    @ApiModelProperty(value="代理层级")
+    private Integer proxyLevel;
+
     @ApiModelProperty(value = "直属上级")
     private String parentProxyAccount;
 

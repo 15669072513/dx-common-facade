@@ -347,6 +347,8 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(v3_credit_proxy_help_sub_proxy_credit_repay);
         list.add(v3_parent_proxy_help_proxy_credit_repay);
         list.add(v3_official_help_proxy_credit_repay);
+        //代理占成亏损分摊
+        list.add(v1_50_proxy_to_loss_sharing_sub);
 
         return list;
     }

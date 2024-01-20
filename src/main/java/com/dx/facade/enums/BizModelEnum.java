@@ -25,7 +25,7 @@ public enum BizModelEnum {
         return this.code;
     }
 
-    public String desc(Integer code) {
+    public String desc() {
         return this.desc;
     }
 

@@ -3,6 +3,7 @@ package com.dx.facade.venue.service;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.es.resp.*;
+import com.dx.facade.venue.req.BatchBettingRecordReq;
 import com.dx.facade.venue.req.BettingRecordReq;
 import com.dx.facade.venue.req.ReSettleRecordReq;
 
@@ -17,6 +18,11 @@ public interface GameBetRecordService {
      * 个人中心-资金页-查询个人注单统计信息
      */
     GameRecordBetAmountAggregation betRecordAggregation(BettingRecordReq req) throws BizException;
+
+    /**
+     * 统计所有代理注单输赢
+     */
+    GameRecordBetAmountAggregation betRecordAggregationWithList(BatchBettingRecordReq req) throws BizException;
 
     /**
      * 个人中心-资金页-查询个人注单
