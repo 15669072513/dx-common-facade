@@ -11,7 +11,7 @@ import lombok.Data;
 @Data
 public class GameOrderReq  extends BaseRequest {
 
-  @ApiModelProperty(value = "时间类型 0默认查今日 1近7天 2近30天")
+  @ApiModelProperty(value = "时间类型 0 默认账期 1默认查今日 2近7天 3近30天")
   private Integer dateType=0;
 
   @ApiModelProperty(value = "订单ID")

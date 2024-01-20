@@ -419,6 +419,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_投注终端 = "EXCEL_HEAD_I18N_KEY.FUNDS_投注终端";
     String	FUNDS_会员转账记录 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员转账记录";
     String	FUNDS_游戏注单 = "EXCEL_HEAD_I18N_KEY.FUNDS_游戏注单";
+    String	ORDER_订单信息 = "EXCEL_HEAD_I18N_KEY.ORDER_订单信息";
     String	FUNDS_现金钱包 = "EXCEL_HEAD_I18N_KEY.FUNDS_现金钱包";
     String	FUNDS_未结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_未结算";
     String	FUNDS_已结算 = "EXCEL_HEAD_I18N_KEY.FUNDS_已结算";

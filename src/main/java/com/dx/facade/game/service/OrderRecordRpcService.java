@@ -3,6 +3,7 @@ package com.dx.facade.game.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
 import com.dx.facade.game.req.GameOrderReq;
+import com.dx.facade.game.resp.GameOrderAggSumResp;
 import com.dx.facade.game.resp.GameOrderResp;
 
 public interface OrderRecordRpcService {
@@ -13,7 +14,7 @@ public interface OrderRecordRpcService {
    * @param req
    * @return
    */
-  CommonResp<PageResp<GameOrderResp, Void>> listPage(GameOrderReq req);
+  CommonResp<PageResp<GameOrderResp, GameOrderAggSumResp>> listPage(GameOrderReq req);
 
 
   /**
