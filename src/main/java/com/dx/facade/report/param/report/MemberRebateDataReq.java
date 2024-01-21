@@ -27,9 +27,9 @@ public class MemberRebateDataReq {
     private Long pageSize = 10L;
 
     @ApiModelProperty("开始结算时间")
-    private Integer reportStDate;
+    private Long reportStDate;
     @ApiModelProperty("结束结算时间")
-    private Integer reportEdDate;
+    private Long reportEdDate;
     @ApiModelProperty(value = "会员账号")
     private String memberName;
     @ApiModelProperty(value = "总代账号")

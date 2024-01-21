@@ -8,7 +8,7 @@ import com.dx.facade.report.resp.report.*;
 
 public interface MemberRebateDataRpcService {
 
-    CommonResp<PageResp<DwmMemberRebateDataRespDTO, Object>> queryMemberRebateData(MemberRebateDataReq var1);
-    CommonResp<DwmMemberRebateDataTotalRespDTO> queryMemberRebateDataTotal(MemberRebateDataReq var1);
+    CommonResp<PageResp<DwmMemberRebateDataRespDTO, DwmMemberRebateDataSummaryRespDTO>> queryMemberRebateDataList(MemberRebateDataReq var1);
+    CommonResp<DwmMemberRebateDataSummaryRespDTO> queryMemberRebateDataSummary(MemberRebateDataReq var1);
     CommonResp<DwmMemberRebatePersonDataReqDTO> queryMemberRebatePersonDetail(MemberRebateDataPersonReq var1);
 }

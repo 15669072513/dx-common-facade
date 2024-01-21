@@ -11,7 +11,7 @@ public class DwmMemberRebatePersonDataV2RespDTO {
     /**
      * 返水类型
      */
-    @ApiModelProperty(value = "返水类型（1：代理，2平台）")
+    @ApiModelProperty(value = "返水类型（0：代理，1:平台）")
     private String platformFlag;
 
     @ApiModelProperty(value = "项目")

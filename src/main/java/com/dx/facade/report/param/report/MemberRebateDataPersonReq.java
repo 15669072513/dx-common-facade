@@ -13,9 +13,9 @@ import lombok.NoArgsConstructor;
 public class MemberRebateDataPersonReq {
 
     @ApiModelProperty("报表日期")
-    private Integer reportDate;
+    private Long reportDate;
 
     @ApiModelProperty("会员ID")
-    private Integer memberId;
+    private Long memberId;
 
 }

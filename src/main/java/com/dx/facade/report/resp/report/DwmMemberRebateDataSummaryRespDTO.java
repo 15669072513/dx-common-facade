@@ -12,7 +12,7 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel("会员返水数据总计返回")
-public class DwmMemberRebateDataTotalRespDTO {
+public class DwmMemberRebateDataSummaryRespDTO {
 
     @ApiModelProperty("个人返点")
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
