@@ -38,6 +38,9 @@ public class QueryRebateRateTemplateDetailParamDTO implements BaseParmDTO, Seria
     @ApiModelProperty("类型 0：会员 1：代理")
     private Integer userType;
     
+    @ApiModelProperty("上级代理Id")
+    private Long parentProxyId;
+    
     @ApiModelProperty("用户Id")
     private Long topProxyId;
     
