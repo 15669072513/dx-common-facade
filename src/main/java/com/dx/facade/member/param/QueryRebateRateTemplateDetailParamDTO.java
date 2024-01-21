@@ -41,6 +41,9 @@ public class QueryRebateRateTemplateDetailParamDTO implements BaseParmDTO, Seria
     @ApiModelProperty("用户Id")
     private Long topProxyId;
     
+    @ApiModelProperty("起始比率等级")
+    private Integer levelStart;
+    
 	@Override
 	public void check() {
 	}
