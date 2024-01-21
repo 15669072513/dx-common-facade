@@ -4,6 +4,7 @@ import com.dx.entity.CommonResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.UpdateRebateAllotModeParamDTO;
 import com.dx.facade.member.param.UpdateRebateRateTemplateLevelParamDTO;
+import com.dx.facade.member.param.UpdateRebateTemplateParamDTO;
 /**
  * 返点分配模式RPC服务
  * 
@@ -33,5 +34,14 @@ public interface RebateAllotModeRPCService {
 	 * @throws BizException
 	 */
 	CommonResp<Boolean> updateMemberRebateRateTemplateLevel(UpdateRebateRateTemplateLevelParamDTO request) throws BizException;
+	
+	/**
+	 * 更新返点比率模板接口
+	 * 
+	 * @param request
+	 * @return
+	 * @throws BizException
+	 */
+	CommonResp<Boolean> updateRebateTemplate(UpdateRebateTemplateParamDTO request) throws BizException;
 	
 }
