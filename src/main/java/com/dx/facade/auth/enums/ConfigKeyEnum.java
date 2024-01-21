@@ -143,6 +143,9 @@ public enum ConfigKeyEnum {
     PROXY_CP_RATE("proxy.cp.rate", "1"),
     PROXY_BY_RATE("proxy.by.rate", "1"),
 
+    /**
+     * 返点模式下，对团队所有代理和会员生效。
+     */
     TEXAS_REBATE_RATE_LIMIT("texas.rebate.rate.limit", "1"),
     TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.rebate.rate.limit", "1"),
     ACTUAL_PERSON_REBATE_RATE_LIMIT("actual.person.rebate.rate.limit", "1"),
@@ -150,7 +153,10 @@ public enum ConfigKeyEnum {
     LOTTERY_TICKET_REBATE_RATE_LIMIT("lottery.ticket.rebate.rate.limit", "1"),
     CHESS_REBATE_RATE_LIMIT("chess.rebate.rate.limit", "1"),
     ESPORTS_REBATE_RATE_LIMIT("esports.rebate.rate.limit", "1"),
-    
+
+    /**
+     * 返点模式  平台发放默认会员返水
+     */
     PLATFORM_TEXAS_REBATE_RATE_LIMIT("platform.texas.rebate.rate.limit", "1"),
     PLATFORM_TEXAS_INSURANCE_REBATE_RATE_LIMIT("platform.texas.insurance.rebate.rate.limit", "1"),
     PLATFORM_ACTUAL_PERSON_REBATE_RATE_LIMIT("platform.actual.person.rebate.rate.limit", "1"),
@@ -158,7 +164,10 @@ public enum ConfigKeyEnum {
     PLATFORM_LOTTERY_TICKET_REBATE_RATE_LIMIT("platform.lottery.ticket.rebate.rate.limit", "1"),
     PLATFORM_CHESS_REBATE_RATE_LIMIT("platform.chess.rebate.rate.limit", "1"),
     PLATFORM_ESPORTS_REBATE_RATE_LIMIT("platform.esports.rebate.rate.limit", "1"),
-    
+
+    /**
+     * 返佣模式下，仅对团队所有会员生效,包括平台发放和代理发放
+     */
     COMMISSION_TEXAS_REBATE_RATE_LIMIT("texas.club.member.rebate","1"),
     COMMISSION_ACTUAL_PERSON_REBATE_RATE_LIMIT("zr.member.rebate","1"),
     COMMISSION_SPORTS_REBATE_RATE_LIMIT("ty.member.rebate","1"),
@@ -167,6 +176,10 @@ public enum ConfigKeyEnum {
     COMMISSION_ESPORTS_REBATE_RATE_LIMIT("dj.member.rebate","1"),
     COMMISSION_TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.member.rebate", "1"),
 
+    //
+    /**
+     * 返佣模式下 代理返佣比例上限
+     */
     TEXAS_COMMISSION_RATE_LIMIT("texas.commission.rate.limit", "1"),
     TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.commission.rate.limit", "1"),
     OTHER_COMMISSION_RATE_LIMIT("other.commission.rate.limit", "1"),

@@ -22,9 +22,14 @@ import lombok.NoArgsConstructor;
 public class QueryRebateRateTemplateDetailParamDTO implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    @ApiModelProperty("ID")
-    private Long id;
+    /**
+     * 1：根据userId查询模板明细 只需要传userId和userType 
+     * 2：查询模板明细列表只需要传templateId 
+     * 3：查询代理或者会员可选择的模板明细列表 传parentProxyId和userType 用于新增页面
+     * 4: 根据userId和userType查询可选择的比率明细列表 用于修改页面
+     */
+    @ApiModelProperty("查询类型 1：根据userId查询模板明细 只需要传userId和userType  2：查询模板明细列表只需要传templateId 3： 查询代理或者会员可选择的模板明细列表 传parentProxyId和userType")
+    private Integer queryType;
     
     @ApiModelProperty("模板Id")
     private Long templateId;
@@ -38,8 +43,13 @@ public class QueryRebateRateTemplateDetailParamDTO implements BaseParmDTO, Seria
     @ApiModelProperty("类型 0：会员 1：代理")
     private Integer userType;
     
+    @ApiModelProperty("上级代理Id")
+    private Long parentProxyId;
+    
     @ApiModelProperty("用户Id")
     private Long topProxyId;
+    
+
     
 	@Override
 	public void check() {

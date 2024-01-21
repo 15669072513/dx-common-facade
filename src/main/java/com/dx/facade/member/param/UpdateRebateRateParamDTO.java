@@ -63,13 +63,13 @@ public class UpdateRebateRateParamDTO implements Serializable {
     @ApiModelProperty("remark")
     private String remark;
     
-    @ApiModelProperty("是否更新所以下级")
+    @ApiModelProperty("是否更新所有下级")
     private Boolean isAllSub;
     
     @ApiModelProperty("调整类型 1：全部失效 2：等差递减 3：向上持平")
     private Integer adjustmentType;
     
-    @ApiModelProperty("比率等级")
-    private Integer rebateRateLevel;
+    @ApiModelProperty("返点分配模式 1：自由模式 2:模板模式")
+    private Integer rebateAllotMode;
     
 }

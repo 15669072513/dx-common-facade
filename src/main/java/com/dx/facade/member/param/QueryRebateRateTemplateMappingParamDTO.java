@@ -2,6 +2,8 @@ package com.dx.facade.member.param;
 
 import java.io.Serializable;
 
+import com.dx.facade.common.PageRequest;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -19,12 +21,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(value = "返点比例模板关联请求Param", description = "返点比例模板关联请求Param")
-public class QueryRebateRateTemplateMappingParamDTO implements BaseParmDTO, Serializable {
+public class QueryRebateRateTemplateMappingParamDTO extends PageRequest implements BaseParmDTO, Serializable {
 
     private static final long serialVersionUID = 1L;
-
-    @ApiModelProperty("ID")
-    private Long id;
     
     @ApiModelProperty("模板Id")
     private Long templateId;
