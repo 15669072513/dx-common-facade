@@ -42,6 +42,10 @@ public class UpdateRebateAllotModeParamDTO implements Serializable {
     @NotNull(message = "分配模式 不能为空")
     private Integer rebateAllotMode;
     
+    @ApiModelProperty("原模板Id")
+    @NotNull(message = "原模板ID 不能为空")
+    private Long sourceTemplateId;
+    
     @ApiModelProperty("模板Id")
     @NotNull(message = "模板ID 不能为空")
     private Long templateId;
