@@ -1,6 +1,7 @@
 package com.dx.facade.member.service;
 
-import com.dx.facade.member.param.MemberToProxyParam;
+import com.dx.facade.member.param.*;
+
 import java.util.List;
 
 import com.dx.entity.CommonResp;
@@ -15,20 +16,6 @@ import com.dx.facade.member.member.param.MemberListByWindControlInfoReqDto;
 import com.dx.facade.member.member.param.MerchantUnderMemberInfoReqDTO;
 import com.dx.facade.member.member.resp.MemberListByWindControlInfoRespDto;
 import com.dx.facade.member.member.resp.MerchantUnderMemberRespDTO;
-import com.dx.facade.member.param.AddLowerMemberReqDto;
-import com.dx.facade.member.param.CheckMemberNickNameParamDTO;
-import com.dx.facade.member.param.MemberAndProxyDto;
-import com.dx.facade.member.param.MemberAndProxyUpdateParamDTO;
-import com.dx.facade.member.param.MemberInfoRpcEditParam;
-import com.dx.facade.member.param.MemberListParamDTO;
-import com.dx.facade.member.param.MemberParamDTO;
-import com.dx.facade.member.param.MemberPasswordEditParam;
-import com.dx.facade.member.param.MemberQueryReqParamDTO;
-import com.dx.facade.member.param.UpdateActivityOnlyFlagParamDTO;
-import com.dx.facade.member.param.UpdateMemberMobileParamDTO;
-import com.dx.facade.member.param.UpdateMemberNickNameParamDTO;
-import com.dx.facade.member.param.UpdateMemberTopImagesUrlParamDTO;
-import com.dx.facade.member.param.UpdateTransferInfoParamDTO;
 import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.MemberMainInfoRespDTO;

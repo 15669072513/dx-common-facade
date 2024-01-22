@@ -75,4 +75,7 @@ public class ProxyListPageParamDTO {
     
     @ApiModelProperty("合营码")
     private String joinCode;
+
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
 }

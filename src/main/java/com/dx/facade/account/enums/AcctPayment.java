@@ -539,6 +539,7 @@ public class AcctPayment {
         官方给代理授信上分(19, "官方给代理授信上分"),
         官方给代理授信下分(20, "官方给代理授信下分"),
         官方帮代理信用还款(21, "官方帮代理信用还款"),
+        代理占成亏损分摊(22, "代理占成亏损分摊"),
         ;
         private Integer code;
         private String desc;

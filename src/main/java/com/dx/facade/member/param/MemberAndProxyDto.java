@@ -418,6 +418,10 @@ public class MemberAndProxyDto {
     @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
     private Integer commissionMode;
     
+    
+    @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
+    private Integer rebateAllotMode;
+    
     @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
     private Integer commissionSettleCycle;
 	
@@ -550,6 +554,9 @@ public class MemberAndProxyDto {
 	@ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
 	private Integer crossOptLevel;
 
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
 			return null;
@@ -638,6 +645,7 @@ public class MemberAndProxyDto {
 		result.setOpenLockStatus(item.getOpenLockStatus());
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
+		result.setBusinessModel(item.getBusinessModel());
 		return result;
 	}
 	

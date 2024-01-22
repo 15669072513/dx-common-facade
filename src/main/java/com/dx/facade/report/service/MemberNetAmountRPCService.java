@@ -17,6 +17,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -25,6 +26,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -33,6 +35,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏全部合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -50,6 +53,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏
+     *
      * @param reqDTO
      * @return
      */
@@ -57,9 +61,24 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏-场馆明细
+     *
      * @param reqDTO
      * @return
      */
     CommonResp<PageResp<ProxyMemberNetVenueRespDTO, ProxyMemberNetVenueSummaryRespDTO>> queryProxyMemberNetVenueList(PageReq<ProxyMemberNetVenueListReqDTO> reqDTO);
 
+    /**
+     * 会员场馆盈亏明细
+     *
+     * @param memberNetAmountReqDTO
+     * @return
+     */
+    CommonResp<PageResp<MemberVenueReqDTO, MemberVenueSummaryRespDTO>> queryVenueDetails(MemberNetAmountReqDTO memberNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏总计
+     * @param memberNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueSummaryRespDTO> queryVenueSumamry(MemberNetAmountReqDTO memberNetAmountReqDTO);
 }
