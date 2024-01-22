@@ -88,6 +88,9 @@ public class WalletBalanceDetailReq implements Serializable {
     @ApiModelProperty("app类型")
     private Integer appType;
 
+    @ApiModelProperty("客户端账变类型集合")
+    private List<Integer> appTypeList;
+
     @ApiModelProperty("代理层级路径")
     private String proxyPath;
 
