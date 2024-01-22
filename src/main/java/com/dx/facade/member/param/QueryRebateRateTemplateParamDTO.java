@@ -43,6 +43,9 @@ public class QueryRebateRateTemplateParamDTO extends PageRequest implements Base
     @ApiModelProperty("创建人")
     private String createdBy;
     
+    @ApiModelProperty("最后更新人")
+    private String updatedBy;
+    
     /** 创建开始时间 */
     @ApiModelProperty("创建开始时间")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
