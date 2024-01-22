@@ -240,5 +240,4 @@ public interface MemberRPCService {
 
 	CommonResp entryAuthorityOpen(MemberToProxyParam param) throws BizException;
 
-    CommonResp<ProxyOverviewMainDataCashRespDTO> getMainDataCashModel(Long proxyId);
 }
