@@ -7,11 +7,17 @@ import java.util.Optional;
  */
 public enum DxAccountFeeTypeEnum {
 
-    TABLE_FEE_FREEZE(1, false, GameRecordTypeEnum.DX_SERVICE_JUCHOU.getType(),"局服务费冻结");
+    TABLE_FEE_FREEZE(1, false, true, GameRecordTypeEnum.DX_SERVICE_JUCHOU.getType(), "局服务费冻结");
 
     private Integer code;
-    //是否需要改变主表账户余额，有些冻结只需要记录流水
+    /**
+     * 是否需要改变主表账户余额，有些冻结只需要记录流水
+     */
     private Boolean needChangeAccount;
+    /**
+     * 是否需要冻结
+     */
+    private Boolean needFreeze;
     /**
      * 关联的订单类型
      */
@@ -27,11 +33,12 @@ public enum DxAccountFeeTypeEnum {
     }
 
 
-    private DxAccountFeeTypeEnum(Integer code, Boolean needChangeAccount,Integer linkOrderType, String desc) {
+    private DxAccountFeeTypeEnum(Integer code, Boolean needChangeAccount, Boolean needFreeze, Integer linkOrderType, String desc) {
         this.code = code;
         this.desc = desc;
         this.needChangeAccount = needChangeAccount;
         this.linkOrderType = linkOrderType;
+        this.needFreeze = needFreeze;
     }
 
     public Integer getCode() {
@@ -44,6 +51,10 @@ public enum DxAccountFeeTypeEnum {
 
     public Boolean getNeedChangeAccount() {
         return needChangeAccount;
+    }
+
+    public Boolean isNeedFreeze() {
+        return needFreeze;
     }
 
     public Integer getLinkOrderType() {
