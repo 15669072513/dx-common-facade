@@ -90,5 +90,5 @@ public class DxGameBillResp implements Serializable {
     /**
      * Walks手牌数
      */
-    private Integer walksHandNumber;
+    private Long walksHandNumber;
 }
