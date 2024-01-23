@@ -17,6 +17,12 @@ public interface WalletRpcService {
    * @return
    */
   CommonResp<WalletDto> getUserWallet(WalletRequest request);
+
+  /**
+   *
+   * @param request
+   * @return
+   */
   CommonResp<List<WalletDto>> getUserWallet(BatchTableIdWalletRequest request);
   /**
    * 下分
