@@ -125,6 +125,9 @@ public class DxGameConfigEditReq implements Serializable {
     @ApiModelProperty("每手服务费，0-关闭 1-按底池比例 2-按盈利比例 3-都选择")
     private Integer serviceCharge;
 
+    @ApiModelProperty("每手服务费选择列表,多个用逗号隔开")
+    private String serviceChargeList;
+
     @ApiModelProperty("按底池比例收费 多个用逗号隔开 支持小数")
     private String bottomPoolFee;
 

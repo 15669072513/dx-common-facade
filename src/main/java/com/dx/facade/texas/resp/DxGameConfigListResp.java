@@ -166,6 +166,9 @@ public class DxGameConfigListResp implements Serializable {
     @FieldOperate(fieldName ="每手服务费")
     private Integer serviceCharge;
 
+    @ApiModelProperty("每手服务费选择列表,多个用逗号隔开")
+    private String serviceChargeList;
+
     @ApiModelProperty("按底池比例收费 多个用逗号隔开 支持小数")
     @FieldOperate(fieldName ="按底池比例收费")
     private String bottomPoolFee;
