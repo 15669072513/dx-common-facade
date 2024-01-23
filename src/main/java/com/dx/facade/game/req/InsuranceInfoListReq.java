@@ -63,7 +63,6 @@ public class InsuranceInfoListReq extends BaseRequest {
   private Long createEndTs;
 
 
-
   @ApiModelProperty("查询类型")
   private Integer queryType; // 1 列表查询，导出查询
 

@@ -70,6 +70,7 @@ public class DxGameBillResp implements Serializable {
      */
     private int userRoundNo = 0;
 
+
     /**
      * 玩家总带出
      */
@@ -84,4 +85,10 @@ public class DxGameBillResp implements Serializable {
      * 主动入池次数
      */
     private Long activeBringPoolNumber;
+
+
+    /**
+     * Walks手牌数
+     */
+    private Integer walksHandNumber;
 }
