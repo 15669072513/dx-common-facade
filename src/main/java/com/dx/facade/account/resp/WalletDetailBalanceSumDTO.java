@@ -24,7 +24,7 @@ public class WalletDetailBalanceSumDTO implements Serializable {
     @ApiModelProperty(value = "按天统计，key为日期，格式yyyy-MM-dd，value参见字段注释说明")
     private Map<String, WalletDetailTexasSumDTO> daySumMap = new HashMap<>();
     @ApiModelProperty(value = "按天统计，key为日期，格式yyyy-MM-dd，value参见字段注释说明")
-    private BigDecimal inTotalAmount;
+    private BigDecimal inTotalAmount = BigDecimal.ZERO;
     @ApiModelProperty(value = "按天统计，key为日期，格式yyyy-MM-dd，value参见字段注释说明")
-    private BigDecimal outTotalAmount;
+    private BigDecimal outTotalAmount = BigDecimal.ZERO;
 }
