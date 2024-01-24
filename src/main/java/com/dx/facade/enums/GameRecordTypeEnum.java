@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
  */
 public enum GameRecordTypeEnum {
   DX_CLUB_ORDER(101, 0, 3, "俱乐部服务费", 1, true),
-  DX_INSURE_ORDER(102, 0, 3, "保险", 2, true),
+  DX_INSURE_ORDER(102, 0, 1, "保险", 2, true),
   DX_INCREMENT_ORDER(103, 0, 3, "增值", 3, false),
   DX_SERVICE_CHARGE(1, 101, 1, "手牌服务费", 1, true),
   DX_JINDIAN_INSURE(2, 102, 1, "经典保险", 1, true),
