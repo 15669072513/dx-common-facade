@@ -1,16 +1,15 @@
 package com.dx.facade.member.param;
 
+import com.dx.facade.report.param.base.LocalDatePageRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.validator.constraints.Length;
-
-import com.dx.facade.report.param.base.LocalDatePageRequest;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Data
 @Builder
@@ -60,7 +59,7 @@ public class MemberNetAmountReqDTO extends LocalDatePageRequest {
 
     @ApiModelProperty("最大净盈亏")
     private BigDecimal maxNetProfit;
-	
+
     private String orderKey;
 
     /**
@@ -69,9 +68,9 @@ public class MemberNetAmountReqDTO extends LocalDatePageRequest {
     @ApiModelProperty(value = "排序方式：升序：asc/降序：desc", example = "desc")
     private String orderType = "asc";
 
-
-
-
-
+    @ApiModelProperty("场馆分类ID")
+    private List<String> venueTypes;
+    @ApiModelProperty(value = "会员Id")
+    private Long playerId;
 
 }
