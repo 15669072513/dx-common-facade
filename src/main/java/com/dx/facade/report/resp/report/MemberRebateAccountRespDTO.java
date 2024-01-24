@@ -22,6 +22,8 @@ public class MemberRebateAccountRespDTO {
     private String betTime;
     @ApiModelProperty("场馆类型")
     private String venueType;
+    @ApiModelProperty("场馆类型名称")
+    private String venueTypeName;
     @ApiModelProperty("场馆名称")
     private String venueName;
     @ApiModelProperty("游戏名称")
