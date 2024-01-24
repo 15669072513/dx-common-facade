@@ -117,9 +117,12 @@ public class MemberSaveReqDTO {
     @ApiModelProperty("俱乐部名称")
     private String clubName;
 
-	@ApiModelProperty(value = "注册IP", hidden = true)
-	private String registerIp;
-	
-	@ApiModelProperty(value = "注册设备号", hidden = true)
-	private String registerDeviceNo;
+    @ApiModelProperty(value = "注册IP", hidden = true)
+    private String registerIp;
+
+    @ApiModelProperty(value = "注册设备号", hidden = true)
+    private String registerDeviceNo;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 }

@@ -54,14 +54,6 @@ public class MemberInfoRespDTO{
     @ApiModelProperty("会员账号")
     private String userName;
 
-//    @ApiModelProperty("盐")
-//    private String salt;
-
-//    @ApiModelProperty("会员密码")
-//    private String password;
-//
-//    @ApiModelProperty("会员支付密码")
-//    private String payPassword;
 
     @ApiModelProperty("会员真实姓名")
     private String realName;
@@ -256,4 +248,13 @@ public class MemberInfoRespDTO{
 
     @ApiModelProperty(value = "取款限制类型：1-账单限制，2-流水限制")
     private Integer withdrawLimitType;
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    private Integer onlyDirectMemberSwitch = 0;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer parentBusinessModel;
 }

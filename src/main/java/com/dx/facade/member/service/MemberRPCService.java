@@ -33,6 +33,7 @@ import com.dx.facade.member.resp.MemberBaseInfoRespDTO;
 import com.dx.facade.member.resp.MemberInfoRespDTO;
 import com.dx.facade.member.resp.MemberMainInfoRespDTO;
 
+import com.dx.facade.report.resp.proxyoverview.ProxyOverviewMainDataCashRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 public interface MemberRPCService {
@@ -46,7 +47,7 @@ public interface MemberRPCService {
     CommonResp<MemberInfoRespDTO> selectMemberById(Long memberId);
     /**
      * 根据userId列表批量查询用户信息
-     * 
+     *
      * @param memberIds
      * @return
      */
@@ -61,7 +62,7 @@ public interface MemberRPCService {
      * @return
      */
     CommonResp<List<MemberInfoRespDTO>> selectListByParentProxyId(Long merchantId, String parentProxyId);
-    
+
     /**
      * 根据上级代理Id获取全部直属会员
      * @param paramDTO
@@ -92,7 +93,7 @@ public interface MemberRPCService {
      * @throws BizException
      */
     CommonResp<Boolean> updateTransferInfo(UpdateTransferInfoParamDTO paramDTO) throws BizException;
-	
+
 	/**
 	 * 根据会员账号查询当前商户线下会员信息
 	 *
@@ -102,8 +103,8 @@ public interface MemberRPCService {
 	 */
 	@ApiModelProperty("根据会员账号查询当前商户线下会员信息")
 	List<MerchantUnderMemberRespDTO> getMerchantUnderMemberByUsername(MerchantUnderMemberInfoReqDTO reqDTO) throws BizException;
-	
-	
+
+
 	@ApiModelProperty("根据风控信息，返回会员信息集合 风控需求")
 	List<MemberListByWindControlInfoRespDto> getMemberListByWindControlInfo(MemberListByWindControlInfoReqDto var1) throws BizException;
 
@@ -134,54 +135,54 @@ public interface MemberRPCService {
      */
     @ApiModelProperty("app代理-优惠记录")
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> memberDiscountRecords(PageReq<WalletDetailParamDTO> pageReq) throws BizException;
-    
+
     /**
      * 根据俱乐部Id查询该俱乐部下面的会员信息
-     * 
+     *
      * @param clubId
      * @return
      */
     CommonResp<List<MemberBaseInfoRespDTO>> selectByMemberBaseInfoByClubId(Long clubId);
-    
+
     /**
      * 踢出俱乐部
-     * 
+     *
      * @param clubId
      * @return
      */
     CommonResp<Boolean> kickOutClub(Long clubId,Long memberId);
-    
+
     /**
      * 加入俱乐部
-     * 
+     *
      * @param memberId
      * @param clubId
      * @return
      */
 	CommonResp<Boolean> joinClub(Long memberId, Long clubId);
-	
+
 	/**
 	 * 检查用户昵称是否已占用
-	 * 
+	 *
 	 * @param paramDTO
 	 * @return
 	 */
 	CommonResp<Boolean> checkNickName(CheckMemberNickNameParamDTO paramDTO);
-	
+
 	/**
 	 * 更新用户昵称
-	 * 
+	 *
 	 * @param paramDTO
 	 * @return
 	 */
 	CommonResp<Boolean> updateNickName(UpdateMemberNickNameParamDTO paramDTO);
-	
+
 	/**
 	 * 更新用户头像
-	 * 
+	 *
 	 * @param paramDTO
 	 * @return
-	 * @throws BizException 
+	 * @throws BizException
 	 */
 	CommonResp<Boolean> updateTopImage(UpdateMemberTopImagesUrlParamDTO paramDTO) throws BizException;
 
@@ -199,26 +200,26 @@ public interface MemberRPCService {
 	 * @throws BizException
 	 */
 	CommonResp<?> updateMemberAndProxyPassword(MemberPasswordEditParam param) throws BizException;
-	
+
     /**
      * 根据userId查询会员基本信息
-     * 
+     *
      * @param userId
      * @return
      */
     CommonResp<MemberBaseInfoRespDTO> selectBaseInfoById(Long userId);
-    
+
 	/**
 	 * 更新用户手机
-	 * 
+	 *
 	 * @param paramDTO
 	 * @return
 	 */
 	CommonResp<Boolean> updateMobile(UpdateMemberMobileParamDTO paramDTO);
-	
+
     /**
      * 根据userId查询会员是否设置支付密码
-     * 
+     *
      * @param userId
      * @return
      */
@@ -238,4 +239,5 @@ public interface MemberRPCService {
 	CommonResp<List<MemberInfoRespDTO>> memberListByParentProxy(MemberListParamDTO paramDTO);
 
 	CommonResp entryAuthorityOpen(MemberToProxyParam param) throws BizException;
+
 }

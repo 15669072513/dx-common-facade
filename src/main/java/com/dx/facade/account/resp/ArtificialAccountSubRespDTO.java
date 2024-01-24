@@ -71,4 +71,7 @@ public class ArtificialAccountSubRespDTO {
 
     @ApiModelProperty(value = "图片地址")
     private String imageAddress;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 }
