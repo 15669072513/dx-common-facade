@@ -61,6 +61,9 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("游戏名称")
     private String gameName;
 
+    @ApiModelProperty("会员账号")
+    private String userNames;
+
     @ApiModelProperty("牌局开始时间-开始")
     @JsonSerialize(using = LocalDateTimeSerializer.class)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+8")
