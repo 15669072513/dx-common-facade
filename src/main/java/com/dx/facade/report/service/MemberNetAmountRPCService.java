@@ -7,6 +7,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.MemberNetAmountDetailReqDTO;
 import com.dx.facade.member.param.MemberNetAmountReqDTO;
+import com.dx.facade.member.param.MemberVenueNetAmountReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetListReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetVenueListReqDTO;
 import com.dx.facade.report.resp.member.*;
@@ -81,4 +82,19 @@ public interface MemberNetAmountRPCService {
      * @return
      */
     CommonResp<MemberVenueSummaryRespDTO> queryVenueSumamry(MemberNetAmountReqDTO memberNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏明细
+     *
+     * @param memberVenueNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueDetailRespDTO> queryMemberVenueDetail(MemberVenueNetAmountReqDTO memberVenueNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏总计
+     * @param memberVenueNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueSummaryRespDTO> queryMemberVenueSummary(MemberVenueNetAmountReqDTO memberVenueNetAmountReqDTO);
 }
