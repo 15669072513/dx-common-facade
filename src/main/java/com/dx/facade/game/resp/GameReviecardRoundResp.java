@@ -25,7 +25,7 @@ public class GameReviecardRoundResp {
     private BigDecimal potAmount;
 
     @ApiModelProperty("手牌开始时间")
-    private String handstartDateStr;
+    private String handStartDateStr;
 
     @ApiModelProperty("手牌结束时间")
     private String handEndDateStr;
