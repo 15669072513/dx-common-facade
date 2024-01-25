@@ -140,7 +140,7 @@ public class RecordDetailList implements Serializable {
         result.setSbBlindScore(resp.getSbBlindScore());
         result.setBbBlindScore(resp.getBbBlindScore());
         BigDecimal insurePool = resp.getInsurePoolSum();
-        result.setInsuredPool(Objects.nonNull(insurePool) ? insurePool : BigDecimal.ZERO);
+        result.setInsuredPool(Objects.nonNull(insurePool) ? insurePool.negate() : BigDecimal.ZERO);
         return result;
     }
 }
