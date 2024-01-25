@@ -209,11 +209,11 @@ public class DxTableInfoAddReq implements Serializable {
     private Integer onlyDirectMember;
 
     @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
-    private Integer tableFeeSwitch=0;
+    private Integer tableFeeSwitch;
 
     @ApiModelProperty("局服务费")
-    private BigDecimal tableFee= BigDecimal.ZERO;
+    private BigDecimal tableFee;
 
     @ApiModelProperty("局服务费比例")
-    private BigDecimal tableFeeScale= BigDecimal.ZERO;
+    private BigDecimal tableFeeScale;
 }
