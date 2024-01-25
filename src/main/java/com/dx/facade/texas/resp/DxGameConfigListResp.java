@@ -202,11 +202,17 @@ public class DxGameConfigListResp implements Serializable {
     private String anteLimits;
 
     @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    @FieldOperate(fieldName ="语音聊天功能")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer voiceChatSwitch;
 
     @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
+    @FieldOperate(fieldName ="入桌密码功能")
     private Integer tableEntryPasswordSwitch;
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    @FieldOperate(fieldName ="仅限直属会员可见开关")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer onlyDirectMemberSwitch;
 }
