@@ -6,14 +6,12 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.account.param.TransferGameParam;
 import com.dx.facade.account.param.WalletDetailParamDTO;
+import com.dx.facade.account.req.MemberRebateReq;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.req.WalletDetailBatchQueryDTO;
 import com.dx.facade.account.resp.*;
-import com.dx.facade.texas.req.TableBringInfoReq;
-import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
-import java.util.Map;
 
 public interface WalletDetailRPCService {
 
@@ -33,6 +31,15 @@ public interface WalletDetailRPCService {
      */
     CommonResp<List<ProxyRebateResponseData>> proxyRebateInfoBatch(List<Long> proxyIds);
 
+
+    /**
+     * @author Dealer
+     * @description: 批量获取会员的返点信息
+     * @date 2023/10/28
+     * @copyright
+     */
+    CommonResp<List<ProxyRebateResponseData>> memberRebateInfoBatch(MemberRebateReq rebateReq);
+
     /**
      * 会员/代理账变记录列表
      * @param pageReq
@@ -41,6 +48,13 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+
+    /**
+     * 德州带入带出服务费账变统计查询RPC
+     * @param pageReq
+     * @return
+     */
+    CommonResp<PageResp<WalletDetailRespDTO, WalletDetailBalanceSumDTO>> queryTexasBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailRespDTO>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
     /**
