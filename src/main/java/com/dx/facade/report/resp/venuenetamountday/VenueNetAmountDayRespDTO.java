@@ -31,4 +31,8 @@ public class VenueNetAmountDayRespDTO extends VenueNetAmountDaySummaryRespDTO {
     @ApiModelProperty("场馆类型名称")
     private String venueTypeName;
 
+    @ApiModelProperty("德州俱乐部投注额")
+    private BigDecimal pumpBetAmount = BigDecimal.ZERO;
+    @ApiModelProperty("德州保险投注额")
+    private BigDecimal insuredBetAmount = BigDecimal.ZERO;
 }
