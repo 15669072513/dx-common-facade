@@ -5,11 +5,13 @@ import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.facade.report.param.pay.MemberRebateReportDetailRpcReqDto;
 import com.dx.facade.report.param.pay.MemberRebateReportPageRpcReqDto;
+import com.dx.facade.report.req.MemberRebateAccountReqDTO;
 import com.dx.facade.report.resp.pay.MemberRebateReportDetailRpcPageRespDTO;
 import com.dx.facade.report.resp.pay.MemberRebateReportDetailSummaryRpcRespDTO;
 import com.dx.facade.report.resp.pay.MemberRebateReportRpcPageRespDTO;
 import com.dx.facade.report.resp.pay.MemberRebateReportSummaryRpcRepsDTO;
 
+import com.dx.facade.report.resp.report.MemberRebateAccountRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
