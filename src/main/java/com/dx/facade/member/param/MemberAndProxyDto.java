@@ -1,11 +1,13 @@
 package com.dx.facade.member.param;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.constant.Constants;
 import com.dx.facade.member.enums.ThirdPlatform;
 import com.dx.facade.member.proxy.req.AddLowerProxyReqDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -418,10 +420,10 @@ public class MemberAndProxyDto {
     @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
     private Integer commissionMode;
     
-    
+
     @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
     private Integer rebateAllotMode;
-    
+
     @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
     private Integer commissionSettleCycle;
 	
@@ -557,6 +559,8 @@ public class MemberAndProxyDto {
 
 	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
 	private Integer businessModel;
+	@ApiModelProperty(value = "会员业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer mBusinessModel;
 
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
@@ -648,6 +652,8 @@ public class MemberAndProxyDto {
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
 		result.setBusinessModel(item.getBusinessModel());
 		result.setRebateAllotMode(item.getRebateAllotMode());
+		result.setWithdrawLimitType(
+			Objects.equals(item.getBusinessModel(), Constants.ONE) ? Constants.TWO : Constants.ONE);
 		return result;
 	}
 	
