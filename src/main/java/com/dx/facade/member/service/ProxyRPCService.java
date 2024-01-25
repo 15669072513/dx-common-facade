@@ -69,7 +69,7 @@ public interface ProxyRPCService {
 
     @ApiModelProperty("获取代理树状结构")
     CommonResp<ProxyTreeRespDTO> getProxyTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
-    
+
     @ApiModelProperty("获取代理和会员树状结构")
     CommonResp<ProxyAndMemberTreeRespDTO> getProxyAndMemberTreeLink(ProxyTreeLinkParamDTO paramDTO) throws BizException;
 
@@ -153,7 +153,7 @@ public interface ProxyRPCService {
      * @throws BizException 业务异常
      */
     CommonResp<Boolean> validatePayPassword(Long merchantId, Long userId, String payPassword, Integer userType);
-    
+
     /**
      * 校验代理密码
      *
@@ -173,13 +173,13 @@ public interface ProxyRPCService {
      * @throws BizException 全局异常
      */
     CommonResp<Boolean> updateProxyPassWord(UpdatePassWordParamDTO paramDTO) throws BizException;
-    
+
     /**
      *  更新代理登录、开局、俱乐部管理权限
-     * 
+     *
      * @param updateProxyLockStatusParma
      * @return
-     * @throws Exception 
+     * @throws Exception
      */
 	CommonResp<Boolean> updateProxyLockStatus(UpdateProxyLockStatusParamDTO updateProxyLockStatusParma) throws Exception;
 
@@ -192,15 +192,15 @@ public interface ProxyRPCService {
       UpdateProxyBankChannelStatusParamDTO updateProxyBankChannelStatusParamDTO);
   /**
 	 * 校验userName是否已存在
-	 * 
+	 *
 	 * @param paramDTO
 	 * @return
 	 */
 	CommonResp<Boolean> checkUserName(ProxyQueryParamDTO paramDTO);
-	
+
 	/**
 	 * 设置登录密码
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 * @throws BizException
@@ -209,7 +209,7 @@ public interface ProxyRPCService {
 
     /**
      * 查询所有子代理包含直属和非直属
-     * 
+     *
      * @param proxyId
      * @return
      */
@@ -222,36 +222,36 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<List<ProxyInfoRespDTO>> getProxyAndSubList(ProxyTreeLinkParamDTO paramDTO);
-    
+
     /**
      * 获取所以下级代理id
-     * 
+     *
      * @param proxyId
      * @return
      */
     CommonResp<List<Long>> getSubProxyIdList(Long proxyId);
-    
+
     /**
      *  更新代理佣金结算周期
-     * 
+     *
      * @param paramDTO
      * @return
-     * @throws Exception 
+     * @throws Exception
      */
 	CommonResp<Boolean> updateProxyCommissionSettleCycle(UpdateProxyCommissionSettleCycleParamDTO paramDTO);
-	
+
     /**
      *  查询代理佣金结算周期
-     * 
+     *
      * @param paramDTO
      * @return
-     * @throws Exception 
+     * @throws Exception
      */
 	CommonResp<ProxyCommissionSettleCycleRespDTO> getProxyCommissionSettleCycle(QueryProxyCommissionSettleCycleParamDTO paramDTO);
 
 	/**
 	 * 代理绑定手机号或者邮箱
-	 * 
+	 *
 	 * @param params
 	 * @return
 	 * @throws BizException
@@ -265,4 +265,12 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<ProxyInfoRespDTO> getProxyByJoinCode(Long merchantId, String joinCode);
+
+    /**
+     * @author bicycle
+     * @description: 批量查询代理信息,只返回部分字段,调用方需确认所需字段是否返回
+     * @date 2023/9/18
+     * @copyright
+     */
+    CommonResp<List<ProxyInfoRespDTO>> getProxyByProxyIds(List<Long> proxyIds);
 }

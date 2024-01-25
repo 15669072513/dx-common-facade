@@ -4,12 +4,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * 业务模式：0-现金+信用业务，1-现金业务，2-信用业务
+ * 业务模式：0-信用+现金，1-现金业务，2-信用业务
  *
  * @author orbit
  */
 public enum BizModelEnum {
-    MIX(0, "现金+信用业务"),
+    MIX(0, "信用+现金业务"),
     CASH(1, "现金业务"),
     CREDIT(2, "信用业务");
 
