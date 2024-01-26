@@ -65,6 +65,8 @@ public class ArtificialAccountSubRecordPageParmDTO extends PageRequest implement
 	@ApiModelProperty(value = "排序方式(1)：desc-降序 asc-升序", example = "asc")
 	private String orderType;
 
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
 
 	private Long userId;
 

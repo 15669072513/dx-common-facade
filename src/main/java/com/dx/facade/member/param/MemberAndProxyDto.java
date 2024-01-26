@@ -1,11 +1,13 @@
 package com.dx.facade.member.param;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.constant.Constants;
 import com.dx.facade.member.enums.ThirdPlatform;
 import com.dx.facade.member.proxy.req.AddLowerProxyReqDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Objects;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -552,6 +554,8 @@ public class MemberAndProxyDto {
 
 	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
 	private Integer businessModel;
+	@ApiModelProperty(value = "会员业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer mBusinessModel;
 
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
@@ -642,6 +646,8 @@ public class MemberAndProxyDto {
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
 		result.setBusinessModel(item.getBusinessModel());
+		result.setWithdrawLimitType(
+			Objects.equals(item.getBusinessModel(), Constants.ONE) ? Constants.TWO : Constants.ONE);
 		return result;
 	}
 	
