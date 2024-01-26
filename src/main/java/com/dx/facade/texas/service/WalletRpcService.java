@@ -8,6 +8,7 @@ import com.dx.facade.texas.dto.WalletFreezeDto;
 import com.dx.facade.texas.req.BatchTableIdWalletRequest;
 import com.dx.facade.texas.req.WalletRequest;
 
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -34,6 +35,22 @@ public interface WalletRpcService {
      * @return
      */
     CommonResp<List<WalletFreezeDto>> getUserWalletFreezeAmount(Long userId);
+
+    /**
+     * 根据牌桌id查询有冻结的筹码
+     *
+     * @param tableId
+     * @return
+     */
+    CommonResp<List<WalletFreezeDto>> getUserWalletFreezeAmountByTableId(Long tableId);
+
+    /**
+     * 根据牌桌ids查询有冻结的筹码
+     *
+     * @param tableIds
+     * @return
+     */
+    CommonResp<List<WalletFreezeDto>> getUserWalletFreezeAmountByTableIds(Collection<Long> tableIds);
 
     /**
      * 根据牌桌id查询有冻结的uid
