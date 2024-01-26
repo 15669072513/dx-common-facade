@@ -4,10 +4,8 @@ import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 /**
  * 游戏记录查询对象
@@ -66,5 +64,21 @@ public class GameOrderRecordReq extends BaseRequest {
 
     @ApiModelProperty(value = "牌桌结束时间 yyyy-MM-dd HH:mm:ss")
     private String tableEndTime;
+
+    @ApiModelProperty(value = "投注IP")
+    private String ip;
+
+    @ApiModelProperty(value = "投注金额开始")
+    private BigDecimal betAmountStart;
+
+    @ApiModelProperty(value = "投注金额结束")
+    private BigDecimal betAmountEnd;
+
+
+    @ApiModelProperty(value = "投注金额开始")
+    private BigDecimal netAmountStart;
+
+    @ApiModelProperty(value = "投注金额结束")
+    private BigDecimal netAmountEnd;
 
 }
