@@ -133,7 +133,8 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao.code(),
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
-                        MemberChangeType.ty_artificial_sub.code()
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.table_serve_fee.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -215,6 +216,9 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
                         MemberChangeType.ty_artificial_sub.code());
+            }
+            if(appChangeType.intValue() == texas_club_serve_fee.code()) {
+                return Arrays.asList(MemberChangeType.table_serve_fee.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
