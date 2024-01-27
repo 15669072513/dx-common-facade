@@ -3,6 +3,8 @@ package com.dx.facade.texas.service;
 import com.dx.entity.CommonResp;
 import com.dx.facade.texas.req.DxGamePersonalRemarksAddReq;
 import com.dx.facade.texas.req.DxGamePersonalRemarksReq;
+import com.dx.facade.texas.resp.DxGamePersonalRemarksResp;
+import java.util.List;
 
 public interface IDxGamePersonalRemarksService {
     /**
@@ -17,5 +19,5 @@ public interface IDxGamePersonalRemarksService {
      * @param req
      * @return
      */
-    CommonResp<Void> getGamePersonalRemarksInfo(DxGamePersonalRemarksReq req);
+    CommonResp<List<DxGamePersonalRemarksResp>> getGamePersonalRemarksInfo(DxGamePersonalRemarksReq req);
 }
