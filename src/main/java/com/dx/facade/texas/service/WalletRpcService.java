@@ -42,7 +42,7 @@ public interface WalletRpcService {
      * @param tableId
      * @return
      */
-    CommonResp<List<WalletFreezeDto>> getUserWalletFreezeAmountByTableId(Long tableId);
+    CommonResp<WalletFreezeDto> getUserWalletFreezeAmountByTableId(Long tableId);
 
     /**
      * 根据牌桌ids查询有冻结的筹码
