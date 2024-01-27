@@ -1,14 +1,14 @@
 package com.dx.facade.game.resp;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 @Data
 public class HandCardResp {
 
+  @ApiModelProperty("手牌牌号码")
   private Integer cardNum;
 
-  /**
-   * 改牌标识 0未改 1已改
-   */
-  private Integer manipulateStatus;
+  @ApiModelProperty("是否改牌")
+  private boolean manipulateMark;
 }
