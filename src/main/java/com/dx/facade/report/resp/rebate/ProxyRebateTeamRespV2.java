@@ -36,4 +36,16 @@ public class ProxyRebateTeamRespV2 {
     @ApiModelProperty(value = "团队有效投注")
     private BigDecimal validBetAmount;
 
+    /**
+     * 手牌服务费贡献
+     */
+    @ApiModelProperty(value = "手牌服务费贡献")
+    private BigDecimal serviceChargeHand;
+
+    /**
+     * 局服务费贡献
+     */
+    @ApiModelProperty(value = "局服务费贡献")
+    private BigDecimal serviceChargeRound;
+
 }
