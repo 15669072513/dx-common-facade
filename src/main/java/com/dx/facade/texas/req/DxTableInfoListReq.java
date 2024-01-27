@@ -97,4 +97,13 @@ public class DxTableInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("会员账号")
     private String userName;
+
+    @ApiModelProperty("查询类型")
+    private Integer queryType; // 1 列表查询，导出查询
+
+    @ApiModelProperty("查询来源")
+    private Integer querySource;//1 中控后台，2 代理后台
+
+    @ApiModelProperty("是否包含局服务费字段，默认包含")
+    private Boolean includeTableFee = true;
 }
