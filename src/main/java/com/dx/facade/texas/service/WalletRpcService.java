@@ -5,9 +5,11 @@ import com.dx.facade.game.req.DownScoreReq;
 import com.dx.facade.game.req.UpScoreReq;
 import com.dx.facade.texas.dto.WalletDto;
 import com.dx.facade.texas.dto.WalletFreezeDto;
+import com.dx.facade.texas.dto.WalletInfoDto;
 import com.dx.facade.texas.req.BatchTableIdWalletRequest;
 import com.dx.facade.texas.req.WalletRequest;
 
+import java.math.BigDecimal;
 import java.util.Collection;
 import java.util.List;
 import java.util.Set;
@@ -80,4 +82,18 @@ public interface WalletRpcService {
      * @return
      */
     CommonResp<Void> revertUpScore(String eventId, Long eventTime);
+
+    /**
+     * @param tableId
+     * @return
+     */
+    CommonResp<BigDecimal> getWalletTotalTableFeeByTableId(Long tableId);
+
+    /**
+     * 获取牌桌余额相关信息（总代入，总共带出，总手续费)
+     *
+     * @param tableId
+     * @return
+     */
+    CommonResp<WalletInfoDto> getWalletInfoByTableId(Long tableId);
 }
