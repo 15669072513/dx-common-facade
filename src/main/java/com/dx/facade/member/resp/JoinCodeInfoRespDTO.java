@@ -45,4 +45,17 @@ public class JoinCodeInfoRespDTO {
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
     private Integer businessModel;
 
+    @ApiModelProperty("总代id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long topProxyId;
+
+    @ApiModelProperty("总代名称")
+    private String topProxyName;
+
+    @ApiModelProperty("ID")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long id;
+
+    @ApiModelProperty("账号")
+    private String userName;
 }
