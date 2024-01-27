@@ -74,8 +74,13 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("玩家手牌亮牌")
     private List<Map<Integer,Boolean>> lightCards =new ArrayList<>();
 
-    @ApiModelProperty("改牌标识")
-    private List<Map<Integer,Boolean>> manipulateCards =new ArrayList<>();
+
+    @ApiModelProperty("手牌扩展信息")
+    private List<HandCardResp> handCardExtList=new ArrayList<>();
+
+
+    @ApiModelProperty("公牌扩展信息")
+    private List<PublicCardResp> publicCardExtList=new ArrayList<>();
 
     /***
      * 玩家牌型展示是否置亏标识
