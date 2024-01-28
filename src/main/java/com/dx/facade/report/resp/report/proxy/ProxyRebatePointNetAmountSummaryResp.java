@@ -78,4 +78,16 @@ public class ProxyRebatePointNetAmountSummaryResp {
      */
     @ApiModelProperty(value = "其他项目有效投注-直属会员", example = "1500.00")
     private BigDecimal thirdDirectValidBetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-手牌", example = "1500.00")
+    private BigDecimal serviceChargeHand = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-局抽", example = "1500.00")
+    private BigDecimal serviceChargeRound = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-手牌", example = "1500.00")
+    private BigDecimal directlyServiceChargeHand = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-局抽", example = "1500.00")
+    private BigDecimal directlyServiceChargeRound = BigDecimal.ZERO;
 }
