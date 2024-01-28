@@ -33,7 +33,7 @@ public class ProxyRebateTeamRespV2 {
     /**
      * 团队有效投注
      */
-    @ApiModelProperty(value = "团队有效投注")
+    @ApiModelProperty(value = "团队有效投注/团队服务费")
     private BigDecimal validBetAmount;
 
     /**
