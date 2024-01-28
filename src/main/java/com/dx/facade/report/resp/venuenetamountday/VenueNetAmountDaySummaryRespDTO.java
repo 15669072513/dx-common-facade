@@ -71,4 +71,10 @@ public class VenueNetAmountDaySummaryRespDTO {
     @ApiModelProperty("公司保险盈亏")
     private BigDecimal companyInsuredNetAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("德州俱乐部投注额")
+    private BigDecimal pumpBetAmount = BigDecimal.ZERO;
+    @ApiModelProperty("德州保险投注额")
+    private BigDecimal insuredBetAmount = BigDecimal.ZERO;
+
+
 }
