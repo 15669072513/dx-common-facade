@@ -173,4 +173,10 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     @ApiModelProperty("报表创建时间")
     private LocalDateTime createdAt;
 
+
+    @ApiModelProperty("服务费-手牌")
+    private BigDecimal serviceChargeHand;
+
+    @ApiModelProperty("服务费-局抽")
+    private BigDecimal serviceChargeRound;
 }
