@@ -48,4 +48,10 @@ public class ProxyRebateTeamRespV2 {
     @ApiModelProperty(value = "局服务费贡献")
     private BigDecimal serviceChargeRound;
 
+    /**
+     * 局服务费贡献
+     */
+    @ApiModelProperty(value = "局服务费贡献")
+    private BigDecimal serviceAmount;
+
 }
