@@ -48,7 +48,10 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
 
     @ApiModelProperty("用户名称")
     private String userName;
-    
+
+    /**
+     * 非入库字段
+     */
     @ApiModelProperty("代理等级")
     private Integer proxyLevel;
     
@@ -108,5 +111,16 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
 	@ApiModelProperty(value = "代理层级路径(代理账号)")
 	private List<String> proxyPathUsername;
+	
+    @ApiModelProperty("返点分配模式 1：自由模式 2:模板模式")
+    private Integer rebateAllotMode;
+	
+    @ApiModelProperty("返点比率等级")
+    private Integer rebateRateLevel;
 
+    @ApiModelProperty("返点比率模板id")
+    private Long rebateRateTemplateId;
+
+    @ApiModelProperty("返点比率模板名称")
+    private String rebateRateTemplateName;
 }
