@@ -68,17 +68,17 @@ public class GameOrderRecordReq extends BaseRequest {
     @ApiModelProperty(value = "投注IP")
     private String ip;
 
-    @ApiModelProperty(value = "投注金额开始")
+    @ApiModelProperty(value = "投注金额开始值")
     private BigDecimal betAmountStart;
 
-    @ApiModelProperty(value = "投注金额结束")
+    @ApiModelProperty(value = "投注金额结束值")
     private BigDecimal betAmountEnd;
 
 
-    @ApiModelProperty(value = "投注金额开始")
+    @ApiModelProperty(value = "输赢金额开始值")
     private BigDecimal netAmountStart;
 
-    @ApiModelProperty(value = "投注金额结束")
+    @ApiModelProperty(value = "输赢金额结束值")
     private BigDecimal netAmountEnd;
 
 }
