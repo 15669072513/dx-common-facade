@@ -48,7 +48,7 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
     private Integer loginLockStatus;
 
     @ApiModelProperty(value = "账号锁定状态 0-未锁定 1-充提锁定")
-    private Integer accountLockStatus;
+    private Integer paymentLockStatus;
 
     @ApiModelProperty(value = "标签id")
     private Long labelId;
@@ -76,7 +76,7 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
 
     @ApiModelProperty(value="应用终端,1:OB旗舰 2:美播真人")
     private Integer appId;
-    
+
     @ApiModelProperty(value="登录站点,1:OB旗舰 2:美播真人")
     private Integer loginAppId;
 
@@ -85,17 +85,17 @@ public class ProxyInfoRpcEditReqDTO implements Serializable {
 
     @ApiModelProperty(value="代理线层级上限")
     private Integer maxLevels;
-	
+
 	@ApiModelProperty(value = "代理层级", hidden = true)
 	private Integer proxyLevel;
-	
+
 	@ApiModelProperty(value = "代理层级名称", hidden = true)
 	private String proxyLevelName;
-	
+
 	@ApiModelProperty(value = "分润政策id")
 	@JsonFormat(shape = JsonFormat.Shape.STRING)
 	private Long sharingPolicyId;
-	
+
 	@ApiModelProperty(value = "私庄模式,1:吃单模式 2:坐庄模式", example = "2")
 	private Integer bankerMode;
 
