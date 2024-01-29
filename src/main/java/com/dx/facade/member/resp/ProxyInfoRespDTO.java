@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import io.swagger.annotations.ApiModelProperty;
@@ -199,6 +200,9 @@ public class ProxyInfoRespDTO {
     @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
     private Integer commissionMode;
 
+    @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
+    private Integer rebateAllotMode;
+    
     @ApiModelProperty("佣金结算周期 1：半月结 2：月结")
     private Integer commissionSettleCycle;
 
@@ -321,5 +325,8 @@ public class ProxyInfoRespDTO {
 
     @ApiModelProperty(value = "会员转代开关 - 1:开启，0:关闭")
     private Integer playerToProxy;
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 
 }

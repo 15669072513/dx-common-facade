@@ -118,4 +118,7 @@ public class LowerMemberListRespDto {
 
   @ApiModelProperty(value = "支付密码重置审核状态 0 未审核   1 审核中")
   private Integer payPasswordAudit = 0;
+
+  @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+  private Integer onlyDirectMemberSwitch = 0;
 }

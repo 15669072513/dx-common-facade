@@ -46,11 +46,12 @@ public interface RebateRateConfigRPCService {
      * @param request
      */
     CommonResp<Boolean> updateRebateRateConfig(UpdateRebateRateConfigParamDTO request) throws BizException;
-	
-	/**
+    
+    /**
 	 * 查询返点比例设置上限
 	 * 
 	 * @return
 	 */
 	CommonResp<BaseRebateRateConfigRespDTO> getRebateRateConfigLimit(Integer type ,Integer commissionMode);
+	
 }
