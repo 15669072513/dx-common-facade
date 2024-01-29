@@ -20,4 +20,11 @@ public interface IDxGamePersonalRemarksService {
      * @return
      */
     CommonResp<List<DxGamePersonalRemarksResp>> getGamePersonalRemarksInfo(DxGamePersonalRemarksReq req);
+
+    /**
+     * 获取游戏个人信息备注 by cache
+     * @param req
+     * @return
+     */
+    CommonResp<List<DxGamePersonalRemarksResp>> getGamePersonalRemarksCacheInfo(DxGamePersonalRemarksReq req);
 }
