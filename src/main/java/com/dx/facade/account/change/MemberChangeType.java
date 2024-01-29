@@ -45,7 +45,7 @@ public enum MemberChangeType implements IChangeType {
     v2_cash_down_score(30, "提现下分", MemberBizType.down_score.code().toString()),
     v2_cash_center_to_B(31, "现金钱包转入", MemberBizType.B_mutual_center.code().toString()),
     v2_cash_B_to_center(32, "转出至现金钱包", MemberBizType.B_mutual_center.code().toString()),
-    v2_rebate(33, "会员返水", "6"),
+    v2_rebate(33, "会员返水", MemberBizType.rebate.code().toString()),
     v2_rebate_add(34, "其他返水增加调整", MemberBizType.rebate.code().toString()),
     v2_rebate_sub(35, "其他返水扣除调整", MemberBizType.rebate.code().toString()),
     v2_cash_loan(36, "信用借款", MemberBizType.v2_loan.code().toString()),

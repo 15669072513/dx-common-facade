@@ -80,6 +80,7 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_场馆信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_场馆信息"; //
     String FUNDS_钱包类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_钱包类型"; //
+    String FUNDS_业务模式 = "EXCEL_HEAD_I18N_KEY.FUNDS_业务模式"; //
 
     String FUNDS_业务类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_业务类型"; //
 
@@ -431,7 +432,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_成功 = "EXCEL_HEAD_I18N_KEY.FUNDS_成功";
     String	FUNDS_失败 = "EXCEL_HEAD_I18N_KEY.FUNDS_失败";
     String	FUNDS_待处理 = "EXCEL_HEAD_I18N_KEY.FUNDS_待处理";
-
+    String	FUNDS_合营码 = "EXCEL_HEAD_I18N_KEY.FUNDS_合营码";
     String	FUNDS_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理层级";
     String	FUNDS_层级名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_层级名称";
     String	FUNDS_直属上级 = "EXCEL_HEAD_I18N_KEY.FUNDS_直属上级";
@@ -604,6 +605,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_结束时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_结束时间";
     String FUNDS_盲注 = "EXCEL_HEAD_I18N_KEY.FUNDS_盲注";
     String FUNDS_抽水方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_抽水方式";
+    String FUNDS_手牌服务费收取方式 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌服务费收取方式";
     String FUNDS_牌桌手牌数 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌手牌数";
     String FUNDS_玩家总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带入";
     String FUNDS_会员总带入 = "EXCEL_HEAD_I18N_KEY.FUNDS_会员总带入";
@@ -611,6 +613,10 @@ public interface ExcelHeadI18nKey {
     String FUNDS_玩家总带出 = "EXCEL_HEAD_I18N_KEY.FUNDS_玩家总带出";
     String FUNDS_总打牌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总打牌抽水";
     String FUNDS_总保险盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_总保险盈亏";
+    String FUNDS_手牌服务费 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌服务费";
+    String FUNDS_局服务费 = "EXCEL_HEAD_I18N_KEY.FUNDS_局服务费";
+    String FUNDS_经典保险 = "EXCEL_HEAD_I18N_KEY.FUNDS_经典保险";
+    String FUNDS_经典保险盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_经典保险盈亏";
     String FUNDS_总牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌盈亏";
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
