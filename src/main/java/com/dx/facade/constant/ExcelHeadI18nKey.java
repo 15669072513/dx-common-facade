@@ -433,7 +433,7 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_成功 = "EXCEL_HEAD_I18N_KEY.FUNDS_成功";
     String	FUNDS_失败 = "EXCEL_HEAD_I18N_KEY.FUNDS_失败";
     String	FUNDS_待处理 = "EXCEL_HEAD_I18N_KEY.FUNDS_待处理";
-
+    String	FUNDS_合营码 = "EXCEL_HEAD_I18N_KEY.FUNDS_合营码";
     String	FUNDS_代理层级 = "EXCEL_HEAD_I18N_KEY.FUNDS_代理层级";
     String	FUNDS_层级名称 = "EXCEL_HEAD_I18N_KEY.FUNDS_层级名称";
     String	FUNDS_直属上级 = "EXCEL_HEAD_I18N_KEY.FUNDS_直属上级";
