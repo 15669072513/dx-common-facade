@@ -253,4 +253,7 @@ public class ProxyDetailRespDTO {
 
 	@ApiModelProperty(value = "会员转代开关 - 0或null:开启，1:关闭")
 	private Integer playerToProxy;
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
 }

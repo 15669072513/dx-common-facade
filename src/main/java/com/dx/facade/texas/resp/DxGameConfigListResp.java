@@ -166,6 +166,9 @@ public class DxGameConfigListResp implements Serializable {
     @FieldOperate(fieldName ="每手服务费")
     private Integer serviceCharge;
 
+    @ApiModelProperty("每手服务费选择列表,多个用逗号隔开1按底池比例 2,按盈利比例，3无")
+    private String serviceChargeList;
+
     @ApiModelProperty("按底池比例收费 多个用逗号隔开 支持小数")
     @FieldOperate(fieldName ="按底池比例收费")
     private String bottomPoolFee;
@@ -199,11 +202,17 @@ public class DxGameConfigListResp implements Serializable {
     private String anteLimits;
 
     @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    @FieldOperate(fieldName ="语音聊天功能")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer voiceChatSwitch;
 
     @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
+    @FieldOperate(fieldName ="入桌密码功能")
     private Integer tableEntryPasswordSwitch;
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    @FieldOperate(fieldName ="仅限直属会员可见开关")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer onlyDirectMemberSwitch;
 }

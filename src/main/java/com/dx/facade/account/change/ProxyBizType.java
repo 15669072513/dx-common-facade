@@ -56,6 +56,8 @@ public enum ProxyBizType implements IBizType {
     proxy_to_child_down_score(34, "代理给下级下分", "7"),
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
+    v1_50_proxy_divination(64, "代理占成", "17"),
+
     illegal_type(-1, "未知的类型", "-1")
     ;
 
@@ -110,6 +112,7 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_1_deposit.code, v2_1_deposit);
         code2Enum.put(v2_1_withdraw.code, v2_1_withdraw);
         code2Enum.put(v2_1_proxy_commission.code, v2_1_proxy_commission);
+        code2Enum.put(v1_50_proxy_divination.code, v1_50_proxy_divination);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;

@@ -46,53 +46,57 @@ public class DxHandInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.REPORT_游戏名称)
     private String gameName;
 
-    @ExcelProperty(value = "俱乐部ID", index = 5)
+    @ExcelProperty(value = "盲注", index = 5)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.REPORT_盲注)
+    private String blindInjection;
+
+    @ExcelProperty(value = "俱乐部ID", index = 6)
     @I18nField(headI18nKey = ExcelHeadI18nKey.CLUB_ID)
     private Long clubId;
 
-    @ExcelProperty(value = "手牌开始时间", index = 6)
+    @ExcelProperty(value = "手牌开始时间", index = 7)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌开始时间)
     @ColumnWidth(18)
     private String handBeginTime;
 
-    @ExcelProperty(value = "手牌结束时间", index = 7)
+    @ExcelProperty(value = "手牌结束时间", index = 8)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌结束时间)
     @ColumnWidth(18)
     private String handEndTime;
 
-    @ExcelProperty(value = "手牌号", index = 8)
+    @ExcelProperty(value = "手牌号", index = 9)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌号)
     private Integer handNum;
 
-    @ExcelProperty(value = "期初金额汇总", index = 9)
+    @ExcelProperty(value = "期初金额汇总", index = 10)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_期初金额汇总)
     private BigDecimal beforeChip;
 
-    @ExcelProperty(value = "中途带入金额汇总", index = 10)
+    @ExcelProperty(value = "中途带入金额汇总", index = 11)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_中途带入金额汇总)
     private BigDecimal bringMidwayChip;
 
-    @ExcelProperty(value = "期末余额汇总", index = 11)
+    @ExcelProperty(value = "期末余额汇总", index = 12)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_期末余额汇总)
     private BigDecimal afterChip;
 
-    @ExcelProperty(value = "有效底池", index = 12)
+    @ExcelProperty(value = "有效底池", index = 13)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_有效底池)
     private BigDecimal validPot;
 
-    @ExcelProperty(value = "打牌抽水", index = 13)
+    @ExcelProperty(value = "打牌抽水", index = 14)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_打牌抽水)
     private BigDecimal pumpingAmount;
 
-    @ExcelProperty(value = "保险盈亏", index = 14)
+    @ExcelProperty(value = "保险盈亏", index = 15)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_保险盈亏)
     private BigDecimal insuredNetAmount;
 
-    @ExcelProperty(value = "手牌盈亏", index = 15)
+    @ExcelProperty(value = "手牌盈亏", index = 16)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌盈亏)
     private BigDecimal handNetAmount;
 
-    @ExcelProperty(value = "公牌信息", index = 16)
+    @ExcelProperty(value = "公牌信息", index = 17)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_公牌信息)
     private String publicCards;
 }
