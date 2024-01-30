@@ -116,12 +116,9 @@ public class GameRecordDto {
     @ApiModelProperty("场馆名称(如ob真人,ag捕鱼)")
     private String venueName;
 
-    /**
-     * 注单类型 1 俱乐部游戏 2保险
-     */
-    @ApiModelProperty("注单子类型:1俱乐部游戏;2保险")
+    @ApiModelProperty("注单子类型:枚举GameRecordTypeEnum")
     private Integer betType;
-    @ApiModelProperty("注单类型:101俱乐部服务费;102保险;103增值")
+    @ApiModelProperty("注单类型:枚举GameRecordTypeEnum")
     private Integer parentBetType;
 
     /**
