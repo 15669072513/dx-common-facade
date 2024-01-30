@@ -78,4 +78,6 @@ public class ProxyListPageParamDTO {
 
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
     private Integer businessModel;
+    @ApiModelProperty("佣金模式 1：返点模式 2：返佣模式")
+    private Integer commissionMode;
 }
