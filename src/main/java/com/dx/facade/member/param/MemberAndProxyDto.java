@@ -651,6 +651,7 @@ public class MemberAndProxyDto {
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
 		result.setBusinessModel(item.getBusinessModel());
+		result.setRebateAllotMode(item.getRebateAllotMode());
 		result.setWithdrawLimitType(
 			Objects.equals(item.getBusinessModel(), Constants.ONE) ? Constants.TWO : Constants.ONE);
 		return result;

@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 新增会员请求DTO
- * 
+ *
  * @author Nichols
  */
 @Data
@@ -74,12 +74,12 @@ public class MemberSaveReqDTO {
     @ApiModelProperty(value = "上级代理名称",example = "qwer00005")
     @NotBlank(message = "上级代理名称不能为空")
     private String parentProxyName;
-	
+
     /** vip等级id */
     @ApiModelProperty(value="vip等级id",example = "1")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long vipId;
-	
+
     /** vip等级序号 */
     @ApiModelProperty(value="vip等级序号",example = "1")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
@@ -104,11 +104,11 @@ public class MemberSaveReqDTO {
     /** 注册终端类型 */
     @ApiModelProperty(value = "注册终端类型（1-PC，2-IOS_APP，3-IOS_H5，4-Android_H5，5-Android_APP 6-后台）", hidden = true)
     private Integer registerDeviceType;
-    
+
     /** 昵称 */
     @ApiModelProperty(value="昵称")
     private String nickName;
-    
+
     /** 俱乐部Id */
     @ApiModelProperty("俱乐部Id")
     private Long clubId;
