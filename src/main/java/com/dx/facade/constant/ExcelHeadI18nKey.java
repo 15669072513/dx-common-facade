@@ -626,6 +626,8 @@ public interface ExcelHeadI18nKey {
     String FUNDS_总有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_总有效投注";
     String FUNDS_总牌桌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌抽水";
 
+    String FUNDS_冻结筹码 = "EXCEL_HEAD_I18N_KEY.FUNDS_冻结筹码";
+
     String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
     String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
     String REBATE_RATE = "EXCEL_HEAD_I18N_KEY.CONTRACT_返点比例";
