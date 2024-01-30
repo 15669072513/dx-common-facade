@@ -217,7 +217,7 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("turn购买保险最低值,整数类型")
     private BigDecimal insuranceTurn=BigDecimal.ZERO;
     @ApiModelProperty("选张购买功能 false-不选张 true-选张")
-    private Boolean insuranceChooseSheet;
+    private Boolean insuranceChooseSheet=false;
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
 
@@ -230,7 +230,7 @@ public class DxTableConfigRuleResp implements Serializable {
     @ApiModelProperty("必要保留筹码（倍大盲）")
     private Integer needKeepChips = 0;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例 3-无")
     private Integer serviceChargeType = 1;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
