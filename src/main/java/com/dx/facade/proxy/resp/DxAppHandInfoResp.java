@@ -93,4 +93,19 @@ public class DxAppHandInfoResp implements Serializable {
 
     @ApiModelProperty("显示手牌信息。当前登录会员的手牌，如未参与，则显示虚线牌")
     private String handInfo;
+
+    @ApiModelProperty("赢家")
+    private String winUserName;
+
+    @ApiModelProperty("牌型")
+    private String resultInfo;
+
+    @ApiModelProperty("赢家手牌")
+    private String winHandInfo;
+
+    @ApiModelProperty("公牌")
+    private String publicCards;
+
+    @ApiModelProperty("赢家手牌")
+    private BigDecimal winTotalNetAmount = BigDecimal.ZERO;
 }
