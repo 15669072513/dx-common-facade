@@ -91,4 +91,6 @@ public class DxAppHandInfoResp implements Serializable {
     @ApiModelProperty(value = "总盈亏")
     private BigDecimal totalNetAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("显示手牌信息。当前登录会员的手牌，如未参与，则显示虚线牌")
+    private String handInfo;
 }
