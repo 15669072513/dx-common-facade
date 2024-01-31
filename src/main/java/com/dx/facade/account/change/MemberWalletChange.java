@@ -192,6 +192,14 @@ public enum MemberWalletChange implements IWalletChange {
     //***************体育单一钱包账变类************end*********
 
     //***************单一钱包账变类***************end**************************************************************
+    //v1.52需求账变
+    v1_52_violation_fine(WalletType.cash,MemberBizType.down_score, MemberChangeType.v1_52_violation_fine, MemberAppType.v1_52_violation_fine, TransType.out, Constant.MEMBER),
+    v1_52_finance_adjust(WalletType.cash,MemberBizType.down_score, MemberChangeType.v1_52_finance_adjust, MemberAppType.v1_52_finance_adjust, TransType.out, Constant.MEMBER),
+    v1_52_operate_adjust(WalletType.cash,MemberBizType.down_score, MemberChangeType.v1_52_operate_adjust, MemberAppType.v1_52_operate_adjust, TransType.out, Constant.MEMBER),
+    v1_52_third_order_lost_compensate(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_third_order_lost_compensate, MemberAppType.v1_52_third_order_lost_compensate, TransType.in, Constant.MEMBER),
+    v1_52_offline_settle_up_score(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_offline_settle_up_score, MemberAppType.v1_52_offline_settle_up_score, TransType.in, Constant.MEMBER),
+    v1_52_other_adjust(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_other_adjust, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
+
     ;
 
     private IWalletType walletType;
@@ -342,6 +350,12 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(ty_artificial_sub);
         list.add(ty_appointment_touzhu);
         list.add(ty_appointment_touzhu_cancel);
+        list.add(v1_52_violation_fine);
+        list.add(v1_52_finance_adjust);
+        list.add(v1_52_operate_adjust);
+        list.add(v1_52_third_order_lost_compensate);
+        list.add(v1_52_offline_settle_up_score);
+        list.add(v1_52_other_adjust);
         return list;
     }
 

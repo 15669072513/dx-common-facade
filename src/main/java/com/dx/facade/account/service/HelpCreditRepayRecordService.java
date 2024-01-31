@@ -3,9 +3,12 @@ package com.dx.facade.account.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
+import com.dx.facade.account.param.HelpCreditRepayRecordBatchParam;
 import com.dx.facade.account.param.HelpCreditRepayRecordParam;
 import com.dx.facade.account.req.HelpCreditRepayRecordDTO;
 import com.dx.facade.account.req.HelpCreditRepayRecordReq;
+
+import java.util.List;
 
 public interface HelpCreditRepayRecordService {
 
@@ -31,4 +34,13 @@ public interface HelpCreditRepayRecordService {
      * @copyright
      */
     CommonResp<Long> creditRepay(HelpCreditRepayRecordParam param, Boolean insertRecord);
+
+    /**
+     * @author Dealer
+     * @description: 批量帮还
+     * @date 2024/1/31
+     * @copyright
+     */
+
+    CommonResp<List<Long>> creditRepayBatch(HelpCreditRepayRecordBatchParam param, Boolean insertRecord);
 }
