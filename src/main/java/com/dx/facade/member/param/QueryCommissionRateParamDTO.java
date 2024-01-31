@@ -143,7 +143,7 @@ public class QueryCommissionRateParamDTO implements BaseParmDTO, Serializable {
     @ApiModelProperty("是否查询总代")
     private Boolean isTopProxy;
     
-    @ApiModelProperty("查询所以代理下级")
+    @ApiModelProperty("查询所有代理下级")
     private Boolean isAllSub;
     
     @ApiModelProperty("代理id列表")

@@ -157,7 +157,7 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     @ApiModelProperty("上级代理等级")
     private Integer parentProxyLevel;
     
-    @ApiModelProperty("查询所以代理下级")
+    @ApiModelProperty("查询所有代理下级")
     private Boolean isAllSub;
     
     @ApiModelProperty("排序列 1：修改时间 2：账号")

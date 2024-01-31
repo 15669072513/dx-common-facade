@@ -18,6 +18,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -26,6 +27,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -34,6 +36,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏全部合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -51,6 +54,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏
+     *
      * @param reqDTO
      * @return
      */
@@ -58,6 +62,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏-场馆明细
+     *
      * @param reqDTO
      * @return
      */

@@ -258,6 +258,7 @@ public interface ProxyRPCService {
 	 */
 	CommonResp<Boolean> bindMobileOrEmail(UserBindMobileOrEmailDTO params) throws BizException;
 
+
     /**
      * @author Dealer
      * @description: 根据合营码查代理信息
@@ -265,7 +266,7 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<ProxyInfoRespDTO> getProxyByJoinCode(Long merchantId, String joinCode);
-
+    
     /**
      * @author bicycle
      * @description: 批量查询代理信息,只返回部分字段,调用方需确认所需字段是否返回
