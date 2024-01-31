@@ -96,4 +96,11 @@ public interface WalletRpcService {
      * @return
      */
     CommonResp<WalletInfoDto> getWalletInfoByTableId(Long tableId);
+
+    /**
+     * 获取用户所有的冻结服务费
+     * @param userId
+     * @return
+     */
+    CommonResp<BigDecimal> getUserTotalFreezeAmount(Long userId);
 }
