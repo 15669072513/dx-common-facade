@@ -62,6 +62,8 @@ public class WalletDto {
   @ApiModelProperty("带入总额")
   private BigDecimal bringInSumAmount=new BigDecimal(0.0);
 
+  @ApiModelProperty("带出总额")
+  private BigDecimal bringOutSumAmount=new BigDecimal(0.0);
 
   @ApiModelProperty("最近一次带出金额")
   private BigDecimal lastBringOut=new BigDecimal(0.0);

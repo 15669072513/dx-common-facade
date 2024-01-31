@@ -189,4 +189,7 @@ public class DxGameTableConfigResp implements Serializable {
 
     @ApiModelProperty("前注")
     private BigDecimal anteScore = BigDecimal.ZERO;
+
+    @ApiModelProperty("抽水比例配置, 游戏配置")
+    private BigDecimal gameRake;
 }

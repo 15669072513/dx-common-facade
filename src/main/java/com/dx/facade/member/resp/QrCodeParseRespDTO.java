@@ -34,4 +34,18 @@ public class QrCodeParseRespDTO implements Serializable {
     @ApiModelProperty(value="俱乐部ID")
     private String clubId;
 
+    @ApiModelProperty(value="牌桌密码")
+    private String tablePwd;
+
+    @ApiModelProperty(value="用户ID")
+    private Long userId;
+
+    @ApiModelProperty(value="代理ID")
+    private Long proxyId;
+
+    @ApiModelProperty(value="用户名称")
+    private String userName;
+
+    @ApiModelProperty(value="代理名称")
+    private String proxyName;
 }
