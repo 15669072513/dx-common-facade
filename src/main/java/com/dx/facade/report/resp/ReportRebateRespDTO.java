@@ -49,6 +49,9 @@ public class ReportRebateRespDTO  extends ReportRebateTotalRespDTO{
     @ApiModelProperty(value = "所属商户名称")
     private String merchantName;
 
+    @ApiModelProperty(value = "商户ID")
+    private String merchantId;
+
     @ApiModelProperty(value = "顶级商户名称")
     private String topMerchantName;
 

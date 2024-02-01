@@ -186,4 +186,10 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
     private Integer onlyDirectMember;
+
+    @ApiModelProperty("语音聊天功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer voiceChatSwitch;
+
+    @ApiModelProperty("入桌密码功能 0-关闭 1-开启 2-关闭隐藏")
+    private Integer tableEntryPasswordSwitch;
 }
