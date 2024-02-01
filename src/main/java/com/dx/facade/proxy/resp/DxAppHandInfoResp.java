@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Map;
 
 /**
  * @Author royal
@@ -50,7 +51,7 @@ public class DxAppHandInfoResp implements Serializable {
     private Integer bbChairId;
 
     @ApiModelProperty("桌牌")
-    private String globalPokerCode;
+    private Map<Integer, Boolean> globalPokerCode;
 
     @ApiModelProperty("有效底池")
     private BigDecimal effectivePool=BigDecimal.ZERO;
@@ -95,10 +96,10 @@ public class DxAppHandInfoResp implements Serializable {
     private String handInfo;
 
     @ApiModelProperty("赢家")
-    private String winUserName;
+    private String winNickName;
 
     @ApiModelProperty("牌型")
-    private String resultInfo;
+    private String winResultInfo;
 
     @ApiModelProperty("赢家手牌")
     private String winHandInfo;
