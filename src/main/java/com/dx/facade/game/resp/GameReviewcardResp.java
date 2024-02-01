@@ -31,6 +31,12 @@ public class GameReviewcardResp implements Serializable  {
      *  会员id
      */
     @ApiModelProperty("会员id")
+    private String memberId;
+
+    /**
+     *  会员id
+     */
+    @ApiModelProperty("会员id")
     private Long userId;
     /**
      *  手牌编码
