@@ -139,4 +139,11 @@ public class ProxyLoanBillRespDTO {
     private BigDecimal totalCreditAmount;
     @ApiModelProperty("应还借款")
     private BigDecimal shouldRepay;
+    @ApiModelProperty(value = "德州-保险团队分成")
+    private BigDecimal insuranceRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value = "德州-俱乐部服务费贡献团队返点")
+    private BigDecimal clubRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value ="综合返点")
+    private BigDecimal multipleRebateAmount = BigDecimal.ZERO;
+
 }
