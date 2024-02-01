@@ -41,23 +41,11 @@ public class DxAppHandInfoResp implements Serializable {
     @ApiModelProperty("牌局结束时间")
     private Long handEndDate;
 
-    @ApiModelProperty("庄家位置(荷官位)")
-    private Integer button;
-
     @ApiModelProperty("小盲位置")
     private Integer sbChairId;
 
     @ApiModelProperty("大盲位置")
     private Integer bbChairId;
-
-    @ApiModelProperty("桌牌")
-    private Map<Integer, Boolean> globalPokerCode;
-
-    @ApiModelProperty("有效底池")
-    private BigDecimal effectivePool=BigDecimal.ZERO;
-
-    @ApiModelProperty("有效投注")
-    private BigDecimal validBetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("手牌（牌桌第多少手）")
     private Integer roundNo=0;
@@ -105,7 +93,7 @@ public class DxAppHandInfoResp implements Serializable {
     private String winHandInfo;
 
     @ApiModelProperty("公牌")
-    private String publicCards;
+    private Map<Integer, Boolean> globalPokerCode;
 
     @ApiModelProperty("赢家手牌")
     private BigDecimal winTotalNetAmount = BigDecimal.ZERO;
