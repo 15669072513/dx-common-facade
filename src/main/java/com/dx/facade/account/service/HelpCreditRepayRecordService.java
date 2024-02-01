@@ -7,6 +7,7 @@ import com.dx.facade.account.param.HelpCreditRepayRecordBatchParam;
 import com.dx.facade.account.param.HelpCreditRepayRecordParam;
 import com.dx.facade.account.req.HelpCreditRepayRecordDTO;
 import com.dx.facade.account.req.HelpCreditRepayRecordReq;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -34,6 +35,14 @@ public interface HelpCreditRepayRecordService {
      * @copyright
      */
     CommonResp<Long> creditRepay(HelpCreditRepayRecordParam param, Boolean insertRecord);
+
+    /**
+     * @author Dealer
+     * @description: 单笔帮还
+     * @date 2024/2/1
+     * @copyright
+     */
+    CommonResp<Long> beginCreditRepay(String logPrefix, HelpCreditRepayRecordParam param, Boolean insertRecord);
 
     /**
      * @author Dealer
