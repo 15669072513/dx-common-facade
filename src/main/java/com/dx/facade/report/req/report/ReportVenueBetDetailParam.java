@@ -17,7 +17,7 @@ import javax.validation.constraints.NotNull;
 @ApiModel(value = "ReportVenueBetDetailParam", description = "中控后台-场馆盈亏-投注详情")
 public class ReportVenueBetDetailParam extends LocalDatePageRequest {
 
-    @ApiModelProperty("场馆code")
+    @ApiModelProperty("场馆code -- byqp, zr, cp, dj, ty, DZ")
     @NotNull
     private String venueCode;
 
