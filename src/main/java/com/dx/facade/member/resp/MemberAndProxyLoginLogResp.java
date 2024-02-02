@@ -34,6 +34,10 @@ public class MemberAndProxyLoginLogResp {
 
     @ApiModelProperty("登录状态")
     private String loginStatus;
+    
+    @ApiModelProperty("会员ID")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long userId;
 
     @ApiModelProperty("会员账号")
     private String userName;
@@ -88,4 +92,10 @@ public class MemberAndProxyLoginLogResp {
     
     @ApiModelProperty(value = "同设备号账号登录数量")
     private Integer deviceNoCount;
+    
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
+    
+    @ApiModelProperty("总代账号")
+    private String topProxyName;
 }
