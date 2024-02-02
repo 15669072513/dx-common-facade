@@ -22,6 +22,6 @@ public class PlatformOperationReq extends LocalDatePageRequest {
     private String orderKey;
 
     @ApiModelProperty(value = "查询范围 0:全量数据 1:统计日期", example = "1")
-    private String gameCode;
+    private Integer dataAreaType;
 
 }
