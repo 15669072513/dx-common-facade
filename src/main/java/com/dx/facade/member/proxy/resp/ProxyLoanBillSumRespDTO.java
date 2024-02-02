@@ -105,6 +105,13 @@ public class ProxyLoanBillSumRespDTO {
     @ApiModelProperty("应还借款小计")
     private BigDecimal subShouldRepay;
 
+    @ApiModelProperty(value = "德州-保险团队分成小计")
+    private BigDecimal subInsuranceRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value = "德州-俱乐部服务费贡献团队返点小计")
+    private BigDecimal subClubRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value ="综合返点小计")
+    private BigDecimal subMultipleRebateAmount = BigDecimal.ZERO;
+
     @ApiModelProperty("团队授信总额总计")
     private BigDecimal totalTeamCreditTotal;
     @ApiModelProperty(value = "团队返点总计")
@@ -145,4 +152,12 @@ public class ProxyLoanBillSumRespDTO {
     private BigDecimal totalTotalCreditAmount;
     @ApiModelProperty("应还借款总计")
     private BigDecimal totalShouldRepay;
+
+    @ApiModelProperty(value = "德州-保险团队分成总计")
+    private BigDecimal totalInsuranceRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value = "德州-俱乐部服务费贡献团队返点总计")
+    private BigDecimal totalClubRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value ="综合返点总计")
+    private BigDecimal totalMultipleRebateAmount = BigDecimal.ZERO;
+
 }
