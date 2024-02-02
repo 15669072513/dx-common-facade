@@ -14,7 +14,7 @@ import java.math.BigDecimal;
 @ApiModel("平台运营状况概述合计")
 public class DwmPlatformOperationSummaryRspDTO {
 
-    @ApiModelProperty("新增用户ID")
+    @ApiModelProperty("新增用户")
     protected int newMemberNum = 0;
 
     @ApiModelProperty("有效新用户")
@@ -41,17 +41,17 @@ public class DwmPlatformOperationSummaryRspDTO {
     @ApiModelProperty("返点模式输赢")
     protected BigDecimal rebateNetAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("返点模式输赢")
+    @ApiModelProperty("占成模式输赢")
     protected BigDecimal commissionNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("盈利率")
     protected BigDecimal netRate = BigDecimal.ZERO;
 
     @ApiModelProperty("平台运营成本-德州保险")
-    protected BigDecimal dx2_2_amount = BigDecimal.ZERO;
+    protected BigDecimal dx22Amount = BigDecimal.ZERO;
 
     @ApiModelProperty("平台运营成本-德州服务费")
-    protected BigDecimal dx1_2_amount = BigDecimal.ZERO;
+    protected BigDecimal dx12Amount = BigDecimal.ZERO;
 
     @ApiModelProperty("综合场馆")
     protected BigDecimal multiVenueAmount = BigDecimal.ZERO;
