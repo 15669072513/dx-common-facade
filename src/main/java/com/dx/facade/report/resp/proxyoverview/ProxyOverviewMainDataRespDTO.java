@@ -118,4 +118,7 @@ public class ProxyOverviewMainDataRespDTO {
 
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
     private Integer businessModel;
+
+    @ApiModelProperty(value = "今日实时收益")
+    private BigDecimal realTimeRevenue = BigDecimal.ZERO;
 }
