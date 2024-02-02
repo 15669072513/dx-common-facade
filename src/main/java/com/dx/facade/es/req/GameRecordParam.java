@@ -90,5 +90,11 @@ public class GameRecordParam extends PageRequest {
     @ApiModelProperty("仅德州使用，注单类型:1俱乐部游戏;2保险")
     private Integer betType;
 
+    @ApiModelProperty("排序字段:1:投注金额,2:有效投注金额,3:输赢金额")
+    private Integer orderKey;
+
+    @ApiModelProperty("排序:1:升序,2:降序")
+    private Integer orderType;
+
 }
 
