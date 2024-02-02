@@ -34,6 +34,10 @@ public class MemberAndProxyLoginLogResp {
 
     @ApiModelProperty("登录状态")
     private String loginStatus;
+    
+    @ApiModelProperty("会员ID")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long userId;
 
     @ApiModelProperty("会员账号")
     private String userName;
