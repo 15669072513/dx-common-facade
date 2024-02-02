@@ -88,4 +88,10 @@ public class MemberAndProxyLoginLogResp {
     
     @ApiModelProperty(value = "同设备号账号登录数量")
     private Integer deviceNoCount;
+    
+    @ApiModelProperty("上级代理账号")
+    private String parentProxyName;
+    
+    @ApiModelProperty("总代账号")
+    private String topProxyName;
 }
