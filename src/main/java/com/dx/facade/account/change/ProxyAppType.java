@@ -59,7 +59,7 @@ public enum ProxyAppType implements IAppType {
     commission_rebate_add(39, "返点增加调整"),
     commission_rebate_sub(40, "返点扣除调整"),
     //---------------------v2需求客户端账变类型----------------
-    v2_cash_deposit_by_official(41, "官方给代理上分"),
+    v2_cash_deposit_by_official(41, "官方给代理充值上分"),
     v2_cash_deposit_by_parent_proxy(42, "代理被上级充值上分"),
     v2_cash_deposit_to_sub_proxy(43, "代理给下级充值上分"),
     v2_cash_deposit_to_member(44, "代理给会员充值上分"),
