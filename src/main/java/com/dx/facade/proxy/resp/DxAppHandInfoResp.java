@@ -95,6 +95,6 @@ public class DxAppHandInfoResp implements Serializable {
     @ApiModelProperty("公牌")
     private Map<Integer, Boolean> globalPokerCode;
 
-    @ApiModelProperty("赢家手牌")
+    @ApiModelProperty("赢家总输赢")
     private BigDecimal winTotalNetAmount = BigDecimal.ZERO;
 }
