@@ -126,5 +126,11 @@ public class RecordDetailSummary implements Serializable {
          */
         @ApiModelProperty("玩家昵称")
         private String nickName;
+
+        /**
+         * 备注名
+         */
+        @ApiModelProperty("备注名")
+        private String userNameRemark;
     }
 }
