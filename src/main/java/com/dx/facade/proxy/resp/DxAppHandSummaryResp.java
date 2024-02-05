@@ -19,6 +19,9 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 public class DxAppHandSummaryResp implements Serializable {
 
+    @ApiModelProperty("牌桌主键")
+    private Long tableId;
+
     @ApiModelProperty("总手牌笔数")
     private Integer totalHandNumber;
 
