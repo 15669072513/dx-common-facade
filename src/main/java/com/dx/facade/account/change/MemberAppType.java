@@ -51,9 +51,9 @@ public enum MemberAppType implements IAppType {
     v1_52_operate_adjust(106, "运营调整"),
     v1_52_third_order_lost_compensate(107,"三方掉单补分"),
     v1_52_offline_settle_up_score(108,"线下结算上分"),
-    v1_52_other_adjust(109, "其他调整");
-
+    v1_52_other_adjust(109, "其他调整"),
     texas_club_serve_fee(104, "德州俱乐部服务费"),
+
     ;
 
 
