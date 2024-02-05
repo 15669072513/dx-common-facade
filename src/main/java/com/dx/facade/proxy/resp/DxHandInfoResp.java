@@ -28,6 +28,12 @@ public class DxHandInfoResp implements Serializable {
     @ApiModelProperty("局次")
     private Integer handNum;
 
+    @ApiModelProperty("手牌开始时间")
+    private String handStartDateStr;
+
+    @ApiModelProperty("手牌结束时间")
+    private String handEndDateStr;
+
     @ApiModelProperty("牌局开始时间")
     private Long handBeginDate;
 
