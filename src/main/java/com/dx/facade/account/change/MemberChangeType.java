@@ -124,6 +124,8 @@ public enum MemberChangeType implements IChangeType {
     v1_52_third_order_lost_compensate(142, "三方掉单补分", MemberBizType.up_score.code().toString()),
     v1_52_offline_settle_up_score(143, "线下结算上分", MemberBizType.up_score.code().toString()),
     v1_52_other_adjust(144, "其他调整", MemberBizType.up_score.code().toString()),
+
+    table_serve_fee(145, "局服务费", MemberBizType.texas_club_serve_fee.code().toString()),
     illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;

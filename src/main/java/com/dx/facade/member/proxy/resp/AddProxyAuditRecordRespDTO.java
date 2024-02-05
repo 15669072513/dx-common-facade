@@ -114,8 +114,8 @@ public class AddProxyAuditRecordRespDTO {
 
 	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
 	private Integer businessModel;
-	
+
     @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
     private Integer rebateAllotMode;
-	
+
 }

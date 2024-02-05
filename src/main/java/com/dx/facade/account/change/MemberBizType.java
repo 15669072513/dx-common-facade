@@ -65,6 +65,8 @@ public enum MemberBizType implements IBizType {
     ty_appointment_touzhu(125, "体育用户预约下注", "1"),
     ty_appointment_touzhu_cancel(126, "体育用户预约投注取消", "1"),
     //***************体育单一钱包账变类************end*********
+
+    texas_club_serve_fee(127, "德州俱乐部服务费", "1"),
     ;
 
     private Integer code;

@@ -51,6 +51,13 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+
+    /**
+     * 德州带入带出服务费账变统计查询RPC
+     * @param pageReq
+     * @return
+     */
+    CommonResp<PageResp<WalletDetailRespDTO, WalletDetailBalanceSumDTO>> queryTexasBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailRespDTO>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
     /**

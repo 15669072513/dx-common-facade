@@ -121,7 +121,7 @@ public class LowerMemberListRespDto {
 
   @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
   private Integer onlyDirectMemberSwitch = 0;
-  
+
   @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
   private Integer businessModel;
 }
