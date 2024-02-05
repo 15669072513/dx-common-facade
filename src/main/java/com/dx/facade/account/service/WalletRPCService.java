@@ -13,6 +13,7 @@ import com.dx.facade.account.resp.*;
 import com.dx.facade.account.resp.WalletSimpleParam;
 
 import java.math.BigDecimal;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -151,5 +152,7 @@ public interface WalletRPCService {
      */
     CommonResp<BigDecimal> teamCreditAmount(Long proxyId, Integer proxyWalletType);
 
-    default CommonResp<Map<String, BigDecimal>> getTeamCreditAmountBatchByProxyPaths(List<String> proxyPaths){};
+    default CommonResp<Map<String, BigDecimal>> getTeamCreditAmountBatchByProxyPaths(List<String> proxyPaths){
+         return CommonResp.success(new HashMap<>());
+    };
 }
