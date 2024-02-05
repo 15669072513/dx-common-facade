@@ -152,7 +152,25 @@ public interface WalletRPCService {
      */
     CommonResp<BigDecimal> teamCreditAmount(Long proxyId, Integer proxyWalletType);
 
+    /**
+     * 根据多个代理路径查询每个代理路径对应的团队授信总额
+     * @param proxyPaths
+     * @return
+     */
     default CommonResp<Map<String, BigDecimal>> getTeamCreditAmountBatchByProxyPaths(List<String> proxyPaths){
          return CommonResp.success(new HashMap<>());
     };
+
+    /**
+     * 同步会员或代理的代理路径，若是会员，则proxyPath为member表中的parentProxyPath；若为代理，则是proxy表中的proxyPath
+     * @param userId
+     * @param userType
+     * @param proxyPath
+     * @return
+     */
+    default CommonResp syncWalletProxyPath(Long userId, Integer userType, String proxyPath){
+        return CommonResp.success(new HashMap<>());
+    };
+
+
 }
