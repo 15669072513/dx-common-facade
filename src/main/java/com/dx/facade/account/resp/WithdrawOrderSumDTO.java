@@ -15,6 +15,10 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 @ApiModel(value = "提款记录列表统计", description = "提款记录列表统计")
 public class WithdrawOrderSumDTO {
+    @ApiModelProperty("订单金额当前页面小计：USDT")
+    private BigDecimal orderAmountPageUSDT;
+    @ApiModelProperty("订单金额总计：USDT")
+    private BigDecimal orderAmountTotalUSDT;
     @ApiModelProperty("提款记录当前页面统计：人民币")
     private BigDecimal realAmountPageCNY = BigDecimal.ZERO;
     @ApiModelProperty("提款记录总计：人民币")
