@@ -118,7 +118,7 @@ public enum MemberChangeType implements IChangeType {
 
     //***************单一钱包账变类***************end**************************************************************
 
-    table_serve_fee(139, "局服务费", MemberBizType.texas_club_serve_fee.code().toString()),
+    table_serve_fee(145, "局服务费", MemberBizType.texas_club_serve_fee.code().toString()),
     illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;
