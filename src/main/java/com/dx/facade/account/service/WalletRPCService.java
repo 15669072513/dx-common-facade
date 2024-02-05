@@ -150,4 +150,6 @@ public interface WalletRPCService {
      * @copyright
      */
     CommonResp<BigDecimal> teamCreditAmount(Long proxyId, Integer proxyWalletType);
+
+    default CommonResp<Map<String, BigDecimal>> getTeamCreditAmountBatchByProxyPaths(List<String> proxyPaths){};
 }
