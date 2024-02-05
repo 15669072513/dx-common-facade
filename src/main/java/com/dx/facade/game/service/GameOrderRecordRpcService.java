@@ -65,4 +65,10 @@ public interface GameOrderRecordRpcService {
      */
     CommonResp<PageResp<RecordDetailList, RecordDetailSummary>> recordDetailList(RecordDetailReq req);
 
+    /**
+     * 根据tableId查询注单信息（APP端手牌列表使用）
+     * @param tableId
+     * @return
+     */
+    CommonResp<List<GameOrderRecordHandInfoResp>> queryGameOrderByTableId(Long tableId);
 }
