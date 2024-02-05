@@ -70,6 +70,7 @@ public class GameOrderRecordResp implements Serializable {
     */
    @ApiModelProperty("输赢金额")
    private BigDecimal netAmount=BigDecimal.ZERO;
+
    /**
     * 玩家ip
     */
@@ -105,10 +106,19 @@ public class GameOrderRecordResp implements Serializable {
    @ApiModelProperty("币种")
    private String memberCurrency;
 
-   @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+   @ApiModelProperty(value = "二级类型 对应枚举GameRecordTypeEnum")
    private Integer betType;
 
-   @ApiModelProperty(value = "抽水贡献")
+   @ApiModelProperty(value = "二级类型对应枚举GameRecordTypeEnum")
+   private String betTypeDesc;
+
+   @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+   private Integer parentOrderType;
+
+   @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+   private String parentOrderTypeDesc;
+
+   @ApiModelProperty(value = "服务费贡献")
    private BigDecimal pumpContribution;
 
 }

@@ -157,4 +157,12 @@ public class DxGameConfigEditReq implements Serializable {
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
     private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("局抽开关 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch;
+
+    @ApiModelProperty("局抽收费比例,多个用逗号隔开")
+    private String tableFeeScale;
+
+
 }

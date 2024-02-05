@@ -147,4 +147,13 @@ public class DxTableInfoDto implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch;
+
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee;
+
+    @ApiModelProperty("局服务费比例")
+    private BigDecimal tableFeeScale;
 }
