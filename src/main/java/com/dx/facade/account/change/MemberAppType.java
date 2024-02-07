@@ -384,6 +384,14 @@ public enum MemberAppType implements IAppType {
                     serverChangeType.intValue() == MemberChangeType.ty_artificial_sub.code()) {
                 return end_single_wallet.code;
             }
+            if(serverChangeType.intValue() == MemberChangeType.v1_52_violation_fine.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_finance_adjust.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_operate_adjust.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_third_order_lost_compensate.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_offline_settle_up_score.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_other_adjust.code()) {
+                return v1_52_other_adjust.code;
+            }
             /*if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
                 return v2_1_deposit_discount.code;
             }
