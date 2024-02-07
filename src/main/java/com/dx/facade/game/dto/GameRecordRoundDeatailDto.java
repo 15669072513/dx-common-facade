@@ -120,4 +120,10 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
 
+    @ApiModelProperty("参与保险的底池")
+    private BigDecimal potAmount;
+
+    @ApiModelProperty("池子编号")
+    private String potNo;
+
 }
