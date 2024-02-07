@@ -118,7 +118,7 @@ public enum MemberChangeType implements IChangeType {
 
     //***************单一钱包账变类***************end**************************************************************
     //v1.52需求账变
-    v1_52_violation_fine(139, "违规罚款", MemberBizType.down_score.code().toString()),
+    v1_52_violation_fine(139, "违规扣款", MemberBizType.down_score.code().toString()),
     v1_52_finance_adjust(140, "财务调整", MemberBizType.down_score.code().toString()),
     v1_52_operate_adjust(141, "运营调整", MemberBizType.down_score.code().toString()),
     v1_52_third_order_lost_compensate(142, "三方掉单补分", MemberBizType.up_score.code().toString()),
