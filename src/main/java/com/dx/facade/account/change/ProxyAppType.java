@@ -86,11 +86,11 @@ public enum ProxyAppType implements IAppType {
     v2_1_negative_benefit_commission(64,"负盈利返佣金"),
     v1_50_proxy_loss_sharing(65,"代理占成亏损分摊"),
     //v1.52需求账变
-    v1_52_violation_fine(66, "违规罚款"),
+    /*v1_52_violation_fine(66, "违规罚款"),
     v1_52_finance_adjust(67, "财务调整"),
     v1_52_operate_adjust(68, "运营调整"),
     v1_52_third_order_lost_compensate(69,"三方掉单补分"),
-    v1_52_offline_settle_up_score(70,"线下结算上分"),
+    v1_52_offline_settle_up_score(70,"线下结算上分"),*/
     v1_52_other_adjust(71, "其他调整"),
     ;
 
