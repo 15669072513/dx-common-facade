@@ -48,4 +48,24 @@ public class BaseRebateRateRespDTO implements Serializable {
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
+    @ApiModelProperty("德州保险占成比例")
+    private BigDecimal texasInsuranceZhancheng;
+    
+    @ApiModelProperty("真人占成比例")
+    private BigDecimal actualPersonZhancheng;
+    
+    @ApiModelProperty("体育占成比例")
+    private BigDecimal sportsZhancheng;
+    
+    @ApiModelProperty("彩票占成比例")
+    private BigDecimal lotteryTicketZhancheng;
+    
+    @ApiModelProperty("棋牌占成比例")
+    private BigDecimal chessZhancheng;
+    
+    @ApiModelProperty("电竞占成比例")
+    private BigDecimal esportsZhancheng;
+    
+    
+    
 }
