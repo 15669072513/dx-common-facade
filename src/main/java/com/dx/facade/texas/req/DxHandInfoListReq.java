@@ -40,6 +40,7 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("会员id")
     private Long userId;
+
     @ApiModelProperty("牌桌code")
     private String tableCode;
 
@@ -60,6 +61,9 @@ public class DxHandInfoListReq extends PageRequest implements Serializable {
 
     @ApiModelProperty("游戏名称")
     private String gameName;
+
+    @ApiModelProperty("会员账号，最多9个账号，英文逗号隔开，账户之间为”且“的关系")
+    private String userNames;
 
     @ApiModelProperty("牌局开始时间-开始")
     @JsonSerialize(using = LocalDateTimeSerializer.class)

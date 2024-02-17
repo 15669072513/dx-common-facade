@@ -82,7 +82,8 @@ public enum ProxyAppType implements IAppType {
     v2_1_withdraw_refused(61, "取款失败"),
     v2_1_withdraw(62, "取款"),
     v2_1_deposit(63, "存款"),
-    v2_1_negative_benefit_commission(64,"负盈利返佣金")
+    v2_1_negative_benefit_commission(64,"负盈利返佣金"),
+    v1_50_proxy_loss_sharing(65,"代理占成亏损分摊"),
     ;
 
     private Integer code;

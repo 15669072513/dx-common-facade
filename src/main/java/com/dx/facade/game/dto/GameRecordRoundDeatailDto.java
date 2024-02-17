@@ -47,6 +47,12 @@ public class GameRecordRoundDeatailDto implements Serializable {
     @ApiModelProperty("座位类型,参考枚举:TexasSeatTypeEnum")
     private Integer seatCode;
 
+    /**
+     *  会员id
+     */
+    @ApiModelProperty("会员id")
+    private String memberId;
+
     @ApiModelProperty("用户id")
     private Long userId;
 
@@ -113,5 +119,11 @@ public class GameRecordRoundDeatailDto implements Serializable {
 
     @ApiModelProperty("底池竞争亮牌标识 0不需要亮牌 1强制亮牌 2自主亮牌通知 3已自主亮牌")
     private Integer showStatus;
+
+    @ApiModelProperty("参与保险的底池")
+    private BigDecimal potAmount;
+
+    @ApiModelProperty("池子编号")
+    private String potNo;
 
 }

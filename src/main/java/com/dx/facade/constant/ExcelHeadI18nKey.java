@@ -80,6 +80,7 @@ public interface ExcelHeadI18nKey {
 
     String FUNDS_场馆信息 = "EXCEL_HEAD_I18N_KEY.FUNDS_场馆信息"; //
     String FUNDS_钱包类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_钱包类型"; //
+    String FUNDS_业务模式 = "EXCEL_HEAD_I18N_KEY.FUNDS_业务模式"; //
 
     String FUNDS_业务类型 = "EXCEL_HEAD_I18N_KEY.FUNDS_业务类型"; //
 
@@ -208,6 +209,7 @@ public interface ExcelHeadI18nKey {
     String REPORT_有效投注THB = "EXCEL_HEAD_I18N_KEY.REPORT_有效投注THB"; //
 
     String REPORT_游戏名称 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏名称"; //
+    String REPORT_盲注 = "EXCEL_HEAD_I18N_KEY.REPORT_盲注";
     String REPORT_游戏类型 = "EXCEL_HEAD_I18N_KEY.REPORT_游戏类型"; //
     String REPORT_投注盈亏 = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏"; //
     String REPORT_投注盈亏CNY = "EXCEL_HEAD_I18N_KEY.REPORT_投注盈亏CNY"; //

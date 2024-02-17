@@ -85,7 +85,9 @@ public class RegisterParamDTO implements BaseParmDTO{
     
     @ApiModelProperty("是否支持多端登录")
     private Integer isMultiple;
-    
+
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 
     @Override
     public void check() {

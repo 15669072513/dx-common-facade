@@ -1,5 +1,6 @@
 package com.dx.facade.member.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.google.common.collect.Lists;
 import io.swagger.annotations.ApiModelProperty;
@@ -56,6 +57,10 @@ public class ProxyTreeRespDTO {
 	public List<ProxyTreeRespDTO> childList;
 	private boolean hasParent;
 	private boolean hasChild;
+
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	@TableField("business_model")
+	private Integer businessModel;
 	
 	private synchronized void initChildren() {
 		if (this.childList == null) {

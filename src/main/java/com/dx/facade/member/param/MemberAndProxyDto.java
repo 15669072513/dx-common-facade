@@ -550,6 +550,9 @@ public class MemberAndProxyDto {
 	@ApiModelProperty(value = "代理跨级操作权限 - 0或null:开启，1:关闭")
 	private Integer crossOptLevel;
 
+	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+	private Integer businessModel;
+
 	public static MemberAndProxyDto convertToMemberAndProxyDto(AddLowerProxyReqDTO item) {
 		if (item == null) {
 			return null;
@@ -638,6 +641,7 @@ public class MemberAndProxyDto {
 		result.setOpenLockStatus(item.getOpenLockStatus());
 		result.setManageClubLockStatus(item.getManageClubLockStatus());
 		result.setCommissionSettleCycle(item.getCommissionSettleCycle());
+		result.setBusinessModel(item.getBusinessModel());
 		return result;
 	}
 	
