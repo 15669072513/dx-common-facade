@@ -81,6 +81,12 @@ public class GameOrderRecordDetail implements Serializable {
         @ApiModelProperty("大盲注")
         private BigDecimal bbBlindScore = BigDecimal.ZERO;
 
+        /**
+         * 保险池
+         */
+        @ApiModelProperty("保险池")
+        private BigDecimal insurePoolSum;
+
     }
 
     @Data

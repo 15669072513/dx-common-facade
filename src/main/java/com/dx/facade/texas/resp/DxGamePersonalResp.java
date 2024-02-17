@@ -53,6 +53,12 @@ public class DxGamePersonalResp implements Serializable {
     @ApiModelProperty("牌桌维度入池率")
     private BigDecimal tableBringPoolRate=BigDecimal.ZERO.setScale(1);
 
+    @ApiModelProperty("备注名")
+    private String userNameRemark;
+
+    @ApiModelProperty("备注信息")
+    private String userRemark;
+
     @ApiModelProperty("创建人")
     private String createdBy;
 

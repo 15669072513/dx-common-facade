@@ -258,6 +258,7 @@ public interface ProxyRPCService {
 	 */
 	CommonResp<Boolean> bindMobileOrEmail(UserBindMobileOrEmailDTO params) throws BizException;
 
+
     /**
      * @author Dealer
      * @description: 根据合营码查代理信息

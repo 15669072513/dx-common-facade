@@ -1,5 +1,6 @@
 package com.dx.facade.member.proxy.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -111,8 +112,10 @@ public class AddProxyAuditRecordRespDTO {
 	@ApiModelProperty(value = "佣金模式 1-返点模式 2-返佣模式", required = true)
 	private Integer commissionModel;
 
-
-
 	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
 	private Integer businessModel;
+
+    @ApiModelProperty("返点比率分配模式 1：自由模式 2：模板模式")
+    private Integer rebateAllotMode;
+
 }

@@ -105,6 +105,9 @@ public class RecordDetailSummary implements Serializable {
     @ApiModelProperty("前注实际金额")
     private BigDecimal anteScore;
 
+    @ApiModelProperty("保险池")
+    private BigDecimal insuredPool=BigDecimal.ZERO;
+
     @Data
     @Builder
     public static class UserSummary {
@@ -126,5 +129,11 @@ public class RecordDetailSummary implements Serializable {
          */
         @ApiModelProperty("玩家昵称")
         private String nickName;
+
+        /**
+         * 备注名
+         */
+        @ApiModelProperty("备注名")
+        private String userNameRemark;
     }
 }

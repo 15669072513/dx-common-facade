@@ -10,11 +10,8 @@ import com.dx.facade.account.req.MemberRebateReq;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.req.WalletDetailBatchQueryDTO;
 import com.dx.facade.account.resp.*;
-import com.dx.facade.texas.req.TableBringInfoReq;
-import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
-import java.util.Map;
 
 public interface WalletDetailRPCService {
 
@@ -51,6 +48,13 @@ public interface WalletDetailRPCService {
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailSumDTO>> getWalletDetailList(PageReq<WalletDetailParamDTO> pageReq);
 
     CommonResp<PageResp<WalletDetailRespDTO, String>> queryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
+
+    /**
+     * 德州带入带出服务费账变统计查询RPC
+     * @param pageReq
+     * @return
+     */
+    CommonResp<PageResp<WalletDetailRespDTO, WalletDetailBalanceSumDTO>> queryTexasBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
     CommonResp<PageResp<WalletDetailRespDTO, WalletDetailRespDTO>> upDownQueryBalanceDetail(PageReq<WalletBalanceDetailReq> pageReq);
 
     /**

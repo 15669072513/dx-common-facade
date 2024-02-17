@@ -3,6 +3,7 @@ package com.dx.facade.game.req;
 import com.dx.facade.report.param.base.BaseRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.List;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -46,6 +47,13 @@ public class GameOrderRecordReq extends BaseRequest {
 
     @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
     private Integer betType;
+
+    @ApiModelProperty(value = "父类型 全部则为空 对应枚举GameRecordTypeEnum")
+    private Integer parentOrderType;
+
+    @ApiModelProperty(value = "子类(如果父类选全部，子类如果是全部则为空，"
+        + "如果选择了父类，子类全部则传所有的子类) 对应枚举GameRecordTypeEnum")
+    private List<Integer> subOrderTypeList;
 
     @ApiModelProperty(value = "投注开始时间 yyyy-MM-dd HH:mm:ss")
     private String betStartTime;

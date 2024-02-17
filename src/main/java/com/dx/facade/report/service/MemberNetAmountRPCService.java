@@ -7,6 +7,7 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.member.param.MemberNetAmountDetailReqDTO;
 import com.dx.facade.member.param.MemberNetAmountReqDTO;
+import com.dx.facade.member.param.MemberVenueNetAmountReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetListReqDTO;
 import com.dx.facade.report.param.member.ProxyMemberNetVenueListReqDTO;
 import com.dx.facade.report.resp.member.*;
@@ -17,6 +18,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -25,6 +27,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏列表和本页合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -33,6 +36,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 会员盈亏全部合计接口
+     *
      * @param reqDTO
      * @return
      * @throws BizException
@@ -50,6 +54,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏
+     *
      * @param reqDTO
      * @return
      */
@@ -57,6 +62,7 @@ public interface MemberNetAmountRPCService {
 
     /**
      * 代理web 会员盈亏-场馆明细
+     *
      * @param reqDTO
      * @return
      */
@@ -76,4 +82,19 @@ public interface MemberNetAmountRPCService {
      * @return
      */
     CommonResp<MemberVenueSummaryRespDTO> queryVenueSumamry(MemberNetAmountReqDTO memberNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏明细
+     *
+     * @param memberVenueNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueDetailRespDTO> queryMemberVenueDetail(MemberVenueNetAmountReqDTO memberVenueNetAmountReqDTO);
+
+    /**
+     * 会员场馆盈亏总计
+     * @param memberVenueNetAmountReqDTO
+     * @return
+     */
+    CommonResp<MemberVenueSummaryRespDTO> queryMemberVenueSummary(MemberVenueNetAmountReqDTO memberVenueNetAmountReqDTO);
 }

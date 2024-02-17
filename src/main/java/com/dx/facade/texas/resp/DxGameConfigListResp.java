@@ -7,6 +7,7 @@ import com.dx.facade.game.convert.GameTypeIdRender;
 import com.dx.facade.game.convert.InsuranceChooseSheetRender;
 import com.dx.facade.game.convert.InsuranceModeRender;
 import com.dx.facade.game.convert.ServiceChargeRender;
+import com.dx.facade.game.convert.TableFeeSwitchRender;
 import com.dx.facade.game.convert.UniversalCloseOpenRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -202,11 +203,26 @@ public class DxGameConfigListResp implements Serializable {
     private String anteLimits;
 
     @ApiModelProperty("语音聊天功能 0-关 1-开 默认为0")
+    @FieldOperate(fieldName ="语音聊天功能")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer voiceChatSwitch;
 
     @ApiModelProperty("入桌密码功能 0-关 1-开 默认为0")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
+    @FieldOperate(fieldName ="入桌密码功能")
     private Integer tableEntryPasswordSwitch;
 
     @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见'")
+    @FieldOperate(fieldName ="仅限直属会员可见开关")
+    @ValueConvert(renderers = UniversalCloseOpenRender.class)
     private Integer onlyDirectMemberSwitch;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    @FieldOperate(fieldName ="局服务费")
+    @ValueConvert(renderers = TableFeeSwitchRender.class)
+    private Integer tableFeeSwitch;
+
+    @ApiModelProperty("局服务费比例,多个用逗号隔开")
+    @FieldOperate(fieldName ="局服务费比例")
+    private String tableFeeScale;
 }
