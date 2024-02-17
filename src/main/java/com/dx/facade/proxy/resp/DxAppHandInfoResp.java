@@ -65,20 +65,17 @@ public class DxAppHandInfoResp implements Serializable {
     @ApiModelProperty("前注")
     private BigDecimal anteScore = BigDecimal.ZERO;
 
-    @ApiModelProperty("抽水金额(服务费)")
+    @ApiModelProperty("抽水金额(服务费)-代理入口使用")
     private BigDecimal pumpingAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("总底池")
+    @ApiModelProperty("总底池-代理入口使用")
     private BigDecimal totalPotAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount = BigDecimal.ZERO;
-
-    @ApiModelProperty("保险盈亏")
+    @ApiModelProperty("保险池-代理入口使用")
     private BigDecimal insuredNetAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty(value = "总盈亏")
-    private BigDecimal totalNetAmount = BigDecimal.ZERO;
+    @ApiModelProperty(value = "当前登录会员的总盈亏")
+    private BigDecimal myTotalNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("显示手牌信息。当前登录会员的手牌，如未参与，则显示虚线牌")
     private String handInfo;

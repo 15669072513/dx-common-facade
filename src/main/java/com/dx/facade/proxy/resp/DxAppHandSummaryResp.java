@@ -40,7 +40,7 @@ public class DxAppHandSummaryResp implements Serializable {
     @ApiModelProperty("前注金额")
     private BigDecimal anteScore = BigDecimal.ZERO;
 
-    @ApiModelProperty("总盈亏")
+    @ApiModelProperty("手牌维度总盈亏")
     private BigDecimal totalNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("打牌服务费")
