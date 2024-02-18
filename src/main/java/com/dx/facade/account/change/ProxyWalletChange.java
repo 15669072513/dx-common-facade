@@ -201,11 +201,11 @@ public enum ProxyWalletChange implements IWalletChange {
     //代理占成亏损分摊
     v1_50_proxy_to_loss_sharing_sub(WalletType.agent_cash, ProxyBizType.v1_50_proxy_divination, ProxyChangeType.v1_50_proxy_loss_sharing_sub, ProxyAppType.v1_50_proxy_loss_sharing, TransType.out),
     //v1.52需求账变
-    v1_52_violation_fine(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_violation_fine, ProxyAppType.v1_52_violation_fine, TransType.out),
-    v1_52_finance_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_finance_adjust, ProxyAppType.v1_52_finance_adjust, TransType.out),
-    v1_52_operate_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_operate_adjust, ProxyAppType.v1_52_operate_adjust, TransType.out),
-    v1_52_third_order_lost_compensate(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_third_order_lost_compensate, ProxyAppType.v1_52_third_order_lost_compensate, TransType.in),
-    v1_52_offline_settle_up_score(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_offline_settle_up_score, ProxyAppType.v1_52_offline_settle_up_score, TransType.in),
+    v1_52_violation_fine(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_violation_fine, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_finance_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_finance_adjust, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_operate_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_operate_adjust, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_third_order_lost_compensate(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_third_order_lost_compensate, ProxyAppType.v1_52_other_adjust, TransType.in),
+    v1_52_offline_settle_up_score(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_offline_settle_up_score, ProxyAppType.v1_52_other_adjust, TransType.in),
     v1_52_other_adjust(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_other_adjust, ProxyAppType.v1_52_other_adjust, TransType.in),
     ;
 

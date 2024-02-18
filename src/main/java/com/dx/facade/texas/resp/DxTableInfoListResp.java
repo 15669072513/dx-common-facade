@@ -1,6 +1,5 @@
 package com.dx.facade.texas.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -204,4 +203,6 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("局服务费比例")
     private BigDecimal tableFeeScale= BigDecimal.ZERO;
+    @ApiModelProperty("牌桌冻结服务费")
+    private BigDecimal tableFreezeFee = BigDecimal.ZERO;
 }

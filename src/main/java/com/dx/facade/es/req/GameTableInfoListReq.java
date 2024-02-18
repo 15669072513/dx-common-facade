@@ -102,4 +102,7 @@ public class GameTableInfoListReq extends PageRequest implements Serializable {
     @ApiModelProperty("创建时间")
     private LocalDateTime createdEndAt;
 
+    @ApiModelProperty("是否包含局服务费字段，默认包含")
+    private Boolean includeTableFee = true;
+
 }

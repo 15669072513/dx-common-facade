@@ -69,6 +69,9 @@ public class MemberLoginLogParam extends PageRequest {
 
     @ApiModelProperty("登录设备号")
     private String deviceNo;
+    
+    @ApiModelProperty("是否来自中控后台统计查询")
+    private Boolean isQueryCount;
 //
 //    @ApiModelProperty(value = "应用终端,1:OB旗舰 2:美播真人")
 //    private Integer appId;

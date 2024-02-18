@@ -10,11 +10,8 @@ import com.dx.facade.account.req.MemberRebateReq;
 import com.dx.facade.account.req.WalletBalanceDetailReq;
 import com.dx.facade.account.req.WalletDetailBatchQueryDTO;
 import com.dx.facade.account.resp.*;
-import com.dx.facade.texas.req.TableBringInfoReq;
-import com.dx.facade.texas.resp.DxGameBillResp;
 
 import java.util.List;
-import java.util.Map;
 
 public interface WalletDetailRPCService {
 

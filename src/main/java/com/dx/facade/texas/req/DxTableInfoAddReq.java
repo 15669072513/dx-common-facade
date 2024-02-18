@@ -169,7 +169,7 @@ public class DxTableInfoAddReq implements Serializable {
     @ApiModelProperty("必要保留筹码（倍大盲）")
     private Integer needKeepChips;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例 3-无")
     private Integer serviceChargeType;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
@@ -209,11 +209,11 @@ public class DxTableInfoAddReq implements Serializable {
     private Integer onlyDirectMember;
 
     @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
-    private Integer tableFeeSwitch=0;
+    private Integer tableFeeSwitch;
 
     @ApiModelProperty("局服务费")
-    private BigDecimal tableFee= BigDecimal.ZERO;
+    private BigDecimal tableFee;
 
     @ApiModelProperty("局服务费比例")
-    private BigDecimal tableFeeScale= BigDecimal.ZERO;
+    private BigDecimal tableFeeScale;
 }
