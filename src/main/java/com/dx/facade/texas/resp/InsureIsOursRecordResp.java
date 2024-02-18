@@ -40,4 +40,5 @@ public class InsureIsOursRecordResp implements Serializable {
      */
     private BigDecimal insuredRewards;
 
+    private Long insureTime;
 }
