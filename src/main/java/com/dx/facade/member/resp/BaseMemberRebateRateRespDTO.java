@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * <p>
- * 返点比例父响应DTO
+ * 返水比例父响应DTO
  * </p>
  *
  * @author bicycle
@@ -22,49 +22,49 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRate响应DTO对象", description = "返点比例响应DTO")
+@ApiModel(value = "RebateRate响应DTO对象", description = "返水比例响应DTO")
 public class BaseMemberRebateRateRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @ApiModelProperty("德州返点比例")
+    @ApiModelProperty("代理发放德州返水比例")
     private BigDecimal texasRebate;
     
-    @ApiModelProperty("德州保险返点比例")
+    @ApiModelProperty("代理发放德州保险返水比例")
     private BigDecimal texasInsuranceRebate;
     
-    @ApiModelProperty("真人返点比例")
+    @ApiModelProperty("代理发放真人返水比例")
     private BigDecimal actualPersonRebate;
     
-    @ApiModelProperty("体育返点比例")
+    @ApiModelProperty("代理发放体育返水比例")
     private BigDecimal sportsRebate;
     
-    @ApiModelProperty("彩票返点比例")
+    @ApiModelProperty("代理发放彩票返水比例")
     private BigDecimal lotteryTicketRebate;
     
-    @ApiModelProperty("棋牌返点比例")
+    @ApiModelProperty("代理发放棋牌返水比例")
     private BigDecimal chessRebate;
     
-    @ApiModelProperty("电竞返点比例")
+    @ApiModelProperty("代理发放电竞返水比例")
     private BigDecimal esportsRebate;
     
-    @ApiModelProperty("德州保险占成比例")
-    private BigDecimal texasInsuranceZhancheng;
+    @ApiModelProperty("平台发放德州俱乐部返水比例")
+    private BigDecimal texasRebatePlatform;
     
-    @ApiModelProperty("真人占成比例")
-    private BigDecimal actualPersonZhancheng;
+    @ApiModelProperty("平台发放真人返水比例")
+    private BigDecimal actualPersonRebatePlatform;
     
-    @ApiModelProperty("体育占成比例")
-    private BigDecimal sportsZhancheng;
+    @ApiModelProperty("平台发放体育返水比例")
+    private BigDecimal sportsRebatePlatform;
     
-    @ApiModelProperty("彩票占成比例")
-    private BigDecimal lotteryTicketZhancheng;
+    @ApiModelProperty("平台发放彩票返水比例")
+    private BigDecimal lotteryTicketRebatePlatform;
     
-    @ApiModelProperty("棋牌占成比例")
-    private BigDecimal chessZhancheng;
+    @ApiModelProperty("平台发放棋牌返水比例")
+    private BigDecimal chessRebatePlatform;
     
-    @ApiModelProperty("电竞占成比例")
-    private BigDecimal esportsZhancheng;
+    @ApiModelProperty("平台发放电竞返水比例")
+    private BigDecimal esportsRebatePlatform;
     
     
     
