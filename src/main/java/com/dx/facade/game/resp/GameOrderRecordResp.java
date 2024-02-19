@@ -135,4 +135,7 @@ public class GameOrderRecordResp implements Serializable {
 
    @ApiModelProperty(value = "成牌时7张牌舍弃的2张牌")
    private String loseCards;
+
+   @ApiModelProperty(value = "游戏注单扩展属性字段JSON")
+   private String extendProperty;
 }
