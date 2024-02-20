@@ -46,7 +46,7 @@ public enum MemberAppType implements IAppType {
     end_single_wallet(103, "结算"),
     //***************单一钱包账变类***************end*********
 
-    texas_club_serve_fee(104, "德州俱乐部服务费"),
+    texas_club_serve_fee(104, "局服务费"),
     ;
 
 
@@ -178,7 +178,9 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.bring_to_table.code());
             }
             if(appChangeType.intValue() == v2_1_withdraw.code) {
-                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),
+                return Arrays.asList(
+                        MemberChangeType.v2_cash_withdraw_frozen.code(),
+                        MemberChangeType.v2_1_withdraw.code(),
                         MemberChangeType.v2_1_withdraw_back.code());
             }
             if(appChangeType.intValue() == v2_1_deposit.code()) {

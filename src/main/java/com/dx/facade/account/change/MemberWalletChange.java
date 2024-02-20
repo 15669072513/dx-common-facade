@@ -344,6 +344,7 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(ty_artificial_sub);
         list.add(ty_appointment_touzhu);
         list.add(ty_appointment_touzhu_cancel);
+        list.add(table_serve_fee);
         return list;
     }
 
