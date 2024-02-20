@@ -1,10 +1,8 @@
 package com.dx.facade.member.param;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.common.PageRequest;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
@@ -55,29 +53,6 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     
     @ApiModelProperty("所属总代名称")
     private String topProxyName;
-    
-    @ApiModelProperty("德州返点比例")
-    private BigDecimal texasRebate;
-    
-    @ApiModelProperty("德州保险返点比例")
-    private BigDecimal texasInsuranceRebate;
-    
-    @ApiModelProperty("真人返点比例")
-    @TableField("actual_person_rebate")
-    private BigDecimal actualPersonRebate;
-    
-    @ApiModelProperty("体育返点比例")
-    @TableField("sports_rebate")
-    private BigDecimal sportsRebate;
-    
-    @ApiModelProperty("彩票返点比例")
-    private BigDecimal lotteryTicketRebate;
-    
-    @ApiModelProperty("棋牌返点比例")
-    private BigDecimal chessRebate;
-    
-    @ApiModelProperty("电竞返点比例")
-    private BigDecimal esportsRebate;
     
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整 4-未设置或者平台调整")
     private Integer status;

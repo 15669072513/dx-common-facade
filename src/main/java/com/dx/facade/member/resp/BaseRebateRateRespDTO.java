@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * <p>
- * 返点比例父响应DTO
+ * 会员返水比例父响应DTO
  * </p>
  *
  * @author bicycle
@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "RebateRate响应DTO对象", description = "返点比例响应DTO")
+@ApiModel(value = "会员返水比率响应DTO对象", description = "会员返水比例响应DTO")
 public class BaseRebateRateRespDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,4 +48,21 @@ public class BaseRebateRateRespDTO implements Serializable {
     @ApiModelProperty("电竞返点比例")
     private BigDecimal esportsRebate;
     
+    @ApiModelProperty("德州保险占成比例")
+    private BigDecimal texasInsuranceZhancheng;
+    
+    @ApiModelProperty("真人占成比例")
+    private BigDecimal actualPersonZhancheng;
+    
+    @ApiModelProperty("体育占成比例")
+    private BigDecimal sportsZhancheng;
+    
+    @ApiModelProperty("彩票占成比例")
+    private BigDecimal lotteryTicketZhancheng;
+    
+    @ApiModelProperty("棋牌占成比例")
+    private BigDecimal chessZhancheng;
+    
+    @ApiModelProperty("电竞占成比例")
+    private BigDecimal esportsZhancheng;
 }
