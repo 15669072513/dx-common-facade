@@ -24,6 +24,7 @@ public enum ProxyAppType implements IAppType {
     v3_proxy_help_sub_proxy_credit_repay(14, "代理帮下级信用还款"),
     v3_proxy_help_sub_member_credit_repay(15, "代理帮会员信用还款"),
 
+
 //    //私庄钱包
 //    banker_deposit(12, "入金"),
 //    banker_gambling(13, "对赌"),
@@ -58,7 +59,7 @@ public enum ProxyAppType implements IAppType {
     commission_rebate_add(39, "返点增加调整"),
     commission_rebate_sub(40, "返点扣除调整"),
     //---------------------v2需求客户端账变类型----------------
-    v2_cash_deposit_by_official(41, "官方给代理上分"),
+    v2_cash_deposit_by_official(41, "官方给代理充值上分"),
     v2_cash_deposit_by_parent_proxy(42, "代理被上级充值上分"),
     v2_cash_deposit_to_sub_proxy(43, "代理给下级充值上分"),
     v2_cash_deposit_to_member(44, "代理给会员充值上分"),
@@ -84,6 +85,13 @@ public enum ProxyAppType implements IAppType {
     v2_1_deposit(63, "存款"),
     v2_1_negative_benefit_commission(64,"负盈利返佣金"),
     v1_50_proxy_loss_sharing(65,"代理占成亏损分摊"),
+    //v1.52需求账变
+    /*v1_52_violation_fine(66, "违规罚款"),
+    v1_52_finance_adjust(67, "财务调整"),
+    v1_52_operate_adjust(68, "运营调整"),
+    v1_52_third_order_lost_compensate(69,"三方掉单补分"),
+    v1_52_offline_settle_up_score(70,"线下结算上分"),*/
+    v1_52_other_adjust(71, "其他调整"),
     ;
 
     private Integer code;

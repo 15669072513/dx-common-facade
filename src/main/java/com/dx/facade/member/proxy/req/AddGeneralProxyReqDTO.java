@@ -119,6 +119,9 @@ public class AddGeneralProxyReqDTO {
 	private Integer withdrawLimitType;
 
 
+	@ApiModelProperty(value = "是否可创建牌桌开桌,0-不允许（默认），1-允许")
+	private Integer dxTableCreatable;
+
 	@ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
 	private Integer businessModel;
 

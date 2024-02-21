@@ -49,14 +49,12 @@ public class DxGameBillResp implements Serializable {
     private BigDecimal profitLossAmount = BigDecimal.ZERO;
 
     /**
-     *  游戏盈亏
-     *
+     * 游戏盈亏
      */
     private BigDecimal gameNetChip = BigDecimal.ZERO;
 
     /**
-     *  保险盈亏
-     *
+     * 保险盈亏
      */
     private BigDecimal insureNetChip = BigDecimal.ZERO;
 
@@ -70,6 +68,7 @@ public class DxGameBillResp implements Serializable {
      */
     private int userRoundNo = 0;
 
+
     /**
      * 玩家总带出
      */
@@ -78,10 +77,27 @@ public class DxGameBillResp implements Serializable {
     /**
      * 入池率
      */
-    private BigDecimal bringPoolRate=BigDecimal.ZERO.setScale(1);
+    private BigDecimal bringPoolRate = BigDecimal.ZERO.setScale(1);
 
     /**
      * 主动入池次数
      */
     private Long activeBringPoolNumber;
+
+
+    /**
+     * Walks手牌数
+     */
+    private Integer walksHandNumber;
+
+
+    /**
+     * 玩家手动带入
+     */
+    private BigDecimal bringInHandScore = BigDecimal.ZERO;
+
+    /**
+     * 玩家手动带出
+     */
+    private BigDecimal bringOutHandScore = BigDecimal.ZERO;
 }
