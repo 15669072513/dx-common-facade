@@ -34,7 +34,7 @@ public class QueryRebateRateConfigParamDTO implements BaseParmDTO, Serializable 
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("类型 1-直属代理团队返点比例 2-默认平台返点比例")
+    @ApiModelProperty("类型 0-直属会员返水比率 1-直属代理团队返点比例 2-直属代理团队占成比例")
     private Integer type;
     
     @ApiModelProperty("用户Id")
