@@ -1,19 +1,20 @@
 package com.dx.facade.member.proxy.req;
 
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
+
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.member.param.BaseCommissionRateParamDTO;
-import com.dx.facade.member.param.BaseRebateRateParamDTO;
+import com.dx.facade.member.param.RebateRateDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
+
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.util.List;
 
 /**
  * 代理 实体类
@@ -330,7 +331,7 @@ public class AddLowerProxyReqDTO {
 	private Integer businessModel;
 
 	@ApiModelProperty("返点比例列表")
-	private List<BaseRebateRateParamDTO> rebateRateList;
+	private List<RebateRateDTO> rebateRateList;
 
 	@ApiModelProperty("返佣比例列表")
 	private List<BaseCommissionRateParamDTO> commissionRateList;
