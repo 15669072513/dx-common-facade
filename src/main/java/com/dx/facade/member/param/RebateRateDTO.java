@@ -32,6 +32,9 @@ public class RebateRateDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty("ID")
+    private Long id;
+    
     @ApiModelProperty("德州俱乐部返点比例")
     @DecimalMin(value = "0.000", message = "德州俱乐部返点比例不能小于0.000")
     @NotNull(message = "德州俱乐部返点比例不能为空")
