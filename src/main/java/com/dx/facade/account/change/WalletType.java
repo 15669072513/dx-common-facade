@@ -79,7 +79,8 @@ public enum WalletType implements IWalletType {
           credit_total,
           agent_cash,
           agent_credit_available,
-          agent_credit_total
+          agent_credit_total,
+          agent_debt
         );
     }
 }

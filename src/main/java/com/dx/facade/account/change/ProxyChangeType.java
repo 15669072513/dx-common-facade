@@ -104,8 +104,8 @@ public enum ProxyChangeType implements IChangeType {
     v1_52_other_adjust(125, "其他调整", ProxyBizType.v2_deposit.code().toString()),
 
     //v1.61代理占成模式需求
-    //代理后台帮下级还个人欠款
-    v1_61_proxy_help_sub_proxy_debt_repay(126, "代理帮下级还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
+    //代理操作帮直属下级代理还个人欠款
+    v1_61_parent_help_me_debt_repay(126, "上级帮还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
     //代理操作偿还个人欠款
     v1_61_proxy_debt_repay(127, "欠款还款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
     //代理收益订单中结算金额为负值时，记个人欠款
@@ -116,14 +116,10 @@ public enum ProxyChangeType implements IChangeType {
     v1_61_proxy_receive_sub_proxy_debt_repay(130, "收下级还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
     //收益审核通过平台支付给代理的金额
     v1_61_proxy_profit_pay_by_platform(131, "代理收入发放", ProxyBizType.v1_61_proxy_profit.code().toString()),
-    //上级给下级支付的收益余额
-    v1_61_proxy_profit_pay_to_sub_proxy(132, "上级发放下级收入", ProxyBizType.v1_61_proxy_profit.code().toString()),
-    //下级收到上级支付的收益余额
-    v1_61_proxy_profit_pay_by_parent_proxy(133, "收到上级发放收入", ProxyBizType.v1_61_proxy_profit.code().toString()),
     //代理收收益人工加额调整
-    v1_61_proxy_profit_adjust_add(134, "代理加额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
+    v1_61_proxy_profit_adjust_add(132, "代理加额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
     //代理收收益人工加额调整
-    v1_61_proxy_profit_adjust_sub(135, "代理扣额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
+    v1_61_proxy_profit_adjust_sub(133, "代理扣额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
 
     illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 
