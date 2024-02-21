@@ -17,4 +17,7 @@ public class GameOrderTableDetailSumReq extends BaseRequest {
     @ApiModelProperty("牌桌id")
     private Long tableId;
 
+    @ApiModelProperty(value = "页面来源：1.牌桌解散战绩查询(1.6.0局抽新增)", required = false)
+    private Integer pageSource;
+
 }
