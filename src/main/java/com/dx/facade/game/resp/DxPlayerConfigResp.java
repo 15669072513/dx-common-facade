@@ -31,6 +31,9 @@ public class DxPlayerConfigResp implements Serializable {
   @ApiModelProperty("加注拉杆确认 0-关闭 1-开启")
   private Integer betPullSwitch=0;
 
+  @ApiModelProperty("自动补码 0-关闭 1-开启")
+  private Integer autoComplement=0;
+
   @ApiModelProperty("倍数加注List")
   private List<String> multipleRaiseList=new ArrayList<>();
 
