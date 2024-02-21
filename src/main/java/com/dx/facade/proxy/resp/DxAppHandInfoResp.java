@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -78,16 +79,19 @@ public class DxAppHandInfoResp implements Serializable {
     private BigDecimal totalNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("显示手牌信息。当前登录会员的手牌，如未参与，则显示虚线牌")
-    private String handInfo;
+    private List<AppHandInfoDetail> handInfo;
 
     @ApiModelProperty("赢家")
     private String winNickName;
+
+    @ApiModelProperty("赢家备注名")
+    private String winNameRemark;
 
     @ApiModelProperty("牌型")
     private String winResultInfo;
 
     @ApiModelProperty("赢家手牌")
-    private String winHandInfo;
+    private List<AppHandInfoDetail> winHandInfo;
 
     @ApiModelProperty("公牌")
     private Map<Integer, Boolean> globalPokerCode;
