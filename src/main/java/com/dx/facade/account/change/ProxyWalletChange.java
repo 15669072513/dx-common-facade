@@ -210,8 +210,8 @@ public enum ProxyWalletChange implements IWalletChange {
 
     //v1.61代理占成模式账变
     //代理后台帮下级还个人欠款
-    v1_61_proxy_help_sub_proxy_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
-            ProxyChangeType.v1_61_proxy_help_sub_proxy_debt_repay, ProxyAppType.v1_61_debt_repay, TransType.out),
+    v1_61_parent_help_me_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
+            ProxyChangeType.v1_61_parent_help_me_debt_repay, ProxyAppType.v1_61_parent_help_me_debt_repay, TransType.out),
     //代理操作偿还个人欠款
     v1_61_proxy_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
             ProxyChangeType.v1_61_proxy_debt_repay, ProxyAppType.v1_61_debt_repay, TransType.in),
@@ -219,20 +219,14 @@ public enum ProxyWalletChange implements IWalletChange {
     v1_61_proxy_loss_sharing(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
             ProxyChangeType.v1_61_proxy_loss_sharing, ProxyAppType.v1_61_proxy_loss_sharing, TransType.out),
     //代理操作偿还个人欠款
-    v1_61_proxy_to_parent_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
+    v1_61_proxy_to_parent_debt_repay(WalletType.agent_cash, ProxyBizType.v1_61_proxy_personal_debt,
             ProxyChangeType.v1_61_proxy_to_parent_debt_repay, ProxyAppType.v1_61_debt_repay, TransType.out),
     //代理操作偿还个人欠款
-    v1_61_proxy_receive_sub_proxy_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
+    v1_61_proxy_receive_sub_proxy_debt_repay(WalletType.agent_cash, ProxyBizType.v1_61_proxy_personal_debt,
             ProxyChangeType.v1_61_proxy_receive_sub_proxy_debt_repay, ProxyAppType.v1_61_debt_repay, TransType.in),
     //收益审核通过平台支付给代理的金额
     v1_61_proxy_profit_pay_by_platform(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_pay_by_platform, ProxyAppType.v1_61_income, TransType.in),
-    //上级给下级支付的收益余额
-    v1_61_proxy_profit_pay_to_sub_proxy(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_pay_to_sub_proxy, ProxyAppType.v1_61_income, TransType.out),
-    //下级收到上级支付的收益余额
-    v1_61_proxy_profit_pay_by_parent_proxy(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_pay_by_parent_proxy, ProxyAppType.v1_61_income, TransType.in),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_add(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_adjust_add, ProxyAppType.v1_61_income_adjust, TransType.in),
@@ -393,14 +387,12 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(v1_52_third_order_lost_compensate);
         list.add(v1_52_offline_settle_up_score);
         list.add(v1_52_other_adjust);
-        list.add(v1_61_proxy_profit_pay_to_sub_proxy);
+        list.add(v1_61_parent_help_me_debt_repay);
         list.add(v1_61_proxy_debt_repay);
         list.add(v1_61_proxy_loss_sharing);
         list.add(v1_61_proxy_to_parent_debt_repay);
         list.add(v1_61_proxy_receive_sub_proxy_debt_repay);
         list.add(v1_61_proxy_profit_pay_by_platform);
-        list.add(v1_61_proxy_profit_pay_to_sub_proxy);
-        list.add(v1_61_proxy_profit_pay_by_parent_proxy);
         list.add(v1_61_proxy_profit_adjust_add);
         list.add(v1_61_proxy_profit_adjust_sub);
 

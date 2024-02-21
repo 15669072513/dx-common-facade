@@ -95,8 +95,9 @@ public enum ProxyAppType implements IAppType {
     //v1.61代理占成模式
     v1_61_debt_repay(72, "欠款还款"),
     v1_61_income(73, "代理收入"),
-    v1_61_income_adjust(73, "收入调整"),
-    v1_61_proxy_loss_sharing(74, "代理占成亏损"),
+    v1_61_income_adjust(74, "收入调整"),
+    v1_61_proxy_loss_sharing(75, "代理占成亏损"),
+    v1_61_parent_help_me_debt_repay(76, "上级帮个人还款"),
     ;
 
     private Integer code;
