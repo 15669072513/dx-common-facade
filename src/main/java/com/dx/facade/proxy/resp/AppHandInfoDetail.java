@@ -30,4 +30,7 @@ public class AppHandInfoDetail implements Serializable {
     @ApiModelProperty("是否置灰")
     private boolean displayFlag;
 
+    @ApiModelProperty("手牌位置，一共两个位置(1和2)")
+    private Integer location;
+
 }
