@@ -3,13 +3,13 @@ package com.dx.facade.account.service;
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
-import com.dx.enums.I18nEnum;
 import com.dx.facade.account.param.DepositWithDrawRecordParam;
 import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
 import com.dx.facade.account.param.ProxyDebtRepayParam;
 import com.dx.facade.account.resp.DepositWithDrawRecordRespDTO;
 import com.dx.facade.account.resp.LoanRepayRecordRespDTO;
+import com.dx.facade.account.resp.ProxyDebtDoRepayRespDTO;
 
 public interface LoanRepayRecordRPCService {
 
@@ -53,5 +53,5 @@ public interface LoanRepayRecordRPCService {
      * @date 2024/2/22
      * @copyright
      */
-    CommonResp<String> proxyDebtSelfRepay(ProxyDebtRepayParam param);
+    CommonResp<ProxyDebtDoRepayRespDTO> proxyDebtSelfRepay(ProxyDebtRepayParam param);
 }
