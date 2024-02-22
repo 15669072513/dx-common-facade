@@ -208,8 +208,8 @@ public enum ProxyWalletChange implements IWalletChange {
     v1_52_offline_settle_up_score(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_offline_settle_up_score, ProxyAppType.v1_52_other_adjust, TransType.in),
     v1_52_other_adjust(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_other_adjust, ProxyAppType.v1_52_other_adjust, TransType.in),
 
-    //v1.61代理占成模式账变
-    //代理后台帮下级还个人欠款
+    //v1.61代理占成模式账变，暂时不做了
+    /*//代理后台帮下级还个人欠款
     v1_61_parent_help_me_debt_repay(WalletType.agent_debt, ProxyBizType.v1_61_proxy_personal_debt,
             ProxyChangeType.v1_61_parent_help_me_debt_repay, ProxyAppType.v1_61_parent_help_me_debt_repay, TransType.out),
     //代理操作偿还个人欠款
@@ -232,7 +232,7 @@ public enum ProxyWalletChange implements IWalletChange {
             ProxyChangeType.v1_61_proxy_profit_adjust_add, ProxyAppType.v1_61_income_adjust, TransType.in),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_sub(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out),
+            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out),*/
     ;
 
     private IWalletType walletType;
@@ -387,14 +387,15 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(v1_52_third_order_lost_compensate);
         list.add(v1_52_offline_settle_up_score);
         list.add(v1_52_other_adjust);
-        list.add(v1_61_parent_help_me_debt_repay);
+        //v1.61代理占成模式需求，暂时不做了
+        /*list.add(v1_61_parent_help_me_debt_repay);
         list.add(v1_61_proxy_debt_repay);
         list.add(v1_61_proxy_loss_sharing);
         list.add(v1_61_proxy_to_parent_debt_repay);
         list.add(v1_61_proxy_receive_sub_proxy_debt_repay);
         list.add(v1_61_proxy_profit_pay_by_platform);
         list.add(v1_61_proxy_profit_adjust_add);
-        list.add(v1_61_proxy_profit_adjust_sub);
+        list.add(v1_61_proxy_profit_adjust_sub);*/
 
         return list;
     }
