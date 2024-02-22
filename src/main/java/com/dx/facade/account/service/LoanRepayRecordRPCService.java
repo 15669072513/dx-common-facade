@@ -7,6 +7,7 @@ import com.dx.enums.I18nEnum;
 import com.dx.facade.account.param.DepositWithDrawRecordParam;
 import com.dx.facade.account.param.LoanRepayParam;
 import com.dx.facade.account.param.LoanRepayRecordParam;
+import com.dx.facade.account.param.ProxyDebtRepayParam;
 import com.dx.facade.account.resp.DepositWithDrawRecordRespDTO;
 import com.dx.facade.account.resp.LoanRepayRecordRespDTO;
 
@@ -46,4 +47,11 @@ public interface LoanRepayRecordRPCService {
      */
     CommonResp<String> checkAmount(String prefix, LoanRepayParam loanRepayParam);
 
+    /**
+     * @author Dealer
+     * @description: 代理个人占成欠款个人还款业务
+     * @date 2024/2/22
+     * @copyright
+     */
+    CommonResp<String> proxyDebtSelfRepay(ProxyDebtRepayParam param);
 }
