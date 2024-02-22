@@ -19,6 +19,8 @@ public interface LoanRepayRecordRPCService {
      */
     CommonResp<PageResp<LoanRepayRecordRespDTO, String>> getLoanRepayRecordList(PageReq<LoanRepayRecordParam> param);
 
+    CommonResp<PageResp<LoanRepayRecordRespDTO, String>> proxyDebtDetailRecord(PageReq<LoanRepayRecordParam> param);
+
     /**
      * 存取款帐变记录(目前只支持代理)
      * @param param
