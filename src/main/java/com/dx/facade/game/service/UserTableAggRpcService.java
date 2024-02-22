@@ -60,6 +60,16 @@ public interface UserTableAggRpcService {
         Long tableId);
 
     /**
+     * 查询战绩详情分页(等待局服务费计算结束---异步转同步：牌桌解散弹窗试用)
+     * @param pageNum
+     * @param pageSize
+     * @param tableId
+     * @return
+     */
+    CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord,?>> getGameOrderPlayerRecordWaitTableFeeProcessEndPage(Long pageNum,Long pageSize,
+                                                                                               Long tableId);
+
+    /**
      * 条件查询用户牌桌统计表
      * @param userTableAggReq
      * @return
