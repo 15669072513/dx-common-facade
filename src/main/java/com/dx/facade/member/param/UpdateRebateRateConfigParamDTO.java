@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(value = "更新返点比例配置请求Param", description = "更新返点比例配置请求Param")
-public class UpdateRebateRateConfigParamDTO extends BaseRebateRateConfigParamDTO implements Serializable {
+public class UpdateRebateRateConfigParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
