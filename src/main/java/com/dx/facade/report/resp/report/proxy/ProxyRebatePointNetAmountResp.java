@@ -38,4 +38,10 @@ public class ProxyRebatePointNetAmountResp extends ProxyRebatePointNetAmountSumm
     private String proxyPathUsername;
     @ApiModelProperty("是否有下级代理 ture:有，false:无")
     private Boolean isAllSub;
+
+    @ApiModelProperty(value = "代理层级")
+    private Integer proxyLevel;
+
+    @ApiModelProperty("直属上级代理")
+    private String parentProxyName;
 }

@@ -22,27 +22,49 @@ public class ProxyRebatePointNetAmountSummaryResp {
     /**
      * betAmount
      */
-    @ApiModelProperty(value = "德州俱乐部抽水贡献", example = "1500.00")
+    @ApiModelProperty(value = "德州俱乐部会员服务费贡献", example = "1500.00")
     private BigDecimal dxClubRebateAmount = BigDecimal.ZERO;
 
     /**
      * validBetAmount
      */
-    @ApiModelProperty(value = "德州保险游戏盈亏", example = "1500.00")
+    @ApiModelProperty(value = "德州-保险会员游戏盈亏", example = "1500.00")
     private BigDecimal dxSecurityNetAmount = BigDecimal.ZERO;
 
     /**
      * thirdValidBetAmount
      */
-    @ApiModelProperty(value = "其他项目有效投注", example = "1500.00")
+    @ApiModelProperty(value = "其他场馆会员有效投注", example = "1500.00")
     private BigDecimal thirdValidBetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "其他场馆游戏盈亏", example = "1500.00")
+    private BigDecimal thirdValidNetAmount = BigDecimal.ZERO;
 
     /**
      * netAmount
      */
-    @ApiModelProperty(value = "团队返点金额", example = "1500.00")
+    @ApiModelProperty(value = "德州-俱乐部团队返点", example = "1500.00")
     private BigDecimal teamRebateAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty(value = "德州-保险团队占成", example = "1500.00")
+    private BigDecimal dxInsurancePartsAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("其他场馆团队返点")
+    private BigDecimal otherVenueTeamRebateAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("其他场馆团队占成")
+    private BigDecimal otherVenueTeamPartsAmount = BigDecimal.ZERO;
+    @ApiModelProperty("团队收益")
+    private BigDecimal teamIncomeAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("直属代理团队收益")
+    private BigDecimal directProxyTeamIncomeAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("直属会员代理发放返水")
+    private BigDecimal directMemberRebateAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("个人收益")
+    private BigDecimal personIncomeAmount = BigDecimal.ZERO;
     /**
      * rebateAmount
      */
