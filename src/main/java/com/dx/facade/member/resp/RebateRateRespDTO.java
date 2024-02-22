@@ -37,9 +37,6 @@ public class RebateRateRespDTO extends RebateRateDTO implements Serializable {
     @ApiModelProperty("商户名称")
     private String merchantName;
     
-    @ApiModelProperty("用户类型 0：会员 1：代理")
-    private Integer userType;
-    
     @ApiModelProperty("用户Id")
     private Long userId;
 
