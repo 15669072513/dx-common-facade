@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@ApiModel(value = "团队收益结算明细表", description = "团队收益结算明细表")
+@ApiModel(value = "DwmCommissionProxyRebateShareDTO", description = "团队收益结算明细表")
 public class DwmCommissionProxyRebateShareDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
