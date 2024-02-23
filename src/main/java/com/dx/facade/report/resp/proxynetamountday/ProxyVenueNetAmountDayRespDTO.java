@@ -93,7 +93,7 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty(value = "团队返点金额")
     private BigDecimal rebateAmount;
 
-    @ApiModelProperty(value = "个人返点金额")
+    @ApiModelProperty(value = "个人返点金额（平台替代理发放会员返水）")
     private BigDecimal personRebateAmount;
 
     @ApiModelProperty(value = "下级返点金额")
@@ -101,4 +101,10 @@ public class ProxyVenueNetAmountDayRespDTO {
 
     @ApiModelProperty(value = "代理返点其他调整", example = "1500.00")
     private BigDecimal proxyArtificialPatchAmount;
+
+    /**
+     * 返点比例
+     */
+    @ApiModelProperty(value = "返点比例", example = "1500.00")
+    private BigDecimal rebateRatio = BigDecimal.ZERO;
 }

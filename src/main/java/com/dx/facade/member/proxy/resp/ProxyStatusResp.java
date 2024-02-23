@@ -23,6 +23,9 @@ public class ProxyStatusResp {
     @ApiModelProperty(value = "用户名")
     private String userName;
 
+    @ApiModelProperty(value = "代理层级", example = "1")
+    private Integer proxyLevel;
+
     @ApiModelProperty("商户名称")
     private String merchantName;
 
@@ -31,6 +34,12 @@ public class ProxyStatusResp {
 
     @ApiModelProperty("上级代理名称")
     private String parentProxyName;
+
+    @ApiModelProperty("总代理id")
+    private Long topProxyId;
+
+    @ApiModelProperty("总代理名称")
+    private String topProxyName;
 
     @ApiModelProperty("登陆锁定状态 0-未锁定 1-登陆锁定")
     private Integer loginLockStatus = 0;
@@ -42,4 +51,6 @@ public class ProxyStatusResp {
     @ApiModelProperty("注册时间")
     private LocalDateTime createdAt;
 
+    @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
+    private Integer businessModel;
 }
