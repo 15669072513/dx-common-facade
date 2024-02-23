@@ -29,6 +29,9 @@ public class ProxyDayReportSummaryDTO {
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
     private BigDecimal totalReceiveRebate;
 
+    @ApiModelProperty(value = "累计收益")
+    private BigDecimal totalIncomeAmount=BigDecimal.ZERO;
+
 
     //  上下分
 

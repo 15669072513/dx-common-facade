@@ -1,6 +1,5 @@
 package com.dx.facade.report.resp.proxyoverview;
 
-import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -8,7 +7,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -121,4 +119,7 @@ public class ProxyOverviewMainDataRespDTO {
 
     @ApiModelProperty(value = "今日实时收益")
     private BigDecimal realTimeRevenue = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "本账期收益")
+    private BigDecimal incomeAmount;
 }

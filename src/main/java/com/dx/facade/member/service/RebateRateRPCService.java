@@ -16,6 +16,7 @@ import com.dx.facade.member.param.UpdateRebateRateParamDTO;
 import com.dx.facade.member.resp.BaseRebateRateRespDTO;
 import com.dx.facade.member.resp.MemberRebateRateListRespDTO;
 import com.dx.facade.member.resp.MemberRebateRateRespDTO;
+import com.dx.facade.member.resp.RebateRateListRespDTO;
 import com.dx.facade.member.resp.RebateRateRespDTO;
 import com.dx.facade.member.resp.RebateRateTryCaclRespDTO;
 /**
@@ -77,7 +78,7 @@ public interface RebateRateRPCService {
      * @param pageReq
      * @return
      */
-    CommonResp<PageResp<RebateRateRespDTO, ?>> selectRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
+    CommonResp<PageResp<RebateRateListRespDTO, ?>> selectRebateRateListPage(PageReq<QueryRebateRateParamDTO> pageReq);
     
     /**
      * 会员返水比例分页查询
@@ -101,7 +102,7 @@ public interface RebateRateRPCService {
 	 * @param request
 	 * @return
 	 */
-    CommonResp<RebateRateRespDTO> getSubMaxRebateRate(QueryRebateRateParamDTO request);
+    CommonResp<BaseRebateRateRespDTO> getSubMaxRebateRate(QueryRebateRateParamDTO request);
     
     /**
      * 查询会员返点比例

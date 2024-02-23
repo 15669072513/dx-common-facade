@@ -7,7 +7,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.member.param.AddRebateRateConfigParamDTO;
 import com.dx.facade.member.param.QueryRebateRateConfigParamDTO;
 import com.dx.facade.member.param.UpdateRebateRateConfigParamDTO;
-import com.dx.facade.member.resp.BaseRebateRateConfigRespDTO;
+import com.dx.facade.member.resp.RebateRateConfigLimitRespDTO;
 import com.dx.facade.member.resp.RebateRateConfigRespDTO;
 /**
  * 返点比例配置RPC服务
@@ -52,6 +52,6 @@ public interface RebateRateConfigRPCService {
 	 * 
 	 * @return
 	 */
-	CommonResp<BaseRebateRateConfigRespDTO> getRebateRateConfigLimit(Integer type ,Integer commissionMode);
+	CommonResp<RebateRateConfigLimitRespDTO> getRebateRateConfigLimit(Integer type ,Integer commissionMode);
 	
 }
