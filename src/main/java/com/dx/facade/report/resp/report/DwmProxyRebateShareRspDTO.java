@@ -19,7 +19,7 @@ public class DwmProxyRebateShareRspDTO {
     @ApiModelProperty("项目")
     private String venueName;
 
-    @ApiModelProperty("会员有效投注")
+    @ApiModelProperty("会员有效投注/服务费贡献/游戏盈亏")
     protected BigDecimal validBetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("团队返点比例")
@@ -28,39 +28,21 @@ public class DwmProxyRebateShareRspDTO {
     @ApiModelProperty("团队占成比例")
     protected BigDecimal zhanChengRate = BigDecimal.ZERO;
 
-    @ApiModelProperty("团队返点金额")
+    @ApiModelProperty("团队占成/返点金额")
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("团队占成金额")
-    protected BigDecimal zhanChengAmount = BigDecimal.ZERO;
-
     @ApiModelProperty("返点成本分摊")
-    protected BigDecimal ajustAmount = BigDecimal.ZERO;
+    protected BigDecimal adjustAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("直属代理团队返点金额")
-    protected BigDecimal proxyRebateAmount = BigDecimal.ZERO;
-
-    @ApiModelProperty("直属代理团队占成金额")
-    protected BigDecimal proxyZhanChengAmount = BigDecimal.ZERO;
+    @ApiModelProperty("直属代理团队占成/返点金额")
+    protected BigDecimal childRebateAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("会员代理返水")
     protected BigDecimal memberProxyRebateAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("实际应发个人返点金额")
-    protected BigDecimal realRebateAmount = BigDecimal.ZERO;
+    @ApiModelProperty("实际应发个人占成/返点金额")
+    protected BigDecimal incomeAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("实际应发个人占成金额")
-    protected BigDecimal realZhangChengAmount = BigDecimal.ZERO;
-
-    @ApiModelProperty("会员游戏盈亏")
-    protected BigDecimal netAmount = BigDecimal.ZERO;
-
-    @ApiModelProperty("服务费贡献")
-    protected BigDecimal serviceAmount = BigDecimal.ZERO;
-
-    @ApiModelProperty(value = "手牌服务费贡献")
-    protected BigDecimal serviceChargeHand = BigDecimal.ZERO;
-
-    @ApiModelProperty(value = "局服务费贡献")
-    protected BigDecimal serviceChargeRound = BigDecimal.ZERO;
+    @ApiModelProperty(value = "占成标识：0：非占成 1：占成")
+    protected Integer zhanchengFlag;
 }

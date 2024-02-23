@@ -20,12 +20,13 @@ import java.util.List;
 public class ProxyRebateShareReq {
 
     @ApiModelProperty(value = "结算周期开始日期", example = "20231213")
-    @NotNull(message = "查询时间不能为空")
     private Long cycleStartDate;
 
     @ApiModelProperty(value = "结算周期结束日期", example = "20231221")
-    @NotNull(message = "查询时间不能为空")
     private Long cycleEndDate;
+
+    @ApiModelProperty(value = "报表日期", example = "20231221")
+    private Long reportDate;
 
     @ApiModelProperty(value = "代理ID")
     private Long proxyId;
@@ -34,7 +35,7 @@ public class ProxyRebateShareReq {
     private Long memberId;
 
     @ApiModelProperty(value = "类型：0-全部 1-德州俱乐部返点，2-德州保险占成，3-其他场馆返点，4-其他场馆占成")
-    private Long venueType;
+    private Integer venueType;
 
     private List<Integer> payoutStatusList;
 }

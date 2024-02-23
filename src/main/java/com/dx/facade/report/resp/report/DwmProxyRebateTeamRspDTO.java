@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @ApiModel(value = "DwmProxyRebateTeamRspDTO", description = "团队收益返回值")
 public class DwmProxyRebateTeamRspDTO {
     @ApiModelProperty("序号")
-    private Integer level;
+    private String level;
     @ApiModelProperty("周期起始时间")
     private Long cycleStatrtDate;
     @ApiModelProperty("周期结束时间")
