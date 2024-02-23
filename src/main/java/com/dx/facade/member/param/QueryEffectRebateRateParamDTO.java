@@ -32,7 +32,7 @@ public class QueryEffectRebateRateParamDTO implements BaseParmDTO, Serializable 
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
-    @ApiModelProperty("用户类型 1：会员 2：代理")
+    @ApiModelProperty("用户类型 0：会员 1：代理")
     private Integer userType;
     
     @ApiModelProperty("用户Id")
