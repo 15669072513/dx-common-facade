@@ -66,6 +66,12 @@ public class DxReportDResp implements Serializable {
     @ApiModelProperty(value = "平台收入(万)")
     private BigDecimal platformIncomeAmount;
 
+    @ApiModelProperty(value = "总还款额度(万)")
+    private BigDecimal totalRepayQuota=BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "新增还款额度(万)")
+    private BigDecimal newRepayQuota=BigDecimal.ZERO;
+
     public DxReportDResp(BigDecimal creditQuota, BigDecimal newCreditQuota, BigDecimal withdrawAmount, BigDecimal depositAmount, BigDecimal loanAmount, BigDecimal newLoanAmount, BigDecimal shouldRepaymentAmount, BigDecimal shouldPaymentAmount, Integer newEffectiveNum, Integer activeNum, BigDecimal validBetAmount, BigDecimal netAmount, BigDecimal memberRebateAmount, BigDecimal proxyRebateAmount, BigDecimal platformIncomeAmount) {
         this.creditQuota = creditQuota;
         this.newCreditQuota = newCreditQuota;

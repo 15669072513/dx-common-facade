@@ -5,11 +5,13 @@ import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
 import com.dx.facade.report.param.report.ProxyRebateDataReq;
 import com.dx.facade.report.param.report.ReportDateCompareDTO;
+import com.dx.facade.report.param.report.ReportVenueBetDetailDTO;
 import com.dx.facade.report.param.report.ReportVenueNetAmountDayDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNameReqDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNetAmountDayDetailReqDTO;
 import com.dx.facade.report.param.report.venuenetamountday.VenueNetAmountDayReqDTO;
 import com.dx.facade.report.req.report.ReportDateCompareParam;
+import com.dx.facade.report.req.report.ReportVenueBetDetailParam;
 import com.dx.facade.report.req.report.ReportVenueNetAmountDayParam;
 import com.dx.facade.report.resp.report.ProxyRebateDataDetailResDTO;
 import com.dx.facade.report.resp.report.ProxyRebateDataResDTO;
@@ -97,4 +99,8 @@ public interface VenueNetAmountDayRPCService {
     CommonResp<ProxyRebateDataResDTO> queryProxyRebateDataSummary(ProxyRebateDataReq reqDTO);
 
     CommonResp<ProxyRebateDataDetailResDTO> queryProxyRebateDataDetail(ProxyRebateDataReq reqDTO);
+
+    CommonResp<PageResp<ReportVenueBetDetailDTO, ReportVenueBetDetailDTO>> betDetailList(ReportVenueBetDetailParam reqDTO);
+
+    CommonResp<ReportVenueBetDetailDTO> betDetailSummary(ReportVenueBetDetailParam reqDTO);
 }

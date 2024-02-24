@@ -43,8 +43,19 @@ public enum MemberAppType implements IAppType {
     //***************单一钱包账变类***************start*********
     bet_single_wallet(101, "投注"),
     cancel_single_wallet(102, "撤单"),
-    end_single_wallet(103, "结算");
+    end_single_wallet(103, "结算"),
     //***************单一钱包账变类***************end*********
+    //v1.52需求账变
+    /*v1_52_violation_fine(104, "违规罚款"),
+    v1_52_finance_adjust(105, "财务调整"),
+    v1_52_operate_adjust(106, "运营调整"),
+    v1_52_third_order_lost_compensate(107,"三方掉单补分"),
+    v1_52_offline_settle_up_score(108,"线下结算上分"),*/
+    v1_52_other_adjust(109, "其他调整"),
+
+    texas_club_serve_fee(104, "局服务费"),
+    ;
+
 
     private Integer code;
     private String desc;
@@ -129,7 +140,15 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao.code(),
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
-                        MemberChangeType.ty_artificial_sub.code()
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.v1_52_violation_fine.code(),
+                        MemberChangeType.v1_52_operate_adjust.code(),
+                        MemberChangeType.v1_52_finance_adjust.code(),
+                        MemberChangeType.v1_52_third_order_lost_compensate.code(),
+                        MemberChangeType.v1_52_other_adjust.code(),
+                        MemberChangeType.v1_52_offline_settle_up_score.code(),
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.table_serve_fee.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -173,7 +192,9 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.bring_to_table.code());
             }
             if(appChangeType.intValue() == v2_1_withdraw.code) {
-                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),
+                return Arrays.asList(
+                        MemberChangeType.v2_cash_withdraw_frozen.code(),
+                        MemberChangeType.v2_1_withdraw.code(),
                         MemberChangeType.v2_1_withdraw_back.code());
             }
             if(appChangeType.intValue() == v2_1_deposit.code()) {
@@ -211,6 +232,18 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
                         MemberChangeType.ty_artificial_sub.code());
+            }
+            if(appChangeType.intValue() == v1_52_other_adjust.code) {
+                return Arrays.asList(
+                        MemberChangeType.v1_52_violation_fine.code(),
+                        MemberChangeType.v1_52_finance_adjust.code(),
+                        MemberChangeType.v1_52_operate_adjust.code(),
+                        MemberChangeType.v1_52_third_order_lost_compensate.code(),
+                        MemberChangeType.v1_52_offline_settle_up_score.code(),
+                        MemberChangeType.v1_52_other_adjust.code());
+            }
+            if(appChangeType.intValue() == texas_club_serve_fee.code()) {
+                return Arrays.asList(MemberChangeType.table_serve_fee.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
@@ -361,6 +394,14 @@ public enum MemberAppType implements IAppType {
                     serverChangeType.intValue() == MemberChangeType.ty_artificial_add.code() ||
                     serverChangeType.intValue() == MemberChangeType.ty_artificial_sub.code()) {
                 return end_single_wallet.code;
+            }
+            if(serverChangeType.intValue() == MemberChangeType.v1_52_violation_fine.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_finance_adjust.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_operate_adjust.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_third_order_lost_compensate.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_offline_settle_up_score.code()
+                ||serverChangeType.intValue() == MemberChangeType.v1_52_other_adjust.code()) {
+                return v1_52_other_adjust.code;
             }
             /*if(serverChangeType.intValue() == MemberChangeType.v2_1_deposit_discount.code()) {
                 return v2_1_deposit_discount.code;

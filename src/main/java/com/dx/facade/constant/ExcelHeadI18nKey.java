@@ -620,6 +620,7 @@ public interface ExcelHeadI18nKey {
     String FUNDS_手牌服务费 = "EXCEL_HEAD_I18N_KEY.FUNDS_手牌服务费";
     String FUNDS_局服务费 = "EXCEL_HEAD_I18N_KEY.FUNDS_局服务费";
     String FUNDS_经典保险 = "EXCEL_HEAD_I18N_KEY.FUNDS_经典保险";
+    String FUNDS_经典保险盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_经典保险盈亏";
     String FUNDS_总牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌盈亏";
     String FUNDS_牌桌盈亏 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌盈亏";
     String FUNDS_牌桌总费用 = "EXCEL_HEAD_I18N_KEY.FUNDS_牌桌总费用";
@@ -628,6 +629,8 @@ public interface ExcelHeadI18nKey {
     
     String FUNDS_总有效投注 = "EXCEL_HEAD_I18N_KEY.FUNDS_总有效投注";
     String FUNDS_总牌桌抽水 = "EXCEL_HEAD_I18N_KEY.FUNDS_总牌桌抽水";
+
+    String FUNDS_冻结筹码 = "EXCEL_HEAD_I18N_KEY.FUNDS_冻结筹码";
 
     String SIGN_PROXY_NAME = "EXCEL_HEAD_I18N_KEY.CONTRACT_代理账号";
     String CONTRACT_TYPE = "EXCEL_HEAD_I18N_KEY.CONTRACT_签约类型";
