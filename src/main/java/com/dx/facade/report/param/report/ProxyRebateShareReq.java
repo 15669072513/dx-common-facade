@@ -31,11 +31,6 @@ public class ProxyRebateShareReq {
     @ApiModelProperty(value = "代理ID")
     private Long proxyId;
 
-    @ApiModelProperty(value = "会员ID")
-    private Long memberId;
-
     @ApiModelProperty(value = "类型：0-全部 1-德州俱乐部返点，2-德州保险占成，3-其他场馆返点，4-其他场馆占成")
     private Integer venueType;
-
-    private List<Integer> payoutStatusList;
 }

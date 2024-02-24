@@ -32,7 +32,7 @@ public class DwmProxyRebateShareRspDTO {
     protected BigDecimal rebateAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("返点成本分摊")
-    protected BigDecimal adjustAmount = BigDecimal.ZERO;
+    protected BigDecimal partRebateAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("直属代理团队占成/返点金额")
     protected BigDecimal childRebateAmount = BigDecimal.ZERO;
