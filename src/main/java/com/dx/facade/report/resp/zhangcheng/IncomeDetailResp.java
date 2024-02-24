@@ -16,6 +16,10 @@ import java.math.BigDecimal;
 public class IncomeDetailResp implements Serializable {
 
 
+    @ApiModelProperty(value = "周期开始时间")
+    private Integer cycleStartDate;
+    @ApiModelProperty(value = "周期结束时间")
+    private Integer cycleEndDate;
     /**
      * 场馆类型
      */
