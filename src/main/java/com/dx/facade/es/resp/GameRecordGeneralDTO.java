@@ -184,4 +184,12 @@ public class GameRecordGeneralDTO {
     @ApiModelProperty(value = "注单id(重算注单用)")
     private String betOrderId;
 
+    //德州
+    @ApiModelProperty(value = "牌桌id")
+    private String tableId;
+    @ApiModelProperty(value = "大盲")
+    private String bbBlindScore;
+    @ApiModelProperty(value = "小盲")
+    private String sbBlindScore;
+
 }
