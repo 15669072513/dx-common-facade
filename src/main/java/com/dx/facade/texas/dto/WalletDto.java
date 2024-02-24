@@ -75,11 +75,4 @@ public class WalletDto {
 
     @ApiModelProperty("牌局保留的局服务费")
     private BigDecimal freezeFee = BigDecimal.ZERO;
-
-
-  @ApiModelProperty("带出总额")
-  private BigDecimal bringOutSumAmount=new BigDecimal(0.0);
-
-
-
 }
