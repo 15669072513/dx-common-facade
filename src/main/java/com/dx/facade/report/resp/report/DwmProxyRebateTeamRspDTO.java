@@ -18,7 +18,7 @@ public class DwmProxyRebateTeamRspDTO {
     @ApiModelProperty("序号")
     private String level;
     @ApiModelProperty("周期起始时间")
-    private Long cycleStatrtDate;
+    private Long cycleStartDate;
     @ApiModelProperty("周期结束时间")
     private Long cycleEndDate;
     @ApiModelProperty("直属上级代理ID")
@@ -42,7 +42,7 @@ public class DwmProxyRebateTeamRspDTO {
     @ApiModelProperty("本期个人收益")
     protected BigDecimal incomeAmount = BigDecimal.ZERO;
     @ApiModelProperty("收益调整")
-    protected BigDecimal ajustAmount = BigDecimal.ZERO;
+    protected BigDecimal adjustAmount = BigDecimal.ZERO;
     @ApiModelProperty("调整后个人收益")
     protected BigDecimal realRebateAmount = BigDecimal.ZERO;
 }

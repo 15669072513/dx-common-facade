@@ -19,11 +19,9 @@ import javax.validation.constraints.NotNull;
 public class ProxyRebateTeamReq {
 
     @ApiModelProperty(value = "结算周期开始日期", example = "20231213")
-    @NotNull(message = "查询时间不能为空")
     private Long cycleStartDate;
 
     @ApiModelProperty(value = "结算周期结束日期", example = "20231221")
-    @NotNull(message = "查询时间不能为空")
     private Long cycleEndDate;
 
     @ApiModelProperty(value = "状态(0-全部 2-待发放 3-已发放 5-无收益 6-已取消)", example = "0")

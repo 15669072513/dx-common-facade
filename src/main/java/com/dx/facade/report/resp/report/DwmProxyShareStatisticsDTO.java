@@ -40,14 +40,12 @@ public class DwmProxyShareStatisticsDTO implements Serializable {
     private int payoutStatus;
 
     @ApiModelProperty("收益调整")
-    private BigDecimal ajustAmount = BigDecimal.ZERO;
+    private BigDecimal adjustAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("本期个人收益")
     protected BigDecimal incomeAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("调整后个人收益")
     protected BigDecimal realRebateAmount = BigDecimal.ZERO;
-
-
 
 }
