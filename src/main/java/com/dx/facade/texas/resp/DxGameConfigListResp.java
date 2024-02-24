@@ -224,5 +224,5 @@ public class DxGameConfigListResp implements Serializable {
 
     @ApiModelProperty("局服务费比例,多个用逗号隔开")
     @FieldOperate(fieldName ="局服务费比例")
-    private String tableFeeScale;
+    private String tableFeeScale = "";
 }
