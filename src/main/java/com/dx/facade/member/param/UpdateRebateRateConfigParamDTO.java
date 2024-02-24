@@ -2,6 +2,7 @@ package com.dx.facade.member.param;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -20,13 +21,23 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @ApiModel(value = "更新返点比例配置请求Param", description = "更新返点比例配置请求Param")
-public class UpdateRebateRateConfigParamDTO extends BaseRebateRateConfigParamDTO implements Serializable {
+public class UpdateRebateRateConfigParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
+    @ApiModelProperty("商户Id")
+    private Long merchantId;
     
-    @ApiModelProperty("Id")
-    private Long id;
+    @ApiModelProperty("商户名称")
+    private String merchantName;
+    
+    @ApiModelProperty("用户Id")
+    private Long userId;
+
+    @ApiModelProperty("用户名称")
+    private String userName;
+    
+    private List<BaseRebateRateConfigParamDTO> rebateRateConfigList;
     
     @ApiModelProperty("最后操作人")
     private String updatedBy;

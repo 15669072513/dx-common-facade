@@ -92,6 +92,12 @@ public enum ProxyAppType implements IAppType {
     v1_52_third_order_lost_compensate(69,"三方掉单补分"),
     v1_52_offline_settle_up_score(70,"线下结算上分"),*/
     v1_52_other_adjust(71, "其他调整"),
+    //v1.61代理占成模式，暂时不做了
+    /*v1_61_debt_repay(72, "欠款还款"),
+    v1_61_proxy_loss_sharing(75, "代理占成亏损"),
+    v1_61_parent_help_me_debt_repay(76, "上级帮个人还款"),*/
+    v1_61_income(73, "代理收入"),
+    v1_61_income_adjust(74, "收入调整"),
     ;
 
     private Integer code;
