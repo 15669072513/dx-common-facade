@@ -18,9 +18,9 @@ public class DwmProxyRebateTeamRspDTO {
     @ApiModelProperty("序号")
     private String level;
     @ApiModelProperty("周期起始时间")
-    private Long cycleStartDate;
+    private String cycleStartDate;
     @ApiModelProperty("周期结束时间")
-    private Long cycleEndDate;
+    private String cycleEndDate;
     @ApiModelProperty("直属上级代理ID")
     private Long parentProxyId;
     @ApiModelProperty("直属上级代理")
