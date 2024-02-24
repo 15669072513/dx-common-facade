@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * @Author Rock
@@ -81,6 +82,12 @@ public class GameOrderRecordDetail implements Serializable {
         @ApiModelProperty("大盲注")
         private BigDecimal bbBlindScore = BigDecimal.ZERO;
 
+        /**
+         * 保险池
+         */
+        @ApiModelProperty("保险池")
+        private BigDecimal insurePoolSum;
+
     }
 
     @Data
@@ -133,6 +140,17 @@ public class GameOrderRecordDetail implements Serializable {
          */
         @ApiModelProperty("总手数")
         private Long handNumberTotal = 0L;
+
+
+        /**
+         * 记录标记（2，手续费已处理完成）
+         */
+        @ApiModelProperty("记录标记")
+        private Integer flag = 0;
+
+        public boolean issTableFeeProcessEnd() {
+            return Objects.nonNull(flag) && flag == 2;
+        }
     }
 
 }

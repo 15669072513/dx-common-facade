@@ -6,13 +6,11 @@ import com.dx.facade.game.dto.game.GameOrderRecordUserNetChipSumReqDto;
 import com.dx.facade.game.dto.game.GameOrderUserSumByUserIdRespDto;
 import com.dx.facade.game.req.*;
 import com.dx.facade.game.resp.GameOrderClubSumResp;
-import com.dx.facade.game.resp.GameOrderUserSumByUserIdResp;
 import com.dx.facade.game.resp.GameOrderUserTableSumResp;
 import com.dx.facade.game.resp.UserTableAggListResp;
 import com.dx.facade.game.resp.gamedetail.GameOrderRecordDetail;
 
 import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface UserTableAggRpcService {
 
@@ -55,6 +53,16 @@ public interface UserTableAggRpcService {
      */
     CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord,?>> getGameOrderPlayerRecordPage(Long pageNum,Long pageSize,
         Long tableId);
+
+    /**
+     * 查询战绩详情分页(等待局服务费计算结束---异步转同步：牌桌解散弹窗试用)
+     * @param pageNum
+     * @param pageSize
+     * @param tableId
+     * @return
+     */
+    CommonResp<PageResp<GameOrderRecordDetail.GameOrderRecord,?>> getGameOrderPlayerRecordWaitTableFeeProcessEndPage(Long pageNum,Long pageSize,
+                                                                                               Long tableId);
 
     /**
      * 条件查询用户牌桌统计表
