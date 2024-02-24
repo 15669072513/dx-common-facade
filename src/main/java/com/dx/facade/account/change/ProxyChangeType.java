@@ -96,7 +96,7 @@ public enum ProxyChangeType implements IChangeType {
     //V1.50代理占成亏损分摊
     v1_50_proxy_loss_sharing_sub(119, "代理占成亏损分摊", ProxyBizType.v1_50_proxy_divination.code().toString()),
     //v1.52需求账变
-    v1_52_violation_fine(120, "违规罚款", ProxyBizType.v2_withdraw.code().toString()),
+    v1_52_violation_fine(120, "违规扣款", ProxyBizType.v2_withdraw.code().toString()),
     v1_52_finance_adjust(121, "财务调整", ProxyBizType.v2_withdraw.code().toString()),
     v1_52_operate_adjust(122, "运营调整", ProxyBizType.v2_withdraw.code().toString()),
     v1_52_third_order_lost_compensate(123, "三方掉单补分", ProxyBizType.v2_deposit.code().toString()),
