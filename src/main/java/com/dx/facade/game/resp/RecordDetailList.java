@@ -45,6 +45,13 @@ public class RecordDetailList implements Serializable {
      */
     @ApiModelProperty("玩家昵称")
     private String nickName;
+
+    /**
+     * 备注名
+     */
+    @ApiModelProperty("备注名")
+    private String userNameRemark;
+
     /**
      * 牌桌时间
      */

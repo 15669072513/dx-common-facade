@@ -1,5 +1,6 @@
 package com.dx.facade.game.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -67,6 +68,8 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("玩家昵称")
     private String nickName;
 
+    @ApiModelProperty("备注名")
+    private String userNameRemark="";
 
     @ApiModelProperty("公共牌信息")
     private List<Integer> publicCards =new ArrayList<>();
