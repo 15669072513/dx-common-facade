@@ -82,4 +82,8 @@ public class IncomeDetailResp implements Serializable {
 
     @ApiModelProperty(value = "返点成本分摊", example = "1500.00")
     private BigDecimal partRebateAmount = BigDecimal.ZERO;
+
+
+    @ApiModelProperty(value = "订单类型 1-服务费，2-保险", example = "0")
+    private Integer betType;
 }
