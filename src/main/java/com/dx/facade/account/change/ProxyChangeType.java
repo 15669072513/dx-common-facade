@@ -113,13 +113,13 @@ public enum ProxyChangeType implements IChangeType {
     //代理操作偿还个人欠款
     v1_61_proxy_to_parent_debt_repay(129, "向上级还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
     //代理操作偿还个人欠款
-    v1_61_proxy_receive_sub_proxy_debt_repay(130, "收下级还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),
+    v1_61_proxy_receive_sub_proxy_debt_repay(130, "收下级还个人欠款", ProxyBizType.v1_61_proxy_personal_debt.code().toString()),*/
     //收益审核通过平台支付给代理的金额
     v1_61_proxy_profit_pay_by_platform(131, "代理收入发放", ProxyBizType.v1_61_proxy_profit.code().toString()),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_add(132, "代理加额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
     //代理收收益人工加额调整
-    v1_61_proxy_profit_adjust_sub(133, "代理扣额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),*/
+    v1_61_proxy_profit_adjust_sub(133, "代理扣额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
 
     illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 

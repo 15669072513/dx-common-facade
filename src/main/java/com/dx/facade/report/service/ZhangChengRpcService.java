@@ -34,4 +34,8 @@ public interface ZhangChengRpcService {
      * @return
      */
     CommonResp<List<IncomeDetailResp>> detail(IncomeDetailReq req);
+
+    CommonResp<PageResp<IncomeDetailResp, IncomeDetailResp>> venueIncomeDetailList(IncomeDetailReq req);
+
+    CommonResp<IncomeDetailResp> venueIncomeDetailTotal(IncomeDetailReq req);
 }
