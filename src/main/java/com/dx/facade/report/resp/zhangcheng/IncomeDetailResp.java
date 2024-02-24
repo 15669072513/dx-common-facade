@@ -75,4 +75,7 @@ public class IncomeDetailResp implements Serializable {
      */
     @ApiModelProperty(value = "占成标识 0：非占成 1：占成", example = "0")
     private Integer zhanchengFlag = 0;
+
+    @ApiModelProperty(value = "返点成本分摊", example = "1500.00")
+    private BigDecimal partRebateAmount = BigDecimal.ZERO;
 }
