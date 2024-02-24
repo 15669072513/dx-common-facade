@@ -29,5 +29,4 @@ public class AppHandInfoDetail implements Serializable {
 
     @ApiModelProperty("是否置灰")
     private boolean displayFlag;
-
 }
