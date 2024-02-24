@@ -21,7 +21,7 @@ public class RebateRecordDetailReportParam {
     //    @ApiModelProperty(value = "1 团队  2 直属会员 ", required = true)
 //    @NotNull(message = "类型")
 //    private Integer reportType;
-    @ApiModelProperty("平台标识： 0-非平台 1-平台")
+    @ApiModelProperty("平台标识： 0-非平台 1-平台 2-全部")
     private Integer platformFlag;
 
 }
