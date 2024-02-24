@@ -107,4 +107,10 @@ public class ProxyVenueNetAmountDayRespDTO {
      */
     @ApiModelProperty(value = "返点比例", example = "1500.00")
     private BigDecimal rebateRatio = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "实际返点", example = "1000.00")
+    private BigDecimal realOfRebate;
+
+    @ApiModelProperty(value = "占成比例", example = "0.01")
+    private BigDecimal zhanchengRate = BigDecimal.ZERO;
 }
