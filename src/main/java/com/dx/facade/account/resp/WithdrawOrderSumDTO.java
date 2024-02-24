@@ -19,6 +19,10 @@ public class WithdrawOrderSumDTO {
     private BigDecimal orderAmountPageUSDT;
     @ApiModelProperty("订单金额总计：USDT")
     private BigDecimal orderAmountTotalUSDT;
+    @ApiModelProperty("订单金额当前页面小计：CNY")
+    private BigDecimal orderAmountPageCNY;
+    @ApiModelProperty("订单金额总计：CNY")
+    private BigDecimal orderAmountTotalCNY;
     @ApiModelProperty("提款记录当前页面统计：人民币")
     private BigDecimal realAmountPageCNY = BigDecimal.ZERO;
     @ApiModelProperty("提款记录总计：人民币")
