@@ -58,8 +58,8 @@ public enum ProxyBizType implements IBizType {
 
     v1_50_proxy_divination(64, "代理占成", "17"),
     //1.61代理个人欠款，暂时不做了
-    /*v1_61_proxy_personal_debt(65, "个人欠款", "20"),
-    v1_61_proxy_profit(66, "代理收入", "17"),*/
+    /*v1_61_proxy_personal_debt(65, "个人欠款", "20"),*/
+    v1_61_proxy_profit(66, "代理收入", "17"),
 
 
     illegal_type(-1, "未知的类型", "-1")
