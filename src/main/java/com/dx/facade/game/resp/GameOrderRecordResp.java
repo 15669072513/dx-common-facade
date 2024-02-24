@@ -121,4 +121,31 @@ public class GameOrderRecordResp implements Serializable {
    @ApiModelProperty(value = "服务费贡献")
    private BigDecimal pumpContribution;
 
+
+   @ApiModelProperty("会员id")
+   private Long memberId;
+
+   @ApiModelProperty("手牌信息")
+   private String handInfo;
+
+   @ApiModelProperty("用户昵称")
+   private String nickName;
+
+   @ApiModelProperty("牌型")
+   private String resultInfo;
+
+   @ApiModelProperty(value = "公牌信息")
+   private String globalPokerCode;
+
+   @ApiModelProperty(value = "是否亮牌标识 1 亮牌，2非亮牌")
+   private Integer showStatus;
+
+   @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+   private BigDecimal totalNetAmount = BigDecimal.ZERO;
+
+   @ApiModelProperty(value = "成牌时7张牌舍弃的2张牌")
+   private String loseCards;
+
+   @ApiModelProperty(value = "游戏注单扩展属性字段JSON")
+   private String extendProperty;
 }
