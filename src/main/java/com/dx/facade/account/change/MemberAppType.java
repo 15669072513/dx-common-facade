@@ -136,13 +136,14 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
                         MemberChangeType.ty_artificial_sub.code(),
-                        MemberChangeType.table_serve_fee.code(),
                         MemberChangeType.v1_52_violation_fine.code(),
                         MemberChangeType.v1_52_operate_adjust.code(),
                         MemberChangeType.v1_52_finance_adjust.code(),
                         MemberChangeType.v1_52_third_order_lost_compensate.code(),
                         MemberChangeType.v1_52_other_adjust.code(),
-                        MemberChangeType.v1_52_offline_settle_up_score.code()
+                        MemberChangeType.v1_52_offline_settle_up_score.code(),
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.table_serve_fee.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -227,9 +228,6 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_artificial_add.code(),
                         MemberChangeType.ty_artificial_sub.code());
             }
-            if(appChangeType.intValue() == texas_club_serve_fee.code()) {
-                return Arrays.asList(MemberChangeType.table_serve_fee.code());
-            }
             if(appChangeType.intValue() == v1_52_other_adjust.code) {
                 return Arrays.asList(
                         MemberChangeType.v1_52_violation_fine.code(),
@@ -238,6 +236,9 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v1_52_third_order_lost_compensate.code(),
                         MemberChangeType.v1_52_offline_settle_up_score.code(),
                         MemberChangeType.v1_52_other_adjust.code());
+            }
+            if(appChangeType.intValue() == texas_club_serve_fee.code()) {
+                return Arrays.asList(MemberChangeType.table_serve_fee.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
