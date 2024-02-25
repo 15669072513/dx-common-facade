@@ -123,4 +123,7 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
 
     @ApiModelProperty("返点比率模板名称")
     private String rebateRateTemplateName;
+    
+    @ApiModelProperty("占成标识： 0-非占成 1-占成")
+    private Integer zhanchengFlag;
 }
