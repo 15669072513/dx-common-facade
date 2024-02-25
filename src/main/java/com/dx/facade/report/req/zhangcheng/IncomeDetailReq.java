@@ -29,4 +29,10 @@ public class IncomeDetailReq extends PageRequest implements Serializable  {
     @ApiModelProperty(value = "代理后台使用-场馆code")
     private String venueCode;
 
+    @ApiModelProperty(value = "报表起始日期", required = true, example = "20240223")
+    private Integer beginDate;
+
+    @ApiModelProperty(value = "报表结束日期", required = true, example = "20240223")
+    private Integer endDate;
+
 }
