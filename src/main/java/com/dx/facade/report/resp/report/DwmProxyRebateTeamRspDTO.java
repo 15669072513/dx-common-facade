@@ -18,9 +18,11 @@ public class DwmProxyRebateTeamRspDTO {
     @ApiModelProperty("序号")
     private String level;
     @ApiModelProperty("周期起始时间")
-    private Long cycleStartDate;
+    private String cycleStartDate;
     @ApiModelProperty("周期结束时间")
-    private Long cycleEndDate;
+    private String cycleEndDate;
+    @ApiModelProperty("报表日期")
+    private String reportDate;
     @ApiModelProperty("直属上级代理ID")
     private Long parentProxyId;
     @ApiModelProperty("直属上级代理")
@@ -29,7 +31,7 @@ public class DwmProxyRebateTeamRspDTO {
     private Long proxyId;
     @ApiModelProperty("代理")
     private String proxyName;
-    @ApiModelProperty("状态(2-待发放 3-已发放 5-无收益 6-已取消)")
+    @ApiModelProperty("状态(1-待发放 3-已发放 5-无收益 6-已取消)")
     private int payoutStatus;
     @ApiModelProperty("德州-俱乐部个人返点")
     protected BigDecimal clubRebateAmount = BigDecimal.ZERO;

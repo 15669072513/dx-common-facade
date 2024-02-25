@@ -20,10 +20,10 @@ import java.util.List;
 public class ProxyRebateShareReq {
 
     @ApiModelProperty(value = "结算周期开始日期", example = "20231213")
-    private Long cycleStartDate;
+    private String cycleStartDate;
 
     @ApiModelProperty(value = "结算周期结束日期", example = "20231221")
-    private Long cycleEndDate;
+    private String cycleEndDate;
 
     @ApiModelProperty(value = "报表日期", example = "20231221")
     private Long reportDate;
