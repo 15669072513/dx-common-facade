@@ -20,7 +20,7 @@ public class IncomeDetailReq extends PageRequest implements Serializable  {
     @ApiModelProperty(value = "代理ID", required = true, example = "67632431144")
     private Long proxyId;
 
-    @ApiModelProperty(value = "报表日期", required = true, example = "20240223")
+    @ApiModelProperty(value = "报表日期", required = false, example = "20240223")
     private Integer reportDate;
 
     @ApiModelProperty(value = "代理后台使用-场馆收益类型：0-德州-俱乐部团队返点 ，1-德州-保险团队占成，2-其他场馆团队返点，3-其他场馆团队占成", required = true)
@@ -29,10 +29,10 @@ public class IncomeDetailReq extends PageRequest implements Serializable  {
     @ApiModelProperty(value = "代理后台使用-场馆code")
     private String venueCode;
 
-    @ApiModelProperty(value = "报表起始日期", required = true, example = "20240223")
+    @ApiModelProperty(value = "报表起始日期", required = false, example = "20240223")
     private Integer beginDate;
 
-    @ApiModelProperty(value = "报表结束日期", required = true, example = "20240223")
+    @ApiModelProperty(value = "报表结束日期", required = false, example = "20240223")
     private Integer endDate;
 
 }
