@@ -52,7 +52,7 @@ public class ProxyIncomeAuditListReq  {
     /**
      * 周期结束日期
      */
-    @ApiModelProperty(value = "周期结束时间", required = true, example = "2024-02-28")
+    @ApiModelProperty(value = "周期结束时间", required = true, example = "20240228")
     @NotNull(message = "时间周期参数结束不能为空")
     private Integer cycleEndDate;
 
@@ -67,10 +67,10 @@ public class ProxyIncomeAuditListReq  {
     protected Long pageSize = 20L;
 
     @ApiModelProperty(value = "发放开始时间",example = "20240215")
-    private LocalDate receiveStartDate;
+    private Integer receiveStartDate;
 
     @ApiModelProperty(value = "发放截止时间",example = "20240228")
-    private LocalDate receiveEndDate;
+    private Integer receiveEndDate;
 
     @ApiModelProperty(value = "本期应发最小值")
     private BigDecimal personRebateAmountMin;
