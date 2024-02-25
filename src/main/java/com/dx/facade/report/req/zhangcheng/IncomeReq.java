@@ -38,7 +38,7 @@ public class IncomeReq implements Serializable {
     @ApiModelProperty(value = "特定下级代理id", example = "1")
     private Long subProxyId;
 
-    @ApiModelProperty(value = "状态 1待发放，2已发放，3无收益，4已取消 不传全部", example = "1")
+    @ApiModelProperty(value = "状态 1:待发放 3：已发放 5：无收益 6：已取消 不传全部", example = "1")
     private Integer status = null;
 
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
