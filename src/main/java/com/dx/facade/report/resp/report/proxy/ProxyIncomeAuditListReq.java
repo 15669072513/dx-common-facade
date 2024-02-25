@@ -11,6 +11,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @Data
@@ -37,6 +38,9 @@ public class ProxyIncomeAuditListReq  {
 
     @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
     private Integer auditStatus;
+
+    @ApiModelProperty("客户端状态 1:待发放 3：已发放 5：无收益 6：已取消")
+    private List<Integer> payoutStatusList;
 
     @ApiModelProperty("代理账号")
     private String proxyName;
@@ -77,4 +81,8 @@ public class ProxyIncomeAuditListReq  {
 
     @ApiModelProperty(value = "本期应发最大值")
     private BigDecimal personRebateAmountMax;
+
+    @ApiModelProperty(value = "直属上级")
+    private String parentProxyAccount;
+
 }

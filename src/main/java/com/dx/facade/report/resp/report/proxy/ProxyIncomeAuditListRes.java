@@ -1,6 +1,7 @@
 package com.dx.facade.report.resp.report.proxy;
 
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -11,6 +12,8 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
+import java.util.List;
 
 @Data
 @AllArgsConstructor
@@ -74,4 +77,18 @@ public class ProxyIncomeAuditListRes {
 
     @ApiModelProperty("申请时间")
     private LocalDateTime applyTime;
+
+    @ApiModelProperty("客户端状态 1:待发放 3：已发放 5：无收益 6：已取消")
+    private Integer payoutStatus;
+
+    @ApiModelProperty("发放时间")
+    private Date payoutTime;
+
+    @ApiModelProperty(value = "一审备注")
+    private String audit1Desc;
+
+    @ApiModelProperty(value = "二审备注")
+    private String audit2Desc;
+
+
 }
