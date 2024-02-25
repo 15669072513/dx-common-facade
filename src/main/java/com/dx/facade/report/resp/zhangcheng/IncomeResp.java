@@ -38,7 +38,7 @@ public class IncomeResp implements Serializable {
     /**
      * TODO 对应对应payout的状态是什么？
      */
-    @ApiModelProperty(value = "收益状态 1待发放，2已发放，3无收益，4已取消", example = "1")
+    @ApiModelProperty(value = "收益状态 1:待发放 3：已发放 5：无收益 6：已取消", example = "1")
     private Integer status;
 
     /**
