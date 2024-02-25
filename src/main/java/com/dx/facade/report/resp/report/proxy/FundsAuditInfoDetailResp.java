@@ -17,7 +17,6 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@JsonInclude(JsonInclude.Include.NON_NULL)
 @ApiModel(value = "FundsAuditInfoDetailResp", description = "收益审核详情")
 public class FundsAuditInfoDetailResp {
     @ApiModelProperty(value = "一审人")

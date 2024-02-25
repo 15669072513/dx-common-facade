@@ -2,6 +2,7 @@ package com.dx.facade.report.service;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageResp;
+import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultIncomeRespDTO;
 import com.dx.facade.member.proxy.resp.ProxyRebateAuditResultRespDTO;
 import com.dx.facade.report.resp.report.proxy.UpdMemberAuditDetailIncomeParamDTO;
 import com.dx.facade.report.resp.report.proxy.*;
@@ -20,9 +21,9 @@ public interface ProxyIncomeService {
 
     CommonResp<Boolean> auditLock(List<String> idList, Long headerMerchantId, Long headerUserId, String headerUserName, Integer lockStatus, Integer lockType);
 
-    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyIncomeRecordAuditBatchPass(ProxyRebateDealAuditIncomeReqDTO reqDTO);
+    CommonResp<List<ProxyRebateAuditResultIncomeRespDTO>> proxyIncomeRecordAuditBatchPass(ProxyRebateDealAuditIncomeReqDTO reqDTO);
 
-    CommonResp<List<ProxyRebateAuditResultRespDTO>> proxyIncomeRecordAuditBatchRefuse(ProxyRebateDealAuditIncomeReqDTO reqDTO);
+    CommonResp<List<ProxyRebateAuditResultIncomeRespDTO>> proxyIncomeRecordAuditBatchRefuse(ProxyRebateDealAuditIncomeReqDTO reqDTO);
 
     FundsAuditIncomeDetailResp incomeDetail(UpdMemberAuditDetailIncomeParamDTO param);
 
