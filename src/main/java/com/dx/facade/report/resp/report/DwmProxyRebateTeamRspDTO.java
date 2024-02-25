@@ -31,7 +31,7 @@ public class DwmProxyRebateTeamRspDTO {
     private Long proxyId;
     @ApiModelProperty("代理")
     private String proxyName;
-    @ApiModelProperty("状态(2-待发放 3-已发放 5-无收益 6-已取消)")
+    @ApiModelProperty("状态(1-待发放 3-已发放 5-无收益 6-已取消)")
     private int payoutStatus;
     @ApiModelProperty("德州-俱乐部个人返点")
     protected BigDecimal clubRebateAmount = BigDecimal.ZERO;

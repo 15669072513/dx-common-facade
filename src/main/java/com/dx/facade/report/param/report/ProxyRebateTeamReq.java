@@ -24,14 +24,14 @@ public class ProxyRebateTeamReq {
     @ApiModelProperty(value = "结算周期结束日期", example = "20231221")
     private String cycleEndDate;
 
-    @ApiModelProperty(value = "状态(0-全部 2-待发放 3-已发放 5-无收益 6-已取消)", example = "0")
+    @ApiModelProperty(value = "状态(0-全部 1-待发放 3-已发放 5-无收益 6-已取消)", example = "0")
     private Integer payoutStatus;
 
     @ApiModelProperty(value = "代理ID")
     private Long proxyId;
 
     @ApiModelProperty(value = "总代理ID")
-    private Long topProxyId;
+    private Long parentProxyId;
 
     @ApiModelProperty(value = "当前页,默认第1页", required = true, example = "1")
     @Min(value = 1, message = "当前页最小值不能小于1")
