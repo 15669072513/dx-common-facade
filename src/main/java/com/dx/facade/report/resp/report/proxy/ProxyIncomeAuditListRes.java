@@ -84,11 +84,35 @@ public class ProxyIncomeAuditListRes {
     @ApiModelProperty("发放时间")
     private Date payoutTime;
 
+
+    @ApiModelProperty(value = "一审人")
+    private String audit1Operator;
+    @ApiModelProperty(value = "一审时间")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime audit1Time;
     @ApiModelProperty(value = "一审备注")
     private String audit1Desc;
+    @ApiModelProperty(value = "一审状态")
+    private Integer audit1Result;
+    @ApiModelProperty(value = "一审时长，秒，锁单到审核完毕的耗时")
+    private Integer audit1Cost;
 
+    @ApiModelProperty(value = "二审人")
+    private String audit2Operator;
+    @ApiModelProperty(value = "二审时间")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime audit2Time;
     @ApiModelProperty(value = "二审备注")
     private String audit2Desc;
+    @ApiModelProperty(value = "二审状态")
+    private Integer audit2Result;
+    @ApiModelProperty(value = "二审时长，秒，锁单到审核完毕的耗时")
+    private Integer audit2Cost;
 
+    private Integer version;
 
+    private Long proxyId;
+    private Long merchantId;
 }

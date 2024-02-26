@@ -17,9 +17,9 @@ import java.util.List;
  */
 public interface ProxyIncomeService {
 
-    CommonResp<PageResp<ProxyIncomeAuditListRes, Object>> getProxyIncomeAuditList(ProxyIncomeAuditListReq reqDTO);
-
     CommonResp<Boolean> auditLock(List<String> idList, Long headerMerchantId, Long headerUserId, String headerUserName, Integer lockStatus, Integer lockType);
+
+    CommonResp<PageResp<ProxyIncomeAuditListRes, Object>> getProxyIncomeAuditList(ProxyIncomeAuditListReq reqDTO);
 
     CommonResp<List<ProxyRebateAuditResultIncomeRespDTO>> proxyIncomeRecordAuditBatchPass(ProxyRebateDealAuditIncomeReqDTO reqDTO);
 

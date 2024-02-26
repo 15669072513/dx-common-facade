@@ -36,8 +36,8 @@ public class ProxyIncomeAuditListReq  {
     @ApiModelProperty("实发收益最小值")
     private BigDecimal minIncomeAmount;
 
-    @ApiModelProperty("审核状态 0-待一审 1-一审拒绝 2-待二审 3-二审拒绝 4-二审通过")
-    private Integer auditStatus;
+    @ApiModelProperty("审核状态  1-一审拒绝  3-二审拒绝 4-二审通过")
+    private List<Integer> auditStatus;
 
     @ApiModelProperty("客户端状态 1:待发放 3：已发放 5：无收益 6：已取消")
     private List<Integer> payoutStatusList;
