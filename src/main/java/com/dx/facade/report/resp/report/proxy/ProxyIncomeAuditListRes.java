@@ -110,4 +110,6 @@ public class ProxyIncomeAuditListRes {
     private Integer audit2Result;
     @ApiModelProperty(value = "二审时长，秒，锁单到审核完毕的耗时")
     private Integer audit2Cost;
+
+    private Integer version;
 }
