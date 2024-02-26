@@ -1,31 +1,15 @@
 package com.dx.facade.member.service;
 
-import com.dx.facade.member.param.UpdateProxyBankChannelStatusParamDTO;
+import com.dx.facade.member.param.*;
+
 import java.util.List;
 
 import com.dx.entity.CommonResp;
 import com.dx.entity.PageReq;
 import com.dx.entity.PageResp;
 import com.dx.exception.BizException;
-import com.dx.facade.member.param.GetProxyPathByUserNameParamDTO;
-import com.dx.facade.member.param.JoinCodeIsRepeatParamDTO;
-import com.dx.facade.member.param.UserBindMobileOrEmailDTO;
-import com.dx.facade.member.param.ProxyInfoParamDTO;
-import com.dx.facade.member.param.ProxyInfoRpcEditReqDTO;
-import com.dx.facade.member.param.ProxyListPageParamDTO;
-import com.dx.facade.member.param.ProxyQueryParamDTO;
-import com.dx.facade.member.param.ProxyTreeLinkParamDTO;
-import com.dx.facade.member.param.ProxyTreeParamDTO;
-import com.dx.facade.member.param.QueryProxyCommissionSettleCycleParamDTO;
-import com.dx.facade.member.param.UpdatePassWordParamDTO;
-import com.dx.facade.member.param.UpdateProxyCommissionSettleCycleParamDTO;
-import com.dx.facade.member.param.UpdateProxyLockStatusParamDTO;
-import com.dx.facade.member.param.UpdateProxyPasswordParamDTO;
 import com.dx.facade.member.proxy.resp.ProxyBaseInfoRespDTO;
-import com.dx.facade.member.resp.ProxyAndMemberTreeRespDTO;
-import com.dx.facade.member.resp.ProxyCommissionSettleCycleRespDTO;
-import com.dx.facade.member.resp.ProxyInfoRespDTO;
-import com.dx.facade.member.resp.ProxyTreeRespDTO;
+import com.dx.facade.member.resp.*;
 
 import io.swagger.annotations.ApiModelProperty;
 
@@ -274,4 +258,14 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<List<ProxyInfoRespDTO>> getProxyByProxyIds(List<Long> proxyIds);
+
+    /**
+     * @author Dealer
+     * @description: 根据姓名批量查询
+     * @date 2024/2/26
+     * @copyright
+     */
+    CommonResp<List<ProxyInfoRespDTO>> proxyListByName(ProxyListParamDTO paramDTO);
+
+    CommonResp<List<TopProxyInfoRespDTO>> batchTopProxy(ProxyListParamDTO paramDTO);
 }
