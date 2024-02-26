@@ -401,6 +401,7 @@ public enum ProxyWalletChange implements IWalletChange {
         */
 
         list.add(v1_61_proxy_profit_pay_by_platform);
+        list.add(v1_61_proxy_profit_loss);
         list.add(v1_61_proxy_profit_adjust_add);
         list.add(v1_61_proxy_profit_adjust_sub);
         return list;
