@@ -82,7 +82,9 @@ public class ProxyIncomeAuditListRes {
     private Integer payoutStatus;
 
     @ApiModelProperty("发放时间")
-    private Date payoutTime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    private LocalDateTime payoutTime;
 
 
     @ApiModelProperty(value = "一审人")
