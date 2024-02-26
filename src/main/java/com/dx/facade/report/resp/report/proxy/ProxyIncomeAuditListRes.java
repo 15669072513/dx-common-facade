@@ -112,4 +112,7 @@ public class ProxyIncomeAuditListRes {
     private Integer audit2Cost;
 
     private Integer version;
+
+    private Long proxyId;
+    private Long merchantId;
 }
