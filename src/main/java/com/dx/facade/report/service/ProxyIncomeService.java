@@ -28,4 +28,6 @@ public interface ProxyIncomeService {
     FundsAuditIncomeDetailResp incomeDetail(UpdMemberAuditDetailIncomeParamDTO param);
 
     FundsAuditInfoDetailResp auditDetail(UpdMemberAuditDetailIncomeParamDTO param);
+
+    Integer countToAuditRecordByMerchantId(Long merchantId);
 }
