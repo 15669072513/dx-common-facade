@@ -120,6 +120,8 @@ public enum ProxyChangeType implements IChangeType {
     v1_61_proxy_profit_adjust_add(132, "代理加额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_sub(133, "代理扣额调整", ProxyBizType.v1_61_proxy_profit.code().toString()),
+    //代理收益为负时产生账变，扣除现金余额，如果现金钱包不够扣款时支持扣到负数
+    v1_61_proxy_profit_loss(134, "代理收入亏损", ProxyBizType.v1_61_proxy_profit.code().toString()),
 
     illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 
