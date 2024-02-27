@@ -192,7 +192,7 @@ public class WalletDetailRespDTO {
     private Integer businessModel;
 
     @ApiModelProperty(value = "顶级代理信息")
-    private String topProxy;
+    private String topProxyName;
 
 
 }
