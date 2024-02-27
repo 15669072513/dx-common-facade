@@ -65,6 +65,19 @@ public enum MemberBizType implements IBizType {
     ty_appointment_touzhu(125, "体育用户预约下注", "1"),
     ty_appointment_touzhu_cancel(126, "体育用户预约投注取消", "1"),
     //***************体育单一钱包账变类************end*********
+
+    //***************电竞单一钱包账变类************start*********
+    dj_touzhu(127, "电竞投注", "1"),
+    dj_paijiang(128, "电竞派奖", "1"),
+    dj_chehuipaijiang(129, "电竞撤回派奖", "1"),
+    dj_other_add(130, "电竞其他加款", "1"),
+    dj_other_sub(131, "电竞其他扣款", "1"),
+    //***************电竞单一钱包账变类************end*********
+    //***************棋牌单一钱包账变类************start*********
+    qp_touzhu(132, "棋牌投注", "1"),
+    qp_settlement(133, "棋牌结算", "1"),
+    //***************棋牌单一钱包账变类************end*********
+
     ;
 
     private Integer code;
