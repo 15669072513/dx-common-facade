@@ -31,6 +31,12 @@ public class RebateRateListRespDTO extends BaseRebateRateRespDTO implements Seri
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("返点比例ID")
+    private Long rebateRateId;
+    
+    @ApiModelProperty("占成比例ID")
+    private Long zhanchengRateId;
+    
     @ApiModelProperty("ID")
     private Long id;
     
