@@ -45,6 +45,8 @@ public class ProxyIncomeAuditListReq  {
     @ApiModelProperty("代理账号")
     private String proxyName;
 
+    @ApiModelProperty("代理层级")
+    private Integer proxyLevel;
     /**
      * 周期起始日期
      */
