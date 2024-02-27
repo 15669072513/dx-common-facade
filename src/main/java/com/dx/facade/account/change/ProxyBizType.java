@@ -1,7 +1,5 @@
 package com.dx.facade.account.change;
 
-import com.dx.exception.BizException;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -117,6 +115,7 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_1_withdraw.code, v2_1_withdraw);
         code2Enum.put(v2_1_proxy_commission.code, v2_1_proxy_commission);
         code2Enum.put(v1_50_proxy_divination.code, v1_50_proxy_divination);
+        code2Enum.put(v1_61_proxy_profit.code, v1_61_proxy_profit);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;
