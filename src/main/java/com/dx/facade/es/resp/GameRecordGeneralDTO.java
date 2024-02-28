@@ -176,6 +176,10 @@ public class GameRecordGeneralDTO {
     private String platformName;
     @ApiModelProperty("牌局Id")
     private String roundId;
+    @ApiModelProperty("房间类型(1:初级,2:中级)")
+    private Integer roomType;
+    @ApiModelProperty("游戏房间")
+    private String gameRoom;
 
     @ApiModelProperty("重算次数")
     private Integer obSettleCount;
