@@ -65,4 +65,47 @@ public class BaseRebateRateRespDTO implements Serializable {
     
     @ApiModelProperty("电竞占成比例")
     private BigDecimal esportsZhancheng;
+
+
+    public void convertNullToZero(){
+        if (texasRebate == null) {
+            texasRebate = BigDecimal.ZERO;
+        }
+        if (texasInsuranceRebate == null) {
+            texasInsuranceRebate = BigDecimal.ZERO;
+        }
+        if (actualPersonRebate == null) {
+            actualPersonRebate = BigDecimal.ZERO;
+        }
+        if (sportsRebate == null) {
+            sportsRebate = BigDecimal.ZERO;
+        }
+        if (lotteryTicketRebate == null) {
+            lotteryTicketRebate = BigDecimal.ZERO;
+        }
+        if (chessRebate == null) {
+            chessRebate = BigDecimal.ZERO;
+        }
+        if (esportsRebate == null) {
+            esportsRebate = BigDecimal.ZERO;
+        }
+        if (texasInsuranceZhancheng == null) {
+            texasInsuranceZhancheng = BigDecimal.ZERO;
+        }
+        if (actualPersonZhancheng == null) {
+            actualPersonZhancheng = BigDecimal.ZERO;
+        }
+        if (sportsZhancheng == null) {
+            sportsZhancheng = BigDecimal.ZERO;
+        }
+        if (lotteryTicketZhancheng == null) {
+            lotteryTicketZhancheng = BigDecimal.ZERO;
+        }
+        if (chessZhancheng == null) {
+            chessZhancheng = BigDecimal.ZERO;
+        }
+        if (esportsZhancheng == null) {
+            esportsZhancheng = BigDecimal.ZERO;
+        }
+    }
 }
