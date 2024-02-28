@@ -33,6 +33,12 @@ public class MemberRebateRateListRespDTO extends BaseMemberRebateRateRespDTO imp
     @ApiModelProperty("ID")
     private Long id;
     
+    @ApiModelProperty("代理发放比例ID")
+    private Long proxyRateId;
+    
+    @ApiModelProperty("平台发放比例ID")
+    private Long platformRateId;
+    
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
