@@ -49,9 +49,9 @@ public class ProxyRebateTeamRespV2 {
     private BigDecimal serviceChargeRound;
 
     /**
-     * 局服务费
+     * 服务费
      */
-    @ApiModelProperty(value = "局服务费")
+    @ApiModelProperty(value = "服务费")
     private BigDecimal serviceAmount;
 
     /**
@@ -69,7 +69,7 @@ public class ProxyRebateTeamRespV2 {
     /**
      * 局服务费贡献
      */
-    @ApiModelProperty(value = "局服务费贡献")
+    @ApiModelProperty(value = "服务费贡献")
     private BigDecimal serviceAmountContribution;
 
 }
