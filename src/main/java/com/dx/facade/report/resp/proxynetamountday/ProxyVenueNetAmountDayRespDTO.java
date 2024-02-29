@@ -84,6 +84,15 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty("直属会员返水其他调整金额")
     private BigDecimal directMemberArtificialPatchAmount;
 
+    @ApiModelProperty("服务费-手牌")
+    private BigDecimal serviceChargeHand;
+
+    @ApiModelProperty("服务费-局抽")
+    private BigDecimal serviceChargeRound;
+
+    @ApiModelProperty(value = "服务费贡献")
+    private BigDecimal serviceAmount;
+
     @ApiModelProperty(value = "代理名称")
     private String proxyName;
 

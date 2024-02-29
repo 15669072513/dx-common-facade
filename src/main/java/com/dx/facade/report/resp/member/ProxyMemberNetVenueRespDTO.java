@@ -57,4 +57,22 @@ public class ProxyMemberNetVenueRespDTO {
 
     @ApiModelProperty("代理返水金额")
     private BigDecimal proxyRebateAmount;
+
+    @ApiModelProperty(value = "服务费-手牌", example = "1500.00")
+    private BigDecimal serviceChargeHand = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-局抽", example = "1500.00")
+    private BigDecimal serviceChargeRound = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费贡献", example = "1500.00")
+    private BigDecimal serviceAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("不包含德州的有效投注")
+    private BigDecimal validBetAmountNoDx = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有的游戏盈亏")
+    private BigDecimal netAmountAll = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有计算的盈亏")
+    private BigDecimal netWinAmountAll = BigDecimal.ZERO;
 }

@@ -18,6 +18,9 @@ public class DxGamePersonalReq implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
+    @ApiModelProperty("当前用户id")
+    private Long currentUserId;
+
     @ApiModelProperty("用户id")
     private Long userId;
 

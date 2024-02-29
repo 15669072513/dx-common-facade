@@ -6,7 +6,8 @@ import lombok.Data;
 import java.math.BigDecimal;
 
 @Data
-public class DwmMemberRebatePersonDataV2RespDTO {
+public class
+DwmMemberRebatePersonDataV2RespDTO {
 
     /**
      * 返水类型
@@ -37,4 +38,11 @@ public class DwmMemberRebatePersonDataV2RespDTO {
 
     @ApiModelProperty(value = "个人抽水贡献")
     private BigDecimal totalPumpContribution;
+
+    @ApiModelProperty(value = "团队手牌服务费")
+    private BigDecimal serviceChargeHand;
+    @ApiModelProperty(value = "团队相局服务费")
+    private BigDecimal serviceChargeRound;
+
+
 }

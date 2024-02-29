@@ -134,5 +134,8 @@ public class GameTableInfoListEsResp implements Serializable {
 
     @ApiModelProperty("是否删除（0 未删除 1已删除）")
     private Integer deleteFlag;
+
+    @ApiModelProperty("牌桌冻结服务费")
+    private BigDecimal tableFreezeFee = BigDecimal.ZERO;
 }
 

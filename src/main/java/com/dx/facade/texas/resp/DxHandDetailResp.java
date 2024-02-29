@@ -90,7 +90,7 @@ public class DxHandDetailResp implements Serializable {
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;
 
-    @ApiModelProperty("抽水金额")
+    @ApiModelProperty("手牌服务费")
     private BigDecimal pumpingAmount;
 
     @ApiModelProperty("会员输赢汇总")

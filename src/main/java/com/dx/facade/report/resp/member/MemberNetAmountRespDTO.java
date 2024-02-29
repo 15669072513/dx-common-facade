@@ -133,9 +133,14 @@ public class MemberNetAmountRespDTO {
     @ApiModelProperty(value = "会员盈利率")
     private BigDecimal netRate=BigDecimal.ZERO;
 
-    @ApiModelProperty(value = "其他调整")
+    @ApiModelProperty(value = "反水其他调整")
     private BigDecimal otherAdjustAmount = BigDecimal.ZERO;
 
+    @ApiModelProperty("服务费-手牌")
+    private BigDecimal serviceChargeHand;
+
+    @ApiModelProperty("服务费-局抽")
+    private BigDecimal serviceChargeRound;
     /**
      * 会员盈利率=投注盈亏/投注金额
      *

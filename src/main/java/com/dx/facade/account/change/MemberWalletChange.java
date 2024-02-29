@@ -52,6 +52,7 @@ public enum MemberWalletChange implements IWalletChange {
 
     bring_to_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_to_table, MemberAppType.bring_to_table, TransType.out, Constant.MEMBER),
     bring_out_table(WalletType.cash, MemberBizType.game, MemberChangeType.bring_out_table, MemberAppType.bring_out_table, TransType.in, Constant.MEMBER),
+    bring_out_table_fee(WalletType.cash, MemberBizType.game, MemberChangeType.bring_out_table, MemberAppType.bring_out_table, TransType.in, Constant.MEMBER),
 
 
     //*******************V2需求会员账变明细****************
@@ -137,17 +138,17 @@ public enum MemberWalletChange implements IWalletChange {
     //会员取款成功
     v2_1_withdraw_success(WalletType.cash_lock, MemberBizType.v2_1_withdraw, MemberChangeType.v2_1_withdraw, MemberAppType.v2_1_withdraw, TransType.out, Constant.MEMBER),
     //中控后台可以在返水上给会员增加金额
-    v2_1_club_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    v2_1_club_rebate_add(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
     //中控后台可以在返水上给会员增加金额
-    v2_1_insure_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    v2_1_insure_rebate_add(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
     //中控后台可以在返水上给会员增加金额
-    v2_1_rebate_add(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
+    v2_1_rebate_add(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_add, MemberAppType.v2_rebate, TransType.in, Constant.MEMBER),
     //中控后台可以在返水上给会员扣减金额
-    v2_1_club_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    v2_1_club_rebate_sub(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_1_club_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
     //中控后台可以在返水上给会员扣减金额
-    v2_1_insure_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    v2_1_insure_rebate_sub(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_1_insure_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
     //中控后台可以在返水上给会员扣减金额
-    v2_1_rebate_sub(WalletType.cash,MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
+    v2_1_rebate_sub(WalletType.cash, MemberBizType.rebate, MemberChangeType.v2_rebate_sub, MemberAppType.v2_rebate, TransType.out, Constant.MEMBER),
 
     //v3_cash_deposit_by_official(WalletType.cash, MemberBizType.up_score, MemberChangeType.v3_cash_deposit_by_official, MemberAppType.v2_cash_up_score, TransType.in, Constant.MEMBER),
     //v3_cash_withdraw_by_official(WalletType.cash, MemberBizType.down_score, MemberChangeType.v3_cash_withdraw_by_official, MemberAppType.v2_cash_down_score, TransType.out, Constant.MEMBER),
@@ -200,7 +201,7 @@ public enum MemberWalletChange implements IWalletChange {
     v1_52_offline_settle_up_score(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_offline_settle_up_score, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
     v1_52_other_adjust(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_other_adjust, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
 
-    ;
+    table_serve_fee(WalletType.cash, MemberBizType.texas_club_serve_fee, MemberChangeType.table_serve_fee, MemberAppType.texas_club_serve_fee, TransType.out, Constant.MEMBER);
 
     private IWalletType walletType;
     private IBizType bizType;
@@ -356,6 +357,7 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v1_52_third_order_lost_compensate);
         list.add(v1_52_offline_settle_up_score);
         list.add(v1_52_other_adjust);
+        list.add(table_serve_fee);
         return list;
     }
 
