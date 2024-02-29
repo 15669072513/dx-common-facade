@@ -82,6 +82,6 @@ public class ProxyRebateStatisticsRespDTO{
     private BigDecimal serviceChargeRoundContribution;
 
     @ApiModelProperty(value = "德州俱乐部服务费贡献")
-    private BigDecimal dxClubServiceAmountContribution;
+    private BigDecimal serviceAmountContribution;
 
 }
