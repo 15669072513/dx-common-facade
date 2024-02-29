@@ -47,13 +47,13 @@ public class IncomeDetailResp implements Serializable {
     /**
      * 返点金额(团队)
      */
-    @ApiModelProperty(value = "团队返点金额（团队分成）", example = "1500.00")
+    @ApiModelProperty(value = "团队返点金额（团队占成金额）", example = "1500.00")
     private BigDecimal rebateAmount = BigDecimal.ZERO;
 
     /**
      * 下级返点金额
      */
-    @ApiModelProperty(value = "下级返点金额（下级分成）", example = "1500.00")
+    @ApiModelProperty(value = "下级返点金额（下级分成）-- 直属代理团队返点金额（直属代理团队占成金额）", example = "1500.00")
     private BigDecimal childRebateAmount = BigDecimal.ZERO;
 
     /**
@@ -71,7 +71,7 @@ public class IncomeDetailResp implements Serializable {
     /**
      * 应发返点/应发盈亏分成
      */
-    @ApiModelProperty(value = "实际返点（实际分成）", example = "1500.00")
+    @ApiModelProperty(value = "实际返点（实际分成）--实际应发个人返点金额（实际应发个人占成金额）", example = "1500.00")
     private BigDecimal incomeAmount = BigDecimal.ZERO;
 
     /**
