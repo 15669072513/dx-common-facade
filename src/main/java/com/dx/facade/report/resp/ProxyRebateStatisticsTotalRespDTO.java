@@ -41,12 +41,21 @@ public class ProxyRebateStatisticsTotalRespDTO {
     @ApiModelProperty(value = "有效投注")
     private BigDecimal totalValidBetAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("服务费-手牌")
+    @ApiModelProperty("手牌服务费")
     private BigDecimal serviceChargeHand;
 
-    @ApiModelProperty("服务费-局抽")
+    @ApiModelProperty("局抽服务费")
     private BigDecimal serviceChargeRound;
 
-    @ApiModelProperty(value = "德州俱乐部服务费贡献")
+    @ApiModelProperty(value = "德州俱乐部服务费")
     private BigDecimal dxClubServiceAmount;
+
+    @ApiModelProperty("手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution;
+
+    @ApiModelProperty("局抽服务费贡献")
+    private BigDecimal serviceChargeRoundContribution;
+
+    @ApiModelProperty(value = "德州俱乐部服务费贡献")
+    private BigDecimal dxClubServiceAmountContribution;
 }
