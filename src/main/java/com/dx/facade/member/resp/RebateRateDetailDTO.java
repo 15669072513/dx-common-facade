@@ -32,7 +32,7 @@ public class RebateRateDetailDTO  implements Serializable {
 
     @ApiModelProperty("商户Id")
     private Long merchantId;
-    
+
     @ApiModelProperty("用户Id")
     private Long userId;
 
@@ -57,8 +57,8 @@ public class RebateRateDetailDTO  implements Serializable {
     @ApiModelProperty("团队占成比例")
     private RebateRateDTO profitRateDTO;
 
-    @ApiModelProperty("团队返点比例")
-    private RebateRateDTO plateformRateDTO;
+    @ApiModelProperty("平台默认会员返水")
+    private RebateRateDTO plateformDefaultDTO;
 
     public  static RebateRateDTO toRebateRateDTO(RebateRateRespDTO source){
         RebateRateDTO dest =  new RebateRateDTO();

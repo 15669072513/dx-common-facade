@@ -166,7 +166,7 @@ public enum ConfigKeyEnum {
     PLATFORM_ESPORTS_REBATE_RATE_LIMIT("platform.esports.rebate.rate.limit", "1"),
 
     /**
-     * 返佣模式下，仅对团队所有会员生效,包括平台发放和代理发放
+     * 返佣模式下，仅对团队所有会员生效,包括平台发放和代理发放  弃用
      */
     COMMISSION_TEXAS_REBATE_RATE_LIMIT("texas.club.member.rebate","1"),
     COMMISSION_ACTUAL_PERSON_REBATE_RATE_LIMIT("zr.member.rebate","1"),
@@ -175,17 +175,19 @@ public enum ConfigKeyEnum {
     COMMISSION_CHESS_REBATE_RATE_LIMIT("qp.member.rebate","1"),
     COMMISSION_ESPORTS_REBATE_RATE_LIMIT("dj.member.rebate","1"),
     COMMISSION_TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.member.rebate", "1"),
-    
+
     /** 代理团队所有场馆占成比率上限 */
     ZHANCHNEG_RATE_LIMIT("zhancheng.rate.limit","1"),
 
     //
     /**
-     * 返佣模式下 代理返佣比例上限
+     * 返佣模式下 代理返佣比例上限  弃用
      */
     TEXAS_COMMISSION_RATE_LIMIT("texas.commission.rate.limit", "1"),
     TEXAS_INSURANCE_COMMISSION_RATE_LIMIT("texas.insurance.commission.rate.limit", "1"),
     OTHER_COMMISSION_RATE_LIMIT("other.commission.rate.limit", "1"),
+
+
     ////// OB旗舰精简优化
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBDJ("deposit.usdt.protocol.address.obdj", "1"),
     DEPOSIT_USDT_PROTOCOL_ADDRESS_OBQJ("deposit.usdt.protocol.address.obqj", "1"),
@@ -265,9 +267,9 @@ public enum ConfigKeyEnum {
     MESSAGE_PROXY_SUB_CONTRACT_ACCEPT("message.proxy.sub.contract.accept", "1"),
     MESSAGE_PROXY_ADD_MEMBER("message.proxy.add.member", "1"),//新增下级会员通知
 
-    MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"), //团队返佣比例调整通知
-    MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),//团队返佣比例已配置通知
-    MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),//返佣奖励发放通知
+    MESSAGE_PROXY_CONMMISSION_CONOTRACT("message.proxy.conmmission.contract", "1"), //团队返佣比例调整通知 弃用
+    MESSAGE_PROXY_MY_COMMISSION_CONTRACT("message.proxy.my.commission.contract", "1"),//团队返佣比例已配置通知 弃用
+    MESSAGE_PROXY_COMMISSION_BONUS("message.proxy.commission.bonus", "1"),//返佣奖励发放通知 弃用
 
     MESSAGE_PROXY_MY_CONTRACT("message.proxy.my.contract", "1"),//返点比例已设置
     MESSAGE_PROXY_REBATE_CONTRACT_ADJUST("message.proxy.rebate.contract.adjust", "1"),//返点比例调整
@@ -342,7 +344,7 @@ public enum ConfigKeyEnum {
     CMS_VALID_TIME("cms.valid.time","1"),
     /** 短信验证码默认过期时间*/
     CMS_DEFAULT_COUNTDOWN("cms.default.countdown","1"),
-    
+
     PROXY_LEVEL_LIMIT("proxy.level.limit","1"),
 	;
 
