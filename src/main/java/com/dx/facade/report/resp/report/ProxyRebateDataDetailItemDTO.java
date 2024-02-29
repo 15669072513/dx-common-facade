@@ -26,4 +26,11 @@ public class ProxyRebateDataDetailItemDTO {
     @ApiModelProperty("局服务费贡献")
     private BigDecimal serviceChargeRound;
 
+    @ApiModelProperty(value = "手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution;
+    @ApiModelProperty(value = "局服务费贡献")
+    private BigDecimal serviceChargeRoundContribution;
+    @ApiModelProperty(value = "总计局服务费贡献")
+    private BigDecimal serviceAmountContribution;
+
 }
