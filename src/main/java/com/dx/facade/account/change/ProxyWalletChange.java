@@ -226,18 +226,19 @@ public enum ProxyWalletChange implements IWalletChange {
             ProxyChangeType.v1_61_proxy_receive_sub_proxy_debt_repay, ProxyAppType.v1_61_debt_repay, TransType.in),
    */
 
-    //收益审核通过平台支付给代理的金额
-    v1_61_proxy_profit_pay_by_platform(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_pay_by_platform, ProxyAppType.v1_61_income, TransType.in),
     //代理收益为负时产生账变，扣除现金余额，如果现金钱包不够扣款时支持扣到负数
     v1_61_proxy_profit_loss(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_loss, ProxyAppType.v1_61_income, TransType.out),
+    //收益审核通过支付给代理的金额
+    v1_61_proxy_profit_pay_by_platform(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
+            ProxyChangeType.v1_61_proxy_profit_pay_by_platform, ProxyAppType.v1_61_income, TransType.in),
+    //代理收收益人工扣额调整
+    v1_61_proxy_profit_adjust_sub(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
+            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_add(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_adjust_add, ProxyAppType.v1_61_income_adjust, TransType.in),
-    //代理收收益人工加额调整
-    v1_61_proxy_profit_adjust_sub(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out);
+    ;
 
 
     private IWalletType walletType;
