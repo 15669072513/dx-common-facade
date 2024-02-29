@@ -1,5 +1,7 @@
 package com.dx.facade.account.resp;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -24,6 +26,7 @@ public class WithdrawInfoRespDTO implements Serializable {
      * 会员代理ID
      */
     @ApiModelProperty(value = "")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long userId;
     /**
      * 用户类型:0-会员，1-代理

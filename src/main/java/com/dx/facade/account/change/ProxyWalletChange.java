@@ -200,7 +200,13 @@ public enum ProxyWalletChange implements IWalletChange {
     v3_credit_proxy_help_sub_member_credit_repay(WalletType.agent_credit_available, ProxyBizType.v2_repay, ProxyChangeType.v3_proxy_help_sub_member_credit_repay, ProxyAppType.v3_proxy_help_sub_member_credit_repay, TransType.out),
     //代理占成亏损分摊
     v1_50_proxy_to_loss_sharing_sub(WalletType.agent_cash, ProxyBizType.v1_50_proxy_divination, ProxyChangeType.v1_50_proxy_loss_sharing_sub, ProxyAppType.v1_50_proxy_loss_sharing, TransType.out),
-
+    //v1.52需求账变
+    v1_52_violation_fine(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_violation_fine, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_finance_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_finance_adjust, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_operate_adjust(WalletType.agent_cash,ProxyBizType.v2_withdraw, ProxyChangeType.v1_52_operate_adjust, ProxyAppType.v1_52_other_adjust, TransType.out),
+    v1_52_third_order_lost_compensate(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_third_order_lost_compensate, ProxyAppType.v1_52_other_adjust, TransType.in),
+    v1_52_offline_settle_up_score(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_offline_settle_up_score, ProxyAppType.v1_52_other_adjust, TransType.in),
+    v1_52_other_adjust(WalletType.agent_cash,ProxyBizType.v2_deposit, ProxyChangeType.v1_52_other_adjust, ProxyAppType.v1_52_other_adjust, TransType.in),
     ;
 
     private IWalletType walletType;
@@ -349,6 +355,12 @@ public enum ProxyWalletChange implements IWalletChange {
         list.add(v3_official_help_proxy_credit_repay);
         //代理占成亏损分摊
         list.add(v1_50_proxy_to_loss_sharing_sub);
+        list.add(v1_52_violation_fine);
+        list.add(v1_52_finance_adjust);
+        list.add(v1_52_operate_adjust);
+        list.add(v1_52_third_order_lost_compensate);
+        list.add(v1_52_offline_settle_up_score);
+        list.add(v1_52_other_adjust);
 
         return list;
     }

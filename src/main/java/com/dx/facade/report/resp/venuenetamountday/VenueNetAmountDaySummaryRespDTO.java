@@ -56,8 +56,14 @@ public class VenueNetAmountDaySummaryRespDTO {
     @ApiModelProperty("会员抽水分成")
     protected BigDecimal memberPumpPercentageAmount = BigDecimal.ZERO;
 
-    @ApiModelProperty("代理抽水分成")
+    @ApiModelProperty("代理抽水分成（返点+返佣）")
     protected BigDecimal proxyPumpPercentageAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("代理抽水分成（返点）")
+    protected BigDecimal dxProxyPumpPercentageAmountRebate = BigDecimal.ZERO;
+
+    @ApiModelProperty("代理抽水分成（返佣）")
+    protected BigDecimal dxProxyPumpPercentageAmountCommission = BigDecimal.ZERO;
 
     @ApiModelProperty("公司抽水分成")
     protected BigDecimal companyPumpPercentageAmount = BigDecimal.ZERO;

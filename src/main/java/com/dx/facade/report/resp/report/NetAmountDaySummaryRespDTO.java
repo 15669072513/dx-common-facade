@@ -99,17 +99,11 @@ public class NetAmountDaySummaryRespDTO {
     private BigDecimal serviceChargeRound = BigDecimal.ZERO;
     /**
      * 净盈亏 = 投注盈亏+反水盈亏+优惠金额+其他金额 CNY
-     *
+     * 20240221 净盈亏 直接在数据库读取
      * @return
      */
     public BigDecimal getNetProfit() {
-        if (Objects.isNull(netAmount)
-                || Objects.isNull(discountAmount)
-                || Objects.isNull(rebateAmount)
-                || Objects.isNull(artificialPatchAmount)) {
-            return null;
-        }
-        return netAmount.add(rebateAmount).add(discountAmount).add(artificialPatchAmount);
+       return netProfit;
     }
 
     public BigDecimal getNetProfiCNY() {

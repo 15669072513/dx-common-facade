@@ -95,6 +95,13 @@ public enum ProxyChangeType implements IChangeType {
     v3_proxy_help_sub_member_credit_repay(118, "代理帮会员信用还款", ProxyBizType.v2_repay.code().toString()),
     //V1.50代理占成亏损分摊
     v1_50_proxy_loss_sharing_sub(119, "代理占成亏损分摊", ProxyBizType.v1_50_proxy_divination.code().toString()),
+    //v1.52需求账变
+    v1_52_violation_fine(120, "违规扣款", ProxyBizType.v2_withdraw.code().toString()),
+    v1_52_finance_adjust(121, "财务调整", ProxyBizType.v2_withdraw.code().toString()),
+    v1_52_operate_adjust(122, "运营调整", ProxyBizType.v2_withdraw.code().toString()),
+    v1_52_third_order_lost_compensate(123, "三方掉单补分", ProxyBizType.v2_deposit.code().toString()),
+    v1_52_offline_settle_up_score(124, "线下结算上分", ProxyBizType.v2_deposit.code().toString()),
+    v1_52_other_adjust(125, "其他调整", ProxyBizType.v2_deposit.code().toString()),
 
     illegal_type(-1, "未知的类型", ProxyBizType.illegal_type.code().toString());
 
@@ -197,7 +204,14 @@ public enum ProxyChangeType implements IChangeType {
                 v3_proxy_help_sub_member_credit_repay,
                 v3_proxy_help_sub_proxy_credit_repay,
                 v3_parent_proxy_help_proxy_credit_repay,
-                v3_official_help_proxy_credit_repay
+                v3_official_help_proxy_credit_repay,
+                v1_52_violation_fine,
+                v1_52_finance_adjust,
+                v1_52_operate_adjust,
+                v1_52_third_order_lost_compensate,
+                v1_52_offline_settle_up_score,
+                v1_52_other_adjust,
+
                 /*
                 officer_proxy_up_score,
                 proxy_be_up_score,

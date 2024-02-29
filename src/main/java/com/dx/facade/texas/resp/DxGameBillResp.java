@@ -89,4 +89,15 @@ public class DxGameBillResp implements Serializable {
      * Walks手牌数
      */
     private Integer walksHandNumber;
+
+
+    /**
+     * 玩家手动带入
+     */
+    private BigDecimal bringInHandScore = BigDecimal.ZERO;
+
+    /**
+     * 玩家手动带出
+     */
+    private BigDecimal bringOutHandScore = BigDecimal.ZERO;
 }

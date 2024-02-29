@@ -33,5 +33,8 @@ public class DxPlayerConfigReq {
   private List<String> potRaiseList;
 
   @ApiModelProperty("加注拉杆确认 0-关闭 1-开启")
-  private Integer betPullSwitch=0;
+  private Integer betPullSwitch;
+
+  @ApiModelProperty("自动补码 0-关闭 1-开启")
+  private Integer autoComplement;
 }

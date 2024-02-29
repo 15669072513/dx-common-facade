@@ -16,11 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 public class MemberLoginLogParam extends PageRequest {
     @ApiModelProperty(value = "日志ID")
-    //@NotNull(message = "商户ID不能为空")
     private Long logId;
 
     @ApiModelProperty(value = "商户ID")
-    //@NotNull(message = "商户ID不能为空")
     private Long merchantId;
 
     @ApiModelProperty(value = "商户id", hidden = true)
@@ -37,12 +35,10 @@ public class MemberLoginLogParam extends PageRequest {
     private String userName;
 
     @ApiModelProperty(value = "登录开始时间(20)",required = true)
-    //@NotBlank
     //@Pattern(regexp = MerchantConstant.REG_YYYY_MM_DD_HH_MM_SS, message = "时间格式不正确 示例：2021-05-05 00:00:00")
     private String loginStartTime;
 
     @ApiModelProperty(value = "登录结束时间(20)",required = true)
-    //@NotBlank
     //@Pattern(regexp = MerchantConstant.REG_YYYY_MM_DD_HH_MM_SS, message = "时间格式不正确 示例：2021-05-05 00:00:00")
     private String loginEndTime;
 //
@@ -73,6 +69,9 @@ public class MemberLoginLogParam extends PageRequest {
 
     @ApiModelProperty("登录设备号")
     private String deviceNo;
+    
+    @ApiModelProperty("是否来自中控后台统计查询")
+    private Boolean isQueryCount;
 //
 //    @ApiModelProperty(value = "应用终端,1:OB旗舰 2:美播真人")
 //    private Integer appId;

@@ -34,7 +34,7 @@ public class DwmMemberNetTopRspDTO {
     private String topProxyName = "";
     @ApiModelProperty("授信额度")
     protected BigDecimal creditQuota = BigDecimal.ZERO;
-    @ApiModelProperty("今日借款")
+    @ApiModelProperty("借款金额")
     protected BigDecimal loanAmount = BigDecimal.ZERO;
     @ApiModelProperty("游戏场馆")
     protected String venueName = "";
@@ -44,7 +44,7 @@ public class DwmMemberNetTopRspDTO {
     protected BigDecimal maxBetAmount = BigDecimal.ZERO;
     @ApiModelProperty("历史返水")
     protected BigDecimal hisRebateAmount = BigDecimal.ZERO;
-    @ApiModelProperty("当日输赢")
+    @ApiModelProperty("投注盈亏")
     protected BigDecimal netAmount = BigDecimal.ZERO;
     @ApiModelProperty("历史输赢")
     protected BigDecimal hisNetAmount = BigDecimal.ZERO;

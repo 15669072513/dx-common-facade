@@ -63,6 +63,12 @@ public class ProxyMemberNetRespDTO {
     @ApiModelProperty(value = "服务费-局抽", example = "1500.00")
     private BigDecimal serviceChargeRound = BigDecimal.ZERO;
 
+    @ApiModelProperty(value = "手牌服务费贡献", example = "1500.00")
+    private BigDecimal serviceChargeHandContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "局抽服务费贡献", example = "1500.00")
+    private BigDecimal serviceChargeRoundContribution = BigDecimal.ZERO;
+
     @ApiModelProperty(value = "德州俱乐部服务费贡献", example = "1500.00")
     private BigDecimal dxClubServiceAmount = BigDecimal.ZERO;
 

@@ -27,8 +27,10 @@ public class MembershipBillingDetailsDTO {
     @ApiModelProperty("bill_id")
     private String billId;
     @ApiModelProperty("商户id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long merchantId;
     @ApiModelProperty("用户ID")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long userId;
     @ApiModelProperty("用户名称")
     private String userName;

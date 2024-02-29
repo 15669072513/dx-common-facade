@@ -82,7 +82,7 @@ public class HelpCreditRepayRecordParam implements Serializable {
 
     @Builder.Default
     @ApiModelProperty("被操作人[代理]钱包类型 - 17:现金钱包，18:信用钱包")
-    private Integer agentWalletType = WalletType.credit_available.code();
+    private Integer agentWalletType = WalletType.agent_credit_available.code();
 
     @ApiModelProperty("被操作人[代理]业务类型 - 37:还款")
     private Integer agentBizType;
