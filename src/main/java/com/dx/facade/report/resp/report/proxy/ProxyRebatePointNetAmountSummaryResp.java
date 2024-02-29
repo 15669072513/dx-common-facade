@@ -106,6 +106,9 @@ public class ProxyRebatePointNetAmountSummaryResp {
     @ApiModelProperty(value = "直属服务费-局抽贡献", example = "1500.00")
     private BigDecimal directlyServiceChargeRoundContribution = BigDecimal.ZERO;
 
+    @ApiModelProperty(value = "直属服务费-手牌贡献", example = "1500.00")
+    private BigDecimal directlyServiceChargeHandContribution = BigDecimal.ZERO;
+
     @ApiModelProperty(value = "服务费-局抽贡献", example = "1500.00")
     private BigDecimal serviceChargeRoundContribution = BigDecimal.ZERO;
 
