@@ -176,15 +176,27 @@ public class DwmCommissionDetailProxyDDTO implements Serializable {
     /**
      * 手牌服务费贡献
      */
-    @ApiModelProperty(value = "手牌服务费贡献")
+    @ApiModelProperty(value = "手牌服务费")
     private BigDecimal serviceChargeHand;
 
     /**
      * 局服务费贡献
      */
-    @ApiModelProperty(value = "局服务费贡献")
+    @ApiModelProperty(value = "局服务费")
     private BigDecimal serviceChargeRound;
 
-    @ApiModelProperty(value = "团队服务贡献")
+    @ApiModelProperty(value = "团队服务")
     private BigDecimal teamServiceAmount;
+
+    @ApiModelProperty(value = "手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution;
+
+    /**
+     * 局服务费贡献
+     */
+    @ApiModelProperty(value = "局服务费贡献")
+    private BigDecimal serviceChargeRoundContribution;
+
+    @ApiModelProperty(value = "团队服务贡献")
+    private BigDecimal serviceAmountContribution;
 }

@@ -90,8 +90,17 @@ public class ProxyVenueNetAmountDayRespDTO {
     @ApiModelProperty("服务费-局抽")
     private BigDecimal serviceChargeRound;
 
-    @ApiModelProperty(value = "服务费贡献")
+    @ApiModelProperty(value = "服务费")
     private BigDecimal serviceAmount;
+
+    @ApiModelProperty(value = "服务费-局抽贡献")
+    private BigDecimal serviceChargeRoundContribution;
+
+    @ApiModelProperty(value = "服务费-手牌贡献")
+    private BigDecimal serviceChargeHandContribution;
+
+    @ApiModelProperty(value = "服务费贡献")
+    private BigDecimal serviceAmountContribution;
 
     @ApiModelProperty(value = "代理名称")
     private String proxyName;
