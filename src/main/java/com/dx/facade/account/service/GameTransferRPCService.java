@@ -5,6 +5,7 @@ import com.dx.exception.BizException;
 import com.dx.facade.account.param.TransferToGameParamDTO;
 
 import com.dx.facade.account.req.WalletBalanceDTO;
+import com.dx.facade.account.resp.GameOrderInfoRespDTO;
 import com.dx.facade.account.resp.WalletRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
@@ -52,5 +53,13 @@ public interface GameTransferRPCService {
      * @throws BizException
      */
     CommonResp<Boolean> upScoreReqSucceed(String serialNo) throws BizException;
+
+    /**
+     * 跟进订单号查询订单信息 单一钱包场馆调用
+     * @param serialNo
+     * @return
+     * @throws BizException
+     */
+    CommonResp<GameOrderInfoRespDTO> getOrderIdInfo(String serialNo) throws BizException;
 
 }
