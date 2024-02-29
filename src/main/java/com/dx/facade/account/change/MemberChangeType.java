@@ -127,14 +127,14 @@ public enum MemberChangeType implements IChangeType {
     v1_52_other_adjust(144, "其他调整", MemberBizType.up_score.code().toString()),
 
     //***************电竞单一钱包账变类************end*********
-    dj_touzhu(145, "电竞投注", MemberBizType.dj_touzhu.code().toString()),
-    dj_paijiang(146, "电竞派奖", MemberBizType.dj_paijiang.code().toString()),
-    dj_chehuipaijiang(147, "电竞撤回派奖", MemberBizType.dj_chehuipaijiang.code().toString()),
-    dj_other_add(148, "电竞其他加款", MemberBizType.dj_other_add.code().toString()),
-    dj_other_sub(149, "电竞其他扣除", MemberBizType.dj_other_sub.code().toString()),
+    dj_touzhu(146, "电竞投注", MemberBizType.dj_touzhu.code().toString()),
+    dj_paijiang(147, "电竞派奖", MemberBizType.dj_paijiang.code().toString()),
+    dj_chehuipaijiang(148, "电竞撤回派奖", MemberBizType.dj_chehuipaijiang.code().toString()),
+    dj_other_add(149, "电竞其他加款", MemberBizType.dj_other_add.code().toString()),
+    dj_other_sub(150, "电竞其他扣除", MemberBizType.dj_other_sub.code().toString()),
 
-    qp_touzhu(150, "棋牌投注", MemberBizType.qp_touzhu.code().toString()),
-    qp_settlement(151, "棋牌结算", MemberBizType.qp_settlement.code().toString()),
+    qp_touzhu(151, "棋牌投注", MemberBizType.qp_touzhu.code().toString()),
+    qp_settlement(152, "棋牌结算", MemberBizType.qp_settlement.code().toString()),
 
 
     //***************电竞单一钱包账变类************end*********
