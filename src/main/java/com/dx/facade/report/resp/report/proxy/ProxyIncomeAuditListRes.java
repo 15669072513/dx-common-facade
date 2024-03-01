@@ -117,4 +117,5 @@ public class ProxyIncomeAuditListRes {
 
     private Long proxyId;
     private Long merchantId;
+    private Integer reportDate;
 }
