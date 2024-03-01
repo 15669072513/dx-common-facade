@@ -9,7 +9,7 @@
     </parent>
 
     <artifactId>dx-common-facades</artifactId>
-    <version>prod_0.2.52-RELEASE</version>
+    <version>prod_0.2.53-RELEASE</version>
     <packaging>jar</packaging>
 
     <properties>
