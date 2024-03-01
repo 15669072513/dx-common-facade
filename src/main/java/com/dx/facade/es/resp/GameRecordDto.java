@@ -146,4 +146,6 @@ public class GameRecordDto {
     @ApiModelProperty(value = "小盲")
     private String sbBlindScore;
 
+    @ApiModelProperty(value = "IP归属地")
+    private String ipAttribution;
 }
