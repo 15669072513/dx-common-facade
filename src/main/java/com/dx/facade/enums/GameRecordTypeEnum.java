@@ -32,140 +32,140 @@ public enum GameRecordTypeEnum {
   DX_ACTION_DELAY(10, 103, 2, "行动延时", 6, false),
   ;
 
-  private int type;
+    private int type;
 
-  private int parentType;
+    private int parentType;
 
-  /**
-   * 1注单 2订单 3全部(都存在)
-   */
-  private int category;
+    /**
+     * 1注单 2订单 3全部(都存在)
+     */
+    private int category;
 
-  private String desc;
+    private String desc;
 
-  private int sortValue;
+    private int sortValue;
 
-  private boolean enable;
+    private boolean enable;
 
-  //获取注单一级类型列表
-  public static Map<Integer, GameRecordTypeEnum> parentGameRecordTypeMap = new HashMap<>();
-
-
-  //获取注单一级父类分组Map
-  public static Map<Integer, List<GameRecordTypeEnum>> gameRecordTypeGroupMap;
+    //获取注单一级类型列表
+    public static Map<Integer, GameRecordTypeEnum> parentGameRecordTypeMap = new HashMap<>();
 
 
-  //获取订单一级类型列表
-  public static Map<Integer, GameRecordTypeEnum> parentOrderTypeMap = new HashMap<>();
+    //获取注单一级父类分组Map
+    public static Map<Integer, List<GameRecordTypeEnum>> gameRecordTypeGroupMap;
 
 
-  //获取订单一级父类分组Map
-  public static Map<Integer, List<GameRecordTypeEnum>> orderTypeGroupMap;
-
-  static {
-    //初始化所有的注单一级类型
-    Arrays.stream(GameRecordTypeEnum.values())
-        .filter(gameRecordTypeEnum -> gameRecordTypeEnum.parentType == 0
-            && (gameRecordTypeEnum.getCategory() == 1 || gameRecordTypeEnum.getCategory() == 3)
-            && gameRecordTypeEnum.isEnable())
-        .forEach(parentGameRecordType -> {
-          parentGameRecordTypeMap.put(parentGameRecordType.getType(), parentGameRecordType);
-        });
-
-    //初始化所有的订单一级类型
-    Arrays.stream(GameRecordTypeEnum.values())
-        .filter(gameRecordTypeEnum -> gameRecordTypeEnum.parentType == 0
-            && (gameRecordTypeEnum.getCategory() == 2 || gameRecordTypeEnum.getCategory() == 3)
-            && gameRecordTypeEnum.isEnable())
-        .forEach(parentOrderType -> {
-          parentOrderTypeMap.put(parentOrderType.getType(), parentOrderType);
-        });
-
-    //初始化获取注单子分组Map
-    gameRecordTypeGroupMap = Arrays.stream(GameRecordTypeEnum.values())
-        .filter(gameRecordTypeEnum -> gameRecordTypeEnum.isEnable()
-            && (gameRecordTypeEnum.getCategory() == 1 || gameRecordTypeEnum.getCategory() == 3))
-        .sorted(Comparator.comparingInt(GameRecordTypeEnum::getSortValue))
-        .collect(Collectors.groupingBy(GameRecordTypeEnum::getParentType, LinkedHashMap::new,
-            Collectors.toList()));
-
-    //初始化获取订单子分组Map
-    orderTypeGroupMap = Arrays.stream(GameRecordTypeEnum.values())
-        .filter(gameRecordTypeEnum -> gameRecordTypeEnum.isEnable()
-            && (gameRecordTypeEnum.getCategory() == 2 || gameRecordTypeEnum.getCategory() == 3))
-        .sorted(Comparator.comparingInt(GameRecordTypeEnum::getSortValue))
-        .collect(Collectors.groupingBy(GameRecordTypeEnum::getParentType, LinkedHashMap::new,
-            Collectors.toList()));
-
-  }
-
-  GameRecordTypeEnum(int type, int parentType, int category, String desc, int sortValue,
-      boolean enable) {
-    this.type = type;
-    this.parentType = parentType;
-    this.category = category;
-    this.desc = desc;
-    this.sortValue = sortValue;
-    this.enable = enable;
-  }
-
-  /**
-   * @param parentType 注单子类型列表
-   * @return
-   */
-  public static List<GameRecordTypeEnum> getSubGameRecordTypeList(int parentType) {
-    return gameRecordTypeGroupMap.get(parentType);
-  }
+    //获取订单一级类型列表
+    public static Map<Integer, GameRecordTypeEnum> parentOrderTypeMap = new HashMap<>();
 
 
-  /**
-   * @param parentType 订单子类型列表
-   * @return
-   */
-  public static List<GameRecordTypeEnum> getSubOrderTypeList(int parentType) {
-    return orderTypeGroupMap.get(parentType);
-  }
+    //获取订单一级父类分组Map
+    public static Map<Integer, List<GameRecordTypeEnum>> orderTypeGroupMap;
+
+    static {
+        //初始化所有的注单一级类型
+        Arrays.stream(GameRecordTypeEnum.values())
+                .filter(gameRecordTypeEnum -> gameRecordTypeEnum.parentType == 0
+                        && (gameRecordTypeEnum.getCategory() == 1 || gameRecordTypeEnum.getCategory() == 3)
+                        && gameRecordTypeEnum.isEnable())
+                .forEach(parentGameRecordType -> {
+                    parentGameRecordTypeMap.put(parentGameRecordType.getType(), parentGameRecordType);
+                });
+
+        //初始化所有的订单一级类型
+        Arrays.stream(GameRecordTypeEnum.values())
+                .filter(gameRecordTypeEnum -> gameRecordTypeEnum.parentType == 0
+                        && (gameRecordTypeEnum.getCategory() == 2 || gameRecordTypeEnum.getCategory() == 3)
+                        && gameRecordTypeEnum.isEnable())
+                .forEach(parentOrderType -> {
+                    parentOrderTypeMap.put(parentOrderType.getType(), parentOrderType);
+                });
+
+        //初始化获取注单子分组Map
+        gameRecordTypeGroupMap = Arrays.stream(GameRecordTypeEnum.values())
+                .filter(gameRecordTypeEnum -> gameRecordTypeEnum.isEnable()
+                        && (gameRecordTypeEnum.getCategory() == 1 || gameRecordTypeEnum.getCategory() == 3))
+                .sorted(Comparator.comparingInt(GameRecordTypeEnum::getSortValue))
+                .collect(Collectors.groupingBy(GameRecordTypeEnum::getParentType, LinkedHashMap::new,
+                        Collectors.toList()));
+
+        //初始化获取订单子分组Map
+        orderTypeGroupMap = Arrays.stream(GameRecordTypeEnum.values())
+                .filter(gameRecordTypeEnum -> gameRecordTypeEnum.isEnable()
+                        && (gameRecordTypeEnum.getCategory() == 2 || gameRecordTypeEnum.getCategory() == 3))
+                .sorted(Comparator.comparingInt(GameRecordTypeEnum::getSortValue))
+                .collect(Collectors.groupingBy(GameRecordTypeEnum::getParentType, LinkedHashMap::new,
+                        Collectors.toList()));
+
+    }
+
+    GameRecordTypeEnum(int type, int parentType, int category, String desc, int sortValue,
+                       boolean enable) {
+        this.type = type;
+        this.parentType = parentType;
+        this.category = category;
+        this.desc = desc;
+        this.sortValue = sortValue;
+        this.enable = enable;
+    }
+
+    /**
+     * @param parentType 注单子类型列表
+     * @return
+     */
+    public static List<GameRecordTypeEnum> getSubGameRecordTypeList(int parentType) {
+        return gameRecordTypeGroupMap.get(parentType);
+    }
 
 
-  /**
-   * @param type 注单类型
-   * @return
-   */
-  public static GameRecordTypeEnum getByType(int type) {
-    return Arrays.stream(GameRecordTypeEnum.values()).filter(s -> s.getType() == type).findAny()
-        .orElse(null);
-  }
+    /**
+     * @param parentType 订单子类型列表
+     * @return
+     */
+    public static List<GameRecordTypeEnum> getSubOrderTypeList(int parentType) {
+        return orderTypeGroupMap.get(parentType);
+    }
 
-  public int getType() {
-    return type;
-  }
 
-  public int getParentType() {
-    return parentType;
-  }
+    /**
+     * @param type 注单类型
+     * @return
+     */
+    public static GameRecordTypeEnum getByType(int type) {
+        return Arrays.stream(GameRecordTypeEnum.values()).filter(s -> s.getType() == type).findAny()
+                .orElse(null);
+    }
 
-  public String getDesc() {
-    return desc;
-  }
+    public int getType() {
+        return type;
+    }
 
-  public int getSortValue() {
-    return sortValue;
-  }
+    public int getParentType() {
+        return parentType;
+    }
 
-  public boolean isEnable() {
-    return enable;
-  }
+    public String getDesc() {
+        return desc;
+    }
 
-  public int getCategory() {
-    return category;
-  }
+    public int getSortValue() {
+        return sortValue;
+    }
 
-  public static void main(String[] args) {
-    System.out.println("注单一级类型列表:" + parentGameRecordTypeMap);
+    public boolean isEnable() {
+        return enable;
+    }
 
-    System.out.println("注单一级父类分组Map:" + gameRecordTypeGroupMap);
+    public int getCategory() {
+        return category;
+    }
 
-    System.out.println("订单一级类型列表:" + parentOrderTypeMap);
+    public static void main(String[] args) {
+        System.out.println("注单一级类型列表:" + parentGameRecordTypeMap);
+
+        System.out.println("注单一级父类分组Map:" + gameRecordTypeGroupMap);
+
+        System.out.println("订单一级类型列表:" + parentOrderTypeMap);
 
     System.out.println("订单一级父类分组Map:" + orderTypeGroupMap);
   }
