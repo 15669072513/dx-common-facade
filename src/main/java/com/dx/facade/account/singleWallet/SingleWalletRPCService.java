@@ -40,12 +40,29 @@ public interface SingleWalletRPCService {
      * 用户预约下注(扣款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.ty_appointment_touzhu
      * 用户预约投注取消（加款）-- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.ty_appointment_touzhu_cancel
      */
+    /* 电竞一共有 5 种账变场景，分别如下：
+     投注(扣款) -- gameApi 调用 djBet, 账变类型：MemberWalletChange.dj_touzhu
+     电竞派奖(加款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.dj_paijiang
+     电竞撤回派奖(扣款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.dj_chehuipaijiang
+     电竞其他加款(加款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.dj_other_add
+     电竞其他扣除(扣款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.dj_other_sub
+     */
+    /* 棋牌一共有 2 种账变场景，分别如下：
+     投注(扣款) -- gameApi 调用 qpBet, 账变类型：MemberWalletChange.qp_touzhu
+     结算(加款) -- gameApi 调用 singleWalletChange, 账变类型：MemberWalletChange.qp_settlement
+     */
 
     CommonResp<SingleWalletRespDTO> singleWalletChange(IBWWalletChangeParm param);
 
     CommonResp<List<SingleWalletRespDTO>> cpBet(MultipleWalletChangeParmDTO param);
 
     CommonResp<List<SingleWalletRespDTO>> tyBet(MultipleWalletChangeParmDTO param);
+
+    CommonResp<List<SingleWalletRespDTO>> djBet(MultipleWalletChangeParmDTO param);
+
+    CommonResp<List<SingleWalletRespDTO>> qpBet(MultipleWalletChangeParmDTO param);
+
+
 
     CommonResp<TotalSingleWalletRespDTO> zrBetOrCancel(MultipleWalletChangeParmDTO param);
 }

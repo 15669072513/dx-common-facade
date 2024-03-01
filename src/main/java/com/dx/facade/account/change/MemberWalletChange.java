@@ -193,6 +193,18 @@ public enum MemberWalletChange implements IWalletChange {
     ty_appointment_touzhu_cancel(WalletType.cash, MemberBizType.ty_appointment_touzhu_cancel, MemberChangeType.ty_appointment_touzhu_cancel, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
     //***************体育单一钱包账变类************end*********
 
+    //***************电竞棋牌单一钱包账变类************start*********
+    dj_touzhu(WalletType.cash, MemberBizType.dj_touzhu, MemberChangeType.dj_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    dj_paijiang(WalletType.cash, MemberBizType.dj_paijiang, MemberChangeType.dj_paijiang, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    dj_chehuipaijiang(WalletType.cash, MemberBizType.dj_chehuipaijiang, MemberChangeType.dj_chehuipaijiang, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    dj_other_add(WalletType.cash, MemberBizType.dj_other_add, MemberChangeType.dj_other_add, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    dj_other_sub(WalletType.cash, MemberBizType.dj_other_sub, MemberChangeType.dj_other_sub, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+
+    qp_touzhu(WalletType.cash, MemberBizType.qp_touzhu, MemberChangeType.qp_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    qp_settlement(WalletType.cash, MemberBizType.qp_settlement, MemberChangeType.qp_settlement, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+
+    //***************电竞棋牌单一钱包账变类************end*********
+
     //***************单一钱包账变类***************end**************************************************************
     //v1.52需求账变
     v1_52_violation_fine(WalletType.cash,MemberBizType.down_score, MemberChangeType.v1_52_violation_fine, MemberAppType.v1_52_other_adjust, TransType.out, Constant.MEMBER),
