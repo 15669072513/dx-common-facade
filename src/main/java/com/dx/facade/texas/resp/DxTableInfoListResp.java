@@ -1,6 +1,5 @@
 package com.dx.facade.texas.resp;
 
-import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -109,13 +108,13 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("盈亏金额")
     private BigDecimal netAmount=BigDecimal.ZERO;
 
-    @ApiModelProperty("总保险盈亏")
+    @ApiModelProperty("经典保险")
     private BigDecimal insuredNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
     private BigDecimal validBetAmount=BigDecimal.ZERO;
 
-    @ApiModelProperty("总打牌抽水")
+    @ApiModelProperty("手牌服务费")
     private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
 
     @ApiModelProperty("总牌桌盈亏")
@@ -157,7 +156,7 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("保险触发下限")
     private Integer insuranceLowerLimit=0;
 
-    @ApiModelProperty("抽水方式 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("手牌服务费收取方式 0-无 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
@@ -192,4 +191,15 @@ public class DxTableInfoListResp implements Serializable {
 
     @ApiModelProperty("入桌密码功能 0-关闭 1-开启 2-关闭隐藏")
     private Integer tableEntryPasswordSwitch;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch=0;
+
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee= BigDecimal.ZERO;
+
+    @ApiModelProperty("局服务费比例")
+    private BigDecimal tableFeeScale= BigDecimal.ZERO;
+    @ApiModelProperty("牌桌冻结服务费")
+    private BigDecimal tableFreezeFee = BigDecimal.ZERO;
 }

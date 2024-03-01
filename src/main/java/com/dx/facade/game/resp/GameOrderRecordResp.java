@@ -70,6 +70,7 @@ public class GameOrderRecordResp implements Serializable {
     */
    @ApiModelProperty("输赢金额")
    private BigDecimal netAmount=BigDecimal.ZERO;
+
    /**
     * 玩家ip
     */
@@ -105,10 +106,46 @@ public class GameOrderRecordResp implements Serializable {
    @ApiModelProperty("币种")
    private String memberCurrency;
 
-   @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+   @ApiModelProperty(value = "二级类型 对应枚举GameRecordTypeEnum")
    private Integer betType;
 
-   @ApiModelProperty(value = "抽水贡献")
+   @ApiModelProperty(value = "二级类型对应枚举GameRecordTypeEnum")
+   private String betTypeDesc;
+
+   @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+   private Integer parentOrderType;
+
+   @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+   private String parentOrderTypeDesc;
+
+   @ApiModelProperty(value = "服务费贡献")
    private BigDecimal pumpContribution;
 
+
+   @ApiModelProperty("会员id")
+   private Long memberId;
+
+   @ApiModelProperty("手牌信息")
+   private String handInfo;
+
+   @ApiModelProperty("用户昵称")
+   private String nickName;
+
+   @ApiModelProperty("牌型")
+   private String resultInfo;
+
+   @ApiModelProperty(value = "公牌信息")
+   private String globalPokerCode;
+
+   @ApiModelProperty(value = "是否亮牌标识 1 亮牌，2非亮牌")
+   private Integer showStatus;
+
+   @ApiModelProperty("总输赢（打牌输赢+保险输赢）")
+   private BigDecimal totalNetAmount = BigDecimal.ZERO;
+
+   @ApiModelProperty(value = "成牌时7张牌舍弃的2张牌")
+   private String loseCards;
+
+   @ApiModelProperty(value = "游戏注单扩展属性字段JSON")
+   private String extendProperty;
 }

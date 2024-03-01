@@ -127,7 +127,7 @@ public class DxTableInfoDto implements Serializable {
     @ApiModelProperty("必要保留筹码（倍大盲）")
     private Integer needKeepChips;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例 3-无")
     private Integer serviceChargeType;
 
     @ApiModelProperty("每手收费上限（倍大盲）")
@@ -147,4 +147,13 @@ public class DxTableInfoDto implements Serializable {
 
     @ApiModelProperty("前注（倍BB）,支持小数点1位")
     private BigDecimal anteLimit;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch;
+
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee;
+
+    @ApiModelProperty("局服务费比例")
+    private BigDecimal tableFeeScale;
 }

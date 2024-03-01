@@ -1,5 +1,6 @@
 package com.dx.facade.game.resp;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -26,6 +27,12 @@ public class GameReviewcardResp implements Serializable  {
      */
     @ApiModelProperty("局号")
     private Integer roundNo;
+
+    /**
+     *  会员id
+     */
+    @ApiModelProperty("会员id")
+    private String memberId;
 
     /**
      *  会员id
@@ -61,6 +68,8 @@ public class GameReviewcardResp implements Serializable  {
     @ApiModelProperty("玩家昵称")
     private String nickName;
 
+    @ApiModelProperty("备注名")
+    private String userNameRemark="";
 
     @ApiModelProperty("公共牌信息")
     private List<Integer> publicCards =new ArrayList<>();
@@ -73,6 +82,14 @@ public class GameReviewcardResp implements Serializable  {
 
     @ApiModelProperty("玩家手牌亮牌")
     private List<Map<Integer,Boolean>> lightCards =new ArrayList<>();
+
+
+    @ApiModelProperty("手牌扩展信息")
+    private List<HandCardResp> handCardExtList=new ArrayList<>();
+
+
+    @ApiModelProperty("公牌扩展信息")
+    private List<PublicCardResp> publicCardExtList=new ArrayList<>();
 
     /***
      * 玩家牌型展示是否置亏标识

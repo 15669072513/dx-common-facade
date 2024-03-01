@@ -266,7 +266,7 @@ public interface ProxyRPCService {
      * @copyright
      */
     CommonResp<ProxyInfoRespDTO> getProxyByJoinCode(Long merchantId, String joinCode);
-    
+
     /**
      * @author bicycle
      * @date 2023/9/18

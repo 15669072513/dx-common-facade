@@ -184,8 +184,10 @@ import lombok.Data;
      /**
       * 注单类型 1 俱乐部游戏 2保险
       */
-     @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
+     @ApiModelProperty("注单子类型:1俱乐部游戏;2保险")
      private Integer betType;
+     @ApiModelProperty("注单类型:101俱乐部服务费;102保险;103增值")
+     private Integer parentBetType;
 
      /**
       * 抽水贡献

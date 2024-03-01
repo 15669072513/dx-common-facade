@@ -97,6 +97,18 @@ public class MemberNetAmountSummaryRespDTO {
     @ApiModelProperty("净盈亏THB")
     private BigDecimal netProfitTHB = BigDecimal.ZERO;
 
+    @ApiModelProperty("服务费-手牌")
+    private BigDecimal serviceChargeHand;
+
+    @ApiModelProperty("服务费-局抽")
+    private BigDecimal serviceChargeRound;
+
+    @ApiModelProperty("手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution;
+
+    @ApiModelProperty("局抽服务费贡献")
+    private BigDecimal serviceChargeRoundContribution;
+
     // 会员盈利率=投注盈亏/投注金额
     @ApiModelProperty(value = "会员盈利率")
     private BigDecimal netRate = BigDecimal.ZERO;

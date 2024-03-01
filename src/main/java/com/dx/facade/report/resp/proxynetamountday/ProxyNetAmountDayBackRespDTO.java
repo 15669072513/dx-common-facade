@@ -197,4 +197,7 @@ public class ProxyNetAmountDayBackRespDTO {
 
     @ApiModelProperty("直属会员净输赢")
     private BigDecimal directNetwinAmount;
+
+    @ApiModelProperty("服务费-局抽")
+    private BigDecimal serviceChargeRound;
 }

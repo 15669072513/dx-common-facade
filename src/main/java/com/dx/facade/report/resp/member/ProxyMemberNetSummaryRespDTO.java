@@ -42,6 +42,21 @@ public class ProxyMemberNetSummaryRespDTO {
     @ApiModelProperty("代理返水金额")
     private BigDecimal proxyRebateAmount;
 
+    @ApiModelProperty("不包含德州的有效投注")
+    private BigDecimal validBetAmountNoDx = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有的游戏盈亏")
+    private BigDecimal netAmountAll = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有计算的盈亏")
+    private BigDecimal netWinAmountAll = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费")
+    private BigDecimal dxClubServiceAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费贡献")
+    private BigDecimal serviceAmountContribution = BigDecimal.ZERO;
+
 
     //======小计
     @ApiModelProperty("总投-小计")
@@ -70,4 +85,19 @@ public class ProxyMemberNetSummaryRespDTO {
 
     @ApiModelProperty("代理返水金额-小计")
     private BigDecimal proxyRebateAmountSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("不包含德州的有效投注-小计")
+    private BigDecimal validBetAmountNoDxSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有的游戏盈亏-小计")
+    private BigDecimal netAmountAllSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("包含所有计算的盈亏-小计")
+    private BigDecimal netWinAmountAllSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费-小计")
+    private BigDecimal dxClubServiceAmountSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费贡献-小计")
+    private BigDecimal serviceAmountContributionSub = BigDecimal.ZERO;
 }

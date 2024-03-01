@@ -51,7 +51,11 @@ public enum MemberAppType implements IAppType {
     v1_52_operate_adjust(106, "运营调整"),
     v1_52_third_order_lost_compensate(107,"三方掉单补分"),
     v1_52_offline_settle_up_score(108,"线下结算上分"),*/
-    v1_52_other_adjust(109, "其他调整");
+    v1_52_other_adjust(109, "其他调整"),
+
+    texas_club_serve_fee(104, "局服务费"),
+    ;
+
 
     private Integer code;
     private String desc;
@@ -142,7 +146,9 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v1_52_finance_adjust.code(),
                         MemberChangeType.v1_52_third_order_lost_compensate.code(),
                         MemberChangeType.v1_52_other_adjust.code(),
-                        MemberChangeType.v1_52_offline_settle_up_score.code()
+                        MemberChangeType.v1_52_offline_settle_up_score.code(),
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.table_serve_fee.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -186,7 +192,9 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.bring_to_table.code());
             }
             if(appChangeType.intValue() == v2_1_withdraw.code) {
-                return Arrays.asList(MemberChangeType.v2_1_withdraw.code(),
+                return Arrays.asList(
+                        MemberChangeType.v2_cash_withdraw_frozen.code(),
+                        MemberChangeType.v2_1_withdraw.code(),
                         MemberChangeType.v2_1_withdraw_back.code());
             }
             if(appChangeType.intValue() == v2_1_deposit.code()) {
@@ -233,6 +241,9 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v1_52_third_order_lost_compensate.code(),
                         MemberChangeType.v1_52_offline_settle_up_score.code(),
                         MemberChangeType.v1_52_other_adjust.code());
+            }
+            if(appChangeType.intValue() == texas_club_serve_fee.code()) {
+                return Arrays.asList(MemberChangeType.table_serve_fee.code());
             }
             /*if(appChangeType.intValue() == v2_1_deposit_discount.code) {
                 return Arrays.asList(
