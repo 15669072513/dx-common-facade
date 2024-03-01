@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 会员账变业务 定义
+ *
  * @author Administrator
  */
 public enum MemberWalletChange implements IWalletChange {
@@ -200,8 +201,9 @@ public enum MemberWalletChange implements IWalletChange {
     v1_52_third_order_lost_compensate(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_third_order_lost_compensate, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
     v1_52_offline_settle_up_score(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_offline_settle_up_score, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
     v1_52_other_adjust(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_other_adjust, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
+    table_serve_fee(WalletType.cash, MemberBizType.texas_club_serve_fee, MemberChangeType.table_serve_fee, MemberAppType.texas_club_serve_fee, TransType.out, Constant.MEMBER)
 
-    table_serve_fee(WalletType.cash, MemberBizType.texas_club_serve_fee, MemberChangeType.table_serve_fee, MemberAppType.texas_club_serve_fee, TransType.out, Constant.MEMBER);
+    ;
 
     private IWalletType walletType;
     private IBizType bizType;

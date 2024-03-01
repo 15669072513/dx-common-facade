@@ -22,6 +22,7 @@ import com.dx.facade.member.resp.MemberMainInfoRespDTO;
 
 import com.dx.facade.report.resp.proxyoverview.ProxyOverviewMainDataCashRespDTO;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Set;
 
 public interface MemberRPCService {
 
@@ -227,4 +228,18 @@ public interface MemberRPCService {
 
 	CommonResp entryAuthorityOpen(MemberToProxyParam param) throws BizException;
 
+	/**
+	 * 查找指定业务模式的用户id集合
+	 * @param paramDTO businessModel必传
+	 * @return
+	 */
+	CommonResp<Set<Long>> memberListByBusinessModel(MemberParamDTO paramDTO);
+
+
+	/**
+	 * 会员详情new 1.6.2
+	 * @param memberDetailParamDTO
+	 * @return
+	 */
+	CommonResp<MemberInfoRespDTO> selectMemberByParam(MemberDetailParamDTO memberDetailParamDTO);
 }

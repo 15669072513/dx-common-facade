@@ -167,6 +167,6 @@ public enum GameRecordTypeEnum {
 
         System.out.println("订单一级类型列表:" + parentOrderTypeMap);
 
-        System.out.println("订单一级父类分组Map:" + orderTypeGroupMap);
-    }
+    System.out.println("订单一级父类分组Map:" + orderTypeGroupMap);
+  }
 }

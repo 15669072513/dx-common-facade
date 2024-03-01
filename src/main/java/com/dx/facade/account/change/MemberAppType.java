@@ -46,11 +46,6 @@ public enum MemberAppType implements IAppType {
     end_single_wallet(103, "结算"),
     //***************单一钱包账变类***************end*********
     //v1.52需求账变
-    /*v1_52_violation_fine(104, "违规罚款"),
-    v1_52_finance_adjust(105, "财务调整"),
-    v1_52_operate_adjust(106, "运营调整"),
-    v1_52_third_order_lost_compensate(107,"三方掉单补分"),
-    v1_52_offline_settle_up_score(108,"线下结算上分"),*/
     v1_52_other_adjust(109, "其他调整"),
 
     texas_club_serve_fee(104, "局服务费"),

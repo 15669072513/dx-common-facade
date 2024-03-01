@@ -83,4 +83,9 @@ public class MemberListParamDTO {
 
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
     private Integer businessModel;
+
+    @ApiModelProperty(value = "设备标识")
+    private String deviceNo;
+    @ApiModelProperty(value = "会员ID集合")
+    private List<Long> memberIds;
 }

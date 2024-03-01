@@ -22,7 +22,13 @@ public class MemberParamDTO implements BaseParmDTO{
     @ApiModelProperty(value="商户id")
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Long merchantId;
+    @ApiModelProperty(value="代理id")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Long proxyId;
 
+    @ApiModelProperty(value="用户模式 1-现金模式，2-信用模式")
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Integer businessModel;
     @ApiModelProperty(value="用户名")
     private String userName;
     

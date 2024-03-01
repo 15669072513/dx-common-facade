@@ -34,6 +34,15 @@ public class DxPlayerConfigResp implements Serializable {
   @ApiModelProperty("自动补码 0-关闭 1-开启")
   private Integer autoComplement=0;
 
+  @ApiModelProperty("屏蔽互动道具 0-关闭 1-开启")
+  private Integer interactiveItemsSwitch=0;
+
+  @ApiModelProperty("不买保险 0-关闭 1-开启")
+  private Integer notBuyInsuranceSwitch=0;
+
+  @ApiModelProperty("不看保险 0-关闭 1-开启")
+  private Integer notLookInsuranceSwitch=0;
+
   @ApiModelProperty("倍数加注List")
   private List<String> multipleRaiseList=new ArrayList<>();
 
