@@ -51,8 +51,12 @@ public class ProxyMemberNetSummaryRespDTO {
     @ApiModelProperty("包含所有计算的盈亏")
     private BigDecimal netWinAmountAll = BigDecimal.ZERO;
 
-    @ApiModelProperty("德州俱乐部服务费贡献")
+    @ApiModelProperty("德州俱乐部服务费")
     private BigDecimal dxClubServiceAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费贡献")
+    private BigDecimal serviceAmountContribution = BigDecimal.ZERO;
+
 
     //======小计
     @ApiModelProperty("总投-小计")
@@ -91,6 +95,9 @@ public class ProxyMemberNetSummaryRespDTO {
     @ApiModelProperty("包含所有计算的盈亏-小计")
     private BigDecimal netWinAmountAllSub = BigDecimal.ZERO;
 
-    @ApiModelProperty("德州俱乐部服务费贡献-小计")
+    @ApiModelProperty("德州俱乐部服务费-小计")
     private BigDecimal dxClubServiceAmountSub = BigDecimal.ZERO;
+
+    @ApiModelProperty("德州俱乐部服务费贡献-小计")
+    private BigDecimal serviceAmountContributionSub = BigDecimal.ZERO;
 }
