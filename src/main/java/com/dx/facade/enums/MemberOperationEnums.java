@@ -130,14 +130,14 @@ public class MemberOperationEnums {
 	    MEMBER_LABLE(3,"会员标签"),
 	    PHONE_NO(4,"手机号码"),
 	    BIRTH_DAY(5,"出生日期"),
-	    NICNNAME(6, "会员昵称"),
+	    NICKNAME(6, "会员昵称"),
 	    GENDER(7, "性别"),
 	    EMAIL(8, "邮箱"),
 	    REMARK(9, "账号备注"),
 	    RESET_PASSWORD(10, "登录密码重置"),
 	    CREDI_LEVEL(11, "信用等级"),
 	    RESET_PAY_PASSWORD(12, "支付密码重置"),
-	    REAK_NAME(13, "姓名"),
+	    REAL_NAME(13, "姓名"),
 	    ;
 		
 		public Integer code;
