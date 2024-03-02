@@ -189,6 +189,6 @@ public class GameRecordGeneralDTO {
     @ApiModelProperty("注单类型")
     private Integer orderType;
     @ApiModelProperty("单关类型")
-    private String seriesType;
+    private Integer seriesType;
 
 }
