@@ -186,4 +186,9 @@ public class GameRecordGeneralDTO {
     @ApiModelProperty(value = "注单id(重算注单用)")
     private String betOrderId;
 
+    @ApiModelProperty("注单类型")
+    private Integer orderType;
+    @ApiModelProperty("单关类型")
+    private String seriesType;
+
 }
