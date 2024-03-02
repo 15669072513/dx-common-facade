@@ -175,7 +175,7 @@ public class DxGameTableConfigResp implements Serializable {
     @ApiModelProperty("必要保留筹码（倍大盲）")
     private Integer needKeepChips = 0;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例 3-无")
     private Integer serviceChargeType = 1;
 
     @ApiModelProperty("每手收费上限（倍大盲）")

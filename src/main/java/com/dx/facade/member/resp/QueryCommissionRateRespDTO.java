@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -109,6 +110,9 @@ public class QueryCommissionRateRespDTO implements Serializable {
 
     @ApiModelProperty("是否有下级代理")
     private boolean hasSub;
+    
+	@ApiModelProperty("备注")
+	private String remark;
     
     @ApiModelProperty("版本号")
     private Integer version;

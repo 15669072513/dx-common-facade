@@ -121,6 +121,8 @@ public class GameRecordDto {
      */
     @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
     private Integer betType;
+    @ApiModelProperty("注单类型:枚举GameRecordTypeEnum")
+    private Integer parentBetType;
 
     /**
      * 抽水贡献
@@ -133,4 +135,17 @@ public class GameRecordDto {
 
     @ApiModelProperty(value = "注单id")
     private String betOrderId;
+
+    //德州
+    @ApiModelProperty("局号")
+    private String roundNo;
+    @ApiModelProperty(value = "牌桌id")
+    private String tableId;
+    @ApiModelProperty(value = "大盲")
+    private String bbBlindScore;
+    @ApiModelProperty(value = "小盲")
+    private String sbBlindScore;
+
+    @ApiModelProperty(value = "IP归属地")
+    private String ipAttribution;
 }

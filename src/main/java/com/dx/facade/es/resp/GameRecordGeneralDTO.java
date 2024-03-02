@@ -50,8 +50,10 @@ public class GameRecordGeneralDTO {
     private BigDecimal payAmount;
     @ApiModelProperty("返水金额")
     private BigDecimal rebateAmount;
-    @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
+    @ApiModelProperty("注单子类型:枚举GameRecordTypeEnum")
     private Integer betType;
+    @ApiModelProperty("注单类型:枚举GameRecordTypeEnum")
+    private Integer parentBetType;
     @ApiModelProperty("抽水贡献")
     private BigDecimal pumpContribution;
 
@@ -185,6 +187,14 @@ public class GameRecordGeneralDTO {
     private Integer obSettleCount;
     @ApiModelProperty(value = "注单id(重算注单用)")
     private String betOrderId;
+
+    //德州
+    @ApiModelProperty(value = "牌桌id")
+    private String tableId;
+    @ApiModelProperty(value = "大盲")
+    private String bbBlindScore;
+    @ApiModelProperty(value = "小盲")
+    private String sbBlindScore;
 
     @ApiModelProperty("注单类型")
     private Integer orderType;

@@ -126,6 +126,8 @@ public enum MemberChangeType implements IChangeType {
     v1_52_offline_settle_up_score(143, "线下结算上分", MemberBizType.up_score.code().toString()),
     v1_52_other_adjust(144, "其他调整", MemberBizType.up_score.code().toString()),
 
+    table_serve_fee(145, "局服务费", MemberBizType.texas_club_serve_fee.code().toString()),
+
     //***************电竞单一钱包账变类************end*********
     dj_touzhu(146, "电竞投注", MemberBizType.dj_touzhu.code().toString()),
     dj_paijiang(147, "电竞派奖", MemberBizType.dj_paijiang.code().toString()),

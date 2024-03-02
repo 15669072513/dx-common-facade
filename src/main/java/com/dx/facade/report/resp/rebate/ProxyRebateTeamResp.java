@@ -32,7 +32,34 @@ public class ProxyRebateTeamResp {
     /**
      * 团队有效投注
      */
-    @ApiModelProperty(value = "团队有效投注")
+    @ApiModelProperty(value = "团队有效投注/团队服务费贡献")
     private BigDecimal validBetAmount;
 
+    /**
+     * 手牌服务费
+     */
+    @ApiModelProperty(value = "手牌服务费")
+    private BigDecimal serviceChargeHand;
+
+    /**
+     * 局服务费
+     */
+    @ApiModelProperty(value = "局服务费")
+    private BigDecimal serviceChargeRound;
+
+    /**
+     * 服务费
+     */
+    @ApiModelProperty(value = "服务费")
+    private BigDecimal serviceAmount;
+
+
+    @ApiModelProperty("局服务费贡献")
+    private BigDecimal serviceChargeRoundContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty("手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty("服务费贡献")
+    private BigDecimal serviceAmountContribution = BigDecimal.ZERO;
 }

@@ -24,7 +24,10 @@ public class GameReviecardRoundResp {
     @ApiModelProperty("总底池金额")
     private BigDecimal potAmount;
 
-    @ApiModelProperty("手牌时间")
+    @ApiModelProperty("手牌开始时间")
+    private String handStartDateStr;
+
+    @ApiModelProperty("手牌结束时间")
     private String handEndDateStr;
 
     @ApiModelProperty(value = "当前玩家座位类型,参考枚举:TexasSeatTypeEnum")

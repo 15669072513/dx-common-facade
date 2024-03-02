@@ -18,6 +18,7 @@ import com.dx.facade.texas.req.DxTableInfoListReq;
 import com.dx.facade.texas.resp.*;
 
 import java.time.LocalDateTime;
+import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -114,6 +115,14 @@ public interface IDxTableInfoService {
     CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(Long tableId);
 
     /**
+     * 批量获取牌桌基础信息
+     *
+     * @param tableIds
+     * @return
+     */
+    CommonResp<List<DxTableBaseInfoResp>> batchGetTableBaseInfoByIds(Collection<Long> tableIds);
+
+    /**
      * 根据牌桌ID 或者 table_code 获取牌桌基础信息
      */
     CommonResp<DxTableBaseInfoResp> getTableBaseInfoById(String tableId);
@@ -176,7 +185,6 @@ public interface IDxTableInfoService {
      * @return
      */
     CommonResp<PageResp<GameTableInfoListEsResp, Void>> getTableListPageByUser(GameTableInfoListReq req);
-
 
 
 }

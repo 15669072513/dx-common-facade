@@ -84,8 +84,8 @@ public class DxHandInfoListExcelVO implements Serializable {
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_有效底池)
     private BigDecimal validPot;
 
-    @ExcelProperty(value = "打牌抽水", index = 14)
-    @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_打牌抽水)
+    @ExcelProperty(value = "手牌服务费", index = 14)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_手牌服务费)
     private BigDecimal pumpingAmount;
 
     @ExcelProperty(value = "保险盈亏", index = 15)
@@ -99,4 +99,8 @@ public class DxHandInfoListExcelVO implements Serializable {
     @ExcelProperty(value = "公牌信息", index = 17)
     @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_公牌信息)
     private String publicCards;
+
+    @ExcelProperty(value = "会员账号", index = 18)
+    @I18nField(headI18nKey = ExcelHeadI18nKey.FUNDS_会员账号)
+    private String userNames;
 }
