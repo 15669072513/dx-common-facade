@@ -7,17 +7,18 @@ import java.util.Objects;
  *
  */
 public enum ChangLogMemberEnum {
+
     REAL_NAME(1, "姓名"),
-    nickName(2, "昵称"),
-    gender(3, "性别"),
-    birthday(4, "出生日期"),
-    mobile(5, "手机号"),
-    topImagesUrl(6, "头像"),
-    password(7, "登录密码"),
-    PAYPASSWORD(8, "支付密码"),
-    PAYMENT_LOCK(9, "支付锁定"),
-    LOGIN_LOCK(10, "登录锁定"),
-    ENTRY_AUTHORITY_OPEN(11, "开启代理权限"),
+    NICKNAME(2, "昵称"),
+    GENDER(3, "性别"),
+    BIRTHDAY(4, "出生日期"),
+    MOBILE(5, "手机号"),
+    TOP_IMAGES_URL(6, "头像"),
+    PASSWORD(7, "登录密码"),
+    PAY_PASSWORD(8, "支付密码"),
+    PAYMENT_LOCK(9, "支付锁定"),//记录用户连续5次输入错误支付密码后锁定的节点；（为备注信息）
+    LOGIN_LOCK(10, "登录锁定"),//记录用户连续5次输入错误登陆密码后锁定的节点；（为备注信息）
+    ENTRY_AUTHORITY_OPEN(11, "开启代理权限"),//上级代理通过会员列表给直属会员开启代理权限；（代理操作）
 
     ;
     public Integer code;
