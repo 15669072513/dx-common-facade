@@ -33,4 +33,9 @@ public class ProxyRebateDataReq extends LocalDatePageRequest {
     private Long id;
 
     private Integer reportDate;
+
+
+    private String orderKey;
+
+    private String orderType;
 }
