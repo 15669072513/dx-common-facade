@@ -143,8 +143,17 @@ public class GameOrderRecordDetailResp implements Serializable {
     @ApiModelProperty("币种")
     private String memberCurrency;
 
-    @ApiModelProperty(value = "注单类型 1 俱乐部游戏 2保险")
+    @ApiModelProperty(value = "二级类型 对应枚举GameRecordTypeEnum")
     private Integer betType;
+
+    @ApiModelProperty(value = "二级类型对应枚举GameRecordTypeEnum")
+    private String betTypeDesc;
+
+    @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+    private Integer parentOrderType;
+
+    @ApiModelProperty(value = "一级类型 对应枚举GameRecordTypeEnum")
+    private String parentOrderTypeDesc;
 
     @ApiModelProperty(value = "抽水贡献")
     private BigDecimal pumpContribution;

@@ -100,4 +100,41 @@ public class ProxyRebatePointNetAmountSummaryResp {
      */
     @ApiModelProperty(value = "其他项目有效投注-直属会员", example = "1500.00")
     private BigDecimal thirdDirectValidBetAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-手牌", example = "1500.00")
+    private BigDecimal serviceChargeHand = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-局抽", example = "1500.00")
+    private BigDecimal serviceChargeRound = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-手牌", example = "1500.00")
+    private BigDecimal directlyServiceChargeHand = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-局抽", example = "1500.00")
+    private BigDecimal directlyServiceChargeRound = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属会员服务费", example = "1500.00")
+    private BigDecimal directlyServiceAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属会员服务费贡献", example = "1500.00")
+    private BigDecimal directlyServiceAmountContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "德州俱乐部服务费", example = "1500.00")
+    private BigDecimal dxClubServiceAmount = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "德州俱乐部服务费贡献", example = "1500.00")
+    private BigDecimal serviceAmountContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-局抽贡献", example = "1500.00")
+    private BigDecimal directlyServiceChargeRoundContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "直属服务费-手牌贡献", example = "1500.00")
+    private BigDecimal directlyServiceChargeHandContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-局抽贡献", example = "1500.00")
+    private BigDecimal serviceChargeRoundContribution = BigDecimal.ZERO;
+
+    @ApiModelProperty(value = "服务费-手牌贡献", example = "1500.00")
+    private BigDecimal serviceChargeHandContribution = BigDecimal.ZERO;
+
 }

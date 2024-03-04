@@ -28,6 +28,12 @@ public class DxHandInfoResp implements Serializable {
     @ApiModelProperty("局次")
     private Integer handNum;
 
+    @ApiModelProperty("手牌开始时间")
+    private String handStartDateStr;
+
+    @ApiModelProperty("手牌结束时间")
+    private String handEndDateStr;
+
     @ApiModelProperty("牌局开始时间")
     private Long handBeginDate;
 
@@ -43,7 +49,7 @@ public class DxHandInfoResp implements Serializable {
     @ApiModelProperty("大盲位置")
     private Integer bbChairId;
 
-    @ApiModelProperty("抽水金额")
+    @ApiModelProperty("手牌服务费")
     private BigDecimal pumpAmount;
 
     @ApiModelProperty("桌牌")
@@ -63,6 +69,12 @@ public class DxHandInfoResp implements Serializable {
 
     @ApiModelProperty("大盲注")
     private BigDecimal bbBlindScore=BigDecimal.ZERO;
+
+    @ApiModelProperty("经典保险盈亏")
+    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+
+    @ApiModelProperty("手牌盈亏（手牌服务费+保险盈亏）")
+    private BigDecimal handNetAmount=BigDecimal.ZERO;
 
     @ApiModelProperty("0 进行中 1已结束")
     private Integer handStatus;

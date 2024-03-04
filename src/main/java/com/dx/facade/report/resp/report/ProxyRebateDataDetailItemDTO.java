@@ -21,5 +21,16 @@ public class ProxyRebateDataDetailItemDTO {
     private BigDecimal rebate;
     @ApiModelProperty(value = "团队相关金额(德州-俱乐部为抽水贡献,德州-保险为净输赢,其他为有效投注)")
     private BigDecimal amount;
+    @ApiModelProperty("手牌服务费贡献")
+    private BigDecimal serviceChargeHand;
+    @ApiModelProperty("局服务费贡献")
+    private BigDecimal serviceChargeRound;
+
+    @ApiModelProperty(value = "手牌服务费贡献")
+    private BigDecimal serviceChargeHandContribution;
+    @ApiModelProperty(value = "局服务费贡献")
+    private BigDecimal serviceChargeRoundContribution;
+    @ApiModelProperty(value = "总计局服务费贡献")
+    private BigDecimal serviceAmountContribution;
 
 }

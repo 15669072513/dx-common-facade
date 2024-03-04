@@ -3,7 +3,6 @@ package com.dx.facade.texas.resp;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.annotation.FieldOperate;
 import com.dx.facade.annotation.ValueConvert;
-import com.dx.facade.game.convert.GameStatusRender;
 import com.dx.facade.game.convert.GameTableStatusRender;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -56,11 +55,11 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("牌桌状态：0 未开始，1 进行中 2已结束")
     @ValueConvert(renderers = GameTableStatusRender.class)
-    @FieldOperate(fieldName ="牌桌状态")
+    @FieldOperate(fieldName = "牌桌状态")
     private Integer status;
 
     @ApiModelProperty("累计参与者")
-    private Integer participantTotal=0;
+    private Integer participantTotal = 0;
 
     @ApiModelProperty("牌桌开始时间")
     private Long tableBeginTime;
@@ -72,48 +71,48 @@ public class DxTableBaseInfoResp implements Serializable {
     private Integer overType;
 
     @ApiModelProperty("手牌数")
-    private Long handCount=0L;
+    private Long handCount = 0L;
 
     @ApiModelProperty("盈亏金额")
-    private BigDecimal netAmount=BigDecimal.ZERO;
+    private BigDecimal netAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("有效金额")
-    private BigDecimal validBetAmount=BigDecimal.ZERO;
+    private BigDecimal validBetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("小盲注")
-    private BigDecimal sbBlindScore=BigDecimal.ZERO;
+    private BigDecimal sbBlindScore = BigDecimal.ZERO;
 
     @ApiModelProperty("大盲注")
-    private BigDecimal bbBlindScore=BigDecimal.ZERO;
+    private BigDecimal bbBlindScore = BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带入")
-    private BigDecimal bringChipTotal=BigDecimal.ZERO;
+    private BigDecimal bringChipTotal = BigDecimal.ZERO;
 
     @ApiModelProperty("玩家总带出")
-    private BigDecimal afterChipTotal=BigDecimal.ZERO;
+    private BigDecimal afterChipTotal = BigDecimal.ZERO;
 
     @ApiModelProperty("牌桌总费用")
-    private BigDecimal costTotal=BigDecimal.ZERO;
+    private BigDecimal costTotal = BigDecimal.ZERO;
 
 
-    @ApiModelProperty("牌桌抽水")
-    private BigDecimal pumpingAmountTotal=BigDecimal.ZERO;
+    @ApiModelProperty("手牌服务费")
+    private BigDecimal pumpingAmountTotal = BigDecimal.ZERO;
 
-    @ApiModelProperty("总保险盈亏")
-    private BigDecimal insuredNetAmount=BigDecimal.ZERO;
+    @ApiModelProperty("经典保险")
+    private BigDecimal insuredNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty("机器人数量")
-    @FieldOperate(fieldName ="机器人数量")
-    private Integer robotNum=0;
+    @FieldOperate(fieldName = "机器人数量")
+    private Integer robotNum = 0;
 
     @ApiModelProperty("人员上限")
-    private Integer upperLimit=0;
+    private Integer upperLimit = 0;
 
     @ApiModelProperty("同时开牌桌上限")
-    private Integer cardTableLimit=0;
+    private Integer cardTableLimit = 0;
 
     @ApiModelProperty("单牌桌旁观人数上限")
-    private Integer lookOnLimit=0;
+    private Integer lookOnLimit = 0;
 
     @ApiModelProperty("创建时间")
     private Long createdAt;
@@ -134,21 +133,21 @@ public class DxTableBaseInfoResp implements Serializable {
     private Integer gameOvertime;
 
     @ApiModelProperty("牌桌最大人数")
-    private Integer maxSeats=0;
+    private Integer maxSeats = 0;
 
     @ApiModelProperty("自动开局人数")
-    private Integer autoStartUserCounts=0;
+    private Integer autoStartUserCounts = 0;
 
     @ApiModelProperty("最小带入的筹码")
     @TableField("min_bring_chip_score")
-    private BigDecimal minBringChipScore=BigDecimal.ZERO;
+    private BigDecimal minBringChipScore = BigDecimal.ZERO;
 
     @ApiModelProperty("最大带入的筹码")
     @TableField("max_bring_chip_score")
-    private BigDecimal maxBringChipScore=BigDecimal.ZERO;
+    private BigDecimal maxBringChipScore = BigDecimal.ZERO;
 
     @ApiModelProperty("单牌桌累计带入上限")
-    private Integer bringInLimit=0;
+    private Integer bringInLimit = 0;
 
     @ApiModelProperty("保险模式 0-不开保险 1-经典保险")
     private Integer insuranceMode;
@@ -157,13 +156,13 @@ public class DxTableBaseInfoResp implements Serializable {
     private String insuranceModeStr;
 
     @ApiModelProperty("turn购买保险最低值,整数类型")
-    private BigDecimal insuranceTurn=BigDecimal.ZERO;
+    private BigDecimal insuranceTurn = BigDecimal.ZERO;
     @ApiModelProperty("选张购买功能 false-不选张 true-选张")
     private Boolean insuranceChooseSheet;
     @ApiModelProperty("保险触发下限")
-    private Integer insuranceLowerLimit=0;
+    private Integer insuranceLowerLimit = 0;
 
-    @ApiModelProperty("服务费类型 1-按底池比例 2-按盈利比例")
+    @ApiModelProperty("手牌服务费收取方式 0-无 1-按底池比例 2-按盈利比例")
     private Integer serviceChargeType;
 
     @ApiModelProperty("前注功能 0-关闭 1-开启 2-关闭隐藏")
@@ -180,4 +179,18 @@ public class DxTableBaseInfoResp implements Serializable {
 
     @ApiModelProperty("仅限直属会员可见(默认关闭) 0-关闭 1-开启")
     private Integer onlyDirectMember;
+
+    @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
+    private Integer tableFeeSwitch = 0;
+
+    @ApiModelProperty("局服务费")
+    private BigDecimal tableFee = BigDecimal.ZERO;
+
+    @ApiModelProperty("局服务费比例")
+    private BigDecimal tableFeeScale = BigDecimal.ZERO;
+
+    public boolean isTableFeeSwitchOpen() {
+        return tableFeeSwitch != null && tableFeeSwitch == 2;
+    }
+
 }
