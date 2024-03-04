@@ -133,4 +133,7 @@ public class GameRecordDto {
 
     @ApiModelProperty(value = "注单id")
     private String betOrderId;
+
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
 }
