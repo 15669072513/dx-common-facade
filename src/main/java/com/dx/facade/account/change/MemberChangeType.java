@@ -130,8 +130,8 @@ public enum MemberChangeType implements IChangeType {
 
     //***************电竞单一钱包账变类************end*********
     dj_touzhu(146, "电竞投注", MemberBizType.dj_touzhu.code().toString()),
-    dj_paijiang(147, "电竞派奖", MemberBizType.dj_paijiang.code().toString()),
-    dj_chehuipaijiang(148, "电竞撤回派奖", MemberBizType.dj_chehuipaijiang.code().toString()),
+    dj_paijiang(147, "电竞派彩", MemberBizType.dj_paijiang.code().toString()),
+    dj_chehuipaijiang(148, "电竞撤回派彩", MemberBizType.dj_chehuipaijiang.code().toString()),
     dj_other_add(149, "电竞其他加款", MemberBizType.dj_other_add.code().toString()),
     dj_other_sub(150, "电竞其他扣除", MemberBizType.dj_other_sub.code().toString()),
 
