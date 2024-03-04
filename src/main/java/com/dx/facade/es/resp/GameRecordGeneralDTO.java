@@ -191,4 +191,7 @@ public class GameRecordGeneralDTO {
     @ApiModelProperty("单关类型")
     private Integer seriesType;
 
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
+
 }
