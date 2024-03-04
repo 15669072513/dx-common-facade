@@ -138,6 +138,7 @@ public class GameRecordDto {
 
     @ApiModelProperty(hidden = true)
     private Long memberId;
+
     //德州
     @ApiModelProperty("局号")
     private String roundNo;
