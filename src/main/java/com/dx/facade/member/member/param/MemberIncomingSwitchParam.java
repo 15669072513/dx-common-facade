@@ -21,4 +21,8 @@ public class MemberIncomingSwitchParam {
     
     @ApiModelProperty("入局锁定状态 0-未锁定 1-入局锁定")
     private Integer joinGameLockStatus;
+
+
+    @ApiModelProperty("仅限直属会员可见开关 0-隐藏 1-可见")
+    private Integer onlyDirectMemberSwitch ;
 }
