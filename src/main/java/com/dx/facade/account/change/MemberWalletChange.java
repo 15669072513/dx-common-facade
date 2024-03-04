@@ -372,6 +372,15 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v1_52_offline_settle_up_score);
         list.add(v1_52_other_adjust);
         list.add(table_serve_fee);
+
+        list.add(dj_touzhu);
+        list.add(dj_paijiang);
+        list.add(dj_chehuipaijiang);
+        list.add(dj_other_add);
+        list.add(dj_other_sub);
+        list.add(qp_touzhu);
+        list.add(qp_settlement);
+
         return list;
     }
 
