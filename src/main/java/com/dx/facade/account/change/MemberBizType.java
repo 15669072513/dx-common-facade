@@ -68,8 +68,8 @@ public enum MemberBizType implements IBizType {
 
     //***************电竞单一钱包账变类************start*********
     dj_touzhu(128, "电竞投注", "1"),
-    dj_paijiang(129, "电竞派奖", "1"),
-    dj_chehuipaijiang(130, "电竞撤回派奖", "1"),
+    dj_paijiang(129, "电竞派彩", "1"),
+    dj_chehuipaijiang(130, "电竞撤回派彩", "1"),
     dj_other_add(131, "电竞其他加款", "1"),
     dj_other_sub(132, "电竞其他扣款", "1"),
     //***************电竞单一钱包账变类************end*********
