@@ -148,4 +148,8 @@ public class GameRecordDto {
 
     @ApiModelProperty(value = "IP归属地")
     private String ipAttribution;
+
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
+
 }
