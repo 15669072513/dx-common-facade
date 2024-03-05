@@ -232,12 +232,13 @@ public enum ProxyWalletChange implements IWalletChange {
     //收益审核通过支付给代理的金额
     v1_61_proxy_profit_pay_by_platform(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_pay_by_platform, ProxyAppType.v1_61_income, TransType.in),
-    //代理收收益人工扣额调整
-    v1_61_proxy_profit_adjust_sub(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
-            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out),
     //代理收收益人工加额调整
     v1_61_proxy_profit_adjust_add(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
             ProxyChangeType.v1_61_proxy_profit_adjust_add, ProxyAppType.v1_61_income_adjust, TransType.in),
+    //代理收收益人工扣额调整
+    v1_61_proxy_profit_adjust_sub(WalletType.agent_cash, ProxyBizType.v1_61_proxy_profit,
+            ProxyChangeType.v1_61_proxy_profit_adjust_sub, ProxyAppType.v1_61_income_adjust, TransType.out);
+
     ;
 
 

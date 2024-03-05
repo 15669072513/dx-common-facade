@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 
+import com.baomidou.mybatisplus.annotation.TableField;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -29,7 +31,6 @@ import lombok.NoArgsConstructor;
 public class RebateRateDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
-    
     @ApiModelProperty("ID")
     private Long id;
     
@@ -72,6 +73,7 @@ public class RebateRateDTO implements Serializable {
     
     @ApiModelProperty("平台标识： 0-非平台 1-平台")
     private Integer platformFlag;
+    
     @ApiModelProperty("占成标识： 0-非占成 1-占成")
     private Integer zhanchengFlag;
 
