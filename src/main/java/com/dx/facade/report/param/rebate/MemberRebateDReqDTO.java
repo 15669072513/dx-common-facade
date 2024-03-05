@@ -59,5 +59,10 @@ public class MemberRebateDReqDTO {
     @ApiModelProperty(value = "上级代理id")
     private Long parentProxyId;
 
+
+
+    @ApiModelProperty("0:返佣查询接口，1：非返佣查询接口")
+    private Integer commissionFlag;
+
 }
 
