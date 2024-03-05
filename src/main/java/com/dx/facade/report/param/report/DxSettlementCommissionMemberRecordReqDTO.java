@@ -65,4 +65,6 @@ public class DxSettlementCommissionMemberRecordReqDTO {
     private String parentProxyName;
 
 
+    @ApiModelProperty("0:返佣查询接口，1：非返佣查询接口")
+    private Integer commissionFlag;
 }
