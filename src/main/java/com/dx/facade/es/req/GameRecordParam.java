@@ -96,5 +96,8 @@ public class GameRecordParam extends PageRequest {
     @ApiModelProperty("排序:1:升序,2:降序")
     private Integer orderType;
 
+    @ApiModelProperty("业务模式:1-现金模式，2-信用模式")
+    private Integer businessModel;
+
 }
 

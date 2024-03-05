@@ -30,20 +30,11 @@ public class BaseRebateRateConfigParamDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
-    @ApiModelProperty("商户Id")
-    private Long merchantId;
-    
-    @ApiModelProperty("商户名称")
-    private String merchantName;
+    @ApiModelProperty("Id")
+    private Long id;
     
     @ApiModelProperty("类型 0-直属会员返水比率 1-直属代理团队返点比例 2-直属代理团队占成比例")
     private Integer type;
-    
-    @ApiModelProperty("用户Id")
-    private Long userId;
-
-    @ApiModelProperty("用户名称")
-    private String userName;
     
     @ApiModelProperty("德州俱乐部返点/占成比例")
     @DecimalMin(value = "0.000", message = "德州俱乐部返点比例不能小于0.000")

@@ -1,11 +1,7 @@
 package com.dx.facade.report.resp.report.proxy;
 
 import io.swagger.annotations.ApiModelProperty;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
 
 /**
  * ProxyRebatePointNetAmountResp 代理返点日明细记录
@@ -15,8 +11,6 @@ import java.math.BigDecimal;
  * @since 2021年9月17日 下午3:34:58
  */
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class ProxyRebatePointNetAmountResp extends ProxyRebatePointNetAmountSummaryResp {
 
     /**
@@ -38,4 +32,10 @@ public class ProxyRebatePointNetAmountResp extends ProxyRebatePointNetAmountSumm
     private String proxyPathUsername;
     @ApiModelProperty("是否有下级代理 ture:有，false:无")
     private Boolean isAllSub;
+
+    @ApiModelProperty(value = "代理层级")
+    private Integer proxyLevel;
+
+    @ApiModelProperty("直属上级代理")
+    private String parentProxyName;
 }

@@ -136,6 +136,12 @@ public class GameRecordDto {
     @ApiModelProperty(value = "注单id")
     private String betOrderId;
 
+    @ApiModelProperty("业务模式:1-现金模式，2-信用模式")
+    private Integer businessModel;
+
+    @ApiModelProperty(hidden = true)
+    private Long memberId;
+
     //德州
     @ApiModelProperty("局号")
     private String roundNo;
