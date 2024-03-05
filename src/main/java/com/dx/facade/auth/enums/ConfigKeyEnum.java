@@ -179,8 +179,6 @@ public enum ConfigKeyEnum {
     /** 代理团队所有场馆占成比率上限 */
     ZHANCHNEG_RATE_LIMIT("zhancheng.rate.limit","1"),
 
-    /** 代理团队所有场馆占成比率上限 */
-    ZHANCHNEG_RATE_LIMIT("zhancheng.rate.limit","1"),
 
     //
     /**
