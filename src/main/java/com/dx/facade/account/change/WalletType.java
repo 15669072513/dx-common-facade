@@ -27,6 +27,8 @@ public enum WalletType implements IWalletType {
     agent_cash(17, "现金钱包"),
     agent_credit_available(18, "信用钱包"),
     agent_credit_total(19, "信用额度"),
+    //v1.61代理占成个人欠款钱包，暂时不用了
+    agent_debt(20,"个人欠款"),
 
     illegal_type(-1, "未知的类型")
     ;
@@ -79,6 +81,7 @@ public enum WalletType implements IWalletType {
           agent_cash,
           agent_credit_available,
           agent_credit_total
+          //agent_debt
         );
     }
 }

@@ -87,6 +87,9 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty(value = "累计个人已收返点金额(累计返点)")
     private BigDecimal totalReceiveRebate;
 
+    @ApiModelProperty(value = "累计收益")
+    private BigDecimal totalIncomeAmount = BigDecimal.ZERO;
+
     @ApiModelProperty(value = "代理代存")
     private BigDecimal insteadPlayerDepositAmount;
 
@@ -176,10 +179,8 @@ public class ProxyDayReportRespDTO implements Serializable {
     private String currency;
 
 
-
-
     @ApiModelProperty(value = "佣金转额度钱包总额")
-    private BigDecimal transferQuotaWalletAmount ;
+    private BigDecimal transferQuotaWalletAmount;
 
     // TODO dwm_proxy_report_d
     @ApiModelProperty(value = "返点调整")
@@ -234,7 +235,6 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty("被代理上下分差次数")
     @TableField("proxy_be_differ_times")
     private Long proxyBeDifferTimes;
-
 
 
     @ApiModelProperty("官方给代理充值上分")
@@ -423,7 +423,6 @@ public class ProxyDayReportRespDTO implements Serializable {
     @ApiModelProperty("代理帮会员信用还款次数")
     @TableField("proxy_help_sub_member_credit_repay_times")
     private Long proxyHelpSubMemberCreditRepayTimes;
-
 
 
 }

@@ -61,4 +61,7 @@ public class GameRecordDjAndTyDetailDto {
     @ApiModelProperty("真人战队名称")
     private String teamName;
 
+    @ApiModelProperty("状态：0未结算1已结算2取消3已中奖(真人表示投降输半)4未中奖13待确定14风控拒单/投注失败15撤单(赛事取消)24挂起25输一半26赢一半27走水")
+    private Integer betStatus;
+
 }

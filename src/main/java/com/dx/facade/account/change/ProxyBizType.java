@@ -1,7 +1,5 @@
 package com.dx.facade.account.change;
 
-import com.dx.exception.BizException;
-
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
@@ -57,6 +55,10 @@ public enum ProxyBizType implements IBizType {
     proxy_to_mem_down_score(35, "代理给会员下分", "7"),
 
     v1_50_proxy_divination(64, "代理占成", "17"),
+    //1.61代理个人欠款，暂时不做了
+    /*v1_61_proxy_personal_debt(65, "个人欠款", "20"),*/
+    v1_61_proxy_profit(66, "代理收入", "17"),
+
 
     illegal_type(-1, "未知的类型", "-1")
     ;
@@ -113,6 +115,7 @@ public enum ProxyBizType implements IBizType {
         code2Enum.put(v2_1_withdraw.code, v2_1_withdraw);
         code2Enum.put(v2_1_proxy_commission.code, v2_1_proxy_commission);
         code2Enum.put(v1_50_proxy_divination.code, v1_50_proxy_divination);
+        code2Enum.put(v1_61_proxy_profit.code, v1_61_proxy_profit);
     }
     public static ProxyBizType getByCode(Integer code) {
         return code2Enum.containsKey(code) ? code2Enum.get(code) : illegal_type;

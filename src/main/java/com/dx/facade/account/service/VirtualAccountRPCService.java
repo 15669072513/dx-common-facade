@@ -12,7 +12,9 @@ import com.dx.facade.account.resp.VirtualAccountRespDTO;
 import com.dx.facade.account.resp.VirtualAccountSumRespDTO;
 import io.swagger.annotations.ApiModelProperty;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author agan
@@ -109,4 +111,22 @@ public interface VirtualAccountRPCService {
      * @param param
      */
     void updateVirtualWithdrawalInfo(UpdateVirtualWithdrawalParam param);
+
+
+    /**
+     * 根据多个会员id，查询会员对应的虚拟币账号
+     * @param memberIds   会员ID集合
+     */
+    default Map<Long, List<String>> getVirtualAccounts(List<Long> memberIds) {
+        return new HashMap<>();
+    }
+
+    /**
+     * 根据虚拟地址返回该地址对应的用户ID
+     * @param virtualAddress    虚拟币地址
+     * @return  虚拟币地址所属会员ID
+     */
+    default Long getMemberIdByVirtualAddress(String virtualAddress) {
+        return null;
+    }
 }

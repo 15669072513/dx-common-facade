@@ -25,6 +25,9 @@ public class GameRecordAggregation {
     @ApiModelProperty("输赢金额")
     private CurrencyAndSum netAmount = new CurrencyAndSum();
 
+    @ApiModelProperty("手牌服务费")
+    private CurrencyAndSum pumpContributionAmount = new CurrencyAndSum();
+
     @ApiModelProperty("本页投注金额合计")
     private BigDecimal currPageBetAmount;
 
@@ -33,4 +36,7 @@ public class GameRecordAggregation {
 
     @ApiModelProperty("本页输赢金额合计")
     private BigDecimal currPageNetAmount;
+
+    @ApiModelProperty("本页手牌服务费合计")
+    private BigDecimal currPagePumpContributionAmount;
 }

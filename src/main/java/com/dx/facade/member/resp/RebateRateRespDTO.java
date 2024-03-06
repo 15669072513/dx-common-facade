@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import com.baomidou.mybatisplus.annotation.TableField;
+import com.dx.facade.member.param.RebateRateDTO;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
@@ -27,21 +27,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @ApiModel(value = "RebateRate响应DTO对象", description = "返点比例响应DTO")
-public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializable {
+public class RebateRateRespDTO extends RebateRateDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    @ApiModelProperty("ID")
-    private Long id;
-    
     @ApiModelProperty("商户Id")
     private Long merchantId;
     
     @ApiModelProperty("商户名称")
     private String merchantName;
-    
-    @ApiModelProperty("用户类型 0：会员 1：代理")
-    private Integer userType;
     
     @ApiModelProperty("用户Id")
     private Long userId;
@@ -49,9 +43,6 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     @ApiModelProperty("用户名称")
     private String userName;
 
-    /**
-     * 非入库字段
-     */
     @ApiModelProperty("代理等级")
     private Integer proxyLevel;
     
@@ -72,9 +63,6 @@ public class RebateRateRespDTO extends BaseRebateRateRespDTO implements Serializ
     
     @ApiModelProperty("状态:0-未设置 1-已生效 2-已失效 3-平台调整")
     private Integer status;
-    
-    @ApiModelProperty("平台标识： 0-非平台 1-平台")
-    private Integer platformFlag;
     
     /** 生效时间 */
     @ApiModelProperty("生效时间")

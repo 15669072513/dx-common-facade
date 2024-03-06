@@ -731,9 +731,12 @@ public interface ExcelHeadI18nKey {
     String	FUNDS_解锁时间 = "EXCEL_HEAD_I18N_KEY.FUNDS_解锁时间";//解锁时间
 
     /** 返点比例列表文件名 */
-    String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返点比例列表";
+    String FILE_NAME_REBATE_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_收益比例列表";
     /** 返佣比例列表文件名 */
     String FILE_NAME_COMMISSION_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_返佣比例列表";
+    
+    /** 我的收益比例列表文件名 */
+    String FILE_NAME_MY_RATE_LIST = "EXCEL_HEAD_I18N_KEY.FILE_NAME_我的收益比例列表";
     
     String USER_NAME = "EXCEL_HEAD_I18N_KEY.MEMBER_账号";
     String MEMBER_PROXY_LEVEL = "EXCEL_HEAD_I18N_KEY.MEMBER_层级";

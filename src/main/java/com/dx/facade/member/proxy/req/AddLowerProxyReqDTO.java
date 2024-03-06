@@ -2,6 +2,7 @@ package com.dx.facade.member.proxy.req;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.dx.facade.member.param.BaseCommissionRateParamDTO;
+import com.dx.facade.member.param.RebateRateDTO;
 import com.dx.facade.merchant.req.RebateContractParam;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
@@ -349,7 +350,10 @@ public class AddLowerProxyReqDTO {
   @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
   private Integer businessModel;
 
-    @ApiModelProperty("返佣比例列表")
+  @ApiModelProperty("返点比例列表")
+  private List<RebateRateDTO> rebateRateList;
+  
+  @ApiModelProperty("返佣比例列表")
   private List<BaseCommissionRateParamDTO> commissionRateList;
     
   @ApiModelProperty(value = "返点比率模板等级")

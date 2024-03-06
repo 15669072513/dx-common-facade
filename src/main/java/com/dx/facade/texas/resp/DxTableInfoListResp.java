@@ -192,6 +192,9 @@ public class DxTableInfoListResp implements Serializable {
     @ApiModelProperty("入桌密码功能 0-关闭 1-开启 2-关闭隐藏")
     private Integer tableEntryPasswordSwitch;
 
+    @ApiModelProperty("入桌密码")
+    private String tableEntryPassword;
+
     @ApiModelProperty("局服务费 0-配置没开启  1-关 2-开 默认为0")
     private Integer tableFeeSwitch=0;
 

@@ -116,7 +116,10 @@ public class GameRecordDto {
     @ApiModelProperty("场馆名称(如ob真人,ag捕鱼)")
     private String venueName;
 
-    @ApiModelProperty("注单子类型:枚举GameRecordTypeEnum")
+    /**
+     * 注单类型 1 俱乐部游戏 2保险
+     */
+    @ApiModelProperty("注单类型:1俱乐部游戏;2保险")
     private Integer betType;
     @ApiModelProperty("注单类型:枚举GameRecordTypeEnum")
     private Integer parentBetType;
@@ -133,6 +136,12 @@ public class GameRecordDto {
     @ApiModelProperty(value = "注单id")
     private String betOrderId;
 
+    @ApiModelProperty("业务模式:1-现金模式，2-信用模式")
+    private Integer businessModel;
+
+    @ApiModelProperty(hidden = true)
+    private Long memberId;
+
     //德州
     @ApiModelProperty("局号")
     private String roundNo;
@@ -142,5 +151,11 @@ public class GameRecordDto {
     private String bbBlindScore;
     @ApiModelProperty(value = "小盲")
     private String sbBlindScore;
+
+    @ApiModelProperty(value = "IP归属地")
+    private String ipAttribution;
+
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
 
 }

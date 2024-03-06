@@ -1,5 +1,6 @@
 package com.dx.facade.texas.req;
 
+import com.dx.util.JacksonUtil;
 import com.dx.util.StringUtil;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.Serializable;
@@ -67,7 +68,7 @@ public class DxGamePersonalRemarksAddReq implements Serializable {
     int count = 0;
     StringBuffer sb = new StringBuffer();
     String[] ss = str.split("");
-    for (int i = 1; i < ss.length; i++) {
+    for (int i = 0; i < ss.length; i++) {
       count += ss[i].getBytes().length > 1 ? 2 : 1;
       sb.append(ss[i]);
       if (count >= len) {
@@ -76,5 +77,11 @@ public class DxGamePersonalRemarksAddReq implements Serializable {
     }
     //不需要显示...的可以直接return sb.toString();
     return sb.toString();
+  }
+
+  public static void main(String[] args) {
+    DxGamePersonalRemarksAddReq personalRemarksAddReq = new DxGamePersonalRemarksAddReq();
+    personalRemarksAddReq.setUserNameRemark("1234567891011121314");
+    System.out.println(JacksonUtil.writeValue(personalRemarksAddReq));
   }
 }
