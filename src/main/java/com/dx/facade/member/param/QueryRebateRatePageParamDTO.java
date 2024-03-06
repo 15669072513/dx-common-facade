@@ -143,9 +143,6 @@ public class QueryRebateRatePageParamDTO extends PageRequest implements BaseParm
     
     @ApiModelProperty("佣金结算模式： 1-返点模式 2-返佣模式")
     private Integer commissionMode;
-    
-    @ApiModelProperty("系统类型 1：中控后台 2：代理后台")
-    private Integer systemType;
 
 	@Override
 	public void check() {
