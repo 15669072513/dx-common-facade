@@ -9,7 +9,10 @@
     </parent>
 
     <artifactId>dx-common-facades</artifactId>
-    <version>prod_0.2.55-RELEASE</version>
+    <!--dev分支默认版本号为dev_1.5.0-SNAPSHOT, 切莫随意改动
+        prod 最新版本号为prod_0.2.55-RELEASE, 推送日期20240306-->
+    <version>dev_1.5.0-SNAPSHOT</version>
+    <!--<version>prod_0.2.55-RELEASE</version>-->
     <packaging>jar</packaging>
 
     <properties>
