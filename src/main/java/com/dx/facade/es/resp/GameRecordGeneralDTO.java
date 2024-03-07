@@ -178,6 +178,10 @@ public class GameRecordGeneralDTO {
     private String platformName;
     @ApiModelProperty("牌局Id")
     private String roundId;
+    @ApiModelProperty("房间类型(1:初级,2:中级)")
+    private Integer roomType;
+    @ApiModelProperty("游戏房间")
+    private String gameRoom;
 
     @ApiModelProperty("重算次数")
     private Integer obSettleCount;
@@ -191,5 +195,13 @@ public class GameRecordGeneralDTO {
     private String bbBlindScore;
     @ApiModelProperty(value = "小盲")
     private String sbBlindScore;
+
+    @ApiModelProperty("注单类型")
+    private Integer orderType;
+    @ApiModelProperty("单关类型")
+    private Integer seriesType;
+
+    @ApiModelProperty("抽水金额")
+    private BigDecimal pumpingAmount;
 
 }

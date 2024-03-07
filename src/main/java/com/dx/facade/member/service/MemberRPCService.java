@@ -234,4 +234,12 @@ public interface MemberRPCService {
 	 * @return
 	 */
 	CommonResp<Set<Long>> memberListByBusinessModel(MemberParamDTO paramDTO);
+
+
+	/**
+	 * 会员详情new 1.6.2
+	 * @param memberDetailParamDTO
+	 * @return
+	 */
+	CommonResp<MemberInfoRespDTO> selectMemberByParam(MemberDetailParamDTO memberDetailParamDTO);
 }

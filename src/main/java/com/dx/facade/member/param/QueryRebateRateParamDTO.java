@@ -146,6 +146,9 @@ public class QueryRebateRateParamDTO implements BaseParmDTO, Serializable {
     
     @ApiModelProperty("版本号")
     private Integer version;
+        
+    @ApiModelProperty("系统类型 1：中控后台 2：代理后台")
+    private Integer systemType;
 
 	@Override
 	public void check() {

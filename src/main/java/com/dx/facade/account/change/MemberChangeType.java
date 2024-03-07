@@ -116,6 +116,7 @@ public enum MemberChangeType implements IChangeType {
     ty_appointment_touzhu_cancel(138, "体育用户预约投注取消", MemberBizType.ty_appointment_touzhu_cancel.code().toString()),
     //***************体育单一钱包账变类************end*********
 
+
     //***************单一钱包账变类***************end**************************************************************
     //v1.52需求账变
     v1_52_violation_fine(139, "违规扣款", MemberBizType.down_score.code().toString()),
@@ -126,6 +127,20 @@ public enum MemberChangeType implements IChangeType {
     v1_52_other_adjust(144, "其他调整", MemberBizType.up_score.code().toString()),
 
     table_serve_fee(145, "局服务费", MemberBizType.texas_club_serve_fee.code().toString()),
+
+    //***************电竞单一钱包账变类************end*********
+    dj_touzhu(146, "电竞投注", MemberBizType.dj_touzhu.code().toString()),
+    dj_paijiang(147, "电竞派彩", MemberBizType.dj_paijiang.code().toString()),
+    dj_chehuipaijiang(148, "电竞撤回派彩", MemberBizType.dj_chehuipaijiang.code().toString()),
+    dj_other_add(149, "电竞其他加款", MemberBizType.dj_other_add.code().toString()),
+    dj_other_sub(150, "电竞其他扣除", MemberBizType.dj_other_sub.code().toString()),
+
+    qp_touzhu(151, "棋牌投注", MemberBizType.qp_touzhu.code().toString()),
+    qp_settlement(152, "棋牌结算", MemberBizType.qp_settlement.code().toString()),
+
+
+    //***************电竞单一钱包账变类************end*********
+
     illegal_type(-1, "未知的类型", "-1")
     ;
     private Integer code;

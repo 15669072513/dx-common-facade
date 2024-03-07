@@ -175,9 +175,10 @@ public enum ConfigKeyEnum {
     COMMISSION_CHESS_REBATE_RATE_LIMIT("qp.member.rebate","1"),
     COMMISSION_ESPORTS_REBATE_RATE_LIMIT("dj.member.rebate","1"),
     COMMISSION_TEXAS_INSURANCE_REBATE_RATE_LIMIT("texas.insurance.member.rebate", "1"),
-
+    
     /** 代理团队所有场馆占成比率上限 */
     ZHANCHNEG_RATE_LIMIT("zhancheng.rate.limit","1"),
+
 
     //
     /**

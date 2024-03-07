@@ -117,7 +117,7 @@ public interface IDxTableInfoService {
     /**
      * 批量获取牌桌基础信息
      *
-     * @param tableId
+     * @param tableIds
      * @return
      */
     CommonResp<List<DxTableBaseInfoResp>> batchGetTableBaseInfoByIds(Collection<Long> tableIds);

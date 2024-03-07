@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 会员账变业务 定义
+ *
  * @author Administrator
  */
 public enum MemberWalletChange implements IWalletChange {
@@ -192,6 +193,18 @@ public enum MemberWalletChange implements IWalletChange {
     ty_appointment_touzhu_cancel(WalletType.cash, MemberBizType.ty_appointment_touzhu_cancel, MemberChangeType.ty_appointment_touzhu_cancel, MemberAppType.cancel_single_wallet, TransType.in, Constant.MEMBER),
     //***************体育单一钱包账变类************end*********
 
+    //***************电竞棋牌单一钱包账变类************start*********
+    dj_touzhu(WalletType.cash, MemberBizType.dj_touzhu, MemberChangeType.dj_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    dj_paijiang(WalletType.cash, MemberBizType.dj_paijiang, MemberChangeType.dj_paijiang, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    dj_chehuipaijiang(WalletType.cash, MemberBizType.dj_chehuipaijiang, MemberChangeType.dj_chehuipaijiang, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+    dj_other_add(WalletType.cash, MemberBizType.dj_other_add, MemberChangeType.dj_other_add, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+    dj_other_sub(WalletType.cash, MemberBizType.dj_other_sub, MemberChangeType.dj_other_sub, MemberAppType.end_single_wallet, TransType.out, Constant.MEMBER),
+
+    qp_touzhu(WalletType.cash, MemberBizType.qp_touzhu, MemberChangeType.qp_touzhu, MemberAppType.bet_single_wallet, TransType.out, Constant.MEMBER),
+    qp_settlement(WalletType.cash, MemberBizType.qp_settlement, MemberChangeType.qp_settlement, MemberAppType.end_single_wallet, TransType.in, Constant.MEMBER),
+
+    //***************电竞棋牌单一钱包账变类************end*********
+
     //***************单一钱包账变类***************end**************************************************************
     //v1.52需求账变
     v1_52_violation_fine(WalletType.cash,MemberBizType.down_score, MemberChangeType.v1_52_violation_fine, MemberAppType.v1_52_other_adjust, TransType.out, Constant.MEMBER),
@@ -200,8 +213,9 @@ public enum MemberWalletChange implements IWalletChange {
     v1_52_third_order_lost_compensate(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_third_order_lost_compensate, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
     v1_52_offline_settle_up_score(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_offline_settle_up_score, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
     v1_52_other_adjust(WalletType.cash,MemberBizType.up_score, MemberChangeType.v1_52_other_adjust, MemberAppType.v1_52_other_adjust, TransType.in, Constant.MEMBER),
+    table_serve_fee(WalletType.cash, MemberBizType.texas_club_serve_fee, MemberChangeType.table_serve_fee, MemberAppType.texas_club_serve_fee, TransType.out, Constant.MEMBER)
 
-    table_serve_fee(WalletType.cash, MemberBizType.texas_club_serve_fee, MemberChangeType.table_serve_fee, MemberAppType.texas_club_serve_fee, TransType.out, Constant.MEMBER);
+    ;
 
     private IWalletType walletType;
     private IBizType bizType;
@@ -358,6 +372,15 @@ public enum MemberWalletChange implements IWalletChange {
         list.add(v1_52_offline_settle_up_score);
         list.add(v1_52_other_adjust);
         list.add(table_serve_fee);
+
+        list.add(dj_touzhu);
+        list.add(dj_paijiang);
+        list.add(dj_chehuipaijiang);
+        list.add(dj_other_add);
+        list.add(dj_other_sub);
+        list.add(qp_touzhu);
+        list.add(qp_settlement);
+
         return list;
     }
 

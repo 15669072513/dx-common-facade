@@ -28,21 +28,21 @@ public class ProxyOverviewMainDataCashRespDTO {
     private Long proxyId;
 
     @ApiModelProperty(value = "全部-会员总投注")
-    private BigDecimal betAmount;
+    private BigDecimal betAmount = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "直属-会员总投注")
-    private BigDecimal directlyMemberBetAmount;
+    private BigDecimal directlyMemberBetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "全部-会员游戏盈亏")
-    private BigDecimal netAmount;
+    private BigDecimal netAmount = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "直属-会员游戏盈亏")
-    private BigDecimal directlyMemberNetAmount;
+    private BigDecimal directlyMemberNetAmount = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "全部-会员实际盈亏")
-    private BigDecimal netActualAmount;
+    private BigDecimal netActualAmount = BigDecimal.ZERO;
 
     @ApiModelProperty(value = "直属-会员实际盈亏")
-    private BigDecimal directlyMemberNetActualAmount;
+    private BigDecimal directlyMemberNetActualAmount = BigDecimal.ZERO;
 
 }

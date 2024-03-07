@@ -46,11 +46,6 @@ public enum MemberAppType implements IAppType {
     end_single_wallet(103, "结算"),
     //***************单一钱包账变类***************end*********
     //v1.52需求账变
-    /*v1_52_violation_fine(104, "违规罚款"),
-    v1_52_finance_adjust(105, "财务调整"),
-    v1_52_operate_adjust(106, "运营调整"),
-    v1_52_third_order_lost_compensate(107,"三方掉单补分"),
-    v1_52_offline_settle_up_score(108,"线下结算上分"),*/
     v1_52_other_adjust(109, "其他调整"),
 
     texas_club_serve_fee(104, "局服务费"),
@@ -148,7 +143,15 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.v1_52_other_adjust.code(),
                         MemberChangeType.v1_52_offline_settle_up_score.code(),
                         MemberChangeType.ty_artificial_sub.code(),
-                        MemberChangeType.table_serve_fee.code()
+                        MemberChangeType.table_serve_fee.code(),
+                        MemberChangeType.v1_52_offline_settle_up_score.code(),
+                        MemberChangeType.dj_touzhu.code(),
+                        MemberChangeType.dj_paijiang.code(),
+                        MemberChangeType.dj_chehuipaijiang.code(),
+                        MemberChangeType.dj_other_add.code(),
+                        MemberChangeType.dj_other_sub.code(),
+                        MemberChangeType.qp_touzhu.code(),
+                        MemberChangeType.qp_settlement.code()
                 );
             }
             if (appChangeType.intValue() == v2_cash_up_score.code) {
@@ -205,7 +208,10 @@ public enum MemberAppType implements IAppType {
                 return Arrays.asList(MemberChangeType.cp_touzhu.code(),
                         MemberChangeType.zr_touzhu.code(),
                         MemberChangeType.ty_touzhu.code(),
-                        MemberChangeType.ty_appointment_touzhu.code());
+                        MemberChangeType.ty_appointment_touzhu.code(),
+                        MemberChangeType.dj_touzhu.code(),
+                        MemberChangeType.qp_touzhu.code()
+                );
             }
             if(appChangeType.intValue() == cancel_single_wallet.code()) {
                 return Arrays.asList(MemberChangeType.cp_chedan.code(),
@@ -215,7 +221,9 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_chedan_cancel.code(),
                         MemberChangeType.ty_paijiang_cancel.code(),
                         MemberChangeType.ty_judan.code(),
-                        MemberChangeType.ty_appointment_touzhu_cancel.code());
+                        MemberChangeType.ty_appointment_touzhu_cancel.code(),
+                        MemberChangeType.dj_chehuipaijiang.code()
+                );
             }
             if(appChangeType.intValue() == end_single_wallet.code()) {
                 return Arrays.asList(MemberChangeType.cp_paijiang.code(),
@@ -231,7 +239,12 @@ public enum MemberAppType implements IAppType {
                         MemberChangeType.ty_paijiang_advance_quxiao.code(),
                         MemberChangeType.ty_paijiang_advance_quxiao_cancel.code(),
                         MemberChangeType.ty_artificial_add.code(),
-                        MemberChangeType.ty_artificial_sub.code());
+                        MemberChangeType.ty_artificial_sub.code(),
+                        MemberChangeType.dj_paijiang.code(),
+                        MemberChangeType.dj_other_add.code(),
+                        MemberChangeType.dj_other_sub.code(),
+                        MemberChangeType.qp_settlement.code()
+                );
             }
             if(appChangeType.intValue() == v1_52_other_adjust.code) {
                 return Arrays.asList(

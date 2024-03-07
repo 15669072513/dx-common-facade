@@ -257,4 +257,7 @@ public class MemberInfoRespDTO{
 
     @ApiModelProperty(value = "业务模式：0-现金+信用，1-现金模式，2-信用模式")
     private Integer parentBusinessModel;
+
+    @ApiModelProperty("虚拟币地址")
+    private String virAddr;
 }
